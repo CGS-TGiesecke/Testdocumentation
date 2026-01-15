@@ -18,6 +18,4 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 #### Anwendungsbeschreibung 4
 
-aaaaaaaaaaaaaaaaaaaaaaaa
-
-![The San Juan Mountains are beautiful](public/docs/images/Abbildung-1-1.jpg "San Juan Mountains")
+#include "parts/part1.md"
