@@ -23,7 +23,8 @@ jobs:
           # Erstellen einer temporären Liste der Markdown-Dateien
           mkdir -p build
           echo "Generating PDF from docs/*.md"
-          pandoc docs/*.md -s -o build/docs.pdf --pdf-engine=pdflatex
+          # pandoc docs/*.md -s -o build/docs.pdf --pdf-engine=pdflatex
+          pandoc docs/*.md -s -o build/docs.pdf --pdf-engine=pdflatex --resource-path=docs/images:docs
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
