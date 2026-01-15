@@ -1,9 +1,9 @@
 
 ## Table of Contents
 - [Anwendungsbeschreibung 1](#anwendungsbeschreibung-1)
-- [Anwendungsbeschreibung 2](#anwendungsbeschreibung-2)
-- [Anwendungsbeschreibung 3](#anwendungsbeschreibung-3)
-- [Anwendungsbeschreibung 4](#anwendungsbeschreibung-4)
+-- [Anwendungsbeschreibung 2](#anwendungsbeschreibung-2)
+--- [Anwendungsbeschreibung 3](#anwendungsbeschreibung-3)
+---- [Anwendungsbeschreibung 4](#anwendungsbeschreibung-4)
 
 
 
