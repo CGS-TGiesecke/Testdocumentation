@@ -1,11 +1,10 @@
 
 ## Table of Contents
-[1. Anwendungsbeschreibung 1](#anwendungsbeschreibung-1)
-[1.1 Anwendungsbeschreibung 2](#anwendungsbeschreibung-2)
-[1.1.1 Anwendungsbeschreibung 3](#anwendungsbeschreibung-3)
-[1.1.1.1 Anwendungsbeschreibung 4](#anwendungsbeschreibung-4)
 
-
+1. [Anwendungsbeschreibung 1](#anwendungsbeschreibung-1)
+1.1 [Anwendungsbeschreibung 2](#anwendungsbeschreibung-2)
+1.1.1 [ Anwendungsbeschreibung 3](#anwendungsbeschreibung-3)
+1.1.1.1 [ Anwendungsbeschreibung 4](#anwendungsbeschreibung-4)
 
 
 # 1. Anwendungsbeschreibung 1
