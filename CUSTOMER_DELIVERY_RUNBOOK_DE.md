@@ -7,16 +7,17 @@ Dieses Dokument beschreibt den typischen Ablauf, wie die AI Audit Assist Plattfo
 - 2 [Phasenmodell der Auslieferung](#2-phasenmodell-der-auslieferung)
 - 2.1 [Pre-Sales und Anforderungsaufnahme](#21-pre-sales-und-anforderungsaufnahme)
 - 2.2 [Technische Klärung und Architektur-Workshop](#22-technische-klärung-und-architektur-workshop)
+- 2.3 [Auswahl des Betriebsmodells (Cloud/SaaS vs. Kunde)](#23--uswahl-des-betriebsmodells-cloud-saas-vs-Kunde))
 - 3 [Vorbereitung beim Kunden](#3-vorbereitung-beim-kunden)
 - 3.1 [Organisatorische Voraussetzungen](#31-organisatorische-voraussetzungen)
 - 3.2 [Technische Voraussetzungen und IT-Requirements](#32-technische-voraussetzungen-und-it-requirements)
 - 3.3 [Lizenzierung und Zugriff auf Images](#33-lizenzierung-und-zugriff-auf-images)
 - 4 [Deployment-Vorbereitung je Betriebsmodell](#4-deployment-vorbereitung-je-betriebsmodell)
-- 4.1 [SaaS / CGS-gehostete Variante](#41-saas-cgs-gehostete-variante)
-- 4.2 [Kunden-VM / Docker Compose](#42-Kunden-vm-docker-compose)
-- 4.3 [Kundeneigenes Kubernetes-Cluster](43-kundeneigenes-kubernetes-cluster)
+- 4.1 [SaaS / CGS-gehostete Variante](#41-saas--cgs-gehostete-variante)
+- 4.2 [Kunden-VM / Docker Compose](#42-kunden-vm--docker-compose)
+- 4.3 [Kundeneigenes Kubernetes-Cluster](#43-kundeneigenes-kubernetes-cluster)
 - 4.4 [Hybride Szenarien](#44-hybride-szenarien)
-- 5 [Test-Deployment (Pilot / Staging)](#5-test-deployment-pilot-staging)
+- 5 [Test-Deployment (Pilot / Staging)](#5-test-deployment-pilot--staging)
 - 5.1 [Zielsetzung des Test-Deployments](#51-zielsetzung-des-test-deployments)
 - 5.2 [Durchführung des Test-Deployments](#52-durchführung-des-test-deployments)
 - 5.3 [Testprotokoll und Abnahme](#53-testprotokoll-und-abnahme)
@@ -27,7 +28,7 @@ Dieses Dokument beschreibt den typischen Ablauf, wie die AI Audit Assist Plattfo
 - 7 [Übergabe in den Regelbetrieb](#7-übergabe-in-den-regelbetrieb)
 - 7.1 [Betriebsübergabe an Kunden-IT](#71-betriebsübergabe-an-kunden-it)
 - 8 [Anhänge und Verweise](#8-anhänge-und-verweise)
-- 9 [FAQ – Häufige Fragen zur Auslieferung](#9-faq-häufige-fragen-zur-auslieferung)
+- 9 [FAQ – Häufige Fragen zur Auslieferung](#9--faq-häufige-fragen-zur-auslieferung)
 
 Weitere projektspezifische Dokumente (z. B. Architekturskizzen, Freigabeprotokolle) können an dieser Stelle ergänzt oder verlinkt werden.
 
@@ -277,17 +278,10 @@ Diese FAQ kann je Kunde und Projekt um spezifische Fragen/Antworten erweitert we
 
 | Frage | Antwort | 
 | ------- | ----- | 
-| Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, 
-definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. | 
-| Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem 
-vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. |
-|Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. 
-Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, 
-um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. |
-| Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei CGS, 
-beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; 
-CGS unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den IT-Requirements.|
-|Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – 
-ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.|
+| Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. | 
+| Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. |
+|Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. |
+| Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei CGS, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; CGS unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den IT-Requirements.|
+|Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.|
 
 
