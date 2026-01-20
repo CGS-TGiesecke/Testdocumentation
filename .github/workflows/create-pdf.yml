@@ -30,9 +30,9 @@ jobs:
 
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_dir: documentation/user_manuals/de/docs
+          input_dir: documentation/user_manuals/de
           output_dir: pdfs
-          images_dir: documentation/user_manuals/de/docs/images
+          images_dir: documentation/user_manuals/de/images
           # theme: styles/mytheme.css
           # for example <img src="./images/file-name.png">
           image_import: ./images
