@@ -39,6 +39,10 @@ Dieses Dokument beschreibt den typischen Ablauf, wie die AI Audit Assist Plattfo
 - `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md` - technischen Voraussetzungen für die Bereitstellung und den Betrieb
 - `technical_requirements/CGS-Assist-Bereitstellung.docx` - CGS Assist technische Bereitstellungsanforderungen
 - `COLLECTION_FAQ.md` - Sammlung häufig gestelleter Fragen in allen Bereichen des Projektes (z.B. Auslieferung, Bereitstellung, Service)
+- `QUICK_START_ONBOARDING.md` - ??
+- `ONBOARDING_TEMPLATE_SETUP.md` - ??
+- `ONBOARDING_TEMPLATE_COMPLETE.md` - ??
+- `ONBOARDING_VISUAL_OVERVIEW.md` - ??
 
 ## 1. Überblick und Rollen
 
