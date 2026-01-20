@@ -14,10 +14,8 @@ Diese FAQ Liste kann je Kunde und Projekt um spezifische Fragen/Antworten erweit
 |Wie wird die Lösung bereitgestellt?|Über ein Docker Compose-Skript auf einem Linux-Server.|
 |Ist eine spezielle Azure-Integration notwendig?|Nein. Nur API-Key und Endpoint werden benötigt.|
 |Ist eine VM zwingend erforderlich?|Nein. Jeder Linux-Server mit Docker Compose ist geeignet.|
-|Benötigt die Lösung eine dauerhafte Internetverbindung?|
-Cloud-Provider (Azure/AWS): Ja
-Lokale Modelle: Nur für Installation
-|
+|Benötigt die Lösung eine dauerhafte Internetverbindung?|Cloud-Provider (Azure/AWS): Ja<br>
+Lokale Modelle: Nur für Installation<br>|
 |Wird ein LLM mitgeliefert?| Kunde muss selbst einen LLM-Provider bereitstellen (Azure OpenAI, AWS Bedrock oder lokales Modell). |
 |Welchen LLM-Provider soll ich wählen?| Empfehlung:<br>
 Azure OpenAI (bevorzugt) – wenn Sie Azure nutzen<br>
