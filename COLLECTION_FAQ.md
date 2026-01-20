@@ -19,19 +19,16 @@ Cloud-Provider (Azure/AWS): Ja
 Lokale Modelle: Nur für Installation
 |
 |Wird ein LLM mitgeliefert?| Kunde muss selbst einen LLM-Provider bereitstellen (Azure OpenAI, AWS Bedrock oder lokales Modell). |
-|Welchen LLM-Provider soll ich wählen?| Empfehlung:
-Azure OpenAI (bevorzugt) – wenn Sie Azure nutzen
-AWS Bedrock (gleichwertig) – wenn Sie AWS nutzen
-Lokale Modelle – höchster Datenschutz
-Alle drei werden vollständig unterstützt
-|
+|Welchen LLM-Provider soll ich wählen?| Empfehlung:<br>
+Azure OpenAI (bevorzugt) – wenn Sie Azure nutzen<br>
+AWS Bedrock (gleichwertig) – wenn Sie AWS nutzen<br>
+Lokale Modelle – höchster Datenschutz<br>
+Alle drei werden vollständig unterstützt<br>|
 |Ist Azure OpenAI zwingend?|Nein. Azure ist bevorzugt, aber nicht zwingend. AWS Bedrock und lokale Modelle sind gleichwertige Alternativen.|
 |Wie setze ich Azure OpenAI auf?| `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md` Siehe Abschnitt 2.2 für Schritt-für-Schritt-Anleitung|
 |Wie setze ich AWS Bedrock auf?| `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md` Siehe Abschnitt 2.3 für Schritt-für-Schritt-Anleitung|
 |Wo liegen die Daten?|Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analyse übertragen (nicht dauerhaft gespeichert).|
-|Müssen wir für den LLM bezahlen?|
-Ja. Der Kunde muss selbst den LLM Provider bereitstellen (bei Cloud):
-Azure OpenAI: $100-500/Monat (50 Nutzer)
-AWS Bedrock: $80-400/Monat (50 Nutzer)
-Lokal: €0 API-Kosten, aber Hardware-Investment
-|
+|Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (bei Cloud):<br>
+Azure OpenAI: $100-500/Monat (50 Nutzer)<br>
+AWS Bedrock: $80-400/Monat (50 Nutzer)<br>
+Lokal: €0 API-Kosten, aber Hardware-Investment<br>|
