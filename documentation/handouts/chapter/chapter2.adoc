@@ -1,13 +1,35 @@
-=== Anbindung von Sprachmodellen
-
-==== Azure OpenAI
-
-Erforderlich ist ein aktives Azure-Konto mit OpenAI Subscription.
+=== Allgemeine Voraussetzungen
 
 |===
-| *Azure-Account mit OpenAI Subscription*| Anmeldung & Einrichtung, Abo beachten
-| *Azure API Key & Endpunkt*| Zugangsdaten für LLM bereitstellen
-| *Azure OpenAI Model-Deployment*| z. B. 'gpt-4o', 'gpt-4o-mini, etc.
-(Token-per-Minute-Rate-Limit maximieren)
-| *Maximale Token-Rate*| Das Azure-Konto muss ein passendes Token-per-Minute-Limit bieten (abhängig vom Anfragevolumen).
+
+| *Infrastruktur (VM oder Server)*
+| Linux-basierter Server 
+(lokale VM oder Cloud-VM)
+
+| *Betriebssystem*
+| Linux, z. B. Ubuntu oder vergleichbare Distributionen.
+
+| *Docker-Umgebung*
+| Docker Engine: Version ≥ 20.x
+Docker Compose: Version ≥ 1.29 oder Compose V2
+
+| *CPU, RAM, Speicher*
+| Abhängig von der Größe der Dokumentensammlung und der Zahl der Benutzer (siehe Punkt 3).
+
+| *Gemeinsames Verzeichnis*
+ *(SHARED_FOLDER)*
+| Ein beschreibbares Verzeichnis auf dem Server für den Datenaustausch.
+
+| *Gemeinsames Verzeichnis*
+ *(SHARED_FOLDER)*
+| Ein beschreibbares Verzeichnis auf dem Server für den Datenaustausch.
+
+| *Internetzugang / Proxy*
+| Download der Docker-Images
+Verbindung zur Azure OpenAI API
+Proxy-Unterstützung ist möglich.
+
+| *Netzwerk / Ports*
+| Standardzugang: Port 8000 (bei Bedarf anpassbar).
+
 |===

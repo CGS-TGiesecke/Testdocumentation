@@ -1,4 +1,6 @@
-= CGS Assist *KI-Plattform für den Mittelstand* *Technische Voraussetzungen*
+= CGS Assist 
+KI-Plattform für den Mittelstand 
+Technische Voraussetzungen
 :doctype: book
 :author: cgs
 :revdate: 2026-02-02 
@@ -13,5 +15,7 @@ include::chapter/intro.adoc[]
 include::chapter/chapter1.adoc[]
 
 include::chapter/chapter2.adoc[]
+
+include::chapter/chapter3.adoc[]
 
 

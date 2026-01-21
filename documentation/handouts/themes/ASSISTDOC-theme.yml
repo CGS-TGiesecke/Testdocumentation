@@ -3,22 +3,27 @@ title-page:
   background-image: image:ASSISTDOC-TitlePage.png[]
   background-color: 'EAEAEA'  # Hellgrauer Titelseiten-Hintergrund
   title:
-    font-size: 36
-    font-color: '333333'
+    font-size: 38
+    font-color: '0066cc'
     font-style: bold
     align: center
-  author:
-    font-size: 22
-    font-color: '555555'
-    align: center
+    top-margin: 200  # Abstand von oben in Punkten
   subtitle:
-    font-size: 24
-    font-color: '888888'
+    font-size: 26
+    font-color: '333333'
+    font-style: italic
     align: center
-  date:
-    font-size: 14
+    top-margin: 20
+  author:
+    font-size: 16
     font-color: '777777'
     align: center
+    top-margin: 40
+  date:
+    font-size: 14
+    font-color: '999999'
+    align: center
+    top-margin: 20
 
 base:
   font-color: '222222'
