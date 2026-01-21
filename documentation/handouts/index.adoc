@@ -1,4 +1,4 @@
-:title: CGS Assist
+= CGS Assist
 KI-Plattform für den Mittelstand 
 Technische Voraussetzungen 
 :doctype: book
@@ -8,7 +8,7 @@ Technische Voraussetzungen
 :sectnumlevels: 7
 //:cgs-assist: 1
 :arc-assist: 1
-:imagesdir: ./themes
+:imagesdir: themes/
 
 include::chapter/intro.adoc[]
 
