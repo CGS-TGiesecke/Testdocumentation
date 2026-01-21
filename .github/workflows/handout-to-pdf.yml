@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run asciidoctor on index.adoc
-        run: asciidoctor documentation/handouts.adoc
+        run: asciidoctor documentation/handouts/cgs-assist-handout.adoc
 
   pages:
  #   if: github.ref == 'refs/heads/master'
@@ -49,7 +49,7 @@ jobs:
       - name: Build HTML and PDF docs
         run: |
           asciidoctor -a revnumber=$REVISION -D public public/index.adoc
-          asciidoctor-pdf -a revnumber=$REVISION -D public -a pdf-theme=ASSISTDOC -a pdf-themesdir=themes -o user.pdf documentation/handouts.adoc
+          asciidoctor-pdf -a revnumber=$REVISION -D public -a pdf-theme=ASSISTDOC -a pdf-themesdir=themes -o user.pdf documentation/handouts/cgs-assist-handout.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
