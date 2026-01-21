@@ -151,9 +151,9 @@ Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierun
 
 ### 1.2 Assist Administration
 
-Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können Benutzer und Rollen verwaltet werden, 
-Die Speicherordner der Dokumente verwaltet werden, Konfigurationen der Schnittstellen verwaltet werden, die Systemaufforderungen (Promps) verwaltet werden und die systemseitig 
-hinterlegten Anwendungsfälle können hier verwaltet werden.
+Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können hier Benutzer und Rollen, 
+die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), LIzenzen und die systemseitig 
+hinterlegten Anwendungsfälle verwaltet werden.
 Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemseitige, festgelegte Rolle.
 
 ![Administration](./images/Abbildung-15.jpg "Administration")
