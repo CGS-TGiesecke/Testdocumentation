@@ -30,10 +30,12 @@
 
 ## 1. Anwendungsbeschreibung 
 
-Es ist innerhalb von ARC Assist, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
+Es ist innerhalb von CGS Assist, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
 Dieses Wissen basiert auf den Inhalten der hinterlegten Dokumente.
 Alle Chatverläufe und Use Case Verläufe werden gespeichert und können auch nach dem Browser schließen und Neuanmeldung wieder geöffnet werden.
 Bestimmte regelmäßige Anwendungsfälle werden im Assist als Templates verwaltet, um Routinen zu vereinfachen. Die Anwendungsfälle sind mit Use Cases wie eine Art Checkliste erstellt.
+
+Es können bei entsprechender Berechtigung, automatisierte Zeitpläne erstellt werden, wie z.B. die Abfrage nach neuesten Nachrichten der BaFin.
 
 ![CGS-Assist](./images/cgs-Abbildung-start.jpg "CGS Assist")
 
@@ -62,19 +64,18 @@ Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, übe
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 
-![Navigationsbereich KI Chat - speichern](./images/Abbildung-4.jpg "Navigationsbereich KI Chat - speichern")
+![Navigationsbereich KI Chat - speichern](./images/cgs-Abbildung-4.jpg "Navigationsbereich KI Chat - speichern")
 
 Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
-Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und das Löschen mit Klick auf den Haken bestätigt werden.
+Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.
 
 ![Navigationsbereich KI Chat - löschen](./images/Abbildung-5.jpg "Navigationsbereich KI Chat - löschen")
 
-
 #### 1.1.2 Navigationsbereich "Anwendungsfälle" 
 
-Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt.
-Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen,
-die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. Diese Listen erleichtern routinemäßige Anfragen.
+Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt. Die Zordnung der Anwendungsfälle zu den bereichen, erfolgt bei Anlage in der Administration.
+Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen, die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. 
+Diese Listen erleichtern routinemäßige Anfragen.
 
 ![Navigationsbereich Anwendungsfälle](./images/Abbildung-6.jpg "Navigationsbereich Anwendungsfälle" )
 
@@ -86,7 +87,10 @@ Klick auf ein Symbol mit Namen öffnet den Anwendungsfall zur Datenaufnahme.
 
 ![Navigationsbereich - Anwendungsfälle - Auswahl des Falles](./images/Abbildung-8.jpg "Navigationsbereich - Anwendungsfälle - Auswahl des Falles")
 
-Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf „Ausführen“ gesendet werden.
+Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf „Senden“ abgeschickt werden.
+
+![Navigationsbereich - Anwendungsfälle - Senden](./images/Abbildung-39.jpg "Navigationsbereich - Anwendungsfälle - Senden")
+
 Während der Verarbeitung wird eine Wait Box angezeigt und der Statusverlauf als Info angezeigt.
 
 ![Navigationsbereich - Anwendungsfälle - Waitbox](./images/Abbildung-9.jpg "Navigationsbereich - Anwendungsfälle - Waitbox")
@@ -102,13 +106,13 @@ Um einen Use Case zu löschen, muss zuerst der Lösch Button betätigt werden un
 
 #### 1.1.3 Navigationsbereich "Automatisierung"
 
-Hier werden bei vorhandener Berechtigung, alle automatisierten Anwendungsfälle gelistet und verwaltet.
+Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Informationsquellen (Feeds) gelistet und verwaltet.
 Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs.
 
 ![Navigationsbereich - Automatisierung](./images/Abbildung-27.jpg "Navigationsbereich - Automatisierung")
 
-Zum Öffnen der Zeitpläne wird auf das Symbol mit Namen geklickt.
-In der Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier Neue Zeitpläne erstellt werden und/oder vorhandene gelöscht werden.
+Zum Öffnen eine Feed wird auf das Symbol mit Namen geklickt.
+In der Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier neue Zeitpläne erstellt werden und/oder vorhandene gelöscht werden.
 
 ![Navigationsbereich - Automatisierung - Zeitpläne](./images/Abbildung-26.jpg "Navigationsbereich - Automatisierung - Zeitpläne")
 
@@ -127,7 +131,8 @@ Hier werden alle verfügbaren und durchsuchbaren Dokumente angezeigt, für die d
 
 ![Navigationsbereich - Dokumente - Baum löschen](./images/Abbildung-12.jpg "Navigationsbereich - Dokumente - Baum löschen")
 
-In der Baumnavigation werden nur die Ordner gelistet, auf die der Anwender berechtigt ist.
+In der Baumnavigation werden nur die Ordner gelistet, auf die der Anwender berechtigt ist. 
+Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt in der Administration
 
 ![Navigationsbereich - Dokumente - Baumnavigation](./images/Abbildung-33.jpg "Navigationsbereich - Dokumente - Baumnavigation")
 

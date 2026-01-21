@@ -10,6 +10,7 @@ Change some places from "CGS Assist" to "Arc Assist"
 		<li> line 4 Version table data</li>
 		<li> line 33 "CGS Assist" to "ARC Assist"</li>  
 		<li> line 38 image "cgs-Abbildung-start" to "arc-Abbildung-start" </li>
+		<li> line 69 image "cgs-Abbildung-4" to "arc-Abbildung-4" </li>
 		<li> Chapter 2 Contactdata</li>
     </ul>
   </li>
