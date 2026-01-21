@@ -1,5 +1,5 @@
 
-image::./theme/logo.png[Unser Firmenlogo,align=left,width=50]
+image::../themes/logo.png[Firmenlogo,align=left,width=50]
 
 == Ihr Partner für Künstliche Intelligenz 
 
