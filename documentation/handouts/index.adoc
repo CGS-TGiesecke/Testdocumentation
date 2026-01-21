@@ -1,9 +1,9 @@
 = CGS Assist 
 :doctype: book
 :subtitle: KI-Plattform für den Mittelstand 
-:subtitle: Technische Voraussetzungen
+Technische Voraussetzungen
 :author: cgs
-:revdate: 2026-02-02 
+:revdate: 2026-02-17 
 :sectnums:
 :sectnumlevels: 7
 //:cgs-assist: 1
@@ -18,8 +18,6 @@ include::chapter/chapter2.adoc[]
 include::chapter/chapter3.adoc[]
 
 include::chapter/chapter4.adoc[]
-
-<<< // new site
 
 include::chapter/disclaimer.adoc[]
 

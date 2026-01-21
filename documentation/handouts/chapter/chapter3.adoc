@@ -3,10 +3,10 @@
 ==== Entry Level (RAG, 8 GB RAM)
 
 Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen:
-<ol>
+<ul>
  <li> Dokumentensammlung bis ca. 100 MB </li>
  <li> Geringe bis moderate gleichzeitige Nutzer </li>
-</lo>
+</ul>
 
 |===
 | *Arbeitsspeicher (vRAM) *| 8 GB
@@ -17,10 +17,10 @@ Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen:
 ==== Mid-Tier Level (RAG, 32 GB RAM)
 
 Für wachsende Datenmengen und höhere Nutzerzahlen:
-<ol>
+<ul>
  <li>Dokumentensammlung bis ca. 5 GB</li>
  <li>Moderate bis hohe gleichzeitige Nutzerzahlen</li>
-</ol>
+</ul>
 
 |===
 | *Arbeitsspeicher (vRAM) *| 32 GB
@@ -31,10 +31,10 @@ Für wachsende Datenmengen und höhere Nutzerzahlen:
 ==== High-End Level (RAG, 64 GB RAM)
 
 Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
-<ol>
+<ul>
  <li>Dokumentensammlung über 5 GB</li>
  <li>Viele gleichzeitige Nutzer bzw. komplexe, rechenintensive Abfragen</li>
-</ol>
+</ul>
 
 |===
 | *Arbeitsspeicher (vRAM) *| 64 GB
