@@ -1,7 +1,7 @@
 :doctype: book
 :author: cgs
 //:author: arc
-:revdate: 2002-02-02
+:revdate: 2026-02-02
 //:title: Arc Assist  
 :title: CGS Assist 
 :toc: left
@@ -22,3 +22,6 @@
 == KI-Plattform für den Mittelstand
 == Technische Vorrausetzungen
 
+include::parts/intro.adoc[]
+
+include::parts/part1.adoc[]

@@ -48,7 +48,7 @@ jobs:
 
       - name: Build HTML and PDF docs
         run: |
-          asciidoctor -a revnumber=$REVISION -D public public/index.adoc
+          asciidoctor -a revnumber=$REVISION -D public documentation/handouts/index.adoc
           asciidoctor-pdf -a revnumber=$REVISION -D public -a pdf-theme=ASSISTDOC -a pdf-themesdir=themes -o user.pdf documentation/handouts/index.adoc
 
       - name: Upload documentation artifact
