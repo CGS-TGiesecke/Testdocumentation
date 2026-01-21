@@ -1,6 +1,6 @@
 extends: default
 title-page:
-  background-image: image:RIAS-TitlePage.png[]
+  background-image: image:ASSISTDOC-TitlePage.png[]
   font-color: '#86888a'
   font-family: Helvetica
   font-size: 14

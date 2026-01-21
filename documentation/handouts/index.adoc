@@ -1,8 +1,6 @@
 :doctype: book
 :author: cgs
-//:author: arc
-:revdate: 2026-02-02
-//:title: Arc Assist  
+:revdate: 2026-02-02 
 :title: CGS Assist 
 :toc: left
 :toc-interactive: true // in pdf the active section will be highlighted
