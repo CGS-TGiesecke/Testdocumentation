@@ -1,4 +1,4 @@
-=== Voraussetzungen für den Betrieb von CGS Assist
+== Voraussetzungen für den Betrieb von CGS Assist
 
 *CGS Assist* ist eine *browserbasierte Webanwendung*, die lokal beim Kunden gehostet wird. 
 Der Betrieb erfolgt in *Docker-Containern* auf einem *Linux-Server* (entweder *on-premise* oder in einer *Cloud-VM*). 

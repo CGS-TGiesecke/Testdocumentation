@@ -19,11 +19,11 @@
 
 
 //= ARC Assist Anwenderhandbuch
-KI-Plattform für den Mittelstand
-Technische Vorrausetzungen
+*KI-Plattform für den Mittelstand*
+*Technische Vorrausetzungen*
 
 include::chapter/intro.adoc[]
 
-include::./chapter/part1.adoc[]
+include::chapter/part1.adoc[]
 
-include::../chapter/part1.adoc[]
+
