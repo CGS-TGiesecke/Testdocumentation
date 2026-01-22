@@ -339,7 +339,9 @@ ollama pull llama3.1:70b
 
 ## 3. Serveranforderungen 
 #tag::Kunden-Serveranforderungen[]
-### 3.1 Einfache Umgebung (8 GB RAM)
+### Entry Level (RAG, 8 GB RAM)
+Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen: * Dokumentensammlung bis
+ca. 100 MB *Geringe bis moderate gleichzeitige Nutzer
 
 **Geeignet für:** Test- und PoC-Umgebungen
 
@@ -348,7 +350,9 @@ ollama pull llama3.1:70b
 - **Storage:** 250 GB SSD
 - **Szenarien:** Bis 100 MB Dokumente, 1-5 Nutzer
 
-### 3.2 Mittlere Umgebung (32 GB RAM)
+### Mid-Tier Level (RAG, 32 GB RAM)
+Für wachsende Datenmengen und höhere Nutzerzahlen: * Dokumentensammlung bis ca. 5 GB *
+Moderate bis hohe gleichzeitige Nutzerzahlen
 
 **Geeignet für:** Produktivumgebungen
 
@@ -357,7 +361,11 @@ ollama pull llama3.1:70b
 - **Storage:** 1 TB SSD
 - **Szenarien:** Bis 5 GB Dokumente, 10-50 Nutzer
 
-### 3.3 Große Umgebung (64 GB RAM)
+### High-End Level (RAG, 64 GB RAM)
+
+Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben: *
+Dokumentensammlung über 5 GB * Viele gleichzeitige Nutzer bzw. komplexe, rechenintensive
+Abfragen
 
 **Geeignet für:** Große Produktivumgebungen
 
