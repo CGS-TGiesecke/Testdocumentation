@@ -49,7 +49,7 @@ Ein **beschreibbares Verzeichnis** auf dem Server für den Datenaustausch zwisch
 
 **Aufgabe des Kunden:** Bereitstellung eines Verzeichnisses mit ausreichenden Schreib-/Leserechten für die Docker-Container.
 
-### 1.5 Internetzugang / Proxy
+### 1.5 Internetzugang und Proxy
 
 **Erforderlich für:**
 - Download der Docker-Images (während der Installation)
@@ -61,7 +61,9 @@ Ein **beschreibbares Verzeichnis** auf dem Server für den Datenaustausch zwisch
 - **Bei Cloud-LLM-Providern (Azure OpenAI, AWS Bedrock):** Dauerhafte Internetverbindung erforderlich
 - **Bei lokalen Modellen:** Nur für Installation erforderlich (Download der Docker-Images)
 
-### 1.6 Netzwerk / Ports
+#end::kunden-anforderungen-allgemein[]
+
+### 1.6 Netzwerk und Ports
 
 **Erforderliche Ports:**
 
@@ -73,7 +75,6 @@ Ein **beschreibbares Verzeichnis** auf dem Server für den Datenaustausch zwisch
 
 **Empfehlung für Produktion:** Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.
 
-#end::kunden-anforderungen-allgemein[]
 
 **DNS-Anforderungen für Caddy mit Let's Encrypt:**
 
