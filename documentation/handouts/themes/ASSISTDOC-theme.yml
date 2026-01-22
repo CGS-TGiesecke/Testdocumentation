@@ -7,23 +7,23 @@ title-page:
     font-color: '222222'
     font-style: bold
     align: center
-    top-margin: 600  # Abstand von oben in Punkten
+    top-margin: 800  # Abstand von oben in Punkten
   subtitle:
     font-size: 26
     font-color: '222222'
     font-style: italic
     align: center
-    top-margin: 400
+    top-margin: 820
   author:
     font-size: 16
     font-color: '222222'
     align: left
-    top-margin: 430
+    top-margin: 840
   date:
     font-size: 16
     font-color: '222222'
     align: left
-    top-margin: 440
+    top-margin: 860
 
 base:
   font-color: '222222'
@@ -55,7 +55,7 @@ heading:
     font-style: italic
 
 table:
-  border-color: 'red'
+  border-color: 'EEEEEE'
   head:
     font-color: '224488'
     background-color: 'ECECEC'
