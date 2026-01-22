@@ -6,9 +6,9 @@ Diese FAQ Liste kann je Kunde und Projekt um spezifische Fragen/Antworten erweit
 [cols="2*", options="header"]
 |===
 |  Frage| Antwort 
-#tag::Kunde-FAQ[]
+#tag:: Kunde-FAQ[]
 |Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. 
-#end::Kunde-FAQ[]
+#end:: Kunde-FAQ[]
 |Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. 
 |Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. 
 |Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei CGS, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; CGS unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den IT-Requirements.
