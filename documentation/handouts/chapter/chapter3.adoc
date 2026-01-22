@@ -35,3 +35,5 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 | *Prozessor (vCPU)*		| 16-32 vCPUs
 | *Speicher*				| 2 TB SSD (virtueller NVMe/SSD-Speicher)
 |===
+
+include::../../IT_REQUIREMENTS_AI_AUDIT_ASSIST.adoc[tags=Kunden-Serveranforderungen]
