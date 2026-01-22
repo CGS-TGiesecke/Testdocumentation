@@ -123,7 +123,7 @@ cgs-assist.ihrefirma.de {
 - ✅ Bewährte Enterprise-Integration
 - ✅ Verfügbarkeit in EU-Regionen (DSGVO-konform)
 - ✅ Microsoft Enterprise Support
-- ✅ Gute GPT-4o Modelle
+- ✅ Bewährte GPT Modelle
 
 **Voraussetzungen:**
 - Aktives Azure-Abonnement (Subscription)
@@ -144,7 +144,7 @@ cgs-assist.ihrefirma.de {
    - **Ressourcengruppe:** Erstellen Sie eine neue oder wählen Sie eine bestehende
    - **Region:** Wählen Sie eine Region (z. B. West Europe, North Europe)
    - **Name:** Vergeben Sie einen eindeutigen Namen (z. B. `cgs-assist-openai-prod`)
-   - **Tarif:** Standard S0
+   - **Tarif:** Standard S0 oder höher
 4. **Überprüfen und erstellen:** Klicken Sie auf "Überprüfen + erstellen" und dann "Erstellen"
 
 ##### Schritt 2: Modelle deployen in Azure AI Foundry
@@ -154,18 +154,17 @@ cgs-assist.ihrefirma.de {
    - Navigieren Sie zu "Deployments"
    - Klicken Sie auf "+ Create new deployment"
 3. **Empfohlene Modelle:**
-   - **Hauptmodell:** `gpt-4o` (Deployment-Name: `gpt-4o`)
-   - **Optional:** `gpt-4o-mini` (Deployment-Name: `gpt-4o-mini`)
-   - **Token-Limits:** Mindestens 50.000 TPM (empfohlen: 150.000+)
+   - **Hauptmodell:** `gpt-4o` 
+   - **Optional:** `gpt-5` oder höher 
 
 ##### Schritt 3: API-Credentials auslesen
 
 1. Im Azure Portal → Ihre OpenAI Ressource → "Keys and Endpoint"
-2. **Notieren Sie:**
-   - API Key (KEY 1 oder KEY 2)
+2. **Notieren Sie für die spätere Konfiguration in der Appllikation:**
+   - API Key
    - Endpoint (z. B. `https://ihr-ressourcenname.openai.azure.com/`)
    - Region (z. B. `westeurope`)
-   - Deployment-Namen
+   - Deployment-Namen der Modelle
 
 **Beispiel:**
 ```
@@ -174,15 +173,6 @@ API Key: 1234567890abcdef...
 Region: westeurope
 Deployment Name: gpt-4o
 ```
-
-#### Unterstützte Azure OpenAI Modelle
-
-- ✅ **gpt-4o** (empfohlen)
-- ✅ **gpt-4o-mini** (schnell & günstig)
-- ✅ **gpt-4-turbo**
-- ✅ **gpt-4**
-- ✅ **gpt-35-turbo** (nur Test/Entwicklung)
-
 ---
 
 ### 2.3 Option B: AWS Bedrock (Gleichwertig unterstützt)
@@ -237,7 +227,7 @@ Erstellen Sie einen IAM-User mit folgender Policy:
 
 1. IAM Console → Users → Ihr User → Security credentials
 2. Create access key
-3. **Notieren Sie:**
+3. **Notieren Sie für die spätere Konfiguration in der Appllikation:**
    - AWS Access Key ID
    - AWS Secret Access Key
    - AWS Region
@@ -250,18 +240,6 @@ AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
 Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 ```
-
-#### Unterstützte AWS Bedrock Modelle
-
-**Anthropic Claude (empfohlen):**
-- ✅ **Claude 3.5 Sonnet** – Beste Balance
-- ✅ **Claude 3 Opus** – Höchste Qualität
-- ✅ **Claude 3 Haiku** – Schnell & günstig
-
-**Weitere Modelle (auf Anfrage):**
-- Meta Llama 3.1/3.2/3.3
-- Mistral AI Modelle
-
 ---
 
 ### 2.4 Option C: Lokale Modelle (für höchste Datenschutzanforderungen)
@@ -374,31 +352,43 @@ ollama pull llama3.1:70b
 
 Die Lösung besteht aus folgenden Docker-Containern:
 
-- **Web-/API-Server:** CGS Assist Backend, LLM API, RAG API
+- **Web-/API-Server:** CGS Assist Backend, LLM API, RAG API, Caddy
 - **Worker:** Celery-Worker für asynchrone Tasks
 - **Redis:** Message-Broker und Caching
-- **Datenbank:** PostgreSQL (Produktion) oder SQLite (Test)
+- **Datenbank:** SQLite
 - **Vector-Store:** ChromaDB für RAG
 
 **Deployment:** Über Docker Compose auf Linux-Server.
 
+## 5. Datenbank und Storage 
+
+**Datenhaltung:**
+- **SQLite:** Benutzerdaten, Metadaten, Logs
+- **SHARED_FOLDER:** Hochgeladene Dokumente, Konfigurationsdateien und Mount zum Docker
+- **ChromaDB:** Embeddings für RAG
+
+**Alle Daten liegen auf dem Kundenserver.**
+
 ---
 
-## 5. Netzwerk und Konnektivität 
+## 6. Authentifizierung 
 
-### 5.1 Erforderliche Ports
+- Lokale Benutzer-/Passwortverwaltung
+- Azure AD/Entra (OIDC/SAML)
+- API-Token für Integrationen
 
-**Extern zugängliche Ports:**
-- **Port 80** (HTTP) – HTTP-Redirect und ACME-Challenge
-- **Port 443** (HTTPS) – Produktivzugriff
-- **Port 8000** (HTTP) – Direktzugriff (Test)
+---
 
-**Interne Ports:**
-- PostgreSQL: 5432
-- Redis: 6379
-- ChromaDB: 8001
+## 7. Security und Compliance 
 
-### 5.2 Firewall
+### 7.1 TLS/HTTPS
+
+Obligatorisch für Produktion. Zertifikate:
+- Let's Encrypt (via Caddy)
+- DNS-01 (API-Token Provider)
+- Eigene Zertifikate (interne CA)
+
+### 7.2 Firewall
 
 **Ausgehende Verbindungen:**
 - **Immer:** Docker Hub / CGS Registry
@@ -407,45 +397,7 @@ Die Lösung besteht aus folgenden Docker-Containern:
   - AWS Bedrock: `bedrock-runtime.<region>.amazonaws.com`
   - Lokal: Interne Verbindung
 
-**Proxy-Konfiguration:**
-```bash
-HTTP_PROXY=http://proxy.ihrefirma.de:8080
-HTTPS_PROXY=http://proxy.ihrefirma.de:8080
-NO_PROXY=localhost,ollama-server
-```
-
----
-
-## 6. Datenbank und Storage 
-
-**Empfohlen:** PostgreSQL (Produktion), SQLite nur für Test
-
-**Datenhaltung:**
-- **PostgreSQL:** Benutzerdaten, Metadaten, Logs
-- **SHARED_FOLDER:** Hochgeladene Dokumente
-- **ChromaDB:** Embeddings für RAG
-
-**Alle Daten liegen auf dem Kundenserver.**
-
----
-
-## 7. Authentifizierung 
-
-- Lokale Benutzer-/Passwortverwaltung
-- Azure AD/Entra (OIDC/SAML)
-- API-Token für Integrationen
-
----
-
-## 8. Security und Compliance 
-
-### 8.1 TLS/HTTPS
-
-Obligatorisch für Produktion. Zertifikate:
-- Let's Encrypt (via Caddy)
-- Eigene Zertifikate (interne CA)
-
-### 8.2 Datenschutz
+### 7.3 Datenschutz
 
 **Anwendungsdaten:** Ausschließlich auf Kundenserver
 
@@ -457,38 +409,23 @@ Obligatorisch für Produktion. Zertifikate:
 
 ---
 
-## 9. Backup und Recovery 
+## 8. Backup und Recovery 
 
-**Zu sichern:**
-- Datenbank (täglich)
-- SHARED_FOLDER (täglich)
+**Vom Kunden zu sichern:**
+- Datenbank
+- SHARED_FOLDER 
 - Konfigurationsdateien
 
-**RPO:** Max. 24h Datenverlust
-**RTO:** System innerhalb 4h verfügbar
+---
+
+## 9. Patch-Management 
+
+- **Anwendung:** CGS stellt Updates bereit → Kunde spielt ein
+- **Infrastruktur:** Kunde verantwortlich (OS, Docker)
 
 ---
 
-## 10. Monitoring 
-
-**Metriken:**
-- CPU/RAM-Auslastung
-- Disk Usage
-- Container-Status
-- API-Latenz
-
-**Integration:** Prometheus, Grafana, Azure Monitor, CloudWatch
-
----
-
-## 11. Patch-Management 
-
-**Anwendung:** CGS stellt Updates bereit → Kunde spielt ein
-**Infrastruktur:** Kunde verantwortlich (OS, Docker)
-
----
-
-## 12. RACI-Matrix 
+## 10. RACI-Matrix 
 
 | Bereich | CGS | Kunde |
 |---------|-----|-------|
@@ -503,7 +440,7 @@ Obligatorisch für Produktion. Zertifikate:
 
 ---
 
-## 13. FAQ 
+## 11. FAQ 
 
 ### **Wird ein LLM mitgeliefert?**
 
@@ -548,7 +485,7 @@ Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analys
 
 ---
 
-## 14. Checkliste 
+## 12. Checkliste 
 
 ### LLM-Provider Setup (wählen Sie EINEN)
 
@@ -577,46 +514,6 @@ Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analys
 - [ ] Firewall-Freigaben (Ports 80, 443)
 - [ ] DNS konfiguriert (für Caddy)
 - [ ] Ausgehende Verbindungen freigegeben
-
----
-
-## 15. Englische Version (EN) – Summary
-
-### ⚠️ IMPORTANT: Customer Must Provide LLM
-
-**AI Audit Assist is delivered WITHOUT an integrated LLM.**
-
-Customer must provide:
-- **Azure OpenAI** (recommended) – Fully supported
-- **AWS Bedrock** (equally supported) – Fully supported
-- **Local models** (self-hosted) – Supported
-
-### Requirements (EN)
-
-**Infrastructure:**
-- Linux server, Docker ≥ 20.x, Docker Compose ≥ 1.29
-- Ports: 80 (HTTP/ACME), 443 (HTTPS), 8000 (direct)
-- DNS: FQDN required for Caddy (e.g., `cgs-assist.company.com`)
-
-**LLM Providers:**
-- **Azure OpenAI:** API Key + Endpoint
-- **AWS Bedrock:** Access Keys + Region
-- **Local:** OpenAI-compatible API (Ollama, vLLM)
-
-**Server Specs:**
-- Entry: 4 vCPUs, 8 GB RAM, 250 GB SSD
-- Mid: 8-12 vCPUs, 32 GB RAM, 1 TB SSD
-- High: 16-32 vCPUs, 64 GB RAM, 2 TB SSD
-
-### FAQ (EN)
-
-**Is LLM included?** No. Customer must provide.
-
-**Which provider?** Azure (recommended), AWS (equal), Local (privacy).
-
-**Is Azure mandatory?** No. All three fully supported.
-
-**Costs?** Azure: $100-500/mo, AWS: $80-400/mo, Local: Hardware investment.
 
 ---
 

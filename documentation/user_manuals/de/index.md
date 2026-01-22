@@ -13,7 +13,7 @@
 - 1.1.2 [Navigationsbereich "Anwendungsfälle"](#112-navigationsbereichn-anwendungsfälle)
 - 1.1.3 [Navigationsbereich "Automatisierung"](#113-navigationsbereich-automatisierung)
 - 1.1.4 [Navigationsbereich "Dokumente"](#114-navigationsbereich-dokumente)
-- 1.1.5 [Navigationsbereich "Portale"](#115-navigationsbereich-portale)
+- 1.1.5 [Navigationsbereich "Portal"](#115-navigationsbereich-portal)
 - 1.2 [Assist Administration](#12-assist-administration)
 - 1.2.1 [Benutzerverwaltung](#121-benutzerverwaltung)
 - 1.2.1.1 [Benutzer bearbeiten](#1211-benutzer-bearbeiten)
