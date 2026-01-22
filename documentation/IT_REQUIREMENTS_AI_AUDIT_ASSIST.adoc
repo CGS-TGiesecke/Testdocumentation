@@ -28,10 +28,18 @@ Die Lösung wird auf einem **Linux-basierten Server** bereitgestellt (lokale VM 
 
 **Wichtig:** Eine VM ist **nicht zwingend erforderlich**. Die Lösung kann auf jedem Linux-Server mit Docker Compose betrieben werden.
 
+#end::kunden-anforderungen-allgemein[]
+
+#tag::kunden-anforderungen-allgemein[]
+
 ### 1.2 Betriebssystem
 
 - **Linux**, z. B. Ubuntu Server LTS (24.04) oder vergleichbare Distributionen
 - Getestet mit Ubuntu; andere Linux-Distributionen auf Anfrage
+
+#end::kunden-anforderungen-allgemein[]
+
+#tag::kunden-anforderungen-allgemein[]
 
 ### 1.3 Docker-Umgebung
 
@@ -42,6 +50,8 @@ Die Bereitstellung erfolgt über **Docker Compose**.
 - **Docker Compose:** Version ≥ 1.29 oder Compose V2
 
 **Installation:** Der Kunde muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
+
+#end::kunden-anforderungen-allgemein[]
 
 ### 1.4 Gemeinsames Verzeichnis (SHARED_FOLDER)
 
@@ -61,7 +71,6 @@ Ein **beschreibbares Verzeichnis** auf dem Server für den Datenaustausch zwisch
 - **Bei Cloud-LLM-Providern (Azure OpenAI, AWS Bedrock):** Dauerhafte Internetverbindung erforderlich
 - **Bei lokalen Modellen:** Nur für Installation erforderlich (Download der Docker-Images)
 
-#end::kunden-anforderungen-allgemein[]
 
 ### 1.6 Netzwerk und Ports
 
