@@ -35,8 +35,8 @@ Die Bereitstellung erfolgt über **Docker Compose**.
 
 **Erforderliche Versionen:**
 
-- **Docker Engine:** Version größer 20.x
-- **Docker Compose:** Version größer 1.29 oder Compose V2
+- **Docker Engine:** Version `>` 20.x
+- **Docker Compose:** Version '>' 1.29 oder Compose V2
 
 **Installation:** Der Kunde muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
 
@@ -80,7 +80,7 @@ Wenn Sie Caddy mit automatischen Let's Encrypt TLS-Zertifikaten verwenden möcht
 
 **Caddyfile-Konfiguration benötigt:**
 
-``
+``json
 cgs-assist.ihrefirma.de {
     reverse_proxy cgs_assist_backend:8000
 }
@@ -92,7 +92,7 @@ Zertifikatsanfrage wird über DNS-Einträge verifiziert anstatt die Inhalte übe
 
 Beispiel Provider-Syntax Cloudflare Token als Env-Var:
 
-``
+```copy
 texttest.server.de {reverse_proxy cgs_assist_server:8000 {
 		header_up X-Forwarded-Proto {scheme}        
 		header_up X-Forwarded-Host {host}        
@@ -107,7 +107,7 @@ texttest.server.de {reverse_proxy cgs_assist_server:8000 {
 				# optional: resolvers 1.1.1.1 8.8.8.8
 				}
 		}
-``
+```
 
 **Wichtig:** in der Konfigurationsdatei des Caddy-Server muss das Plugin "caddy-dns" eingebunden werden, sonst wird "dns cloudflare" nicht gefunden.
 
@@ -115,13 +115,13 @@ Beispiel Eigenes Zertifikat (PEM + Key):
 
 Wenn ein Zertifikat existiert (z. B. von eurer Firmen‑PKI, oder manuell erzeugt), wird es direkt eingebunden:
 
-``
+```copy
 texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
 	Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}    
 	# Zertifikat + Private Key (PEM)    
 	tls /etc/caddy/certs/test.server.de.fullchain.pem /etc/caddy/certs/test.server.de.key
 	}
-``
+```
 
 **Wichtig:** Die Zertifikatskette muss vollständig sein(typisch “fullchain”) und die SANs (Subject Alternative Names) müssen zum Hostnamen passen.
 
@@ -207,7 +207,7 @@ texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
    - Deployment-Namen der Modelle
 
 **Beispiel:**
-``
+``bash
 Endpoint: https://cgs-assist-openai-prod.openai.azure.com/
 API Key: 1234567890abcdef...
 Region: westeurope
@@ -247,8 +247,7 @@ Deployment Name: gpt-4o
 ##### Schritt 2: IAM-Berechtigungen einrichten
 
 Erstellen Sie einen IAM-User mit folgender Policy:
-
-``
+``copy
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -275,7 +274,7 @@ Erstellen Sie einen IAM-User mit folgender Policy:
    - Model ID (z. B. `anthropic.claude-3-5-sonnet-20240620-v1:0`)
 
 **Beispiel:**
-``
+``bash
 AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
