@@ -91,6 +91,7 @@ cgs-assist.ihrefirma.de {
 Zertifikatsanfrage wird über DNS-Einträge verifiziert anstatt die Inhalte über HTTP bereitzustellen 
 
 Beispiel Provider-Syntax Cloudflare Token als Env-Var:
+
 ``
 texttest.server.de {reverse_proxy cgs_assist_server:8000 {
 		header_up X-Forwarded-Proto {scheme}        
@@ -397,6 +398,8 @@ Die Lösung besteht aus folgenden Docker-Containern:
 - **Vector-Store:** ChromaDB für RAG
 
 **Deployment:** Über Docker Compose auf Linux-Server.
+
+---
 
 ## 5. Datenbank und Storage 
 
