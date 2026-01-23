@@ -24,6 +24,8 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    env:
+      FILENAME: IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,13 +34,15 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
         
       - name: Convert Markdown to HTML with style
-        run: pandoc documentation/IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN.md -o IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN.html --css=documentation/export-styles/style.css --standalone --embed-resources
+        run: |
+          pandoc documentation/${FILENAME}.md -o ${FILENAME}.html --css=documentation/export-styles/style.css --standalone --embed-resources
         
       - name: Convert HTML to PDF 
-        run: wkhtmltopdf --margin-top 30mm --margin-bottom 20mm --margin-left 20mm --margin-right 20mm IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN.html IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN.pdf
+        run: |
+          wkhtmltopdf --margin-top 30mm --margin-bottom 20mm --margin-left 20mm --margin-right 20mm ${FILENAME}.html ${FILENAME}.pdf
        
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN
-          path: IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN.pdf
+          name: ${{ env.FILENAME }}
+          path: ${{ env.FILENAME }}.pdf
