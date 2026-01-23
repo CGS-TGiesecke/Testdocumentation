@@ -11,13 +11,13 @@ image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist"]
 Über eine Navigation am oberen Rand sind die thematisierten Navigationsbereiche erreichbar.
 Je nach Berechtigungen des Anwenders können die Anzahl der Einträge bzw. das Design varieren.
 
-image::..images/Abbildung-1.jpg[Navigationsbereiche, title="Navigationsbereiche"]
+image::../images/Abbildung-1.jpg[Navigationsbereiche, title="Navigationsbereiche"]
 
 Unterseiten dieser Navigationsbereiche sind dann jeweils über die Baumnavigation am linken Rand erreichbar.
 
-image::..images/Abbildung-2.jpg[Navigationsbereich - Baumnavigation, title="Navigationsbereich - Baumnavigation"]
+image::../images/Abbildung-2.jpg[Navigationsbereich - Baumnavigation, title="Navigationsbereich - Baumnavigation"]
 
 Zusätzlich kann über ein Symbol am rechten oberen Rand die Auswahl der Sprache innerhalb der Anwendung getroffen werden und die Ansicht in den Dark Mode, bzw. wieder zurück, gewechselt werden. 
 Auch kann das Profil eingesehen werden bzw. eine Änderung des persönlichen Passwortes ist möglich.
 
-image::images/Abbildung-3.jpg[Sprachwechsel und Darkmode, title=Sprachwechsel und Darkmode"]
+image::../images/Abbildung-3.jpg[Sprachwechsel und Darkmode, title=Sprachwechsel und Darkmode"]
