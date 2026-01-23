@@ -477,6 +477,7 @@ Obligatorisch für Produktion. Zertifikate:
 | **Security-Patches (OS)** | Consult | Responsible |
 
 ---
+
 <div class="pagebreak"></div>
 
 ## 11. FAQ 
@@ -523,6 +524,7 @@ Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analys
 - Lokal: €0 API-Kosten, aber Hardware-Investment
 
 ---
+
 <div class="pagebreak"></div>
 
 ## 12. Checkliste 
