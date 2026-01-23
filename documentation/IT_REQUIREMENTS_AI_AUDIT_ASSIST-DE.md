@@ -34,6 +34,7 @@ Die Lösung wird auf einem **Linux-basierten Server** bereitgestellt (lokale VM 
 Die Bereitstellung erfolgt über **Docker Compose**.
 
 **Erforderliche Versionen:**
+
 - **Docker Engine:** Versiong größer 20.x
 - **Docker Compose:** Version größer 1.29 oder Compose V2
 

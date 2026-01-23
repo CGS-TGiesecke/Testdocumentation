@@ -36,6 +36,7 @@ The solution is provided on a **Linux-based server** (local VM or cloud VM). **N
 Deployment is managed via **Docker Compose**.
 
 **Required versions:**
+
 - **Docker Engine:** Version größer 20.x
 - **Docker Compose:** Version größer 1.29 or Compose V2
 
@@ -50,12 +51,14 @@ A **writable directory** on the server for data exchange between containers and 
 ### 1.5 Internet Access / Proxy
 
 **Required for:**
+
 - Downloading Docker images (during installation)
 - Connecting to the LLM provider API (Azure OpenAI, AWS Bedrock – if cloud providers are chosen)
 
 **Proxy support:** The solution supports operation behind a proxy. Proxy configuration can be set using environment variables.
 
 **Important:** 
+
 - **Cloud LLM Providers (Azure OpenAI, AWS Bedrock):** A permanent internet connection is required
 - **Local Models:** Internet only needed for installation (Docker image download)
 
@@ -132,6 +135,7 @@ Use own TLS certificates (e.g., from internal CA)
 Access only via IP address: http://<server-ip>:8000 (recommended only for testing/development)
 
 **Customer responsibility:**
+
 - Firewall rules for ports 80 and 443 (production) or 8000 (testing)
 - DNS configuration: A-record for the desired FQDN (e.g., 'cgs-assist.yourcompany.com') pointing to server IP
 - Provide FQDN for Caddyfile configuration
@@ -151,6 +155,7 @@ Access only via IP address: http://<server-ip>:8000 (recommended only for testin
 |Local Models	|For high privacy	|Maximum data protection, no cloud					|	High (GPU required)|
 
 **Select a provider based on:**
+
 - Existing cloud infrastructure (Azure or AWS)
 - Data privacy and compliance requirements
 - Budget and operating model
@@ -160,12 +165,14 @@ Access only via IP address: http://<server-ip>:8000 (recommended only for testin
 ### 2.2 Option A: Azure OpenAI (Recommended)
 
 **Why Azure OpenAI is recommended:**
+
 - Proven enterprise integration
 - EU-region availability (GDPR-compliant)
 - Microsoft enterprise support
 - Proven GPT models
 
 **Prerequisites:**
+
 - Active Azure subscription
 - Approval for Azure OpenAI Service (may require approval)
 - Sufficient permissions to create resources
@@ -217,12 +224,14 @@ Deployment Name: gpt-4o
 **AWS Bedrock is a full alternative to Azure OpenAI.**
 
 **Benefits:**
+
 - Excellent Claude models from Anthropic
 - Available in EU regions (Frankfurt, Ireland)
 - Good integration for AWS customers
 - Often less expensive than Azure OpenAI
 
 **Prerequisites:**
+
 - Active AWS account
 - Access to AWS Bedrock Service
 - Sufficient IAM permissions
@@ -288,11 +297,13 @@ Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 The platform supports local LLMs via OpenAI-compatible APIs.
 
 **Supported tools:**
+
 - **Ollama** (easiest solution) – https://ollama.ai
 - **vLLM** (highest performance)
 - **LM Studio** (GUI-based)
 
 **Recommended models:**
+
 - **Llama 3.1 70B / Llama 3.3 70B** (high quality)
 - **Qwen 2.5 72B** (excellent, multilingual)
 - **Mistral Large 2** (high quality)
@@ -327,6 +338,7 @@ ollama pull llama3.1:70b
 |50+ users			|300,000+			|High load				|
 
 **Customer responsibility:**
+
 - **Azure OpenAI:** Adjust token limits in Azure AI Foundry
 - **AWS Bedrock:** Check service quotas in AWS Console
 - **Local Models:** Provide sufficient GPU capacity
@@ -336,16 +348,19 @@ ollama pull llama3.1:70b
 ### 2.6 LLM Provider Cost Overview
 
 **Azure OpenAI (approx., as of 2026):**
+
 - GPT-4o: $5–15 per 1M tokens
 - GPT-4o-mini: $0.15–0.60 per 1M tokens
 - **Typical (50 users): $100–500/month**
 
 **AWS Bedrock (approx., as of 2026):**
+
 - Claude 3.5 Sonnet: $3–8 per 1M input, $15–24 per 1M output
 - Claude 3 Haiku: $0.25–1 per 1M input, $1.25–5 per 1M output
 - **Typical (50 users): $80–400/month**
 
 **Local Models:**
+
 - No API costs
 - Hardware investment: €5,000–50,000+
 - Ongoing electricity costs
@@ -357,6 +372,7 @@ ollama pull llama3.1:70b
 ### 3.1 Simple Environment (8 GB RAM)
 
 **Suitable for:** Test and PoC environments
+
 - **RAM:** 8 GB
 - **CPU:** 4 vCPUs
 - **Storage:** 250 GB SSD
@@ -365,6 +381,7 @@ ollama pull llama3.1:70b
 ### 3.2 Medium Environment (32 GB RAM)
 
 **Suitable for:** Production environments
+
 - **RAM:** 32 GB
 - **CPU:** 8–12 vCPUs
 - **Storage:** 1 TB SSD
@@ -373,6 +390,7 @@ ollama pull llama3.1:70b
 ### 3.3 Large Environment (64 GB RAM)
 
 **Suitable for:** Large production environments
+
 - **RAM:** 64 GB
 - **CPU:** 16–32 vCPUs
 - **Storage:** 2 TB SSD
@@ -399,6 +417,7 @@ The solution consists of the following Docker containers:
 ## 5. Database and Storage
 
 **Data storage:**
+
 - **SQLite:** User data, metadata, logs
 - **SHARED_FOLDER:** Uploaded documents, configuration files, Docker mount
 - **ChromaDB:** Embeddings for RAG
@@ -406,6 +425,7 @@ The solution consists of the following Docker containers:
 **All data resides on the customer's server.**
 
 ## 6. Authentication
+
 - Local user/password management
 - Azure AD/Entra (OIDC/SAML)
 - API tokens for integrations
@@ -417,6 +437,7 @@ The solution consists of the following Docker containers:
 ### 7.1 TLS/HTTPS
 
 Mandatory for production. Certificates:
+
 - Let’s Encrypt (via Caddy)
 - DNS-01 (API token provider)
 - Own certificates (internal CA)
@@ -424,6 +445,7 @@ Mandatory for production. Certificates:
 ### 7.2 Firewall
 
 **Outgoing connections:**
+
 - **Always:** Docker Hub / CGS Registry
 - **Depending on LLM provider:**
 	- Azure OpenAI: *.openai.azure.com
@@ -435,6 +457,7 @@ Mandatory for production. Certificates:
 **Application data:** Exclusively on the customer server
 
 **LLM provider (cloud):**
+
 - Azure OpenAI / AWS Bedrock: Requests are transmitted but not stored permanently
 - **Recommendation:** Choose EU region (GDPR)
 
@@ -445,6 +468,7 @@ Mandatory for production. Certificates:
 ## 8. Backup and Recovery
 
 **Customer responsibility to back up:**
+
 - Database
 - SHARED_FOLDER
 - Configuration files
@@ -481,6 +505,7 @@ Mandatory for production. Certificates:
 ### Which LLM provider should I choose?
 
 **Recommendation:**
+
 1. **Azure OpenAI** (preferred) – if you use Azure
 2. **AWS Bedrock** (equivalent) – if you use AWS
 3. **Local models** – for maximum data privacy 
@@ -511,6 +536,7 @@ All application data is stored on the customer server. For cloud LLMs, requests 
 ### Do we have to pay for the LLM?
 
 **Yes**(for cloud providers):
+
 - Azure OpenAI: $100-500/month (50 users)
 - AWS Bedrock: $80-400/month (50 users)
 - Local: €0 API costs, but hardware investment required
@@ -523,24 +549,28 @@ All application data is stored on the customer server. For cloud LLMs, requests 
 **LLM Provider Setup (choose ONE)**
 
 **Option A: Azure OpenAI (recommended)**
+
 - [ ] Azure subscription available
 - [ ] Resource created
 - [ ] Model deployed (gpt-4o)
 - [ ] API key + endpoint saved
 
 **Option B: AWS Bedrock (equivalent)**
+
 - [ ] AWS account available
 - [ ] Model access enabled
 - [ ] IAM credentials created
 - [ ] Access keys + model ID saved
 
 **Option C: Local Model**
+
 - [ ] GPU server ready
 - [ ] Ollama/vLLM installed
 - [ ] Model downloaded
 - [ ] API endpoint tested
 
 **Infrastructure**
+
 - [ ] Linux server provided
 - [ ] Docker + Docker Compose installed
 - [ ] SHARED_FOLDER created
