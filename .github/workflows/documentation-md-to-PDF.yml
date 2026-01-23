@@ -30,9 +30,12 @@ jobs:
 
       - name: Set up Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc texlive-xetex
-
+        
+      - name: Install pandoc-emoji
+        run: pip install pandoc-emoji
+        
       - name: Convert Markdown to PDF
-        run: pandoc documentation/IT_REQUIREMENTS_AI_AUDIT_ASSIST-DE.md -o IT_REQUIREMENTS_AI_AUDIT_ASSIST-DE.pdf
+        run: pandoc documentation/IT_REQUIREMENTS_AI_AUDIT_ASSIST-DE.md -o --filter pandoc-emoji --pdf-engine=xelatex IT_REQUIREMENTS_AI_AUDIT_ASSIST-DE.pdf
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
