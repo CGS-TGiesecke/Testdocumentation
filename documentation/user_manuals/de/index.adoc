@@ -13,8 +13,8 @@
 :imagesdir: images
 :sectnums:
 :sectnumlevels: 7
-//:cgs-assist: 1
-:arc-assist: 1
+:cgs-assist: 1
+//:arc-assist: 1
 
 include::parts/part1.adoc[]
 
