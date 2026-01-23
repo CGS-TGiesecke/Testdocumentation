@@ -36,8 +36,8 @@ Die Lösung wird auf einem **Linux-basierten Server** bereitgestellt (lokale VM 
 Die Bereitstellung erfolgt über **Docker Compose**.
 
 **Erforderliche Versionen:**
-- **Docker Engine:** Version ≥ 20.x
-- **Docker Compose:** Version ≥ 1.29 oder Compose V2
+- **Docker Engine:** Versiong größer 20.x
+- **Docker Compose:** Version größer 1.29 oder Compose V2
 
 **Installation:** Der Kunde muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
 

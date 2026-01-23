@@ -36,8 +36,8 @@ The solution is provided on a **Linux-based server** (local VM or cloud VM). **N
 Deployment is managed via **Docker Compose**.
 
 **Required versions:**
-- **Docker Engine:** Version ≥ 20.x
-- **Docker Compose:** Version ≥ 1.29 or Compose V2
+- **Docker Engine:** Version größer 20.x
+- **Docker Compose:** Version größer 1.29 or Compose V2
 
 **Installation:** The customer must install and configure Docker and Docker Compose on the server.
 
