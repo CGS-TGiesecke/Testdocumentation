@@ -1,4 +1,4 @@
-name: Export dokumentation Markdown to PDF
+name: Export EN dokumentation Markdown to PDF
 
 on:
   workflow_dispatch:
