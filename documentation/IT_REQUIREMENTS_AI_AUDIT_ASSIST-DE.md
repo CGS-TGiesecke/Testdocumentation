@@ -10,9 +10,9 @@ Der Kunde muss selbst einen LLM-Provider bereitstellen. Folgende Optionen werden
 
 | LLM-Provider | Status | Empfehlung |
 |--------------|--------|------------|
-| **Azure OpenAI** | ✅ Vollständig unterstützt | **Empfohlen** für Cloud-Deployments |
-| **AWS Bedrock** | ✅ Vollständig unterstützt | Für AWS-Kunden geeignet |
-| **Lokale Modelle** | ✅ Unterstützt | Für höchste Datenschutzanforderungen |
+| **Azure OpenAI** | Vollständig unterstützt | **Empfohlen** für Cloud-Deployments |
+| **AWS Bedrock** | Vollständig unterstützt | Für AWS-Kunden geeignet |
+| **Lokale Modelle** | Unterstützt | Für höchste Datenschutzanforderungen |
 
 **Hinweis:** Azure OpenAI ist unsere bevorzugte Empfehlung, aber AWS Bedrock und lokale Modelle werden gleichwertig unterstützt.
 
@@ -75,9 +75,9 @@ Ein **beschreibbares Verzeichnis** auf dem Server für den Datenaustausch zwisch
 
 Wenn Sie Caddy mit automatischen Let's Encrypt TLS-Zertifikaten verwenden möchten:
 
-- ✅ **FQDN erforderlich:** Die Anwendung muss über einen vollständigen Domainnamen erreichbar sein (z.B. `cgs-assist.ihrefirma.de`)
-- ✅ **DNS-Auflösung:** Der FQDN muss auf die öffentliche IP-Adresse des Servers zeigen (A-Record oder CNAME)
-- ✅ **Port 80 erreichbar:** Muss aus dem Internet erreichbar sein (für ACME HTTP-Challenge)
+- **FQDN erforderlich:** Die Anwendung muss über einen vollständigen Domainnamen erreichbar sein (z.B. `cgs-assist.ihrefirma.de`)
+- **DNS-Auflösung:** Der FQDN muss auf die öffentliche IP-Adresse des Servers zeigen (A-Record oder CNAME)
+- **Port 80 erreichbar:** Muss aus dem Internet erreichbar sein (für ACME HTTP-Challenge)
 
 **Caddyfile-Konfiguration benötigt:**
 
@@ -146,9 +146,9 @@ texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
 
 | Provider | Empfehlung | Vorteile | Setup-Aufwand |
 |----------|------------|----------|---------------|
-| **Azure OpenAI** | ⭐ **Bevorzugt** | Enterprise-Support, EU-Regionen, einfache Integration | Mittel |
-| **AWS Bedrock** | ✅ Gleichwertig | Gute Claude-Modelle, AWS-Integration | Mittel |
-| **Lokale Modelle** | ✅ Für hohe Datenschutzanforderungen | Maximaler Datenschutz, keine Cloud | Hoch (GPU-Hardware erforderlich) |
+| **Azure OpenAI** |  **Bevorzugt** | Enterprise-Support, EU-Regionen, einfache Integration | Mittel |
+| **AWS Bedrock** |  Gleichwertig | Gute Claude-Modelle, AWS-Integration | Mittel |
+| **Lokale Modelle** |  Für hohe Datenschutzanforderungen | Maximaler Datenschutz, keine Cloud | Hoch (GPU-Hardware erforderlich) |
 
 **Wählen Sie einen Provider basierend auf:**
 - Vorhandener Cloud-Infrastruktur (Azure oder AWS)
@@ -160,10 +160,10 @@ texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
 ### 2.2 Option A: Azure OpenAI (Empfohlen)
 
 **Warum Azure OpenAI empfohlen wird:**
-- ✅ Bewährte Enterprise-Integration
-- ✅ Verfügbarkeit in EU-Regionen (DSGVO-konform)
-- ✅ Microsoft Enterprise Support
-- ✅ Bewährte GPT Modelle
+- Bewährte Enterprise-Integration
+- Verfügbarkeit in EU-Regionen (DSGVO-konform)
+- Microsoft Enterprise Support
+- Bewährte GPT Modelle
 
 **Voraussetzungen:**
 - Aktives Azure-Abonnement (Subscription)
@@ -220,10 +220,10 @@ Deployment Name: gpt-4o
 **AWS Bedrock ist eine vollwertige Alternative zu Azure OpenAI.**
 
 **Vorteile:**
-- ✅ Exzellente Claude-Modelle von Anthropic
-- ✅ Verfügbarkeit in EU-Regionen (Frankfurt, Irland)
-- ✅ Gute Integration für AWS-Kunden
-- ✅ Häufig kostengünstiger als Azure OpenAI
+- Exzellente Claude-Modelle von Anthropic
+- Verfügbarkeit in EU-Regionen (Frankfurt, Irland)
+- Gute Integration für AWS-Kunden
+- Häufig kostengünstiger als Azure OpenAI
 
 **Voraussetzungen:**
 - Aktives AWS-Konto
