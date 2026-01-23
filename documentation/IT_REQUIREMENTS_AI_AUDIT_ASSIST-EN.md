@@ -80,11 +80,11 @@ If you want to use Caddy with automatic Let’s Encrypt TLS certificates:
 - ✅ **Port 80 accessible:** Must be reachable from the internet (for ACME HTTP challenge)
 
 **Caddyfile configuration example:**
-``
+```json
 cgs-assist.yourcompany.com {
     reverse_proxy cgs_assist_backend:8000
 }
-``
+```
 
 **Alternative DNS-01 (publicly trusted, without open 80/443):**
 
@@ -92,7 +92,7 @@ Certificate requests are verified via DNS entries instead of HTTP content
 
 Provider syntax example, Cloudflare token as Env-Var:
 
-``
+```json
 texttest.server.com {reverse_proxy cgs_assist_server:8000 {
         header_up X-Forwarded-Proto {scheme}        
         header_up X-Forwarded-Host {host}        
@@ -107,7 +107,7 @@ texttest.server.com {reverse_proxy cgs_assist_server:8000 {
                 # optional: resolvers 1.1.1.1 8.8.8.8
                 }
         }
-``
+```
 
 **Important:** The "caddy-dns" plugin must be included in the Caddy server's configuration, otherwise "dns cloudflare" will not be found.
 
@@ -115,12 +115,13 @@ Own certificate example (PEM + Key):
 
 If a certificate exists (e.g., from your company PKI or manually generated), integrate it directly:
 
+'''json
 texttest.server.com {reverse_proxy cgs_assist_server:8000 header {
     Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}    
     # Certificate + Private Key (PEM)    
     tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.com.key
     }
-
+```
 
 **Important:** The certificate chain must be complete (typically “fullchain”) and the SANs (Subject Alternative Names) must match the hostname.
 
