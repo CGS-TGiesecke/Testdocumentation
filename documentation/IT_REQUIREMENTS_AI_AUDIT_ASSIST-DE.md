@@ -16,8 +16,6 @@ Der Kunde muss selbst einen LLM-Provider bereitstellen. Folgende Optionen werden
 
 **Hinweis:** Azure OpenAI ist unsere bevorzugte Empfehlung, aber AWS Bedrock und lokale Modelle werden gleichwertig unterstützt.
 
----
-
 ## 1. Allgemeine Voraussetzungen
  
 ### 1.1 Infrastruktur (VM oder Server)
@@ -135,8 +133,6 @@ texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
 - DNS-Konfiguration: A-Record für den gewünschten FQDN (z. B. `cgs-assist.ihrefirma.de`) auf Server-IP
 - Bereitstellung des FQDN für die Caddyfile-Konfiguration
 - Optional: Eigene TLS-Zertifikate, falls Let's Encrypt nicht verwendet werden soll
-
----
 
 ## 2. LLM-Provider – Bereitstellung durch den Kunden 
 
@@ -481,6 +477,7 @@ Obligatorisch für Produktion. Zertifikate:
 | **Security-Patches (OS)** | Consult | Responsible |
 
 ---
+<div class="pagebreak"></div>
 
 ## 11. FAQ 
 
@@ -526,6 +523,7 @@ Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analys
 - Lokal: €0 API-Kosten, aber Hardware-Investment
 
 ---
+<div class="pagebreak"></div>
 
 ## 12. Checkliste 
 
