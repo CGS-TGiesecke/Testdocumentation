@@ -1,11 +1,9 @@
 === Anwendungsbeschreibung 
 
 Es ist innerhalb von
-
 ifdef::cgs-assist[] 
 CGS Assist
 endif::cgs-assist[]
-
 ifdef::arc-assist[]
 Arc Assist
 endif::arc-assist[]

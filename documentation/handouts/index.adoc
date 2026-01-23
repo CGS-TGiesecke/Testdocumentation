@@ -1,7 +1,8 @@
-//= Arc Assist: KI-Plattform für den Mittelstand - Technische Voraussetzungen
-= CGS Assist: KI-Plattform für den Mittelstand - Technische Voraussetzungen 
+= Arc Assist: KI-Plattform für den Mittelstand - Technische Voraussetzungen
+//= CGS Assist: KI-Plattform für den Mittelstand - Technische Voraussetzungen 
 :doctype: book
-:author: cgs
+:author: arc
+//:author: cgs
 :revdate: 2026-02-17 
 :sectnums:
 :sectnumlevels: 7
