@@ -50,7 +50,7 @@ jobs:
       - name: Build HTML and PDF docs
         run: |
           asciidoctor -a revnumber=$REVISION -D documentation/user_manuals/en/ documentation/user_manuals/en/index.adoc
-          asciidoctor-pdf -a revnumber=$REVISION -D documentation/user_manuals/de/ -a pdf-theme=CGS -a pdf-themesdir=documentation/user_manuals/themes -o Handbook_EN.pdf documentation/user_manuals/en/index.adoc
+          asciidoctor-pdf -a revnumber=$REVISION -D documentation/user_manuals/en/ -a pdf-theme=CGS -a pdf-themesdir=documentation/user_manuals/themes -o Handbook_EN.pdf documentation/user_manuals/en/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
