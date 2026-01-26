@@ -7,14 +7,14 @@ ifdef::arc-assist[]
 image::../../themes/arc_logo_gross.png[Firmenlogo,align=left]
 endif::arc-assist[]
 
-=== Kontakt
+=== Contact
 
 ifdef::cgs-assist[]
 Firma CGS
 
-Straße 1
+Street 1
 
-00000 Stadt
+00000 Town
 
 Tel.:	
 
@@ -26,8 +26,8 @@ endif::cgs-assist[]
 ifdef::arc-assist[]
 Firma ARC
 
-Straße 1
-00000 Stadt
+Street 1
+00000 Town
 
 Tel.:	
 
