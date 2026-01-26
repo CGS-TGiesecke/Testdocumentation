@@ -33,19 +33,13 @@ Klick auf ein Symbol mit Namen öffnet den Anwendungsfall zur Datenaufnahme.
 
 image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles"]
 
-Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf „Senden“ abgeschickt werden.
-
-image::../images/Abbildung-39.jpg[Navigationsbereich - Anwendungsfälle - Senden, title="Navigationsbereich - Anwendungsfälle - Senden"]
-
+Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf Ausführen“ abgeschickt werden.
 Während der Verarbeitung wird eine Wait Box angezeigt und der Statusverlauf als Info angezeigt.
 
 image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox"]
 
 Nach der Rückmeldung zur Anfrage kann über einen Butten in den Navigationsbereich „Chat“ geöffnet werden, um auf diesen konkreten Use Case weitere Anfragen zu starten.
 Das Ergebnis einer Anfrage kann auch gespeichert werden und ist dann als separater Chat verfügbar.
-
-image::../images/Abbildung-10.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles"]
-
 Um einen Use Case zu löschen, muss zuerst der Lösch Button betätigt werden und danach die Abfrage mit „OK“ bestätigt werden.
 
 image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles"]

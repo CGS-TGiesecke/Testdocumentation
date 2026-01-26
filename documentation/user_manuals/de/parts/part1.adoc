@@ -22,7 +22,7 @@ image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist"]
 endif::arc-assist[]
 
 Über eine Navigation am oberen Rand sind die thematisierten Navigationsbereiche erreichbar.
-Je nach Berechtigungen des Anwenders können die Anzahl der Einträge bzw. das Design varieren.
+Je nach Berechtigungen des Anwenders können die Anzahl der Einträge bzw. das Design variieren.
 
 image::../images/Abbildung-1.jpg[Navigationsbereiche, title="Navigationsbereiche"]
 

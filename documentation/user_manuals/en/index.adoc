@@ -1,0 +1,36 @@
+ifdef::cgs-assist[]
+image::../../themes/cgs-logo.png[Logo,align=left,width=60]
+endif::cgs-assist[]
+
+ifdef::arc-assist[]
+image::../../themes/arc_logo_gross.png[Logo,align=left,width=60]
+endif::arc-assist[]
+
+//= Arc Assist: User Handbook
+= CGS Assist: User Handbook
+:doctype: book
+//:author: arc
+:author: CGS GmbH
+:revdate: 2002-02-02
+:toc: left
+:toc-interactive: true // in pdf the active section will be highlighted
+:toc-mode: offcanvas
+:toc-mode: responsive
+:toc-title: Table of Content
+:toclevels: 7
+:figure-caption: Figure
+:imagesdir: images
+:sectnums:
+:sectnumlevels: 7
+:cgs-assist: 1
+//:arc-assist: 1
+
+include::parts/part1.adoc[]
+
+include::parts/part1-1.adoc[]
+
+include::parts/part1-2.adoc[]
+
+<<<
+
+include::parts/part2.adoc[]
