@@ -1,10 +1,10 @@
-# CGS Assist – Technische Bereitstellungsanforderungen
+# AI Audit Assist – Technische Bereitstellungsanforderungen 
 
-Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen Voraussetzungen für die Bereitstellung und den Betrieb der CGS Assist Plattform beim Kunden.
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen Voraussetzungen für die Bereitstellung und den Betrieb der AI Audit Assist Plattform beim Kunden.
 
 ## WICHTIG: LLM-Bereitstellung durch den Kunden
 
-**Die CGS Assist Plattform wird OHNE integriertes Large Language Model (LLM) ausgeliefert.**
+**Die AI Audit Assist Plattform wird OHNE integriertes Large Language Model (LLM) ausgeliefert.**
 
 Der Kunde muss selbst einen LLM-Provider bereitstellen. Folgende Optionen werden unterstützt:
 
@@ -82,7 +82,7 @@ Wenn Sie Caddy mit automatischen Let's Encrypt TLS-Zertifikaten verwenden möcht
 
 ~~~
 xxx-assist.ihrefirma.de {
-    reverse_proxy cgs_assist_backend:8000
+    reverse_proxy xxx_assist_backend:8000
 }
 ~~~
 
@@ -93,7 +93,7 @@ Zertifikatsanfrage wird über DNS-Einträge verifiziert anstatt die Inhalte übe
 Beispiel Provider-Syntax Cloudflare Token als Env-Var:
 
 ~~~
-texttest.server.de {reverse_proxy cgs_assist_server:8000 {
+texttest.server.de {reverse_proxy xxx_assist_server:8000 {
 		header_up X-Forwarded-Proto {scheme}        
 		header_up X-Forwarded-Host {host}        
 		header_up X-Forwarded-Port {port}        
@@ -116,7 +116,7 @@ Beispiel Eigenes Zertifikat (PEM + Key):
 Wenn ein Zertifikat existiert (z. B. von eurer Firmen‑PKI, oder manuell erzeugt), wird es direkt eingebunden:
 
 ~~~
-texttest.server.de {reverse_proxy cgs_assist_server:8000 header {
+texttest.server.de {reverse_proxy xxx_assist_server:8000 header {
 	Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}    
 	# Zertifikat + Private Key (PEM)    
 	tls /etc/caddy/certs/test.server.de.fullchain.pem /etc/caddy/certs/test.server.de.key

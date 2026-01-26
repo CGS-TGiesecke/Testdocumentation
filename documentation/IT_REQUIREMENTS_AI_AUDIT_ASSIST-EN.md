@@ -84,7 +84,7 @@ If you want to use Caddy with automatic Let’s Encrypt TLS certificates:
 
 ~~~json
 -assist.yourcompany.com {
-    reverse_proxy cgs_assist_backend:8000
+    reverse_proxy xxx_assist_backend:8000
 }
 ~~~
 
@@ -95,7 +95,7 @@ Certificate requests are verified via DNS entries instead of HTTP content
 Provider syntax example, Cloudflare token as Env-Var:
 
 ~~~json
-texttest.server.com {reverse_proxy cgs_assist_server:8000 {
+texttest.server.com {reverse_proxy xxx_assist_server:8000 {
         header_up X-Forwarded-Proto {scheme}        
         header_up X-Forwarded-Host {host}        
         header_up X-Forwarded-Port {port}        
@@ -118,7 +118,7 @@ Own certificate example (PEM + Key):
 If a certificate exists (e.g., from your company PKI or manually generated), integrate it directly:
 
 ~~~json
-texttest.server.com {reverse_proxy cgs_assist_server:8000 header {
+texttest.server.com {reverse_proxy xxx_assist_server:8000 header {
     Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}    
     # Certificate + Private Key (PEM)    
     tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.com.key
