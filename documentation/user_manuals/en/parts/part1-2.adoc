@@ -1,100 +1,100 @@
 === Assist Administration
 
-Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können hier Benutzer und Rollen, 
-die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), LIzenzen und die systemseitig 
-hinterlegten Anwendungsfälle verwaltet werden.
-Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemseitige, festgelegte Rolle.
+Within Assist Administration, there is the possibility to centrally manage all system-relevant data. Here, users and roles, 
+the document storage folders (RAG), interface configurations, system prompts, licenses, and the system-side 
+stored use cases can be managed.
+Access to these administration functions is granted via a system-defined, pre-configured role.
 
 image::../images/Abbildung-15.jpg[Administration, title="Administration"]
 
-==== Benutzerverwaltung
+==== User Management
 
-Hier können Benutzer angelegt und bearbeitet werden. 
+Here, users can be created and edited. 
 
-image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung"]
+image::../images/Abbildung-16.jpg[Administration - User Management, title="Administration - User Management"]
 
-===== Benutzer bearbeiten
+===== Edit User
 
-Beim Erstellen eines Benutzers muss ein systemweit eindeutiger Benutzername vergeben werden. Dieser wird bei der Anmeldung case sensitive verwendet. 
-Eine nachträgliche Änderung das Namen ist nicht möglich.
-Zusätzlich muss ein Passwort vergeben und dem Benutzer eine Rolle zugewiesen werden. Die zugewiesene Rolle kann jederzeit wieder geändert werden. 
-Wird eine zugewiesene Rolle gelöscht, wird diese auch an den zugeordneten Benutzern entfernt.
+When creating a user, a system-wide unique username must be assigned. This is used case sensitive during login. 
+Subsequent changes to the username are not possible.
+In addition, a name, a password must be assigned and a role must be given to the user. The assigned role can be changed at any time.
+User name editing or changing ist not possible.If an assigned role is deleted, it is also removed from the associated users.
 
-image::../images/Abbildung-17.jpg[Administration - Benutzerverwaltung - Benutzer anlegen, title="Administration - Benutzerverwaltung - Benutzer anlegen"]
+image::../images/Abbildung-17.jpg[Administration - User Management - create user, title="Administration - User Management - create user"]
 
-Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+Users cannot be deactivated and can only be removed in the overview table after a confirmed security prompt.
 
-==== Rollenverwaltung
+==== Role Management
 
-Hier können Rollen angelegt und bearbeitet werden. 
+Here, roles can be created and edited. 
 
-image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung"]
+image::../images/Abbildung-18.jpg[Administration - Role Management, title="Administration - Role Management"]
 
-===== Rollen bearbeiten
+===== Edit Role
 
-Beim Erstellen einer neuen Rolle muss ein systemweit eindeutiger Rollenname vergeben werden. Zu jeder Rolle kann eine Beschreibung angegeben werden. 
-Der Name und die Beschreibung können jederzeit wieder geändert werden.
+When creating a new role, a system-wide unique role name must be assigned. Each role can have a description. 
+The name and the description can be changed at any time.
 
-image::../images/Abbildung-19.jpg[Administration - Rollenverwaltung - Rollen anlegen, title="Administration - Rollenverwaltung - Rollen anlegen"]
+image::../images/Abbildung-19.jpg[Administration - Role Management - edit role, title="Administration - Role Management - edit role"]
 
-Rollen können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden. 
-Die systemseitige erstellte Rollen können nicht gelöscht werden.
+Roles cannot be deactivated and can only be removed in the overview table after a confirmed security prompt.
+System-defined roles cannot be deleted.
 
-==== Ordnerverwaltung
+==== Folder Management
 
-Hier können den systemseitig angelegten Ordnern die Rollen zugewiesen werden. Damit wird der Zugriff auf diese Ordner unter Navigationsbereich „Dokumente“ gesteuert.
-Ein Ordner entspricht in der Anwendung einem RAG (Retrieval Augmented Generation). Bei Retrieval Augmented Generation erweitert man den Prompt für das Large Language Model 
-um die Suchergebnisse z.B. aus der Dokumentensammlung. Das Wissen für die Antwort kommt also aus den angebundenen Quellen.
+Here, roles can be assigned to the folders created by the system. This controls access to these folders under the "Documents" navigation area.
+A folder corresponds in the application to a RAG (Retrieval Augmented Generation). With Retrieval Augmented Generation, you extend the prompt for the Large Language Model 
+with search results, e.g., from the document collection. Therefore, the knowledge for the answer comes from the connected sources.
 
-image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung"]
+image::../images/Abbildung-20.jpg[Administration - Folder Management, title="Administration - Folder Management"]
 
-==== Systemaufforderung
+==== System Prompts
 
-Hier werden textbasierte Anweisung oder Fragen als Aufforderungen (prompts) hinterlegt und beschrieben.
+Here, text-based instructions or questions are stored and described as prompts.
 
-image::../images/Abbildung-21.jpg[Administration - Systemaufforderungen, title="Administration - Systemaufforderungen"]
+image::../images/Abbildung-21.jpg[Administration - System Prompts, title="Administration - System Prompts"]
 
-==== LLMs und Einbettungsmodelle 
+==== LLMs and Embedding Models
 
-Hier werden die Provider gelistet und verwaltet.
+Here, the providers are listed and managed.
 
-image::../images/Abbildung-22.jpg[Administration - LLMs und Einbettungsmodelle, title="Administration - LLMs und Einbettungsmodelle"]
+image::../images/Abbildung-22.jpg[Administration - LLMs and Embedding Models, title="Administration - LLMs and Embedding Models"]
 
-Es können neue Provider angelegt und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+New providers can be created and can only be removed in the overview table after a confirmed security prompt.
 
-image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle - Provider anlegen, title="Administration - LLMs und Einbettungsmodelle - Provider anlegen"]
+image::../images/Abbildung-32.jpg[Administration - LLMs and Embedding Models - Create Provider, title="Administration - LLMs and Embedding Models - Create Provider"]
 
-Über den Pfeil am rechten Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt bzw. nach einer bestätigten Sicherheitsabfrage auch entfernt werden.
+By clicking the arrow on the right edge, the configuration can be opened and the required models can be created or removed after a confirmed security prompt.
 
-image::../images/Abbildung-24.jpg[Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten"]
+image::../images/Abbildung-24.jpg[Administration - LLMs and Embedding Models - Edit Models, title="Administration - LLMs and Embedding Models - Edit Models"]
 
-==== Anwendungsfälle
+==== Use Cases
 
-Hier werden konkrete Anwendungsfälle bzw. Vorlagen dafür hinterlegt. Anwendungsfälle sind Templates als fertige Routinen wie Checklisten um wiederkehrende, Use Case organisierte Anfragen zu stellen. 
-Die Gruppierung der Anwendungsfälle ist systemseitig festgelegt und wird unter Navigationsbereich „Anwendungsfälle“ wieder verwendet.
+Here, concrete use cases or templates for them are stored. Use Cases are templates for ready-made routines like checklists to make recurring, use-case-organized requests. 
+The grouping of the use cases is defined by the system and is reused under the navigation area "Use Cases".
 
-image::../images/Abbildung-25.jpg[Navigationsbereich - Anwendungsfälle, title="Navigationsbereich - Anwendungsfälle"]
+image::../images/Abbildung-25.jpg[Administration - Use Cases, title="Administration - Use Cases"]
 
-Hinterlegte Vorlagen können deaktiviert werden. Das steuert die Sichtbarkeit/Verfügbarkeit unter Navigation „Anwendungsfälle“.
+Stored templates can be deactivated. This controls the visibility/availability under "Use Cases" in the navigation.
 
-==== Lizenzverwaltung
+==== License Management
 
-Hier kann die Lizenz verwaltet werden. Es besteht die Möglichkeit der Aktualisierung, wenn die vorhandene ausgetauscht wurde.
-Auch der Kontakt per Mail zum Assist Service ist von hier aus möglich
+Here, the license can be managed. There is the possibility to update it if the existing license has been replaced.
+Contacting the Assist Service by mail is also possible from here.
 
-image::../images/Abbildung-30.jpg[Administration - Lizenzverwaltung, title="Administration - Lizenzverwaltung"]
+image::../images/Abbildung-30.jpg[Administration - License Management, title="Administration - License Management"]
 
-Es kann nach Auswahl eine gänzlich neue Lizenz hochgeladen werden.
+A completely new license can be uploaded after selection.
 
-image::../images/Abbildung-31.jpg[Administration - Lizenzverwaltung - Lizenz laden, title="Administration - Lizenzverwaltung - Lizenz laden"]
+image::../images/Abbildung-31.jpg[Administration - License Management - Upload License, title="Administration - License Management - Upload License"]
 
-==== Portal-Seite
+==== Portal Page
 
-Hier können verschiedene Verknüpfungen verwaltet werden. Es besteht die Möglichkeit zur Neuanlage, zum Löschen und Bearbeiten einzelner Einträge.
-Zusätzlich kann die gesamte Portalseite deaktiviert werden und diese ist dadurch nicht mehr in der Navigation verfügbar.
+Here, various links can be managed. It is possible to add, delete and edit individual entries.
+Additionally, the entire portal page can be deactivated, making it unavailable in the navigation.
 
-image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite"]
+image::../images/Abbildung-41.jpg[Administration - Portal page, title="Administration - Portal page"]
 
-Es können Seiten oder Applikationen verknüpft werden. Die Verknüpfung von Dokumenten auf Laufwerden oder Shares ist nicht möglich.
+Pages or applications can be linked. Linking documents on drives or shares is not possible.
 
-image::../images/Abbildung-42.jpg[Administration - Portal-Seite - Link erstellen, title="Administration - Portal-Seite - Link erstellen"]
+image::../images/Abbildung-42.jpg[Administration - Portal Page - create link, title="Administration - Portal page - create link"]

@@ -12,6 +12,7 @@ Depending on the setting, this knowledge is based either on the contents of the 
 All chat histories and use case histories are saved and can be reopened even after closing the browser and logging in again.
 Certain regular use cases are managed as templates within Assist to simplify routines. The use cases are designed like a kind of checklist.
 With the appropriate permissions, automated, scheduled queries on automatically provided information sources, known as feeds, can be created.
+
 ifdef::cgs-assist[]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist"]
 endif::cgs-assist[]
