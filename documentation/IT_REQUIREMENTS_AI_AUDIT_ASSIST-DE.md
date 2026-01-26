@@ -4,7 +4,7 @@ Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und b
 
 ## WICHTIG: LLM-Bereitstellung durch den Kunden
 
-**Die AI Audit Assist Plattform wird OHNE integriertes Large Language Model (LLM) ausgeliefert.**
+**Die CGS Assist Plattform wird OHNE integriertes Large Language Model (LLM) ausgeliefert.**
 
 Der Kunde muss selbst einen LLM-Provider bereitstellen. Folgende Optionen werden unterstützt:
 
