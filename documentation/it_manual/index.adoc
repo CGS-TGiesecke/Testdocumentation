@@ -1,9 +1,9 @@
 ifdef::cgs-assist[]
-image::../../themes/cgs-logo.png[Firmenlogo,align=left,width=60]
+image::themes/cgs-logo.png[Firmenlogo,align=left,width=60]
 endif::cgs-assist[]
 
 ifdef::arc-assist[]
-image::../../themes/arc_logo_gross.png[Firmenlogo,align=left,width=60]
+image::themes/arc_logo_gross.png[Firmenlogo,align=left,width=60]
 endif::arc-assist[]
 
 //= Arc Assist: IT-Handbuch
@@ -20,7 +20,7 @@ endif::arc-assist[]
 :toc-title: Inhaltsverzeichnis
 :toclevels: 7
 :figure-caption: Abbildung
-:imagesdir: images
+:imagesdir: image
 :sectnums:
 :sectnumlevels: 7
 :cgs-assist: 1

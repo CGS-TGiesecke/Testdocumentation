@@ -24,20 +24,13 @@
 *Supportprozess:*
 
 |===
-|Level 1
-|Kunden-Support
-|Reaktion an Arbeitstagen `>` 24 h
-
-|Level 2
-|Technische Teams
-|Reaktion an Arbeitstagen `>` 48 h
-
-|Level 3
-|Entwicklungs-Teams
-|Reaktion an Arbeitstagen `>` 72 h
+|Level 1|Kunden-Support|Reaktion an Arbeitstagen `>` 24 h
+|Level 2|Technische Teams|Reaktion an Arbeitstagen `>` 48 h
+|Level 3|Entwicklungs-Teams|Reaktion an Arbeitstagen `>` 72 h
 |===
 
 *Kontaktinformationen:*
+
 ifdef::cgs-assist[] 
 CGS Software & Data GmbH
 

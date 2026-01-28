@@ -1,9 +1,9 @@
 ifdef::cgs-assist[]
-image::../../../themes/cgs-logo.png[Firmenlogo,align=left,width=60]
+image::../themes/cgs-logo.png[Firmenlogo,align=left]
 endif::cgs-assist[]
 
 ifdef::arc-assist[]
-image::../../../themes/arc_logo_gross.png[Firmenlogo,align=left,width=60]
+image::../themes/arc_logo_gross.png[Firmenlogo,align=left]
 endif::arc-assist[]
 
 ifdef::cgs-assist[]
