@@ -1,0 +1,61 @@
+
+name: Asciidoctor Build IT-Handbook de
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+
+env:
+  REVISION: 1.0.0
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: List files to check if documentation/it_manual/index.adoc exists
+        run: ls -l documentation/it_manual/
+
+      - name: Run asciidoctor on index.adoc
+        run: asciidoctor documentation/it_manual/index.adoc
+            
+  pages:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build HTML and PDF docs
+        run: |
+          asciidoctor -a revnumber=$REVISION -D documentation/user_manuals/de/ documentation/user_manuals/de/index.adoc
+          asciidoctor-pdf -a revnumber=$REVISION -D documentation/it_manual/ -a pdf-theme=CGS -a pdf-themesdir=documentation/it_manual/themes -o IT_Handbuch_DE.pdf documentation/it_manual/index.adoc
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IT-Handbuch_DE
+          path: documentation/it_manual/
+
