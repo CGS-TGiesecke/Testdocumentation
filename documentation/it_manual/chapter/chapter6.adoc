@@ -87,9 +87,13 @@ endif::arc-assist[]
 *RACI-Matrix* 
 
 |===
-| *Bereich* | 
-ifdef::cgs-assist[] *{cgs-application}* endif::cgs-assist[] 
-ifdef::arc-assist[] *{arc-application}* endif::arc-assist[]| *Kunde*
+ifdef::cgs-assist[]
+| *Bereich* |  *{cgs-application}* | *Kunde*
+endif::cgs-assist[]
+ifdef::arc-assist[]
+| *Bereich* |  *{arc-application}* | *Kunde*
+endif::arc-assist[]
+
 | Infrastruktur | Consult | Responsible 
 | Docker Images | Responsible | Informed 
 | LLM-Provider Setup | Consult | Responsible 
