@@ -37,7 +37,6 @@
 |	  |Eigene Zertifikate (interne CA)
 |Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
 |Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im Active Directory aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
-|Fehler: „Datenbankverbindung fehlgeschlagen“|Kontrollieren Sie die Erreichbarkeit und den Status der Datenbank und prüfen Sie die Zugangsdaten der Verbindungszeichenfolge in der Konfigurationsdatei
 |===
 
 ==== Fehlermeldungen und deren Bedeutung
@@ -47,6 +46,9 @@
 
 - „Lizenz abgelaufen“  
   Die Anwendungslizenz ist abgelaufen oder konnte nicht geprüft werden. Lizenzdaten im Adminbereich prüfen und ggf. verlängern.
+  
+ - „Datenbankverbindung fehlgeschlagen“
+	Kontrollieren Sie die Erreichbarkeit und den Status der Datenbank und prüfen Sie die Zugangsdaten der Verbindungszeichenfolge in der Konfigurationsdatei.
 
 ==== Supportprozess und Kontaktinformationen
 
@@ -61,15 +63,26 @@
 *Kontaktinformationen:*
 
 ifdef::cgs-assist[] 
-CGS Software & Data GmbH
 
-Website: https://www.cgs-online.de/
-
-Support-Email: support@cgs-online.de
-
-Telefon: [Support-Telefonnummer]
+|===
+|Firma|CGS Software & Data GmbH
+|Website|https://www.cgs-online.de/| 
+|Support-Email|support@cgs-online.de|
+|Telefon|Support-Telefonnummer|
+|===
 
 endif::cgs-assist[]
+
+ifdef::arc-assist[] 
+
+|===
+|Firma|Arc
+|Website|?????| 
+|Support-Email|???????|
+|Telefon|???????|
+|===
+
+endif::arc-assist[]
 
 
 

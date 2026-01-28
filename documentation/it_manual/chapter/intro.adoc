@@ -87,9 +87,6 @@ endif::arc-assist[]
 : Die in diesem Handbuch behandelte KI-Plattform für den Mittelstand.
 - Admin: IT-Administrator mit erweiterten Zugriffsrechten auf die Anwendung und zugehörige Systeme.
 - User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten.
-- Produktivsystem (Prod): Die Umgebung, in der die Anwendung für den realen Geschäftsbetrieb eingesetzt wird.
-- Testsystem (Test): Umgebung für Tests und Qualitätssicherung.
-- Entwicklungssystem (Dev): System für Entwicklung und Anpassungen.
 - Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts.
 - Restore: Wiederherstellung von gesicherten Daten.
 - API: Application Programming Interface (Programmierschnittstelle zur Integration mit anderen Systemen).
