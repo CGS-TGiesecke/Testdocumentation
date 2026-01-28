@@ -65,7 +65,7 @@
 ifdef::cgs-assist[] 
 
 |===
-|Firma|CGS Software & Data GmbH
+|Firma|{author}
 |Website|https://www.cgs-online.de/| 
 |Support-Email|support@cgs-online.de|
 |Telefon|Support-Telefonnummer|
@@ -76,7 +76,7 @@ endif::cgs-assist[]
 ifdef::arc-assist[] 
 
 |===
-|Firma|Arc
+|Firma|{author}
 |Website|?????| 
 |Support-Email|???????|
 |Telefon|???????|
@@ -88,10 +88,10 @@ endif::arc-assist[]
 
 |===
 ifdef::cgs-assist[]
-| *Bereich* |  *{cgs-application}* | *Kunde*
+| *Bereich* |  *{author}* | *Kunde*
 endif::cgs-assist[]
 ifdef::arc-assist[]
-| *Bereich* |  *{arc-application}* | *Kunde*
+| *Bereich* |  *{author}* | *Kunde*
 endif::arc-assist[]
 
 | Infrastruktur | Consult | Responsible 

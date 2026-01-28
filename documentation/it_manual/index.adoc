@@ -9,8 +9,8 @@ endif::arc-assist[]
 = Arc Assist: IT-Handbuch
 //= CGS Assist: KI-Plattform für den Mittelstand - IT-Handbuch
 :doctype: book
-:author: arc
-//:author: CGS GmbH
+:author: AI Audit Institut
+//:author: CGS Software and Data
 :revdate: 02.02.2026
 :revnumber: 1.0
 :toc: left
@@ -18,7 +18,7 @@ endif::arc-assist[]
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
-:toclevels: 7
+:toclevels: 3
 :figure-caption: Abbildung
 :imagesdir: image
 :sectnums:
