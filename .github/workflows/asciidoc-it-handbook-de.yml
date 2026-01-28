@@ -22,9 +22,6 @@ on:
         type: environment
         required: true
 
-env:
-  REVISION: 1.0.0
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -50,8 +47,8 @@ jobs:
 
       - name: Build HTML and PDF docs
         run: |
-          asciidoctor -a revnumber=$REVISION -D documentation/user_manuals/de/ documentation/user_manuals/de/index.adoc
-          asciidoctor-pdf -a revnumber=$REVISION -D documentation/it_manual/ -a pdf-theme=CGS -a pdf-themesdir=documentation/it_manual/themes -o IT_Handbuch_DE.pdf documentation/it_manual/index.adoc
+          asciidoctor -D documentation/user_manuals/de/ documentation/user_manuals/de/index.adoc
+          asciidoctor-pdf -D documentation/it_manual/ -a pdf-theme=CGS -a pdf-themesdir=documentation/it_manual/themes -o IT_Handbuch_DE.pdf documentation/it_manual/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
