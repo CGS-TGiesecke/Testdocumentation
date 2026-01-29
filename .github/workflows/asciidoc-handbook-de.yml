@@ -56,4 +56,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Handbuch_DE
-          path: documentation/user_manuals/de/
+          path: |
+            documentation/user_manuals/de/Handbuch_DE.pdf
+            documentation/user_manuals/de/index.html
