@@ -58,6 +58,8 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 | *Netzwerk / Ports*							| Standardzugang: Port 8000 (bei Bedarf anpassbar)
 |===
 
+*Proxy-Unterstützung:* Die Lösung unterstützt den Betrieb hinter einem Proxy. Proxy-Konfiguration kann in den Umgebungsvariablen hinterlegt werden.
+
 ==== Notwendige Drittanbieter-Komponenten
 
 Folgende Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden:

@@ -57,6 +57,8 @@ Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diese
 - Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts.
 - Restore: Wiederherstellung von gesicherten Daten.
 - API: Application Programming Interface (Programmierschnittstelle zur Integration mit anderen Systemen).
+- LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
+- RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert
 - IT-Sicherheitsrichtlinie: Interne Vorgaben zur Gewährleistung der Informationssicherheit.
 - DSGVO: Datenschutz-Grundverordnung der Europäischen Union.
 
