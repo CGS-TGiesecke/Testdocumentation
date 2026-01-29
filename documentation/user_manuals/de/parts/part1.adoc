@@ -35,6 +35,6 @@ Auch kann das Profil eingesehen werden bzw. eine Änderung des persönlichen Pas
 
 image::../images/Abbildung-3.jpg[Sprachwechsel und Darkmode, title="Sprachwechsel und Darkmode"]
 
-Innerhalb der gesamtem Anwendung werden beim Erstellen oder Speichern in der oberen linken Ecke farbige Hinweidialoge mit Statusanzeige dargestellt.
+Innerhalb der gesamtem Anwendung werden beim Erstellen oder Speichern in der oberen linken Ecke farbige Hinweisdialoge mit Statusanzeige dargestellt.
 
 image::../images/Abbildung-confirm.jpg[Hinweise, title="Hinweise"]
