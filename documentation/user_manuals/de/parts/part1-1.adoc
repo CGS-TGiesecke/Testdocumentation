@@ -6,7 +6,7 @@ Hier können einzelne Anfragen gestartet werden. Diese lassen sich in Chats orga
 Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenspeicher oder die Datenbank zur Wissensfindung durchsucht werden sollen. Beides gleichzeitig ist nicht möglich.
 Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
 
-image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs "]
+image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs"]
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 

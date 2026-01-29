@@ -6,11 +6,11 @@ ifdef::arc-assist[]
 image::../../themes/arc_logo_gross.png[Firmenlogo,align=left,width=60]
 endif::arc-assist[]
 
-//= Arc Assist: Anwenderhandbuch
+//= AI Audit Assist: Anwenderhandbuch
 = CGS Assist: Anwenderhandbuch
 :doctype: book
-//:author: arc
-:author: CGS GmbH
+//:author: AI Audit Assist
+:author: CGS Software and Data
 :revdate: 2002-02-02
 :toc: left
 :toc-interactive: true // in pdf the active section will be highlighted
