@@ -6,11 +6,11 @@ Hier können einzelne Anfragen gestartet werden. Diese lassen sich in Chats orga
 Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenspeicher oder die Datenbank zur Wissensfindung durchsucht werden sollen. Beides gleichzeitig ist nicht möglich.
 Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
 
-image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs"]
+image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=400]
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 
-image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern"]
+image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=400]
 
 Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
 Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.
@@ -23,26 +23,26 @@ Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, ang
 Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen, die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. 
 Diese Listen erleichtern routinemäßige Anfragen.
 
-image::../images/Abbildung-6.jpg[Navigationsbereich Anwendungsfälle, title="Navigationsbereich Anwendungsfälle"]
+image::../images/Abbildung-6.jpg[Navigationsbereich Anwendungsfälle, title="Navigationsbereich Anwendungsfälle", width=400]
 
 Zum Öffnen eines konkreten Anwendungsfalles wird auf das Symbol mit Namen geklickt.
 
-image::../images/Abbildung-7.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles"]
+image::../images/Abbildung-7.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=400]
 
 Klick auf ein Symbol mit Namen öffnet den Anwendungsfall zur Datenaufnahme.
 
-image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles"]
+image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=400]
 
 Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf Ausführen“ abgeschickt werden.
 Während der Verarbeitung wird eine Wait Box angezeigt und der Statusverlauf als Info angezeigt.
 
-image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox"]
+image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox", width=400]
 
 Nach der Rückmeldung zur Anfrage kann über einen Butten in den Navigationsbereich „Chat“ geöffnet werden, um auf diesen konkreten Use Case weitere Anfragen zu starten.
 Das Ergebnis einer Anfrage kann auch gespeichert werden und ist dann als separater Chat verfügbar.
 Um einen Use Case zu löschen, muss zuerst der Lösch Button betätigt werden und danach die Abfrage mit „OK“ bestätigt werden.
 
-image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles"]
+image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles", width=400]
 
 ==== Navigationsbereich "Automatisierung"
 
@@ -50,7 +50,7 @@ Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten
 Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs. Wird die Lesebestätigung von einem User gesetzt, 
 wird die Anzeige der neuen Feeds (rot) neu berechnet.
 
-image::../images/Abbildung-27.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung"]
+image::../images/Abbildung-27.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
 
 Zum Öffnen eine Feed wird auf das Symbol mit Namen geklickt.
 In der Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier neue Zeitpläne erstellt werden und/oder vorhandene gelöscht werden.
@@ -59,20 +59,20 @@ image::../images/Abbildung-26.jpg[Navigationsbereich - Automatisierung - Zeitpl�
 
 Im Bereich Ausführungsprotokolle werden alle Programmläufe gelistet. Über einen Button können die genauen Details angesehen werden.
 
-image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung"]
+image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
 
 Die Lesebestätigung kann verschieden gesetzt werden. Wird die Lesebestätigung von einem User gesetzt, wird die Anzeige der neuen Feeds (rot) neu berechnet. 
 Blau Schrift kennzeichnet einen ungelesenen Feed, Schwarz kennzeichnet einen gelesenen Feed. Jeder Leser kann den Eintrag als gelesen markieren.
 Zusätzlich kann der Benutzer mit dem Button "Ich habe es auch gelesen" einen bereits von jemend als "gelesen" markierten Eintrag mit "von mir gelesen" kennzeichnen. 
 Als "gelesen" markieren kann in der Übersicht erfolgen oder om Detailsdialog.
 
-image::../images/Abbildung-43.jpg[Navigationsbereich - Automatisierung - Zeitpläne - Details, title="Navigationsbereich - Automatisierung - Zeitpläne - Details"]
+image::../images/Abbildung-43.jpg[Navigationsbereich - Automatisierung - Zeitpläne - Details, title="Navigationsbereich - Automatisierung - Zeitpläne - Details", width=400]
 
 ====  Navigationsbereich "Dokumente" 
 
 Hier werden alle verfügbaren und durchsuchbaren Dokumente angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
 
-image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen"]
+image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen", width=400]
 
 In der Baumnavigation werden nur die Ordner gelistet, auf die der Anwender berechtigt ist. 
 Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt in der Administration
@@ -93,13 +93,13 @@ Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierun
 
 Über einen Klick auf das Symbol vor der Dokument, können die Teildokumente angezeigt werden.
 
-image::../images/Abbildung-13.jpg[[Navigationsbereich - Dokumente - Teildokumente öffnen, title="[Navigationsbereich - Dokumente - Teildokumente öffnen"]
+image::../images/Abbildung-13.jpg[[Navigationsbereich - Dokumente - Teildokumente öffnen, title="[Navigationsbereich - Dokumente - Teildokumente öffnen", width=400]
 
 ==== Navigationsbereich "Portal"
 
 Hier werden alle vefügbaren Verlinkungen zu anderen Seiten oder Anwendungen angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
 
-image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal"]
+image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal", width=400]
 
 Mit einem Klick auf das Symbol, wird die Verknüpfung, je nach Browsereinstellung, in einen neuen Browsertab oder Fenster geöffnet.
 
