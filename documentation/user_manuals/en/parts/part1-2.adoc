@@ -62,7 +62,7 @@ image::../images/Abbildung-22.jpg[Administration - LLMs and Embedding Models, ti
 
 New providers can be created and can only be removed in the overview table after a confirmed security prompt.
 
-image::../images/Abbildung-32.jpg[Administration - LLMs and Embedding Models - Create Provider, title="Administration - LLMs and Embedding Models - Create Provider", width=400]
+image::../images/Abbildung-32.jpg[Administration - LLMs and Embedding Models - Create Provider, title="Administration - LLMs and Embedding Models - Create Provider", width=250]
 
 By clicking the arrow on the right edge, the configuration can be opened and the required models can be created or removed after a confirmed security prompt.
 

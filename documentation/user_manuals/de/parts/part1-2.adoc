@@ -62,7 +62,7 @@ image::../images/Abbildung-22.jpg[Administration - LLMs und Einbettungsmodelle, 
 
 Es können neue Provider angelegt und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
 
-image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle - Provider anlegen, title="Administration - LLMs und Einbettungsmodelle - Provider anlegen", width=400]
+image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle - Provider anlegen, title="Administration - LLMs und Einbettungsmodelle - Provider anlegen", width=250]
 
 Über den Pfeil am rechten Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt bzw. nach einer bestätigten Sicherheitsabfrage auch entfernt werden.
 
