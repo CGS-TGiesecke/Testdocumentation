@@ -12,6 +12,7 @@ Change these places from "CGS Assist" to "Arc Assist" or back
     </ul>
 	<li> change github action "asciidoc-it-handbook-de.yml"</li>
       <ul>
+		<li> line 24 change env:  REVISION: to current version (used in file and for filename)</li>
 		<li> line 51 change theme "pdf-theme=ARC"  to "pdf-theme=CGS" </li>
 	  </ul>
     </li>
