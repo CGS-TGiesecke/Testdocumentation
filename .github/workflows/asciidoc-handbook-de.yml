@@ -66,5 +66,5 @@ jobs:
         with:
           name: Handbuch_DE_${REVISION}
           path: |
-            documentation/user_manuals/de/Handbuch_DE_${REVISION}.pdf
-            documentation/user_manuals/de/Handbuch_DE_${REVISION}.html
+            documentation/user_manuals/de/Handbuch_DE_*.pdf
+            documentation/user_manuals/de/Handbuch_DE_*.html
