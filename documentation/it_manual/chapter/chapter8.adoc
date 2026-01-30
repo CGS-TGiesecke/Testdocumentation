@@ -1,10 +1,17 @@
 === Anhang
 
-==== Screenshots und Beispiel-Konfigurationen
+==== IT-Architektur
 
-==== Glossar
+include::./../../it-architecture/IT_ARCHITEKTURE-DESCRIPTION.adoc[]
 
 ==== Versionshistorie
+
+|===
+| Datum 		|Bearbeiter | Änderung 
+
+| 30.01.2026 	|cgs 		| Initiale Erstellung 
+| 				|  			|  
+|===
 
 
 
