@@ -43,7 +43,7 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 | *Speicher*				| 2 TB SSD (virtueller NVMe/SSD-Speicher)
 |===
 
-==== Softwarevoraussetzungen (Betriebssystem, Laufzeitumgebungen)
+==== Allgemeine Vorrausetzungen
 
 |===
 | *Infrastruktur (VM oder Server)*				| Linux-basierter Server (lokale VM oder Cloud-VM)
@@ -59,6 +59,7 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 |===
 
 *Proxy-Unterstützung:* Die Lösung unterstützt den Betrieb hinter einem Proxy. Proxy-Konfiguration kann in den Umgebungsvariablen hinterlegt werden.
+*MCP Server API:* Auf Wunsch kundenspezifische Erweiterung der Suchfunktionen für Web-, lokale Unternehmens-, Bild-, Video- und Nachrichtensuchen sowie KI gestützte Zusammenfassungen 
 
 ==== Notwendige Drittanbieter-Komponenten
 

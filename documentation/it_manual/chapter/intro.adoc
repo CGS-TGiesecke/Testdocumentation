@@ -51,15 +51,16 @@ Das Handbuch ist nicht für Endanwender oder Fachabteilungen bestimmt, sondern a
 
 Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diesem Handbuch verwendet werden:
 
-- Applikation {application}: Die in diesem Handbuch behandelte KI-Plattform für den Mittelstand.
-- Admin: IT-Administrator mit erweiterten Zugriffsrechten auf die Anwendung und zugehörige Systeme.
-- User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten.
-- Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts.
+- Applikation {application}: Die in diesem Handbuch behandelte KI-Plattform für den Mittelstand
+- Admin: IT-Administrator mit erweiterten Zugriffsrechten auf die Anwendung und zugehörige Systeme
+- User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten
+- Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts
 - Restore: Wiederherstellung von gesicherten Daten.
-- API: Application Programming Interface (Programmierschnittstelle zur Integration mit anderen Systemen).
+- API: Application Programming Interface (Programmierschnittstelle zur Integration mit anderen Systemen)
 - LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
 - RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert
-- IT-Sicherheitsrichtlinie: Interne Vorgaben zur Gewährleistung der Informationssicherheit.
-- DSGVO: Datenschutz-Grundverordnung der Europäischen Union.
+- MCP : Model Context Protocol ist ein Open-Source-Standard zur Verbindung von KI-Anwendungen mit externen Systemen
+- IT-Sicherheitsrichtlinie: Interne Vorgaben zur Gewährleistung der Informationssicherheit
+- DSGVO: Datenschutz-Grundverordnung der Europäischen Union
 
 Sofern weitere spezifische Begriffe in späteren Kapiteln verwendet werden, sind diese jeweils in einem Glossar am Ende des Handbuchs erklärt.

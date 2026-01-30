@@ -39,17 +39,6 @@
 |Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im Active Directory aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
 |===
 
-==== Fehlermeldungen und deren Bedeutung
-
-- „HTTP 500 – Internal Server Error“  
-  Interner Serverfehler. Ursache kann eine fehlerhafte Konfiguration oder ein Problem im Anwendungscode sein.
-
-- „Lizenz abgelaufen“  
-  Die Anwendungslizenz ist abgelaufen oder konnte nicht geprüft werden. Lizenzdaten im Adminbereich prüfen und ggf. verlängern.
-  
- - „Datenbankverbindung fehlgeschlagen“
-	Kontrollieren Sie die Erreichbarkeit und den Status der Datenbank und prüfen Sie die Zugangsdaten der Verbindungszeichenfolge in der Konfigurationsdatei.
-
 ==== Supportprozess und Kontaktinformationen
 
 *Supportprozess:*
