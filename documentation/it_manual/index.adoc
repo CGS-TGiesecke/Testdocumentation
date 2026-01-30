@@ -20,7 +20,7 @@ endif::arc-assist[]
 :toc-title: Inhaltsverzeichnis
 :toclevels: 10
 :figure-caption: Abbildung
-//:imagesdir: images
+:imagesdir: image
 :sectnums:
 :sectnumlevels: 10
 :cgs-assist: 1
