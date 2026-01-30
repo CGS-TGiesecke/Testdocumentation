@@ -62,9 +62,9 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 
 *MCP Server API:* Auf Wunsch kundenspezifische Erweiterung der Suchfunktionen für Web-, lokale Unternehmens-, Bild-, Video- und Nachrichtensuchen sowie KI gestützte Zusammenfassungen 
 
-ifdef::only-for-concret-customer[]
+ifeval::[{big-output} == 1]
 include::chapter2-2-o.adoc[]
-endif::only-for-concret-customer[]
+endif::[]
 
 ==== Notwendige Drittanbieter-Komponenten
 
