@@ -1,8 +1,8 @@
 === Troubleshooting und Support
 
-==== Bekannte Fehler und deren Lösungen (FAQ)
+==== FAQ
  
-[cols="2*", options="header"]
+[cols="150px,2*", options="header"]
 |===
 |  Frage| Antwort 
 |Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. 
@@ -43,6 +43,7 @@
 
 *Supportprozess:*
 
+[cols="80px,150px,3*", options="header"]
 |===
 |Level 1|Kunden-Support		|Reaktion an Arbeitstagen `<` 24 h
 |Level 2|Technische Teams	| 

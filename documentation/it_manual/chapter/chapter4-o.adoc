@@ -1,18 +1,18 @@
-=== Betrieb der Anwendung
+=== Betrieb der Anwendung durch den Kunden
 
 ==== Start und Stopp der Anwendung
 
 Starten der Anwendung:
 
 - Melden Sie sich am Server mit administrativen Rechten an.
-- Starten Sie den {application}-Dienst.
+- Starten Sie die {application} Container
 - Prüfen Sie, ob der Webserver und die Datenbankverbindung aktiv sind.
 - Testen Sie den Zugriff auf die Weboberfläche über den Browser.
 
 Beenden der Anwendung:
 
 - Informieren Sie die Benutzer über die geplante Abschaltung.
-- Fahren Sie den {application}-Dienst geordnet herunter.
+- Fahren Sie die {application} Container geordnet herunter.
 - Beenden Sie ggf. geplante Hintergrundjobs und sichern Sie offene Datenbanktransaktionen.
 
 ==== Benutzerverwaltung / Rollen 

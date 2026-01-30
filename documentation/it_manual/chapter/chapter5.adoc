@@ -30,12 +30,11 @@ Obligatorisch für Produktion. Zertifikate:
 
 ===== Datenschutz
 
-**Anwendungsdaten:** 
-- Ausschließlich auf Kundenserver
+Alle Anwendungsdaten befinden sich ausschließlich auf Kundenserver.
 
-**LLM-Provider (Cloud):**
+**LLM-Provider(Cloud) Modell:**
 
-- Azure OpenAI / AWS Bedrock: Anfragen werden übertragen, aber nicht dauerhaft gespeichert
+- bei Azure OpenAI bzw. AWS Bedrock: Anfragen werden übertragen, aber nicht dauerhaft gespeichert
 - **Empfehlung:** EU-Region wählen (DSGVO)
 
 **Lokale Modelle:** 
