@@ -64,7 +64,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Handbuch_DE_$REVISION
+          name: Handbuch_DE
           path: |
             documentation/user_manuals/de/Handbuch_DE_*.pdf
             documentation/user_manuals/de/Handbuch_DE_*.html
