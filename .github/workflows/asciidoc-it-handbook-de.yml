@@ -50,10 +50,14 @@ jobs:
 
       - name: Build HTML and PDF docs
         run: |
-          asciidoctor -D documentation/it_manual/ \
+          asciidoctor \
+          -D documentation/it_manual/ \
+          -a revnumber=$REVISION \
           -a big-output=1 \
           -o IT-Handbuch_DE_${REVISION}.html documentation/it_manual/index.adoc
-          asciidoctor-pdf -D documentation/it_manual/ \
+          asciidoctor-pdf \
+          -D documentation/it_manual/ \
+          -a revnumber=$REVISION \
           -a big-output=1 \
           -a pdf-theme=CGS \
           -a pdf-themesdir=documentation/it_manual/themes \
