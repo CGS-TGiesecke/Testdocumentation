@@ -27,7 +27,7 @@ endif::arc-assist[]
 //:arc-assist: 1
 //:application: "AI Audit Assist"
 :application: "CGS Assist"
-//:only-for-concret-customer: 1
+:only-for-concret-customer: 1
 
 include::chapter/intro.adoc[]
 
