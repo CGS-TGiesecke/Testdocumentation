@@ -24,6 +24,7 @@ on:
 
 env:
   REVISION: 1.0.0
+  BIG_OUTPUT: 1
   
 jobs:
   test:
@@ -53,12 +54,12 @@ jobs:
           asciidoctor \
           -D documentation/it_manual/ \
           -a revnumber=$REVISION \
-          -a big-output=1 \
+          -a big-output=$BIG_OUTPUT \
           -o IT-Handbuch_DE_${REVISION}.html documentation/it_manual/index.adoc
           asciidoctor-pdf \
           -D documentation/it_manual/ \
           -a revnumber=$REVISION \
-          -a big-output=1 \
+          -a big-output=$BIG_OUTPUT \
           -a pdf-theme=CGS \
           -a pdf-themesdir=documentation/it_manual/themes \
           -o IT_Handbuch_DE_${REVISION}.pdf documentation/it_manual/index.adoc
