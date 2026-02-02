@@ -10,17 +10,33 @@ endif::arc-assist[]
 === Contact
 
 ifdef::cgs-assist[]
-Firma {author}
 
-Street 19999
+*Your Partner for Artificial Intelligence*
 
-99999000 Town
+{author} has decades of experience in the development, implementation, and support of complex software systems.
+With our AI experts, we are happy to offer you, in addition to the {application}, both AI consulting and support in the development or integration of AI systems.
 
-Tel.:	
+*{author}* 
 
-Fax:	
+Lange Straße 1 
 
-Web: 
+38100 Braunschweig 
+
+www.cgs-online.de 
+
+www.rias-revision.de 
+
+
+*Consulting & Sales*
+
+Stefan Franz 
+
+sfranz@cgs-online.de
+
+Tel. (+49) 531 / 1209-384 
+
+Mobil (+49) 177 / 792 8366
+
 endif::cgs-assist[]	
 
 ifdef::arc-assist[]
