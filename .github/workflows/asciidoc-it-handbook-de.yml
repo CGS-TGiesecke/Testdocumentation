@@ -55,14 +55,14 @@ jobs:
           -D documentation/it_manual/ \
           -a revnumber=$REVISION \
           -a big-output=$BIG_OUTPUT \
-          -o IT-Handbuch_DE_${REVISION}.html documentation/it_manual/index.adoc
+          -o IT-Handbuch_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.html documentation/it_manual/index.adoc
           asciidoctor-pdf \
           -D documentation/it_manual/ \
           -a revnumber=$REVISION \
           -a big-output=$BIG_OUTPUT \
           -a pdf-theme=CGS \
           -a pdf-themesdir=documentation/it_manual/themes \
-          -o IT_Handbuch_DE_${REVISION}.pdf documentation/it_manual/index.adoc
+          -o IT_Handbuch_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.pdf documentation/it_manual/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
