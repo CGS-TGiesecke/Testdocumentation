@@ -17,7 +17,7 @@ To delete a chat in the tree menu on the left, the delete button must first be p
 
 image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Navigation area AI Chat - delete", width=300]
 
-==== Navigation area "Use Cases" 
+==== Navigation Area "Use Cases" 
 
 All activated use cases are displayed here, grouped by area. The assignment of use cases to the areas takes place during setup in the administration.
 Use cases are lists of use cases stored and approved in the administration, which only need to be filled with specific content before execution.
@@ -44,7 +44,7 @@ To delete a use case, the Delete button must first be pressed and then the actio
 
 image::../images/Abbildung-11.jpg[Navigation area Uses Cases - delete single use case, title="Navigation area Uses Cases - delete single use case", width=400]
 
-==== Navigation area "Automation"
+==== Navigation Area "Automation"
 
 If you have the necessary authorization, all automated external services provided are listed and managed here.
 The number highlighted in red shows the total number of current results from the latest run across all categories.
@@ -54,7 +54,7 @@ include::part1-1-audit-methodology.adoc[]
 
 include::part1-2-audit-execution.adoc[]
 
-====  Navigation area "Documents" 
+====  Navigation Area "Documents" 
 
 All available and searchable documents for which the user is authorized according to their role are displayed here.
 
@@ -81,7 +81,7 @@ By clicking the icon in front of the document, the partial documents can be disp
 
 image::../images/Abbildung-13.jpg[[Navigation area Documents - partitial dokuments show, title="[[Navigation area Documents - partitial dokuments show", width=400]
 
-==== Navigation area "Portal"
+==== Navigation Area "Portal"
 
 All available links to other pages or applications for which the user is authorized according to their role are displayed here.
 
