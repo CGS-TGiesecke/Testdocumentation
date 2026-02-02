@@ -46,27 +46,13 @@ image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Lösch
 
 ==== Navigationsbereich "Automatisierung"
 
-Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Informationsquellen (Feeds) gelistet und verwaltet.
-Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs. Wird die Lesebestätigung von einem User gesetzt, 
-wird die Anzeige der neuen Feeds (rot) neu berechnet.
+Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Externleseverfahren gelistet und verwaltet.
+Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. Wird die Lesebestätigung von einem User in einer Rubrik gesetzt, 
+wird die Anzeige der Ergebnisse(rot) neu berechnet.
 
-image::../images/Abbildung-27.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
+include::part1-1-audit-methodology.adoc[]
 
-Zum Öffnen eine Feed wird auf das Symbol mit Namen geklickt.
-In der Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier neue Zeitpläne erstellt werden und/oder vorhandene gelöscht werden.
-
-image::../images/Abbildung-26.jpg[Navigationsbereich - Automatisierung - Zeitpläne, title="Navigationsbereich - Automatisierung - Zeitpläne", width=150]
-
-Im Bereich Ausführungsprotokolle werden alle Programmläufe gelistet. Über einen Button können die genauen Details angesehen werden.
-
-image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
-
-Die Lesebestätigung kann verschieden gesetzt werden. Wird die Lesebestätigung von einem User gesetzt, wird die Anzeige der neuen Feeds (rot) neu berechnet. 
-Blau Schrift kennzeichnet einen ungelesenen Feed, Schwarz kennzeichnet einen gelesenen Feed. Jeder Leser kann den Eintrag als gelesen markieren.
-Zusätzlich kann der Benutzer mit dem Button "Ich habe es auch gelesen" einen bereits von jemend als "gelesen" markierten Eintrag mit "von mir gelesen" kennzeichnen. 
-Als "gelesen" markieren kann in der Übersicht erfolgen oder om Detailsdialog.
-
-image::../images/Abbildung-43.jpg[Navigationsbereich - Automatisierung - Zeitpläne - Details, title="Navigationsbereich - Automatisierung - Zeitpläne - Details", width=400]
+include::part1-2-audit-execution.adoc[]
 
 ====  Navigationsbereich "Dokumente" 
 

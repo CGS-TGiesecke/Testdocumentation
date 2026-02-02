@@ -1,0 +1,26 @@
+
+===== Durchführung des Prüfungsengagements
+
+In dieser Rubrik werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Agenten gelistet und verwaltet.
+Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs. Wird die Lesebestätigung von einem User gesetzt, 
+wird die Anzeige der noch neuen Eegebnisse(rot) neu berechnet.
+Folgende Agenten sind implementiert:
+
+- Dokumentenprüfung Agent (Automatische E-Mail-Verarbeitung und risikoorientierte Dokumentenbewertung)
+
+image::../images/Abbildung-45.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
+
+Zum Öffnen eines Agenten wird auf das Symbol mit Namen geklickt.
+In einer Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier neue Zeitpläne erstellt werden und vorhandene gelöscht werden.
+
+image::../images/Abbildung-26.jpg[Navigationsbereich - Automatisierung - Zeitpläne, title="Navigationsbereich - Automatisierung - Zeitpläne", width=150]
+
+Im Bereich Ausführungsprotokolle werden alle Programmläufe gelistet. Über einen Button können die genauen Details angesehen werden.
+
+image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung", width=400]
+
+Die Lesebestätigung kann verschieden gesetzt werden. Wird die Lesebestätigung von einem User gesetzt, wird die Anzeige der neuen Feeds (rot) neu berechnet. 
+Blau Schrift kennzeichnet einen ungelesenen Feed, Schwarz kennzeichnet einen gelesenen Feed. Jeder Leser kann den Eintrag als gelesen markieren oder wieder auf ungelesen markieren
+Diese Lesemarkierung kann in der Übersicht erfolgen oder im Detaildialog.
+
+image::../images/Abbildung-46.jpg[Navigationsbereich - Automatisierung - Zeitpläne - Details, title="Navigationsbereich - Automatisierung - Zeitpläne - Details", width=400]
