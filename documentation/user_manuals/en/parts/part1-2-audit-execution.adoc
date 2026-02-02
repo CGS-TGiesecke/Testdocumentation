@@ -1,28 +1,27 @@
 
 ===== Audit Execution
 
-In dieser Rubrik werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Agenten gelistet und verwaltet.
-Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs. Wird die Lesebestätigung von einem User gesetzt, 
-wird die Anzeige der noch neuen Ergebnisse(rot) neu berechnet.
+In this section, if you have the necessary authorization, all automated provided agents are listed and managed.
+The highlighted number (red) shows the number of current results from the latest run. If a user sets the read confirmation,
+the display of still new results (red) is recalculated.
 
-Folgende Agenten sind implementiert:
+The following agents are implemented:
 
-- Dokumentenprüfung Agent (Automatische E-Mail-Verarbeitung und risikoorientierte Dokumentenbewertung)
+- Document Check Agent (Automatic email processing and risk-based document evaluation)
 
 image::../images/Abbildung-45.jpg[Navigation area - Automation - Agents, title="Navigation area - Automation - Agents", width=400]
 
-Zum Öffnen eines Agenten wird auf das Symbol mit Namen geklickt.
-In einer Übersicht werden alle gespeicherten Zeitpläne angezeigt. Es können hier neue Zeitpläne erstellt werden und vorhandene gelöscht werden.
+To open an agent, click on the icon with the name.
+An overview displays all saved schedules. New schedules can be created here and existing ones can be deleted.
 
 image::../images/Abbildung-26.jpg[Navigation area - Automation - Agents - timerun, title="Navigation area - Automation - Agents - timerun", width=150]
 
-Im Bereich Ausführungsprotokolle werden alle Programmläufe gelistet. Die Lesebestätigung kann verschieden gesetzt werden. 
-Wird die Lesebestätigung von einem User gesetzt, wird die Anzeige der neuen Feeds (rot) neu berechnet. 
-Blau Schrift kennzeichnet einen ungelesenen Feed, Schwarz kennzeichnet einen gelesenen Feed. Jeder Leser kann den Eintrag als gelesen markieren oder wieder auf ungelesen markieren.
+In the “Execution Logs” area, all program runs are listed. The read confirmation can be set in various ways.
+If a user sets the read confirmation, the display of new feeds (red) is recalculated.
+Blue text indicates an unread feed, black indicates a read feed. Each reader can mark the entry as read or mark it as unread again.
 
-image::../images/Abbildung-28.jpg[Navigation area - Automation - Agents - protocls, title="Navigation area - Automation - Agents - protocols", width=400]
+image::../images/Abbildung-28.jpg[Navigation area - Automation - Agents - protocols, title="Navigation area - Automation - Agents - protocols", width=400]
 
-Diese Lesemarkierung kann in der Übersicht erfolgen oder im Detaildialog.
-Über einen Button können die genauen Details angesehen werden.
+This read marking can be set in the overview or in the detail dialog. Detailed information can be viewed via a button.
 
 image::../images/Abbildung-46.jpg[Navigation area - Automation - Agents - timerun - details, title="Navigation area - Automation - Agents - timerun - details", width=400]
