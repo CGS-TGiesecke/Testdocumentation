@@ -46,27 +46,13 @@ image::../images/Abbildung-11.jpg[Navigation area Uses Cases - delete single use
 
 ==== Navigation area "Automation"
 
-Here, if the appropriate permission is available, all automated information sources (feeds) provided are listed and managed.
-The highlighted number (in red) shows the number of current results from the latest run. If a read confirmation is set by a user,
-the display of new feeds (in red) is recalculated.
+If you have the necessary authorization, all automated external services provided are listed and managed here.
+The number highlighted in red shows the total number of current results from the latest run across all categories.
+The display of results (in red) is recalculated whenever a user marks a read confirmation in any of the categories.
 
-image::../images/Abbildung-27.jpg[Navigation area Automation, title="Navigation area Automation", width=400]
+include::part1-1-audit-methodology.adoc[]
 
-To open a feed, click on the icon with the name.
-In the overview, all saved schedules are displayed. New schedules can be created here and/or existing ones deleted.
-
-image::../images/Abbildung-26.jpg[Navigation area Automation - schedules, title="Navigation area Automation - schedules" , width=150]
-
-In the execution logs area, all program runs are listed. The exact details can be viewed via a button.
-
-image::../images/Abbildung-28.jpg[Navigation area Automation - details, title="Navigation area Automation - details" , width=400]
-
-The read confirmation can be set in different ways. If a read confirmation is set by a user, the display of new feeds (in red) is recalculated.
-Blue text indicates an unread feed, black indicates a read feed. Each reader can mark an entry as read.
-Additionally, the user can use the "I have read it too " button to mark an entry already marked as "read" by someone as "read by me"
-Marking as "read" can be done in the overview or in the details dialog.
-
-image::../images/Abbildung-43.jpg[Navigation area Automation - details - details, title="Navigation area Automation - details - details", width=400]
+include::part1-2-audit-execution.adoc[]
 
 ====  Navigation area "Documents" 
 
