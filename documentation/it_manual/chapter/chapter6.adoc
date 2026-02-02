@@ -43,7 +43,6 @@
 
 *Supportprozess:*
 
-[cols="80px,150px,3*", options="header"]
 |===
 |Level 1|Kunden-Support		|Reaktion an Arbeitstagen `<` 24 h
 |Level 2|Technische Teams	| 
