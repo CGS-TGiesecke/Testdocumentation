@@ -1,10 +1,10 @@
-== Anhang
+=== Anhang
 
-=== IT-Architektur
+==== IT-Architektur
 
 include::IT_ARCHITEKTURE-DESCRIPTION.adoc[]
 
-=== Versionshistorie Dokument
+==== Versionshistorie Dokument
 
 [cols="100px,100px, 3*", options="header"]
 |===
