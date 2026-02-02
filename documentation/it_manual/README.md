@@ -18,6 +18,10 @@ Change these places from "CGS Assist" to "Arc Assist" or back
     </li>
 </ul>
 
+check with assist:
+All technical and organizational topics and requirements from "IT_REQUIREMENTS_AI_AUDIT_ASSIST-XX.md" are fully and often more extensively covered in the "IT Manual". For every section of "IT_REQUIREMENTS_AI_AUDIT_ASSIST-XX.md", there are corresponding, detailed explanations in the "IT Manual", so that there are no gaps.
+
+
 
 
 
