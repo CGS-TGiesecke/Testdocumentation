@@ -46,9 +46,9 @@ image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Lösch
 
 ==== Navigationsbereich "Automatisierung"
 
-Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Externleseverfahren gelistet und verwaltet.
-Die markierte Nummer (rot) zeigt die Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. Wird die Lesebestätigung von einem User in einer Rubrik gesetzt, 
-wird die Anzeige der Ergebnisse(rot) neu berechnet.
+Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Externdienste gelistet und verwaltet.
+Die markierte Nummer (rot) zeigt die summierte Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. 
+Die Anzeige der Ergebnisse(rot) wird neu berechnet, wenn die Lesebestätigung von einem User in einer der Rubriken gesetzt wird.
 
 include::part1-1-audit-methodology.adoc[]
 
