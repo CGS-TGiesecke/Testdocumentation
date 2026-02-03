@@ -2,7 +2,10 @@
 
 ==== Navigationsbereich "KI Chat"
 
-Hier können einzelne Anfragen gestartet werden. Diese lassen sich in Chats organisieren und werden systemseitig gespeichert, d.h. sie sind auch nach Sitzungsende weiterhin verfügbar.
+Hier können einzelne Anfragen gestartet werden. Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen 
+(Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
+Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
+
 Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenspeicher oder die Datenbank zur Wissensfindung durchsucht werden sollen. Beides gleichzeitig ist nicht möglich.
 Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
 
@@ -46,7 +49,7 @@ image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Lösch
 
 ==== Navigationsbereich "Automatisierung"
 
-Hier werden, bei vorhandener Berechtigung, alle automatisierten bereitgestellten Externdienste gelistet und verwaltet.
+Hier werden, bei vorhandener Berechtigung, alle automatisierten KI Agents gelistet und verwaltet.
 Die markierte Nummer (rot) zeigt die summierte Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. 
 Die Anzeige der Ergebnisse(rot) wird neu berechnet, wenn die Lesebestätigung von einem User in einer der Rubriken gesetzt wird.
 

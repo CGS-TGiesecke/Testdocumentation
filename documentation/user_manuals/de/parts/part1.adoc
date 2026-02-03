@@ -1,13 +1,11 @@
 === Anwendungsbeschreibung 
 
 Es ist innerhalb von {application}, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
-Dieses Wissen basiert, je nach Einstellung, auf den Inhalten der hinterlegten Dokumente oder einer Cloud.
-
-Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen (Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
-Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
+Dieses Wissen basiert, je nach Einstellung, auf den Inhalten der hinterlegten Dokumente oder einer Cloud. 
+Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
 
 Bestimmte regelmäßige Anwendungsfälle werden im Assist als Templates verwaltet, um Routinen zu vereinfachen. Die Anwendungsfälle sind mit Use Cases wie eine Art Checkliste erstellt.
-Es können bei entsprechender Berechtigung, automatisierte, zeitgesteurte Abfragen auf automatisierte bereitgestellte Informationsquellen, sogenannte Feeds erstellt werden.
+Es können bei entsprechender Berechtigung, mit Hilfe von KI Agents automatisierte Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, genutzt werden.
 
 ifdef::cgs-assist[]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
