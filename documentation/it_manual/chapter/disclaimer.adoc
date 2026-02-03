@@ -15,43 +15,14 @@ ifdef::cgs-assist[]
 {author} besitzt jahrzehntelange Erfahrung in der Entwicklung, Implementierung und Betreuung komplexer Softwaresysteme. 
 Mit unseren KI-Experten bieten wir Ihnen neben dem {application} auch gerne KI-Beratung und Unterstützung bei der Entwicklung oder Integration von KI-Systemen. 
 
-*{author}* 
+ifdef::cgs-assist[]
 
-Lange Straße 1 
-
-38100 Braunschweig 
-
-www.cgs-online.de 
-
-www.rias-revision.de 
-
-
-*Beratung & Vertrieb*
-
-Stefan Franz 
-
-sfranz@cgs-online.de
-
-Tel. (+49) 531 / 1209-384 
-
-Mobil (+49) 177 / 792 8366
-
-endif::cgs-assist[]
-
+include::../../export-styles/cgs-disclaimer.adoc[]
+ 
+endif::cgs-assist[]	
 
 ifdef::arc-assist[]
 
-*{author}* 
+include::../../export-styles/arc-disclaimer.adoc[] 
 
-Eine Straße 1 
-
-1111 Stadt
-
-*Beratung & Vertrieb*
-
-Eine Straße 1 
-
-1111 Stadt
-
-
-endif::arc-assist[]
+endif::arc-assist[]	
