@@ -1,0 +1,20 @@
+=== Anhang
+
+==== IT-Architektur
+
+include::IT_ARCHITEKTURE-DESCRIPTION.adoc[]
+
+==== Versionshistorie Dokument
+
+[cols="100px,100px, 3*", options="header"]
+|===
+| Datum 		|Bearbeiter | Änderung 
+
+| 30.01.2026 	|cgs 		| Initiale Erstellung 
+| 				|  			|  
+|===
+
+
+
+
+
