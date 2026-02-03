@@ -75,7 +75,12 @@ Die Gruppierung der Anwendungsfälle ist systemseitig festgelegt und wird unter 
 
 image::../images/Abbildung-25.jpg[Navigationsbereich - Anwendungsfälle, title="Navigationsbereich - Anwendungsfälle", width=400]
 
-Hinterlegte Vorlagen können deaktiviert werden. Das steuert die Sichtbarkeit/Verfügbarkeit unter Navigation „Anwendungsfälle“.
+Hinterlegte Vorlagen können deaktiviert werden und steuert damit die Sichtbarkeit/Verfügbarkeit unter Navigation „Anwendungsfälle“.
+
+Ein Anwendungsfall bzw. Vorlage kann für die Automatiseirung aktiviert werden (KI Agent). Zusätzlich mussen die Berechtigungen gesetzt werden.
+Danach ist er unter dem Navigationsbereich "Automatisierung" für berechtigte Nutzer sichtbar und kann für zeitgesteuerte Ausführungen konfiguriert werden.
+
+image::../images/Abbildung-48.jpg[Administration - Anwendungsfälle, title="Administration - Anwendungsfälle", width=250]
 
 ==== Lizenzverwaltung
 

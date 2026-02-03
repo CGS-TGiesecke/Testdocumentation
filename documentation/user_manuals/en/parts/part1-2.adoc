@@ -77,6 +77,11 @@ image::../images/Abbildung-25.jpg[Administration - Use Cases, title="Administrat
 
 Stored templates can be deactivated. This controls the visibility/availability under "Use Cases" in the navigation.
 
+A use case or template can be activated for automation (AI agent). Additionally, permissions must be set. 
+Afterwards, it will be visible to authorized users under the "Automation" navigation area and can be configured for scheduled executions.
+
+image::../images/Abbildung-48.jpg[Administration - Use cases - automation, title="Administration - User cases automation", width=250]
+
 ==== License Management
 
 Here, the license can be managed. There is the possibility to update it if the existing license has been replaced.

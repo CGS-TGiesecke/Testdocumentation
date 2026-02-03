@@ -4,6 +4,7 @@
 
 Individual requests can be initiated here. These can be organized into chats and are saved by the system, meaning they remain available even after the session ends.
 Before executing requests, it can be selected whether the document repository or the database should be searched for knowledge. Searching both at the same time is not possible.
+The chat input field counts and displays the characters already used. Additionally, an automatic spell checker is activated.
 Requests can be made via manual text input, voice recording using a microphone, or by uploading a document.
 
 image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area AI Chat inputs", width=400]
@@ -46,7 +47,8 @@ image::../images/Abbildung-11.jpg[Navigation area Uses Cases - delete single use
 
 ==== Navigation Area "Automation"
 
-If you have the necessary authorization, all automated external services provided are listed and managed here.
+If you have the necessary authorization, all automated external services (AI agents) provided are listed and managed here.
+These agents are defined in the administration as use cases that have been approved for automation.
 The number highlighted in red shows the total number of current results from the latest run across all categories.
 The display of results (in red) is recalculated whenever a user marks a read confirmation in any of the categories.
 
