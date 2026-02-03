@@ -1,0 +1,11 @@
+=== Wartung und Pflege
+
+==== Dokumentation von Änderungen (Changelog)
+
+Alle Änderungen an der Applikation und Infrastruktur werden im Changelog dokumentiert.
+Zusätzlich werden bei Auslieferung einer neuen Version von {application} die umgesetzten Neuerungen in den mitgelieferten ReleaseNotes beschrieben.
+
+Diese Dokumente werden zentral abgelegt, in regelmäßigen Abständen aktualisiert und steht dem gesamten IT-Team zur Verfügung.
+
+
+

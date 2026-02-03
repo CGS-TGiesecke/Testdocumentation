@@ -1,0 +1,41 @@
+=== Allgemeine Informationen zur Applikation
+
+==== Name und Version der Applikation
+
+Die in diesem Handbuch beschriebene Anwendung trägt den Namen {application} und liegt in der aktuellen Version {revnumber} vom {revdate} vor.
+
+==== Übersicht und Funktionen
+
+{application} ist eine browserbasierte Webanwendung, die lokal beim Kunden gehostet wird. 
+Der Betrieb erfolgt in Docker-Containern auf einem Linux-Server (entweder on-premise oder in einer Cloud-VM). 
+Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. 
+Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
+
+{application} wird ohne eigene(s) KI-Sprachmodell(e) ausgeliefert. Stattdessen greift das Tool über eine API-Anbindung auf 
+die LLM-Infrastruktur des Kunden zurück. Damit {application} ein Sprachmodell nutzen kann, muss eine funktionsfähige Anbindung 
+an ein unterstütztes LLM eingerichtet werden.
+
+==== Optionale/kundenspezifische Implementierungen/Erweiterungen
+
+===== Agents und MCP
+
+KI Agents sind spezialisierte Software-Komponenten, die eigenständig komplexe Aufgaben automatisieren. 
+Über einen MCP (Model Context Protocol) Server erhalten diese Agents sicheren und strukturierten Zugriff auf verschiedenste Datenbanken und Subsysteme, 
+wie beispielsweise ERP-Systeme. Sie können dort eigenständig Datenabfragen oder Analysen durchführen, relevante Informationen extrahieren, 
+verarbeiten und die Ergebnisse in einem zentralen, einheitlichen Format bereitstellen. Auf diese Weise ermöglichen KI Agents automatisierte 
+Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, ohne dass manuelle Eingriffe notwendig sind.
+
+Weitere Anwendungsbeispiele:
+
+- öffentliche Feeds ausgelesen und automatisiert innerhalb von {application} zur Verfügung stellen
+- eingehendes E-Mails kategorisieren, inkl. Anhängen bewerten und priorisieren
+
+==== Lizenzinformationen
+
+Für die Nutzung von {application} wird eine Kundenlizenz der {author} verwendet. 
+Die Lizenz entspricht dem Modell "Concurrent User" für bis zu 50 gleichzeitige Nutzer. 
+
+Wartungs- und Update-Leistungen sind während der vertraglich vereinbarten Laufzeit enthalten. 
+ 
+Die Lizenzbedingungen sind im Vertrag mit dem Hersteller und in den kundeneigenen IT-Richtlinien hinterlegt. 
+Die Einhaltung der Lizenzbedingungen wird regelmäßig durch die IT-Abteilung geprüft.
