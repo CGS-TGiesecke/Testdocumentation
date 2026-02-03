@@ -2,10 +2,10 @@
 
 Es ist innerhalb von {application}, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
 Dieses Wissen basiert, je nach Einstellung, auf den Inhalten der hinterlegten Dokumente oder einer Cloud. 
-Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
+Mit dem Assist können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
 
 Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen das die Anwendung künstliche Intelligenz verwendet, um Inhalte automatisch zu generieren. 
-Das die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann. Er wird gebeten die Ergebnisse sorgfältig zu prüfen.
+Da die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann, wird der Nutzer gebeten die Ergebnisse sorgfältig zu prüfen.
 Dieser Hinweis muss bestätigt werden, um den Assist weiter nutzen zu können.
 
 image::../images/Abbildung-47.jpg[Navigationsbereich - KI Bestätigung, title="Navigationsbereich - KI Bestätigung", width=400]
