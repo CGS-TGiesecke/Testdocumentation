@@ -1,5 +1,5 @@
 extends: default
-title-page:
+title_page:
     background_image: image:CGS-TitlePage.png[]
   title:
     font-size: 38
