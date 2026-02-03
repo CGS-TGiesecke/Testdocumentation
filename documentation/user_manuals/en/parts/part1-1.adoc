@@ -2,10 +2,14 @@
 
 ==== Navigation Area "AI Chat"
 
-Individual requests can be initiated here. These can be organized into chats and are saved by the system, meaning they remain available even after the session ends.
-Before executing requests, it can be selected whether the document repository or the database should be searched for knowledge. Searching both at the same time is not possible.
-The chat input field counts and displays the characters already used. Additionally, an automatic spell checker is activated.
-Requests can be made via manual text input, voice recording using a microphone, or by uploading a document.
+Individual requests can be initiated here. All chat histories are stored only in the browser storage and are no longer available after closing 
+the browser (if the setting "automatically clear cache" is enabled) and logging in again. All saved use case histories can be reopened even 
+after closing the browser and logging in again.
+
+Before executing requests, you can select whether the document storage or the database should be searched for knowledge discovery. 
+Both cannot be used simultaneously. The chat input field counts and displays the characters already used. 
+Additionally, an automatic spell checker is activated. You have the option to submit a request via manual text entry, 
+via voice recording using a microphone, or by uploading a document.
 
 image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area AI Chat inputs", width=400]
 
