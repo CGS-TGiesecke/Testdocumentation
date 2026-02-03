@@ -11,45 +11,13 @@ endif::arc-assist[]
 
 ifdef::cgs-assist[]
 
-*Your Partner for Artificial Intelligence*
-
-{author} has decades of experience in the development, implementation, and support of complex software systems.
-With our AI experts, we are happy to offer you, in addition to the {application}, both AI consulting and support in the development or integration of AI systems.
-
-*{author}* 
-
-Lange Straße 1 
-
-38100 Braunschweig 
-
-www.cgs-online.de 
-
-www.rias-revision.de 
-
-
-*Consulting & Sales*
-
-Stefan Franz 
-
-sfranz@cgs-online.de
-
-Tel. (+49) 531 / 1209-384 
-
-Mobil (+49) 177 / 792 8366
-
+include::./../../../export-styles/cgs-disclaimer-en.adoc[]
+ 
 endif::cgs-assist[]	
 
 ifdef::arc-assist[]
-Firma {author}
 
-Street 1777
+include::./../../../export-styles/arc-disclaimer-en.adoc[] 
 
-7777700 Town
-
-Tel.:	
-
-Fax:	
-
-Web: 
 endif::arc-assist[]	
 

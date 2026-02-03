@@ -11,19 +11,13 @@ endif::arc-assist[]
 
 ifdef::cgs-assist[]
 
-include::./export-styles/cgs-disclaimer.adoc[]
-
-include::../../export-styles/cgs-disclaimer.adoc[]
-
-include::./../../export-styles/cgs-disclaimer.adoc[]
-
 include::./../../../export-styles/cgs-disclaimer.adoc[]
  
 endif::cgs-assist[]	
 
 ifdef::arc-assist[]
 
-include::../../export-styles/arc-disclaimer.adoc[] 
+include::./../../../export-styles/arc-disclaimer.adoc[] 
 
 endif::arc-assist[]	
 
