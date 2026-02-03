@@ -22,7 +22,7 @@ on:
         required: false
 
 env:
-  REVISION: 1.0.0
+  REVISION: 1.3.1
 
 jobs:
   test:
@@ -33,11 +33,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: List files to check if documentation/user_manuals/en/index.adoc exists
-        run: ls -l documentation/user_manuals/en/
+      - name: List files to check if user_manuals/en/index.adoc exists
+        run: ls -l user_manuals/en/
 
       - name: Run asciidoctor on index.adoc
-        run: asciidoctor documentation/user_manuals/en/index.adoc
+        run: asciidoctor user_manuals/en/index.adoc
             
   pages:
     runs-on: ubuntu-latest
@@ -50,22 +50,22 @@ jobs:
       - name: Build HTML and PDF docs
         run: |
           asciidoctor -a revnumber=$REVISION \
-            -D documentation/user_manuals/en/ \
+            -D user_manuals/en/ \
             -o Handbuch_EN_${REVISION}.html \
-            documentation/user_manuals/en/index.adoc
+            user_manuals/en/index.adoc
           asciidoctor-pdf -a revnumber=$REVISION \
-          -D documentation/user_manuals/en/ \
-          -a pdf-theme=ARC -a pdf-themesdir=documentation/user_manuals/themes \
-          -o Handbuch_EN_${REVISION}.pdf documentation/user_manuals/en/index.adoc
+          -D user_manuals/en/ \
+          -a pdf-theme=ARC -a pdf-themesdir=user_manuals/themes \
+          -o Handbuch_EN_${REVISION}.pdf user_manuals/en/index.adoc
 
           echo "REVISION is: $REVISION"
-          ls -l documentation/user_manuals/en/
+          ls -l user_manuals/en/
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: Handbuch_EN
           path: |
-            documentation/user_manuals/en/Handbuch_EN_*.pdf
-            documentation/user_manuals/en/Handbuch_EN_*.html
+            user_manuals/en/Handbuch_EN_*.pdf
+            user_manuals/en/Handbuch_EN_*.html
           
