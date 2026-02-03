@@ -16,6 +16,8 @@ include::./export-styles/cgs-disclaimer.adoc[]
 include::../../export-styles/cgs-disclaimer.adoc[]
 
 include::./../../export-styles/cgs-disclaimer.adoc[]
+
+include::./../../../export-styles/cgs-disclaimer.adoc[]
  
 endif::cgs-assist[]	
 
