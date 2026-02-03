@@ -33,11 +33,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: List files to check if user_manuals/de/index.adoc exists
-        run: ls -l user_manuals/de/
+      - name: List files to check if documentation/user_manuals/de/index.adoc exists
+        run: ls -l documentation/user_manuals/de/
 
       - name: Run asciidoctor on index.adoc
-        run: asciidoctor user_manuals/de/index.adoc
+        run: asciidoctor documentation/user_manuals/de/index.adoc
             
   pages:
     runs-on: ubuntu-latest
@@ -50,21 +50,21 @@ jobs:
       - name: Build HTML and PDF docs
         run: |
           asciidoctor -a revnumber=$REVISION \
-            -D user_manuals/de/ \
+            -D documentation/user_manuals/de/ \
             -o Handbuch_DE_${REVISION}.html \
-            user_manuals/de/index.adoc
+            documentation/user_manuals/de/index.adoc
           asciidoctor-pdf -a revnumber=$REVISION \
           -D user_manuals/de/ \
-          -a pdf-theme=CGS -a pdf-themesdir=user_manuals/themes \
-          -o Handbuch_DE_${REVISION}.pdf user_manuals/de/index.adoc
+          -a pdf-theme=CGS -a pdf-themesdir=documentation/user_manuals/themes \
+          -o Handbuch_DE_${REVISION}.pdf documentation/user_manuals/de/index.adoc
 
           echo "REVISION is: $REVISION"
-          ls -l user_manuals/de/
+          ls -l documentation/user_manuals/de/
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: Handbuch_DE
           path: |
-            user_manuals/de/Handbuch_DE_*.pdf
-            user_manuals/de/Handbuch_DE_*.html
+            documentation/user_manuals/de/Handbuch_DE_*.pdf
+            documentation/user_manuals/de/Handbuch_DE_*.html
