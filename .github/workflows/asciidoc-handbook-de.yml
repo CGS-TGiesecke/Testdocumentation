@@ -54,7 +54,7 @@ jobs:
             -o Handbuch_DE_${REVISION}.html \
             documentation/user_manuals/de/index.adoc
           asciidoctor-pdf -a revnumber=$REVISION \
-          -D user_manuals/de/ \
+          -D documentation/user_manuals/de/ \
           -a pdf-theme=CGS -a pdf-themesdir=documentation/user_manuals/themes \
           -o Handbuch_DE_${REVISION}.pdf documentation/user_manuals/de/index.adoc
 
