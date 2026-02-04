@@ -41,7 +41,7 @@ endif::arc-assist[]
 |Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
 
 |Klassische Chat-Oberfläche |Ja (inkl. Voice-Eingabe & Dokument-Upload) |Ja, in Office-Kontext integriert |Ja
-|Formularbasierte Use Cases |Ja, fertige Formulare für Revisions-Use-Cases|Nein |Nein
+|Formularbasierte Use Cases |Ja, fertige Formulare für Kunden-Use-Cases|Nein |Nein
 |Bedarf an Prompting-Know-how| Gering – Standard-Use-Cases über Formulare nutzbar |Mittel – Qualität hängt stark von Prompts ab |Mittel bis hoch – reine Prompt-Nutzung
 |Standardisierung der Ergebnisse|Hoch – zentrale Systemprompts und Use-Case-Vorlagen |Gering – individuelle Nutzung|Gering – individuelle Nutzung
 |Sternebewertung von Use Cases|Ja (Qualitätsfeedback integriert) |Nein|Nein
@@ -53,7 +53,7 @@ endif::arc-assist[]
 |===
 |Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Integriertes RAG |Ja, speziell für Revisionsdokumente|Teilweise (über M365/SharePoint-Integration) |Nur über separate, technisch aufwändige Integrationen
+|Integriertes RAG |Ja, speziell für Kundendokumente|Teilweise (über M365/SharePoint-Integration) |Nur über separate, technisch aufwändige Integrationen
 |DMS-ähnliche Dokumentenübersicht |Ja (Filter nach Typ, Quelle, Inhalt, Tags)|Nicht in dieser Form |Nein
 |Upload neuer Dokumente durch Fachnutzer| Ja, ohne KI/RAG-Know-how möglich |Eingeschränkt, abhängig von Umgebung |Nicht ohne zusätzliche Infrastruktur
 |Aktualisierung des RAG per Button|Ja („Refresh“) |Nein (automatische, aber weniger steuerbare Mechanismen)|Nicht ohne Zusatzlösung
@@ -68,11 +68,11 @@ endif::arc-assist[]
 |Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
 
 |Umfassender Admin-Bereich |Ja|Ja, aber generisch (M365 Admin Center)|Eingeschränkt (v.a. Organisationseinstellungen)
-|Nutzer- & Rollenmanagement |Ja, mit revisionsspezifischer Rollenlogik|Ja, aber nicht auf RAG/Kunde zugeschnitten |Beschränkt (v.a. Organisation vs. Nutzer)
+|Nutzer- & Rollenmanagement |Ja, mit kundenspezifischer Rollenlogik|Ja, aber nicht auf RAG/Kunde zugeschnitten |Beschränkt (v.a. Organisation vs. Nutzer)
 |Rollenbasierter Zugriff auf RAG-Ordner| Ja (für alle Standard-Use-Cases) |Nein (Prompts dezentral bei Nutzern) |Nein (Prompts beim einzelnen User)
 |Konfiguration von KI-Providern/LLMs|Ja, inkl. API-Keys für mehrere Provider|Nein, primär Microsoft-eigene Modelle|Nein, gebunden an OpenAI
 |Use-Case-Management|Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik)|Nein|Nein
-|Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht revisionsspezifisch)
+|Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht Kundenspezifisch)
 |===
 
 ===== Pflegeaufwand & Weiterentwicklung

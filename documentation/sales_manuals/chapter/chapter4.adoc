@@ -23,7 +23,7 @@ endif::cgs-assist[]
 *MS Copilot / ChatGPT*
 
 * Chat-Oberflächen vorhanden, aber ohne:
-** revisionsspezifische Agenten
+** kundenspezifische Agenten
 ** fein steuerbare RAG-Nutzung mit transparenten Quellen-Embeddings
 ** Auswahl verschiedener LLMs in einer Oberfläche.
 

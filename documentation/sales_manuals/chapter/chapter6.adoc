@@ -1,4 +1,4 @@
-=== Dokumentenmanagement & RAG für Revisionsdokumente
+=== Dokumentenmanagement & RAG für Kundendokumente
 
 *{application}*
 
@@ -20,7 +20,7 @@ Vorteil:
 * Einbindung von Unternehmensdokumenten ist möglich, aber:
 ** weniger granular steuerbar
 ** technisch und administrativ komplexer
-** nicht explizit auf Revisionsworkflows ausgelegt.
+** nicht explizit auf Kundenworkflows ausgelegt.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} kombiniert KI mit einem anwendbaren, fachgerechten RAG-Dokumentenmanagement – 
 statt die Benutzer mit der technischen RAG-Implementierung allein zu lassen.#

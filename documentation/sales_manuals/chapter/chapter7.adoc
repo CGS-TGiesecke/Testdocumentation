@@ -39,5 +39,11 @@ ifdef::arc-assist[]
 endif::arc-assist[] 
 ** kein dediziertes Use-Case-Lifecycle-Management (Aktivierung, Bewertung, Rollensteuerung).
 
-[.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau zur Internen Revision passt – 
-inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#
+[.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau
+ifdef::arc-assist[]
+ zur Internen Revision
+endif::arc-assist[] 
+ifdef::cgs-assist[]
+ zum Kunden
+endif::cgs-assist[]
+ passt – inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#
