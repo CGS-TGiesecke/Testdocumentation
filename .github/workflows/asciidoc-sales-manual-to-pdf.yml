@@ -61,7 +61,7 @@ jobs:
         run: |
           asciidoctor \
           -D documentation/sales_manuals/ \
-          -a revnumber=${{ github.event.inputs.version }}\
+          -a revnumber=${{ github.event.inputs.version }} \
           -a big-output=${{ github.event.inputs.outputType }} \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
