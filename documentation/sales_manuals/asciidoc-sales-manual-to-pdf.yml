@@ -97,7 +97,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE_${{ github.event.inputs.outputType }}
+          name: DIFFERENCES_DE
           path: |
             documentation/sales_manuals/DIFFERENCES_DE_*.pdf
             documentation/sales_manuals/DIFFERENCES_DE_*.html

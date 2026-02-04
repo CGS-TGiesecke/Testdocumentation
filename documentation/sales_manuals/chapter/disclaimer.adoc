@@ -1,23 +1,23 @@
-ifdef::cgs-assist[]
+ifeval::[{pdf-theme} == 'CGS']
 image::../themes/cgs-logo.png[Firmenlogo,align=left]
-endif::cgs-assist[]
+endif::[]
 
-ifdef::arc-assist[]
+ifeval::[{pdf-theme} == 'ARC']
 image::../themes/arc_logo_gross.png[Firmenlogo,align=left]
-endif::arc-assist[]
+endif::[]
 
 
 
 === Kontakt
 
-ifdef::cgs-assist[]
+ifeval::[{pdf-theme} == 'CGS']
 
 include::../../export-styles/cgs-disclaimer.adoc[] 
 
-endif::cgs-assist[]	
+endif::[]	
 
-ifdef::arc-assist[]
+ifeval::[{pdf-theme} == 'ARC']
 
 include::../../export-styles/arc-disclaimer.adoc[] 
 
-endif::arc-assist[]	
+endif::[]	

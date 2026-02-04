@@ -12,10 +12,11 @@
 * Keine integrierte Fallback-Strategie auf andere LLMs.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} erhöht die operative Resilienz
-ifdef::arc-assist[]
+ifeval::[{pdf-theme} == 'ARC']
  der Internen Revision
-endif::arc-assist[] 
-ifdef::cgs-assist[]
+endif::[]
+ifeval::[{pdf-theme} == 'CGS']
  des Unternehmens
-endif::cgs-assist[] 
+endif::[] 
 gegenüber Störungen bei einzelnen KI-Anbietern.#
+

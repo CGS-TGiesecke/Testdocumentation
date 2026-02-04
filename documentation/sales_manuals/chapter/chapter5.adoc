@@ -8,23 +8,23 @@
 ** Monitoring: Statuskontrolle, ob Agenten erfolgreich durchgelaufen sind.
 ** Einsicht in die Ergebnisse der Agenten.
 
-ifdef::arc-assist[]
+ifeval::[{pdf-theme} == 'ARC']
 Typische Anwendungsszenarien in der Revision:
 
 * Regelmäßige Auswertung von Risikoberichten.
 * Periodische Analyse von Maßnahmenumsetzungsständen.
 * Wiederkehrende Zusammenfassung von neuen Richtlinien/Dokumenten.
-endif::arc-assist[]
+endif::[]
 
 *MS Copilot / ChatGPT*
 
 * In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
-ifdef::cgs-assist[]
+ifeval::[{pdf-theme} == 'CGS']
  Aufgaben.
-endif::cgs-assist[]
-ifdef::arc-assist[]
+endif::[]
+ifeval::[{pdf-theme} == 'ARC']
  Revisionsaufgaben.
-endif::arc-assist[]
+endif::[]
 * Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} macht aus KI einmalige Abfragen und dauerhafte, planbare Agenten – 

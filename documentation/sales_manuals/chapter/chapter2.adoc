@@ -19,12 +19,13 @@
 * Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} macht
-ifdef::arc-assist[]
- die Interne Revision
-endif::arc-assist[] 
-ifdef::cgs-assist[]
- z.B. den Mittelstand
 endif::cgs-assist[]
+ifeval::[{pdf-theme} == 'ARC']
+ die Interne Revision
+endif::[]
+ifeval::[{pdf-theme} == 'CGS']
+ z.B. den Mittelstand
+endif::[]
  unabhängig von einem einzelnen KI-Anbieter und 
 erhöht sowohl Ausfallsicherheit als auch strategische Flexibilität.#
 
