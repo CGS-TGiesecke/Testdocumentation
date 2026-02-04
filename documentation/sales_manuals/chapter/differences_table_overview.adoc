@@ -22,7 +22,7 @@ endif::arc-assist[]
 |Herstellerunabhängigkeit |Hoch – freie Wahl und Kombination verschiedener Provider|Niedrig – stark an Microsoft-Stack gebunden |Niedrig – an OpenAI-Ökosystem gebunden
 |Wechsel auf europäische LLMs| Ja, z.B. Mistral |Nur, wenn MS diese anbietet |Nur, wenn OpenAI entsprechende Modelle anbietet
 |Fallback bei Störungen |Ja, Wechsel auf alternative LLMs möglich |Eher nein, abhängig von Azure/Microsoft |Eher nein, abhängig von OpenAI
-|==
+|===
 
 ===== Betriebsmodell & Datenhoheit
 
@@ -33,7 +33,7 @@ endif::arc-assist[]
 |Datenspeicherung |Im kundeneigenen Rechenzentrum|In der Cloud des Anbieters |In der Cloud des Anbieters
 |Datenhoheit| Vollständig beim Kunden |Abhängig von Cloud-Verträgen und Region |Abhängig von OpenAI-Verträgen und Region
 |Eignung für hochsensible Daten |Sehr hoch (on-premise, rollenbasiertes RAG) |Eingeschränkt, je nach Compliance-Vorgaben |Eingeschränkt, meist nicht für streng regulierte Bereiche
-|==
+|===
 
 ===== Benutzererlebnis & Einstiegshürde
 
@@ -46,7 +46,7 @@ endif::arc-assist[]
 |Standardisierung der Ergebnisse|Hoch – zentrale Systemprompts und Use-Case-Vorlagen |Gering – individuelle Nutzung|Gering – individuelle Nutzung
 |Sternebewertung von Use Cases|Ja (Qualitätsfeedback integriert) |Nein|Nein
 |Übernahme von Use-Case-Ergebnissen in Chat|Ja, nahtlos als Kontext weiter nutzbar |Nur manuell durch Copy/Paste|Nur manuell durch Copy/Paste
-|==
+|===
 
 ===== RAG & Dokumentenmanagement
 
@@ -60,7 +60,7 @@ endif::arc-assist[]
 |Löschen einzelner Embeddings|Ja („Ausgewählte Embeddin gs löschen“)|Nein|Nein
 |Anzeige der Embeddings pro Dokument|Ja, Transparenz über RAG-Inhalte |Nein |Nein
 |Quellenverweis in Antworten (Top-Embeddings)|Ja, Top-8 Embeddings inkl. Links zur Originalquelle|Teilweise, aber weniger transparent|Nur wenn der Prompt entsprechend gestaltet wird
-|==
+|===
 
 ===== Automation & Agenten
 
@@ -73,7 +73,7 @@ endif::arc-assist[]
 |Konfiguration von KI-Providern/LLMs|Ja, inkl. API-Keys für mehrere Provider|Nein, primär Microsoft-eigene Modelle|Nein, gebunden an OpenAI
 |Use-Case-Management|Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik)|Nein|Nein
 |Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht revisionsspezifisch)
-|==
+|===
 
 ===== Pflegeaufwand & Weiterentwicklung
 
@@ -84,7 +84,7 @@ endif::arc-assist[]
 |Laufende Optimierung der Use Cases |Ja, zentral und für alle Kunden|Nur wenn der Kunde intern optimiert |Nur wenn der Kunde intern optimiert
 |Notwendigkeit eigener Entwickler |Nicht erforderlich für Standardnutzung|Oft notwendig für komplexere Automatisierungen/Integrationen |Oft notwendig für Integration in Prozesse
 |Skaleneffekte| Sehr hoch – Weiterentwicklungen kommen allen Kunden zugute |Gering – jeder Kunde optimiert für sich |Gering – jeder Kunde optimiert für sich
-|==
+|===
 
 ===== Resilienz & Risikoaspekte
 
@@ -94,4 +94,4 @@ endif::arc-assist[]
 |Umgang mit Ausfällen einzelner LLMs |Fallback auf alternative LLMs durch Mehr-Provider-Setup|Abhängig von Microsoft / Azure |DAbhängig von OpenAI
 |Reduktion geopolitischer Risiken |Ja, durch Nutzung europäischer/selbst gehosteter Modelle möglich|Eingeschränkt|Eingeschränkt
 |Abhängigkeit von einem Anbieter |Gering|Hoch |Hoch
-|==
+|===

@@ -11,11 +11,11 @@
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
-:toclevels: 12
+:toclevels: 15
 :figure-caption: Abbildung
 :imagesdir: image
 :sectnums:
-:sectnumlevels: 12
+:sectnumlevels: 15
 :cgs-assist: 1
 //:arc-assist: 1
 //:application: AI Audit Assist
