@@ -18,8 +18,8 @@
 :sectnumlevels: 12
 //:cgs-assist: 1
 :arc-assist: 1
-:application: "AI Audit Assist"
-//:application: "CGS Assist"
+:application: AI Audit Assist
+//:application: CGS Assist
 :big-output: 0
 
 ifdef::arc-assist[]
