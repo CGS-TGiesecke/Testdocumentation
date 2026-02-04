@@ -44,15 +44,16 @@ include::chapter/chapter9.adoc[]
 
 include::chapter/chapter10.adoc[]
 
+ifeval::[{big-output} == 1]
 include::differences_table_overview.adoc[]
+endif::[]
+
 
 <<<
 
 include::chapter/disclaimer.adoc[]
 
-//ifeval::[{big-output} == 1]
-//include::chapter/chapter4-o.adoc[]
-//endif::[]
+
 
 
 
