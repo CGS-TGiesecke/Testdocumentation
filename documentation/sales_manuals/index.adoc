@@ -23,9 +23,9 @@
 :pdf-theme: CGS default, kommt vom run
 :big-output: 0 default, kommt vom run
 
-ifeval::[{pdf-theme} == 'ARC']
+//ifeval::[{pdf-theme} == 'ARC']
 //include::chapter/chapter1.adoc[]
-endif::[]
+//endif::[]
 
 //include::chapter/chapter2.adoc[]
 
@@ -45,9 +45,9 @@ endif::[]
 
 //include::chapter/chapter10.adoc[]
 
-ifeval::[{big-output} == 1]
+//ifeval::[{big-output} == 1]
 //include::chapter/differences_table_overview.adoc[]
-endif::[]
+//endif::[]
 
 
 <<<
