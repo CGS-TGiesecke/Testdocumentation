@@ -30,6 +30,7 @@ endif::arc-assist[]
 * Monitoring und Ergebnisübersicht integriert.
 
 *Integriertes RAG-Dokumentenmanagement:*
+
 * DMS-artige Pflege der Revisionsdokumente (Filter, Tags, Upload, Delete, Refresh).
 * Transparente Quellen-Embeddings und Verifizierbarkeit.
 
