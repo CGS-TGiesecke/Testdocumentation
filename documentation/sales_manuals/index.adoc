@@ -45,7 +45,7 @@ include::chapter/chapter9.adoc[]
 include::chapter/chapter10.adoc[]
 
 ifeval::[{big-output} == 1]
-include::differences_table_overview.adoc[]
+include::chapter/differences_table_overview.adoc[]
 endif::[]
 
 
