@@ -83,6 +83,7 @@ jobs:
           -a big-output="${{ github.event.inputs.outputType }}" \
           -a application="${{ github.event.inputs.application }}" \
           -a author="${{ github.event.inputs.author }}" \
+          -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
