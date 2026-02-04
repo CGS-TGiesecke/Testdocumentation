@@ -24,7 +24,7 @@ endif::[]
 //:arc-assist: 1
 //:application: AI Audit Assist
 :application: CGS Assist default, kommt vom run
-:pdf-theme: CGS default, kommt vom run
+:pdf-theme: ARC default, kommt vom run
 :big-output: 0 default, kommt vom run
 
 ifeval::[{pdf-theme} == 'ARC']
