@@ -2,7 +2,7 @@
 um KI 
 ifdef::cgs-assist[]
  auch z.B. für den Mittelstand
-endif::cgsassist[]
+endif::cgs-assist[]
 ifdef::arc-assist[]
  in der Internen Revision
 endif::arc-assist[]
