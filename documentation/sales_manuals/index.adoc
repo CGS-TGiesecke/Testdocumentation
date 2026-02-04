@@ -1,6 +1,6 @@
 
-//= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
-= CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+//= CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 :doctype: book
 :author: AI Audit Institut
 //:author: CGS Software and Data
