@@ -19,8 +19,8 @@ on:
         default: 'CGS'
         type: choice
         options:
-          - CGS
-          - ARC
+          - 'CGS'
+          - 'ARC'
       outputType:
         description: 'Asciidoctor Output type'
         required: true
@@ -40,16 +40,16 @@ on:
         default: 'CGS Assist'
         type: choice
         options:
-          - CGS Assist
-          - AI Audit Assist
+          - 'CGS Assist'
+          - 'AI Audit Assist'
       author:
         description: 'Asciidoctor PDF author'
         required: true
         default: 'CGS Software and Data'
         type: choice
         options:
-          - CGS Software and Data
-          - AI Audit Institut
+          - 'CGS Software and Data'
+          - 'AI Audit Institut'
           
 
 jobs:
