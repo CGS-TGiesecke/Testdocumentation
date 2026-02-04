@@ -12,7 +12,7 @@ endif::arc-assist[]
 
 ifdef::cgs-assist[]
 
-include::../../export-styles/arc-disclaimer.adoc[] 
+include::../../export-styles/cgs-disclaimer.adoc[] 
 
 endif::cgs-assist[]	
 

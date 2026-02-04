@@ -78,4 +78,7 @@ image-caption:
   margin_top: 4
   margin_bottom: 8
 
-
+role:
+  highlight:
+    font_color: 'ff0000'   # Rot, Hex-Code für die Textfarbe
+    background_color: 'ffff00'  # Gelb als Hintergrund
