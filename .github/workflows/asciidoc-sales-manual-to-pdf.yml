@@ -1,5 +1,3 @@
-
-
 name: Asciidoctor Build DIFFERENCES de
 
 on:
@@ -22,11 +20,19 @@ on:
         description: 'Environment to run tests against'
         type: environment
         required: false
+      pdfTheme:
+        description: 'Asciidoctor PDF Theme'
+        required: true
+        default: 'CGS'
+        type: choice
+        options:
+          - CGS
+          - ARC
 
 env:
   REVISION: 1.3.1
   BIG_OUTPUT: 1
-  
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -35,13 +41,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+
       - name: List files to check if documentation/sales_manuals/index.adoc exists
         run: ls -l documentation/sales_manuals/
 
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
-            
+
   pages:
     runs-on: ubuntu-latest
     container:
@@ -54,16 +60,16 @@ jobs:
         run: |
           asciidoctor \
           -D documentation/sales_manuals/ \
-          -a revnumber=$REVISION \
-          -a big-output=$BIG_OUTPUT \
-          -o DIFFERENCES_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.html documentation/sales_manuals/index.adoc
+          -a revnumber=${{ env.REVISION }} \
+          -a big-output=${{ env.BIG_OUTPUT }} \
+          -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVISION }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
-          -a revnumber=$REVISION \
-          -a big-output=$BIG_OUTPUT \
-          -a pdf-theme=CGS \
+          -a revnumber=${{ env.REVISION }} \
+          -a big-output=${{ env.BIG_OUTPUT }} \
+          -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
           -a pdf-themesdir=documentation/sales_manuals/themes \
-          -o DIFFERENCES_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.pdf documentation/sales_manuals/index.adoc
+          -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVISION }}.pdf documentation/sales_manuals/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
