@@ -61,14 +61,14 @@ jobs:
           -D documentation/sales_manuals/ \
           -a revnumber=$REVISION \
           -a big-output=$BIG_OUTPUT \
-          -a pdf-theme=ARC \
+          -a pdf-theme=CGS \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.pdf documentation/sales_manuals/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-Handbuch_DE
+          name: DIFFERENCES_DE_${REVISION}
           path: |
             documentation/sales_manuals/DIFFERENCES_DE_*.pdf
             documentation/sales_manuals/DIFFERENCES_DE_*.html
