@@ -1,5 +1,8 @@
 "{author}" sind Hersteller des {application} einem KI-Wrapper, der diverse Funktionalitäten anbietet,
 um KI 
+ifdef::cgs-assist[]
+ auch z.B. für den Mittelstand
+endif::cgsassist[]
 ifdef::arc-assist[]
  in der Internen Revision
 endif::arc-assist[]
@@ -9,9 +12,11 @@ andere Modelle über AWS Bedrock bis hin zu Open Source Modellen, die selbst geh
 Die Applikation läuft bei den Kunden onPremise, so werden auch alle Daten in der Infrastruktur des Kunden gespeichert. 
 Lediglich zur Verarbeitung werden die für die Anfrage benötigten Daten an das jeweilige LLM übergeben und gegebenenfalls 
 kurzfristig zwischengespeichert.
+
 {application} ist eine browserbasierte Webanwendung, die lokal beim Kunden gehostet wird. 
 Der Betrieb erfolgt in Docker-Containern auf einem Linux-Server (entweder on-premise oder in einer Cloud-VM). 
 Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. 
+
 Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
 
 {application} wird ohne eigene(s) KI-Sprachmodell(e) ausgeliefert. Stattdessen greift das Tool über eine API-Anbindung auf 
