@@ -28,9 +28,11 @@ on:
         options:
           - 0
           - 1
-
-env:
-  REVISION: 1.3.1
+      version:
+        description: 'Asciidoctor PDF Version'
+        required: true
+        default: '1.0.0'
+        type: string
 
 jobs:
   test:
@@ -59,21 +61,21 @@ jobs:
         run: |
           asciidoctor \
           -D documentation/sales_manuals/ \
-          -a revnumber=${{ env.REVISION }} \
-          -a big-output=${{ env.BIG_OUTPUT }} \
-          -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVISION }}.html documentation/sales_manuals/index.adoc
+          -a revnumber=${{ github.event.inputs.version }}\
+          -a big-output=${{ github.event.inputs.outputType }} \
+          -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
-          -a revnumber=${{ env.REVISION }} \
+          -a revnumber=${{ github.event.inputs.version }} \
           -a big-output=${{ github.event.inputs.outputType }}  \
           -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
           -a pdf-themesdir=documentation/sales_manuals/themes \
-          -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVISION }}.pdf documentation/sales_manuals/index.adoc
+          -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE
+          name: DIFFERENCES_DE_${{ github.event.inputs.outputType }}
           path: |
             documentation/sales_manuals/DIFFERENCES_DE_*.pdf
             documentation/sales_manuals/DIFFERENCES_DE_*.html
