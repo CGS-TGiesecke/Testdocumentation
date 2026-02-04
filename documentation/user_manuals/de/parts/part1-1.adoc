@@ -62,6 +62,8 @@ include::part1-2-audit-execution.adoc[]
 ====  Navigationsbereich "Dokumente" 
 
 Hier werden alle verfügbaren und durchsuchbaren Dokumente angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
+Dabei kann die Dokumententabelle nach Dokumenttyp (pdf, excel etc.), nach Quelle (bspw. Netzwerklaufwerk oder Sharepoint) oder Inhalt gefiltert werden.
+Da alle Dokumente mit Schlagwörtern verknüpft sind, kann man in Feld Inhalt nach beliebigen Schlagwörtern suchen, um die relevanten Dokumente zu finden.
 
 image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen", width=400]
 

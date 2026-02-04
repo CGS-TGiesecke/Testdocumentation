@@ -79,6 +79,7 @@ Hinterlegte Vorlagen können deaktiviert werden und steuert damit die Sichtbarke
 
 Ein Anwendungsfall bzw. Vorlage kann für die Automatiseirung aktiviert werden (KI Agent). Zusätzlich mussen die Berechtigungen gesetzt werden.
 Danach ist er unter dem Navigationsbereich "Automatisierung" für berechtigte Nutzer sichtbar und kann für zeitgesteuerte Ausführungen konfiguriert werden.
+Zusätzlich wird die Statistik zur Bewertung des Anwendungsfalles angezeigt, also wie viele Sterne bei der Benutzung als Feedback bewertet wurden.
 
 image::../images/Abbildung-48.jpg[Administration - Anwendungsfälle, title="Administration - Anwendungsfälle", width=250]
 

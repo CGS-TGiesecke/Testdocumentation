@@ -63,6 +63,8 @@ include::part1-2-audit-execution.adoc[]
 ====  Navigation Area "Documents" 
 
 All available and searchable documents for which the user is authorized according to their role are displayed here.
+The document table can be filtered by document type (e.g., PDF, Excel, etc.), by source (e.g., network drive or SharePoint), or by content.
+All documents are linked with keywords and can search by any keywords in the content field to find the relevant documents.
 
 image::../images/Abbildung-12.jpg[Navigation area Documents - delete in tree, title="Navigation area Documents - delete in tree", width=400]
 
