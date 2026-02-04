@@ -1,6 +1,10 @@
-
-//= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+ifeval::[{pdf-theme} == 'ARC']
+= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+endif::[]
+ifeval::[{pdf-theme} == 'ARC']
 = CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+endif::[]
+= default
 :doctype: book
 //:author: AI Audit Institut
 :author: CGS Software and Data default, kommt vom run
@@ -23,9 +27,9 @@
 :pdf-theme: CGS default, kommt vom run
 :big-output: 0 default, kommt vom run
 
-//ifeval::[{pdf-theme} == 'ARC']
-//include::chapter/chapter1.adoc[]
-//endif::[]
+ifeval::[{pdf-theme} == 'ARC']
+ include::chapter/chapter1.adoc[]
+endif::[]
 
 //include::chapter/chapter2.adoc[]
 
