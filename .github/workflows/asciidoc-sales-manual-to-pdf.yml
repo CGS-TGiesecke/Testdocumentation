@@ -1,0 +1,74 @@
+
+
+name: Asciidoctor Build DIFFERENCES de
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: false
+
+env:
+  REVISION: 1.3.1
+  BIG_OUTPUT: 0
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: List files to check if documentation/sales_manual/index.adoc exists
+        run: ls -l documentation/it_manual/
+
+      - name: Run asciidoctor on index.adoc
+        run: asciidoctor documentation/sales_manual/index.adoc
+            
+  pages:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build HTML and PDF docs
+        run: |
+          asciidoctor \
+          -D documentation/sales_manual/ \
+          -a revnumber=$REVISION \
+          -a big-output=$BIG_OUTPUT \
+          -o DIFFERENCES_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.html documentation/sales_manual/index.adoc
+          asciidoctor-pdf \
+          -D documentation/sales_manual/ \
+          -a revnumber=$REVISION \
+          -a big-output=$BIG_OUTPUT \
+          -a pdf-theme=ARC \
+          -a pdf-themesdir=documentation/sales_manual/themes \
+          -o DIFFERENCES_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.pdf documentation/sales_manual/index.adoc
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IT-Handbuch_DE
+          path: |
+            documentation/sales_manual/DIFFERENCES_DE_*.pdf
+            documentation/sales_manual/DIFFERENCES_DE_*.html
