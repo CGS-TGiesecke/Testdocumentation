@@ -1,7 +1,7 @@
-ifeval::[{theme} == 'ARC']
+ifeval::[{product} == 'ARC']
 = AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 endif::[]
-ifeval::[{theme} == 'CGS']
+ifeval::[{product} == 'CGS']
 = CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 endif::[]
 :doctype: book
@@ -23,10 +23,10 @@ endif::[]
 //:arc-assist: 1
 //:application: AI Audit Assist
 :application: CGS Assist default, kommt vom run
-:theme: ARC default, kommt vom run
+:product: CGS default, kommt vom run
 :big-output: 0 default, kommt vom run
 
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product} == 'ARC']
  include::chapter/chapter1.adoc[]
 endif::[]
 
