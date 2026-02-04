@@ -9,7 +9,7 @@
 ** hochsensible Prüfungsdaten
 ** regulierte Branchen (Banken, Versicherungen, öffentliche Verwaltung, kritische Infrastrukturen).
 
-*{application}*
+*MS Copilot / ChatGPT*
 
 * Primär Cloud-basierte Services.
 * Datenverarbeitung findet in den Rechenzentren der Anbieter statt.
@@ -22,10 +22,8 @@ endif::arc-assist[]
 ifdef::cgs-assist[]
  z.B. den Mittelstand
 endif::cgs-assist[]
-, ohne die Datenhoheit aus der Hand zu geben.
+, ohne die Datenhoheit aus der Hand zu geben.#
 
-
-ARC AI Assist ermöglicht  in der Internen Revision
 
 
 

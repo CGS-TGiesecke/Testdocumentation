@@ -3,6 +3,7 @@
 *{application}*
 
 Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Internen Revision:
+
 * *Nutzer- und Rollenmanagement*
 ** Anlage von Usern und Zuweisung von Rollen.
 ** Rollenbasiertes Zugriffsmodell auf RAG-Ordner und Funktionen.
@@ -25,7 +26,7 @@ Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Intern
 * *Lizenzverwaltung*
 * Einpflegen der Lizenzen via Lizenz-File.
 
-*{application}*
+*MS Copilot / ChatGPT*
 
 * Admin-Funktionalitäten vorhanden, aber:
 ** nicht spezifisch auf Revisionsprozesse, RAG-Ordner und revisionsspezifische Rollenmodelle zugeschnitten.

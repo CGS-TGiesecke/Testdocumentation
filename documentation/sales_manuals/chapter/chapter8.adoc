@@ -12,6 +12,7 @@
 ** Fachliches Wissen wird einmal zentral eingearbeitet statt in jedem Unternehmen getrennt.
 
 *MS Copilot / ChatGPT*
+
 * Jede Abteilung muss:
 ** Use Cases fachlich definieren
 ** selbst in Prompts / Automatisierungen übersetzen

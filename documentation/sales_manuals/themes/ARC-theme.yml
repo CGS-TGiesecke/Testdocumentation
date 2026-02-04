@@ -80,7 +80,7 @@ image-caption:
   
 role: # geht so nur in pdf
   highlight:
-    font_color: 'ffffff'   # weiss, Hex-Code für die Textfarbe
-    background_color: 'd3d3d3'  # leicht grau als Hintergrund
+    font_color: 'aaaaaa'   # schwarz, Hex-Code für die Textfarbe
+    background_color: 'c3c3c3'  # grau als Hintergrund
 
 

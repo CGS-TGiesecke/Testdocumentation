@@ -16,7 +16,7 @@ Typische Anwendungsszenarien in der Revision:
 * Wiederkehrende Zusammenfassung von neuen Richtlinien/Dokumenten.
 endif::arc-assist[]
 
-*{application}*
+*MS Copilot / ChatGPT*
 
 * In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
 ifdef::cgs-assist[]
