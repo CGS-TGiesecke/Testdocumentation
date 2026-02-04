@@ -11,5 +11,11 @@
 * Störungen beim jeweiligen Plattformanbieter führen unmittelbar zu Ausfällen.
 * Keine integrierte Fallback-Strategie auf andere LLMs.
 
-[.highlight]#*Mehrwert in einem Satz:* {application} erhöht die operative Resilienz der Abteilung 
+[.highlight]#*Mehrwert in einem Satz:* {application} erhöht die operative Resilienz
+ifdef::arc-assist[]
+ der Internen Revision
+endif::arc-assist[] 
+ifdef::cgs-assist[]
+ des Unternehmens
+endif::cgs-assist[] 
 gegenüber Störungen bei einzelnen KI-Anbietern.#

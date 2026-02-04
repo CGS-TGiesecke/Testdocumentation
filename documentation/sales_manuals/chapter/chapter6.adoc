@@ -15,6 +15,7 @@ Vorteil:
 *RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
 
 *MS Copilot / ChatGPT*
+
 * Keine integrierte RAG-DMS-Oberfläche für unternehmensspezifische Dokumentlandschaften.
 * Einbindung von Unternehmensdokumenten ist möglich, aber:
 ** weniger granular steuerbar

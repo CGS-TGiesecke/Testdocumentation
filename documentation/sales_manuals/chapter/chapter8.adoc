@@ -3,7 +3,7 @@
 *{application}*
 
 * Entwicklung, Pflege und Optimierung der Use Cases erfolgt zentral durch das {author}.
-* unden müssen:
+* Kunden müssen:
 ** keine eigenen Entwickler beschäftigen, um KI-Use-Cases zu implementieren
 ** keine eigene Prompt-Bibliothek aufbauen und pflegen
 ** nicht permanent auf Model-Updates, geänderte APIs oder neue fachliche Anforderungen reagieren.
@@ -23,5 +23,11 @@
 ** Abhängigkeiten von einzelnen Key-Usern
 ** hohe Varianz der Ergebnisqualität.
 
-[.highlight]#*Mehrwert in einem Satz:* {application} „industrialisiert“ Use-Cases, sodass jede Revision von zentral entwickelter 
-und gepflegter KI-Expertise profitieren kann, statt selbst Entwickler und Prompt-Spezialisten aufzubauen.#
+[.highlight]#*Mehrwert in einem Satz:* {application} „industrialisiert“ Use-Cases, sodass
+ifdef::arc-assist[]
+ jede Revision
+endif::arc-assist[] 
+ifdef::cgs-assist[]
+ jedes Unternehmen
+endif::cgs-assist[]
+ von zentral entwickelter und gepflegter KI-Expertise profitieren kann, statt selbst Entwickler und Prompt-Spezialisten aufzubauen.#
