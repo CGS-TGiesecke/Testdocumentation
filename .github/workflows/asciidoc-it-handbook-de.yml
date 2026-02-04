@@ -24,7 +24,7 @@ on:
 
 env:
   REVISION: 1.3.1
-  BIG_OUTPUT: 1
+  BIG_OUTPUT: 0
   
 jobs:
   test:
@@ -60,7 +60,7 @@ jobs:
           -D documentation/it_manual/ \
           -a revnumber=$REVISION \
           -a big-output=$BIG_OUTPUT \
-          -a pdf-theme=CGS \
+          -a pdf-theme=ARC \
           -a pdf-themesdir=documentation/it_manual/themes \
           -o IT_Handbuch_DE_Typ_${BIG_OUTPUT}_Version_${REVISION}.pdf documentation/it_manual/index.adoc
 
