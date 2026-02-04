@@ -19,8 +19,8 @@ on:
         default: 'CGS'
         type: choice
         options:
-          - CGS
-          - ARC
+          - 'CGS'
+          - 'ARC'
       outputType:
         description: 'Asciidoctor Output type'
         required: true
@@ -40,16 +40,16 @@ on:
         default: 'CGS Assist'
         type: choice
         options:
-          - CGS Assist
-          - AI Audit Assist
+          - 'CGS Assist'
+          - 'AI Audit Assist'
       author:
         description: 'Asciidoctor PDF author'
         required: true
         default: 'CGS Software and Data'
         type: choice
         options:
-          - CGS Software and Data
-          - AI Audit Institut
+          - 'CGS Software and Data'
+          - 'AI Audit Institut'
           
 
 jobs:
@@ -97,7 +97,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE_${{ github.event.inputs.outputType }}
+          name: DIFFERENCES_DE
           path: |
             documentation/sales_manuals/DIFFERENCES_DE_*.pdf
             documentation/sales_manuals/DIFFERENCES_DE_*.html
