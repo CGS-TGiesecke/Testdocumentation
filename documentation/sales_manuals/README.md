@@ -25,5 +25,3 @@ All technical and organizational topics and requirements from "IT_REQUIREMENTS_A
 
 
 
-
-
