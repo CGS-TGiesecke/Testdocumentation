@@ -10,7 +10,7 @@ ifdef::arc-assist[]
 |Fokus auf Interne Revision |Ja, durchgängig |Nein, nur generische Funktionen |Nein, nur generische Funktionen
 |Fachlich kuratierte Use Cases| Ja, durch {author} |Nein |Nein
 |Unterstützung des gesamten Revisionszyklus |Ja (Risikobewertung bis Maßnahmenverfolgung) |Nur indirekt über Nutzer-Prompts |Nur indirekt über Nutzer-Prompts
-|==
+|===
 endif::arc-assist[]
 
 ===== LLM-Auswahl & Herstellerunabhängigkeit
