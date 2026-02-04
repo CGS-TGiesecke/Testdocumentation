@@ -1,4 +1,4 @@
-=== Tabellarische Gegenüberstellung
+=== Tabellarische Gegenüberstellung ({application}, MS Copilot, ChatGPT (Standalone))
 
 ifdef::arc-assist[]
 ===== Strategische Ausrichtung & fachlicher Fokus
