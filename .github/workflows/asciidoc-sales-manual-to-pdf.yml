@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: List files to check if documentation/sales_manuals/index.adoc exists
-        run: ls -l documentation/sales_manuals_manual/
+        run: ls -l documentation/sales_manuals/
 
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
