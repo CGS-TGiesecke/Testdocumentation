@@ -1,0 +1,33 @@
+=== Fachlicher Fokus: Spezialisierung auf Interne Revision
+
+*{application}:*
+
+- Speziell für die Interne Revision entwickelt – kein generisches KI-Tool.
+- Umfassender Katalog vordefinierter, fachlich geprüfter Use Cases entlang des gesamten Revisionsprozesses:
+
+-- Risikobewertung
+-- Prüfungsplanung
+-- Prüfungsvorbereitung
+-- Prüfungsdurchführung
+-- Berichtserstellung
+-- Maßnahmenverfolgung
+
+- Fachinhalte stammen vom {author} (Audit Research Center, Dr. Förschler) mit ausgewiesener Revisionsexpertise.
+- Use Cases können aufeinander aufbauen und den Prüfungsprozess schrittweise strukturieren (prozessuale „Leitplanke“).
+
+*MS Copilot / ChatGPT*
+
+- Generische, nicht auf Interne Revision zugeschnittene Tools.
+- Fachliche Use Cases müssen von der Internen Revision selbst:
+
+-- konzipiert
+-- in Prompts oder Automationen umgesetzt
+-- getestet
+-- laufend an neue Regularien, Standards und Best Practices angepasst werden.
+
+- Höheres Risiko inkonsistenter Qualität und fachlicher Lücken.
+
+```
+*Mehrwert in einem Satz:* {application} liefert sofort einsetzbare, revisionsspezifische Best-Practice-Use-Cases – statt 
+dass jede Revision KI-Anwendungsfälle selbst erfinden und pflegen muss.
+```

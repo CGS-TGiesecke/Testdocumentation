@@ -1,0 +1,36 @@
+=== Herstellerunabhängigkeit und LLM-Flexibilität
+
+*{application}:*
+
+- Integration unterschiedlicher LLMs über APIs:
+
+-- OpenAI-Modelle via Azure AI Foundry
+-- Modelle über AWS Bedrock
+-- selbst gehostete Open-Source-Modelle (z.B. europäische Modelle wie Mistral).
+
+- Freie Wahl und Wechsel der Modelle:
+
+-- Anpassung an fachliche Anforderungen (z.B. Zusammenfassung vs. komplexe Analysen).
+-- Möglichkeit, geopolitische Risiken zu reduzieren (z.B. Wechsel auf europäische Modelle).
+-- Zukunftssicherheit: heute nicht absehbar, welches Modell in 2 Jahren führend ist – Sie bleiben flexibel.
+
+- Ausfallsicherheit: Bei Störungen eines LLM-Anbieters kann kurzfristig auf ein anderes Modell umgestellt werden.
+
+*MS Copilot / ChatGPT:*
+
+- Starke Bindung an den jeweiligen Hersteller und dessen Cloud-Stack.
+- Im Falle von Ausfällen (z.B. OpenAI / Azure-Störungen) ist das jeweilige Tool nicht nutzbar.
+- Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
+
+```
+*Mehrwert in einem Satz:* {application} macht
+ifdef::arc-assist[]
+ die Interne Revision
+endif::arc-assist[] 
+ifdef::cgs-assist[]
+ z.B. den Mittelstand
+endif::cgs-assist[]
+ unabhängig von einem einzelnen KI-Anbieter und 
+erhöht sowohl Ausfallsicherheit als auch strategische Flexibilität.
+```
+
