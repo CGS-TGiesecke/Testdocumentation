@@ -12,14 +12,6 @@ on:
           - info
           - warning
           - debug
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: false
       pdfTheme:
         description: 'Asciidoctor PDF Theme'
         required: true
@@ -28,10 +20,17 @@ on:
         options:
           - CGS
           - ARC
+      outputType:
+        description: 'Asciidoctor Output type'
+        required: true
+        default: '0'
+        type: choice
+        options:
+          - 0
+          - 1
 
 env:
   REVISION: 1.3.1
-  BIG_OUTPUT: 1
 
 jobs:
   test:
@@ -66,7 +65,7 @@ jobs:
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
           -a revnumber=${{ env.REVISION }} \
-          -a big-output=${{ env.BIG_OUTPUT }} \
+          -a big-output=${{ github.event.inputs.outputType }}  \
           -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVISION }}.pdf documentation/sales_manuals/index.adoc
