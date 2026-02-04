@@ -1,6 +1,6 @@
 === Herstellerunabhängigkeit und LLM-Flexibilität
 
-*{application}:*
+*{application}*
 
 * Integration unterschiedlicher LLMs über APIs:
 ** OpenAI-Modelle via Azure AI Foundry

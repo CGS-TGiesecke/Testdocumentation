@@ -1,6 +1,6 @@
 === Fachlicher Fokus: Spezialisierung auf Interne Revision
 
-*{application}:*
+*{application}*
 
 * Speziell für die Interne Revision entwickelt – kein generisches KI-Tool.
 * Umfassender Katalog vordefinierter, fachlich geprüfter Use Cases entlang des gesamten Revisionsprozesses:

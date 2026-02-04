@@ -1,0 +1,31 @@
+=== On-Premise-Betrieb und Datenhoheit
+
+*{application}*
+
+* Applikation läuft beim Kunden on-premise.
+* Alle Daten bleiben in der Infrastruktur des Kunden.
+* Nur die für eine konkrete Anfrage benötigten Inhalte werden an das konfigurierte LLM übergeben und ggf. kurzzeitig zwischengespeichert.
+* Besonders geeignet für:
+** hochsensible Prüfungsdaten
+** regulierte Branchen (Banken, Versicherungen, öffentliche Verwaltung, kritische Infrastrukturen).
+
+*{application}*
+
+* Primär Cloud-basierte Services.
+* Datenverarbeitung findet in den Rechenzentren der Anbieter statt.
+* Abhängigkeit von deren Sicherheits-, Compliance- und Datenverarbeitungsmodellen.
+
+[.highlight]#*Mehrwert in einem Satz:* {application} ermöglicht KI-Unterstützung
+ifdef::arc-assist[]
+ die Interne Revision
+endif::arc-assist[] 
+ifdef::cgs-assist[]
+ z.B. den Mittelstand
+endif::cgs-assist[]
+, ohne die Datenhoheit aus der Hand zu geben.
+
+
+ARC AI Assist ermöglicht  in der Internen Revision
+
+
+

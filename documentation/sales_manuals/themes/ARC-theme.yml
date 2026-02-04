@@ -78,9 +78,9 @@ image-caption:
   margin_top: 4
   margin_bottom: 8
   
-role:
+role: # geht so nur in pdf
   highlight:
-    font_color: 'ff0000'   # Rot, Hex-Code für die Textfarbe
-    background_color: 'ffff00'  # Gelb als Hintergrund
+    font_color: 'ffffff'   # weiss, Hex-Code für die Textfarbe
+    background_color: 'd3d3d3'  # leicht grau als Hintergrund
 
 

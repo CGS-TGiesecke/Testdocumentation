@@ -1,0 +1,36 @@
+=== Zentrale Administration, Rollen, Sicherheit & Governance
+
+*{application}*
+
+Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Internen Revision:
+* *Nutzer- und Rollenmanagement*
+** Anlage von Usern und Zuweisung von Rollen.
+** Rollenbasiertes Zugriffsmodell auf RAG-Ordner und Funktionen.
+** Nutzer ohne entsprechende Rolle können weder im RAG noch im Chat Inhalte bestimmter Ordner sehen.
+* *RAG-Strukturverwaltung*
+** Pflege der RAG-Ordner inkl. Zuordnung von Rollen.
+* *Systemprompts zentral verwaltet*
+** Zentrale Pflege der Systemprompts für Standard-Use-Cases.
+** Sicherstellung einer konsistenten „KI-Governance“ (einheitliche Tonalität, Prüflogik, Dokumentationsstandards).
+* *KI-Provider- und Modellkonfiguration*
+** Hinterlegung der API-Keys der verschiedenen Provider (Azure, AWS, Open Source etc.).
+** Auswahl und Verwaltung der verfügbaren LLMs.
+* *Use-Case-Management*
+** Aktivierung/Deaktivierung einzelner Use Cases oder ganzer Cluster per Toggle-Switch.
+** Konfiguration je Use Case:
+*** Default-LLM
+*** Status als automatisierter Use Case (Agent) oder manueller Use Case
+*** Rollen, die den Use Case nutzen dürfen
+*** Statistik/Bewertung (Sterne).
+* *Lizenzverwaltung*
+* Einpflegen der Lizenzen via Lizenz-File.
+
+*{application}*
+
+* Admin-Funktionalitäten vorhanden, aber:
+** nicht spezifisch auf Revisionsprozesse, RAG-Ordner und revisionsspezifische Rollenmodelle zugeschnitten.
+** keine zentrale, fachlich kuratierte Systemprompt-Bibliothek für Revisions-Use-Cases.
+** kein dediziertes Use-Case-Lifecycle-Management (Aktivierung, Bewertung, Rollensteuerung).
+
+[.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau zur Internen Revision passt – 
+inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#

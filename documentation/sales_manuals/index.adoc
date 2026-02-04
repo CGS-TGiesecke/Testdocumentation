@@ -28,20 +28,29 @@ endif::arc-assist[]
 
 include::chapter/chapter2.adoc[]
 
-//include::chapter/chapter3.adoc[]
+include::chapter/chapter3.adoc[]
 
-//ifeval::[{big-output} == 1]
-//include::chapter/chapter4-o.adoc[]
-//endif::[]
+include::chapter/chapter4.adoc[]
 
-//include::chapter/chapter5.adoc[]
+include::chapter/chapter5.adoc[]
 
-//include::chapter/chapter6.adoc[]
+include::chapter/chapter6.adoc[]
 
+include::chapter/chapter7.adoc[]
+
+include::chapter/chapter8.adoc[]
+
+include::chapter/chapter9.adoc[]
+
+include::chapter/chapter10.adoc[]
 
 <<<
 
 include::chapter/disclaimer.adoc[]
+
+//ifeval::[{big-output} == 1]
+//include::chapter/chapter4-o.adoc[]
+//endif::[]
 
 
 
