@@ -69,7 +69,8 @@ jobs:
         
       - name: Print AsciiDoc attributes
         run: |
-          echo "product: ${{ github.event.inputs.pdfTheme }}"
+          echo "product-arc: ${{ github.event.inputs.product-arc }}"
+          echo "product-cgs: ${{ github.event.inputs.product-cgs }}"
 
   pages:
     runs-on: ubuntu-latest
