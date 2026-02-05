@@ -15,11 +15,12 @@
 :sectnumlevels: 15
 :cgs-assist: 1
 :application: {application}
-:product-theme: {product-theme}
+:arc-assist: {arc-assist}
+:cgs-assist: {cgs-assist}
 :big-output: {big-output}
 
 // -- Dynamisches Kapitel je nach Theme (ARC oder CGS) --
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
 include::chapter/chapter1.adoc[]
 endif::[]
 

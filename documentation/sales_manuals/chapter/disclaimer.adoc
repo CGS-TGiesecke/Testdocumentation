@@ -1,8 +1,8 @@
-ifeval::[{product-theme} == 'CGS']
+ifdef::cgs-assist[]
 image::../themes/cgs-logo.png[Firmenlogo,align=left]
 endif::[]
 
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
 image::../themes/arc_logo_gross.png[Firmenlogo,align=left]
 endif::[]
 
@@ -10,13 +10,13 @@ endif::[]
 
 === Kontakt
 
-ifeval::[{product-theme} == 'CGS']
+ifdef::cgs-assist[]
 
 include::../../export-styles/cgs-disclaimer.adoc[] 
 
 endif::[]	
 
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
 
 include::../../export-styles/arc-disclaimer.adoc[] 
 

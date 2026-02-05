@@ -1,9 +1,9 @@
 === Strukturierte Benutzeroberfläche statt „Prompting-Kunst“
 
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
 ==== AI Chat – flexibler Expertenmodus
 endif::[]
-ifeval::[{product-theme} == 'CGS']
+ifdef::cgs-assist[]
 ==== KI Chat – flexibler Expertenmodus
 endif::[]
 

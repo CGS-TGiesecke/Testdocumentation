@@ -19,10 +19,10 @@ endif::[]
 *MS Copilot / ChatGPT*
 
 * In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
-ifeval::[{product-theme} == 'CGS']
+ifdef::cgs-assist[]
  Aufgaben.
 endif::[]
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
  Revisionsaufgaben.
 endif::[]
 * Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.

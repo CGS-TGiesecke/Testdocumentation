@@ -19,10 +19,10 @@
 * Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} macht
-ifeval::[{product-theme} == 'ARC']
+ifdef::arc-assist[]
  die Interne Revision
 endif::[]
-ifeval::[{product-theme} == 'CGS']
+ifdef::cgs-assist[]
  z.B. den Mittelstand
 endif::[]
  unabhängig von einem einzelnen KI-Anbieter und 
