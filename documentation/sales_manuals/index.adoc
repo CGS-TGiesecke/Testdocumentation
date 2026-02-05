@@ -23,8 +23,6 @@
 :pdf-theme: 
 :big-output: 0 default, kommt vom run
 
-ifdef::arc-assist[]
-
 ifeval::[{pdf-theme} == 'ARC']
 include::chapter/chapter1.adoc[]
 endif::[]
