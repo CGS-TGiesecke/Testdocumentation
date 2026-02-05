@@ -32,26 +32,26 @@ on:
       productCgs:
         description: 'Asciidoctor product-cgs'
         required: true
-        default: ' '
+        default: ''
         type: choice
         options:
           - 1
-          - ' '
+          - ''
       productArc:
         description: 'Asciidoctor product-arc'
         required: true
-        default: ' '
+        default: ''
         type: choice
         options:
           - 1
-          - ' '
+          - ''
       version:
         description: 'Asciidoctor PDF Version'
         required: true
         default: '1.0.0'
         type: string
           
-
+          
 jobs:
   test:
     runs-on: ubuntu-latest
