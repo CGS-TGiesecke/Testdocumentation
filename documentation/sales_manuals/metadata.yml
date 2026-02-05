@@ -1,6 +1,32 @@
-title: Sales Manual 2024
-author: Max Mustermann
-date: 2024-06-06
-subtitle: Leitfaden für das Vertriebsteam
+title: >
+  "{product}" == "ARC" ?
+    "AI Audit Assist:" :
+  "{product}" == "CGS" ?
+    "CGS Assist:" :
+    "Sales Manual 2024"
+author: >
+  "{product}" == "ARC" ? "AI Audit Institut" :
+  "{product}" == "CGS" ? "CGS Software and Data" :
+    "Max Mustermann"
+application: CGS Assist
+date: 2026-02-02
+revnumber: "0"
+doctype: book
 company: Example AG
 lang: de
+toc: left
+toc_interactive: true
+toc_mode: offcanvas
+toc_mode_responsive: true
+toc_title: Inhaltsverzeichnis
+toclevels: 15
+sectnums: true
+sectnumlevels: 15
+figure_caption: Abbildung
+imagesdir: image
+big_output: "0"
+subtitle: 
+  "{product}" == "ARC" ?
+    "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
+  "{product}" == "CGS" ?
+    "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
