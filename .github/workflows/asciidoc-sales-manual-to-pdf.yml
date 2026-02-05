@@ -51,7 +51,7 @@ jobs:
         run: asciidoctor documentation/sales_manuals/index.adoc
         
       - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
+        run: apt-get update && apt-get install -y pandoc
 
       - name: Convert .adoc to .docx with YAML 
         run: |
