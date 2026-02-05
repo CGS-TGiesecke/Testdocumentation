@@ -141,6 +141,6 @@ jobs:
         with:
           name: IT-HANDBUCH_DE
           path: |
-            documentation/sales_manuals/${{ env.FILENAME }}*.pdf
-            documentation/sales_manuals/${{ env.FILENAME }}*.html
-            documentation/sales_manuals/${{ env.FILENAME }}*.docx
+            documentation/it_manual/${{ env.FILENAME }}*.pdf
+            documentation/it_manual/${{ env.FILENAME }}*.html
+            documentation/it_manual/${{ env.FILENAME }}*.docx
