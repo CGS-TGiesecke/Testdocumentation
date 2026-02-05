@@ -1,14 +1,13 @@
-ifeval::[{product} == ARC]
-= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
-endif::[]
-ifeval::[{product} == CGS]
+
+//= AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 = CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
-endif::[]
 :doctype: book
+//:author: AI Audit Institut
+:author: CGS Software and Data default, kommt vom run
 :revdate: 02.02.2026
 :revnumber: 0 default, kommt vom run
 :toc: left
-:toc-interactive: true
+:toc-interactive: true // in pdf the active section will be highlighted
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
@@ -17,20 +16,16 @@ endif::[]
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 15
-:product:
+:cgs-assist: 1
+//:arc-assist: 1
+//:application: AI Audit Assist
+:application: CGS Assist default, kommt vom run
+:pdf-theme: CGS default, kommt vom run
+:big-output: 0 default, kommt vom run
 
-ifeval::[{product} == ARC]
-:author: AI Audit Institut
-:application: CGS Assist
-endif::[]
-ifeval::[{product} == CGS]
-:author: CGS Software and Data
-:application: CGS Assist
-endif::[]
+ifdef::arc-assist[]
 
-:big-output: 0 default, fefined if chapters exclude 0=yes 1 = no
-
-ifeval::[{product} == ARC]
+ifeval::[{pdf-theme} == 'ARC']
 include::chapter/chapter1.adoc[]
 endif::[]
 
@@ -60,9 +55,3 @@ endif::[]
 <<<
 
 include::chapter/disclaimer.adoc[]
-
-
-
-
-
-

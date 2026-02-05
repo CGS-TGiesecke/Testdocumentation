@@ -1,4 +1,3 @@
-
 name: Asciidoctor Build DIFFERENCES de
 
 on:
@@ -19,8 +18,8 @@ on:
         default: 'CGS'
         type: choice
         options:
-          - 'CGS'
-          - 'ARC'
+          - CGS
+          - ARC
       outputType:
         description: 'Asciidoctor Output type'
         required: true
@@ -34,6 +33,22 @@ on:
         required: true
         default: '1.0.0'
         type: string
+      application:
+        description: 'Asciidoctor PDF Application name'
+        required: true
+        default: 'CGS Assist'
+        type: choice
+        options:
+          - CGS Assist
+          - AI Audit Assist
+      author:
+        description: 'Asciidoctor PDF author'
+        required: true
+        default: 'CGS Software and Data'
+        type: choice
+        options:
+          - CGS Software and Data
+          - AI Audit Institut
           
 
 jobs:
@@ -50,10 +65,6 @@ jobs:
 
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
-        
-      - name: Print AsciiDoc attributes
-        run: |
-          echo "product: ${{ github.event.inputs.pdfTheme }}"
 
   pages:
     runs-on: ubuntu-latest
@@ -67,23 +78,25 @@ jobs:
         run: |
           asciidoctor \
           -D documentation/sales_manuals/ \
-          -a revnumber="${{ github.event.inputs.version }}" \
-          -a big-output="${{ github.event.inputs.outputType }}" \
-          -a product="${{ github.event.inputs.pdfTheme }}" \
+          -a revnumber=${{ github.event.inputs.version }} \
+          -a big-output=${{ github.event.inputs.outputType }} \
+          -a application=${{ github.event.inputs.application }} \
+          -a author=${{ github.event.inputs.author }} \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
-          -a revnumber="${{ github.event.inputs.version }}" \
-          -a big-output="${{ github.event.inputs.outputType }}" \
-          -a product="${{ github.event.inputs.pdfTheme }}" \
-          -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+          -a revnumber=${{ github.event.inputs.version }} \
+          -a big-output=${{ github.event.inputs.outputType }}  \
+          -a application=${{ github.event.inputs.application }} \
+          -a author=${{ github.event.inputs.author }} \
+          -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE
+          name: DIFFERENCES_DE_${{ github.event.inputs.outputType }}
           path: |
             documentation/sales_manuals/DIFFERENCES_DE_*.pdf
             documentation/sales_manuals/DIFFERENCES_DE_*.html
