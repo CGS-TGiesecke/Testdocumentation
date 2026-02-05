@@ -1,5 +1,5 @@
 
-name: Asciidoctor Build IT-Handbook de
+name: Asciidoctor Build IT-Handbook de html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -34,50 +34,113 @@ on:
         required: true
         default: '1.0.0'
         type: string
+      application:
+        description: 'Asciidoctor PDF Application name'
+        required: true
+        default: 'CGS Assist'
+        type: choice
+        options:
+          - CGS Assist
+          - AI Audit Assist
+      author:
+        description: 'Asciidoctor PDF author'
+        required: true
+        default: 'CGS Software and Data'
+        type: choice
+        options:
+          - CGS Software and Data
+          - AI Audit Institut
   
+env:
+  DATE: '2026-02-02'
+  COMPANY: 'Example AG'
+  FILENAME: 'IT_HANDBUCH_DE_'
+
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    container:
-      image: asciidoctor/docker-asciidoctor:latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: List files to check if documentation/it_manual/index.adoc exists
-        run: ls -l documentation/it_manual/
-
-      - name: Run asciidoctor on index.adoc
-        run: asciidoctor documentation/it_manual/index.adoc
-            
-  pages:
-    runs-on: ubuntu-latest
-    container:
-      image: asciidoctor/docker-asciidoctor:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build HTML and PDF docs
+      - name: Install Asciidoctor & Asciidoctor-pdf
+        run: |
+          sudo gem install asciidoctor asciidoctor-pdf
+
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2'
+
+      - name: Install envsubst (gettext)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: Define metadata variables
+        run: |
+          # Setze Titel/Autor/Anwendung dynamisch
+          if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
+            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbuch" >> $GITHUB_ENV
+            echo "ARC-ASSIST=1" >> $GITHUB_ENV
+            echo "CGS-ASSIST=0" >> $GITHUB_ENV
+          else
+            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - IT-Handbuch" >> $GITHUB_ENV
+            echo "ARC-ASSIST=0" >> $GITHUB_ENV
+            echo "CGS-ASSIST=1" >> $GITHUB_ENV
+          fi
+          echo "AUTHOR=${{ github.event.inputs.author }}" >> $GITHUB_ENV
+          echo "APPLICATION=${{ github.event.inputs.application }}" >> $GITHUB_ENV
+          echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
+          # COMPANY und DATE aus env
+
+      - name: Fill metadata template
+        run: |
+          envsubst < documentation/it_manual/metadata.yml.tpl > documentation/it_manual/metadata.yml
+
+      - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
-          -D documentation/it_manual/ \
-          -a revnumber=${{ github.event.inputs.version }} \
-          -a big-output=${{ github.event.inputs.outputType }} \
-          -o IT-Handbuch_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/it_manual/index.adoc
+            -D documentation/it_manual/ \
+            -a product_title="${{ env.PRODUCT_TITLE }}" \
+            -a revnumber="${{ env.REVNUMBER }}" \
+            -a application="${{ env.APPLICATION }}" \
+            -a author="${{ env.AUTHOR }}" \
+            -a big-output="${{ env.BIG_OUTPUT }}" \
+            -a company="${{ env.COMPANY }}" \
+            -a date="${{ env.DATE }}" \
+            -a cgs-assist="${{ env.CGS-ASSIST }}" \
+            -a arc-assist="${{ env.ARC-ASSIST }}" \
+            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html documentation/it_manual/index.adoc
+
+      - name: Build PDF with Asciidoctor-pdf
+        run: |
           asciidoctor-pdf \
-          -D documentation/it_manual/ \
-          -a revnumber=${{ github.event.inputs.version }} \
-          -a big-output=${{ github.event.inputs.outputType }} \
-          -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
-          -a pdf-themesdir=documentation/it_manual/themes \
-          -o IT_Handbuch_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/it_manual/index.adoc
+           -D documentation/it_manual/ \
+           -a product_title="${{ env.PRODUCT_TITLE }}" \
+           -a revnumber="${{ env.REVNUMBER }}" \
+           -a application="${{ env.APPLICATION }}" \
+           -a author="${{ env.AUTHOR }}" \
+           -a big-output="${{ env.BIG_OUTPUT }}" \
+           -a company="${{ env.COMPANY }}" \
+           -a date="${{ env.DATE }}" \
+           -a cgs-assist="${{ env.CGS-ASSIST }}" \
+           -a arc-assist="${{ env.ARC-ASSIST }}" \
+           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+           -a pdf-themesdir=documentation/it_manual/themes \
+           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/it_manual/index.adoc
+
+      - name: Build DOCX with Pandoc
+        run: |
+          pandoc documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html \
+            --metadata-file=documentation/it_manual/metadata.yml \
+            -o documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-Handbuch_DE
+          name: IT-HANDBUCH_DE
           path: |
-            documentation/it_manual/IT_Handbuch_DE_*.pdf
-            documentation/it_manual/IT-Handbuch_DE_*.html
-
+            documentation/sales_manuals/${{ env.FILENAME }}*.pdf
+            documentation/sales_manuals/${{ env.FILENAME }}*.html
+            documentation/sales_manuals/${{ env.FILENAME }}*.docx
