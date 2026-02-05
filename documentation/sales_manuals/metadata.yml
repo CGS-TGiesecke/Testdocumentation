@@ -17,5 +17,5 @@ sectnumlevels: 15
 figure_caption: Abbildung
 imagesdir: image
 big_output: "{{BIG_OUTPUT}}"
-subtitle: Leitfaden für das Vertriebsteam
+subtitle: 
 

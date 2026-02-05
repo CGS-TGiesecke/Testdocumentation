@@ -1,4 +1,3 @@
-//= CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 = {product_title}
 :doctype: book
 :author: CGS Software and Data
