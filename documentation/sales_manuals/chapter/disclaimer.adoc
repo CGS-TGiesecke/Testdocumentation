@@ -1,8 +1,8 @@
-ifdef::cgs-assist[]
+ifeval::[{arc-assist} == 1]
 image::../themes/cgs-logo.png[Firmenlogo,align=left]
 endif::[]
 
-ifdef::arc-assist[]
+ifeval::[{cgs-assist} == 1]
 image::../themes/arc_logo_gross.png[Firmenlogo,align=left]
 endif::[]
 
@@ -10,10 +10,10 @@ endif::[]
 
 === Kontakt
 
-ifdef::cgs-assist[]
+ifeval::[{arc-assist} == 1]
 include::../../export-styles/cgs-disclaimer.adoc[] 
 endif::[]	
 
-ifdef::arc-assist[]
+ifeval::[{cgs-assist} == 1]
 include::../../export-styles/arc-disclaimer.adoc[] 
 endif::[]	

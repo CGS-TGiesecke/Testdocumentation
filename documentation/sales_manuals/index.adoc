@@ -19,7 +19,7 @@
 :big-output: {big-output}
 
 // -- Dynamisches Kapitel je nach Theme (ARC oder CGS) --
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 include::chapter/chapter1.adoc[]
 endif::[]
 
