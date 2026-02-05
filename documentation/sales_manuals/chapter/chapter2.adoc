@@ -19,7 +19,6 @@
 * Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} macht
-endif::cgs-assist[]
 ifeval::[{pdf-theme} == 'ARC']
  die Interne Revision
 endif::[]
