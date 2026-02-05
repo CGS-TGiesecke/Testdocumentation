@@ -82,15 +82,15 @@ jobs:
           -D documentation/sales_manuals/ \
           -a revnumber=${{ github.event.inputs.version }} \
           -a big-output=${{ github.event.inputs.outputType }} \
-          -a application=${{ github.event.inputs.application }} \
-          -a author=${{ github.event.inputs.author }} \
+          -a application="${{ github.event.inputs.application }}" \
+          -a author="${{ github.event.inputs.author }}" \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
           -a revnumber=${{ github.event.inputs.version }} \
           -a big-output=${{ github.event.inputs.outputType }}  \
-          -a application=${{ github.event.inputs.application }} \
-          -a author=${{ github.event.inputs.author }} \
+          -a application="${{ github.event.inputs.application }}" \
+          -a author="${{ github.event.inputs.author }}" \\
           -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
