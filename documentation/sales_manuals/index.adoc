@@ -13,7 +13,6 @@
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 15
-:cgs-assist: 1
 :application: {application}
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}

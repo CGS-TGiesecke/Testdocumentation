@@ -78,12 +78,12 @@ jobs:
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
-            echo "ARC-ASSIST=1 >> $GITHUB_ENV
-            echo "CGS-ASSIST= >> $GITHUB_ENV
+            echo "ARC-ASSIST=1" >> $GITHUB_ENV
+            echo "CGS-ASSIST= " >> $GITHUB_ENV
           else
             echo "PRODUCT_TITLE=CGS Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
-            echo "ARC-ASSIST= >> $GITHUB_ENV
-            echo "CGS-ASSIST=1 >> $GITHUB_ENV
+            echo "ARC-ASSIST= " >> $GITHUB_ENV
+            echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
           echo "AUTHOR=${{ github.event.inputs.author }}" >> $GITHUB_ENV
           echo "APPLICATION=${{ github.event.inputs.application }}" >> $GITHUB_ENV
@@ -114,19 +114,19 @@ jobs:
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-            -D documentation/sales_manuals/ \
-            -a product_title="${{ env.PRODUCT_TITLE }}" \
-            -a revnumber="${{ env.REVNUMBER }}" \
-            -a application="${{ env.APPLICATION }}" \
-            -a author="${{ env.AUTHOR }}" \
-            -a big-output="${{ env.BIG_OUTPUT }}" \
-            -a company="${{ env.COMPANY }}" \
-            -a date="${{ env.DATE }}" \
-            -a cgs-assist="${{ env.CGS-ASSIST }}" \
-            -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ env.APPLICATION }}" \ 
-            -a pdf-themesdir=documentation/sales_manuals/themes \
-            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
+           -D documentation/sales_manuals/ \
+           -a product_title="${{ env.PRODUCT_TITLE }}" \
+           -a revnumber="${{ env.REVNUMBER }}" \
+           -a application="${{ env.APPLICATION }}" \
+           -a author="${{ env.AUTHOR }}" \
+           -a big-output="${{ env.BIG_OUTPUT }}" \
+           -a company="${{ env.COMPANY }}" \
+           -a date="${{ env.DATE }}" \
+           -a cgs-assist="${{ env.CGS-ASSIST }}" \
+           -a arc-assist="${{ env.ARC-ASSIST }}" \
+           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+           -a pdf-themesdir=documentation/sales_manuals/themes \
+           -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |

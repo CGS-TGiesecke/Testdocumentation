@@ -11,13 +11,9 @@ endif::[]
 === Kontakt
 
 ifdef::cgs-assist[]
-
 include::../../export-styles/cgs-disclaimer.adoc[] 
-
 endif::[]	
 
 ifdef::arc-assist[]
-
 include::../../export-styles/arc-disclaimer.adoc[] 
-
 endif::[]	
