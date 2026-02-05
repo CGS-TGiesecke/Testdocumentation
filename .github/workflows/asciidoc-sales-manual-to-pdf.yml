@@ -53,11 +53,11 @@ jobs:
       - name: Install pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
-    - name: Convert .adoc to .docx with YAML 
-      run: |
-        pandoc documentation/sales_manuals/index.adoc \
-        --metadata-file=documentation/sales_manuals/themes \
-        -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
+      - name: Convert .adoc to .docx with YAML 
+        run: |
+          pandoc documentation/sales_manuals/index.adoc \
+          --metadata-file=documentation/sales_manuals/themes \
+          -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
 
   pages:
     runs-on: ubuntu-latest
