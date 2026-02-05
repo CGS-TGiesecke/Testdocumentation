@@ -32,19 +32,19 @@ on:
       product-cgs:
         description: 'Asciidoctor product-cgs'
         required: true
-        default: '0'
+        default: ''
         type: choice
         options:
-          - 1
-          - ""
+            - '1'
+          - ''
       product-arc:
         description: 'Asciidoctor product-arc'
         required: true
-        default: '0'
+        default: ''
         type: choice
         options:
-          - 1
-          - ""
+          - '1'
+          - ''
       version:
         description: 'Asciidoctor PDF Version'
         required: true
@@ -69,8 +69,7 @@ jobs:
         
       - name: Print AsciiDoc attributes
         run: |
-          echo "product-arc: ${{ github.event.inputs.product-arc }}"
-          echo "product-cgs: ${{ github.event.inputs.product-cgs }}"
+          echo "product: ${{ github.event.inputs.pdfTheme }}"
 
   pages:
     runs-on: ubuntu-latest
