@@ -67,8 +67,8 @@ jobs:
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
         
-      - name: Print AsciiDoc attributes
-        run: |
+ #     - name: Print AsciiDoc attributes
+#        run: |
  #         echo "productArc: ${{ github.event.inputs.productArc }}"
  #         echo "productCgs: ${{ github.event.inputs.productCgs }}"
 
@@ -86,7 +86,8 @@ jobs:
           -D documentation/sales_manuals/ \
           -a revnumber="${{ github.event.inputs.version }}" \
           -a big-output="${{ github.event.inputs.outputType }}" \
-          -a product="${{ github.event.inputs.pdfTheme }}" \
+          -a product-arc="1" \
+          -a product-cgs="" \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
@@ -94,8 +95,6 @@ jobs:
           -a big-output="${{ github.event.inputs.outputType }}" \
           -a product-arc="1" \
           -a product-cgs="" \
-#          -a product-arc="${{ github.event.inputs.productArc }}" \
- #         -a product-cgs="${{ github.event.inputs.productCgs }}" \
           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
