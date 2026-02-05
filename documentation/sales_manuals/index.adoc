@@ -1,8 +1,12 @@
 ifeval::[{product} == ARC]
 = AI Audit Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+:author: AI Audit Institut
+:application: CGS Assist
 endif::[]
 ifeval::[{product} == CGS]
 = CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+:author: CGS Software and Data
+:application: CGS Assist
 endif::[]
 :doctype: book
 :revdate: 02.02.2026
@@ -19,14 +23,6 @@ endif::[]
 :sectnumlevels: 15
 
 :product: default, comes from run and defined the theme
-ifeval::[{product} == ARC]
-:author: AI Audit Institut
-:application: CGS Assist
-endif::[]
-ifeval::[{product} == CGS]
-:author: CGS Software and Data
-:application: CGS Assist
-endif::[]
 
 :big-output: 0 default, fefined if chapters exclude 0=yes 1 = no
 

@@ -1,0 +1,119 @@
+name: Asciidoctor Build DIFFERENCES de
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      pdfTheme:
+        description: 'Asciidoctor PDF Theme'
+        required: true
+        default: 'CGS'
+        type: choice
+        options:
+          - 'CGS'
+          - 'ARC'
+      outputType:
+        description: 'Asciidoctor Output type'
+        required: true
+        default: '0'
+        type: choice
+        options:
+          - 0
+          - 1
+      version:
+        description: 'Asciidoctor PDF Version'
+        required: true
+        default: '1.0.0'
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Asciidoctor & Asciidoctor-pdf
+        run: |
+          sudo gem install asciidoctor asciidoctor-pdf
+
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2'
+
+      - name: Install envsubst (gettext)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: Define metadata variables
+        run: |
+          # Produktabhängiger Titel/Autor
+          if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
+            echo "PRODUCT_TITLE=AI Audit Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
+            echo "AUTHOR=AI Audit Institut" >> $GITHUB_ENV
+            echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
+          else
+            echo "PRODUCT_TITLE=CGS Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
+            echo "AUTHOR=CGS Software and Data" >> $GITHUB_ENV
+            echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
+          fi
+          echo "DATE=2026-02-02" >> $GITHUB_ENV
+          echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          echo "COMPANY=Example AG" >> $GITHUB_ENV
+          echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
+
+      - name: Fill metadata template
+        run: |
+          envsubst < documentation/sales_manuals/metadata.yml.tpl > documentation/sales_manuals/metadata.yml
+
+      # HTML aus AsciiDoc
+      - name: Build HTML with Asciidoctor
+        run: |
+          asciidoctor \
+            -D documentation/sales_manuals/ \
+            -a revnumber="${{ github.event.inputs.version }}" \
+            -a big-output="${{ github.event.inputs.outputType }}" \
+            -a product="${{ github.event.inputs.pdfTheme }}" \
+            -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
+
+      # PDF aus AsciiDoc
+      - name: Build PDF with Asciidoctor-pdf
+        run: |
+          asciidoctor-pdf \
+            -D documentation/sales_manuals/ \
+            -a revnumber="${{ github.event.inputs.version }}" \
+            -a big-output="${{ github.event.inputs.outputType }}" \
+            -a product="${{ github.event.inputs.pdfTheme }}" \
+            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+            -a pdf-themesdir=documentation/sales_manuals/themes \
+            -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
+
+      # HTML für Pandoc bereitstellen
+      #- name: Build HTML for Pandoc
+       # run: |
+       #   asciidoctor -o documentation/sales_manuals/tmp_for_pandoc.html documentation/sales_manuals/index.adoc
+
+      # DOCX via Pandoc (HTML → DOCX)
+      - name: Build DOCX with Pandoc
+        run: |
+          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html \
+            --metadata-file=documentation/sales_manuals/metadata.yml \
+            -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
+
+      # Upload aller Artefakte (PDF, HTML, DOCX)
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DIFFERENCES_DE
+          path: |
+            documentation/sales_manuals/DIFFERENCES_DE_*.pdf
+            documentation/sales_manuals/DIFFERENCES_DE_*.html
+            documentation/sales_manuals/DIFFERENCES_DE_*.docx
