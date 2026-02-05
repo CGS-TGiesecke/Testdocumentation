@@ -52,8 +52,8 @@ on:
           - AI Audit Institut
   
 env:
-  DATE: '2026-02-02'
-  COMPANY: 'Example AG'
+  DATE: '05.02.2026'
+  COMPANY: 'Example Firma'
   FILENAME: 'IT_HANDBUCH_DE_'
 
 jobs:
