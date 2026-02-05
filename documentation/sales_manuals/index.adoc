@@ -8,7 +8,7 @@ endif::[]
 :revdate: 02.02.2026
 :revnumber: 0 default, kommt vom run
 :toc: left
-:toc-interactive: true // in pdf the active section will be highlighted
+:toc-interactive: true
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
@@ -17,8 +17,6 @@ endif::[]
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 15
-
-:product: default, comes from run and defined the theme
 
 ifeval::[{product} == ARC]
 :author: AI Audit Institut
