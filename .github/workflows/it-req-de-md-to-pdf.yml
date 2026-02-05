@@ -1,4 +1,4 @@
-name: Export DE IT_REQUIREMENTS Markdown to PDF
+name: Export DE IT_REQUIREMENTS Markdown to PDF & DOCX
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ on:
       environment:
         description: 'Environment to run tests against'
         type: environment
-        required: true
+        required: false
 
 jobs:
   convert:
@@ -32,17 +32,25 @@ jobs:
 
       - name: Set up Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
-        
+
       - name: Convert Markdown to HTML with style
         run: |
-          pandoc documentation/${FILENAME}.md -o ${FILENAME}.html --css=documentation/export-styles/style.css --standalone --embed-resources
-        
-      - name: Convert HTML to PDF 
+          pandoc ${FILENAME}.md -o ${FILENAME}.html --css=export-styles/style.css --standalone --embed-resources
+
+      - name: Convert HTML to PDF
         run: |
           wkhtmltopdf --margin-top 30mm --margin-bottom 20mm --margin-left 20mm --margin-right 20mm ${FILENAME}.html ${FILENAME}.pdf
-       
-      - name: Upload PDF as artifact
+
+      - name: Convert Markdown to DOCX
+        run: |
+          pandoc ${FILENAME}.md -o ${FILENAME}.docx
+          # Optional: Mit Referenzdatei, z.B.
+          # pandoc ${FILENAME}.md -o ${FILENAME}.docx --reference-doc=export-styles/template.docx
+
+      - name: Upload PDF & DOCX as artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILENAME }}
-          path: ${{ env.FILENAME }}.pdf
+          path: |
+            ${{ env.FILENAME }}.pdf
+            ${{ env.FILENAME }}.docx
