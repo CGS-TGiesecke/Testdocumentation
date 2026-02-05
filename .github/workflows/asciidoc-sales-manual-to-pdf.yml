@@ -1,4 +1,4 @@
-name: Asciidoctor Build DIFFERENCES de
+name: Asciidoctor Build DIFFERENCES de to html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -48,9 +48,7 @@ on:
         type: choice
         options:
           - CGS Software and Data
-          - AI Audit Institut
-        
-        
+          - AI Audit Institut  
         
  env:
   PRODUCT_TITLE: 'titel aus yml'
