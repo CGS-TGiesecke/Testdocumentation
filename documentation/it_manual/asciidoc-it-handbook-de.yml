@@ -45,10 +45,10 @@ on:
       author:
         description: 'Asciidoctor PDF author'
         required: true
-        default: 'CGS Software and Data'
+        default: 'CGS mbH'
         type: choice
         options:
-          - CGS Software and Data
+          - CGS mbH
           - AI Audit Institut
   
 env:
@@ -134,6 +134,7 @@ jobs:
         run: |
           pandoc documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html \
             --metadata-file=documentation/it_manual/metadata.yml \
+            --resource-path=documentation/it_manual  \
             -o documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.docx
 
       - name: Upload documentation artifact
@@ -141,6 +142,6 @@ jobs:
         with:
           name: IT-HANDBUCH_DE
           path: |
-            documentation/sales_manuals/${{ env.FILENAME }}*.pdf
-            documentation/sales_manuals/${{ env.FILENAME }}*.html
-            documentation/sales_manuals/${{ env.FILENAME }}*.docx
+            documentation/it_manual/${{ env.FILENAME }}*.pdf
+            documentation/it_manual/${{ env.FILENAME }}*.html
+            documentation/it_manual/${{ env.FILENAME }}*.docx
