@@ -102,6 +102,7 @@ jobs:
             -a big-output="${{ env.BIG_OUTPUT }}" \
             -a company="${{ env.COMPANY }}" \
             -a date="${{ env.DATE }}" \
+            -a product-theme="${{ github.event.inputs.pdfTheme }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
             -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html documentation/sales_manuals/index.adoc
 
@@ -116,6 +117,7 @@ jobs:
             -a big-output="${{ env.BIG_OUTPUT }}" \
             -a company="${{ env.COMPANY }}" \
             -a date="${{ env.DATE }}" \
+            -a product-theme="${{ github.event.inputs.pdfTheme }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
             -a pdf-themesdir=documentation/sales_manuals/themes \
             -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
