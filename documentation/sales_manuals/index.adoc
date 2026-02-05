@@ -19,8 +19,8 @@
 :cgs-assist: 1
 //:arc-assist: 1
 //:application: AI Audit Assist
-:application: CGS Assist default, kommt vom run
-:pdf-theme: CGS default, kommt vom run
+:application: 
+:pdf-theme: 
 :big-output: 0 default, kommt vom run
 
 ifdef::arc-assist[]
