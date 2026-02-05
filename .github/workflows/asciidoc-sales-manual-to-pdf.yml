@@ -123,7 +123,7 @@ jobs:
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ env.APPLICATION }}" \ \
+            -a pdf-theme="${{ env.APPLICATION }}" \ 
             -a pdf-themesdir=documentation/sales_manuals/themes \
             -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
 
