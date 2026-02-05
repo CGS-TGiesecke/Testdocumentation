@@ -52,11 +52,13 @@ jobs:
         
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2' # oder die aktuellste Version
 
       - name: Convert .adoc to .docx with YAML 
         run: |
           pandoc documentation/sales_manuals/index.adoc \
-          --metadata-file=documentation/sales_manuals/themes \
+          --metadata-file=documentation/sales_manuals/metadata.yml \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
 
   pages:
