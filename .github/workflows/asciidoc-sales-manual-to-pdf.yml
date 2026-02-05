@@ -29,6 +29,22 @@ on:
         options:
           - 0
           - 1
+      product-cgs:
+        description: 'Asciidoctor product-cgs'
+        required: true
+        default: '0'
+        type: choice
+        options:
+          - 1
+          - ""
+      product-arc:
+        description: 'Asciidoctor product-arc'
+        required: true
+        default: '0'
+        type: choice
+        options:
+          - 1
+          - ""
       version:
         description: 'Asciidoctor PDF Version'
         required: true
@@ -75,7 +91,8 @@ jobs:
           -D documentation/sales_manuals/ \
           -a revnumber="${{ github.event.inputs.version }}" \
           -a big-output="${{ github.event.inputs.outputType }}" \
-          -a product="${{ github.event.inputs.pdfTheme }}" \
+          -a product-arc="${{ github.event.inputs.product-arc }}" \
+          -a product-cgs="${{ github.event.inputs.product-cgs }}" \
           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
