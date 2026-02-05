@@ -15,7 +15,7 @@ image::.../../IT-Komponenten-2026-01-30.jpg[Entwurf, title="Entwurf IT-Architekt
 *{application}*
 
 Wir stellen die Anwendung in einem Docker Image bereit. Darin enthalten und über Docker Compose 
-installiert sind die einzelnen Container (CGS Assist Backend, LLM API, RAG API, Caddy Proxy, Redis, Celery-Worker, Kundenspezifische MCP Server API)
+installiert sind die einzelnen Container ({application} Backend, LLM API, RAG API, Caddy Proxy, Redis, Celery-Worker, Kundenspezifische MCP Server API)
 
 Wir liefern
 
