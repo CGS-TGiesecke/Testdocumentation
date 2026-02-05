@@ -32,19 +32,19 @@ on:
       productCgs:
         description: 'Asciidoctor product-cgs'
         required: true
-        default: ''
+        default: ' '
         type: choice
         options:
-          - '1'
-          - ''
+          - 1
+          - ' '
       productArc:
         description: 'Asciidoctor product-arc'
         required: true
-        default: ''
+        default: ' '
         type: choice
         options:
-          - '1'
-          - ''
+          - 1
+          - ' '
       version:
         description: 'Asciidoctor PDF Version'
         required: true
@@ -93,7 +93,7 @@ jobs:
           -a revnumber="${{ github.event.inputs.version }}" \
           -a big-output="${{ github.event.inputs.outputType }}" \
           -a product-arc="${{ github.event.inputs.productArc }}" \
-          -a product-cgs="${{ github.event.inputs.productCGS }}" \
+          -a product-cgs="${{ github.event.inputs.productCgs }}" \
           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
