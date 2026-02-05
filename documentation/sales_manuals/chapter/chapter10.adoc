@@ -2,7 +2,7 @@
 
 Kernvorteile des {application} gegenüber MS Copilot und ChatGPT:
 
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 *Fachspezialisierung:*
 
 * Speziell für Interne Revision mit sofort nutzbaren, revisionsspezifischen Use Cases.

@@ -16,10 +16,10 @@
 * Abhängigkeit von deren Sicherheits-, Compliance- und Datenverarbeitungsmodellen.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} ermöglicht KI-Unterstützung
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
  die Interne Revision
 endif::[]
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
  z.B. den Mittelstand
 endif::[]
 , ohne die Datenhoheit aus der Hand zu geben.#

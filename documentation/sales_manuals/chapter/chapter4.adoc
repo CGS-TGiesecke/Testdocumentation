@@ -1,9 +1,9 @@
 === Strukturierte Benutzeroberfläche statt „Prompting-Kunst“
 
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 ==== AI Chat – flexibler Expertenmodus
 endif::[]
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
 ==== KI Chat – flexibler Expertenmodus
 endif::[]
 

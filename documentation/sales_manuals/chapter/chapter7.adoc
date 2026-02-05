@@ -1,10 +1,10 @@
 === Zentrale Administration, Rollen, Sicherheit & Governance
 
 *{application}*
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
 Umfangreicher *Admin-Bereich* speziell für fachlich professionelle Nutzung:
 endif::[]
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Internen Revision:
 endif::[]
 
@@ -40,10 +40,10 @@ endif::[]
 ** kein dediziertes Use-Case-Lifecycle-Management (Aktivierung, Bewertung, Rollensteuerung).
 
 [.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
  zur Internen Revision
 endif::[] 
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
  zum Kunden
 endif::[]
  passt – inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#

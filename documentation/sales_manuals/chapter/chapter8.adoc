@@ -24,10 +24,10 @@
 ** hohe Varianz der Ergebnisqualität.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} „industrialisiert“ Use-Cases, sodass
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
  jede Revision
 endif::[]
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
  jedes Unternehmen
 endif::[]
  von zentral entwickelter und gepflegter KI-Expertise profitieren kann, statt selbst Entwickler und Prompt-Spezialisten aufzubauen.#
