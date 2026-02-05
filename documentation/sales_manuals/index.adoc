@@ -17,6 +17,7 @@ endif::[]
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 15
+:product:
 
 ifeval::[{product} == ARC]
 :author: AI Audit Institut
