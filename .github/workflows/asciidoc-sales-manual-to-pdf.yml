@@ -79,10 +79,10 @@ jobs:
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
-            echo "CGS-ASSIST= " >> $GITHUB_ENV
+            echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
             echo "PRODUCT_TITLE=CGS Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
-            echo "ARC-ASSIST= " >> $GITHUB_ENV
+            echo "ARC-ASSIST=0" >> $GITHUB_ENV
             echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
           echo "AUTHOR=${{ github.event.inputs.author }}" >> $GITHUB_ENV
