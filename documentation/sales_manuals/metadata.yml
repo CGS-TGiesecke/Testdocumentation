@@ -25,7 +25,7 @@ sectnumlevels: 15
 figure_caption: Abbildung
 imagesdir: image
 big_output: "0"
-subtitle: 
+subtitle: >
   "{product}" == "ARC" ?
     "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
   "{product}" == "CGS" ?
