@@ -18,8 +18,8 @@ on:
         default: 'CGS'
         type: choice
         options:
-          - 'CGS'
-          - 'ARC'
+          - CGS
+          - ARC
       outputType:
         description: 'Asciidoctor Output type'
         required: true
