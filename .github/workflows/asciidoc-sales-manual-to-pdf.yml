@@ -44,14 +44,14 @@ on:
       author:
         description: 'Asciidoctor PDF author'
         required: true
-        default: 'CGS Software and Data'
+        default: 'CGS mbH'
         type: choice
         options:
-          - CGS Software and Data
+          - CGS mbH
           - AI Audit Institut
 
 env:
-  DATE: '2026-02-02'
+  DATE: '05.02.2026'
   COMPANY: 'Example AG'
 
 jobs:
