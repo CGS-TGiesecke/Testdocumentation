@@ -48,10 +48,11 @@ on:
         type: choice
         options:
           - CGS Software and Data
-          - AI Audit Institut  
-        
- env:
-  PRODUCT_TITLE: 'titel aus yml'
+          - AI Audit Institut
+
+env:
+  DATE: '2026-02-02'
+  COMPANY: 'Example AG'
 
 jobs:
   build:
@@ -74,63 +75,57 @@ jobs:
 
       - name: Define metadata variables
         run: |
-          # Produktabhängiger Titel/Autor
+          # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
-            echo "AUTHOR=AI Audit Institut" >> $GITHUB_ENV
-            echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
           else
             echo "PRODUCT_TITLE=CGS Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
-            echo "AUTHOR=CGS Software and Data" >> $GITHUB_ENV
-            echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
           fi
-          echo "DATE=2026-02-02" >> $GITHUB_ENV
+          echo "AUTHOR=${{ github.event.inputs.author }}" >> $GITHUB_ENV
+          echo "APPLICATION=${{ github.event.inputs.application }}" >> $GITHUB_ENV
           echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
-          echo "COMPANY=Example AG" >> $GITHUB_ENV
           echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
+          # COMPANY und DATE aus env
 
       - name: Fill metadata template
         run: |
           envsubst < documentation/sales_manuals/metadata.yml.tpl > documentation/sales_manuals/metadata.yml
 
-      # HTML aus AsciiDoc
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
             -D documentation/sales_manuals/ \
-            -a revnumber="${{ github.event.inputs.version }}" \
-            -a big-output="${{ github.event.inputs.outputType }}" \
-            -a application="${{ github.event.inputs.application }}" \
-            -a author="${{ github.event.inputs.author }}" \
-            -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
+            -a product_title="${{ env.PRODUCT_TITLE }}" \
+            -a revnumber="${{ env.REVNUMBER }}" \
+            -a application="${{ env.APPLICATION }}" \
+            -a author="${{ env.AUTHOR }}" \
+            -a big-output="${{ env.BIG_OUTPUT }}" \
+            -a company="${{ env.COMPANY }}" \
+            -a date="${{ env.DATE }}" \
+            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html documentation/sales_manuals/index.adoc
 
-      # PDF aus AsciiDoc
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
             -D documentation/sales_manuals/ \
-            -a revnumber="${{ github.event.inputs.version }}" \
-            -a big-output="${{ github.event.inputs.outputType }}" \
-            -a product_title="${{ env.PRODUCT_TITLE }}"
-            -a application="${{ github.event.inputs.application }}" \
-            -a author="${{ github.event.inputs.author }}" \
+            -a product_title="${{ env.PRODUCT_TITLE }}" \
+            -a revnumber="${{ env.REVNUMBER }}" \
+            -a application="${{ env.APPLICATION }}" \
+            -a author="${{ env.AUTHOR }}" \
+            -a big-output="${{ env.BIG_OUTPUT }}" \
+            -a company="${{ env.COMPANY }}" \
+            -a date="${{ env.DATE }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
             -a pdf-themesdir=documentation/sales_manuals/themes \
-            -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
+            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
 
-      # HTML für Pandoc bereitstellen
-      #- name: Build HTML for Pandoc
-       # run: |
-       #   asciidoctor -o documentation/sales_manuals/tmp_for_pandoc.html documentation/sales_manuals/index.adoc
-
-      # DOCX via Pandoc (HTML → DOCX)
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html \
+          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html \
             --metadata-file=documentation/sales_manuals/metadata.yml \
-            -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
+            -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.docx
 
-      # Upload aller Artefakte (PDF, HTML, DOCX)
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
