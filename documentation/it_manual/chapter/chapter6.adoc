@@ -17,7 +17,7 @@ endif::[]
 
 *Kontaktinformationen:*
 
-ifdef::cgs-assist[] 
+ifeval::[{cgs-assist} == 1] 
 
 |===
 |Firma			|{author}
@@ -26,9 +26,9 @@ ifdef::cgs-assist[]
 |Telefon		|Support-Telefonnummer
 |===
 
-endif::cgs-assist[]
+endif::[]
 
-ifdef::arc-assist[] 
+ifeval::[{arc-assist} == 1]
 
 |===
 |Firma|{author}
@@ -37,7 +37,7 @@ ifdef::arc-assist[]
 |Telefon|???????
 |===
 
-endif::arc-assist[]
+endif::[]
 
 *RACI-Matrix* 
 
