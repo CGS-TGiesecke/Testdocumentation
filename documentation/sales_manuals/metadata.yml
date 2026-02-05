@@ -1,18 +1,18 @@
 title: >
-  "{product}" == "ARC" ?
-    "AI Audit Assist:" :
-  "{product}" == "CGS" ?
-    "CGS Assist:" :
-    "Sales Manual 2024"
+  "AI Audit Assist:" :
+# "CGS Assist:" :
 author: >
-  "{product}" == "ARC" ? "AI Audit Institut" :
-  "{product}" == "CGS" ? "CGS Software and Data" :
-    "Max Mustermann"
-application: CGS Assist
+  "AI Audit Institut" :
+# "CGS Software and Data" :
+application: >
+   "CGS Assist"
+#  "AI Audit Assist"
 date: 2026-02-02
-revnumber: "0"
+revnumber: "1.2.3"
 doctype: book
-company: Example AG
+company: >
+  "AI Audit Institut" :
+# "CGS Software and Data" :
 lang: de
 toc: left
 toc_interactive: true
@@ -26,7 +26,5 @@ figure_caption: Abbildung
 imagesdir: image
 big_output: "0"
 subtitle: >
-  "{product}" == "ARC" ?
-    "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
-  "{product}" == "CGS" ?
-    "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
+ "Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" :
+
