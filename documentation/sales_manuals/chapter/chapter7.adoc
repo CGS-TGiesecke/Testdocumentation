@@ -1,10 +1,10 @@
 === Zentrale Administration, Rollen, Sicherheit & Governance
 
 *{application}*
-ifeval::[{pdf-theme} == 'CGS']
+ifeval::[{product-theme} == 'CGS']
 Umfangreicher *Admin-Bereich* speziell für fachlich professionelle Nutzung:
 endif::[]
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Internen Revision:
 endif::[]
 
@@ -33,17 +33,17 @@ endif::[]
 *MS Copilot / ChatGPT*
 
 * Admin-Funktionalitäten vorhanden, aber:
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 ** nicht spezifisch auf Revisionsprozesse, RAG-Ordner und revisionsspezifische Rollenmodelle zugeschnitten.
 ** keine zentrale, fachlich kuratierte Systemprompt-Bibliothek für Revisions-Use-Cases.
 endif::[]
 ** kein dediziertes Use-Case-Lifecycle-Management (Aktivierung, Bewertung, Rollensteuerung).
 
 [.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
  zur Internen Revision
 endif::[] 
-ifeval::[{pdf-theme} == 'CGS']
+ifeval::[{product-theme} == 'CGS']
  zum Kunden
 endif::[]
  passt – inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#

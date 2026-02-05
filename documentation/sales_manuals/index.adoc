@@ -1,4 +1,4 @@
-= CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
+//= CGS Assist:  Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version
 = {product_title}
 :doctype: book
 :author: CGS Software and Data
@@ -16,11 +16,11 @@
 :sectnumlevels: 15
 :cgs-assist: 1
 :application: {application}
-:pdf-theme: {pdf-theme}
+:product-theme: {product-theme}
 :big-output: {big-output}
 
 // -- Dynamisches Kapitel je nach Theme (ARC oder CGS) --
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 include::chapter/chapter1.adoc[]
 endif::[]
 

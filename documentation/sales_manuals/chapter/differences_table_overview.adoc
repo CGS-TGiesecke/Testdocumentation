@@ -1,6 +1,6 @@
 === Tabellarische Gegenüberstellung ({application}, MS Copilot, ChatGPT (Standalone))
 
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 ===== Strategische Ausrichtung & fachlicher Fokus
 
 |===

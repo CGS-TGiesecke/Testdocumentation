@@ -1,8 +1,8 @@
-ifeval::[{pdf-theme} == 'CGS']
+ifeval::[{product-theme} == 'CGS']
 image::../themes/cgs-logo.png[Firmenlogo,align=left]
 endif::[]
 
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 image::../themes/arc_logo_gross.png[Firmenlogo,align=left]
 endif::[]
 
@@ -10,13 +10,13 @@ endif::[]
 
 === Kontakt
 
-ifeval::[{pdf-theme} == 'CGS']
+ifeval::[{product-theme} == 'CGS']
 
 include::../../export-styles/cgs-disclaimer.adoc[] 
 
 endif::[]	
 
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 
 include::../../export-styles/arc-disclaimer.adoc[] 
 

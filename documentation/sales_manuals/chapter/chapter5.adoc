@@ -8,7 +8,7 @@
 ** Monitoring: Statuskontrolle, ob Agenten erfolgreich durchgelaufen sind.
 ** Einsicht in die Ergebnisse der Agenten.
 
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
 Typische Anwendungsszenarien in der Revision:
 
 * Regelmäßige Auswertung von Risikoberichten.
@@ -19,10 +19,10 @@ endif::[]
 *MS Copilot / ChatGPT*
 
 * In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
-ifeval::[{pdf-theme} == 'CGS']
+ifeval::[{product-theme} == 'CGS']
  Aufgaben.
 endif::[]
-ifeval::[{pdf-theme} == 'ARC']
+ifeval::[{product-theme} == 'ARC']
  Revisionsaufgaben.
 endif::[]
 * Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.
