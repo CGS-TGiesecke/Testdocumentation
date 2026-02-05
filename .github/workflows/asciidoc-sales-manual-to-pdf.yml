@@ -97,14 +97,14 @@ jobs:
             -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
 
       # HTML für Pandoc bereitstellen
-      - name: Build HTML for Pandoc
-        run: |
-          asciidoctor -o documentation/sales_manuals/tmp_for_pandoc.html documentation/sales_manuals/index.adoc
+      #- name: Build HTML for Pandoc
+       # run: |
+       #   asciidoctor -o documentation/sales_manuals/tmp_for_pandoc.html documentation/sales_manuals/index.adoc
 
       # DOCX via Pandoc (HTML → DOCX)
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/sales_manuals/tmp_for_pandoc.html \
+          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html \
             --metadata-file=documentation/sales_manuals/metadata.yml \
             -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
 
