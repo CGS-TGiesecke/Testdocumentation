@@ -29,15 +29,15 @@ on:
         options:
           - 0
           - 1
-      product-cgs:
+      productCgs:
         description: 'Asciidoctor product-cgs'
         required: true
         default: ''
         type: choice
         options:
             - '1'
-          - ''
-      product-arc:
+            - ''
+      productArc:
         description: 'Asciidoctor product-arc'
         required: true
         default: ''
@@ -69,7 +69,8 @@ jobs:
         
       - name: Print AsciiDoc attributes
         run: |
-          echo "product: ${{ github.event.inputs.pdfTheme }}"
+          echo "productArc: ${{ github.event.inputs.productArc }}"
+          echo "productCgs: ${{ github.event.inputs.productCgs }}"
 
   pages:
     runs-on: ubuntu-latest
@@ -91,8 +92,8 @@ jobs:
           -D documentation/sales_manuals/ \
           -a revnumber="${{ github.event.inputs.version }}" \
           -a big-output="${{ github.event.inputs.outputType }}" \
-          -a product-arc="${{ github.event.inputs.product-arc }}" \
-          -a product-cgs="${{ github.event.inputs.product-cgs }}" \
+          -a product-arc="${{ github.event.inputs.productArc }}" \
+          -a product-cgs="${{ github.event.inputs.productCGS }}" \
           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
