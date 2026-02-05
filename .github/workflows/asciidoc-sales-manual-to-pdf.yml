@@ -50,6 +50,10 @@ jobs:
 
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
+        
+      - name: Print AsciiDoc attributes
+        run: |
+          echo "product: ${{ github.event.inputs.pdfTheme }}"
 
   pages:
     runs-on: ubuntu-latest
