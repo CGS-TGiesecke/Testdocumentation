@@ -134,6 +134,7 @@ jobs:
         run: |
           pandoc documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html \
             --metadata-file=documentation/it_manual/metadata.yml \
+            --resource-path=documentation/it_manual  \
             -o documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.docx
 
       - name: Upload documentation artifact
