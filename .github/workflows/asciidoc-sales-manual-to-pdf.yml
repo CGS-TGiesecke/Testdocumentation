@@ -50,8 +50,8 @@ jobs:
       - name: Run asciidoctor on index.adoc
         run: asciidoctor documentation/sales_manuals/index.adoc
         
-      - name: Install pandoc
-        run: apt-get update && apt-get install -y pandoc
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
 
       - name: Convert .adoc to .docx with YAML 
         run: |
