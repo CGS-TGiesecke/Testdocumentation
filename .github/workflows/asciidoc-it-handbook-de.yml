@@ -45,10 +45,10 @@ on:
       author:
         description: 'Asciidoctor PDF author'
         required: true
-        default: 'CGS Software and Data'
+        default: 'CGS mbH'
         type: choice
         options:
-          - CGS Software and Data
+          - CGS mbH
           - AI Audit Institut
   
 env:
