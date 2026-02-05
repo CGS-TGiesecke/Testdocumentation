@@ -35,8 +35,8 @@ on:
         default: ''
         type: choice
         options:
-            - '1'
-            - ''
+          - '1'
+          - ''
       productArc:
         description: 'Asciidoctor product-arc'
         required: true
