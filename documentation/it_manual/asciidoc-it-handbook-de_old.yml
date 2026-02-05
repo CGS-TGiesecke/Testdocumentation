@@ -1,0 +1,82 @@
+
+name: Asciidoctor Build IT-Handbook de
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      pdfTheme:
+        description: 'Asciidoctor PDF Theme'
+        required: true
+        default: 'CGS'
+        type: choice
+        options:
+          - CGS
+          - ARC
+      outputType:
+        description: 'Asciidoctor Output type'
+        required: true
+        default: '0'
+        type: choice
+        options:
+          - 0
+          - 1
+      version:
+        description: 'Asciidoctor PDF Version'
+        required: true
+        default: '1.0.0'
+        type: string
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: List files to check if documentation/it_manual/index.adoc exists
+        run: ls -l documentation/it_manual/
+
+      - name: Run asciidoctor on index.adoc
+        run: asciidoctor documentation/it_manual/index.adoc
+            
+  pages:
+    runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build HTML and PDF docs
+        run: |
+          asciidoctor \
+          -D documentation/it_manual/ \
+          -a revnumber=${{ github.event.inputs.version }} \
+          -a big-output=${{ github.event.inputs.outputType }} \
+          -o IT-Handbuch_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/it_manual/index.adoc
+          asciidoctor-pdf \
+          -D documentation/it_manual/ \
+          -a revnumber=${{ github.event.inputs.version }} \
+          -a big-output=${{ github.event.inputs.outputType }} \
+          -a pdf-theme=${{ github.event.inputs.pdfTheme }} \
+          -a pdf-themesdir=documentation/it_manual/themes \
+          -o IT_Handbuch_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/it_manual/index.adoc
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IT-Handbuch_DE
+          path: |
+            documentation/it_manual/IT_Handbuch_DE_*.pdf
+            documentation/it_manual/IT-Handbuch_DE_*.html

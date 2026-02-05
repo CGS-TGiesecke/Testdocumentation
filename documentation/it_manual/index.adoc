@@ -1,26 +1,22 @@
-
-= AI Audit Assist: IT-Handbuch
-//= CGS Assist: KI-Plattform für den Mittelstand - IT-Handbuch
+= {product_title}
 :doctype: book
-:author: AI Audit Institut
-//:author: CGS Software and Data
+:author: CGS Software and Data
 :revdate: 02.02.2026
-:revnumber: 0 default, kommt vom run
+:revnumber: {revnumber}
 :toc: left
-:toc-interactive: true // in pdf the active section will be highlighted
+:toc-interactive: true
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
-:toclevels: 12
+:toclevels: 15
 :figure-caption: Abbildung
 :imagesdir: image
 :sectnums:
-:sectnumlevels: 12
-//:cgs-assist: 1
-:arc-assist: 1
-:application: "AI Audit Assist"
-//:application: "CGS Assist"
-:big-output: 0
+:sectnumlevels: 15
+:application: {application}
+:arc-assist: {arc-assist}
+:cgs-assist: {cgs-assist}
+:big-output: {big-output}
 
 include::chapter/intro.adoc[]
 

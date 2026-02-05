@@ -1,11 +1,11 @@
 "{author}" sind Hersteller des {application} einem KI-Wrapper, der diverse Funktionalitäten anbietet,
 um KI 
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
  auch z.B. für den Mittelstand
-endif::cgs-assist[]
-ifdef::arc-assist[]
+endif::[]
+ifeval::[{arc-assist} == 1]
  in der Internen Revision
-endif::arc-assist[]
+endif::[]
  einfacher und besser zu nutzen. Dabei können diverse LLM von 
 unterschiedlichen Anbietern über die API eingebunden werden, sowohl OpenAI über Azure AI Foundry, als auch 
 andere Modelle über AWS Bedrock bis hin zu Open Source Modellen, die selbst gehostet sind. 
