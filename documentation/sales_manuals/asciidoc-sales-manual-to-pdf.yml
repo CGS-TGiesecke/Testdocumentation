@@ -1,4 +1,3 @@
-
 name: Asciidoctor Build DIFFERENCES de
 
 on:
@@ -36,38 +35,19 @@ on:
         type: string
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    container:
-      image: asciidoctor/docker-asciidoctor:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: List files to check if documentation/sales_manuals/index.adoc exists
-        run: ls -l documentation/sales_manuals/
-
-      - name: Run asciidoctor on index.adoc
-        run: asciidoctor documentation/sales_manuals/index.adoc
-        
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
-
-      - name: Convert .adoc to .docx with YAML 
+      # Asciidoctor & Asciidoctor-pdf installieren
+      - name: Install asciidoctor & asciidoctor-pdf
         run: |
-          pandoc documentation/sales_manuals/index.adoc \
-          --metadata-file=documentation/sales_manuals/themes \
-          -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
+          sudo gem install asciidoctor asciidoctor-pdf
 
-  pages:
-    runs-on: ubuntu-latest
-    container:
-      image: asciidoctor/docker-asciidoctor:latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Build HTML and PDF docs
+      # HTML generieren
+      - name: Build HTML
         run: |
           asciidoctor \
           -D documentation/sales_manuals/ \
@@ -75,6 +55,10 @@ jobs:
           -a big-output="${{ github.event.inputs.outputType }}" \
           -a product="${{ github.event.inputs.pdfTheme }}" \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.html documentation/sales_manuals/index.adoc
+
+      # PDF generieren
+      - name: Build PDF
+        run: |
           asciidoctor-pdf \
           -D documentation/sales_manuals/ \
           -a revnumber="${{ github.event.inputs.version }}" \
@@ -84,6 +68,20 @@ jobs:
           -a pdf-themesdir=documentation/sales_manuals/themes \
           -o DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.pdf documentation/sales_manuals/index.adoc
 
+      # Pandoc installieren für Docx
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2'
+
+      # DOCX generieren
+      - name: Build DOCX with Pandoc
+        run: |
+          pandoc documentation/sales_manuals/index.adoc \
+          --metadata-file=documentation/sales_manuals/metadata.yml \
+          -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ github.event.inputs.outputType }}_Version_${{ github.event.inputs.version }}.docx
+
+      # Artefakte hochladen
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
