@@ -33,6 +33,9 @@ on:
         required: true
         default: '1.3.0'
         type: string
+env:
+  FILENAME: 'DIFFERENCES_DE_'
+  FILEPATH: 'documentation/sales_documents/'
 
 jobs:
   build:
@@ -78,12 +81,12 @@ jobs:
 
       - name: Fill metadata template
         run: |
-          envsubst < documentation/sales_documents/metadata.yml.tpl > documentation/sales_documents/metadata.yml
+          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
 
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
-            -D documentation/sales_documents/ \
+            -D ${{ env.FILEPATH }}/ \
             -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a revnumber="${{ env.REVNUMBER }}" \
             -a application="${{ env.APPLICATION }}" \
@@ -94,13 +97,13 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            documentation/sales_documents/index.adoc
+            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-           -D documentation/sales_documents/ \
+           -D ${{ env.FILEPATH }}/ \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
@@ -111,22 +114,22 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=documentation/sales_documents/themes \
-           -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf \
-           documentation/sales_documents/index.adoc
+           -a pdf-themesdir=${{ env.FILEPATH }}/themes \
+           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf \
+           ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --metadata-file=documentation/sales_documents/metadata.yml \
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            -o documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ env.DATE }}
           path: |
-            documentation/sales_documents/DIFFERENCES_DE_*.pdf
-            documentation/sales_documents/DIFFERENCES_DE_*.html
-            documentation/sales_documents/DIFFERENCES_DE_*.docx
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
