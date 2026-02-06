@@ -120,9 +120,9 @@ jobs:
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
+            --resource-path=${{ env.FILEPATH }}/  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
