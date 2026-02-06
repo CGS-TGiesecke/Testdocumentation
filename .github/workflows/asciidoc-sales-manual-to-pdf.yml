@@ -78,7 +78,7 @@ jobs:
 
       - name: Fill metadata template
         run: |
-          envsubst < documentation/sales_manuals/metadata.yml.tpl > documentation/sales_manuals/metadata.yml
+          envsubst < documentation/sales_documents/metadata.yml.tpl > documentation/sales_documents/metadata.yml
 
       - name: Build HTML with Asciidoctor
         run: |
@@ -117,14 +117,14 @@ jobs:
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=documentation/sales_documents/metadata.yml \
             -o documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DIFFERENCES_DE
+          name: DIFFERENCES_DE_${{ env.DATE }}
           path: |
             documentation/sales_documents/DIFFERENCES_DE_*.pdf
             documentation/sales_documents/DIFFERENCES_DE_*.html
