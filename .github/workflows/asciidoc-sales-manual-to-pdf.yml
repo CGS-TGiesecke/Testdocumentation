@@ -119,6 +119,7 @@ jobs:
         run: |
           pandoc documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=documentation/sales_documents/metadata.yml \
+            --resource-path=${{ env.FILEPATH }}  \
             -o documentation/sales_documents/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
