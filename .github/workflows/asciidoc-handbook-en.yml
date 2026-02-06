@@ -122,7 +122,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-HANDBUCH_DE_${{ env.DATE }}
+          name: IT-HANDBUCH_EN_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.html
