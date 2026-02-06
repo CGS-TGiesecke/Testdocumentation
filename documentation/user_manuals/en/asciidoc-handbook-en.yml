@@ -73,7 +73,7 @@ jobs:
           # Setze Unternehmen statisch
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im englisch Format
-          echo "DATE=$(date '+%m/%d/%Y')" >> $GITHUB_ENV
+          echo "DATE=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Fill metadata template
         run: |

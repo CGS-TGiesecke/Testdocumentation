@@ -1,8 +1,8 @@
 
-*Ihr Partner für Künstliche Intelligenz*
+*Your Partner for Artificial Intelligence*
 
-Die CGS mbH besitzt jahrzehntelange Erfahrung in der Entwicklung, Implementierung und Betreuung komplexer Softwaresysteme. 
-Mit unseren KI-Experten bieten wir Ihnen neben dem "{application}" auch gerne KI-Beratung und Unterstützung bei der Entwicklung oder Integration von KI-Systemen. 
+CGS mbH has decades of experience in the development, implementation, and support of complex software systems.
+In addition to "{application}", our AI experts are also happy to offer you AI consulting and support with the development or integration of AI systems.
 
 *CGS mbH* 
 
@@ -15,7 +15,7 @@ www.cgs-online.de
 www.rias-revision.de 
 
 
-*Beratung & Vertrieb*
+*Consulting & Sales*
 
 Stefan Franz 
 
