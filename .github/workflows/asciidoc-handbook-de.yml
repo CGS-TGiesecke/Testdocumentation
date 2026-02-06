@@ -22,14 +22,6 @@ on:
         options:
           - CGS
           - ARC
-      outputType:
-        description: 'Asciidoctor Output type'
-        required: true
-        default: '0'
-        type: choice
-        options:
-          - 0
-          - 1
       version:
         description: 'Asciidoctor PDF Version'
         required: true
