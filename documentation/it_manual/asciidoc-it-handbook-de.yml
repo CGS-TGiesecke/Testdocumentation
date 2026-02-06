@@ -32,7 +32,7 @@ on:
       version:
         description: 'Asciidoctor PDF Version'
         required: true
-        default: '1.0.0'
+        default: '1.3.0'
         type: string
 
   
@@ -128,7 +128,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-HANDBUCH_DE
+          name: IT-HANDBUCH_DE_${{ env.DATE }}
           path: |
             documentation/it_manual/${{ env.FILENAME }}*.pdf
             documentation/it_manual/${{ env.FILENAME }}*.html
