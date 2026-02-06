@@ -38,6 +38,7 @@ on:
   
 env:
   FILENAME: 'IT_HANDBUCH_DE_'
+  FILEPATH: 'documentation/it_manual/de'
 
 jobs:
   build:
@@ -83,12 +84,12 @@ jobs:
 
       - name: Fill metadata template
         run: |
-          envsubst < documentation/it_manual/metadata.yml.tpl > documentation/it_manual/metadata.yml
+          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
 
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
-            -D documentation/it_manual/ \
+            -D ${{ env.FILEPATH }}/ \
             -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a revnumber="${{ env.REVNUMBER }}" \
             -a application="${{ env.APPLICATION }}" \
@@ -99,7 +100,7 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html documentation/it_manual/index.adoc
+            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -116,20 +117,20 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=documentation/it_manual/themes \
-           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf documentation/it_manual/index.adoc
+           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --metadata-file=documentation/it_manual/metadata.yml \
-            --resource-path=documentation/it_manual  \
-            -o documentation/it_manual/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_V_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
+            --resource-path=${{ env.FILEPATH }}  \
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_V_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: IT-HANDBUCH_DE_${{ env.DATE }}
           path: |
-            documentation/it_manual/${{ env.FILENAME }}*.pdf
-            documentation/it_manual/${{ env.FILENAME }}*.html
-            documentation/it_manual/${{ env.FILENAME }}*.docx
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
