@@ -22,7 +22,7 @@ on:
           - CGS
           - ARC
       outputType:
-        description: 'Asciidoctor Output type'
+        description: 'Asciidoctor Output type 0=small, 1=large'
         required: true
         default: '0'
         type: choice
@@ -105,7 +105,7 @@ jobs:
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-           -D documentation/it_manual/ \
+           -D ${{ env.FILEPATH }} \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
