@@ -4,6 +4,8 @@ endif::[]
 
 ifeval::[{arc-assist} == 1]
 image::../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+image::./../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+image::./themes/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
 
