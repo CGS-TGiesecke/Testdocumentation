@@ -1,24 +1,21 @@
-
-//= AI Audit Assist: Anwenderhandbuch
-= CGS Assist: Anwenderhandbuch
+= {product_title}
 :doctype: book
-//:author: AI Audit Assist
-:author: CGS Software and Data
-:revdate: 2002-02-02
+:author: CGS mbH
+:revdate: {date}
+:revnumber: {revnumber}
 :toc: left
-:toc-interactive: true // in pdf the active section will be highlighted
+:toc-interactive: true
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
-:toclevels: 7
+:toclevels: 15
 :figure-caption: Abbildung
-:imagesdir: images
+:imagesdir: image
 :sectnums:
-:sectnumlevels: 7
-:cgs-assist: 1
-//:arc-assist: 1
-:application: CGS Assist
-//:application: AI Audit Assist
+:sectnumlevels: 15
+:application: {application}
+:arc-assist: {arc-assist}
+:cgs-assist: {cgs-assist}
 
 include::parts/part1.adoc[]
 
@@ -28,4 +25,4 @@ include::parts/part1-2.adoc[]
 
 <<<
 
-include::parts/part2.adoc[]
+include::chapter/disclaimer.adoc[]
