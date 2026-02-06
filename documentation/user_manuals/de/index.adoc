@@ -25,4 +25,4 @@ include::parts/part1-2.adoc[]
 
 <<<
 
-include::chapter/disclaimer.adoc[]
+include::parts/disclaimer.adoc[]
