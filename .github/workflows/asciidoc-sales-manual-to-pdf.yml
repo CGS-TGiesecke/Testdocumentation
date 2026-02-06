@@ -33,22 +33,7 @@ on:
         required: true
         default: '1.0.0'
         type: string
-      application:
-        description: 'Asciidoctor PDF Application name'
-        required: true
-        default: 'CGS Assist'
-        type: choice
-        options:
-          - CGS Assist
-          - AI Audit Assist
-      author:
-        description: 'Asciidoctor PDF author'
-        required: true
-        default: 'CGS mbH'
-        type: choice
-        options:
-          - CGS mbH
-          - AI Audit Institut
+
 
 env:
   DATE: '05.02.2026'
@@ -78,15 +63,17 @@ jobs:
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
+            echo "AUTHOR=AI Audit Institut" >> $GITHUB_ENV
+            echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
             echo "PRODUCT_TITLE=CGS Assist: Differenzierungsmerkmale / Vorteile gegenüber MS Copilot bzw. ChatGPT Enterprise Version" >> $GITHUB_ENV
+            echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
+            echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
             echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
-          echo "AUTHOR=${{ github.event.inputs.author }}" >> $GITHUB_ENV
-          echo "APPLICATION=${{ github.event.inputs.application }}" >> $GITHUB_ENV
           echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
           echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
           # COMPANY und DATE aus env
