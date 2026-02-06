@@ -3,11 +3,14 @@ image::../themes/cgs-logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
 ifeval::[{arc-assist} == 1]
-image::./themes/arc_logo.png[Firmenlogo,align=left, width=120]
 image::./../themes/arc_logo.png[Firmenlogo,align=left, width=120]
 image::../themes/arc_logo.png[Firmenlogo,align=left, width=120]
 image::./arc_logo.png[Firmenlogo,align=left, width=120]
 image::arc_logo.png[Firmenlogo,align=left, width=120]
+image:./../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+image:../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+image:./arc_logo.png[Firmenlogo,align=left, width=120]
+image:arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
 
