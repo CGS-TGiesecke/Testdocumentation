@@ -35,7 +35,7 @@ on:
         type: string
 env:
   FILENAME: 'DIFFERENCES_DE'
-  FILEPATH: 'documentation/sales_documents/'
+  FILEPATH: 'documentation/sales_documents'
 
 jobs:
   build:
