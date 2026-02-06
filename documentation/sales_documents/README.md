@@ -12,7 +12,3 @@ The related action can start manually to build pdf, html, docx from assciidoc fi
 - The warning messages about "section title out of sequence:" on build are intentional and can be ignored.
 
 
-
-
-
-
