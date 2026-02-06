@@ -34,11 +34,6 @@ on:
         default: '1.0.0'
         type: string
 
-
-env:
-  DATE: '05.02.2026'
-  COMPANY: 'Example AG'
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -76,7 +71,10 @@ jobs:
           fi
           echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
           echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
-          # COMPANY und DATE aus env
+          # Setze Unternehmen statisch
+          echo "COMPANY=Example AG" >> $GITHUB_ENV
+          # Setze Tagesdatum im deutschen Format
+          echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
 
       - name: Fill metadata template
         run: |
@@ -96,7 +94,8 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html documentation/sales_manuals/index.adoc
+            -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            documentation/sales_manuals/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -113,13 +112,14 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=documentation/sales_manuals/themes \
-           -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.pdf documentation/sales_manuals/index.adoc
+           -o DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf \
+           documentation/sales_manuals/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.html \
+          pandoc documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=documentation/sales_manuals/metadata.yml \
-            -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}.docx
+            -o documentation/sales_manuals/DIFFERENCES_DE_Typ_${{ env.BIG_OUTPUT }}_Version_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
