@@ -13,8 +13,8 @@ endif::[]
 ** Texteingabe
 ** Voice-Eingabe
 ** Dokumenten-Upload als Kontext.
-*Auswahl des gewünschten LLM pro Anfrage.
-*Auswahl spezieller Agenten per Drop-down.
+* Auswahl des gewünschten LLM pro Anfrage.
+* Auswahl spezieller Agenten per Drop-down.
 *RAG-Toggle:
 ** RAG ein/aus schaltbar
 ** Anzeige der Top-8 Embeddings inkl. Quellenlinks zur direkten Verifizierung

@@ -12,7 +12,7 @@
 
 Vorteil:
 
-*RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
+* RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
 
 *MS Copilot / ChatGPT*
 
