@@ -1,31 +1,32 @@
-image::.../../IT-Komponenten-2026-01-30.jpg[Entwurf, title="Entwurf IT-Architektur der Komponenten im Assist", width="500"]
+image::.../../IT-Komponenten-2026-01-30.jpg[IT-Architecture, title=" IT-Architecture componets Assist", width="500"]
 
-*Kunde:*
+*Customer:*
 
-- Alle enthaltenen Komponenten liegen in der Verantwortlichkeit des Kunden.
-- Er stellt die VM oder den Server bereit und muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
-- Er stellt ein Verzeichnis (SHARED_FOLDER) mit ausreichenden Schreib-/Leserechten für die Docker-Container bereit.
-- Er stellt den LLM Provider bereit.
-- Er konfiguriert die Proxy-Anbindung (TLS/HTTPS)
-- Er konfiguriert die notwendigen Firewall Freischaltungen
-- Er konfiguriert die Anbindung an die vorhandene Authentifizierung
-- Er händelt Backup und Recovery (Datenbank, SHARED_FOLDER , Konfigurationsdateien)
+- All included components are the responsibility of the customer.
+- The customer provides the VM or server and must install and configure Docker and Docker Compose on the server.
+- The customer provides a directory (SHARED_FOLDER) with sufficient read/write permissions for the Docker containers.
+- The customer provides the LLM provider.
+- The customer configures the proxy connection (TLS/HTTPS).
+- The customer configures the necessary firewall rules.
+- The customer configures integration with the existing authentication system.
+- The customer handles backup and recovery (database, SHARED_FOLDER, configuration files).
 
 
 *{application}*
 
-Wir stellen die Anwendung in einem Docker Image bereit. Darin enthalten und über Docker Compose 
-installiert sind die einzelnen Container ({application} Backend, LLM API, RAG API, Caddy Proxy, Redis, Celery-Worker, Kundenspezifische MCP Server API)
+We provide the application as a Docker image. This includes, and is installed via Docker Compose, 
+the individual containers ({application} backend, LLM API, RAG API, Caddy proxy, Redis, Celery worker, customer-specific MCP server API).
 
-Wir liefern
+We deliver:
 
-- Benutzer-Training 
-- Handbücher 
-- Konfigurationsanleitungen
-- Deployanleitungen
+- User training
+- Manuals
+- Configuration guides
+- Deployment guides
 
-Nach dem Deploy:
+After deployment:
 
-- Updates/Patches
+- Updates/patches
 - Support
+
 

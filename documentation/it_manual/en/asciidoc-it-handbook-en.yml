@@ -37,7 +37,7 @@ on:
 
   
 env:
-  FILENAME: 'IT_HANDBUCH_DE_'
+  FILENAME: 'IT_HANDBUCH_EN_'
   FILEPATH: 'documentation/it_manual/en'
 
 jobs:
@@ -63,13 +63,13 @@ jobs:
         run: |
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbuch" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbook" >> $GITHUB_ENV
             echo "AUTHOR=AI Audit Institut" >> $GITHUB_ENV
             echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
-            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - IT-Handbuch" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=CGS Assist: IT-Handbook" >> $GITHUB_ENV
             echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
             echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
@@ -129,7 +129,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-HANDBUCH_DE_${{ env.DATE }}
+          name: IT-HANDBUCH_EN_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
