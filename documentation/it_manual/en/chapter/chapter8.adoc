@@ -1,0 +1,15 @@
+=== Appendix
+
+==== IT Architecture
+
+include::IT_ARCHITEKTURE-DESCRIPTION.adoc[]
+
+==== Document Version History
+
+[cols="100px,100px, 3*", options="header"]
+|===
+| Date          | Author    | Change 
+
+| 2026-01-30    | cgs       | Initial creation 
+|               |           |  
+|===

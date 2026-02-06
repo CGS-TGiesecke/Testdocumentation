@@ -1,0 +1,49 @@
+= {product_title}
+:doctype: book
+:author: 
+:revdate: {date}
+:revnumber: {revnumber}
+:toc: left
+:toc-interactive: true
+:toc-mode: offcanvas
+:toc-mode: responsive
+:toc-title: Table of content
+:toclevels: 15
+:figure-caption: Figure
+:imagesdir: image
+:sectnums:
+:sectnumlevels: 15
+:application: {application}
+:arc-assist: {arc-assist}
+:cgs-assist: {cgs-assist}
+:big-output: {big-output}
+
+include::chapter/intro.adoc[]
+
+include::chapter/chapter1.adoc[]
+
+include::chapter/chapter2.adoc[]
+
+include::chapter/chapter3.adoc[]
+
+ifeval::[{big-output} == 1]
+include::chapter/chapter4-o.adoc[]
+endif::[]
+
+include::chapter/chapter5.adoc[]
+
+include::chapter/chapter6.adoc[]
+
+ifeval::[{big-output} == 1]
+include::chapter/chapter7-o.adoc[]
+endif::[]
+
+include::chapter/chapter8.adoc[]
+
+<<<
+
+include::chapter/disclaimer.adoc[]
+
+
+
+

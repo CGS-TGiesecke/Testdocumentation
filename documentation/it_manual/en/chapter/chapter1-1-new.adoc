@@ -1,0 +1,76 @@
+"{author}" sind Hersteller des {application} einem KI-Wrapper, der diverse Funktionalitäten anbietet,
+um KI 
+ifeval::[{arc-assist} == 1]
+ in der Internen Revision
+endif::[]
+ einfacher und besser zu nutzen. Dabei können diverse LLM von 
+unterschiedlichen Anbietern über die API eingebunden werden, sowohl OpenAI über Azure AI Foundry, als auch 
+andere Modelle über AWS Bedrock bis hin zu Open Source Modellen, die selbst gehostet sind. 
+Die Applikation läuft bei den Kunden onPremise, so werden auch alle Daten in der Infrastruktur des Kunden gespeichert. 
+Lediglich zur Verarbeitung werden die für die Anfrage benötigten Daten an das jeweilige LLM übergeben und gegebenenfalls 
+kurzfristig zwischengespeichert. 
+
+Der {application} unterteilt sich in folgende Bereiche:
+
+===== AI Chat
+
+Auf der Seite AI Chat ist eine klassische Chat Oberfläche mit einem Eingabefenster für Prompts, 
+dies kann getippt oder per Voice eingesprochen werden. Zudem können Dokumente angehängt werden, die damit 
+in die Abfrage als Kontext einbezogen werden. Auf der Seite kann auch aus den unterschiedlichen konfigurierten 
+LLM-Modellen ausgewählt werden, welches LLM für die Anfrage genutzt werden soll. Über ein Drop-Down Fenster können 
+diverse Agenten ausgewählt werden, die bei der Abfrage eingesetzt werden sollen. Auch besteht über einen Toggle-Switch 
+die Möglichkeit, die Berücksichtigung eines RAGs ein und aus zuschalten. 
+Wird das RAG benutzt, werden bei Antwort die Top 8 Emmbedings für die Antwort mit einem Link zur jeweiligen Quelle angezeigt. 
+Dadurch kann die Antwort in der originalen Quelle verifiziert werden. In einem Drop Down Feld kann dann das jeweilige 
+Quelldokument ausgewählt werden, um die Analyse auf dieses Dokument zu beschränken und nicht mehr das ganze RAG zu berücksichtigen.
+
+===== Anwendungsfälle (Use Cases)
+
+Unter dem Reiter der Use Cases sind diverse vorgefertigte Anwendungsfälle, die entsprechend gruppiert / geclustert werden können. 
+Für jeden Use Case zeigt eine Kachel den Namen, ein Icon und eine Kurzbeschreibung, was der Use Case macht. Beim Klick auf die Kachel 
+öffnet sich der jeweilige Use Case. Die Standardanwendungsfälle werden als Formular dargestellt, in welche der Benutzer durch Ausfüllen 
+des Fomulars einige Inhalte einpflegt. Diese Formulare können einfach durch jederman ausgefüllt werden, komplett ohne KI-Kenntnisse. 
+Bei Ausführungen füllen die jeweiligen Inputfelder des Formulars einen Systempromt, der mit Variablen als eine Art Lückentext 
+zentral hinterlegt ist. Damit können unterschiedlichste Benutzer auch ohne Prompting Erfahrung sehr gute Ergebnisse erzielen. 
+Ein großer Vorteil ist auch die Standardisierung der Ergebnisse, da alle den gleichen zentralen Prompt nutzen. 
+Die Qualität der jeweiligen Use Cases kann über eine Sternebewertung einfach bewertet werden. Die Ergebnisse können in einen Chat 
+übernommen werden, um mit dem Ergebnis als Kontext frei weiter chatten zu können. Damit erleichtern diese Use Cases die Einführung 
+von KI erheblich und machen eine ausführliche Prompting Schulung überflüssig. Da auch ungeübte Benutzer von Beginn an gute Ergebnisse 
+erzielen und von Anfang an Erfolgserlebnisse haben, stellen diese Standardanwendungsfälle eine erfolgreiche KI-Einführung sicher.
+
+===== Automation / Agenten 
+
+Unter dem Reiter Automation sind die Agenten Use Cases gebündelt. Agenten Use Cases sind spezialisierte Software-Komponenten, 
+die eigenständig komplexe Aufgaben automatisieren. Über einen MCP (Model Context Protocol) Server erhalten diese Agents sicheren 
+und strukturierten Zugriff auf verschiedenste Datenbanken und Subsysteme, wie beispielsweise ERP-Systeme. Sie können dort eigenständig 
+Datenabfragen oder Analysen durchführen, relevante Informationen extrahieren, verarbeiten und die Ergebnisse in einem 
+zentralen, einheitlichen Format bereitstellen. Auf diese Weise ermöglichen Agenten Use Cases automatisierte Berichte, dynamische Auswertungen 
+oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, ohne dass manuelle Eingriffe notwendig sind.
+In dieser Übersicht kann für jeden Agenten Use Case festgelegt werden, ob die Aufgaben zu spezifischen Zeiten oder periodisch ausgeführt werden. 
+Beide Varianten könne ausführlich konfiguriert werden. Zudem kann hier überprüft werden, ob die Agenten ihre Aufgaben erfolgreich erfüllt 
+haben und durchgelaufen sind. Auch die umfangreichen Details der Ergebnisse können hier eingesehen werden.
+
+===== Dokumente 
+
+Unter dem Reiter Dokumente ist eine Übersicht der Dokumente des RAGs hinterlegt, wobei dies in Form eines 
+Dokumentenmanagementsystems implementiert ist. Dabei kann die Dokumententabelle nach Dokumenttyp (pdf, excel etc.), 
+nach Quelle (bspw. Netzwerklaufwerk oder Sharepoint) oder Inhalt gefiltert werden. Da alle Dokumente mit Schlagwörtern verknüpft sind, 
+kann im Feld Inhalt nach beliebigen Schlagwörtern gesucht werden, um die relevanten Dokumente zu finden. 
+Auch ohne jegliches Knowhow wie ein RAG funktioniert, kann auch ein Benutzer über eine Hochlade-Funktion 
+neue Dokumente ins RAG hochladen, über den Refresh Button das RAG aktualiseren oder über "Ausgewählte Embeddings löschen" 
+einzelne Dokumente löschen. Damit werden einige Funktionen eines Dokumentenmangementsystems abgedeckt und Benutzer auch ohne 
+KI-Knowhow können einfach ein RAG pflegen. Zudem lassen sich auch pro Dokument die einzelnen Embeddings anuzeigen und prüfen.
+
+===== Admin 
+
+Um den {application} professionell zu nutzen gibt es einen umfangreichen Administrationsbereich. Hier werden 
+Benutzer angelegt und diversen Rollen zugeteilt. Die Rollen werden im Rollen Management gepflegt. 
+Im Adminbereich werden auch die Ordner des RAGS verwaltet, wobei jedem Ordner Rollen zugewiesen werden können, die auf Ordner 
+im RAG Zugriff haben. Alle benutzer, die diese Rollen nicht haben, können weder im RAG noch über den Chat auf Inhalte dieser 
+Ordner zugreifen. Auch die zentralen Systemsprompts werden im Admin Bereich gepflegt. Im Admin Bereich werden auch 
+die unterschiedlichen KI Provider und deren LLM Modelle konfiguriert, die genutzt werden. Dafür muss jeweils der entsprechende API-Key hinterlegt werden. 
+Neben der Pflege der Lizenzen durch das Einfügen eines entsprechenden Lizenz-Files, werden im Admin-Bereich auch die 
+Standardanwendungsfälle / Use Cases konfiguriert. Dabei lassen sich einzelne Use Cases oder ganze Cluster von Use Cases einfach 
+über einen Toggle-Switch an- und ausschalten. Für jeden Use Case kann hier konfiguriert werden, welches das Default LLM ist, 
+welches genutzt werden soll. Ob es ein Automatisierter Use Case ist und welche Rollen diese Use Case nutzen dürfen. Zusätzlich 
+wird die Statistik zur Bewertung des Use Cases angezeigt, also wie viele Sterne bei der Benutzung als Feedback bewertet wurden.

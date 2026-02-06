@@ -1,0 +1,49 @@
+=== IT Security and Data Protection
+
+==== Access Control and Permission Management
+
+Access to {application} is secured by a multi-level permission system and technical protection measures:
+
+- Login is only possible using the authentication method selected and configured by the customer (via local user/password management
+(customer's LDAP, customer's DB), via Azure AD/Entra (OIDC/SAML), or via API token for integrations)
+- Password policies comply with the customer's IT security requirements (minimum length, complexity, regular change).
+- Access to sensitive data and administration functions is restricted to selected user roles only.
+- Encryption of data traffic between client and server via TLS 1.2 or higher.
+
+==== Security and Compliance
+
+===== TLS/HTTPS
+
+Mandatory for production. Certificates:
+
+- Let's Encrypt (via Caddy)
+- DNS-01 (API token provider)
+- Own certificates (internal CA)
+
+===== Firewall
+
+**Outgoing connections:**
+
+- **Always:** Docker Hub / CGS Registry
+- **LLM provider:** Depending on provider
+- **Local models:** Internal connection
+
+===== Data Protection
+
+All application data is stored exclusively on customer servers.
+
+**LLM Provider (Cloud) model:**
+
+- For Azure OpenAI or AWS Bedrock: Requests are transmitted but not stored permanently
+- **Recommendation:** Choose EU region (GDPR)
+
+**Local models:** 
+
+- Highest level of GDPR compliance
+
+==== Logging
+
+Logs are maintained to ensure traceability:
+
+- The logfiles are automatically archived centrally in the SQLite DB.
+- Log data is secured by the customer and handled in accordance with data protection regulations.

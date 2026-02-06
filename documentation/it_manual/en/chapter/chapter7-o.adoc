@@ -1,0 +1,8 @@
+=== Maintenance and Servicing
+
+==== Documentation of Changes (Changelog)
+
+All changes to the application and infrastructure are documented in the changelog.
+In addition, when a new version of {application} is delivered, the implemented changes are described in the included Release Notes.
+
+These documents are stored centrally, updated regularly, and are available to the entire IT team.
