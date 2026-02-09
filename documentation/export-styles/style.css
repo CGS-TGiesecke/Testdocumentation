@@ -66,12 +66,14 @@ table {
   display: inline-table;
   margin: 1em 0;
   font-size: 0.96em;
+  border: 2px solid black;
 }
 
 th, td {
   border: 1px solid #dee2e6;
   padding: 0.5em 1em;
   text-align: left;
+  border: 2px solid black;
 }
 
 th {
