@@ -14,7 +14,7 @@
 
 *MS Copilot / ChatGPT*
 
-Each department must:
+* Each department must:
 ** define use cases professionally
 ** translate them into prompts/automations themselves
 ** test themselves
