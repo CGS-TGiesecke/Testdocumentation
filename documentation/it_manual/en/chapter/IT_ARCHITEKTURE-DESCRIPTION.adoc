@@ -1,10 +1,12 @@
 
 ifeval::[{cgs-assist} == 1]
-image::../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title=" IT-Architecture componets CGS Assist", width="500"]
+image::../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title="IT-Architecture components CGS Assist", width="600"]
+image::./../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title="IT-Architecture components CGS Assist", width="600"]
+image::../../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title="IT-Architecture components CGS Assist", width="600"]
 endif[]
 
 ifeval::[{arc-assist} == 1]
-image::../../IT-Komponenten-ARC-2026-02-09.jpg[IT-Architecture, title=" IT-Architecture componets AI Audit Assist", width="500"]
+image::../../IT-Komponenten-ARC-2026-02-09.jpg[IT-Architecture, title="IT-Architecture components AI Audit Assist", width="600"]
 endif[]
 
 *Customer:*
