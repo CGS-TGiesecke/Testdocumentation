@@ -114,7 +114,7 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=${{ env.FILEPATH }}/themes \
+           -a pdf-themesdir=documentation/advantages/themes \
            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf \
            ${{ env.FILEPATH }}/index.adoc
 
