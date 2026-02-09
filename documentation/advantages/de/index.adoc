@@ -41,8 +41,9 @@ ifeval::[{arc-assist} == 1]
 include::chapter/disclaimer-arc.adoc[]
 endif::[]
 
-ifeval::[{cgs-assist} == 1]
 <<<
+
+ifeval::[{cgs-assist} == 1]
 include::chapter/disclaimer-cgs.adoc[]
 endif::[]
 

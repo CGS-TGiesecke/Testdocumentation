@@ -46,7 +46,7 @@ endif::[]
 |Ja, fertige Formulare für Kunden
 ifeval::[{arc-assist} == 1]
 Audit-
-endif[]
+endif::[]
 Use-Cases
 
 |Nein |Nein
@@ -57,7 +57,7 @@ Use-Cases
 |Übernahme von
 ifeval::[{arc-assist} == 1]
 Audit-
-endif[] 
+endif::[] 
 Use-Case-Ergebnissen in Chat
 
 |Ja, nahtlos als Kontext weiter nutzbar |Nur manuell durch Copy/Paste|Nur manuell durch Copy/Paste
@@ -87,7 +87,7 @@ Use-Case-Ergebnissen in Chat
 |Ja, 
 ifeval::[{arc-assist} == 1]
  Revisionsspezifisch
-endif[] 
+endif::[]
 
 |Ja, aber generisch (M365 Admin Center) | Eingeschränkt (v.a. Organisations-einstellungen)
 
@@ -108,7 +108,7 @@ endif::[]
 
 | Ja (für alle 
 ifeval::[{arc-assist} == 1]
- kodierten Audit-Use-Cases
+ kodierten Audit-Use-Cases)
 endif::[]
 ifeval::[{cgs-assist} == 1]
  kodierten Standard-Use-Cases) 
