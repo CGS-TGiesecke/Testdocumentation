@@ -57,7 +57,7 @@ jobs:
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Benutzerhandbuch" >> $GITHUB_ENV
-            echo "AUTHOR=AI Audit Institut" >> $GITHUB_ENV
+            echo "AUTHOR=ARC Institut" >> $GITHUB_ENV
             echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
