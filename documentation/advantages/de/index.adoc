@@ -45,7 +45,8 @@ ifeval::[{big-output} == 1]
 include::chapter/differences_table_overview.adoc[]
 endif::[]
 
-
+ifeval::[{cgs-assist} == 1]
 <<<
+endif::[]
 
 include::chapter/disclaimer.adoc[]

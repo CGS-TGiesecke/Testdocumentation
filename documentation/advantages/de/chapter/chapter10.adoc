@@ -6,7 +6,7 @@ ifeval::[{arc-assist} == 1]
 *Fachspezialisierung:*
 
 * Speziell für Interne Revision mit sofort nutzbaren, revisionsspezifischen Use Cases.
-* Fachlich kuratiert durch das ARC Institute (Dr. Förschler).
+* Fachlich kuratiert durch das ARC Institute, langjährige Revisionsmethodik Expertise.
 endif::[] 
 
 *Herstellerunabhängigkeit:*
@@ -49,6 +49,9 @@ endif::[]
 * Fallback auf alternative LLMs bei technischen Störungen eines Anbieters.
 
 
-[.highlight]#*Fazit:* {application} ist keine generische KI-Plattform, sondern eine unternehmensspezifische, 
-on-premise fähige, herstellerunabhängige Lösung, die Fach-Know-how, Governance und technische Flexibilität 
+[.highlight]#*Fazit:* {application} ist keine generische KI-Plattform, sondern eine
+ifeval::[{arc-assist} == 1]
+ Revisions- und
+endif::[]
+unternehmensspezifische, on-premise fähige, herstellerunabhängige Lösung, die Fach-Know-how, Governance und technische Flexibilität 
 kombiniert und gleichzeitig den internen Pflege- und Entwicklungsaufwand der Benutzer massiv reduziert.#

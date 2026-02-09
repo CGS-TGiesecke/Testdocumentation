@@ -12,7 +12,11 @@
 
 Vorteil:
 
-* RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
+* RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens,
+ifeval::[{arc-assist} == 1]
+ der Interne Revision
+endif::[]
+ aktuell halten können.
 
 *MS Copilot / ChatGPT*
 
@@ -20,7 +24,9 @@ Vorteil:
 * Einbindung von Unternehmensdokumenten ist möglich, aber:
 ** weniger granular steuerbar
 ** technisch und administrativ komplexer
-** nicht explizit auf Kundenworkflows ausgelegt.
+ifeval::[{arc-assist} == 1]
+** nicht explizit auf Revisions-Workflows ausgelegt.
+endif::[]
 
 [.highlight]#*Mehrwert in einem Satz:* {application} kombiniert KI mit einem anwendbaren, fachgerechten RAG-Dokumentenmanagement – 
 statt die Benutzer mit der technischen RAG-Implementierung allein zu lassen.#

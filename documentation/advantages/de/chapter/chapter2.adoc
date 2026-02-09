@@ -15,7 +15,7 @@
 *MS Copilot / ChatGPT:*
 
 * Starke Bindung an den jeweiligen Hersteller und dessen Cloud-Stack.
-* Im Falle von Ausfällen (z.B. OpenAI / Azure-Störungen) ist das jeweilige Tool nicht nutzbar.
+* Im Falle von Ausfällen (z.B. OpenAI / Azure-Störungen) ist das jeweilige Tool nicht nutzbar. Abhängigkeit von US Technologie Modellen.
 * Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
 
 [.highlight]#*Mehrwert in einem Satz:* {application} macht

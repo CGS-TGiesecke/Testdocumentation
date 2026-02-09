@@ -10,7 +10,7 @@
 ** Prüfungsdurchführung
 ** Berichtserstellung
 ** Maßnahmenverfolgung
-* Fachinhalte stammen vom {author} (Audit Research Center, Dr. Förschler) mit ausgewiesener Revisionsexpertise.
+* Fachinhalte stammen vom {author} | Audit Research Center mit mehr als 20 Jahren Revisionsexpertise.
 * Use Cases können aufeinander aufbauen und den Prüfungsprozess schrittweise strukturieren (prozessuale „Leitplanke“).
 
 *MS Copilot / ChatGPT*

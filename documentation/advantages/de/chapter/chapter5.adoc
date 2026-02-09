@@ -27,5 +27,5 @@ ifeval::[{arc-assist} == 1]
 endif::[]
 * Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.
 
-[.highlight]#*Mehrwert in einem Satz:* {application} macht aus KI einmalige Abfragen und dauerhafte, planbare Agenten – 
+[.highlight]#*Mehrwert in einem Satz:* {application} macht aus einmaligen Abfragen dauerhafte, planbare Agenten – 
 ohne dass der Benutzer selbst technische Automatisierungslösungen bauen muss.#

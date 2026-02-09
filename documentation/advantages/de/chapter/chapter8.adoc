@@ -2,7 +2,7 @@
 
 *{application}*
 
-* Entwicklung, Pflege und Optimierung der Use Cases erfolgt zentral durch das {author}.
+* Entwicklung, Pflege und Optimierung der Use Cases erfolgt zentral durch {author}.
 * Kunden müssen:
 ** keine eigenen Entwickler beschäftigen, um KI-Use-Cases zu implementieren
 ** keine eigene Prompt-Bibliothek aufbauen und pflegen
@@ -23,7 +23,11 @@
 ** Abhängigkeiten von einzelnen Key-Usern
 ** hohe Varianz der Ergebnisqualität.
 
-[.highlight]#*Mehrwert in einem Satz:* {application} „industrialisiert“ Use-Cases, sodass
+[.highlight]#*Mehrwert in einem Satz:* {application} steigert doe Produktivität maßgeblich und macht Qualität in Form der 
+ifeval::[{arc-assist} == 1]
+ Audit
+endif::[]
+ Use-Cases "skalierbar", sodass
 ifeval::[{arc-assist} == 1]
  jede Revision
 endif::[]
