@@ -19,7 +19,7 @@ endif::[]
 |Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
 
 |Unterstützte LLM-Provider |Mehrere: z.B. OpenAI via Azure, AWS Bedrock, Open-Source/selbst gehostete Modelle |Wesentlich Microsoft / Azure |OpenAI (ggf. plus vereinzelte Partner-Integrationen)
-|Herstellerunabhängigkeit |Hoch – freie Wahl und Kombination verschiedener Provider|Niedrig – stark an Microsoft-Stack gebunden |Niedrig – an OpenAI-Ökosystem gebunden
+|Herstellerunab-hängigkeit |Hoch – freie Wahl und Kombination verschiedener Provider|Niedrig – stark an Microsoft-Stack gebunden |Niedrig – an OpenAI-Ökosystem gebunden
 |Wechsel auf europäische LLMs| Ja, z.B. Mistral |Nur, wenn MS diese anbietet |Nur, wenn OpenAI entsprechende Modelle anbietet
 |Fallback bei Störungen |Ja, Wechsel auf alternative LLMs möglich |Eher nein, abhängig von Azure/Microsoft |Eher nein, abhängig von OpenAI
 |===
