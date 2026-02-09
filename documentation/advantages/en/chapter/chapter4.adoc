@@ -9,7 +9,7 @@ endif::[]
 
 *{application}*
 
-*Classic chat interface with:
+* Classic chat interface with:
 ** Text input
 ** Voice input
 ** Document upload as context

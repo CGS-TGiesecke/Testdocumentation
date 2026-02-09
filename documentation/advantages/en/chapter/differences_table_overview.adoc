@@ -1,3 +1,4 @@
+
 === Tabular Comparison ({application}, MS Copilot, ChatGPT (Standalone))
 
 ifeval::[{arc-assist} == 1]

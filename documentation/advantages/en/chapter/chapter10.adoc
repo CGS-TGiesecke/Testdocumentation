@@ -1,3 +1,4 @@
+
 === Summary of Key Advantages
 
 Key advantages of {application} over MS Copilot and ChatGPT:
