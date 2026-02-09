@@ -1,4 +1,3 @@
-
 ifeval::[{cgs-assist} == 1]
 image::../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architektur, title="Entwurf IT-Architektur der Komponenten im CGS Assist", width="500"]
 endif[]
