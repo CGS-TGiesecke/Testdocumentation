@@ -6,14 +6,12 @@ ifeval::[{arc-assist} == 1]
 image::../../themes/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
-
-
 === Contact
 
 ifeval::[{cgs-assist} == 1]
 include::../../../export-styles/cgs-disclaimer-en.adoc[] 
-endif::[]	
+endif::[]
 
 ifeval::[{arc-assist} == 1]
 include::../../../export-styles/arc-disclaimer-en.adoc[] 
-endif::[]	
+endif::[]
