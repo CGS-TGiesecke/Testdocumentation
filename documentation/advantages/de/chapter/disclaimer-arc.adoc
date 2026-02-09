@@ -1,0 +1,7 @@
+
+**Kontakt**
+
+include::../../../export-styles/arc-disclaimer.adoc[] 
+
+image::../../themes/arc_logo.png[Firmenlogo,align=right, width=120]
+

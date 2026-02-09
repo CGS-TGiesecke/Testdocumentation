@@ -41,20 +41,24 @@ endif::[]
 |Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
 
 |Klassische Chat-Oberfläche |Ja (inkl. Voice-Eingabe & Dokument-Upload) |Ja, in Office-Kontext integriert |Ja
-|Formularbasierte Use Cases |Ja, fertige Formulare für Kunden
+|Formularbasierte Use Cases 
+|Ja, fertige Formulare für Kunden
 ifeval::[{arc-assist} == 1]
 Audit-
 endif[]
 Use-Cases
+
 |Nein |Nein
 |Bedarf an Prompting-Know-how| Gering – Standard-Use-Cases über Formulare nutzbar |Mittel – Qualität hängt stark von Prompts ab |Mittel bis hoch – reine Prompt-Nutzung
 |Standardisierung der Ergebnisse|Hoch – zentrale Systemprompts und Use-Case-Vorlagen |Gering – individuelle Nutzung|Gering – individuelle Nutzung
 |Sternebewertung von Use Cases|Ja (Qualitätsfeedback integriert) |Nein|Nein
+
 |Übernahme von
 ifeval::[{arc-assist} == 1]
 Audit-
 endif[] 
 Use-Case-Ergebnissen in Chat
+
 |Ja, nahtlos als Kontext weiter nutzbar |Nur manuell durch Copy/Paste|Nur manuell durch Copy/Paste
 |===
 
@@ -80,31 +84,39 @@ Use-Case-Ergebnissen in Chat
 |Umfassender Admin-Bereich 
 |Ja, 
 ifeval::[{arc-assist} == 1]
-Revisionsspezifisch
+ Revisionsspezifisch
 endif[] 
-|Ja, aber generisch (M365 Admin Center)|Eingeschränkt (v.a. Organisations-einstellungen)
+
+|Ja, aber generisch (M365 Admin Center) | Eingeschränkt (v.a. Organisations-einstellungen)
+
 |Nutzer- & Rollenmanagement 
 |Ja, mit 
 ifeval::[{arc-assist} == 1]
-revisionsspezifischer
-endif[]
+ revisionsspezifischer
+endif::[]
 ifeval::[{cgs-assist} == 1]
-kundenspezifischer 
-endif[]
-Rollenlogik
-|Ja, aber nicht auf RAG/Kunde zugeschnitten |Beschränkt (v.a. Organisation vs. Nutzer)
+ kundenspezifischer 
+endif::[]
+ Rollenlogik
+
+|Ja, aber nicht auf RAG/Kunde zugeschnitten | Beschränkt (v.a. Organisation vs. Nutzer)
+
 |Rollenbasierter Zugriff auf RAG-Ordner
 | Ja (für alle 
 ifeval::[{arc-assist} == 1]
  kodierten Audit-Use-Cases
-endif[]
+endif::[]
 ifeval::[{cgs-assist} == 1]
  kodierten Standard-Use-Cases) 
-endif::
-|Nein (Prompts dezentral bei Nutzern) |Nein (Prompts beim einzelnen User)
-|Konfiguration von KI-Providern/LLMs|Ja, inkl. API-Keys für mehrere Provider|Nein, primär Microsoft-eigene Modelle|Nein, gebunden an OpenAI
-|Use-Case-Management|Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik)|Nein|Nein
-|Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht Kundenspezifisch)
+endif::[]
+
+|Nein (Prompts dezentral bei Nutzern) | Nein (Prompts beim einzelnen User)
+
+|Konfiguration von KI-Providern/LLMs | Ja, inkl. API-Keys für mehrere Provider | Nein, primär Microsoft-eigene Modelle | Nein, gebunden an OpenAI
+
+|Use-Case-Management | Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik) | Nein | Nein
+
+|Lizenzverwaltung | Ja (via Lizenz-File) | Ja (MS-Lizenzmodell, aber generisch) | Ja (Account-/Plan-basiert, nicht Kundenspezifisch)
 |===
 
 ===== Pflegeaufwand & Weiterentwicklung
@@ -119,11 +131,14 @@ endif::[]
 ifeval::[{cgs-assist} == 1]
  Use-Cases
 endif::[]
+
 |Zentral durch {author} 
 ifeval::[{arc-assist} == 1]
  und in Kooperation mit Internen Revisionen
 endif::[]
+
 |Durch Kunde selbst |Durch Kunde selbst
+
 |Laufende Optimierung 
 ifeval::[{arc-assist} == 1]
  Audit-Use-Cases
@@ -131,6 +146,7 @@ endif::[]
 ifeval::[{cgs-assist} == 1]
  Use-Cases
 endif::[]
+
 |Ja, zentral und für alle Kunden|Nur wenn der Kunde intern optimiert |Nur wenn der Kunde intern optimiert
 |Notwendigkeit eigener Entwickler |Nicht erforderlich für Standardnutzung|Oft notwendig für komplexere Automatisierungen/Integrationen |Oft notwendig für Integration in Prozesse
 |Skaleneffekte| Sehr hoch – Weiterentwicklungen kommen allen Kunden zugute |Gering – jeder Kunde optimiert für sich |Gering – jeder Kunde optimiert für sich
