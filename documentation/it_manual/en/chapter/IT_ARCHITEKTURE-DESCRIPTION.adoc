@@ -1,4 +1,11 @@
-image::.../../IT-Komponenten-2026-01-30.jpg[IT-Architecture, title=" IT-Architecture componets Assist", width="500"]
+
+ifeval::[{cgs-assist} == 1]
+image::.../../IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title=" IT-Architecture componets CGS Assist", width="500"]
+endif[]
+
+ifeval::[{arc-assist} == 1]
+image::.../../IT-Komponenten-ARC-2026-02-09.jpg[IT-Architecture, title=" IT-Architecture componets AI Audit Assist", width="500"]
+endif[]
 
 *Customer:*
 

@@ -1,0 +1,51 @@
+=== Strukturierte Benutzeroberfläche statt „Prompting-Kunst“
+
+ifeval::[{arc-assist} == 1]
+==== AI Chat – flexibler Expertenmodus
+endif::[]
+ifeval::[{cgs-assist} == 1]
+==== KI Chat – flexibler Expertenmodus
+endif::[]
+
+*{application}*
+
+* Klassische Chat-Oberfläche mit:
+** Texteingabe
+** Voice-Eingabe
+** Dokumenten-Upload als Kontext.
+* Auswahl des gewünschten LLM pro Anfrage.
+* Auswahl spezieller Agenten per Drop-down.
+*RAG-Toggle:
+** RAG ein/aus schaltbar
+** Anzeige der Top-8 Embeddings inkl. Quellenlinks zur direkten Verifizierung
+** Eingrenzung auf ein bestimmtes Quelldokument (statt gesamtes RAG).
+
+*MS Copilot / ChatGPT*
+
+* Chat-Oberflächen vorhanden, aber ohne:
+** kundenspezifische Agenten
+** fein steuerbare RAG-Nutzung mit transparenten Quellen-Embeddings
+** Auswahl verschiedener LLMs in einer Oberfläche.
+
+==== Use Cases – Formularbasierte Standardanwendungsfälle
+
+*{application}*
+
+* Vorkonfigurierte Use Cases als Formulare, die jeder Mitarbeitende ohne KI-Know-how ausfüllen kann.
+* Formularfelder befüllen zentral hinterlegte Systemprompts (Lückentext mit Variablen).
+* Vorteile:
+** Sehr gute Ergebnisse ohne Prompting-Erfahrung.
+** Hohe Standardisierung der Ergebnisse (alle nutzen denselben zentralen Prompt).
+** Einfache Sternebewertung der Use Cases zur Qualitätskontrolle und Weiterentwicklung.
+* Ergebnisse können direkt in den Chat übernommen werden, um sie weiter zu verfeinern.
+* Einführung von KI ohne umfangreiche Prompting-Schulungen; schnelle Erfolgserlebnisse für ungeübte Nutzer.
+
+*MS Copilot / ChatGPT*
+
+* Nutzer müssen selbst Prompts formulieren.
+* Keine einheitliche, institutionalisierte Prompt-Logik.
+* Schulungsaufwand für Mitarbeitende, um reproduzierbar gute Ergebnisse zu erzielen.
+* Ergebnisqualität und -standard variieren stark zwischen Personen.
+
+[.highlight]#*Mehrwert in einem Satz:* {application} senkt die Einstiegshürde massiv und schafft standardisierte, 
+reproduzierbare Ergebnisse – unabhängig von der Prompting-Kompetenz der Mitarbeitenden.#

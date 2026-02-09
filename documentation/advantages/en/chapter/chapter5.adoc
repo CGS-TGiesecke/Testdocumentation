@@ -1,0 +1,31 @@
+=== Automation / Agenten – periodische und zeitgesteuerte KI-Aufgaben
+
+*{application}*
+
+* Eigener Bereich für Agenten-Use-Cases:
+** Konfiguration, ob Aufgaben zu bestimmten Zeitpunkten oder periodisch ausgeführt werden.
+** Ausführliche Konfigurationsmöglichkeiten (Zeitpläne, Intervalle etc.).
+** Monitoring: Statuskontrolle, ob Agenten erfolgreich durchgelaufen sind.
+** Einsicht in die Ergebnisse der Agenten.
+
+ifeval::[{product-theme} == 'ARC']
+Typische Anwendungsszenarien in der Revision:
+
+* Regelmäßige Auswertung von Risikoberichten.
+* Periodische Analyse von Maßnahmenumsetzungsständen.
+* Wiederkehrende Zusammenfassung von neuen Richtlinien/Dokumenten.
+endif::[]
+
+*MS Copilot / ChatGPT*
+
+* In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
+ifeval::[{cgs-assist} == 1]
+ Aufgaben.
+endif::[]
+ifeval::[{arc-assist} == 1]
+ Revisionsaufgaben.
+endif::[]
+* Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.
+
+[.highlight]#*Mehrwert in einem Satz:* {application} macht aus KI einmalige Abfragen und dauerhafte, planbare Agenten – 
+ohne dass der Benutzer selbst technische Automatisierungslösungen bauen muss.#

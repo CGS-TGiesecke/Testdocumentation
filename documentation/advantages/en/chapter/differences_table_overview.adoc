@@ -1,0 +1,97 @@
+=== Tabellarische Gegenüberstellung ({application}, MS Copilot, ChatGPT (Standalone))
+
+ifeval::[{arc-assist} == 1]
+===== Strategische Ausrichtung & fachlicher Fokus
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Grundausrichtung |Speziallösung für Interne Revision |Produktivitäts-Suite im MS-Ökosystem |Generelles KI-Dialogsystem
+|Fokus auf Interne Revision |Ja, durchgängig |Nein, nur generische Funktionen |Nein, nur generische Funktionen
+|Fachlich kuratierte Use Cases| Ja, durch {author} |Nein |Nein
+|Unterstützung des gesamten Revisionszyklus |Ja (Risikobewertung bis Maßnahmenverfolgung) |Nur indirekt über Nutzer-Prompts |Nur indirekt über Nutzer-Prompts
+|===
+endif::[]
+
+===== LLM-Auswahl & Herstellerunabhängigkeit
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Unterstützte LLM-Provider |Mehrere: z.B. OpenAI via Azure, AWS Bedrock, Open-Source/selbst gehostete Modelle |Wesentlich Microsoft / Azure |OpenAI (ggf. plus vereinzelte Partner-Integrationen)
+|Herstellerunabhängigkeit |Hoch – freie Wahl und Kombination verschiedener Provider|Niedrig – stark an Microsoft-Stack gebunden |Niedrig – an OpenAI-Ökosystem gebunden
+|Wechsel auf europäische LLMs| Ja, z.B. Mistral |Nur, wenn MS diese anbietet |Nur, wenn OpenAI entsprechende Modelle anbietet
+|Fallback bei Störungen |Ja, Wechsel auf alternative LLMs möglich |Eher nein, abhängig von Azure/Microsoft |Eher nein, abhängig von OpenAI
+|===
+
+===== Betriebsmodell & Datenhoheit
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Betriebsmodell |On-Premise in Kundeninfrastruktur |Cloud-basiert (Microsoft-Cloud/Azure) |Cloud-basiert (OpenAI)
+|Datenspeicherung |Im kundeneigenen Rechenzentrum|In der Cloud des Anbieters |In der Cloud des Anbieters
+|Datenhoheit| Vollständig beim Kunden |Abhängig von Cloud-Verträgen und Region |Abhängig von OpenAI-Verträgen und Region
+|Eignung für hochsensible Daten |Sehr hoch (on-premise, rollenbasiertes RAG) |Eingeschränkt, je nach Compliance-Vorgaben |Eingeschränkt, meist nicht für streng regulierte Bereiche
+|===
+
+===== Benutzererlebnis & Einstiegshürde
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Klassische Chat-Oberfläche |Ja (inkl. Voice-Eingabe & Dokument-Upload) |Ja, in Office-Kontext integriert |Ja
+|Formularbasierte Use Cases |Ja, fertige Formulare für Kunden-Use-Cases|Nein |Nein
+|Bedarf an Prompting-Know-how| Gering – Standard-Use-Cases über Formulare nutzbar |Mittel – Qualität hängt stark von Prompts ab |Mittel bis hoch – reine Prompt-Nutzung
+|Standardisierung der Ergebnisse|Hoch – zentrale Systemprompts und Use-Case-Vorlagen |Gering – individuelle Nutzung|Gering – individuelle Nutzung
+|Sternebewertung von Use Cases|Ja (Qualitätsfeedback integriert) |Nein|Nein
+|Übernahme von Use-Case-Ergebnissen in Chat|Ja, nahtlos als Kontext weiter nutzbar |Nur manuell durch Copy/Paste|Nur manuell durch Copy/Paste
+|===
+
+===== RAG & Dokumentenmanagement
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Integriertes RAG |Ja, speziell für Kundendokumente|Teilweise (über M365/SharePoint-Integration) |Nur über separate, technisch aufwändige Integrationen
+|DMS-ähnliche Dokumentenübersicht |Ja (Filter nach Typ, Quelle, Inhalt, Tags)|Nicht in dieser Form |Nein
+|Upload neuer Dokumente durch Fachnutzer| Ja, ohne KI/RAG-Know-how möglich |Eingeschränkt, abhängig von Umgebung |Nicht ohne zusätzliche Infrastruktur
+|Aktualisierung des RAG per Button|Ja („Refresh“) |Nein (automatische, aber weniger steuerbare Mechanismen)|Nicht ohne Zusatzlösung
+|Löschen einzelner Embeddings|Ja („Ausgewählte Embeddin gs löschen“)|Nein|Nein
+|Anzeige der Embeddings pro Dokument|Ja, Transparenz über RAG-Inhalte |Nein |Nein
+|Quellenverweis in Antworten (Top-Embeddings)|Ja, Top-8 Embeddings inkl. Links zur Originalquelle|Teilweise, aber weniger transparent|Nur wenn der Prompt entsprechend gestaltet wird
+|===
+
+===== Automation & Agenten
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Umfassender Admin-Bereich |Ja|Ja, aber generisch (M365 Admin Center)|Eingeschränkt (v.a. Organisationseinstellungen)
+|Nutzer- & Rollenmanagement |Ja, mit kundenspezifischer Rollenlogik|Ja, aber nicht auf RAG/Kunde zugeschnitten |Beschränkt (v.a. Organisation vs. Nutzer)
+|Rollenbasierter Zugriff auf RAG-Ordner| Ja (für alle Standard-Use-Cases) |Nein (Prompts dezentral bei Nutzern) |Nein (Prompts beim einzelnen User)
+|Konfiguration von KI-Providern/LLMs|Ja, inkl. API-Keys für mehrere Provider|Nein, primär Microsoft-eigene Modelle|Nein, gebunden an OpenAI
+|Use-Case-Management|Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik)|Nein|Nein
+|Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht Kundenspezifisch)
+|===
+
+===== Pflegeaufwand & Weiterentwicklung
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Entwicklungder Use Cases |Zentral durch {author} |Durch Kunde selbst |Durch Kunde selbst
+|Laufende Optimierung der Use Cases |Ja, zentral und für alle Kunden|Nur wenn der Kunde intern optimiert |Nur wenn der Kunde intern optimiert
+|Notwendigkeit eigener Entwickler |Nicht erforderlich für Standardnutzung|Oft notwendig für komplexere Automatisierungen/Integrationen |Oft notwendig für Integration in Prozesse
+|Skaleneffekte| Sehr hoch – Weiterentwicklungen kommen allen Kunden zugute |Gering – jeder Kunde optimiert für sich |Gering – jeder Kunde optimiert für sich
+|===
+
+===== Resilienz & Risikoaspekte
+
+|===
+|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+
+|Umgang mit Ausfällen einzelner LLMs |Fallback auf alternative LLMs durch Mehr-Provider-Setup|Abhängig von Microsoft / Azure |DAbhängig von OpenAI
+|Reduktion geopolitischer Risiken |Ja, durch Nutzung europäischer/selbst gehosteter Modelle möglich|Eingeschränkt|Eingeschränkt
+|Abhängigkeit von einem Anbieter |Gering|Hoch |Hoch
+|===

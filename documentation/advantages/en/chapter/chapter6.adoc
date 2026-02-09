@@ -1,0 +1,26 @@
+=== Dokumentenmanagement & RAG für Kundendokumente
+
+*{application}*
+
+* Eigener Reiter Documents mit DMS-ähnlicher Funktionalität:
+** Filter nach Dokumenttyp (PDF, Excel etc.), Quelle (Netzlaufwerk, SharePoint etc.) und Inhalt.
+** Schlagwortbasierte Suche auf Basis hinterlegter Keywords.
+** Upload-Funktion für neue Dokumente ins RAG – auch ohne technisches Wissen.
+** Aktualisierung des RAG per „Refresh“-Button.
+** Löschen einzelner Dokumente via „Ausgewählte Embeddings löschen“.
+** Anzeige und Prüfung der Embeddings pro Dokument.
+
+Vorteil:
+
+* RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
+
+*MS Copilot / ChatGPT*
+
+* Keine integrierte RAG-DMS-Oberfläche für unternehmensspezifische Dokumentlandschaften.
+* Einbindung von Unternehmensdokumenten ist möglich, aber:
+** weniger granular steuerbar
+** technisch und administrativ komplexer
+** nicht explizit auf Kundenworkflows ausgelegt.
+
+[.highlight]#*Mehrwert in einem Satz:* {application} kombiniert KI mit einem anwendbaren, fachgerechten RAG-Dokumentenmanagement – 
+statt die Benutzer mit der technischen RAG-Implementierung allein zu lassen.#

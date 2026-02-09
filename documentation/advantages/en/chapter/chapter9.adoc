@@ -1,0 +1,22 @@
+=== Resilienz und Verfügbarkeit
+
+*{application}*
+
+* Mehrere LLM-Provider parallel konfigurierbar.
+* Bei Ausfällen einzelner Anbieter (z.B. OpenAI / Azure) kann kurzfristig auf alternative Modelle umgestellt werden.
+* Risiko von Produktivitätsausfällen im Unternehmen wird reduziert.
+
+*MS Copilot / ChatGPT*
+
+* Störungen beim jeweiligen Plattformanbieter führen unmittelbar zu Ausfällen.
+* Keine integrierte Fallback-Strategie auf andere LLMs.
+
+[.highlight]#*Mehrwert in einem Satz:* {application} erhöht die operative Resilienz
+ifeval::[{arc-assist} == 1]
+ der Internen Revision
+endif::[]
+ifeval::[{cgs-assist} == 1]
+ des Unternehmens
+endif::[] 
+gegenüber Störungen bei einzelnen KI-Anbietern.#
+
