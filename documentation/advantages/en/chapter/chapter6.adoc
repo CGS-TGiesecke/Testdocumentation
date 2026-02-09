@@ -1,26 +1,32 @@
-=== Dokumentenmanagement & RAG für Kundendokumente
+=== Document Management & RAG for Customer Documents
 
 *{application}*
 
-* Eigener Reiter Documents mit DMS-ähnlicher Funktionalität:
-** Filter nach Dokumenttyp (PDF, Excel etc.), Quelle (Netzlaufwerk, SharePoint etc.) und Inhalt.
-** Schlagwortbasierte Suche auf Basis hinterlegter Keywords.
-** Upload-Funktion für neue Dokumente ins RAG – auch ohne technisches Wissen.
-** Aktualisierung des RAG per „Refresh“-Button.
-** Löschen einzelner Dokumente via „Ausgewählte Embeddings löschen“.
-** Anzeige und Prüfung der Embeddings pro Dokument.
+* Dedicated Documents tab with DMS-like functionality:
+** Filter by document type (PDF, Excel, etc.), source (network drive, SharePoint, etc.), and content
+** Keyword-based search using stored keywords
+** Upload function for new documents into the RAG – even without technical knowledge
+** Refresh RAG via "Refresh" button
+** Delete individual documents via "Delete selected embeddings"
+** Display and review embeddings per document
 
-Vorteil:
+Advantage:
 
-* RAG-Pflege wird so einfach, dass auch Nutzende ohne KI-Kompetenz das Wissensfundament des Unternehmens aktuell halten können.
+* RAG maintenance becomes so easy that even users without AI expertise can keep the company’s knowledge base,
+ifeval::[{arc-assist} == 1]
+Internal Audit
+endif::[]
+up to date.
 
 *MS Copilot / ChatGPT*
 
-* Keine integrierte RAG-DMS-Oberfläche für unternehmensspezifische Dokumentlandschaften.
-* Einbindung von Unternehmensdokumenten ist möglich, aber:
-** weniger granular steuerbar
-** technisch und administrativ komplexer
-** nicht explizit auf Kundenworkflows ausgelegt.
+* No integrated RAG-DMS interface for company-specific document landscapes
+* Integration of company documents is possible, but:
+** less granular control
+** technically and administratively more complex
+ifeval::[{arc-assist} == 1]
+** not explicitly designed for audit workflows
+endif::[]
 
-[.highlight]#*Mehrwert in einem Satz:* {application} kombiniert KI mit einem anwendbaren, fachgerechten RAG-Dokumentenmanagement – 
-statt die Benutzer mit der technischen RAG-Implementierung allein zu lassen.#
+[.highlight]#*Value in one sentence:* {application} combines AI with a practical, professional RAG document management system –
+instead of leaving users alone with technical RAG implementation.#

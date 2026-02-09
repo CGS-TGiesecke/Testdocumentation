@@ -1,49 +1,50 @@
-=== Zentrale Administration, Rollen, Sicherheit & Governance
+=== Central Administration, Roles, Security & Governance
 
 *{application}*
+
 ifeval::[{cgs-assist} == 1]
-Umfangreicher *Admin-Bereich* speziell für fachlich professionelle Nutzung:
+Comprehensive admin area specifically for professional business use:
 endif::[]
 ifeval::[{arc-assist} == 1]
-Umfangreicher *Admin-Bereich* speziell für professionelle Nutzung in der Internen Revision:
+Comprehensive admin area specifically for professional use in Internal Audit:
 endif::[]
 
-* *Nutzer- und Rollenmanagement*
-** Anlage von Usern und Zuweisung von Rollen.
-** Rollenbasiertes Zugriffsmodell auf RAG-Ordner und Funktionen.
-** Nutzer ohne entsprechende Rolle können weder im RAG noch im Chat Inhalte bestimmter Ordner sehen.
-* *RAG-Strukturverwaltung*
-** Pflege der RAG-Ordner inkl. Zuordnung von Rollen.
-* *Systemprompts zentral verwaltet*
-** Zentrale Pflege der Systemprompts für Standard-Use-Cases.
-** Sicherstellung einer konsistenten „KI-Governance“ (einheitliche Tonalität, Prüflogik, Dokumentationsstandards).
-* *KI-Provider- und Modellkonfiguration*
-** Hinterlegung der API-Keys der verschiedenen Provider (Azure, AWS, Open Source etc.).
-** Auswahl und Verwaltung der verfügbaren LLMs.
-* *Use-Case-Management*
-** Aktivierung/Deaktivierung einzelner Use Cases oder ganzer Cluster per Toggle-Switch.
-** Konfiguration je Use Case:
-*** Default-LLM
-*** Status als automatisierter Use Case (Agent) oder manueller Use Case
-*** Rollen, die den Use Case nutzen dürfen
-*** Statistik/Bewertung (Sterne).
-* *Lizenzverwaltung*
-* Einpflegen der Lizenzen via Lizenz-File.
+* User and role management
+** Creation of users and assignment of roles
+** Role-based access model for RAG folders and functions
+** Users without the appropriate role cannot see content of certain folders in RAG or in chat
+* RAG structure management
+** Maintenance of RAG folders including role assignment
+* Centralized management of system prompts
+** Central maintenance of system prompts for standard use cases
+** Ensures consistent "AI governance" (uniform tone, audit logic, documentation standards)
+* AI provider and model configuration
+** Storing API keys for various providers (Azure, AWS, Open Source etc.)
+** Selection and administration of available LLMs
+* Use case management
+** Activation/deactivation of individual use cases or entire clusters via toggle switch
+** Configuration per use case:
+*** Default LLM
+*** Status as automated use case (agent) or manual use case
+*** Roles allowed to use the use case
+*** Statistics/rating (stars)
+* License management
+** Input of licenses via license file
 
 *MS Copilot / ChatGPT*
 
-* Admin-Funktionalitäten vorhanden, aber:
+* Admin functionalities available, but:
 ifeval::[{product-theme} == 'ARC']
-** nicht spezifisch auf Revisionsprozesse, RAG-Ordner und revisionsspezifische Rollenmodelle zugeschnitten.
-** keine zentrale, fachlich kuratierte Systemprompt-Bibliothek für Revisions-Use-Cases.
+** not specifically tailored to audit processes, RAG folders, and audit-specific role models
+** no central, professionally curated system prompt library for audit use cases
 endif::[]
-** kein dediziertes Use-Case-Lifecycle-Management (Aktivierung, Bewertung, Rollensteuerung).
+** no dedicated use case lifecycle management (activation, rating, role control)
 
-[.highlight]#*Mehrwert in einem Satz:* {application} bietet eine Governance-fähige Administrationsumgebung, die genau
+[.highlight]#*Value in one sentence:* {application} provides a governance-ready administration environment that
 ifeval::[{arc-assist} == 1]
- zur Internen Revision
-endif::[] 
-ifeval::[{cgs-assist} == 1]
- zum Kunden
+fits Internal Audit
 endif::[]
- passt – inklusive Rollen, RAG-Ordnern, Use-Case-Steuerung und KI-Provider-Management.#
+ifeval::[{cgs-assist} == 1]
+fits the customer
+endif::[]
+– including roles, RAG folders, use case management, and AI provider configuration.#

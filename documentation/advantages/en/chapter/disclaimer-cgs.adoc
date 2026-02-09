@@ -1,0 +1,7 @@
+
+image::../../themes/cgs-logo.png[Firmenlogo,align=left, width=120]
+
+=== Contact
+
+include::../../../export-styles/cgs-disclaimer.adoc[] 
+

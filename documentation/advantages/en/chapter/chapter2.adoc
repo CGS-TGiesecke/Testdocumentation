@@ -1,31 +1,29 @@
-=== Herstellerunabhängigkeit und LLM-Flexibilität
+=== Vendor Independence and LLM Flexibility
 
 *{application}*
 
-* Integration unterschiedlicher LLMs über APIs:
-** OpenAI-Modelle via Azure AI Foundry
-** Modelle über AWS Bedrock
-** selbst gehostete Open-Source-Modelle (z.B. europäische Modelle wie Mistral).
-* Freie Wahl und Wechsel der Modelle:
-** Anpassung an fachliche Anforderungen (z.B. Zusammenfassung vs. komplexe Analysen).
-** Möglichkeit, geopolitische Risiken zu reduzieren (z.B. Wechsel auf europäische Modelle).
-** Zukunftssicherheit: heute nicht absehbar, welches Modell in 2 Jahren führend ist – Sie bleiben flexibel.
-* Ausfallsicherheit: Bei Störungen eines LLM-Anbieters kann kurzfristig auf ein anderes Modell umgestellt werden.
+* Integration of various LLMs via APIs:
+** OpenAI models through Azure AI Foundry
+** Models via AWS Bedrock
+** Self-hosted open-source models (e.g., European models like Mistral)
+* Free choice and switching between models:
+** Adaptation to professional requirements (e.g., summarization vs. complex analysis)
+** Option to reduce geopolitical risks (e.g., switching to European models)
+** Future-proof: It is impossible to predict which model will lead in two years – you stay flexible
+* Failover capability: In case of disruptions with one LLM provider, you can quickly switch to another model
 
 *MS Copilot / ChatGPT:*
 
-* Starke Bindung an den jeweiligen Hersteller und dessen Cloud-Stack.
-* Im Falle von Ausfällen (z.B. OpenAI / Azure-Störungen) ist das jeweilige Tool nicht nutzbar.
-* Wechsel auf andere Modelle nur begrenzt oder gar nicht möglich; Abhängigkeit von der Roadmap des Herstellers.
+* Strong ties to the respective vendor and their cloud stack
+* In case of outages (e.g., OpenAI / Azure disruptions), the respective tool is not usable. Dependency on US technology models
+* Switching to other models is limited or not possible at all; dependency on the vendor's roadmap
 
-[.highlight]#*Mehrwert in einem Satz:* {application} macht
+[.highlight]#*Value in one sentence:* {application} makes
 ifeval::[{arc-assist} == 1]
- die Interne Revision
+Internal Audit
 endif::[]
 ifeval::[{cgs-assist} == 1]
- z.B. den Mittelstand
+e.g., medium-sized enterprises
 endif::[]
- unabhängig von einem einzelnen KI-Anbieter und 
-erhöht sowohl Ausfallsicherheit als auch strategische Flexibilität.#
-
+independent from any single AI provider and increases both failover capability and strategic flexibility.#
 

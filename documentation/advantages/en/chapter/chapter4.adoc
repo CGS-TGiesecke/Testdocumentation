@@ -1,51 +1,51 @@
-=== Strukturierte Benutzeroberfläche statt „Prompting-Kunst“
+=== Structured User Interface Instead of "Prompting Arts"
 
 ifeval::[{arc-assist} == 1]
-==== AI Chat – flexibler Expertenmodus
+==== AI Chat – Flexible Expert Mode
 endif::[]
 ifeval::[{cgs-assist} == 1]
-==== KI Chat – flexibler Expertenmodus
+==== AI Chat – Flexible Expert Mode
 endif::[]
 
 *{application}*
 
-* Klassische Chat-Oberfläche mit:
-** Texteingabe
-** Voice-Eingabe
-** Dokumenten-Upload als Kontext.
-* Auswahl des gewünschten LLM pro Anfrage.
-* Auswahl spezieller Agenten per Drop-down.
-*RAG-Toggle:
-** RAG ein/aus schaltbar
-** Anzeige der Top-8 Embeddings inkl. Quellenlinks zur direkten Verifizierung
-** Eingrenzung auf ein bestimmtes Quelldokument (statt gesamtes RAG).
+*Classic chat interface with:
+** Text input
+** Voice input
+** Document upload as context
+* Selection of the desired LLM per request
+* Selection of specific agents via drop-down
+* RAG Toggle:
+** RAG can be switched on/off
+** Display of the top 8 embeddings including source links for direct verification
+** Restriction to a specific source document (instead of the entire RAG)
 
-*MS Copilot / ChatGPT*
+**MS Copilot / ChatGPT**
 
-* Chat-Oberflächen vorhanden, aber ohne:
-** kundenspezifische Agenten
-** fein steuerbare RAG-Nutzung mit transparenten Quellen-Embeddings
-** Auswahl verschiedener LLMs in einer Oberfläche.
+* Chat interfaces are available, but without:
+** customer-specific agents
+** finely controllable RAG usage with transparent source embeddings
+** selection of different LLMs in one interface
 
-==== Use Cases – Formularbasierte Standardanwendungsfälle
+==== Use Cases – Form-Based Standard Applications
 
 *{application}*
 
-* Vorkonfigurierte Use Cases als Formulare, die jeder Mitarbeitende ohne KI-Know-how ausfüllen kann.
-* Formularfelder befüllen zentral hinterlegte Systemprompts (Lückentext mit Variablen).
-* Vorteile:
-** Sehr gute Ergebnisse ohne Prompting-Erfahrung.
-** Hohe Standardisierung der Ergebnisse (alle nutzen denselben zentralen Prompt).
-** Einfache Sternebewertung der Use Cases zur Qualitätskontrolle und Weiterentwicklung.
-* Ergebnisse können direkt in den Chat übernommen werden, um sie weiter zu verfeinern.
-* Einführung von KI ohne umfangreiche Prompting-Schulungen; schnelle Erfolgserlebnisse für ungeübte Nutzer.
+* Pre-configured use cases as easy-to-use forms, which any employee can fill out without AI expertise
+* Form fields populate centrally stored system prompts (fill-in-the-blank with variables)
+* Benefits:
+** Excellent results without prompting experience
+** High standardization of results (everyone uses the same central prompt and achieves consistent quality across teams)
+** Simple star rating for use cases for quality control and continuous improvement
+* Results can be transferred directly to the free expert chat for further refinement
+* Introduction of AI without extensive prompting know-how; quick success even for inexperienced users
 
 *MS Copilot / ChatGPT*
 
-* Nutzer müssen selbst Prompts formulieren.
-* Keine einheitliche, institutionalisierte Prompt-Logik.
-* Schulungsaufwand für Mitarbeitende, um reproduzierbar gute Ergebnisse zu erzielen.
-* Ergebnisqualität und -standard variieren stark zwischen Personen.
+* Users have to formulate prompts themselves
+* No unified, institutionalized prompt logic
+* Significant knowledge transfer effort required for employees to achieve reproducibly good results
+* Result quality and standards vary greatly between individuals
 
-[.highlight]#*Mehrwert in einem Satz:* {application} senkt die Einstiegshürde massiv und schafft standardisierte, 
-reproduzierbare Ergebnisse – unabhängig von der Prompting-Kompetenz der Mitarbeitenden.#
+[.highlight]#*Value in one sentence:* {application} significantly lowers the barrier to entry and creates standardized,
+reproducible results – regardless of employees’ prompting skills.#

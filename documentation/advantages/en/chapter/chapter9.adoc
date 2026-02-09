@@ -1,22 +1,21 @@
-=== Resilienz und Verfügbarkeit
+=== Resilience and Availability
 
 *{application}*
 
-* Mehrere LLM-Provider parallel konfigurierbar.
-* Bei Ausfällen einzelner Anbieter (z.B. OpenAI / Azure) kann kurzfristig auf alternative Modelle umgestellt werden.
-* Risiko von Produktivitätsausfällen im Unternehmen wird reduziert.
+* Multiple LLM providers can be configured in parallel
+* In case of outages of individual providers (e.g., OpenAI / Azure), alternative models can be switched to at short notice
+* The risk of productivity losses in the company is reduced
 
 *MS Copilot / ChatGPT*
 
-* Störungen beim jeweiligen Plattformanbieter führen unmittelbar zu Ausfällen.
-* Keine integrierte Fallback-Strategie auf andere LLMs.
+* Disruptions at the respective platform provider lead directly to outages
+* No integrated fallback strategy to other LLMs
 
-[.highlight]#*Mehrwert in einem Satz:* {application} erhöht die operative Resilienz
+[.highlight]#*Value in one sentence:* {application} increases operational resilience
 ifeval::[{arc-assist} == 1]
- der Internen Revision
+of Internal Audit
 endif::[]
 ifeval::[{cgs-assist} == 1]
- des Unternehmens
-endif::[] 
-gegenüber Störungen bei einzelnen KI-Anbietern.#
-
+of the company
+endif::[]
+against disruptions at individual AI providers.#

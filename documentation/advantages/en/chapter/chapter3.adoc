@@ -1,28 +1,28 @@
-=== On-Premise-Betrieb und Datenhoheit
+=== On-Premise Operation and Data Sovereignty
 
 *{application}*
 
-* Applikation läuft beim Kunden on-premise.
-* Alle Daten bleiben in der Infrastruktur des Kunden.
-* Nur die für eine konkrete Anfrage benötigten Inhalte werden an das konfigurierte LLM übergeben und ggf. kurzzeitig zwischengespeichert.
-* Besonders geeignet für:
-** hochsensible Prüfungsdaten
-** regulierte Branchen (Banken, Versicherungen, öffentliche Verwaltung, kritische Infrastrukturen).
+* The application runs on-premise at the customer’s site.
+* All data remains within the customer’s infrastructure.
+* Only content required for a specific request is passed to the configured LLM and, if necessary, temporarily cached.
+* Especially suitable for:
+** highly sensitive audit data
+** regulated industries (banks, insurance companies, public administration, critical infrastructures)
 
 *MS Copilot / ChatGPT*
 
-* Primär Cloud-basierte Services.
-* Datenverarbeitung findet in den Rechenzentren der Anbieter statt.
-* Abhängigkeit von deren Sicherheits-, Compliance- und Datenverarbeitungsmodellen.
+* Primarily cloud-based services.
+* Data processing takes place in the provider’s data centers.
+* Dependency on the provider’s security, compliance, and data processing models.
 
-[.highlight]#*Mehrwert in einem Satz:* {application} ermöglicht KI-Unterstützung
+[.highlight]#*Value in one sentence:* {application} enables AI support
 ifeval::[{arc-assist} == 1]
- die Interne Revision
+for Internal Audit
 endif::[]
 ifeval::[{cgs-assist} == 1]
- z.B. den Mittelstand
+for example, medium-sized companies
 endif::[]
-, ohne die Datenhoheit aus der Hand zu geben.#
+without relinquishing data sovereignty.#
 
 
 

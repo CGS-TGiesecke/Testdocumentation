@@ -15,7 +15,7 @@ endif::[]
 ** Dokumenten-Upload als Kontext.
 * Auswahl des gewünschten LLM pro Anfrage.
 * Auswahl spezieller Agenten per Drop-down.
-*RAG-Toggle:
+* RAG-Toggle:
 ** RAG ein/aus schaltbar
 ** Anzeige der Top-8 Embeddings inkl. Quellenlinks zur direkten Verifizierung
 ** Eingrenzung auf ein bestimmtes Quelldokument (statt gesamtes RAG).

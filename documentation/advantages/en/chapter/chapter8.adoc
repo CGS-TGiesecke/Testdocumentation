@@ -1,33 +1,37 @@
-=== Zentral gepflegte Use Cases statt eigener Entwicklungsaufwand
+=== Centrally Maintained Use Cases Instead of Internal Development Effort
 
 *{application}*
 
-* Entwicklung, Pflege und Optimierung der Use Cases erfolgt zentral durch das {author}.
-* Kunden müssen:
-** keine eigenen Entwickler beschäftigen, um KI-Use-Cases zu implementieren
-** keine eigene Prompt-Bibliothek aufbauen und pflegen
-** nicht permanent auf Model-Updates, geänderte APIs oder neue fachliche Anforderungen reagieren.
-* Skaleneffekt:
-** Verbesserungen an Use Cases kommen allen Kunden zugute.
-** Fachliches Wissen wird einmal zentral eingearbeitet statt in jedem Unternehmen getrennt.
+* Development, maintenance, and optimization of use cases are handled centrally by {author}
+* Customers do not need to:
+** employ their own developers to implement AI use cases
+** build and maintain their own prompt library
+** continually react to model updates, changed APIs, or new business requirements
+* Scale effect:
+** Improvements to use cases benefit all customers
+** Professional knowledge is integrated centrally once, instead of separately in each company
 
 *MS Copilot / ChatGPT*
 
-* Jede Abteilung muss:
-** Use Cases fachlich definieren
-** selbst in Prompts / Automatisierungen übersetzen
-** selbst testen
-** fortlaufend anpassen und optimieren.
-* Dabei entstehen:
-** erhebliche interne Aufwände
-** Abhängigkeiten von einzelnen Key-Usern
-** hohe Varianz der Ergebnisqualität.
+Each department must:
+** define use cases professionally
+** translate them into prompts/automations themselves
+** test themselves
+** continuously adapt and optimize
+* This leads to:
+** significant internal efforts
+** dependencies on individual key users
+** high variance in result quality
 
-[.highlight]#*Mehrwert in einem Satz:* {application} „industrialisiert“ Use-Cases, sodass
+[.highlight]#*Value in one sentence:* {application} significantly increases productivity and makes quality in the form of
 ifeval::[{arc-assist} == 1]
- jede Revision
+audit
+endif::[]
+use cases "scalable", so that
+ifeval::[{arc-assist} == 1]
+every audit department
 endif::[]
 ifeval::[{cgs-assist} == 1]
- jedes Unternehmen
+every company
 endif::[]
- von zentral entwickelter und gepflegter KI-Expertise profitieren kann, statt selbst Entwickler und Prompt-Spezialisten aufzubauen.#
+can benefit from centrally developed and maintained AI expertise, instead of having to build their own developers and prompt specialists.#

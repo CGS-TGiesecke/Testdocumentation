@@ -1,97 +1,167 @@
-=== Tabellarische Gegenüberstellung ({application}, MS Copilot, ChatGPT (Standalone))
+=== Tabular Comparison ({application}, MS Copilot, ChatGPT (Standalone))
 
 ifeval::[{arc-assist} == 1]
-===== Strategische Ausrichtung & fachlicher Fokus
+===== Strategic Focus & Professional Orientation
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Grundausrichtung |Speziallösung für Interne Revision |Produktivitäts-Suite im MS-Ökosystem |Generelles KI-Dialogsystem
-|Fokus auf Interne Revision |Ja, durchgängig |Nein, nur generische Funktionen |Nein, nur generische Funktionen
-|Fachlich kuratierte Use Cases| Ja, durch {author} |Nein |Nein
-|Unterstützung des gesamten Revisionszyklus |Ja (Risikobewertung bis Maßnahmenverfolgung) |Nur indirekt über Nutzer-Prompts |Nur indirekt über Nutzer-Prompts
+|Basic orientation |Specialized solution for Internal Audit |Productivity suite in the MS ecosystem |General AI dialog platform
+|Focus on Internal Audit |Yes, throughout |No, only generic functions |No, only generic functions
+|Professionally curated use cases| Yes, by {author} |No |No
+|Support for the entire audit cycle |Yes (risk assessment to action tracking) |Only indirectly via user prompts |Only indirectly via user prompts
 |===
 endif::[]
 
-===== LLM-Auswahl & Herstellerunabhängigkeit
+===== LLM Selection & Vendor Independence
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Unterstützte LLM-Provider |Mehrere: z.B. OpenAI via Azure, AWS Bedrock, Open-Source/selbst gehostete Modelle |Wesentlich Microsoft / Azure |OpenAI (ggf. plus vereinzelte Partner-Integrationen)
-|Herstellerunabhängigkeit |Hoch – freie Wahl und Kombination verschiedener Provider|Niedrig – stark an Microsoft-Stack gebunden |Niedrig – an OpenAI-Ökosystem gebunden
-|Wechsel auf europäische LLMs| Ja, z.B. Mistral |Nur, wenn MS diese anbietet |Nur, wenn OpenAI entsprechende Modelle anbietet
-|Fallback bei Störungen |Ja, Wechsel auf alternative LLMs möglich |Eher nein, abhängig von Azure/Microsoft |Eher nein, abhängig von OpenAI
+|Supported LLM providers |Multiple: e.g. OpenAI via Azure, AWS Bedrock, open-source/self-hosted models |Primarily Microsoft / Azure |OpenAI (possibly plus a few partner integrations)
+|Vendor independence |High – free choice and combination of different providers|Low – tightly bound to Microsoft stack |Low – tied to OpenAI ecosystem
+|Switch to European LLMs| Yes, e.g. Mistral |Only if MS offers them |Only if OpenAI offers corresponding models
+|Fallback for outages |Yes, switching to alternative LLMs possible |Rather no, dependent on Azure/Microsoft |Rather no, dependent on OpenAI
 |===
 
-===== Betriebsmodell & Datenhoheit
+===== Operational Model & Data Sovereignty
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Betriebsmodell |On-Premise in Kundeninfrastruktur |Cloud-basiert (Microsoft-Cloud/Azure) |Cloud-basiert (OpenAI)
-|Datenspeicherung |Im kundeneigenen Rechenzentrum|In der Cloud des Anbieters |In der Cloud des Anbieters
-|Datenhoheit| Vollständig beim Kunden |Abhängig von Cloud-Verträgen und Region |Abhängig von OpenAI-Verträgen und Region
-|Eignung für hochsensible Daten |Sehr hoch (on-premise, rollenbasiertes RAG) |Eingeschränkt, je nach Compliance-Vorgaben |Eingeschränkt, meist nicht für streng regulierte Bereiche
+|Operational model |On-premise in customer infrastructure |Cloud-based (Microsoft Cloud/Azure) |Cloud-based (OpenAI)
+|Data storage |In the customer's own data center|In the provider’s cloud |In the provider’s cloud
+|Data sovereignty| Fully with the customer |Dependent on cloud contracts and region |Dependent on OpenAI contracts and region
+|Suitability for highly sensitive data |Very high (on-premise, role-based RAG) |Limited, depending on compliance requirements |Limited, usually not for highly regulated areas
 |===
 
-===== Benutzererlebnis & Einstiegshürde
+===== User Experience & Entry Barrier
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Klassische Chat-Oberfläche |Ja (inkl. Voice-Eingabe & Dokument-Upload) |Ja, in Office-Kontext integriert |Ja
-|Formularbasierte Use Cases |Ja, fertige Formulare für Kunden-Use-Cases|Nein |Nein
-|Bedarf an Prompting-Know-how| Gering – Standard-Use-Cases über Formulare nutzbar |Mittel – Qualität hängt stark von Prompts ab |Mittel bis hoch – reine Prompt-Nutzung
-|Standardisierung der Ergebnisse|Hoch – zentrale Systemprompts und Use-Case-Vorlagen |Gering – individuelle Nutzung|Gering – individuelle Nutzung
-|Sternebewertung von Use Cases|Ja (Qualitätsfeedback integriert) |Nein|Nein
-|Übernahme von Use-Case-Ergebnissen in Chat|Ja, nahtlos als Kontext weiter nutzbar |Nur manuell durch Copy/Paste|Nur manuell durch Copy/Paste
+|Classic chat interface |Yes (incl. voice input & document upload) |Yes, integrated in the Office context |Yes
+|Form-based use cases
+
+|Yes, ready-made forms for customer
+ifeval::[{arc-assist} == 1]
+audit-
+endif::[]
+use cases
+
+|No |No
+|Need for prompting know-how| Low – standard use cases usable via forms |Medium – quality highly depends on prompts |Medium to high – pure prompt usage
+|Standardization of results|High – central system prompts and use case templates |Low – individual usage|Low – individual usage
+|Star rating for use cases|Yes (quality feedback integrated) |No|No
+
+|Transfer of
+ifeval::[{arc-assist} == 1]
+audit-
+endif::[]
+use case results to chat
+
+|Yes, seamlessly usable as context |Only manually via copy/paste|Only manually via copy/paste
 |===
 
-===== RAG & Dokumentenmanagement
+===== RAG & Document Management
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Integriertes RAG |Ja, speziell für Kundendokumente|Teilweise (über M365/SharePoint-Integration) |Nur über separate, technisch aufwändige Integrationen
-|DMS-ähnliche Dokumentenübersicht |Ja (Filter nach Typ, Quelle, Inhalt, Tags)|Nicht in dieser Form |Nein
-|Upload neuer Dokumente durch Fachnutzer| Ja, ohne KI/RAG-Know-how möglich |Eingeschränkt, abhängig von Umgebung |Nicht ohne zusätzliche Infrastruktur
-|Aktualisierung des RAG per Button|Ja („Refresh“) |Nein (automatische, aber weniger steuerbare Mechanismen)|Nicht ohne Zusatzlösung
-|Löschen einzelner Embeddings|Ja („Ausgewählte Embeddin gs löschen“)|Nein|Nein
-|Anzeige der Embeddings pro Dokument|Ja, Transparenz über RAG-Inhalte |Nein |Nein
-|Quellenverweis in Antworten (Top-Embeddings)|Ja, Top-8 Embeddings inkl. Links zur Originalquelle|Teilweise, aber weniger transparent|Nur wenn der Prompt entsprechend gestaltet wird
+|Integrated RAG |Yes, specifically for customer documents|Partially (via M365/SharePoint integration) |Only via separate, technically demanding integrations
+|DMS-like document overview |Yes (filter by type, source, content, tags)|Not in this form |No
+|Upload new documents by business users| Yes, possible without AI/RAG expertise |Limited, depending on environment |Not without additional infrastructure
+|RAG refresh by button|Yes ("Refresh") |No (automated, but less controllable mechanisms)|Not without additional solution
+|Delete individual embeddings|Yes ("Delete selected embeddings")|No|No
+|Display embeddings per document|Yes, transparency over RAG contents |No |No
+|Source reference in answers (top embeddings)|Yes, top 8 embeddings incl. links to the original source|Partially, but less transparent|Only if the prompt is correspondingly designed
 |===
 
-===== Automation & Agenten
+===== Automation & Agents
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Umfassender Admin-Bereich |Ja|Ja, aber generisch (M365 Admin Center)|Eingeschränkt (v.a. Organisationseinstellungen)
-|Nutzer- & Rollenmanagement |Ja, mit kundenspezifischer Rollenlogik|Ja, aber nicht auf RAG/Kunde zugeschnitten |Beschränkt (v.a. Organisation vs. Nutzer)
-|Rollenbasierter Zugriff auf RAG-Ordner| Ja (für alle Standard-Use-Cases) |Nein (Prompts dezentral bei Nutzern) |Nein (Prompts beim einzelnen User)
-|Konfiguration von KI-Providern/LLMs|Ja, inkl. API-Keys für mehrere Provider|Nein, primär Microsoft-eigene Modelle|Nein, gebunden an OpenAI
-|Use-Case-Management|Ja (Cluster, An/Aus per Toggle, Default-LLM, Rollen, Bewertungsstatistik)|Nein|Nein
-|Lizenzverwaltung|Ja (via Lizenz-File)|Ja (MS-Lizenzmodell, aber generisch)|Ja (Account-/Plan-basiert, nicht Kundenspezifisch)
+|Comprehensive admin area
+
+|Yes,
+ifeval::[{arc-assist} == 1]
+audit-specific
+endif::[]
+
+|Yes, but generic (M365 Admin Center) | Limited (mainly organizational settings)
+
+|User & role management
+
+|Yes, with
+ifeval::[{arc-assist} == 1]
+audit-specific
+endif::[]
+ifeval::[{cgs-assist} == 1]
+customer-specific
+endif::[]
+role logic
+
+|Yes, but not tailored to RAG/customer | Limited (mainly organization vs. user)
+
+|Role-based access to RAG folders
+
+| Yes (for all
+ifeval::[{arc-assist} == 1]
+encoded audit use cases)
+endif::[]
+ifeval::[{cgs-assist} == 1]
+encoded standard use cases)
+endif::[]
+
+|No (prompts decentralized for users) | No (prompts per individual user)
+
+|Configuration of AI providers/LLMs | Yes, incl. API keys for multiple providers | No, primarily Microsoft-owned models | No, tied to OpenAI
+
+|Use case management | Yes (cluster, on/off via toggle, default LLM, roles, rating statistics) | No | No
+
+|License management | Yes (via license file) | Yes (MS license model, but generic) | Yes (account/plan-based, not customer-specific)
 |===
 
-===== Pflegeaufwand & Weiterentwicklung
+===== Maintenance & Ongoing Development
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Entwicklungder Use Cases |Zentral durch {author} |Durch Kunde selbst |Durch Kunde selbst
-|Laufende Optimierung der Use Cases |Ja, zentral und für alle Kunden|Nur wenn der Kunde intern optimiert |Nur wenn der Kunde intern optimiert
-|Notwendigkeit eigener Entwickler |Nicht erforderlich für Standardnutzung|Oft notwendig für komplexere Automatisierungen/Integrationen |Oft notwendig für Integration in Prozesse
-|Skaleneffekte| Sehr hoch – Weiterentwicklungen kommen allen Kunden zugute |Gering – jeder Kunde optimiert für sich |Gering – jeder Kunde optimiert für sich
+|Development of
+ifeval::[{arc-assist} == 1]
+audit use cases
+endif::[]
+ifeval::[{cgs-assist} == 1]
+use cases
+endif::[]
+
+|Centrally by {author}
+ifeval::[{arc-assist} == 1]
+and in cooperation with Internal Audit teams
+endif::[]
+
+|By customer themselves |By customer themselves
+
+|Ongoing optimization
+ifeval::[{arc-assist} == 1]
+audit use cases
+endif::[]
+ifeval::[{cgs-assist} == 1]
+use cases
+endif::[]
+
+|Yes, centrally and for all customers|Only if customer optimizes internally |Only if customer optimizes internally
+|Need for own developers |Not required for standard usage|Often necessary for more complex automations/integrations |Often necessary for integration into processes
+|Scale effects| Very high – further developments benefit all customers |Low – each customer optimizes separately |Low – each customer optimizes separately
 |===
 
-===== Resilienz & Risikoaspekte
+===== Resilience & Risk Aspects
 
 |===
-|Kriterium |{application} |MS Copilot|ChatGPT (Standalone)
+|Criterion |{application} |MS Copilot|ChatGPT (Standalone)
 
-|Umgang mit Ausfällen einzelner LLMs |Fallback auf alternative LLMs durch Mehr-Provider-Setup|Abhängig von Microsoft / Azure |DAbhängig von OpenAI
-|Reduktion geopolitischer Risiken |Ja, durch Nutzung europäischer/selbst gehosteter Modelle möglich|Eingeschränkt|Eingeschränkt
-|Abhängigkeit von einem Anbieter |Gering|Hoch |Hoch
+|Handling of single LLM outages |Fallback to alternative LLMs through multi-provider setup|Dependent on Microsoft / Azure |Dependent on OpenAI
+|Reduction of geopolitical risks |Yes, possible by using European/self-hosted models|Limited, US companies|Limited, US companies
+|Dependency on a single LLM provider |Low|High |High
 |===

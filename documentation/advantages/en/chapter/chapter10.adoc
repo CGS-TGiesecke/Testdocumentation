@@ -1,54 +1,56 @@
-=== Zusammenfassung der Kernvorteile
+=== Summary of Key Advantages
 
-Kernvorteile des {application} gegenüber MS Copilot und ChatGPT:
+Key advantages of {application} over MS Copilot and ChatGPT:
 
 ifeval::[{arc-assist} == 1]
-*Fachspezialisierung:*
+*Professional Specialization:*
 
-* Speziell für Interne Revision mit sofort nutzbaren, revisionsspezifischen Use Cases.
-* Fachlich kuratiert durch das ARC Institute (Dr. Förschler).
-endif::[] 
+* Designed specifically for Internal Audit with immediately usable, audit-specific use cases
+* Professionally curated by the ARC Institute, years of audit methodology expertise
+endif::[]
 
-*Herstellerunabhängigkeit:*
+*Vendor Independence:*
 
-* Mehrere LLMs (Azure/OpenAI, AWS Bedrock, Open Source, europäische Modelle wie Mistral).
-* Wechselmöglichkeit bei geopolitischen Risiken oder Ausfällen.
+* Multiple LLMs (Azure/OpenAI, AWS Bedrock, Open Source, European models like Mistral)
+* Option to switch in case of geopolitical risks or outages
 
-*On-Premise und Datenhoheit:*
+*On-Premise and Data Sovereignty:*
 
-* Betrieb in der Kundeninfrastruktur.
-* Sensible Unternehmensdaten bleiben intern.
+* Operation within customer infrastructure
+* Sensitive company data remains internal
 
-*Niedrige Einstiegshürde:*
+*Low Entry Barrier:*
 
-* Formularbasierte Use Cases statt komplexem Prompting.
-* Standardisierte, reproduzierbare Ergebnisse, unabhängig vom Nutzer.
+* Form-based use cases instead of complex prompting
+* Standardized, reproducible results, independent of the user
 
-*Automatisierung mit Agenten:*
+*Automation with Agents:*
 
-* Zeit- und periodengesteuerte KI-Use Cases.
-* Monitoring und Ergebnisübersicht integriert.
+* Time and period-based AI use cases
+* Integrated monitoring and results overview
 
-*Integriertes RAG-Dokumentenmanagement:*
+*Integrated RAG Document Management:*
 
-* DMS-artige Pflege der Kundendokumente (Filter, Tags, Upload, Delete, Refresh).
-* Transparente Quellen-Embeddings und Verifizierbarkeit.
+* DMS-like maintenance of customer documents (filter, tags, upload, delete, refresh)
+* Transparent source embeddings and verifiability
 
-*Governance & Rollen:*
+*Governance & Roles:*
 
-* Feingranulares Rollen- und Ordnerkonzept für das RAG.
-* Zentrale Pflege von Systemprompts, LLM-Providern und Use Cases.
+* Fine-grained role and folder concept for RAG
+* Centralized maintenance of system prompts, LLM providers, and use cases
 
-*Geringer Pflegeaufwand:*
+*Low Maintenance Effort:*
 
-* Zentrale Weiterentwicklung und Optimierung der Use Cases durch {author}.
-* Kein Bedarf an eigenen KI-Entwicklern im Unternehmen.
+* Central ongoing development and optimization of use cases by {author}
+* No need for in-house AI developers in the company
 
-*Resilienz:*
+*Resilience:*
 
-* Fallback auf alternative LLMs bei technischen Störungen eines Anbieters.
+* Fallback to alternative LLMs in case of technical disruptions of a provider
 
-
-[.highlight]#*Fazit:* {application} ist keine generische KI-Plattform, sondern eine unternehmensspezifische, 
-on-premise fähige, herstellerunabhängige Lösung, die Fach-Know-how, Governance und technische Flexibilität 
-kombiniert und gleichzeitig den internen Pflege- und Entwicklungsaufwand der Benutzer massiv reduziert.#
+[.highlight]#*Conclusion:* {application} is not a generic AI platform, but a
+ifeval::[{arc-assist} == 1]
+revision and
+endif::[]
+company-specific, on-premise capable, vendor-independent solution that combines professional know-how, governance, 
+and technical flexibility, while massively reducing internal maintenance and development effort for users.#

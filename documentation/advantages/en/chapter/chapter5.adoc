@@ -1,31 +1,31 @@
-=== Automation / Agenten – periodische und zeitgesteuerte KI-Aufgaben
+=== Automation / Agents – Periodic and Scheduled AI Tasks
 
 *{application}*
 
-* Eigener Bereich für Agenten-Use-Cases:
-** Konfiguration, ob Aufgaben zu bestimmten Zeitpunkten oder periodisch ausgeführt werden.
-** Ausführliche Konfigurationsmöglichkeiten (Zeitpläne, Intervalle etc.).
-** Monitoring: Statuskontrolle, ob Agenten erfolgreich durchgelaufen sind.
-** Einsicht in die Ergebnisse der Agenten.
+* Dedicated area for agent use cases:
+** Configuration whether tasks are executed at specific times or periodically
+** Extensive configuration options (schedules, intervals, etc.)
+** Monitoring: status check whether agents have run successfully
+** Access to agent results
 
 ifeval::[{product-theme} == 'ARC']
-Typische Anwendungsszenarien in der Revision:
+Typical application scenarios in audit:
 
-* Regelmäßige Auswertung von Risikoberichten.
-* Periodische Analyse von Maßnahmenumsetzungsständen.
-* Wiederkehrende Zusammenfassung von neuen Richtlinien/Dokumenten.
+* Regular evaluation of risk reports
+* Periodic analysis of implementation status for actions
+* Recurring summary of new policies/documents
 endif::[]
 
 *MS Copilot / ChatGPT*
 
-* In der Standardnutzung keine native, fachlich vordefinierte Agentenplattform für zeitgesteuerte
+* In standard usage, no native, professionally predefined agent platform for scheduled
 ifeval::[{cgs-assist} == 1]
- Aufgaben.
+tasks
 endif::[]
 ifeval::[{arc-assist} == 1]
- Revisionsaufgaben.
+audit tasks
 endif::[]
-* Automatisierungen müssen individuell in anderen Tools/Skripten umgesetzt und orchestriert werden.
+* Automations must be individually implemented and orchestrated in other tools/scripts
 
-[.highlight]#*Mehrwert in einem Satz:* {application} macht aus KI einmalige Abfragen und dauerhafte, planbare Agenten – 
-ohne dass der Benutzer selbst technische Automatisierungslösungen bauen muss.#
+[.highlight]#*Value in one sentence:* {application} turns one-time queries into persistent, plannable agents –
+without the user having to build technical automation solutions themselves.#

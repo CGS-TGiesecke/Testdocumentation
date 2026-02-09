@@ -24,28 +24,27 @@ include::chapter/chapter1.adoc[]
 endif::[]
 
 include::chapter/chapter2.adoc[]
-
 include::chapter/chapter3.adoc[]
-
 include::chapter/chapter4.adoc[]
-
 include::chapter/chapter5.adoc[]
-
 include::chapter/chapter6.adoc[]
-
 include::chapter/chapter7.adoc[]
-
 include::chapter/chapter8.adoc[]
-
 include::chapter/chapter9.adoc[]
-
 include::chapter/chapter10.adoc[]
 
 ifeval::[{big-output} == 1]
 include::chapter/differences_table_overview.adoc[]
 endif::[]
 
+ifeval::[{arc-assist} == 1]
+include::chapter/disclaimer-arc.adoc[]
+endif::[]
 
 <<<
 
-include::chapter/disclaimer.adoc[]
+ifeval::[{cgs-assist} == 1]
+include::chapter/disclaimer-cgs.adoc[]
+endif::[]
+
+
