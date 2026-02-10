@@ -2,6 +2,7 @@
 
 contains it-handbook in assciidoc for build. 
 The related action can start manually to build pdf, html, docx from assciidoc file.
+IT handbook here in German and English by selected script.
 
 *Before start:*
 
@@ -10,6 +11,8 @@ The related action can start manually to build pdf, html, docx from assciidoc fi
 *Note:*
 
 - The warning messages about "section title out of sequence:" on build are intentional and can be ignored.
+
+
 
 
 
