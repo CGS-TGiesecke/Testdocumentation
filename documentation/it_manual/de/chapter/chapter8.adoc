@@ -2,7 +2,7 @@
 
 ==== IT-Architektur
 
-include::IT_ARCHITEKTURE-DESCRIPTION.adoc[]
+include::IT-Architektur.adoc[]
 
 ==== Versionshistorie Dokument
 
@@ -10,7 +10,8 @@ include::IT_ARCHITEKTURE-DESCRIPTION.adoc[]
 |===
 | Datum 		|Bearbeiter | Änderung 
 
-| 30.01.2026 	|cgs 		| Initiale Erstellung 
+| 30.01.2026 	|{author}		| Initiale Erstellung 
+| 10.02.2026 	|{author} 		| Änderung Inhalt 
 | 				|  			|  
 |===
 
