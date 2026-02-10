@@ -6,7 +6,7 @@ ifeval::[{arc-assist} == 1]
 image::../../themes/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
-=== Contact
+=== Kontakt
 
 ifeval::[{cgs-assist} == 1]
 include::../../../export-styles/cgs-disclaimer.adoc[] 
