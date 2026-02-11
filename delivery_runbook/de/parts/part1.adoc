@@ -199,6 +199,7 @@ Erfahrungsaustausch, neue Use-Cases, regelmäßige Reviews.
 Anpassung der Corporate Identity im Produkt (z. B. CGS/ARC Version im docker compose setzen).
 
 Modul-Konfiguration:
+
 * LLM API: Provider & Modelle konfigurieren
 * RAG API: Vector Store & Embeddings einrichten
 * Workflow Engine: Automationen einrichten
@@ -207,13 +208,7 @@ Modul-Konfiguration:
 === Troubleshooting und Fehlerbehebung
 
 Häufige Probleme & Lösungen:
-```
-Services starten nicht:
-docker-compose logs xxx_assist
-docker-compose restart xxx_assist
-docker-compose down
-docker-compose up -d
-```
+
 * Datenbank: DATABASE_URL prüfen, Datenbank-Container läuft, Netzwerk-Konnektivität.
 * Lizenz-Probleme: Lizenzdatei vorhanden, nicht abgelaufen, korrekte Module.
 * Performance: RAM/CPU erhöhen, Celery Worker skalieren, Redis optimieren, DB-Indizes prüfen.
@@ -227,6 +222,7 @@ Admin- und Endnutzer-Training, Q&A Sessions, Demo/Dokumentation durchgehen.
 ==== Dokumentation
 
 Bereitstellung: 
+
 * DEPLOYMENT_GUIDE.md
 * QUICK_START_ONBOARDING.md
 * ONBOARDING_TEMPLATE_SETUP.md.
