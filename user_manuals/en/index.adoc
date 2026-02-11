@@ -7,9 +7,9 @@
 :toc-interactive: true
 :toc-mode: offcanvas
 :toc-mode: responsive
-:toc-title: Inhaltsverzeichnis
+:toc-title: Table of Content
 :toclevels: 15
-:figure-caption: Abbildung
+:figure-caption: Figure
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 15
