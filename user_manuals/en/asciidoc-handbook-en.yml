@@ -37,7 +37,7 @@ on:
   
 env:
   FILENAME: 'USER_HANDBOOK_EN'
-  FILEPATH: 'it_manual/en'
+  FILEPATH: 'user_manuals/en'
 
 jobs:
   build:
