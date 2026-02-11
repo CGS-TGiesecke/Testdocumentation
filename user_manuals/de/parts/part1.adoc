@@ -1,0 +1,50 @@
+=== Anwendungsbeschreibung 
+
+Es ist innerhalb von {application}, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
+Dieses Wissen basiert, je nach Einstellung, auf den Inhalten der hinterlegten Dokumente oder einer Cloud. 
+Mit dem Assist können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
+
+Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen das die Anwendung künstliche Intelligenz verwendet, um Inhalte automatisch zu generieren. 
+Da die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann, wird der Nutzer gebeten die Ergebnisse sorgfältig zu prüfen.
+Dieser Hinweis muss bestätigt werden, um den Assist weiter nutzen zu können.
+
+image::../images/Abbildung-47.jpg[Navigationsbereich - KI Bestätigung, title="Navigationsbereich - KI Bestätigung", width=400]
+
+Bestimmte regelmäßige Anwendungsfälle werden im Assist als Templates verwaltet, um Routinen zu vereinfachen. Die Anwendungsfälle sind mit Use Cases wie eine Art Checkliste erstellt.
+Es können bei entsprechender Berechtigung, mit Hilfe von KI Agents automatisierte Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, genutzt werden.
+
+
+ifdef::cgs-assist[]
+image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
+image:cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
+endif::cgs-assist[]
+
+ifdef::arc-assist[]
+image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
+image:arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
+endif::arc-assist[]
+
+Über eine Navigation am oberen Rand sind die thematisierten Navigationsbereiche erreichbar.
+Je nach Berechtigungen des Anwenders können die Anzahl der Einträge bzw. das Design variieren.
+
+image::../images/Abbildung-1.jpg[Navigationsbereiche, title="Navigationsbereiche", width=400]
+
+Unterseiten dieser Navigationsbereiche sind dann jeweils über die Baumnavigation am linken Rand erreichbar.
+
+image::../images/Abbildung-2.jpg[Navigationsbereich - Baumnavigation, title="Navigationsbereich - Baumnavigation", width=400]
+
+Zusätzlich kann über ein Symbol am rechten oberen Rand die Auswahl der Sprache innerhalb der Anwendung getroffen werden und die Ansicht in den Dark Mode, bzw. wieder zurück, gewechselt werden. 
+Auch können die Profildaten eingesehen werden bzw. eine Änderung des persönlichen Passwortes ist hier möglich.
+
+image::../images/Abbildung-3.jpg[Sprachwechsel und Darkmode, title="Sprachwechsel und Darkmode", width=400]
+
+Innerhalb der gesamtem Anwendung werden beim Ausführen von Aktionen in der oberen linken Ecke farbige Hinweisdialoge angezeigt.
+Die Farben kennzeichnen das Hinweislevel wie folgt:
+
+|===
+|grün	| Erfolgreiche Ausführung der Aktion
+|blau	| Allgemeiner Hinweis über eine Aktion
+|rot	| Fehler bei Ausführung der Aktion
+|=== 
+
+image::../images/Abbildung-confirm.jpg[Hinweise, title="Hinweise", width=400]

@@ -1,0 +1,16 @@
+# Assist-user manuals
+
+User manual in German and English.
+Change these places from "CGS Assist" to "Arc Assist" or vice versa.
+
+*Select the named action in GitHub for "de" or "en"*
+
+Now click the related action to manually start the build.
+Here you can choose the theme. Depending on the theme, some places will be replaced with different text.
+
+image::readme_images/user_manuals_1.jpg[adoc to pdf, width=500]
+
+After the run, the finished artifact can be downloaded here as a ZIP file.
+The ZIP file contains PDF, HTML, and DOCX.
+
+image::readme_images/user_manuals_2.jpg[adoc to pdf, width=500]
