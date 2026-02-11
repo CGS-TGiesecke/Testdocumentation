@@ -30,8 +30,8 @@ on:
 
   
 env:
-  FILENAME: 'USER_MANUAL_DE_'
-  FILEPATH: 'documentation/user_manuals/de'
+  FILENAME: 'USER_MANUAL_DE'
+  FILEPATH: 'user_manuals/de'
 
 jobs:
   build:
@@ -93,7 +93,7 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
+            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -109,20 +109,20 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=documentation/user_manuals/themes \
+           -a pdf-themesdir=user_manuals/themes \
            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH}}/metadata.yml \
             --resource-path=${{ env.FILEPATH}}  \
-            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_V_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-HANDBUCH_DE_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.html
