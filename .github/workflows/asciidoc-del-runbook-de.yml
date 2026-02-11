@@ -116,7 +116,7 @@ jobs:
       - name: AsciiDoc to DOCX via DocBook
         run: |
          asciidoctor -b docbook ${{ env.FILEPATH }}/index.adoc -o ${{ env.FILEPATH }}/index.xml
-         pandoc ${{ env.FILEPATH }}/index.xml \
+         pandoc -f docbook ${{ env.FILEPATH }}/index.xml \
          --metadata-file=${{ env.FILEPATH }}/metadata.yml \
          --resource-path=${{ env.FILEPATH }}/ \
          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
