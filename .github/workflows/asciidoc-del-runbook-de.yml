@@ -113,12 +113,13 @@ jobs:
            -a pdf-themesdir=user_manuals/themes \
            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
 
-      - name: Build DOCX with Pandoc
+      - name: AsciiDoc to DOCX via DocBook
         run: |
-          pandoc -f asciidoc ${{ env.FILEPATH }}/index.adoc \
-            --metadata-file=${{ env.FILEPATH}}/metadata.yml \
-            --resource-path=${{ env.FILEPATH}}  \
-            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+         asciidoctor -b docbook ${{ env.FILEPATH }}/index.adoc -o ${{ env.FILEPATH }}/index.xml
+         pandoc ${{ env.FILEPATH }}/index.xml \
+         --metadata-file=${{ env.FILEPATH }}/metadata.yml \
+         --resource-path=${{ env.FILEPATH }}/ \
+         -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
