@@ -73,10 +73,11 @@ The assignment of documents to the respective folders is performed in the admini
 
 image::../images/Abbildung-33.jpg[Navigation area Documents - tree navigation, title="Navigation area Documents - tree navigation", width=150]
 
-Documents can be downloaded via a button, and the view can be refreshed manually. Since a large number of documents may cause delays, lazy loading has been implemented.
-Therefore, individual embeddings (i.e., partial documents) can be manually loaded using the reload icon.
-At the top, there are filter options to limit the number of results and sorting options by source, ID, and preview. The filter results update as you type.
-Documents—and thus the content of the RAG—can be edited via the edit icon.
+The documents can be downloaded via a button, and the view can be manually refreshed. New documents can be uploaded to the RAG using an upload function, 
+the RAG can be updated via the refresh button, or individual documents can be deleted. Since processing a large number of documents can cause delays, 
+lazy-loading has been implemented. This allows individual embeddings, i.e., document segments, to be manually reloaded using the reload icon. 
+At the top, there are filters to limit the number of results and sorting options by source, ID, and preview. The filter results update as you type. 
+Documents, and thus the contents of the RAG, can be edited using an icon.
 
 |===
 |image:../images/Abbildung-34.jpg[Download File, width=30]| Download File

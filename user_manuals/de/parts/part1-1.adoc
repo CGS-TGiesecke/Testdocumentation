@@ -72,10 +72,11 @@ Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt in der Administrat
 
 image::../images/Abbildung-33.jpg[Navigationsbereich - Dokumente - Baumnavigation, title="Navigationsbereich - Dokumente - Baumnavigation", width=150]
 
-Die Dokumente können über einen Button heruntergeladen werden und manuell die Ansicht aktualisiert werden. Da es bei sehr vielen Dokumenten zu Zeitverzögerungen kommen kann wurde ein Lazy-Loading implementiert.
-Deshalb können über das Reload Icon die einzelnen Embeddings, also Teildokumente, manuel nachgeladen werden. 
-Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau. Die Filterresultate aktualisieren sich bereits während der Eingabe.
-Über Icon können Dokumente und somit die Inhalte des RAG bearbeitet werden werden.
+Die Dokumente können über einen Button heruntergeladen werden und manuell die Ansicht aktualisiert werden. Über eine Hochlade-Funktion können neue Dokumente ins RAG hochgeladen, 
+über den Refresh Button das RAG aktualisiert oder einzelne Dokumente gelöscht werden. Da es bei sehr vielen Dokumenten zu Zeitverzögerungen kommen kann,
+ wurde ein Lazy-Loading implementiert. Dadurch können über das Reload Icon die einzelnen Embeddings, also Teildokumente, manuel nachgeladen werden. 
+Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau. Die Filterresultate aktualisieren 
+sich bereits während der Eingabe. Über Icon können Dokumente und somit die Inhalte des RAG bearbeitet werden werden.
 
 |===
 |image:../images/Abbildung-34.jpg[Dokument herunterladen, width=30]| Dokument herunterladen
