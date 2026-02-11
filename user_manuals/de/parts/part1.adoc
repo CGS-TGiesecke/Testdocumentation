@@ -21,7 +21,6 @@ endif::cgs-assist[]
 
 ifdef::arc-assist[]
 image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
-image:arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
 endif::arc-assist[]
 
 Über eine Navigation am oberen Rand sind die thematisierten Navigationsbereiche erreichbar.
