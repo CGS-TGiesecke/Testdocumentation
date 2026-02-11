@@ -14,13 +14,13 @@ Bestimmte regelmäßige Anwendungsfälle werden im Assist als Templates verwalte
 Es können bei entsprechender Berechtigung, mit Hilfe von KI Agents automatisierte Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, genutzt werden.
 
 
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
 image::cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
-endif::cgs-assist[]
+endif::[]
 
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
-endif::arc-assist[]
+endif::[]
 
 Über eine Navigation am oberen Rand sind die thematisierten Navigationsbereiche erreichbar.
 Je nach Berechtigungen des Anwenders können die Anzahl der Einträge bzw. das Design variieren.
