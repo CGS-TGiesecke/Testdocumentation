@@ -1,50 +1,50 @@
-== Beschreibung
+==== Beschreibung
 
 {application} – Kunden-Delivery Runbook (Fusioniert) beschreibt den vollständigen Ablauf zur Auslieferung, technischen Einrichtung und Übergabe der {application} Plattform beim Kunden – inklusive Troubleshooting, Customization und Trainingsmodulen.
 Fusion aus CUSTOMER_DELIVERY_RUNBOOK.md und CUSTOMER_DEPLOYMENT_PROCESS.md.
 
-== Überblick und Rollen
+==== Überblick und Rollen
 
 * Ticketsystem / E-Mail-Verteiler für technische Themen.
 * Regeltermine (Jour Fixe), Kick-off-Meeting (online/offline).
 * Kommunikation: Beteiligte Rollen beim Kunden & CGS.
 * Ziel: Klarheit, wer in welcher Phase welche Aufgaben übernimmt.
 
-== Phasenmodell der Auslieferung
+==== Phasenmodell der Auslieferung
 
-=== Pre-Sales und Anforderungsaufnahme
+==== Pre-Sales und Anforderungsaufnahme
 * Aufnahme regulatorischer Anforderungen, Use-Cases, Datenquellen, Nutzergruppen.
 * Referenz auf Onboarding-Unterlagen (`QUICK_START_ONBOARDING.md`, Templates).
 * Ergänzung: Module auswählen (LLM, RAG, etc.), Lizenzmodell festlegen.
 
-=== Technische Klärung und Architektur-Workshop
+==== Technische Klärung und Architektur-Workshop
 * Abgleich IT- und Security-Anforderungen/Plattformmöglichkeiten.
 * Hardware-Spezifikationen prüfen (mind. 8 Cores, 16–32GB RAM, 100GB Speicher).
 * Docker/Docker Compose Installation, Port-Freigaben, Firewall, SSL/TLS Zertifikate – analog technischer Requirements.
 
-=== Auswahl des Betriebsmodells
+==== Auswahl des Betriebsmodells
 * SaaS/Cloud, On-Premise, Kubernetes, Hybrid; Entscheidungskriterien: Skalierung, Compliance, interne Prozesse.
 
-== Vorbereitung beim Kunden
+=== Vorbereitung beim Kunden
 
-=== Organisatorische Voraussetzungen
+==== Organisatorische Voraussetzungen
 * Definition von Kommunikationswegen, Ansprechpartner, Freigabeprozesse.
 
-=== Technische Voraussetzungen und IT-Requirements
+==== Technische Voraussetzungen und IT-Requirements
 * Internetzugänge, Netzwerk, Ports, OS, Hardware.
 * Bereitstellung Zielinfrastruktur, Docker-Engine.
 
-=== Lizenzierung und Zugriff auf Images
+==== Lizenzierung und Zugriff auf Images
 * Lizenzdatei generieren, dem Kunden übermitteln und im System hinterlegen (`license/license.json`).
 * Bereitstellung Container-Registry, Lizenzen/Keys, Abschluss Verträge.
 
-== Deployment-Vorbereitung je Betriebsmodell
+=== Deployment-Vorbereitung je Betriebsmodell
 
-=== SaaS / CGS-gehostete Variante
+==== SaaS / CGS-gehostete Variante
 * Kundenseitige Kommunikation & SSO-Integration.
 * CGS: Provisionierung, Logging, Monitoring, Backup.
 
-=== Kunden-VM / Docker Compose
+==== Kunden-VM / Docker Compose
 Schritt-für-Schritt-Anleitung:  
 
 * Anpassen `.env`-Datei, `docker-compose.yaml`, `config.yaml`, `Caddyfile`.
@@ -57,30 +57,30 @@ docker-compose logs -f
 curl http://localhost:8000/health
 ```
 
-=== Kundeneigenes Kubernetes-Cluster
+==== Kundeneigenes Kubernetes-Cluster
 Deployment im Cluster, Anlegen Secrets, ConfigMaps, Ingress/TLS, Namespace/Ressourcen.
 
-=== Hybride Szenarien
+==== Hybride Szenarien
 Kombination von Tenants/Regionen/Datenbank- und Storage-Diensten.
 
-== Test-Deployment (Pilot / Staging)
+=== Test-Deployment (Pilot / Staging)
 
-=== Zielsetzung
+==== Zielsetzung
 Security-, Logging-, Compliance-Check, fachliche/technische Validierung.
 
-=== Durchführung
+==== Durchführung
 End-to-End-Tests, API-Tests, Lasttests, Performance-/Ressourcenmonitoring:
 ```
 docker stats
 curl http://localhost:8000/health
 ```
 
-=== 5.3 Testprotokoll und Abnahme
+==== 5.3 Testprotokoll und Abnahme
 Abnahme durch Kunden, Priorisierung offener Punkte, Dokumentation der Testergebnisse.
 
-== Go-Live
+=== Go-Live
 
-=== Go-Live-Checkliste
+==== Go-Live-Checkliste
 
 Endnutzerkommunikation, Authentifizierung/SSO, Monitoring, Backup, keine kritischen Bugs.
 
@@ -88,25 +88,25 @@ Endnutzerkommunikation, Authentifizierung/SSO, Monitoring, Backup, keine kritisc
 * *Go-Live:* Services starten, Smoke-Tests, Freigabe.
 * *Post-Go-Live:* 24h Monitoring, Feedback sammeln, Metriken prüfen, Support sicherstellen.
 
-=== Umschaltstrategie
+==== Umschaltstrategie
 * Variante 1: Getrennte Test-/Produktion.
 * Variante 2: Test wird zu Produktion.
 
-=== Hypercare-Phase
+==== Hypercare-Phase
 Enges Monitoring, Optimierung, Supportbereitschaft, Zeitraum 2–4 Wochen.
 
-== Übergabe in den Regelbetrieb
+=== Übergabe in den Regelbetrieb
 
-=== Betriebsübergabe an Kunden-IT
+==== Betriebsübergabe an Kunden-IT
 Klärung Supportwege, Vorstellung Betriebsprozesse, Dokumentenübergabe.
 
-=== Wartungs- und Update-Strategie
+==== Wartungs- und Update-Strategie
 Updates, Sicherheits-Patches, Wartungsfenster, Log-Rotation, Disk-Monitoring.
 
-=== kontinuierliche Verbesserung
+==== kontinuierliche Verbesserung
 Erfahrungsaustausch, neue Use-Cases, regelmäßige Reviews.
 
-=== Customization & Branding 
+==== Customization & Branding 
 Anpassung der Corporate Identity im Produkt (z. B. CGS/ARC Version im docker compose setzen).
 
 Modul-Konfiguration:
@@ -115,7 +115,7 @@ Modul-Konfiguration:
 * Workflow Engine: Automationen einrichten
 * Benutzer- & Rechtemanagement: Admins, Rollen, Zugriffsrechte.
 
-== Troubleshooting und Fehlerbehebung
+=== Troubleshooting und Fehlerbehebung
 
 Häufige Probleme & Lösungen:
 ```
@@ -129,12 +129,12 @@ docker-compose up -d
 * Lizenz-Probleme: Lizenzdatei vorhanden, nicht abgelaufen, korrekte Module.
 * Performance: RAM/CPU erhöhen, Celery Worker skalieren, Redis optimieren, DB-Indizes prüfen.
 
-== Training, Dokumentation und Support 
+=== Training, Dokumentation und Support 
 
-=== Training
+==== Training
 Admin- und Endnutzer-Training, Q&A Sessions, Demo/Dokumentation durchgehen.
 
-=== Dokumentation
+==== Dokumentation
 Bereitstellung: 
 * DEPLOYMENT_GUIDE.md
 * QUICK_START_ONBOARDING.md
@@ -146,7 +146,7 @@ Bereitstellung:
 * Update-Prozess 
 * Performance-Tuning.
 
-=== Support & Eskalation
+===== Support & Eskalation
 * Support-Level (SLA) definieren
 * Eskalations-Prozesse festlegen.
 * Kontaktdatenbereitstellung (E-Mail, Telefon)
