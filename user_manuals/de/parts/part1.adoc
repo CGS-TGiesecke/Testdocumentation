@@ -15,7 +15,7 @@ Es können bei entsprechender Berechtigung, mit Hilfe von KI Agents automatisier
 
 
 ifdef::cgs-assist[]
-image:cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
+image::cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
 endif::cgs-assist[]
 
 ifdef::arc-assist[]
