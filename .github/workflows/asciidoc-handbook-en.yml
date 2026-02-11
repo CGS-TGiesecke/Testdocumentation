@@ -1,4 +1,4 @@
-name: Asciidoctor Build IT-Handbook en html, pdf, docx
+name: Asciidoctor Build User-Handbook en html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -36,7 +36,7 @@ on:
 
   
 env:
-  FILENAME: 'IT_HANDBOOK_EN'
+  FILENAME: 'USER_HANDBOOK_EN'
   FILEPATH: 'it_manual/en'
 
 jobs:
