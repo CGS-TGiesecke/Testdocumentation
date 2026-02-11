@@ -14,13 +14,13 @@ image::../images/Abbildung-47.jpg[Navigation - KI confirmation, title="Navigatio
 Certain regular use cases are managed as templates within Assist to simplify routines. The use cases are designed like a kind of checklist.
 With the appropriate permissions, automated, scheduled queries on automatically provided information sources, known as feeds, can be created.
 
-ifdef::cgs-assist[]
+ifeval::[{cgs-assist} == 1]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
-endif::cgs-assist[]
+endif::[]
 
-ifdef::arc-assist[]
+ifeval::[{arc-assist} == 1]
 image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
-endif::arc-assist[]
+endif::[]
 
 The themed navigation areas can be accessed via a navigation bar at the top edge.
 Depending on the user's permissions, the number of entries and the design may vary.
