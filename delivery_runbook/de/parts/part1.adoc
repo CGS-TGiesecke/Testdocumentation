@@ -12,68 +12,151 @@ Fusion aus CUSTOMER_DELIVERY_RUNBOOK.md und CUSTOMER_DEPLOYMENT_PROCESS.md.
 
 ==== Phasenmodell der Auslieferung
 
+Diese Phasen können je nach Kunde zusammengefasst oder iterativ durchlaufen werden, bieten aber eine gute Orientierung.
+
 ==== Pre-Sales und Anforderungsaufnahme
 * Aufnahme regulatorischer Anforderungen, Use-Cases, Datenquellen, Nutzergruppen.
 * Referenz auf Onboarding-Unterlagen (`QUICK_START_ONBOARDING.md`, Templates).
 * Ergänzung: Module auswählen (LLM, RAG, etc.), Lizenzmodell festlegen.
+
+**Typische Punkte**
+
+* Regulatorische Rahmenbedingungen (z. B. Finanzaufsicht, Aufbewahrungspflichten)
+* Erwartete Latenzen/Leistungsanforderungen
+* Art der Daten/Dokumente (Volumen, Sensibilität, Sprachen)
+* Anzahl der Fachbereiche und Nutzergruppen
+
+**Ziele**
+
+* Erwartete Integrationen und Compliance-Anforderungen einsammeln
+* Grobe Nutzungsintensität und Datenquellen klären
+* Fachliche Use-Cases verstehen
 
 ==== Technische Klärung und Architektur-Workshop
 * Abgleich IT- und Security-Anforderungen/Plattformmöglichkeiten.
 * Hardware-Spezifikationen prüfen (mind. 8 Cores, 16–32GB RAM, 100GB Speicher).
 * Docker/Docker Compose Installation, Port-Freigaben, Firewall, SSL/TLS Zertifikate – analog technischer Requirements.
 
+**Inhalte**
+
+* Logging, Monitoring und Backup
+* IAM/SSO (z. B. Azure AD/Entra, andere IdPs)
+* Netzwerk, Firewall, Proxy, VPN
+* Zielumgebung (Cloud, Rechenzentrum, Kubernetes, einzelne VM/Server)
+* Betriebsmodell (SaaS / Managed Service vs. Deployment beim Kunden)
+
+**Ziele**
+
+* IT- und Security-Anforderungen des Kunden mit den Plattformmöglichkeiten abgleichen
+* Ziel-Betriebsmodell und Architekturvarianten bewerten
+
 ==== Auswahl des Betriebsmodells
 * SaaS/Cloud, On-Premise, Kubernetes, Hybrid; Entscheidungskriterien: Skalierung, Compliance, interne Prozesse.
+
+Die {application} Plattform unterstützt verschiedene Betriebsmodelle:
+
+**SaaS / Managed Service durch {author}**
+
+* Kunde konsumiert die Anwendung über gesicherte HTTPS-Endpunkte
+* Betrieb der Plattform in einer {author}- oder Partner-Cloud
+
+**Deployment beim Kunden**
+
+* On-Premise im Rechenzentrum des Kunden
+* Deployment im kundeneigenen Kubernetes-Cluster
+* Docker-Compose auf einer Kunden-VM bzw. in der Kunden-Cloud
+  
+**Kriterien für die Entscheidung**
+
+* Skalierungs- und Hochverfügbarkeitsanforderungen
+* Interne Prozesse (Change-Management, Betriebsprozesse, Betriebsmodell des Kunden)
+* Sicherheitsvorgaben (DMZ, Netztrennung, eigene Security-Tools)
+* Regulatorik & Compliance (z. B. Datenstandort, Bank-/Versicherungsaufsicht)
 
 === Vorbereitung beim Kunden
 
 ==== Organisatorische Voraussetzungen
 * Definition von Kommunikationswegen, Ansprechpartner, Freigabeprozesse.
+* Entscheidung, ob Test-/Staging-Umgebung genutzt wird oder direkt im Produktionskontext gestartet wird
+* Klärung der internen Freigabe- und Change-Prozesse
+* Definition der Kommunikationswege (z. B. zentraler E-Mail-Verteiler, Ticketsystem)
+* Benennung der technischen Ansprechpartner (IT, Netzwerk, IAM, Security)
 
 ==== Technische Voraussetzungen und IT-Requirements
 * Internetzugänge, Netzwerk, Ports, OS, Hardware.
 * Bereitstellung Zielinfrastruktur, Docker-Engine.
+* Backup-/Monitoring-Voraussetzungen
+* Netzwerk, Ports, Firewall-/Proxy-Konfiguration
+* OS, CPU, RAM, Storage
+* Bereitstellung der Zielinfrastruktur gemäß IT-Requirements (siehe `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md`):
 
 ==== Lizenzierung und Zugriff auf Images
+* Bereitstellung der URL und Zugangsdaten zur Container-Registry (sofern Images dort gehostet werden)
 * Lizenzdatei generieren, dem Kunden übermitteln und im System hinterlegen (`license/license.json`).
 * Bereitstellung Container-Registry, Lizenzen/Keys, Abschluss Verträge.
+* Abschluss der Lizenz-/Nutzungsverträge
 
 === Deployment-Vorbereitung je Betriebsmodell
 
-==== SaaS / CGS-gehostete Variante
-* Kundenseitige Kommunikation & SSO-Integration.
-* CGS: Provisionierung, Logging, Monitoring, Backup.
+==== SaaS / {author}-gehostete Variante
+
+**Kundenseitige Schritte**
+- interne Kommunikation an Nutzer und Fachbereiche
+- SSO-Integration (z. B. Azure AD/Entra) nach gemeinsam abgestimmter Konfiguration
+- Freigabe von Netzverbindungen zu den {author}-Endpunkten
+
+**{author}-seitige Schritte (High Level)**
+- Konfiguration von Authentifizierung, Logging, Monitoring, Backup
+- Anlegen von Tenants/Instanzen für den Kunden
+- Provisionierung der Plattform in der Ziel-Cloud
 
 ==== Kunden-VM / Docker Compose
-Schritt-für-Schritt-Anleitung:  
 
-* Anpassen `.env`-Datei, `docker-compose.yaml`, `config.yaml`, `Caddyfile`.
-* Bereitstellung Deployment-Paket inkl. Beispiel-Konfigurationen und Migrationsskripten (`alembic/`).
-* Services starten:
-```bash
-docker-compose up -d
-docker-compose ps
-docker-compose logs -f
-curl http://localhost:8000/health
-```
+**Typischer Ablauf**
+
+* Verweis auf `documentation/deployment/Deployment-Anleitung.html` (kundengerechte Schritt-für-Schritt-Anleitung)
+* Verweis auf `documentation/deployment/Azure-Deployment-Customer.md`
+* Start des Deployments gemäß Anleitung:
+* Konfiguration kundenindividueller Parameter (URLs, Secrets, Datenbankanbindung, Logging-Ziele etc.)
+* Übermittlung der `docker-compose.yaml` und zugehöriger Konfigurationsdateien (`.env`, `config.yaml`) an den Kunden
+  
+**Voraussetzungen**
+
+* Installierter Docker-Engine und Docker Compose
+* Bereitgestellte VM/Server mit unterstütztem OS (siehe IT-Requirements)
 
 ==== Kundeneigenes Kubernetes-Cluster
-Deployment im Cluster, Anlegen Secrets, ConfigMaps, Ingress/TLS, Namespace/Ressourcen.
+
+**Hinweis**
+
+* Detaillierte Kubernetes-Guides können in separaten Dokumenten gepflegt werden und von diesem Runbook referenziert werden.
+
+**High-Level-Schritte**
+
+* Deployment der Applikations-Services in den Cluster
+* Anlegen der benötigten Secrets, ConfigMaps und Persistenzkonfiguration (PVCs)
+* Vorbereitung von Ingress, Load Balancern und TLS-Zertifikaten
+* Definition des Ziel-Namespaces und der Ressourcenzuordnung
+
+Spezifische Hybrid-Architekturen werden projektspezifisch dokumentiert.
 
 ==== Hybride Szenarien
+
 Kombination von Tenants/Regionen/Datenbank- und Storage-Diensten.
+
+* Kombination mehrerer Tenants/Regionen
+* Nutzung kundeneigener Datenbanken/Storage-Dienste
+* RAG-Services (Retrieval, Vektorspeicher) on-prem, Frontend/Backend in der Cloud
 
 === Test-Deployment (Pilot / Staging)
 
 ==== Zielsetzung
+
 Security-, Logging-, Compliance-Check, fachliche/technische Validierung.
 
 ==== Durchführung
-End-to-End-Tests, API-Tests, Lasttests, Performance-/Ressourcenmonitoring:
-```
-docker stats
-curl http://localhost:8000/health
-```
+
+End-to-End-Tests, API-Tests, Lasttests, Performance-/Ressourcenmonitoring.
 
 ==== 5.3 Testprotokoll und Abnahme
 Abnahme durch Kunden, Priorisierung offener Punkte, Dokumentation der Testergebnisse.
@@ -89,24 +172,30 @@ Endnutzerkommunikation, Authentifizierung/SSO, Monitoring, Backup, keine kritisc
 * *Post-Go-Live:* 24h Monitoring, Feedback sammeln, Metriken prüfen, Support sicherstellen.
 
 ==== Umschaltstrategie
+
 * Variante 1: Getrennte Test-/Produktion.
 * Variante 2: Test wird zu Produktion.
 
 ==== Hypercare-Phase
+
 Enges Monitoring, Optimierung, Supportbereitschaft, Zeitraum 2–4 Wochen.
 
 === Übergabe in den Regelbetrieb
 
 ==== Betriebsübergabe an Kunden-IT
+
 Klärung Supportwege, Vorstellung Betriebsprozesse, Dokumentenübergabe.
 
 ==== Wartungs- und Update-Strategie
+
 Updates, Sicherheits-Patches, Wartungsfenster, Log-Rotation, Disk-Monitoring.
 
 ==== kontinuierliche Verbesserung
+
 Erfahrungsaustausch, neue Use-Cases, regelmäßige Reviews.
 
 ==== Customization & Branding 
+
 Anpassung der Corporate Identity im Produkt (z. B. CGS/ARC Version im docker compose setzen).
 
 Modul-Konfiguration:
@@ -132,9 +221,11 @@ docker-compose up -d
 === Training, Dokumentation und Support 
 
 ==== Training
+
 Admin- und Endnutzer-Training, Q&A Sessions, Demo/Dokumentation durchgehen.
 
 ==== Dokumentation
+
 Bereitstellung: 
 * DEPLOYMENT_GUIDE.md
 * QUICK_START_ONBOARDING.md
@@ -147,6 +238,7 @@ Bereitstellung:
 * Performance-Tuning.
 
 ===== Support & Eskalation
+
 * Support-Level (SLA) definieren
 * Eskalations-Prozesse festlegen.
 * Kontaktdatenbereitstellung (E-Mail, Telefon)
