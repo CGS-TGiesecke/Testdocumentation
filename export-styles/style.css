@@ -1,0 +1,155 @@
+body {
+  font-family: 'Liberation Serif', Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #232323;
+  background: white;
+  margin: 2cm;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Liberation Sans', Arial, sans-serif;
+  color: #41396E;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  border-bottom: 2px solid #174EA6;
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 0.15em;
+}
+
+a {
+  color: #1A73E8;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+code, pre {
+  font-family: 'Fira Mono', 'Liberation Mono', 'Courier New', monospace;
+  background: #f5f5f5;
+  color: #bf360c;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1em;
+  border: 1px solid #e0e0e0;
+  margin: 1em 0;
+  overflow-x: auto;
+  background: #f8f8f8;
+}
+
+blockquote {
+  border-left: 4px solid #90caf9;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  color: #555;
+  background: #f5f7fa;
+}
+
+ul, ol {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+  table-layout: auto;
+  display: inline-table;
+  margin: 1em 0;
+  font-size: 0.96em;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+th {
+  background: #e3f2fd;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 1em auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 2em 0;
+}
+
+/* Seitenumbruch steuern */
+.pagebreak {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Allgemeine Listeneinstellungen */
+ul, ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  padding-left: 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+ul {
+  list-style-type: disc; /* Standard-Punkte */
+}
+ol {
+  list-style-type: decimal; /* Zahlen */
+}
+li {
+  margin-bottom: .4em; /* Abstand zwischen Listeneinträgen */
+}
+ul ul, ol ul, ul ol, ol ol {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  margin-left: 1.5em;
+  font-size: 0.97em;
+}
+li p {
+  margin: 0.4em 0 0.4em 0;
+}
+/* Optional: Schönere Checkboxen für Tasklists */
+input[type="checkbox"] {
+  margin-right: 0.6em;
+  width: 1em;
+  height: 1em;
+  accent-color: #1A73E8;
+}
+
+pre, code {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  /* Optional für Lesbarkeit */
+  padding: 8px 12px;
+  background: #f6f6f6;
+  border: 1px solid #e0e0e0;
+}
+
+.pre-content-width {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  background: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-family: monospace;
+  white-space: pre; /* erhält Zeilenumbrüche und Leerzeichen */
+  overflow-x: auto;
+}
