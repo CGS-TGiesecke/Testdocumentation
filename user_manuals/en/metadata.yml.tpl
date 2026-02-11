@@ -1,7 +1,6 @@
 title: "{{PRODUCT_TITLE}}"
 author: "{{AUTHOR}}"
 application: "{{APPLICATION}}"
-date: "{{DATE}}"
 revnumber: "{{REVNUMBER}}"
 doctype: book
 company: "{{COMPANY}}"
@@ -10,11 +9,11 @@ toc: left
 toc_interactive: true
 toc_mode: offcanvas
 toc_mode_responsive: true
-toc_title: Inhaltsverzeichnis
+toc_title: Table of Content
 toclevels: 15
 sectnums: true
 sectnumlevels: 15
-figure_caption: Abbildung
+figure_caption: Figure
 imagesdir: image
 big_output: "{{BIG_OUTPUT}}"
 subtitle: 

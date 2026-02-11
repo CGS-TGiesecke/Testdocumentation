@@ -1,7 +1,6 @@
 title: "{{PRODUCT_TITLE}}"
 author: "{{AUTHOR}}"
 application: "{{APPLICATION}}"
-date: "{{DATE}}"
 revnumber: "{{REVNUMBER}}"
 doctype: book
 company: "{{COMPANY}}"

@@ -8,7 +8,7 @@ endif::[]
 
 
 
-=== Kontakt
+=== Contact
 
 ifeval::[{cgs-assist} == 1]
 include::../../../export-styles/cgs-disclaimer-en.adoc[] 
