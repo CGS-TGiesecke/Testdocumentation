@@ -1,0 +1,23 @@
+
+ifdef::cgs-assist[]
+image::../../themes/cgs-logo.png[Firmenlogo,align=left, width=100]
+endif::cgs-assist[]
+
+ifdef::arc-assist[]
+image::../../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+endif::arc-assist[]
+
+=== Contact
+
+ifdef::cgs-assist[]
+
+include::./../../../export-styles/cgs-disclaimer-en.adoc[]
+ 
+endif::cgs-assist[]	
+
+ifdef::arc-assist[]
+
+include::./../../../export-styles/arc-disclaimer-en.adoc[] 
+
+endif::arc-assist[]	
+
