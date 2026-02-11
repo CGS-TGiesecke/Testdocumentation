@@ -111,13 +111,14 @@ Abnahme durch Kunden, Priorisierung offener Punkte, Dokumentation der Testergebn
 ### 6.1 Go-Live-Checkliste
 
 Endnutzerkommunikation, Authentifizierung/SSO, Monitoring, Backup, keine kritischen Bugs.
-*Pre-Go-Live:* Tests, Backup, Monitoring, SSL/TLS-Zertifikate, Firewall, Dokumentation, Training abgeschlossen.
-*Go-Live:* Services starten, Smoke-Tests, Freigabe.
-*Post-Go-Live:* 24h Monitoring, Feedback sammeln, Metriken prüfen, Support sicherstellen.
+
+* *Pre-Go-Live:* Tests, Backup, Monitoring, SSL/TLS-Zertifikate, Firewall, Dokumentation, Training abgeschlossen.
+* *Go-Live:* Services starten, Smoke-Tests, Freigabe.
+* *Post-Go-Live:* 24h Monitoring, Feedback sammeln, Metriken prüfen, Support sicherstellen.
 
 ### 6.2 Umschaltstrategie
-Variante 1: Getrennte Test-/Produktion.
-Variante 2: Test wird zu Produktion.
+* Variante 1: Getrennte Test-/Produktion.
+* Variante 2: Test wird zu Produktion.
 
 ### 6.3 Hypercare-Phase
 Enges Monitoring, Optimierung, Supportbereitschaft, Zeitraum 2–4 Wochen.
@@ -152,12 +153,9 @@ docker-compose restart cgs_assist
 docker-compose down
 docker-compose up -d
 ```
-Datenbank:
-DATABASE_URL prüfen, Datenbank-Container läuft, Netzwerk-Konnektivität.
-Lizenz-Probleme:
-Lizenzdatei vorhanden, nicht abgelaufen, korrekte Module.
-Performance:
-RAM/CPU erhöhen, Celery Worker skalieren, Redis optimieren, DB-Indizes prüfen.
+* Datenbank: DATABASE_URL prüfen, Datenbank-Container läuft, Netzwerk-Konnektivität.
+* Lizenz-Probleme: Lizenzdatei vorhanden, nicht abgelaufen, korrekte Module.
+* Performance: RAM/CPU erhöhen, Celery Worker skalieren, Redis optimieren, DB-Indizes prüfen.
 
 ## 10. Training, Dokumentation und Support 
 
@@ -165,11 +163,21 @@ RAM/CPU erhöhen, Celery Worker skalieren, Redis optimieren, DB-Indizes prüfen.
 Admin- und Endnutzer-Training, Q&A Sessions, Demo/Dokumentation durchgehen.
 
 ### 10.2 Dokumentation
-Bereitstellung: DEPLOYMENT_GUIDE.md, QUICK_START_ONBOARDING.md, ONBOARDING_TEMPLATE_SETUP.md.
-API-Dokumentation (Swagger/OpenAPI), Troubleshooting-Guide, Backup & Restore, Monitoring, Update-Prozess, Performance-Tuning.
+Bereitstellung: 
+* DEPLOYMENT_GUIDE.md
+* QUICK_START_ONBOARDING.md
+* ONBOARDING_TEMPLATE_SETUP.md.
+* API-Dokumentation (Swagger/OpenAPI)
+* Troubleshooting-Guide
+* Backup & Restore 
+* Monitoring 
+* Update-Prozess 
+* Performance-Tuning.
 
 ### 10.3 Support & Eskalation
-Support-Level (SLA) definieren, Eskalations-Prozesse festlegen.
-Kontaktdatenbereitstellung (E-Mail, Telefon), Wartungsfenster vereinbaren.
+* Support-Level (SLA) definieren
+* Eskalations-Prozesse festlegen.
+* Kontaktdatenbereitstellung (E-Mail, Telefon)
+* Wartungsfenster vereinbaren.
 
 
