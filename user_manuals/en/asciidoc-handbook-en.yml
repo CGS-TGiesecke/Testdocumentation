@@ -1,4 +1,5 @@
-name: Asciidoctor Build User-Handbook en html, pdf, docx
+
+name: Asciidoctor Build User-Handbook en to html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -20,14 +21,6 @@ on:
         options:
           - CGS
           - ARC
-      outputType:
-        description: 'Asciidoctor Output type 0=small, 1=large'
-        required: true
-        default: '0'
-        type: choice
-        options:
-          - 0
-          - 1
       version:
         description: 'Asciidoctor PDF Version'
         required: true
@@ -36,7 +29,7 @@ on:
 
   
 env:
-  FILENAME: 'USER_HANDBOOK_EN'
+  FILENAME: 'USER_MANUAL_EN'
   FILEPATH: 'user_manuals/en'
 
 jobs:
@@ -62,13 +55,13 @@ jobs:
         run: |
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=AI Audit Assist: Userhandbook" >> $GITHUB_ENV
             echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
-            echo "APPLICATION=ARC Assist" >> $GITHUB_ENV
+            echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
-            echo "PRODUCT_TITLE=CGS Assist: IT-Handbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=CGS Assist: Userhandbook" >> $GITHUB_ENV
             echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
             echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
@@ -83,12 +76,12 @@ jobs:
 
       - name: Fill metadata template
         run: |
-          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
+          envsubst < ${{ env.FILEPATH}}/metadata.yml.tpl > ${{ env.FILEPATH}}/metadata.yml
 
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
-            -D ${{ env.FILEPATH }}/ \
+            -D ${{ env.FILEPATH}}/ \
             -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a revnumber="${{ env.REVNUMBER }}" \
             -a application="${{ env.APPLICATION }}" \
@@ -100,12 +93,12 @@ jobs:
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
             -a imagesdir=images  \
-            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-           -D ${{ env.FILEPATH }} \
+           -D ${{ env.FILEPATH}}/ \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
@@ -116,22 +109,22 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=it_manual/themes \
-           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -a pdf-themesdir=user_manuals/themes \
+           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+          pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --metadata-file=${{ env.FILEPATH}}/metadata.yml \
+            --resource-path=${{ env.FILEPATH}}  \
+            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILENAME }}_${{ env.DATE }}
           path: |
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
+            ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
+            ${{ env.FILEPATH}}/${{ env.FILENAME }}*.html
+            ${{ env.FILEPATH}}/${{ env.FILENAME }}*.docx
             ${{ env.FILEPATH}}/images/*
