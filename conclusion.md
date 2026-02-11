@@ -29,9 +29,9 @@ Dieses Dokument beschreibt den vollständigen Ablauf zur Auslieferung, technisch
   - 7.1 Betriebsübergabe an Kunden-IT
   - 7.2 Wartungs- und Update-Strategie
   - 7.3 Kontinuierliche Verbesserung
-- 8 Customization & Branding **(NEU, aus Dokument 2)**
-- 9 Troubleshooting und Fehlerbehebung **(NEU, aus Dokument 2)**
-- 10 Training, Dokumentation und Support **(NEU, aus Dokument 2)**
+- 8 Customization & Branding 
+- 9 Troubleshooting und Fehlerbehebung
+- 10 Training, Dokumentation und Support 
 
 ## 1. Überblick und Rollen
 * Ticketsystem / E-Mail-Verteiler für technische Themen.
@@ -74,9 +74,10 @@ Dieses Dokument beschreibt den vollständigen Ablauf zur Auslieferung, technisch
 * CGS: Provisionierung, Logging, Monitoring, Backup.
 
 ### 4.2 Kunden-VM / Docker Compose
-* Schritt-für-Schritt-Anleitung:  
-** Anpassen `.env`-Datei, `docker-compose.yaml`, `config.yaml`, `Caddyfile`.
-** Bereitstellung Deployment-Paket inkl. Beispiel-Konfigurationen und Migrationsskripten (`alembic/`).
+Schritt-für-Schritt-Anleitung:  
+
+* Anpassen `.env`-Datei, `docker-compose.yaml`, `config.yaml`, `Caddyfile`.
+* Bereitstellung Deployment-Paket inkl. Beispiel-Konfigurationen und Migrationsskripten (`alembic/`).
 * Services starten:
 ```bash
 docker-compose up -d
@@ -134,7 +135,7 @@ Updates, Sicherheits-Patches, Wartungsfenster, Log-Rotation, Disk-Monitoring.
 ### 7.3 kontinuierliche Verbesserung
 Erfahrungsaustausch, neue Use-Cases, regelmäßige Reviews.
 
-### 8. Customization & Branding (NEU)
+### 8. Customization & Branding 
 Anpassung der Corporate Identity im Produkt (z. B. CGS/ARC Version im docker compose setzen).
 
 Modul-Konfiguration:
