@@ -11,6 +11,7 @@
 :toclevels: 15
 :sectnums:
 :sectnumlevels: 15
+:imagesdir: themes
 :application: {application}
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
