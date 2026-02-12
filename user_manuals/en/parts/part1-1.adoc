@@ -2,12 +2,20 @@
 
 ==== Navigation Area "AI Chat"
 
-Individual requests can be initiated here. All chat histories are stored only in the browser storage and are no longer available after closing 
-the browser (if the setting "automatically clear cache" is enabled) and logging in again. All saved use case histories can be reopened even 
-after closing the browser and logging in again.
+The page features a classic chat interface with a prompt input window. 
+All chat histories are only saved in the browser storage and are no longer available after closing the browser 
+(if the "automatic cache clearing" setting is enabled) and re-logging in.
+All saved use case histories can be reopened even after closing the browser and logging in again.
 
-Before executing requests, you can select whether the document storage or the database should be searched for knowledge discovery. 
-Both cannot be used simultaneously. The chat input field counts and displays the characters already used. 
+Before executing requests, you can select whether the document location (RAG) *or* the contents of the database should be searched to find information. 
+It is not possible to search both at the same time.
+
+Permissions on folders and included documents are taken into account when searching via the RAG.
+When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.
+This allows the answer to be verified in the original source with a single click.
+
+image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area AI Chat - RAG used", width=400]
+ 
 Additionally, an automatic spell checker is activated. You have the option to submit a request via manual text entry, 
 via voice recording using a microphone, or by uploading a document.
 

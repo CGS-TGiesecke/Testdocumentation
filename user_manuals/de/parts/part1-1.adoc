@@ -2,15 +2,19 @@
 
 ==== Navigationsbereich "KI Chat"
 
-Hier können einzelne Anfragen gestartet werden. Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen 
+Auf der Seite hat man eine klassische Chat Oberfläche mit einem Eingabefenster für Prompts. 
+Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen 
 (Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
 Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
 
-Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenort(RAG) *oder* die Inhalte derDatenbank zur Wissensfindung durchsucht werden sollen. 
+Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenort (RAG) *oder* die Inhalte der Datenbank zur Wissensfindung durchsucht werden sollen. 
 Beides gleichzeitig ist nicht möglich.
-Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über RAG berücksichtig.
+
+Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über das RAG berücksichtig.
 Nutzt man das RAG werden bei der Antwort die Top 8 Embeddings für die Antwort und ein Link zur jeweiligen Quelle angezeigt. 
 Somit kann mit einem Klick die Antwort in der originalen Quelle verifiziert werden.
+
+image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=400]
 
 Im Chateingabefeld werden bereits verwendete Zeichen gezählt und angezeigt. Zusätzlich ist eine automatische Rechtschreibkontrolle aktiviert.
 Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
