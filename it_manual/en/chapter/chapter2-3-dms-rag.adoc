@@ -1,0 +1,25 @@
+=== RAG
+
+==== Integrated "Document Management System"
+
+This is an SQLite DB connection where system-defined folders and documents maintained easily by the customer are stored.
+
+==== SharePoint Integration via Microsoft Entra ID Secured API
+
+Integration with SharePoint must be performed by the customer using Microsoft Entra ID.
+In SharePoint, individual areas are called Sites. When a group is created in Teams, SharePoint 
+automatically creates a corresponding SharePoint Site that is linked to the group.
+Example for listing access: https://customer.sharepoint.com/sites/
+
+The necessary data for connecting {application} to the customer's SharePoint are:
+
+* Tenant ID: The ID of the SharePoint tenant, usually a GUID.
+* Application ID: The client ID of the SharePoint application with the required permissions (ClientSecrets) for data access.
+* ClientSecrets: The SharePoint application permissions for data access.
+
+These are stored in a config file (see "Initial Configuration of the Application").
+If this data is not available, the client application {application} must be registered in Microsoft Entra ID on the customer tenant "https://customer.sharepoint.com/sites/".
+
+*Registering an Application in Microsoft Entra ID:*
+
+https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app

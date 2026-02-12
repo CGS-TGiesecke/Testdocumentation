@@ -1,37 +1,28 @@
 
-
 === RAG
 
-==== Integriertes Dokumentenmanagementsystem
+==== Integriertes "Dokumentenmanagementsystem"
 
-Das ist eine SQLight DB Anbindung in der systemseitig festgelegte Ordner und vom Kunden zu pflegende Dokumente gespeichert sind. 
+Das ist eine SQLight DB Anbindung in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind. 
 
-==== Sharepoint Andindung API von Microsoft
+==== Sharepoint Andindung über Microsoft Entra ID gesicherte API
 
-Die Anbindung von Sharepoint muss über die API von Microsoft durch den Kunden erfolgen. 
-In SharePoint werden einzelne Bereiche Sites genannt, diese entsprechen in etwa den Gruppen in Teams.
+Die Anbindung von Sharepoint muss über Microsoft Entra ID durch den Kunden erfolgen. 
+In SharePoint werden einzelne Bereiche Sites genannt. Wenn eine Gruppe in teams erstellt wird, erstellt SharePoint 
+automatisch eine entsprechende SharePoint-Site, die mit der Gruppe verknüpft ist.
 Aufruf des Listing z.B https://kunde.sharepoint.com/sites/
 
-Dort wird die Application {application} als site registriert.
-
-ifeval::[{big-output} == 1]
-
-Ist die Applikation {application} nicht vorhanden, muss sie wie folgt registriert werden:
-
-
-* 1.
-* 2.
-* 3.
-
-Dadurch erhält die Application eine Application ID.
-Zusätzlich müssen in der Application die ClientSecrets gesetzt werden.
-z.B. "Sites.Read.All" oder "Sites.Selected"
-Wird "Sites.Selected" gewählt, müssen die Zugriffsberechtigungen in Sharepoint granuliert werden.
-
-endif::[]
-
-Die erforderlichen Daten, für die Anbindung {application} an API von Microsoft durch den Kunden, sind:
+Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
 
 * Tenant ID: Die ID des SharePoint-Mandanten, normalerweise eine GUID.
 * Application ID: Die Client-ID der SharePoint-Anwendung mit den erforderlichen Berechtigungen (ClientSecrets) für den Datenzugriff.
 * ClientSecrets: Die SharePoint-Application-Berechtigungen für den Datenzugriff.
+
+Diese werden in einen config file hinterlegt (siehe "Erstkonfiguration der Anwendung")
+Sind diese Daten nicht vorhanden muss die Client Applikation {aplication} in Microsoft Entra ID auf Mandant Kunde "https://kunde.sharepoint.com/sites/" registriert werden.
+
+*Registrieren einer Anwendung in Microsoft Entra ID:*
+
+https://learn.microsoft.com/de-de/entra/identity-platform/quickstart-register-app
+
+
