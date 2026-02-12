@@ -37,8 +37,8 @@ on:
 
   
 env:
-  FILENAME: 'IT_HANDBUCH_DE_'
-  FILEPATH: 'documentation/it_manual/de'
+  FILENAME: 'IT_HANDBOOK_DE'
+  FILEPATH: 'it_manual/de'
 
 jobs:
   build:
@@ -64,7 +64,7 @@ jobs:
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbuch" >> $GITHUB_ENV
-            echo "AUTHOR=ARC Institut" >> $GITHUB_ENV
+            echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
             echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
@@ -100,7 +100,7 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -117,19 +117,19 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=documentation/it_manual/themes \
-           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_V_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: IT-HANDBUCH_DE_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
