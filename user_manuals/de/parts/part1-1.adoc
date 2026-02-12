@@ -7,8 +7,8 @@ Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem B
 (Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
 Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
 
-Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob der Dokumentenort (RAG) *oder* die Inhalte der Datenbank zur Wissensfindung durchsucht werden sollen. 
-Beides gleichzeitig ist nicht möglich.
+Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob die internen Inhalte des (RAG) z.B. aus dem Sharepoint oder 
+der Datenbank *zusätzlich* zur Wissensfindung durchsucht werden sollen. 
 
 Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über das RAG berücksichtig.
 Nutzt man das RAG werden bei der Antwort die Top 8 Embeddings für die Antwort und ein Link zur jeweiligen Quelle angezeigt. 

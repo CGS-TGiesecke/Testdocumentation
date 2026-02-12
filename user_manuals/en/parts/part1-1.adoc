@@ -7,8 +7,8 @@ All chat histories are only saved in the browser storage and are no longer avail
 (if the "automatic cache clearing" setting is enabled) and re-logging in.
 All saved use case histories can be reopened even after closing the browser and logging in again.
 
-Before executing requests, you can select whether the document location (RAG) *or* the contents of the database should be searched to find information. 
-It is not possible to search both at the same time.
+Before executing request, you can select whether the internal contents of the (RAG) for example from SharePoint or the database should 
+also be searched in addition to knowledge discovery.
 
 Permissions on folders and included documents are taken into account when searching via the RAG.
 When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.
