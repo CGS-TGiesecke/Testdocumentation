@@ -1,0 +1,58 @@
+=== Installation and Configuration
+
+==== Deployment Guide (Step-by-Step)
+
+Deployment of {application} is carried out in the following steps:
+
+1. Prerequisites
+
+- *Docker* and *Docker Compose* are installed.
+- The files ``docker-compose.yml`` and ``.env`` are present in the working directory.
+
+2. Login to our DockerHub repository
+  
+- Use the provided read-access token: ``docker login -u {author} -p [ACCESS_TOKEN]``
+
+3. Start the application
+
+- *Check the .env file:* Is the path to ``SHARED_FOLDER'' set correctly?
+- Start the application: ``docker compose up -d``
+
+4. Completion
+- After installation, restart the web server.
+- Test the accessibility of the web application in your browser.
+- Check status
+- Check logs
+- Health check
+
+==== Initial Configuration of the Application
+
+After successful installation, the following initial configurations must be performed:
+
+*Configure modules*
+
+- LLM API: Configure provider & models
+- RAG API: Setup vector store & embeddings
+- Workflow engine: Setup automations
+
+*Users & permissions*
+
+- Create admin user
+- Define user roles
+- Configure access rights
+
+The initial configuration should be aligned with the IT security policy and the specifications from the access rights concept.
+
+==== Update/Upgrade Process
+
+The update and upgrade process, performed by the customer, is as follows:
+
+- Before each update, complete backups of the application and database must be created.
+- Review the release notes and compatibility lists of the new version.
+- Stop the application service or set the application to maintenance mode.
+- Replace the application files with the new version according to the update instructions.
+- If necessary, perform required migration steps for the database (see vendor's update guide).
+- Restart the application and check correct operation.
+- Document the update process and the version number in the change log.
+
+After completing the update, inform the user base and publish a short guide if necessary.

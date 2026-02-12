@@ -1,0 +1,19 @@
+=== General Information about the Application
+
+==== Name and Version of the Application
+
+The application described in this manual is called {application} and is currently available in version {revnumber} as of {revdate}.
+
+==== Overview and Features
+
+include::chapter1-1.adoc[]
+
+==== License Information
+
+A customer license from {author} is used for {application}.
+The license follows the "Concurrent User" model for up to 50 simultaneous users.
+
+Maintenance and update services are included during the contractually agreed period.
+
+The license terms are specified in the contract with the manufacturer and in the customer's own IT policies.
+Compliance with the license terms is regularly checked by the IT department.

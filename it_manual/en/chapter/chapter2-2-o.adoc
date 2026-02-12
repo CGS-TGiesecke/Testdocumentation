@@ -1,0 +1,79 @@
+===== Network / Ports
+
+**Required Ports:**
+
+|===
+| Port  | Protocol | Usage                                         | Required for 
+
+| **80**    | HTTP      | HTTP to HTTPS redirect, Let's Encrypt ACME challenge  | Production with Caddy 
+| **443**   | HTTPS     | Encrypted access (TLS)                               | Production (recommended) 
+| **8000**  | HTTP      | Direct access to application                         | Testing/Development
+|===
+
+**Production Recommendation:** Use a reverse proxy (e.g., Caddy, Nginx) with TLS certificates.
+
+====== DNS Requirements for Caddy with Let's Encrypt
+
+If you want to use Caddy with automatic Let's Encrypt TLS certificates:
+
+- **FQDN required:** The application must be accessible via a fully qualified domain name (e.g., `xxx-assist.yourcompany.com`)
+- **DNS resolution:** The FQDN must point to the public IP address of the server (A-record or CNAME)
+- **Port 80 reachable:** Must be accessible from the internet (for ACME HTTP challenge)
+
+**Caddyfile configuration required:**
+```
+xxx-assist.yourcompany.com {
+reverse_proxy xxx_assist_backend:8000
+}
+```
+
+====== Alternative DNS‑01 (publicly trusted, without opening 80/443)
+
+Certificate request is verified via DNS records instead of making content available via HTTP.
+
+Example provider syntax with Cloudflare token as env-variable:
+```
+texttest.server.com {reverse_proxy xxx_assist_server:8000 {
+header_up X-Forwarded-Proto {scheme}
+header_up X-Forwarded-Host {host}
+header_up X-Forwarded-Port {port}
+header_up X-Real-IP {remote_host}
+header_up Host {host} }
+header {
+Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server
+} tls {# DNS-01 Challenge
+dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+# optional: propagation_timeout 5m
+# optional: resolvers 1.1.1.1 8.8.8.8
+}
+}
+```
+
+**Important:** The "caddy-dns" plugin must be included in the Caddy server configuration file; otherwise, "dns cloudflare" will not be found.
+
+Example: Own certificate (PEM + key):
+
+If a certificate exists (e.g., from your company's PKI, or manually created), it is included directly:
+```
+texttest.server.com {reverse_proxy xxx_assist_server:8000 header {
+Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}
+# Certificate + Private Key (PEM)
+tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.com.key
+}
+```
+
+
+**Important:** The certificate chain must be complete (typically "fullchain") and the SANs (Subject Alternative Names) must match the hostname.
+
+====== Alternative without public DNS:
+
+- Use your own TLS certificates (e.g., from an internal CA)
+- Access only via IP address: `http://<server-ip>:8000` (only recommended for testing/development)
+
+**Customer responsibility:** 
+
+- Firewall release for ports 80 and 443 (production) or 8000 (test)
+- DNS configuration: A-record for the desired FQDN (e.g., `xxx-assist.yourcompany.com`) to server IP
+- Providing the FQDN for the Caddyfile configuration
+- Optional: Own TLS certificates if Let's Encrypt is not to be used
+
