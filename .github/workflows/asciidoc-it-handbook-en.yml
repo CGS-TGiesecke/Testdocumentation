@@ -115,7 +115,7 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=documentation/it_manual/themes \
+           -a pdf-themesdir=it_manual/themes \
            -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc
