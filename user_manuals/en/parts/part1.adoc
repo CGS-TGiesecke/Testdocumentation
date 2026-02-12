@@ -1,0 +1,48 @@
+=== Description 
+
+It's possible in {application},in the following, only referred to as Assist, it is possible to query and utilize AI-supported company knowledge in separate chats or pre-configured use cases.
+Depending on the setting, this knowledge is based either on the contents of the stored documents or on cloud resources.
+All chat histories are stored in the browser and are no longer available after closing the browser (if the "automatic cache clearing" setting is enabled) and logging in again.
+All saved use case histories can be reopened even after closing the browser and logging in again.
+
+Upon first login, users are informed that the application uses artificial intelligence to automatically generate content. 
+The output is based on probabilities and may contain errors. Users are asked to carefully review the results. 
+This notice must be acknowledged in order to continue using the assistant.
+
+image::../images/Abbildung-47.jpg[Navigation - KI confirmation, title="Navigation - KI confirmation", width=400]
+
+Certain regular use cases are managed as templates within Assist to simplify routines. The use cases are designed like a kind of checklist.
+With the appropriate permissions, automated, scheduled queries on automatically provided information sources, known as feeds, can be created.
+
+ifeval::[{cgs-assist} == 1]
+image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=400]
+endif::[]
+
+ifeval::[{arc-assist} == 1]
+image::../images/arc-Abbildung-start.jpg[Arc Assist,title="Arc Assist", width=400]
+endif::[]
+
+The themed navigation areas can be accessed via a navigation bar at the top edge.
+Depending on the user's permissions, the number of entries and the design may vary.
+
+image::../images/Abbildung-1.jpg[Navigation sections, title="Navigation sections", width=400]
+
+Subpages of these navigation areas can then be accessed via the tree navigation on the left edge.
+
+image::../images/Abbildung-2.jpg[Navigation sections - tree navigation, title="Navigation sections - tree navigation", width=400]
+
+Additionally, a symbol at the upper right edge allows for selecting the language within the application and switching the view to dark mode or back again.
+The user profile can also be viewed, and it is possible to change the personal password.
+
+image::../images/Abbildung-3.jpg[Selecting the language and switching the view, title="Selecting the language and switching the view", width=400]
+
+Within the entire application, colored notification dialogs are displayed in the upper left corner when do actions.
+The colors indicate the notification level as follows:
+
+|===
+|green	| Successful execution of the action
+|blue	| General information about the action
+|red	| Error during execution of the action
+|===
+
+image::../images/Abbildung-confirm.jpg[Notifications, title="Notifications", width=400]
