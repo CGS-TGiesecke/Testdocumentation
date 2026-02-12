@@ -26,6 +26,8 @@ include::chapter/chapter2.adoc[]
 
 include::chapter/chapter3.adoc[]
 
+include::chapter/chapter2-4-sharepoint.adoc[]
+
 ifeval::[{big-output} == 1]
 include::chapter/chapter4-o.adoc[]
 endif::[]

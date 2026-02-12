@@ -68,7 +68,8 @@ endif::[]
 
 ==== Notwendige Drittanbieter-Komponenten
 
-Folgende Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden:
+Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
+Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
 
 **WICHTIG:**{application} stellt **kein LLM** bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
 
@@ -98,8 +99,6 @@ Folgende Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforde
 - Vorhandener Cloud-Infrastruktur (Azure oder AWS)
 - Datenschutz- und Compliance-Anforderungen
 - Budget und Betriebsmodell
-
-Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
 
 ifeval::[{big-output} == 1]
 include::chapter2-3-o.adoc[]
