@@ -56,7 +56,7 @@ Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diese
 - User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten
 - Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts
 - Restore: Wiederherstellung von gesicherten Daten.
-- API: Application Programming Interface  ist Programmierschnittstelle zur Integration mit anderen Systemen.
+- API: Application Programming Interface ist Programmierschnittstelle zur Integration mit anderen Systemen.
 - LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
 - RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert
 - MCP : Model Context Protocol ist ein Open-Source-Standard zur Verbindung von KI-Anwendungen mit externen Systemen

@@ -1,5 +1,5 @@
 
-=== RAG
+=== RAG (Retrieval-Augmented Generation)
 
 ==== {application} DMS
 
@@ -36,7 +36,7 @@ Nach der Registrierung kann {application} App Microsoft-Identitätsplattform-Fun
 Wichtige Schritte:
 
 * Anmelden beim Azure-Portal
-** Melden Sie sich mit Ihrem Konto und Administratorberechrigungen beim Azure-Portal an. Dort wird die **Tenant-ID** angezeigt.
+** Melden Sie sich mit Ihrem Konto und Administratorberechtigungen beim Azure-Portal an. Dort wird die **Tenant-ID** angezeigt.
 
 * App-Registrierungen öffnen
 ** Navigieren Sie im Menü zu Microsoft Entra ID und wählen Sie dort App-Registrierungen aus.
@@ -49,10 +49,10 @@ Wichtige Schritte:
 
 * Registrierung abschließen
 ** Klicken Sie auf Registrieren. Danach erhalten Sie eine Anwendungs-ID (**Client-ID**), mit der Sie die App eindeutig identifizieren können 
-und ein Geheimnis (Client Secret) oder Zertifikat.
+und ein Geheimnis (**Client Secret**: (z.B. Sites.Read.All oder Sites.Selected)) oder Zertifikat.
 
 * Weitere Einstellungen
-** Optional können Sie API-Berechtigungen konfigurieren (z.B. Sites.Read.All, Sites.ReadWrite.All), Zertifikate hinzufügen usw., je nach Bedarf der Anwendung.
+** Optional können Sie API-Berechtigungen konfigurieren, Zertifikate hinzufügen usw., je nach Bedarf der Anwendung.
 
 endif::[]
 
