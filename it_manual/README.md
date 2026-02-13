@@ -6,7 +6,7 @@ IT handbook here in German and English by selected script.
 
 *Before start:*
 
-- you must change some values (version, theme, output type (0=S, 1=XL). These variables change some places of names in files
+- you must change some values (version, theme, output type (0=Small, 1=Large). These variables change some places of names in files
 
 *Note:*
 
