@@ -60,7 +60,8 @@ endif::[]
 
 Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
 
-Ablauf:
+**Ablauf:**
+
 * OAuth 2.0 Authentifizierung:
 ** Die Anwendung holt sich über ein sogenanntes OAuth2-Grant-Flow ein Zugriffstoken von Entra ID.
 
