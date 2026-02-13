@@ -55,6 +55,7 @@ The following terms and abbreviations are central to this manual:
 - User: General user of the application with restricted rights
 - Backup: Data backup for restoration in case of failure or data loss
 - Restore: Recovery of backed-up data
+- DMS: A Document Management System is a hierarchical document filing system.
 - API: Application Programming Interface, an interface for integrating with other systems
 - LLM: Large Language Models are language models for text generation
 - RAG: Retrieval-Augmented Generation is a software system that processes information from LLMs and generates answers

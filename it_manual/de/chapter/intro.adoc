@@ -56,6 +56,7 @@ Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diese
 - User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten
 - Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts
 - Restore: Wiederherstellung von gesicherten Daten.
+- DMS: Dokumenten Management System ist eine hi­e­r­ar­chische Dokumentenablage
 - API: Application Programming Interface ist Programmierschnittstelle zur Integration mit anderen Systemen.
 - LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
 - RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert

@@ -1,7 +1,7 @@
 
 === RAG (Retrieval-Augmented Generation)
 
-==== {application} DMS
+==== {application} integriertes DMS
 
 Das ist eine SQLight DB Anbindung in {application}, in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
 Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Dort sind diese für alle erstmal sichtbar. 
@@ -11,7 +11,7 @@ Die Dateien werden vom Kunden per Hand hochgeladen.
 Die unterstützte Anzahl von Dateien pro Upload beträgt 1000, und die maximale Dateigröße beträgt standardmäßig 5 GB. (Windos Standard) 
 Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
 
-==== Sharepoint Andindung über Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
+==== Sharepoint Andindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
 
 Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
 In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 
@@ -20,8 +20,8 @@ automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft
 Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
 
 * **Tenant-ID:** Die ID des SharePoint-Mandanten, normalerweise eine GUID.
-* **Client-ID:** Die Client-ID der SharePoint-Anwendung mit den erforderlichen Berechtigungen (ClientSecrets) für den Datenzugriff.
-* **ClientSecrets:** Die SharePoint-Application-Berechtigungen für den Datenzugriff.
+* **Client-ID:** Die Client-ID der SharePoint-Anwendung mit den erforderlichen Berechtigungen (Client-Secrets) für den Datenzugriff.
+* **Client-Secrets:** Die SharePoint-Application-Berechtigungen für den Datenzugriff.
 
 Diese werden in einen config file hinterlegt (siehe "Erstkonfiguration der Anwendung"). Sind diese Daten nicht vorhanden, 
 muss die Applikation {application} vom Kunden erst in Microsoft Entra ID unter https://kunde.sharepoint.com/sites/ registriert werden.
@@ -49,14 +49,14 @@ Wichtige Schritte:
 
 * Registrierung abschließen
 ** Klicken Sie auf Registrieren. Danach erhalten Sie eine Anwendungs-ID (**Client-ID**), mit der Sie die App eindeutig identifizieren können 
-und ein Geheimnis (**Client Secret**: (z.B. Sites.Read.All oder Sites.Selected)) oder Zertifikat.
+und ein Geheimnis (**Client-Secret**: (z.B. Sites.Read.All oder Sites.Selected)) oder Zertifikat. 
 
 * Weitere Einstellungen
 ** Optional können Sie API-Berechtigungen konfigurieren, Zertifikate hinzufügen usw., je nach Bedarf der Anwendung.
 
 endif::[]
 
-===== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
+==== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
 
 Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
 
