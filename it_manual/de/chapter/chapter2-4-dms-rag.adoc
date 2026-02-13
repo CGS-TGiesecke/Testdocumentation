@@ -7,7 +7,7 @@ Das ist eine SQLight DB Anbindung in {application}, in der systemseitig festgele
 Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Dort sind diese für alle erstmal sichtbar. 
 Die erforderlichen Berechtigungen der Rollen auf die Ordner setzt der Kunde selbst.
 
-Die Dateien werden vom Kunden per and hochgeladen. 
+Die Dateien werden vom Kunden per Hand hochgeladen. 
 Die unterstützte Anzahl von Dateien pro Upload beträgt 1000, und die maximale Dateigröße beträgt standardmäßig 5 GB. (Windos Standard) 
 Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
 
