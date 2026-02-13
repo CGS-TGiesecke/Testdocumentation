@@ -1,21 +1,21 @@
 
 === RAG
 
-==== Integriertes "Dokumentenmanagementsystem"
+==== {application} DMS
 
-Das ist eine SQLight DB Anbindung in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
-Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Diese sind für alle sichtbar. 
+Das ist eine SQLight DB Anbindung in {application}, in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
+Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Dort sind diese für alle erstmal sichtbar. 
 Die erforderlichen Berechtigungen der Rollen auf die Ordner setzt der Kunde selbst.
 
-Die Dateien werden vom Kunden per hand hochgeladen. Es sind bis zu 10 Dateien gleichzeitig möglich.
+Die Dateien werden vom Kunden per and hochgeladen. 
+Die unterstützte Anzahl von Dateien pro Upload beträgt 1000, und die maximale Dateigröße beträgt standardmäßig 5 GB. (Windos Standard) 
 Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
 
 ==== Sharepoint Andindung über Microsoft Entra ID gesicherte API
 
-Die Anbindung von Sharepoint muss über Microsoft Entra ID durch den Kunden erfolgen. 
+Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
 In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn eine Gruppe in MS Teams erstellt wird, erstellt SharePoint 
 automatisch eine entsprechende SharePoint-Site, die mit der Gruppe verknüpft ist.
-Aufruf des Listing z.B https://kunde.sharepoint.com/sites/
 
 Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
 
@@ -24,7 +24,7 @@ Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Ku
 * **ClientSecrets:** Die SharePoint-Application-Berechtigungen für den Datenzugriff.
 
 Diese werden in einen config file hinterlegt (siehe "Erstkonfiguration der Anwendung")
-Sind diese Daten nicht vorhanden muss die Client Applikation {aplication} in Microsoft Entra ID unter https://kunde.sharepoint.com/sites/ registriert werden.
+Sind diese Daten nicht vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra ID unter https://kunde.sharepoint.com/sites/ registriert werden.
 
 ifeval::[{big-output} == 1]
 
@@ -36,7 +36,7 @@ Nach der Registrierung kann {application} App Microsoft-Identitätsplattform-Fun
 Wichtige Schritte:
 
 * Anmelden beim Azure-Portal
-** Melden Sie sich mit Ihrem Konto und Administratorberechrigungen beim Azure-Portal an. Dort haben sie die Tenant-ID.
+** Melden Sie sich mit Ihrem Konto und Administratorberechrigungen beim Azure-Portal an. Dort wird die **Tenant-ID** angezeigt.
 
 * App-Registrierungen öffnen
 ** Navigieren Sie im Menü zu Microsoft Entra ID und wählen Sie dort App-Registrierungen aus.
@@ -48,9 +48,9 @@ Wichtige Schritte:
 *** Umleitungs-URI (optional, für Web-/Mobile-Apps)
 
 * Registrierung abschließen
-** Klicken Sie auf Registrieren. Danach erhalten Sie eine Anwendungs-ID (Client-ID), mit der Sie die App eindeutig identifizieren können.
+** Klicken Sie auf Registrieren. Danach erhalten Sie eine Anwendungs-ID (**Client-ID**), mit der Sie die App eindeutig identifizieren können.
 
 * Weitere Einstellungen
-** Optional können Sie API-Berechtigungen konfigurieren (ClientSecrets), Zertifikate hinzufügen usw., je nach Bedarf der Anwendung.
+** Optional können Sie API-Berechtigungen konfigurieren (**ClientSecrets** anlegen), Zertifikate hinzufügen usw., je nach Bedarf der Anwendung.
 
 endif::[]
