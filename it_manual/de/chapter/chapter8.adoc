@@ -11,8 +11,9 @@ include::IT-Architektur.adoc[]
 | Datum 		|Bearbeiter | Änderung 
 
 | 30.01.2026 	|{author}		| Initiale Erstellung 
-| 10.02.2026 	|{author} 		| Änderung Inhalt 
-| 				|  			|  
+| 10.02.2026 	|{author} 		| Änderung Inhalt - IT-Architektur
+| 13.02.2026 	|{author} 		| Neuer Inhalt - RAG
+| 				|  			|   
 |===
 
 
