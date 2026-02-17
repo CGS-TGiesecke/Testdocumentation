@@ -26,7 +26,7 @@ include::chapter/chapter2.adoc[]
 
 include::chapter/chapter2-4-rag.adoc[]
 
-include::chapter/chapter2-5-authentication.adoc[]
+include::chapter/chapter2-5-auth.adoc[]
 
 include::chapter/chapter3.adoc[]
 
@@ -39,7 +39,7 @@ include::chapter/chapter5.adoc[]
 include::chapter/chapter6.adoc[]
 
 ifeval::[{big-output} == 1]
-include::chapter/chapter7-o.adoc[]
+include::chapter/chapter6-1-faq-o.adoc[]
 endif::[]
 
 include::chapter/chapter8.adoc[]

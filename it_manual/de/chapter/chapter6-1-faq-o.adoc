@@ -27,12 +27,12 @@
 |  	|Azure OpenAI: $100-500/Monat (50 Nutzer)
 |	  |AWS Bedrock: $80-400/Monat (50 Nutzer)
 |	  |Lokal: €0 API-Kosten, aber Hardware-Investment
-|Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (LDAP des Kunden, DB des Kunden)
-|  	|über Microsoft Entra ID (ehemals Azure AD/Entra) (OIDC/SAML)
-|	  |API-Token für Integrationen
+|Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
+|  	| über SAML-Authentifizierung mit Microsoft Entra ID
+|  	| OpenID Authentifizierung mit Microsoft Entra ID
 |Wie ist der Zugriff abgesichert?| Absicherung Zertifikate (TLS/HTTPS)
 |	  |Let's Encrypt (via Caddy)
 |	  |Eigene Zertifikate (interne CA)
 |Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
-|Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im Active Directory aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
+|Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
 |===
