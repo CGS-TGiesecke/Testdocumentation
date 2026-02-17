@@ -1,12 +1,13 @@
 
-==== {application} integriertes DMS
+==== {application} integreted DMS
 
-Das ist eine PostgreSQL DB Anbindung in {application}, in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
-Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Dort sind diese für alle erstmal sichtbar. 
-Die erforderlichen Berechtigungen der Rollen auf die Ordner setzt der Kunde selbst.
-Die Speicherung der Teildomukente (Embeddings) erfolgt in einem internen Vectorspeicher (ChromaDB).
+This is a PostgreSQL database connection in {application}, where system-defined folders and customer-maintained documents are stored.
+Folders are created in the database via script according to the customer's requirements. They are initially visible to all users. 
+The customer is responsible for setting the required role permissions for the folders.
+Storage of partial documents (embeddings) takes place in an internal vector store (ChromaDB).
 
-Die Dateien werden vom Kunden per Hand hochgeladen. Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
-Die Gesamte Datenhaltung und Zugriffsmanagement wird kundenseitig festgelegt und verwaltet.
+Files are uploaded manually by the customer. Permissions on individual files correspond to those of the respective directories. 
+All data storage and access management are defined and managed by the customer.
+
 
 

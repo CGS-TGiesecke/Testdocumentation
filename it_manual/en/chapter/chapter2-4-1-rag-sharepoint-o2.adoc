@@ -1,63 +1,63 @@
-Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
+To access SharePoint resources (e.g., lists, sites, files) via a registered application in the Microsoft Entra Admin Center, additional steps are required.
 
-===== SharePoint-Berechtigungen definieren
+===== Defining SharePoint Permissions
 
-Ihre Anwendung benötigt passende Permissions, um auf SharePoint Online zugreifen zu dürfen. Dies wird über Microsoft Graph **oder** die direkte SharePoint API konfiguriert.
+Your application needs the appropriate permissions to access SharePoint Online. This is configured via Microsoft Graph **or** the direct SharePoint API.
 
-*Hinzufügen von API-Berechtigungen*
+*Adding API Permissions*
 
-* Navigieren Sie zu Ihrer App-Registrierung:
-* Entra Admin Center → Identität → Anwendungen → App-Registrierungen → Ihre Anwendung wählen.
-* Klicken Sie auf „API-Berechtigungen“.
-* Fügen Sie Berechtigungen hinzu:
-** Klicken Sie auf "Berechtigung hinzufügen".
-** Wählen Sie „Microsoft Graph“ (für modernen Zugriff, empfohlen); alternativ: „SharePoint“.
-** Sie können Anwendungsberechtigungen („Application permissions“, für Dienste ohne User-Kontext) ODER Delegierte Berechtigungen („Delegated permissions“, im Kontext eines angemeldeten Benutzers) vergeben.
+* Navigate to your app registration:
+* Entra Admin Center → Identity → Applications → App registrations → Select your application.
+* Click on “API permissions”.
+* Add permissions:
+** Click on "Add a permission".
+** Choose “Microsoft Graph” (recommended for modern access); alternatively: “SharePoint”.
+** You can assign Application permissions (for services running without a user context) OR Delegated permissions (in the context of a signed-in user).
 
-*Typische SharePoint-Berechtigungen im Microsoft Graph:*
+*Typical SharePoint permissions with Microsoft Graph:*
 
-Delegierte Berechtigungen:
+Delegated permissions:
 ```
 Sites.Read.All
 Sites.ReadWrite.All
 ```
-*Vorschlag:* Sites.Read.All
+*Suggestion:* Sites.Read.All
 
-Anwendungsberechtigungen:
+Application permissions:
 ```
 Sites.FullControl.All
 Sites.Read.All
 Sites.ReadWrite.All
 ```
-*Vorschlag:* Sites.Read.All
+*Suggestion:* Sites.Read.All
 
-Typische SharePoint-spezifische Berechtigungen (direkt auf SharePoint-API):
+Typical SharePoint-specific permissions (direct on SharePoint API):
 ```
 AllSites.FullControl
 AllSites.Read
 AllSites.Write
 ```
-*Vorschlag:* AllSites.Read
+*Suggestion:* AllSites.Read
 
-===== Admin-Zustimmung erteilen
+===== Grant Admin Consent
 
-Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
-In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
+For your app to work with these permissions, a tenant administrator must approve them:
+In API permissions, click "Grant admin consent for [your directory]".
 
-*Wichtige Hinweise*
+*Important Notes*
 
-"Sites.FullControl.All" bzw. "AllSites.FullControl" gibt Zugriff auf **alle** SharePoint-Inhalte im Tenant.
-Nutzen Sie solche Rechte nur mit besonderer Vorsicht und nur wenn unbedingt nötig!
-Für produktive Systeme, Datenschutz- und Sicherheitsanforderungen konsultieren Sie bitte qualifizierte Audit- oder Datenschutzbeauftragte.
+"Sites.FullControl.All" or "AllSites.FullControl" grants access to **all** SharePoint content in the tenant.
+Only use such permissions with extra caution and only when absolutely necessary!
+For production systems, data privacy and security requirements, please consult qualified audit or data protection officers.
 
-===== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
+===== Accessing SharePoint Content via Microsoft Graph API
 
-Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
+The Microsoft Graph API is the central interface for programmatically accessing Microsoft 365 services (such as SharePoint).
 
-*Ablauf:*
+*Process:*
 
-* OAuth 2.0 Authentifizierung:
-** Die Anwendung holt sich über ein sogenanntes OAuth2-Grant-Flow ein Zugriffstoken von Entra ID.
+* OAuth 2.0 Authentication:
+** The application obtains an access token from Entra ID via an OAuth2 grant flow.
 
-* Aufruf der Graph API:
-** Mit dem Token kann die Anwendung SharePoint-Inhalte über die Microsoft Graph API auslesen oder bearbeiten.
+* Calling the Graph API:
+** With the token, the application can read or modify SharePoint content using the Microsoft Graph API.

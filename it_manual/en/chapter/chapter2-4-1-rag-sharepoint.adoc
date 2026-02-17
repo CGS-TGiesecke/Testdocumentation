@@ -1,18 +1,18 @@
 
-==== Sharepoint Anbindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
+==== SharePoint connection via the Microsoft Entra ID (formerly Azure Active Directory) secured API
 
-Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
-In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 
-automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft ist.
+The connection to SharePoint must be established via an API using customer-specific data.
+In SharePoint, individual areas are referred to as sites. For example, when a new group is created in MS Teams, SharePoint 
+automatically creates the corresponding SharePoint site linked to this group.
 
-Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
+The necessary data for connecting {application} to the customer's SharePoint are:
 
-* **Tenant-ID:** Die ID des Mandanten, normalerweise eine GUID.
-* **Client-ID:** Die Client-ID der Anwendung mit den erforderlichen Berechtigungen (Client-Secrets) für den Datenzugriff.
-* **Client-Secrets:** Die SharePoint-Application-Berechtigungen für den Datenzugriff.
+* **Tenant ID:** The ID of the tenant, usually a GUID.
+* **Client ID:** The client ID of the application with the necessary permissions (client secrets) for data access.
+* **Client secrets:** The SharePoint application permissions required for data access.
 
-Diese werden in einen config file hinterlegt (siehe "Erstkonfiguration der Anwendung"). Sind diese Daten nicht vorhanden, 
-muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
+These are stored in a configuration file (see "Initial configuration of the application"). If this data is not available, 
+the application {application} must first be registered by the customer in the Microsoft Entra Admin Center.
 
 ifeval::[{big-output} == 1]
 
