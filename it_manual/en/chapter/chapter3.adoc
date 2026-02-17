@@ -29,6 +29,10 @@ Deployment of {application} is carried out in the following steps:
 
 After successful installation, the following initial configurations must be performed:
 
+*Configure Authentication*
+
+- configure customer-selected authentication
+
 *Configure modules*
 
 - LLM API: Configure provider & models

@@ -1,0 +1,6 @@
+
+=== Authentifizierung
+
+include::chapter2-5-1-auth-saml.adoc[]
+
+include::chapter2-5-2-auth-openid.adoc[]
