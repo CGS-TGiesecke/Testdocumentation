@@ -20,18 +20,6 @@ include::chapter2-4-1-rag-sharepoint-o1.adoc[]
 
 endif::[]
 
-==== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
-
-Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
-
-**Ablauf:**
-
-* OAuth 2.0 Authentifizierung:
-** Die Anwendung holt sich über ein sogenanntes OAuth2-Grant-Flow ein Zugriffstoken von Entra ID.
-
-* Aufruf der Graph API:
-** Mit dem Token kann die Anwendung SharePoint-Inhalte über die Microsoft Graph API auslesen oder bearbeiten.
-
 ifeval::[{big-output} == 1]
 
 include::chapter2-4-1-rag-sharepoint-o2.adoc[]

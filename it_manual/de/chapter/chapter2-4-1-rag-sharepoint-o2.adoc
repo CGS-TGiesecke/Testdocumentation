@@ -49,3 +49,15 @@ In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 "Sites.FullControl.All" bzw. "AllSites.FullControl" gibt Zugriff auf **alle** SharePoint-Inhalte im Tenant.
 Nutzen Sie solche Rechte nur mit besonderer Vorsicht und nur wenn unbedingt nötig!
 Für produktive Systeme, Datenschutz- und Sicherheitsanforderungen konsultieren Sie bitte qualifizierte Audit- oder Datenschutzbeauftragte.
+
+Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
+
+Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
+
+**Ablauf:**
+
+* OAuth 2.0 Authentifizierung:
+** Die Anwendung holt sich über ein sogenanntes OAuth2-Grant-Flow ein Zugriffstoken von Entra ID.
+
+* Aufruf der Graph API:
+** Mit dem Token kann die Anwendung SharePoint-Inhalte über die Microsoft Graph API auslesen oder bearbeiten.
