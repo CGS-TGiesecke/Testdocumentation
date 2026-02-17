@@ -33,7 +33,7 @@ Nach dem Speichern der SAML-Konfiguration stellt Microsoft Entra ID die IdP-Meta
 * *Azure AD Identifier (Issuer/Entity ID)*
 * *SAML Signatur-Zertifikat* (als Datei und/oder Base64)
 ```
-*Hinweis:*Daten Notieren/Kopieren. Diese Daten werden für die Konfiguration der Anwendung {application} benötigt. (siehe "Installation und Konfiguration")
+*Hinweis:* Daten Notieren/Kopieren für die Konfiguration der Anwendung {application}. (siehe "Installation und Konfiguration")
 ```
 *Beispiel Endpunkte (Azure Standard):*
 ```
