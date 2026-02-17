@@ -5,7 +5,7 @@ Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen.
 In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 
 automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft ist.
 
-Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
+Die notwendigen Daten, für die Anbindung von {application} mit Credentials an Sharepoint des Kunden sind:
 
 * **Tenant-ID:** Die ID des Mandanten, normalerweise eine GUID.
 * **Client-ID:** Die Client-ID der Anwendung mit den erforderlichen Berechtigungen (Client-Secrets) für den Datenzugriff.

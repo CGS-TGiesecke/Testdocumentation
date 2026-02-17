@@ -5,7 +5,7 @@ The connection to SharePoint must be established via an API using customer-speci
 In SharePoint, individual areas are referred to as sites. For example, when a new group is created in MS Teams, SharePoint 
 automatically creates the corresponding SharePoint site linked to this group.
 
-The necessary data for connecting {application} to the customer's SharePoint are:
+The necessary data for connecting {application} with credentials to the customer's SharePoint are:
 
 * **Tenant ID:** The ID of the tenant, usually a GUID.
 * **Client ID:** The client ID of the application with the necessary permissions (client secrets) for data access.
