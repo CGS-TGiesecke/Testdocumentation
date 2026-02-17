@@ -16,7 +16,7 @@ muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Cent
 
 ifeval::[{big-output} == 1]
 
-include::chapter2-4-1-rag-sharepoint-o1.adoc
+include::chapter2-4-1-rag-sharepoint-o1.adoc[]
 
 endif::[]
 
@@ -34,6 +34,6 @@ Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf
 
 ifeval::[{big-output} == 1]
 
-include::chapter2-4-1-rag-sharepoint-o2.adoc
+include::chapter2-4-1-rag-sharepoint-o2.adoc[]
 
 endif::[]
