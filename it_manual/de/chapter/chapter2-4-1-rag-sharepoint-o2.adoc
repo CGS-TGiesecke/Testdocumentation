@@ -1,0 +1,50 @@
+Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind folgende zusätzliche Schritte nötig:
+
+**1. SharePoint-Berechtigungen definieren**
+
+Ihre Anwendung benötigt passende Permissions, um auf SharePoint Online zugreifen zu dürfen. Dies wird über Microsoft Graph oder die direkte SharePoint API konfiguriert.
+
+a) Hinzufügen von API-Berechtigungen
+
+* Navigieren Sie zu Ihrer App-Registrierung:
+* Entra Admin Center → Identität → Anwendungen → App-Registrierungen → Ihre Anwendung wählen.
+* Klicken Sie auf „API-Berechtigungen“.
+* Fügen Sie Berechtigungen hinzu:
+** Klicken Sie auf "Berechtigung hinzufügen".
+** Wählen Sie „Microsoft Graph“ (für modernen Zugriff, empfohlen); alternativ: „SharePoint“.
+** Sie können Anwendungsberechtigungen („Application permissions“, für Dienste ohne User-Kontext) ODER Delegierte Berechtigungen („Delegated permissions“, im Kontext eines angemeldeten Benutzers) vergeben.
+
+Typische SharePoint-Berechtigungen im Microsoft Graph:
+Delegierte Berechtigungen:
+```
+Sites.Read.All
+Sites.ReadWrite.All
+```
+Anwendungsberechtigungen:
+```
+Sites.FullControl.All
+Sites.Read.All
+Sites.ReadWrite.All
+```
+Typische SharePoint-spezifische Berechtigungen (direkt auf SharePoint-API):
+```
+AllSites.FullControl
+AllSites.Read
+AllSites.Write
+```
+Beispiel – Microsoft Graph Application Permission:
+```
+Sites.Read.All
+Sites.ReadWrite.All
+```
+
+**2. Admin-Zustimmung erteilen**
+
+Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
+In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
+
+**Wichtige Hinweise**
+
+"Sites.FullControl.All" bzw. AllSites.FullControl gibt Zugriff auf alle SharePoint-Inhalte im Tenant.
+Nutzen Sie solche Rechte nur mit besonderer Vorsicht und nur wenn unbedingt nötig!
+Für produktive Systeme, Datenschutz- und Sicherheitsanforderungen konsultieren Sie bitte qualifizierte Audit- oder Datenschutzbeauftragte.

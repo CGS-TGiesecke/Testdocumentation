@@ -1,0 +1,36 @@
+===== Registrierung einer Anwendung in Microsoft Entra ID
+
+*Login*
+Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+
+*Navigation zu "App-Registrierungen"*
+
+* Wählen Sie im linken Menü "Identitätsverwaltung", dann "Azure Active Directory".
+* Navigieren Sie zu "App-Registrierungen".
+* Neue Anwendung registrieren
+* Klicken Sie auf "Neue Registrierung" (oben im Menü).
+
+*Anwendungsinformationen eingeben*
+
+* Name: Wählen Sie einen Namen für die Anwendung.
+* Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder mehrere Organisationen unterstützen soll.
+* Redirect URI (optional): Geben Sie eine Umleitungs-URL an, wenn Ihre Anwendung eine Authentifizierung benötigt.
+
+*Erstellen*
+
+* Klicken Sie auf "Registrieren".
+* Nach der Registrierung erhalten Sie:
+
+** Anwendungs-ID **(Client-ID)**
+** Verzeichnis-ID **(Tenant-ID)**
+** **Client-Secrets** oder Zertifikat je nach Bedarf unter "Zertifikate & Geheimnisse" generieren
+
+**!!! Hinweis:** Kopieren Sie die Werte für Ihre Anwendungskonfiguration
+
+*Berechtigungen konfigurieren (optional)*
+
+* Unter "API-Berechtigungen" können Sie Ihrer Anwendung Zugriff auf Microsoft APIs (z.B. Microsoft Graph) gewähren.
+
+*Weitere Einstellungen*
+
+* Optional: Konfigurieren Sie Branding, Token-Konfiguration und User-Assignment je nach Bedarf.
