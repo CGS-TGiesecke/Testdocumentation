@@ -28,9 +28,9 @@ Redirect-URI Ihrer App an (z.B. https://localhost:1234 oder das URL Ihrer Web-Ap
 ** Anwendungs-ID **(Client-ID)**
 ** Verzeichnis-ID **(Tenant-ID)**
 ** **Client-Secrets** oder Zertifikat je nach Bedarf unter "Zertifikate & Geheimnisse" generieren
-
-+**Hinweis:** Kopieren Sie die Werte für Ihre Anwendungskonfiguration.+
-
+```
+*Hinweis:* Kopieren Sie die Werte für Ihre Anwendungskonfiguration.
+```
 *Berechtigungen konfigurieren (optional)*
 
 * Unter "API-Berechtigungen" können Sie Ihrer Anwendung Zugriff auf Microsoft APIs (z.B. Microsoft Graph) gewähren (s.u. "SharePoint-Berechtigungen definieren").
