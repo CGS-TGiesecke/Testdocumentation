@@ -3,6 +3,7 @@
 *Login*
 
 Melden Sie sich im Microsoft Entra ID Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+https://entra.microsoft.com
 
 *Navigation zu "App-Registrierungen"*
 
@@ -13,11 +14,11 @@ Melden Sie sich im Microsoft Entra ID Admin Center mit einem Konto an, das über
 
 *Anwendungsinformationen eingeben*
 
-* Name: Wählen Sie einen Namen für die Anwendung. ++Vorschlag: {application}++
+* Name: Wählen Sie einen Namen für die Anwendung. +Vorschlag: {application}+
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
-mehrere Organisationen unterstützen soll. ++Vorschlag: interne Benutzer (nur eigene Organisation)++
+mehrere Organisationen unterstützen soll. +Vorschlag: interne Benutzer (nur eigene Organisation)+
 * Redirect URI (optional): Geben Sie eine Umleitungs-URL an, z.B. wenn Ihre Anwendung eine Authentifizierung benötigt oder den 
-Redirect-URI Ihrer App an (z.B. https://localhost:1234 oder das URL Ihrer Web-App). ++Vorschlag: {application}++
+Redirect-URI Ihrer App an (z.B. https://localhost:1234 oder das URL Ihrer Web-App). +Vorschlag: ????????+
 
 *Erstellen*
 
@@ -28,7 +29,7 @@ Redirect-URI Ihrer App an (z.B. https://localhost:1234 oder das URL Ihrer Web-Ap
 ** Verzeichnis-ID **(Tenant-ID)**
 ** **Client-Secrets** oder Zertifikat je nach Bedarf unter "Zertifikate & Geheimnisse" generieren
 
-++**Hinweis:** Kopieren Sie die Werte für Ihre Anwendungskonfiguration.++
++**Hinweis:** Kopieren Sie die Werte für Ihre Anwendungskonfiguration.+
 
 *Berechtigungen konfigurieren (optional)*
 

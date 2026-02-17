@@ -20,7 +20,7 @@ Delegierte Berechtigungen:
 Sites.Read.All
 Sites.ReadWrite.All
 ```
-++Vorschlag: ?????++
++Vorschlag: ?????+
 
 Anwendungsberechtigungen:
 ```
@@ -28,7 +28,7 @@ Sites.FullControl.All
 Sites.Read.All
 Sites.ReadWrite.All
 ```
-++Vorschlag: ?????++
++Vorschlag: ?????+
 
 Typische SharePoint-spezifische Berechtigungen (direkt auf SharePoint-API):
 ```
@@ -36,7 +36,7 @@ AllSites.FullControl
 AllSites.Read
 AllSites.Write
 ```
-++Vorschlag: ?????++
++Vorschlag: ?????+
 
 **2. Admin-Zustimmung erteilen**
 
@@ -45,6 +45,6 @@ In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 
 **Wichtige Hinweise**
 
-"Sites.FullControl.All" bzw. AllSites.FullControl gibt Zugriff auf alle SharePoint-Inhalte im Tenant.
+"Sites.FullControl.All" bzw. "AllSites.FullControl" gibt Zugriff auf **alle** SharePoint-Inhalte im Tenant.
 Nutzen Sie solche Rechte nur mit besonderer Vorsicht und nur wenn unbedingt nötig!
 Für produktive Systeme, Datenschutz- und Sicherheitsanforderungen konsultieren Sie bitte qualifizierte Audit- oder Datenschutzbeauftragte.
