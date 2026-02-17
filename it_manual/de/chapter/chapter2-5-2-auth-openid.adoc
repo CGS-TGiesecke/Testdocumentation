@@ -1,9 +1,34 @@
 
 ==== OpenID Authentifizierung mit Microsoft Entra ID
 
-Diese Dokumentation beschreibt die Implementierung der Authentifizierung in {application} mittels OpenID Connect und Microsoft Entra ID.
+Die OpenID-Authentifizierung mit Microsoft Entra ID wird heute für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
+um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Sie bringt folgende Vorteile und ist in vielen Szenarien notwendig:
 
-==== Voraussetzungen
+*Einheitlicher Anmeldeprozess (Single Sign-On, SSO)*
+
+* Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Passwort bei Microsoft 365) in verschiedensten Anwendungen anmelden.
+* Mehrere Apps (Cloud und On-Premises) nutzen ein zentrales Identitätsmanagement.
+* Passwort-/Benutzerverwaltung erfolgt einheitlich.
+
+*Sicherheitsgewinn & Compliance*
+
+* Microsoft Entra ID unterstützt Multi-Faktor-Authentifizierung (MFA), Conditional Access und Identity Protection.
+* Sicherheits- und Richtlinienkontrolle bis auf Anwendungsebene.
+* Auditierbarkeit, Protokollierung und zentrale Policy-Verwaltung.
+
+*Standardisierung & Integration*
+
+* OpenID Connect ist ein weit verbreiteter offener Authentifizierungsstandard – kompatibel mit modernen Frameworks und Bibliotheken.
+* Integration von Drittanbieter-Anwendungen und Eigenentwicklungen möglich.
+* Minimierung von Integrations- und Wartungsaufwand.
+
+*Notwendigkeit*
+
+* **Datenschutz und Compliance:** Viele Branchen/Unternehmen fordern zentrale Identitätsdienste und revisionssichere Authentifizierung.
+* **Reduktion von Schatten-IT:** Eine einheitliche Authentifizierung erschwert un-autorisierte Zugangslösungen.
+* **Anwenderkomfort:** Weniger Anmeldeprobleme, Self-Service bei Passwortänderungen, SSO über viele Systeme hinweg.
+
+===== Voraussetzungen
 
 * Ein Azure-Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
 * Eine registrierte Anwendung in Microsoft Entra ID (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")
@@ -12,85 +37,10 @@ Diese Dokumentation beschreibt die Implementierung der Authentifizierung in {app
   - Client ID (Anwendungs-ID)
   - Client Secret (falls für den Flow benötigt)
   - Redirect URI (muss in der App-Registrierung hinterlegt werden)
+  
+ifeval::[{big-output} == 1]
 
-==== Registrierungsschritte in Microsoft Entra ID
+include::chapter2-5-2-auth-openid-o.adoc[]
 
-1. Anmeldung unter https://entra.microsoft.com.
-2. Neue Anwendung registrieren; Client ID, Tenant ID und ggf. Client Secret notieren.
-3. Redirect URI hinterlegen (z. B. https://ihreapp.com/auth/callback).
-4. Unter „API-Berechtigungen” mindestens die Berechtigungen „openid“ und „profile“ hinzufügen.
+endif::[]
 
-==== OpenID Connect Endpunkte
-
-- *Authorization Endpoint:*  
-https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize
-
-- *Token Endpoint:* 
-https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token
-
-- *Issuer:*  
-https://login.microsoftonline.com/{tenant}/v2.0
-
-- *JWKS (Key Discovery):*  
-https://login.microsoftonline.com/{tenant}/discovery/v2.0/keys
-
-Ersetzen Sie `{tenant}` durch Ihre Tenant ID oder `common` (für Multi-Tenant-Szenarien).
-
-==== OpenID Connect Authentication Flow
-
-1. Die Anwendung leitet den Benutzer zum Authorization Endpoint (`/authorize`) um, inklusive Parameter:
-
-  * client_id
-  * response_type=code
-  * redirect_uri
-  * scope=openid profile email
-  * state, nonce
-
-2. Der Benutzer authentifiziert sich bei Microsoft Entra ID.
-3. Entra ID leitet den Benutzer zu `redirect_uri` mit einem Authorization Code zurück.
-4. Die Anwendung tauscht diesen Code am Token Endpoint gegen Token (ID Token, Access Token) ein.
-5. Die Anwendung validiert das ID-Token (JWT) unter Zuhilfenahme des Issuer und JWKS.
-6. Nach erfolgreicher Prüfung gilt der Benutzer als authentifiziert.
-
-==== Beispiel: Authorization Request URL
-```
-https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?
-client_id={client_id}
-&response_type=code
-&redirect_uri={redirect_uri}
-&scope=openid%20profile%20email
-&state={state}
-&nonce={nonce}
-```
-
-==== Beispiel: Token Request (POST)
-
-```
-POST an `https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token`
-
-Body (x-www-form-urlencoded):
-client_id={client_id}
-grant_type=authorization_code
-scope=openid profile email
-code={authorization_code}
-redirect_uri={redirect_uri}
-client_secret={client_secret}
-```
-
-*Hinweise zur Implementierung*
-
-* Verwenden Sie eine geprüfte Bibliothek für den OpenID-Connect-Flow (z.B. MSAL für .NET/JavaScript/Python/Java, oidc-client, o.ä.).
-* Schützen Sie Ihr Client Secret – niemals im Client-Code (Browser, Mobile-App) verwenden.
-* Validieren Sie stets das ID-Token (`id_token`) und prüfen Sie `nonce` und `state`.
-* Legen Sie in der App-Registrierung ausschließlich vertrauenswürdige Redirect-URIs fest.
-* Überprüfen Sie im ID-Token immer die Claims `aud` (audience) und `iss` (issuer).
-
-==== Referenzen
-
-* Microsoft Entra ID OpenID Connect Dokumentation  
-  - https://learn.microsoft.com/de-de/azure/active-directory/develop/v2-protocols-oidc
-* OpenID Connect Standard: https://openid.net/connect/
-
-==== Weitere Konfiguration
-Passen Sie bei Bedarf die Scopes und Berechtigungen in Entra ID an, um weiteren Ressourcen-Zugriff (z.B. Microsoft Graph) zu ermöglichen. 
-(siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")
