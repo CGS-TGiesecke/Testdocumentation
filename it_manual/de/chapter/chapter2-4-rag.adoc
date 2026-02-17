@@ -1,0 +1,7 @@
+
+=== RAG (Retrieval-Augmented Generation)
+
+include::chapter2-4-1-rag-dms.adoc[]
+
+
+include::chapter2-4-1-rag-sharepoint.adoc[]

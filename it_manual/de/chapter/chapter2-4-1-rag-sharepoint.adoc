@@ -1,0 +1,67 @@
+
+==== Sharepoint Andindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
+
+Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
+In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 
+automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft ist.
+
+Die notwendigen Daten, für die Anbindung von {application} an Sharepoint des Kunden sind:
+
+* **Tenant-ID:** Die ID des Mandanten, normalerweise eine GUID.
+* **Client-ID:** Die Client-ID der Anwendung mit den erforderlichen Berechtigungen (Client-Secrets) für den Datenzugriff.
+* **Client-Secrets:** Die SharePoint-Application-Berechtigungen für den Datenzugriff.
+
+Diese werden in einen config file hinterlegt (siehe "Erstkonfiguration der Anwendung"). Sind diese Daten nicht vorhanden, 
+muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
+
+ifeval::[{big-output} == 1]
+
+===== Registrierung einer Anwendung in Microsoft Entra ID
+
+*Login*
+Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+
+*Navigation zu "App-Registrierungen"*
+
+* Wählen Sie im linken Menü "Identitätsverwaltung", dann "Azure Active Directory".
+* Navigieren Sie zu "App-Registrierungen".
+* Neue Anwendung registrieren
+* Klicken Sie auf "Neue Registrierung" (oben im Menü).
+
+*Anwendungsinformationen eingeben*
+
+* Name: Wählen Sie einen Namen für die Anwendung.
+* Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder mehrere Organisationen unterstützen soll.
+* Redirect URI (optional): Geben Sie eine Umleitungs-URL (z.B. https://app.contoso.com/auth) an, wenn Ihre Anwendung eine Authentifizierung benötigt.
+
+*Erstellen*
+
+* Klicken Sie auf "Registrieren".
+* Wichtige Daten kopieren
+* Nach der Registrierung erhalten Sie:
+
+** Anwendungs-ID (Client-ID)
+** Verzeichnis-ID (Tenant-ID)
+** Optional: Geheimnis oder Zertifikat (bei Bedarf unter "Zertifikate & Geheimnisse" generieren)
+
+*Berechtigungen konfigurieren (optional)*
+
+* Unter "API-Berechtigungen" können Sie Ihrer Anwendung Zugriff auf Microsoft APIs (z.B. Microsoft Graph) gewähren.
+
+*Weitere Einstellungen*
+
+* Optional: Konfigurieren Sie Branding, Token-Konfiguration und User-Assignment je nach Bedarf.
+
+endif::[]
+
+==== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
+
+Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
+
+**Ablauf:**
+
+* OAuth 2.0 Authentifizierung:
+** Die Anwendung holt sich über ein sogenanntes OAuth2-Grant-Flow ein Zugriffstoken von Entra ID.
+
+* Aufruf der Graph API:
+** Mit dem Token kann die Anwendung SharePoint-Inhalte über die Microsoft Graph API auslesen oder bearbeiten.
