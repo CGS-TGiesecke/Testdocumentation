@@ -3,13 +3,13 @@
 
 ==== {application} integriertes DMS
 
-Das ist eine SQLight DB Anbindung in {application}, in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
+Das ist eine PostgreSQL DB Anbindung in {application}, in der systemseitig festgelegte Ordner und vom Kunden leicht zu pflegende Dokumente gespeichert sind.
 Die Ordner werden per Script nach Kundenwunsch in der DB erzeugt. Dort sind diese für alle erstmal sichtbar. 
 Die erforderlichen Berechtigungen der Rollen auf die Ordner setzt der Kunde selbst.
+Die Speicherung der Teildomukente (Embeddings) erfolgt in einem internen Vectorspeicher (ChromaDB).
 
-Die Dateien werden vom Kunden per Hand hochgeladen. 
-Die unterstützte Anzahl von Dateien pro Upload beträgt 1000, und die maximale Dateigröße beträgt standardmäßig 5 GB. (Windos Standard) 
-Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
+Die Dateien werden vom Kunden per Hand hochgeladen. Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
+Die Gesamte Datenhaltung und Zugriffsmanagement wird kundenseitig festgelegt und verwaltet.
 
 ==== Sharepoint Andindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
 
@@ -30,7 +30,7 @@ ifeval::[{big-output} == 1]
 
 ===== Registrierung einer Anwendung in Microsoft Entra ID
 
-Dies ist der erste Schritt, wenn eine Applikation die Microsoft Identitätsdienste (z. B. Anmeldung mit Microsoft-Konto, Zugriff auf APIs) verwendet.
+Registrierung einer Anwendung in Microsoft Entra ID ist der erste Schritt, wenn eine Applikation die Microsoft Identitätsdienste (z. B. Anmeldung mit Microsoft-Konto, Zugriff auf APIs) verwendet.
 Nach der Registrierung kann {application} App Microsoft-Identitätsplattform-Funktionen verwenden (z. B. Anmeldung, Zugriff auf Graph-API usw.).
 
 Wichtige Schritte:

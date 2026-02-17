@@ -3,13 +3,15 @@
 
 ==== {application} integrated DMS
 
-This is an SQLight DB integration in {application}, where system-defined folders and customer-maintained documents are stored.
-Folders are created in the database via script according to customer requirements, and are initially visible to everyone.
-The required permissions for roles on the folders are set by the customer.
+This is a PostgreSQL database connection in {application}, where system-defined folders and customer-maintained documents are stored.
 
-Files are uploaded manually by the customer.
-The supported number of files per upload is 1000, and the maximum file size is typically 5 GB (Windows default).
-Permissions for individual files correspond to those of the directories.
+The folders are created in the database via script according to the customer’s requirements. Initially, these are visible to all users.
+The necessary folder permissions for different roles are managed independently by the customer.
+Partial documents (embeddings) are stored in an internal vector store (ChromaDB).
+
+Files are manually uploaded by the customer. Permissions on individual files correspond to those of the parent directories.
+All data management and access control are handled on the customer’s side.
+
 
 ==== Sharepoint Integration via Microsoft Entra ID (formerly Azure Active Directory) secured API
 
@@ -29,7 +31,7 @@ ifeval::[{big-output} == 1]
 
 ===== Registering an Application in Microsoft Entra ID
 
-This is the first step when an application uses Microsoft identity services (e.g., Microsoft account login, API access).
+Registering an Application in Microsoft Entra ID is the first step when an application uses Microsoft identity services (e.g., Microsoft account login, API access).
 After registration, the {application} app can use Microsoft Identity Platform features (e.g., login, access to Graph API).
 
 Important Steps:
