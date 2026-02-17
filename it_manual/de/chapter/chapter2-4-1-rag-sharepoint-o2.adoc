@@ -1,4 +1,4 @@
-Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind folgende zusätzliche Schritte nötig:
+Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
 
 **1. SharePoint-Berechtigungen definieren**
 
@@ -20,23 +20,23 @@ Delegierte Berechtigungen:
 Sites.Read.All
 Sites.ReadWrite.All
 ```
+++Vorschlag: ?????++
+
 Anwendungsberechtigungen:
 ```
 Sites.FullControl.All
 Sites.Read.All
 Sites.ReadWrite.All
 ```
+++Vorschlag: ?????++
+
 Typische SharePoint-spezifische Berechtigungen (direkt auf SharePoint-API):
 ```
 AllSites.FullControl
 AllSites.Read
 AllSites.Write
 ```
-Beispiel – Microsoft Graph Application Permission:
-```
-Sites.Read.All
-Sites.ReadWrite.All
-```
+++Vorschlag: ?????++
 
 **2. Admin-Zustimmung erteilen**
 
