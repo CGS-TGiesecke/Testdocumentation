@@ -2,11 +2,15 @@
 ===== Einrichtung der Verbindung zur Benutzerdatenbank oder zum LDAP-Server
 
 *Benutzerdatenbank bereitstellen* 
+
 Stellen Sie sicher, dass eine Benutzerdatenbank existiert (z. B. SQL-Datenbank oder LDAP-Server), in der Benutzername und 
 (idealerweise gehashte/verschlüsselte) Passwörter gespeichert sind.
 
 *Verbindung einrichten*  
-Zur Konfigurieren der Anmeldung bei {application} werden vom Kunden die Zugangsdaten für eine sichere Verbindung zur Benutzerdatenbank oder zum LDAP-Server bereitgestellt.
+
+Zur Konfigurieren der Anmeldung werden vom Kunden die Zugangsdaten für eine sichere Verbindung zur Benutzerdatenbank oder zum LDAP-Server bereitgestellt.
+Nach der erfolgreichen Authentifizierung an der Benutzerdatenbank oder dem LDAP-Server wird der Anwender an {application} weitergeleitet.
+
 
 
 
