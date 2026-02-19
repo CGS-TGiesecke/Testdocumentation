@@ -1,0 +1,11 @@
+=== Systemvoraussetzungen und Abhängigkeiten
+
+include::chapter2-0-hardware-req.adoc
+
+include::chapter2-0-general-req.adoc
+
+include::chapter2-1-third-components.adoc
+
+include::chapter/chapter2-2-llm.adoc[]
+
+

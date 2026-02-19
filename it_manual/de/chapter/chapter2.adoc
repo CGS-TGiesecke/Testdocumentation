@@ -66,8 +66,42 @@ ifeval::[{big-output} == 1]
 include::chapter2-2-o.adoc[]
 endif::[]
 
-include::chapter2-1-third-components.adoc
+==== Notwendige Drittanbieter-Komponenten
 
-include::chapter/chapter2-2-llm.adoc[]
+Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
+Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
+
+**WICHTIG:**{application} stellt **kein LLM** bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
+
+*Übersicht der unterstützten LLM-Provider*
+
+|===
+| Provider | Empfehlung | Vorteile | Setup-Aufwand
+
+| **Azure OpenAI** 
+| **Bevorzugt** 
+| Enterprise-Support, EU-Regionen, einfache Integration 
+| Mittel
+
+| **AWS Bedrock** 
+| Gleichwertig  
+| Gute Claude-Modelle, AWS-Integration  
+| Mittel
+
+| **Lokale Modelle** 
+| Für hohe Datenschutzanforderungen  
+| Maximaler Datenschutz, keine Cloud  
+| Hoch (GPU-Hardware erforderlich) 
+|===
+
+**Wählen Sie einen Provider basierend auf:**
+
+- Vorhandener Cloud-Infrastruktur (Azure oder AWS)
+- Datenschutz- und Compliance-Anforderungen
+- Budget und Betriebsmodell
+
+ifeval::[{big-output} == 1]
+include::chapter2-3-o.adoc[]
+endif::[]
 
 
