@@ -51,7 +51,7 @@ jobs:
 
       - name: Convert Markdown to HTML with style
         run: |
-          pandoc ${{ env.FILEPATH }}/${FILENAME}.doc \
+          pandoc ${{ env.FILEPATH }}/${FILENAME}.adoc \
           -o ${{ env.FILEPATH }}/${FILENAME}.html \
           --css=export-styles/style.css \
           --standalone --embed-resources
