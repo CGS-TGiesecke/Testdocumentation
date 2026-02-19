@@ -29,7 +29,7 @@
 |	  |Lokal: €0 API-Kosten, aber Hardware-Investment
 |Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
 |  	| über SAML-Authentifizierung mit Microsoft Entra ID
-|  	| OpenID Authentifizierung mit Microsoft Entra ID
+|  	| über OpenID Authentifizierung mit Microsoft Entra ID
 |Wie ist der Zugriff abgesichert?| Absicherung Zertifikate (TLS/HTTPS)
 |	  |Let's Encrypt (via Caddy)
 |	  |Eigene Zertifikate (interne CA)

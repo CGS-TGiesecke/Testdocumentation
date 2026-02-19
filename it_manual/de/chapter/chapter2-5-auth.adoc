@@ -1,13 +1,18 @@
 
 === Authentifizierung
 
-Authentifizierung schützt Anwendungen und Daten und erfüllt Compliance-Vorgaben.
+Authentifizierung schützt Anwendungen sowie Daten und erfüllt Compliance-Vorgaben.
+Die Applikation {application} unterstützt verschiedene Formen der Authentifizierung, die in Vorbereitung einer Auslieferung,
+nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 
-* SAML-Authentifizierung mit Microsoft Entra ID
-* OpenID Authentifizierung mit Microsoft Entra ID
+* eine SAML-Authentifizierung mit Microsoft Entra ID
+* eine OpenID Authentifizierung mit Microsoft Entra ID
+* eine lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
 
 include::chapter2-5-1-auth-saml.adoc[]
 
 include::chapter2-5-2-auth-openid.adoc[]
+
+include::chapter2-5-3-auth-pwd.adoc[]

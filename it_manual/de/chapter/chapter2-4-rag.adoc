@@ -9,6 +9,8 @@ ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
  oder der Nutzung von Use Cases zusätzliche Verzeichnisse aus dem Kundenintranet mit einzubeziehen.
+Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbiendung, die in Vorbereitung einer Auslieferung,
+nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 

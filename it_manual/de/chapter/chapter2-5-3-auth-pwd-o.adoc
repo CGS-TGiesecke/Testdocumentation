@@ -1,0 +1,32 @@
+
+==== Schritt-für-Schritt-Anleitung: Authentifizierung über lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
+
+1. **Benutzerdatenbank bereitstellen**  
+   Stellen Sie sicher, dass eine Benutzerdatenbank existiert (z. B. SQL-Datenbank oder LDAP-Server), in der Benutzername und 
+   (idealerweise gehashte/verschlüsselte) Passwörter gespeichert sind.
+
+2. **Verbindung einrichten**  
+   Konfigurieren Sie die Anwendung so, dass sie eine sichere Verbindung zur Benutzerdatenbank oder zum LDAP-Server herstellen 
+   kann (z. B. LDAPS oder verschlüsselte Datenbankverbindung).
+
+3. **Anmeldeformular implementieren**  
+   Implementieren Sie in der Anwendung ein Anmeldeformular, in dem der Benutzer seinen Benutzernamen und das Passwort eingeben kann.
+
+4. **Benutzereingaben entgegennehmen**  
+   Erfassen Sie die Benutzereingaben und validieren Sie diese auf korrekte Syntax und leere Felder.
+
+5. **Authentifizierung durchführen**  
+   Überprüfen Sie, ob die eingegebenen Zugangsdaten mit einem Datensatz in der Benutzerdatenbank oder im LDAP-Verzeichnis übereinstimmen:
+   - Bei SQL: Datenbankabfrage mit Benutzername und Passwort (ggf. Hashvergleich)
+   - Bei LDAP: Authentifizierung mittels LDAP-Bind mit Benutzername und Passwort
+
+6. **Ergebnis prüfen**  
+   Prüfen Sie die Rückmeldung:
+   - Erfolgreich: Zugriff auf die Anwendung gewähren und ggf. Sitzungs-Token erstellen
+   - Fehlgeschlagen: Fehlermeldung anzeigen und ggf. Sperrmechanismen bei mehrmaligem Fehlversuch aktivieren
+
+7. **Sicherheitsmaßnahmen anwenden**  
+   - Übertragen Sie Passwörter niemals im Klartext
+   - Speichern Sie Passwörter nur gehasht und gesalzen
+   - Setzen Sie Passwortregeln durch und bieten Sie Funktionen zum Passwort-Reset an
+

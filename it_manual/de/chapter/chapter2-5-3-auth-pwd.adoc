@@ -1,0 +1,36 @@
+
+=== Authentifizierung über lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
+
+==== Vorteile und Nutzen
+
+* Volle Kontrolle über die Verwaltung von Benutzern und Zugangsdaten innerhalb der Organisation
+* Anpassbare Authentifizierungs-Workflows, um spezifische Unternehmensanforderungen zu erfüllen
+* Integration in bestehende Infrastruktur (z.B. LDAP-Verzeichnisdienste)
+* Keine Abhängigkeit von externen Identitätsanbietern; geeignet für isolierte oder On-Premises-Umgebungen
+* Flexibilität bei der internen Verwaltung des Benutzer-Lifecycle und von Zugriffsrechten
+* Einhaltung interner Sicherheitsrichtlinien und regulatorischer Anforderungen wird ermöglicht
+
+==== Notwendigkeit
+
+Lokale Benutzer-/Passwort-Authentifizierung ist erforderlich, wenn:
+
+* Die Anwendung in Umgebungen ohne Internetzugang oder Verbindung zu öffentlichen Identitätsanbietern eingesetzt wird
+* Strenge regulatorische oder unternehmensinterne Vorgaben zum Datenschutz und zur Datenkontrolle bestehen
+* Für die Nutzung von Single Sign-On (SSO) innerhalb lokaler Netzwerke eine Integration in vorhandene Verzeichnisdienste (z. B. LDAP oder proprietäre Datenbanken) notwendig ist
+* Aus Vertraulichkeitsgründen der Verzicht auf externe Authentifizierungssysteme gewünscht ist
+
+==== Voraussetzungen
+
+* Eine vorhandene, erreichbare Benutzerdatenbank (z. B. SQL-Datenbank oder LDAP-Server) mit Benutzerkennungen und Metadaten
+* Sichere Verbindungsprotokolle (z. B. LDAPS für Verzeichnisdienste, verschlüsselte Verbindungen zu Datenbanken)
+* Regelmäßig gepflegte Benutzerdatensätze (mit Aktualisierungs- und Löschprozessen) zur korrekten Rechteverwaltung
+* Umsetzung von Passwort-Richtlinien (Komplexität, Ablaufzeiten, Reset-Mechanismen)
+* Zugriff der Anwendung auf die lokale Benutzerdatenbank oder den Verzeichnisdienst für Authentifizierungsanfragen
+* Geeignete Backup- und Wiederherstellungsprozesse für die Benutzerdatenbank oder den Verzeichnisdienst
+
+ifeval::[{big-output} == 1]
+
+include::chapter2-5-3-auth-pwd-o.adoc[]
+
+endif::[]
+
