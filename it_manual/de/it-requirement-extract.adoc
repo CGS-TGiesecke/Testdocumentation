@@ -6,12 +6,12 @@ Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattf
 
 include::chapter/chapter2-0-req.adoc[]
 
- include::chapter/chapter2-1-third-components.adoc[]
+# include::chapter/chapter2-1-third-components.adoc[]
 
- include::chapter/chapter2-2-llm.adoc[]
+# include::chapter/chapter2-2-llm.adoc[]
 
- include::chapter/chapter2-4-rag.adoc[]
+# include::chapter/chapter2-4-rag.adoc[]
 
- include::chapter/chapter2-5-auth.adoc[]
+# include::chapter/chapter2-5-auth.adoc[]
 
- include::chapter/zuletzt_checklist.adoc[]
+# include::chapter/zuletzt_checklist.adoc[]
