@@ -32,7 +32,7 @@ Lokale Benutzer-/Passwort-Authentifizierung ist erforderlich, wenn:
 * Zugriff der Anwendung auf die lokale Benutzerdatenbank oder den Verzeichnisdienst für Authentifizierungsanfragen
 * Geeignete Backup- und Wiederherstellungsprozesse für die Benutzerdatenbank oder den Verzeichnisdienst
 
-ifeval::[{big-output} == 1]
+ifeval::[{big-output} == 2]
 
 include::chapter2-5-3-auth-pwd-o.adoc[]
 

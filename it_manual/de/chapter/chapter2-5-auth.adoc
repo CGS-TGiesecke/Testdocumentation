@@ -1,6 +1,4 @@
 
-[it-requirement-extract]
-
 === Authentifizierung
 
 Authentifizierung schützt Anwendungen sowie Daten und erfüllt Compliance-Vorgaben.
@@ -13,10 +11,12 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
 * eine OpenID Authentifizierung mit Microsoft Entra ID
 * eine lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
 
-[it-requirement-extract]
+ifeval::[{big-output} == 1]
 
 include::chapter2-5-1-auth-saml.adoc[]
 
 include::chapter2-5-2-auth-openid.adoc[]
 
 include::chapter2-5-3-auth-pwd.adoc[]
+
+endif::[]
