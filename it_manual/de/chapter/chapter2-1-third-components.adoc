@@ -1,0 +1,11 @@
+
+==== Notwendige Drittanbieter-Komponenten
+
+Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
+Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich des Kunden.
+
+Die {application} Plattform wird *OHNE* Drittanbieter-Komponenten Large Language Model (LLM) ausgeliefert.
+Der Kunde muss selbst einen LLM-Provider bereitstellen. 
+
+
+
