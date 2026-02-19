@@ -1,5 +1,5 @@
 
-====== Schritt-für-Schritt: Azure OpenAI Service aufsetzen
+===== Schritt-für-Schritt: Azure OpenAI Service aufsetzen
 
 *Schritt 1: Azure OpenAI Ressource erstellen*
 

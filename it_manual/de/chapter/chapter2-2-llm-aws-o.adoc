@@ -1,5 +1,5 @@
 
-====== Schritt-für-Schritt: AWS Bedrock aufsetzen
+===== Schritt-für-Schritt: AWS Bedrock aufsetzen
 
 *Schritt 1: AWS Bedrock aktivieren*
 

@@ -1,5 +1,5 @@
 
-===== Azure OpenAI (Empfohlen)
+==== Azure OpenAI (Empfohlen)
 
 **Warum Azure OpenAI empfohlen wird:**
 
@@ -16,13 +16,13 @@
 
 ifeval::[{big-output} = 2]
 
-include::chapter2-llm-azure-o.adoc[]
+include::chapter2-2-llm-azure-o.adoc[]
 
 endif::[]
 
-====== Token-Rate-Limits dimensionieren
+*Token-Rate-Limits dimensionieren*
 
-*Faustregeln für TPM (Tokens per Minute):*
+Faustregeln für TPM (Tokens per Minute):
 
 |===
 | Nutzerszenario | Empfohlenes TPM | Begründung 

@@ -1,35 +1,35 @@
-=== Notwendige Drittanbieter-Komponenten
 
-Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
-
-Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
-
-====  LLM-Provider (Bereitstellung durch den Kunden)
+===  LLM-Provider (Bereitstellung durch den Kunden)
 
 *Hinweis:* {application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
 
 {application} unterstützt:
 
 |===
-| Provider | Empfehlung | Vorteile | Setup-Aufwand
+| Provider | Status | Empfehlung | Vorteile | Setup-Aufwand
 
 | *Azure OpenAI* 
+| Vollständig unterstützt 
 | *Bevorzugt* 
 | Enterprise-Support, EU-Regionen, einfache Integration 
 | Mittel
 
 | *AWS Bedrock* 
+| Vollständig unterstützt 
 | Gleichwertig  
 | Gute Claude-Modelle, AWS-Integration  
 | Mittel
 
 | *Lokale Modelle* 
+| Unterstützt 
 | Für hohe Datenschutzanforderungen  
 | Maximaler Datenschutz, keine Cloud  
 | Hoch (GPU-Hardware erforderlich) 
 |===
 
-**Wählen Sie einen Provider basierend auf:**
+*Hinweis:* Azure OpenAI ist unsere bevorzugte Empfehlung, aber AWS Bedrock und lokale Modelle werden gleichwertig unterstützt.
+
+*Wählen Sie einen Provider basierend auf:*
 
 * Vorhandener Cloud-Infrastruktur (Azure oder AWS)
 * Datenschutz- und Compliance-Anforderungen
