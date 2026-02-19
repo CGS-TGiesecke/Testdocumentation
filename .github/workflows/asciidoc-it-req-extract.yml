@@ -34,7 +34,7 @@ on:
         default: '1.3.0'
         type: string
         
- env:
+env:
   FILENAME: 'it-requirement-extract'
   FILEPATH: 'it_manual/de'
 
