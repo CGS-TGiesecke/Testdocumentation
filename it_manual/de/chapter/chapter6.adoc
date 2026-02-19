@@ -1,7 +1,7 @@
 === Troubleshooting und Support
 
 ifeval::[{big-output} == 1]
-include::chapter6-1-o.adoc[]
+include::chapter6-1-faq-o.adoc[]
 endif::[]
 
 
