@@ -1,0 +1,63 @@
+===== Installation und Konfiguration
+
+====== Deployment-Anleitung (Schritt-für-Schritt)
+
+Das Deployment von {application} erfolgt in folgenden Schritten:
+
+1. Voraussetzungen
+
+- *Docker* und *Docker Compose* sind installiert.
+- Die Dateien ``docker-compose.yml`` und ``.env`` befinden sich im Arbeitsverzeichnis.
+
+2. Login in unser DockerHub-Repository
+  
+- Nutzen Sie den bereitgestellten Read-Access-Token: ``docker login -u {author} -p [ACCESS_TOKEN]``
+
+3. Starten der Anwendung 
+
+- *.env-Datei prüfen:* Ist der Pfad zu ``SHARED_FOLDER'' korrekt gesetzt?
+- Anwendung starten: ``docker compose up -d``
+
+4. Abschluss
+- Führen Sie nach Abschluss der Installation einen Neustart des Webservers durch.
+- Testen Sie die Erreichbarkeit der Webapplikation im Browser.
+- Status prüfen
+- Logs prüfen
+- Health-Check
+
+====== Erstkonfiguration der Anwendung
+
+Nach erfolgter Installation sind folgende Initialkonfigurationen vorzunehmen:
+
+*Authentifizierung konfigurieren*
+
+- vom Kunden gewählte Authentifizierung konfigurieren
+
+*Module konfigurieren*
+
+- LLM API: Provider & Modelle konfigurieren
+- RAG API: Vector Store & Embeddings einrichten
+- Workflow Engine: Automationen einrichten
+
+*Benutzer & Rechte*
+
+- Admin-Benutzer anlegen
+- Benutzerrollen definieren
+- Zugriffsrechte konfigurieren
+
+Die Erstkonfiguration soll mit der IT-Sicherheitsrichtlinie sowie den Vorgaben aus dem Berechtigungskonzept abgestimmt werden.
+
+====== Update-/Upgrade-Prozess
+
+Der Update- und Upgrade-Prozess, durchgeführt vom Kunden gestaltet sich wie folgt:
+
+- Vor jedem Update sind vollständige Backups der Anwendung und der Datenbank zu erstellen.
+- Prüfen Sie die Release Notes und Kompatibilitätslisten der neuen Version.
+- Stoppen Sie den Applikationsdienst bzw. setzen Sie die Anwendung in den Wartungsmodus.
+- Ersetzen Sie die Anwendungsdateien durch die neue Version gemäß Updateanleitung.
+- Führen Sie ggf. erforderliche Migrationsschritte für die Datenbank durch (siehe Update-Guide des Herstellers).
+- Starten Sie die Anwendung neu und prüfen Sie die korrekte Funktion.
+- Dokumentieren Sie den erfolgten Update-Vorgang und die Versionsnummer im Änderungsprotokoll.
+
+Nach Abschluss des Updates ist das Benutzerumfeld zu informieren und bei Bedarf eine Kurzanleitung zu veröffentlichen.
+

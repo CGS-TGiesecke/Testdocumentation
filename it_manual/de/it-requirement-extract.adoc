@@ -4,7 +4,7 @@
 Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen 
 Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattform beim Kunden.
 
-include::chapter/chapter2-0-req.adoc[]
+# include::chapter/chapter2-0-req.adoc[]
 
 # include::chapter/chapter2-1-third-components.adoc[]
 
@@ -13,5 +13,7 @@ include::chapter/chapter2-0-req.adoc[]
 # include::chapter/chapter2-4-rag.adoc[]
 
 # include::chapter/chapter2-5-auth.adoc[]
+
+include::chapter/chapter4-components.adoc[]
 
 # include::chapter/zuletzt_checklist.adoc[]

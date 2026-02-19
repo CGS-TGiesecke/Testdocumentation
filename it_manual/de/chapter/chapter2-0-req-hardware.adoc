@@ -6,37 +6,34 @@ Für den produktiven Betrieb der Applikation {application} gelten folgende, last
 
 Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen:
 
-* Dokumentensammlung bis ca. 100 MB
-* Geringe bis moderate gleichzeitige Nutzer
-
 |===
 | *Arbeitsspeicher (vRAM)*	| 8 GB
 | *Prozessor (vCPU)*		| 4 vCPUs
 | *Speicher*				| 250 GB SSD (virtueller NVMe/SSD-Speicher)
+| *Szenarien*				| Bis 100 MB Dokumente
+| *Nutzer*					| 1-5
 |===
 
 ===== Mid-Tier Level (RAG, 32 GB RAM)
 
 Für wachsende Datenmengen und höhere Nutzerzahlen:
 
-* Dokumentensammlung bis ca. 5 GB
-* Moderate bis hohe gleichzeitige Nutzerzahlen
-
 |===
 | *Arbeitsspeicher (vRAM)*	| 32 GB
 | *Prozessor (vCPU)*		| 8-12 vCPUs
 | *Speicher*				| 1 TB SSD (virtueller NVMe/SSD-Speicher)
+| *Szenarien*				| Bis 5 GB Dokumente
+| *Nutzer*					| 10-50
 |===
 
 ===== High-End Level (RAG, 64 GB RAM)
 
 Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 
-* Dokumentensammlung über 5 GB
-* Viele gleichzeitige Nutzer bzw. komplexe, rechenintensive Abfragen
-
 |===
 | *Arbeitsspeicher (vRAM)*	| 64 GB
 | *Prozessor (vCPU)*		| 16-32 vCPUs
 | *Speicher*				| 2 TB SSD (virtueller NVMe/SSD-Speicher)
+| *Szenarien*				| über 5 GB Dokumente
+| *Nutzer*					| 50+
 |===
