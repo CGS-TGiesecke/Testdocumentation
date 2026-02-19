@@ -11,3 +11,5 @@ Authentication protects applications and data and ensures compliance requirement
 include::chapter2-5-1-auth-saml.adoc[]
 
 include::chapter2-5-2-auth-openid.adoc[]
+
+include::chapter2-5-3-auth-pwd.adoc[]

@@ -2,10 +2,10 @@
 ==== SAML-Authentifizierung mit Microsoft Entra ID
 
 Die SAML-Authentifizierung mit Microsoft Entra ID ist immer dann erforderlich, wenn moderne Single Sign-On-Funktionalität 
-und zentrale Identitätsverwaltung für Anwendungen genutzt werden sollen, die noch auf SAML statt OpenID Connect setzen – 
+und zentrale Identitätsverwaltung für Anwendungen genutzt werden sollen, die auf SAML (Security Assertion Markup Language) statt OpenID Connect setzen – 
 und ergänzt so optimal das gesamte Identitäts- und Sicherheitskonzept eines Unternehmens.
-Die SAML-Authentifizierung (Security Assertion Markup Language) mit Microsoft Entra ID ermöglicht es, Anwendungen – 
-speziell ältere (Legacy-) oder spezialisierte Systeme – zentral und sicher an das Identitätsmanagement von Microsoft anzubinden.
+Die SAML-Authentifizierung mit Microsoft Entra ID ermöglicht es, Anwendungen, speziell ältere oder spezialisierte Systeme, 
+zentral und sicher an das Identitätsmanagement von Microsoft anzubinden.
 
 *Vorteile und Nutzen*
 

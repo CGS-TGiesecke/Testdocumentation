@@ -1,0 +1,11 @@
+
+=== Authentifizierung über lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
+
+
+
+ifeval::[{big-output} == 1]
+
+include::chapter2-5-3-auth-pwd-o.adoc[]
+
+endif::[]
+

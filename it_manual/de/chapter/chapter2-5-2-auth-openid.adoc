@@ -1,7 +1,7 @@
 
 ==== OpenID Authentifizierung mit Microsoft Entra ID
 
-Die OpenID-Authentifizierung mit Microsoft Entra ID wird heute für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
+Die OpenID-Authentifizierung mit Microsoft Entra ID wird für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
 um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Sie bringt folgende Vorteile und ist in vielen Szenarien notwendig:
 
 *Einheitlicher Anmeldeprozess (Single Sign-On, SSO)*

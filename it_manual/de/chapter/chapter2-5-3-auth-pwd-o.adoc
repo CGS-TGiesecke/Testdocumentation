@@ -1,5 +1,5 @@
 
-==== Schritt-für-Schritt-Anleitung: Authentifizierung über lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
+===== Schritt-für-Schritt-Anleitung
 
 1. **Benutzerdatenbank bereitstellen**  
    Stellen Sie sicher, dass eine Benutzerdatenbank existiert (z. B. SQL-Datenbank oder LDAP-Server), in der Benutzername und 
@@ -27,6 +27,6 @@
 
 7. **Sicherheitsmaßnahmen anwenden**  
    - Übertragen Sie Passwörter niemals im Klartext
-   - Speichern Sie Passwörter nur gehasht und gesalzen
+   - Speichern Sie Passwörter niemals im Klartext
    - Setzen Sie Passwortregeln durch und bieten Sie Funktionen zum Passwort-Reset an
 
