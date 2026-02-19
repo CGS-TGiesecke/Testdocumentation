@@ -11,7 +11,7 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
 * eine OpenID Authentifizierung mit Microsoft Entra ID
 * eine lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
 
-ifeval::[{big-output} == 1]
+ifeval::[{big-output} > 0]
 
 include::chapter2-5-1-auth-saml.adoc[]
 

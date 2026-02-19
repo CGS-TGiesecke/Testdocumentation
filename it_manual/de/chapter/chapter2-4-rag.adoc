@@ -17,7 +17,7 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
 * integriertes DMS
 * Sharepoint Anbindung über die Microsoft Entra ID
 
-ifeval::[{big-output} == 1]
+ifeval::[{big-output} > 0]
 
 include::chapter2-4-1-rag-dms.adoc[]
 

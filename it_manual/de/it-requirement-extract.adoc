@@ -1,4 +1,6 @@
 
 == IT-Requirements {application}
 
-include::chapter/chapter2-5-auth.adoc[it-requirement-extract]
+include::chapter/chapter2-4-rag.adoc[]
+
+include::chapter/chapter2-5-auth.adoc[]
