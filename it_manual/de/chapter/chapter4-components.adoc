@@ -16,4 +16,4 @@ ifeval::[{big-output} > 0]
 
 include::chapter4-components-o.adoc[]
 
-ifdef::[]
+endif::[]
