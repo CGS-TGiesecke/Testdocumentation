@@ -1,8 +1,5 @@
-==== Unterstützte LLM-Provider (Bereitstellung durch den Kunden)
 
-**WICHTIG:** {application} stellt kein LLM bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
-
-===== Option A: Azure OpenAI (Empfohlen)
+===== Azure OpenAI (Empfohlen)
 
 **Warum Azure OpenAI empfohlen wird:**
 
@@ -23,16 +20,27 @@ include::chapter2-llm-azure-o.adoc[]
 
 endif::[]
 
-===== Token-Rate-Limits dimensionieren
+====== Token-Rate-Limits dimensionieren
 
 *Faustregeln für TPM (Tokens per Minute):*
 
 |===
 | Nutzerszenario | Empfohlenes TPM | Begründung 
 
-| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
-| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
-| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
-| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
+| 1-5 Nutzer (Test) 
+| 30.000 - 50.000 	
+| Ausreichend für Tests 
+
+| 10-25 Nutzer 		
+| 80.000 - 120.000 	
+| Moderate Nutzung 
+
+| 25-50 Nutzer 		
+| 150.000 - 250.000 
+| Produktivumgebung
+ 
+| 50+ Nutzer 		
+| 300.000+ 			
+| Hohe Last 
 |===
 

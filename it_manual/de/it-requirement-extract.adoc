@@ -12,7 +12,7 @@ Der Kunde muss selbst einen LLM-Provider bereitstellen.
 Folgende Optionen werden unterstützt:
 
 |===
-| LLM-Provider | Status | Empfehlung |
+| LLM-Provider | Status | Empfehlung 
 
 | *Azure OpenAI* 
 | Vollständig unterstützt 
@@ -31,8 +31,8 @@ Folgende Optionen werden unterstützt:
 
 include::chapter/chapter2-2-llm.adoc[]
 
-include::chapter/chapter2-4-rag.adoc[]
+# include::chapter/chapter2-4-rag.adoc[]
 
-include::chapter/chapter2-5-auth.adoc[]
+# include::chapter/chapter2-5-auth.adoc[]
 
-include::chapter/zuletzt_checklist.adoc[]
+# include::chapter/zuletzt_checklist.adoc[]

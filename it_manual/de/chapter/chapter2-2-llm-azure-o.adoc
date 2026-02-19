@@ -1,42 +1,41 @@
 
-===== Schritt-für-Schritt: Azure OpenAI Service aufsetzen
+====== Schritt-für-Schritt: Azure OpenAI Service aufsetzen
 
-====== Schritt 1: Azure OpenAI Ressource erstellen
+*Schritt 1: Azure OpenAI Ressource erstellen*
 
-1. **Azure Portal öffnen:** [https://portal.azure.com](https://portal.azure.com)
-2. **Ressource erstellen:**
-   - Klicken Sie auf "+ Ressource erstellen"
-   - Suchen Sie nach "Azure OpenAI"
-   - Klicken Sie auf "Erstellen"
-3. **Konfiguration der Ressource:**
-   - **Abonnement:** Wählen Sie Ihr Azure-Abonnement
-   - **Ressourcengruppe:** Erstellen Sie eine neue oder wählen Sie eine bestehende
-   - **Region:** Wählen Sie eine Region (z. B. West Europe, North Europe)
-   - **Name:** Vergeben Sie einen eindeutigen Namen (z. B. `xxx-assist-openai-prod`)
-   - **Tarif:** Standard S0 oder höher
-4. **Überprüfen und erstellen:** Klicken Sie auf "Überprüfen + erstellen" und dann "Erstellen"
+1. *Azure Portal öffnen:* [https://portal.azure.com](https://portal.azure.com)
+2. *Ressource erstellen:*
+   * Klicken Sie auf "+ Ressource erstellen"
+   * Suchen Sie nach "Azure OpenAI"
+   * Klicken Sie auf "Erstellen"
+3. *Konfiguration der Ressource:*
+   * *Abonnement:* Wählen Sie Ihr Azure-Abonnement
+   * *Ressourcengruppe:* Erstellen Sie eine neue oder wählen Sie eine bestehende
+   * *Region:* Wählen Sie eine Region (z. B. West Europe, North Europe)
+   * *Name:* Vergeben Sie einen eindeutigen Namen (z. B. `xxx-assist-openai-prod`)
+   * *Tarif:* Standard S0 oder höher
+4. *Überprüfen und erstellen:* Klicken Sie auf "Überprüfen + erstellen" und dann "Erstellen"
 
-====== Schritt 2: Modelle deployen in Azure AI Foundry
+*Schritt 2: Modelle deployen in Azure AI Foundry*
 
-1. **Azure AI Foundry öffnen:** [https://ai.azure.com](https://ai.azure.com)
-2. **Modell deploymen:**
-   - Navigieren Sie zu "Deployments"
-   - Klicken Sie auf "+ Create new deployment"
-3. **Empfohlene Modelle:**
-   - **Hauptmodell:** `gpt-4o` 
-   - **Optional:** `gpt-5` oder höher 
+1. *Azure AI Foundry öffnen:* [https://ai.azure.com](https://ai.azure.com)
+2. *Modell deploymen:*
+   * Navigieren Sie zu "Deployments"
+   * Klicken Sie auf "+ Create new deployment"
+3. *Empfohlene Modelle:*
+   * *Hauptmodell:* `gpt-4o` 
+   * *Optional:* `gpt-5` oder höher 
 
-====== Schritt 3: API-Credentials auslesen
+*Schritt 3: API-Credentials auslesen*
 
 1. Im Azure Portal → Ihre OpenAI Ressource → "Keys and Endpoint"
-2. **Notieren Sie für die spätere Konfiguration in der Appllikation:**
-   - API Key
-   - Endpoint (z. B. `https://ihr-ressourcenname.openai.azure.com/`)
-   - Region (z. B. `westeurope`)
-   - Deployment-Namen der Modelle
+2. *Notieren Sie für die spätere Konfiguration in der Appllikation:*
+   * API Key
+   * Endpoint (z. B. `https://ihr-ressourcenname.openai.azure.com/`)
+   * Region (z. B. `westeurope`)
+   * Deployment-Namen der Modelle
 
-**Beispiel:**
-
+*Beispiel:*
 ```
 Endpoint: https://xxx-assist-openai-prod.openai.azure.com/
 API Key: 1234567890abcdef...

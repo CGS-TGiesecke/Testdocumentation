@@ -1,29 +1,36 @@
 
 ===== Option C: Lokale Modelle (für höchste Datenschutzanforderungen)
 
-*Für Kunden, die keine Cloud-Anbindung wünschen.*
+Für Kunden, die keine Cloud-Anbindung wünschen.
 
 Die Plattform unterstützt lokale LLMs über *OpenAI-kompatible APIs*.
 
 *Unterstützte Tools:*
 
-** *Ollama* (einfachste Lösung) – https://ollama.ai
-** *vLLM* (höchste Performance)
-** *LM Studio* (GUI-basiert)
+* *Ollama* (einfachste Lösung) – https://ollama.ai
+* *vLLM* (höchste Performance)
+* *LM Studio* (GUI-basiert)
 
 *Empfohlene Modelle:*
 
-** *Llama 3.1 70B / Llama 3.3 70B* (sehr gute Qualität)
-** *Qwen 2.5 72B* (exzellent, multilingual)
-** *Mistral Large 2* (hohe Qualität)
+* *Llama 3.1 70B / Llama 3.3 70B* (sehr gute Qualität)
+* *Qwen 2.5 72B* (exzellent, multilingual)
+* *Mistral Large 2* (hohe Qualität)
 
 *Hardware-Anforderungen:*
 
 |===
 | Modell | VRAM | GPU | RAM 
 
-| 70B Modelle | 48-80 GB | A100/H100 | 128 GB 
-| 8B Modelle | 8-16 GB | RTX 4060 Ti | 16 GB 
+| 70B Modelle 
+| 48-80 GB 
+| A100/H100 
+| 128 GB 
+
+| 8B Modelle 
+| 8-16 GB 
+| RTX 4060 Ti 
+| 16 GB 
 |===
 
 ifeval::[{big-output} = 2]

@@ -1,20 +1,20 @@
-===== Schritt-für-Schritt: AWS Bedrock aufsetzen
 
-====== Schritt 1: AWS Bedrock aktivieren
+====== Schritt-für-Schritt: AWS Bedrock aufsetzen
 
-1. **AWS Console öffnen:** [https://console.aws.amazon.com](https://console.aws.amazon.com)
-2. **Zu Bedrock navigieren:** Suchen Sie nach "Bedrock"
-3. **Region wählen:** z. B. eu-central-1 (Frankfurt), us-east-1
-4. **Model Access aktivieren:**
-   - Navigieren Sie zu "Model access"
-   - Klicken Sie auf "Manage model access"
-   - Aktivieren Sie Anthropic Claude-Modelle
-   - Klicken Sie auf "Save changes"
+*Schritt 1: AWS Bedrock aktivieren*
 
-====== Schritt 2: IAM-Berechtigungen einrichten
+1. *AWS Console öffnen:* [https://console.aws.amazon.com](https://console.aws.amazon.com)
+2. *Zu Bedrock navigieren:* Suchen Sie nach "Bedrock"
+3. *Region wählen:* z. B. eu-central-1 (Frankfurt), us-east-1
+4. *Model Access aktivieren:*
+   * Navigieren Sie zu "Model access"
+   * Klicken Sie auf "Manage model access"
+   * Aktivieren Sie Anthropic Claude-Modelle
+   * Klicken Sie auf "Save changes"
+
+*Schritt 2: IAM-Berechtigungen einrichten*
 
 Erstellen Sie einen IAM-User mit folgender Policy:
-
 ```json
 {
   "Version": "2012-10-17",
@@ -31,18 +31,17 @@ Erstellen Sie einen IAM-User mit folgender Policy:
 }
 ```
 
-====== Schritt 3: Access Keys generieren
+*Schritt 3: Access Keys generieren*
 
 1. IAM Console → Users → Ihr User → Security credentials
 2. Create access key
-3. **Notieren Sie für die spätere Konfiguration in der Appllikation:**
-   - AWS Access Key ID
-   - AWS Secret Access Key
-   - AWS Region
-   - Model ID (z. B. `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+3. *Notieren Sie für die spätere Konfiguration in der Appllikation:*
+   * AWS Access Key ID
+   * AWS Secret Access Key
+   * AWS Region
+   * Model ID (z. B. `anthropic.claude-3-5-sonnet-20240620-v1:0`)
 
-**Beispiel:**
-
+*Beispiel:*
 ```bash
 AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
