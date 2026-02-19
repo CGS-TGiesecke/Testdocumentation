@@ -34,7 +34,7 @@ die kein modernes Protokoll wie OpenID Connect unterstützen.
 * Unterstützung von SAML 2.0 in der Zielanwendung ({application})
 * Zugriff auf die SAML-Metadaten oder Konfigurationsendpunkte des Service Providers (SP)
 
-ifeval::[{big-output} == 1]
+ifeval::[{big-output} == 2]
 
 include::chapter2-5-1-auth-saml-o.adoc[]
 

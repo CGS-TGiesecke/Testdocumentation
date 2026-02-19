@@ -38,7 +38,7 @@ um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren z
   - Client Secret (falls für den Flow benötigt)
   - Redirect URI (muss in der App-Registrierung hinterlegt werden)
   
-ifeval::[{big-output} == 1]
+ifeval::[{big-output} == 2]
 
 include::chapter2-5-2-auth-openid-o.adoc[]
 
