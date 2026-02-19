@@ -25,7 +25,7 @@ jobs:
   convert:
     runs-on: ubuntu-latest
     env:
-      FILENAME: IT_REQUIREMENTS_AI_AUDIT_ASSIST-EN
+      FILENAME: IT_REQUIREMENTS_AI_AUDIT_ASSIST-DE
      
     steps:
       - name: Checkout repository
