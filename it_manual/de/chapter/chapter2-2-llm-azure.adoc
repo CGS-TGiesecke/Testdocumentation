@@ -1,0 +1,25 @@
+==== Unterstützte LLM-Provider (Bereitstellung durch den Kunden)
+
+**WICHTIG:** {application} stellt kein LLM bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
+
+===== Option A: Azure OpenAI (Empfohlen)
+
+**Warum Azure OpenAI empfohlen wird:**
+
+- Bewährte Enterprise-Integration
+- Verfügbarkeit in EU-Regionen (DSGVO-konform)
+- Microsoft Enterprise Support
+- Bewährte GPT Modelle
+
+**Voraussetzungen:**
+
+- Aktives Azure-Abonnement (Subscription)
+- Freigabe für Azure OpenAI Service (kann Genehmigung erfordern)
+- Ausreichende Berechtigungen zum Erstellen von Ressourcen
+
+ifeval::[{big-output} = 2]
+
+include::chapter2-llm-azure-o.adoc[]
+
+endif::[]
+

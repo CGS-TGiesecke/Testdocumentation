@@ -1,0 +1,84 @@
+=== LLM 
+
+Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
+Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
+
+*WICHTIG:*{application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
+
+{application} unterstützt:
+
+|===
+| Provider | Empfehlung | Vorteile | Setup-Aufwand
+
+| **Azure OpenAI** 
+| **Bevorzugt** 
+| Enterprise-Support, EU-Regionen, einfache Integration 
+| Mittel
+
+| **AWS Bedrock** 
+| Gleichwertig  
+| Gute Claude-Modelle, AWS-Integration  
+| Mittel
+
+| **Lokale Modelle** 
+| Für hohe Datenschutzanforderungen  
+| Maximaler Datenschutz, keine Cloud  
+| Hoch (GPU-Hardware erforderlich) 
+|===
+
+**Wählen Sie einen Provider basierend auf:**
+
+- Vorhandener Cloud-Infrastruktur (Azure oder AWS)
+- Datenschutz- und Compliance-Anforderungen
+- Budget und Betriebsmodell
+
+ifeval::[{big-output} > 0]
+
+include::chapter2-2-llm-azure.adoc[]
+
+include::chapter2-2-llm-aws.adoc[]
+
+include::chapter2-2-llm-local.adoc[]
+
+endif::[]
+
+==== Token-Rate-Limits dimensionieren
+
+*Faustregeln für TPM (Tokens per Minute):*
+
+|===
+| Nutzerszenario | Empfohlenes TPM | Begründung 
+
+| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
+| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
+| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
+| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
+|===
+
+*Aufgabe des Kunden:*
+
+** *Azure OpenAI:* Token-Limits in Azure AI Foundry anpassen
+** *AWS Bedrock:* Service Quotas in AWS Console prüfen
+** *Lokale Modelle:* Ausreichende GPU-Kapazität bereitstellen
+
+==== Kostenübersicht LLM-Provider
+
+*Azure OpenAI (ca., Stand 2026):*
+
+** GPT-4o: $5-15 pro 1M Token
+** GPT-4o-mini: $0.15-0.60 pro 1M Token
+** *Typisch (50 Nutzer): $100-500/Monat*
+
+*AWS Bedrock (ca., Stand 2026):*
+
+** Claude 3.5 Sonnet: $3-8 pro 1M Input, $15-24 pro 1M Output
+** Claude 3 Haiku: $0.25-1 pro 1M Input, $1.25-5 pro 1M Output
+** *Typisch (50 Nutzer): $80-400/Monat*
+
+*Lokale Modelle:*
+
+** Keine API-Kosten
+** Hardware-Investment: €5.000-50.000+
+** Laufende Stromkosten
+
+

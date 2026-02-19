@@ -1,0 +1,36 @@
+
+=== Checkliste 
+
+==== LLM-Provider Setup (wählen Sie EINEN)
+
+*Option A: Azure OpenAI (empfohlen)*
+
+- [ ] Azure-Abonnement verfügbar
+- [ ] Ressource erstellt
+- [ ] Modell deployed (gpt-4o)
+- [ ] API-Key + Endpoint notiert
+
+*Option B: AWS Bedrock (gleichwertig)*
+
+- [ ] AWS-Konto verfügbar
+- [ ] Model Access aktiviert
+- [ ] IAM-Credentials erstellt
+- [ ] Access Keys + Model ID notiert
+
+*Option C: Lokales Modell*
+
+- [ ] GPU-Server bereitgestellt
+- [ ] Ollama/vLLM installiert
+- [ ] Modell heruntergeladen
+- [ ] API-Endpoint getestet
+
+==== Infrastruktur
+
+- [ ] Linux-Server bereitgestellt
+- [ ] Docker + Docker Compose installiert
+- [ ] SHARED_FOLDER erstellt
+- [ ] Firewall-Freigaben (Ports 80, 443)
+- [ ] DNS konfiguriert (für Caddy)
+- [ ] Ausgehende Verbindungen freigegeben
+- [ ] Authentifizierungs-Anbindung 
+- [ ] SharePoint-Anbindung via Microsoft Entra ID

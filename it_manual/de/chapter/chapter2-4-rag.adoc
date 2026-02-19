@@ -1,14 +1,14 @@
 
-=== RAG (Retrieval-Augmented Generation)
+=== RAG 
 
-Das RAG bietet die Möglichkeit zur Erweiterung der Wissensuche im
+Das RAG (Retrieval-Augmented Generation) bietet die Möglichkeit zur Erweiterung der Informationsquellen im
 ifeval::[{cgs-assist} == 1]
  KI Chat
 endif::[]
 ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
- oder der Nutzung von Use Cases zusätzliche Verzeichnisse aus dem Kundenintranet mit einzubeziehen.
+ oder bei der Nutzung von Use Cases um zusätzliche Verzeichnisse aus dem Kundenintranet.
 Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbiendung, die in Vorbereitung einer Auslieferung,
 nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  

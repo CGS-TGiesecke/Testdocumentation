@@ -1,6 +1,28 @@
 
-== IT-Requirements {application}
+== {application} – Technische Bereitstellungsanforderungen
+
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen 
+Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattform beim Kunden.
+
+=== WICHTIG: LLM-Bereitstellung durch den Kunden
+
+Die {application} Plattform wird *OHNE* integriertes Large Language Model (LLM) ausgeliefert.*
+Der Kunde muss selbst einen LLM-Provider bereitstellen. Folgende Optionen werden unterstützt:
+
+|===
+| LLM-Provider | Status | Empfehlung |
+
+| *Azure OpenAI* | Vollständig unterstützt | *Empfohlen* für Cloud-Deployments |
+| *AWS Bedrock* | Vollständig unterstützt | Für AWS-Kunden geeignet |
+| *Lokale Modelle* | Unterstützt | Für höchste Datenschutzanforderungen |
+|===
+
+*Hinweis:* Azure OpenAI ist unsere bevorzugte Empfehlung, aber AWS Bedrock und lokale Modelle werden gleichwertig unterstützt.
+
+include::chapter/chapter2-2-llm.adoc[]
 
 include::chapter/chapter2-4-rag.adoc[]
 
 include::chapter/chapter2-5-auth.adoc[]
+
+include::chapter/zuletzt_checklist.adoc[]
