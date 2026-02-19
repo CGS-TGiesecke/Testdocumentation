@@ -10,10 +10,10 @@ include::IT-Architektur.adoc[]
 |===
 | Date          | Author    | Change 
 
-| 2026-01-30    | {author}      | Initial creation 
-| 2026-02-10    | {author}      | Change content  - IT-Architektur
-| 2026-02-13	|{author} 		| New Content - RAG
-| 				|  			|    
+| 2026-02-19	|{author} 	| New Content - Authorizations
+| 2026-02-13	|{author} 	| New Content - RAG
+| 2026-02-10	|{author}	| Change content  - IT-Architektur
+| 2026-01-30	|{author}   | Initial creation 
 |===
 
 

@@ -29,7 +29,7 @@ die kein modernes Protokoll wie OpenID Connect unterstützen.
 
 ===== Voraussetzungen
 
-* Ein Microsoft Entra ID (Azure AD) Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
+* Ein Microsoft Entra ID Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
 * Eine als „Unternehmensanwendung“ (*Enterprise Application*) registrierte Applikation (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")
 * Unterstützung von SAML 2.0 in der Zielanwendung ({application})
 * Zugriff auf die SAML-Metadaten oder Konfigurationsendpunkte des Service Providers (SP)

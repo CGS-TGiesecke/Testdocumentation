@@ -1,7 +1,13 @@
 
 === Authentication
 
-include::chapter2-5-1-auth-saml.adoc[]
+Authentication protects applications and data and ensures compliance requirements are met.
 
+{application} supports:
+
+* SAML authentication with Microsoft Entra ID
+* OpenID authentication with Microsoft Entra ID
+
+include::chapter2-5-1-auth-saml.adoc[]
 
 include::chapter2-5-2-auth-openid.adoc[]

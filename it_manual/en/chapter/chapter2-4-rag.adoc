@@ -1,7 +1,20 @@
 
 === RAG (Retrieval-Augmented Generation)
 
-include::chapter2-4-1-rag-dms.adoc[]
+The RAG offers the possibility to extend knowledge search in the
+ifeval::[{cgs-assist} == 1]
+ AI Chat
+endif::[]
+ifeval::[{arc-assist} == 1]
+ AI Chat
+endif::[]
+ or, when using use cases, to include additional directories from the customer intranet.
 
+{application} supports:
+
+* integrated DMS
+* SharePoint connection via Microsoft Entra ID
+
+include::chapter2-4-1-rag-dms.adoc[]
 
 include::chapter2-4-1-rag-sharepoint.adoc[]

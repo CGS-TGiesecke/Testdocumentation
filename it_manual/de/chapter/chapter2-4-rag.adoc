@@ -1,14 +1,14 @@
 
 === RAG (Retrieval-Augmented Generation)
 
-Das Rag bietet die Möglichkeit zur Erweiterung der Wissensuche im
+Das RAG bietet die Möglichkeit zur Erweiterung der Wissensuche im
 ifeval::[{cgs-assist} == 1]
  KI Chat
 endif::[]
 ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
- oder der Nutzung von Use Cases externe Verzeichnisse zusätzlich einzubeziehen.
+ oder der Nutzung von Use Cases zusätzliche Verzeichnisse aus dem Kundenintranet mit einzubeziehen.
  
 {application} unterstützt:
 
