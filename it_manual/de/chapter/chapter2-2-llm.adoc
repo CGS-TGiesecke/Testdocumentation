@@ -51,7 +51,7 @@ endif::[]
 * *AWS Bedrock:* Service Quotas in AWS Console prüfen
 * *Lokale Modelle:* Ausreichende GPU-Kapazität bereitstellen
 
-===== Kostenübersicht LLM-Provider
+==== Kostenübersicht LLM-Provider
 
 *Azure OpenAI (ca., Stand 2026):*
 

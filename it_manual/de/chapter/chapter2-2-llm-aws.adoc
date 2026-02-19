@@ -16,7 +16,7 @@ AWS Bedrock ist eine vollwertige Alternative zu Azure OpenAI.
 * Zugriff auf AWS Bedrock Service
 * Ausreichende IAM-Berechtigungen
 
-ifeval::[{big-output} = 2]
+ifeval::[{big-output} == 2]
 
 include::chapter2-2-llm-aws-o.adoc[]
 

@@ -14,7 +14,7 @@
 - Freigabe für Azure OpenAI Service (kann Genehmigung erfordern)
 - Ausreichende Berechtigungen zum Erstellen von Ressourcen
 
-ifeval::[{big-output} = 2]
+ifeval::[{big-output} == 2]
 
 include::chapter2-2-llm-azure-o.adoc[]
 

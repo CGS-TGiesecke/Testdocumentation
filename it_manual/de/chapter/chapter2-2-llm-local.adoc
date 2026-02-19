@@ -33,7 +33,7 @@ Die Plattform unterstützt lokale LLMs über *OpenAI-kompatible APIs*.
 | 16 GB 
 |===
 
-ifeval::[{big-output} = 2]
+ifeval::[{big-output} == 2]
 
 include::chapter2-2-llm-local-o.adoc[]
 
