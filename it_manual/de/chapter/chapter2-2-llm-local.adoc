@@ -1,5 +1,5 @@
 
-===== Lokale Modelle (für höchste Datenschutzanforderungen)
+===== Option C: Lokale Modelle (für höchste Datenschutzanforderungen)
 
 *Für Kunden, die keine Cloud-Anbindung wünschen.*
 

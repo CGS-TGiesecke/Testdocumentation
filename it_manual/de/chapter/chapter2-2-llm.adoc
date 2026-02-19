@@ -1,9 +1,10 @@
-=== LLM 
+===  LLM-Provider – Bereitstellung durch den Kunden
 
 Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
+
 Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich der IT-Abteilung.
 
-*WICHTIG:*{application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
+*WICHTIG:* {application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
 
 {application} unterstützt:
 
@@ -41,19 +42,6 @@ include::chapter2-2-llm-aws.adoc[]
 include::chapter2-2-llm-local.adoc[]
 
 endif::[]
-
-==== Token-Rate-Limits dimensionieren
-
-*Faustregeln für TPM (Tokens per Minute):*
-
-|===
-| Nutzerszenario | Empfohlenes TPM | Begründung 
-
-| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
-| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
-| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
-| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
-|===
 
 *Aufgabe des Kunden:*
 

@@ -23,3 +23,16 @@ include::chapter2-llm-azure-o.adoc[]
 
 endif::[]
 
+===== Token-Rate-Limits dimensionieren
+
+*Faustregeln für TPM (Tokens per Minute):*
+
+|===
+| Nutzerszenario | Empfohlenes TPM | Begründung 
+
+| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
+| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
+| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
+| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
+|===
+
