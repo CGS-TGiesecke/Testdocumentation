@@ -1,4 +1,4 @@
-name: Export EN IT_REQUIREMENTS Markdown to PDF & DOCX
+name: EN IT_REQUIREMENTS Markdown to PDF & DOCX
 
 on:
   workflow_dispatch:
