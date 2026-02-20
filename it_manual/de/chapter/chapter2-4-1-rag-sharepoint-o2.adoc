@@ -20,16 +20,18 @@ Delegierte Berechtigungen:
 ```
 Sites.Read.All
 Sites.ReadWrite.All
+User.Read
 ```
-*Vorschlag:* Sites.Read.All
+*Vorschlag:* Sites.Read.All, User.Read
 
 Anwendungsberechtigungen:
 ```
 Sites.FullControl.All
 Sites.Read.All
+Sites.Selected
 Sites.ReadWrite.All
 ```
-*Vorschlag:* Sites.Read.All
+*Vorschlag:* Sites.Selected
 
 Typische SharePoint-spezifische Berechtigungen (direkt auf SharePoint-API):
 ```
@@ -37,7 +39,6 @@ AllSites.FullControl
 AllSites.Read
 AllSites.Write
 ```
-*Vorschlag:* AllSites.Read
 
 ===== Admin-Zustimmung erteilen
 

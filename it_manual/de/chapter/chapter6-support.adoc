@@ -1,5 +1,9 @@
 === Troubleshooting und Support
 
+ifeval::[{big-output} > 0]
+include::chapter6-1-faq-o.adoc[]
+endif::[]
+
 ifeval::[{big-output} > 1]
 ==== Supportprozess und Kontaktinformationen
 

@@ -14,10 +14,14 @@ include::chapter/chapter2-4-rag.adoc[]
 
 include::chapter/chapter2-5-auth.adoc[]
 
+ifeval::[{big-output} > 1]
+include::chapter/chapter3-install.adoc[]
+endif::[]
+
 include::chapter/chapter4-components.adoc[]
 
 include::chapter/chapter5-security.adoc[]
 
-include::chapter/chapter6.adoc[]
+include::chapter/chapter6-support.adoc[]
 
 include::chapter/zuletzt_checklist.adoc[]
