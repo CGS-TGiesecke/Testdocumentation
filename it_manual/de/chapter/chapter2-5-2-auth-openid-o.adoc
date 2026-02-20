@@ -18,7 +18,7 @@ https://entra.microsoft.com
 * Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant - CGS mbH". 
-* Redirect-URL: muss eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `initial.config`
+* Redirect-URL: muss eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `init_config.yaml`
 ** Auswahl "Web"
 ** Eintrag "nur Unternehmen user" übernehmen
 
@@ -31,9 +31,10 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Man
 ** Verzeichnis-ID **(Tenant-ID)**
 ** **Client-Secrets** unter "Zertifikate & Geheimnisse" generieren
 ```
-Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `initial.config`.
+Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```
 *Weitere Einstellungen*
+
 * Klicken Sie auf "Unternehmens-Apps".
 * Wählen Sie "{application}".
 * Klicken Sie links im Menü auf "Benutzer und Gruppen".
