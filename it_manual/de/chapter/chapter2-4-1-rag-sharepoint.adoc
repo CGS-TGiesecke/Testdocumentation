@@ -1,5 +1,5 @@
 
-===== Sharepoint Anbindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
+==== Sharepoint Anbindung über die Microsoft Entra ID (ehemals Azure Active Directory) gesicherte API
 
 Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
 In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 

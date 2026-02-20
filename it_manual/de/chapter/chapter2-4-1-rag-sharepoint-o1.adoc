@@ -1,4 +1,4 @@
-====== Registrierung einer Anwendung in Microsoft Entra ID Admin Center
+===== Registrierung einer Anwendung in Microsoft Entra ID Admin Center
 
 *Anmeldung*
 
