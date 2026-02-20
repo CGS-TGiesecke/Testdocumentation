@@ -17,9 +17,7 @@ https://entra.microsoft.com
 
 * Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
-mehrere Organisationen unterstützen soll. *Vorschlag:* interne Benutzer (nur eigene Organisation)
-* Redirect URI (optional): Geben Sie eine Umleitungs-URL an, z.B. wenn Ihre Anwendung eine Authentifizierung benötigt oder den Redirect-URI Ihrer App an. 
-siehe "OpenID Authentifizierung mit Microsoft Entra ID" *Vorschlag:* ????????
+mehrere Organisationen unterstützen soll. (für {application) Sharepoint Anbindung nicht relevant)
 
 *Erstellen*
 
@@ -34,8 +32,5 @@ Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration.
 ```
 *Berechtigungen konfigurieren (optional)*
 
-* Unter "API-Berechtigungen" können Sie Ihrer Anwendung Zugriff auf Microsoft APIs (z.B. Microsoft Graph) gewähren (s.u. "SharePoint-Berechtigungen definieren").
+* Unter "API-Berechtigungen" können die Berechtigungen für den Zugriff auf SharePoint-Sites mit Hilfe der Graph API verwaltet werden.
 
-*Weitere Einstellungen*
-
-* Optional: Konfigurieren Sie Branding, Token-Konfiguration und User-Assignment je nach Bedarf.
