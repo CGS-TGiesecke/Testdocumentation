@@ -45,18 +45,22 @@ heading:
     font-color: '3f6172'
     font-style: italic
   h2:
-    font-size: 20
+    font-size: 21
     font-color: '3f6172'
     font-style: italic
   h3:
-    font-size: 18
+    font-size: 19
     font-color: '3f6172'
     font-style: italic
   h4:
-    font-size: 15
+    font-size: 17
     font-color: '3f6172'
     font-style: italic
   h5:
+    font-size: 15
+    font-color: '3f6172'
+    font-style: italic
+  h6:
     font-size: 12
     font-color: '3f6172'
     font-style: italic
