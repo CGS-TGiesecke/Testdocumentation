@@ -1,5 +1,5 @@
 
-=== {application} integriertes DMS
+==== {application} integriertes DMS
 
 Das ist eine SQLite DB Anbindung in {application} in der vom Kunden alle Ordner und leicht zu pflegende Dokumente gespeichert sind.
 Die erforderlichen Berechtigungen der Rollen auf die Ordner setzt der Kunde selbst.

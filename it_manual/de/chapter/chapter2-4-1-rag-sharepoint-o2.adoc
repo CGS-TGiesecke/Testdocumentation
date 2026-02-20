@@ -1,8 +1,8 @@
 Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
 
-===== SharePoint-Berechtigungen definieren
+====== SharePoint-Berechtigungen definieren
 
-Ihre Anwendung benötigt passende Permissions, um auf SharePoint Online zugreifen zu dürfen. Dies wird über Microsoft Graph **oder** die direkte SharePoint API konfiguriert.
+Ihre Anwendung benötigt passende Permissions, um auf SharePoint Online zugreifen zu dürfen. Dies wird über Microsoft Graph *oder* die direkte SharePoint API konfiguriert.
 
 *Hinzufügen von API-Berechtigungen*
 
@@ -12,7 +12,7 @@ Ihre Anwendung benötigt passende Permissions, um auf SharePoint Online zugreife
 * Fügen Sie Berechtigungen hinzu:
 ** Klicken Sie auf "Berechtigung hinzufügen".
 ** Wählen Sie „Microsoft Graph“ (für modernen Zugriff, empfohlen); alternativ: „SharePoint“.
-** Sie können Anwendungsberechtigungen („Application permissions“, für Dienste ohne User-Kontext) ODER Delegierte Berechtigungen („Delegated permissions“, im Kontext eines angemeldeten Benutzers) vergeben.
+** Sie können Anwendungsberechtigungen („Application permissions“, für Dienste ohne User-Kontext) *oder* Delegierte Berechtigungen („Delegated permissions“, im Kontext eines angemeldeten Benutzers) vergeben.
 
 *Typische SharePoint-Berechtigungen im Microsoft Graph:*
 
@@ -39,7 +39,7 @@ AllSites.Write
 ```
 *Vorschlag:* AllSites.Read
 
-===== Admin-Zustimmung erteilen
+====== Admin-Zustimmung erteilen
 
 Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
 In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
@@ -50,7 +50,7 @@ In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 Nutzen Sie solche Rechte nur mit besonderer Vorsicht und nur wenn unbedingt nötig!
 Für produktive Systeme, Datenschutz- und Sicherheitsanforderungen konsultieren Sie bitte qualifizierte Audit- oder Datenschutzbeauftragte.
 
-===== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
+====== Zugriff auf SharePoint-Inhalte über die Microsoft Graph API
 
 Microsoft Graph API ist die zentrale Schnittstelle, über die programmatisch auf Microsoft 365-Dienste (wie SharePoint) zugegriffen wird.
 

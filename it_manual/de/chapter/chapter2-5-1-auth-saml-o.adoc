@@ -1,17 +1,17 @@
 ===== Registrierung/Einrichtung in Microsoft Entra ID
 
 1. Anmeldung im Entra Admin Center: https://entra.microsoft.com
-2. Navigieren zu **Identität > Anwendungen > Unternehmensanwendungen**.
-3. Auswahl von **+Neue Anwendung** und **Eigene Anwendung integrieren** → **Mit beliebiger anderen Anwendung (SAML, …)**
+2. Navigieren zu *Identität > Anwendungen > Unternehmensanwendungen*.
+3. Auswahl von *+Neue Anwendung* und *Eigene Anwendung integrieren* → *Mit beliebiger anderen Anwendung (SAML, …)*
 4. Namen vergeben (z.B. {application}) und erstellen.
 
 ===== SAML-Basisdaten in Entra ID konfigurieren
 
-Unter **Einmaliges Anmelden (Single Sign-On) > SAML** müssen folgende Eigenschaften konfiguriert werden:
+Unter *Einmaliges Anmelden (Single Sign-On) > SAML* müssen folgende Eigenschaften konfiguriert werden:
 
 * *Bezeichner (Entity ID)*:  
   Die eindeutige Kennung des Service Providers – meist eine URL.
-* **Antwort-URL (Assertion Consumer Service URL)**:  
+* *Antwort-URL (Assertion Consumer Service URL)*:  
   Endpoint, an den das SAML Assertion Response gesendet wird (vom SP vorgegeben).
 * *Anmelde-URL (optional)*:  
   Login-Adresse Ihrer Anwendung, falls vom SP genutzt.
@@ -49,13 +49,6 @@ Nach dem Speichern der SAML-Konfiguration stellt Microsoft Entra ID die IdP-Meta
 3. Der Benutzer authentifiziert sich (ggf. MFA, falls verlangt).
 4. Entra ID stellt dem Benutzer, nach erfolgreicher Prüfung, eine signierte SAML Assertion aus und leitet ihn zurück zu {application} (Assertion Consumer Service URL).
 5. {application} prüft und verarbeitet die Assertion und meldet den Benutzer an.
-
-===== Sicherheitshinweise
-
-* Sichern Sie die ACS- und Entity-ID-Adressen gegen unbefugten Zugriff ab.
-* Nutzen Sie für Assertion/Response stets HTTPS.
-* Nutzen Sie aktuelle Zertifikate zum Signieren und Validieren.
-* Die Zuordnung von Claims/Attributen sollte dem Principle of Least Privilege (PoLP) folgen.
 
 ===== Referenzen
 
