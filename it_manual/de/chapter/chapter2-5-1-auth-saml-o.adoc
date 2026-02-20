@@ -25,39 +25,6 @@ Unter *Einmaliges Anmelden (Single Sign-On) > SAML* müssen folgende Eigenschaft
   * `user.principalname` als NameID
   * Optionale Gruppen-, Rollen- oder E-Mail-Attribute
 
-===== SAML-IdP-Konfigurationsdaten (Bereitstellung für den SP)
 
-Nach dem Speichern der SAML-Konfiguration stellt Microsoft Entra ID die IdP-Metadaten zur Verfügung, u.a.:
 
-* *Anmelde-URL (SAML Redirect/POST SSO URL)*
-* *Azure AD Identifier (Issuer/Entity ID)*
-* *SAML Signatur-Zertifikat* (als Datei und/oder Base64)
 
-*Hinweis:* Daten Notieren/Kopieren für die Konfiguration der Anwendung {application}. (siehe "Installation und Konfiguration")
-
-*Beispiel Endpunkte (Azure Standard):*
-```
-* Anmelde-URL (SSO): https://login.microsoftonline.com/{tenantid}/saml2
-* Identitätsanbieter-ID: https://login.microsoftonline.com/{tenantid}/v2.0
-* X.509-Zertifikat: Im Portal herunterladen
-```
-
-===== SAML-Ablauf
-
-1. Der Benutzer wählt SSO („Mit Microsoft anmelden“) in {application}.
-2. {application} generiert eine SAML Authentication Request und leitet den Benutzer zum Microsoft Entra ID SAML-Endpunkt um.
-3. Der Benutzer authentifiziert sich (ggf. MFA, falls verlangt).
-4. Entra ID stellt dem Benutzer, nach erfolgreicher Prüfung, eine signierte SAML Assertion aus und leitet ihn zurück zu {application} (Assertion Consumer Service URL).
-5. {application} prüft und verarbeitet die Assertion und meldet den Benutzer an.
-
-===== Referenzen
-
-* Microsoft-Dokumentation SAML/Einstellungen  
-  - https://learn.microsoft.com/de-de/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications
-* SAML 2.0 Standard:
-  - https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf
-
-===== Weitere Hinweise
-
-* Die Einrichtung kann je nach SP variieren (Spezialfelder, Attribute).
-* Für produktive Setups und Datenschutzthemen ziehen Sie einen qualifizierten Audit- oder Datenschutzbeauftragten hinzu.

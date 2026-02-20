@@ -7,32 +7,16 @@ und ergänzt so optimal das gesamte Identitäts- und Sicherheitskonzept eines Un
 Die SAML-Authentifizierung mit Microsoft Entra ID ermöglicht es, Anwendungen, speziell ältere oder spezialisierte Systeme, 
 zentral und sicher an das Identitätsmanagement von Microsoft anzubinden.
 
-*Vorteile und Nutzen*
+Die notwendigen Daten, für die Anbindung von {application} mit SAML-Authentifizierung des Kunden sind:
 
-* *Single Sign-On (SSO):*
-  Nutzer melden sich mit ihren gewohnten Unternehmensdaten bei verschiedensten (auch externen oder Drittanbieter-) Anwendungen an.
-* *Integration von Legacy-Anwendungen:*
-  SAML ist ein etablierter Standard, den viele bestehende on-premises oder SaaS-Anwendungen unterstützen.
-* *Zentrale Identitäts- und Zugriffsverwaltung:*
-  Benutzer, Gruppen und Rechte werden in Microsoft Entra ID gepflegt und können für alle SAML-angebundenen Systeme gelten.
-* *Multi-Faktor-Authentifizierung (MFA):*
-  Moderne Security-Policies und Zusatz-Authentifizierungsmethoden wie MFA stehen auch SAML-Apps zur Verfügung.
-* *Transparenz und Kontrolle:*
-  Zugriffe, Anmeldungen und Policy-Verstöße sind zentral auditierbar.
+* *Tenant-ID:* Die ID der Organisation/Mandenten.
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
+* *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
 
-*Notwendigkeit*
+Diese werden in `initial.config` hinterlegt (siehe "Erstkonfiguration der Anwendung"). 
+Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "OpenID Connect Authentifizierung mit Microsoft Entra ID"
+Sind diese Daten nicht vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
 
-* *Bestandssysteme:* Viele in Unternehmen etablierte (Business-)Anwendungen unterstützen ausschließlich SAML als Authentifizierungsmethode.
-* *Kompatibilität:* SAML ermöglicht die Integration von Microsoft-Entra-Identity mit Drittsystemen, Portalen oder Spezialsoftware, 
-die kein modernes Protokoll wie OpenID Connect unterstützen.
-* *Sicheres Zentrales Authentifizierungsverfahren:* Benutzerverwaltung, Passwortmanagement und Compliance-Auflagen werden zentral bündelt und gesteuert.
-
-*Voraussetzungen*
-
-* Ein Microsoft Entra ID Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Eine als „Unternehmensanwendung“ (*Enterprise Application*) registrierte Applikation (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")
-* Unterstützung von SAML 2.0 in der Zielanwendung ({application})
-* Zugriff auf die SAML-Metadaten oder Konfigurationsendpunkte des Service Providers (SP)
 
 ifeval::[{big-output} == 2]
 

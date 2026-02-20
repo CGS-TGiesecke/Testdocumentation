@@ -1,42 +1,19 @@
 
-==== OpenID Authentifizierung mit Microsoft Entra ID
+==== OpenID Connect Authentifizierung mit Microsoft Entra ID
 
 Die OpenID-Authentifizierung mit Microsoft Entra ID wird für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
-um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Sie bringt folgende Vorteile und ist in vielen Szenarien notwendig:
+um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Vorteil dieser Anmeldeform ist SSO (Single Sign-On)
+d.h. Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Passwort bei Microsoft 365) in verschiedensten Anwendungen anmelden.
 
-*Einheitlicher Anmeldeprozess (Single Sign-On, SSO)*
+Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect Authentifizierung des Kunden sind:
 
-* Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Passwort bei Microsoft 365) in verschiedensten Anwendungen anmelden.
-* Mehrere Apps (Cloud und On-Premises) nutzen ein zentrales Identitätsmanagement.
-* Passwort-/Benutzerverwaltung erfolgt einheitlich.
+* *Tenant-ID:* Die ID der Organisation/Mandenten.
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
+* *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
 
-*Sicherheitsgewinn & Compliance*
-
-* Microsoft Entra ID unterstützt Multi-Faktor-Authentifizierung (MFA), Conditional Access und Identity Protection.
-* Sicherheits- und Richtlinienkontrolle bis auf Anwendungsebene.
-* Auditierbarkeit, Protokollierung und zentrale Policy-Verwaltung.
-
-*Standardisierung & Integration*
-
-* OpenID Connect ist ein weit verbreiteter offener Authentifizierungsstandard – kompatibel mit modernen Frameworks und Bibliotheken.
-* Integration von Drittanbieter-Anwendungen und Eigenentwicklungen möglich.
-* Minimierung von Integrations- und Wartungsaufwand.
-
-*Notwendigkeit*
-
-* **Datenschutz und Compliance:** Viele Branchen/Unternehmen fordern zentrale Identitätsdienste und revisionssichere Authentifizierung.
-* **Reduktion von Schatten-IT:** Eine einheitliche Authentifizierung erschwert un-autorisierte Zugangslösungen.
-* **Anwenderkomfort:** Weniger Anmeldeprobleme, Self-Service bei Passwortänderungen, SSO über viele Systeme hinweg.
-
-*Voraussetzungen*
-
-* Ein Azure-Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Eine registrierte Anwendung in Microsoft Entra ID (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")
-* Folgende Informationen/Endpunkte:
-  - Tenant ID
-  - Client ID (Anwendungs-ID)
-  - Client Secret (falls für den Flow benötigt)
-  - Redirect URI (muss in der App-Registrierung hinterlegt werden)
+Diese werden in `initial.config` hinterlegt (siehe "Erstkonfiguration der Anwendung"). 
+Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "SAML-Authentifizierung mit Microsoft Entra ID"
+Sind diese Daten nicht vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
   
 ifeval::[{big-output} == 2]
 

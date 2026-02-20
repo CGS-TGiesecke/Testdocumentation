@@ -8,7 +8,7 @@ https://entra.microsoft.com
 ```
 *Navigation zu "App-Registrierungen"*
 
-* Wählen Sie im linken Menü "Identitätsverwaltung", dann "Azure Active Directory".
+* Wählen Sie Entra ID
 * Navigieren Sie zu "App-Registrierungen".
 * Neue Anwendung registrieren
 * Klicken Sie auf "Neue Registrierung" (oben im Menü).
@@ -17,7 +17,8 @@ https://entra.microsoft.com
 
 * Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
-mehrere Organisationen unterstützen soll. (für {application) Sharepoint Anbindung nicht relevant)
+mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant - CGS mbH". 
+*Hinweis*: Für {application} Sharepoint Anbindung ist die Einstellung nicht relevant.
 
 *Erstellen*
 
@@ -26,7 +27,7 @@ mehrere Organisationen unterstützen soll. (für {application) Sharepoint Anbind
 
 ** Anwendungs-ID **(Client-ID)**
 ** Verzeichnis-ID **(Tenant-ID)**
-** **Client-Secrets** oder Zertifikat je nach Bedarf unter "Zertifikate & Geheimnisse" generieren
+** **Client-Secrets** unter "Zertifikate & Geheimnisse" generieren
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration.
 ```
