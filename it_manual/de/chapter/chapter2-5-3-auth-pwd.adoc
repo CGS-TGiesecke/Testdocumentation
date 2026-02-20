@@ -5,7 +5,7 @@ Die Authentifizierung über eine lokale Benutzer-/Passwortverwaltung wird immer 
 wenn der Kunde keine Verwaltung von Benutzern und Zugangsdaten ausserhalb der Organisation wünscht
 und eine Integration in bestehende Infrastruktur konfiguriert werden soll.
 
-===== Vorteile und Nutzen
+*Vorteile und Nutzen*
 
 * Volle Kontrolle über die Verwaltung von Benutzern und Zugangsdaten innerhalb der Organisation
 * Anpassbare Authentifizierungs-Workflows, um spezifische Unternehmensanforderungen zu erfüllen
@@ -14,7 +14,7 @@ und eine Integration in bestehende Infrastruktur konfiguriert werden soll.
 * Flexibilität bei der internen Verwaltung des Benutzer-Lifecycle und von Zugriffsrechten
 * Einhaltung interner Sicherheitsrichtlinien und regulatorischer Anforderungen wird ermöglicht
 
-===== Notwendigkeit
+*Notwendigkeit*
 
 Lokale Benutzer-/Passwort-Authentifizierung ist erforderlich, wenn:
 
@@ -23,7 +23,7 @@ Lokale Benutzer-/Passwort-Authentifizierung ist erforderlich, wenn:
 * Für die Nutzung von Single Sign-On (SSO) innerhalb lokaler Netzwerke eine Integration in vorhandene Verzeichnisdienste (z. B. LDAP oder proprietäre Datenbanken) notwendig ist
 * Aus Vertraulichkeitsgründen der Verzicht auf externe Authentifizierungssysteme gewünscht ist
 
-===== Voraussetzungen
+*Voraussetzungen*
 
 * Eine vorhandene, erreichbare Benutzerdatenbank (z. B. SQL-Datenbank oder LDAP-Server) mit Benutzerkennungen und Metadaten
 * Sichere Verbindungsprotokolle (z. B. LDAPS für Verzeichnisdienste, verschlüsselte Verbindungen zu Datenbanken)

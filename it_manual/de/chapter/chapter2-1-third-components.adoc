@@ -1,5 +1,5 @@
 
-==== Notwendige Drittanbieter-Komponenten
+=== Notwendige Drittanbieter-Komponenten
 
 Einige Drittanbieter-Komponenten sind für den störungsfreien Betrieb erforderlich und müssen vor der Installation bereitgestellt werden.
 Der Bezug und die Wartung der Drittanbieter-Komponenten liegen im Verantwortungsbereich des Kunden.

@@ -28,7 +28,7 @@ um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren z
 * **Reduktion von Schatten-IT:** Eine einheitliche Authentifizierung erschwert un-autorisierte Zugangslösungen.
 * **Anwenderkomfort:** Weniger Anmeldeprobleme, Self-Service bei Passwortänderungen, SSO über viele Systeme hinweg.
 
-===== Voraussetzungen
+*Voraussetzungen*
 
 * Ein Azure-Mandant und Zugriff auf das Microsoft Entra Admin Center: https://entra.microsoft.com
 * Eine registrierte Anwendung in Microsoft Entra ID (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")

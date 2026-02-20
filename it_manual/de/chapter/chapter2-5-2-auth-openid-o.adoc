@@ -76,5 +76,6 @@ client_secret={client_secret}
   - https://openid.net/connect/
 
 ===== Weitere Konfiguration
+
 Passen Sie bei Bedarf die Scopes und Berechtigungen in Entra ID an, um weiteren Ressourcen-Zugriff (z.B. Microsoft Graph) zu ermöglichen. 
 (siehe "Registrierung einer Anwendung im Microsoft Entra ID Admin Center")

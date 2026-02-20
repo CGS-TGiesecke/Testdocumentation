@@ -1,3 +1,4 @@
+
 ==== Hardwareanforderungen
 
 Für den produktiven Betrieb der Applikation {application} gelten folgende, lastbedingte Mindestanforderungen:
