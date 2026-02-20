@@ -18,4 +18,6 @@ include::chapter/chapter4-components.adoc[]
 
 include::chapter/chapter5-security.adoc[]
 
+include::chapter/chapter6-security.adoc[]
+
 include::chapter/zuletzt_checklist.adoc[]
