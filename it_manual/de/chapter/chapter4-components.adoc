@@ -1,5 +1,5 @@
 
-==== Systemkomponenten 
+=== Systemkomponenten 
 
 Die Lösung besteht aus folgenden Komponenten:
 

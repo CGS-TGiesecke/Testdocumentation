@@ -1,6 +1,6 @@
-==== Installation und Konfiguration
+=== Installation und Konfiguration
 
-===== Deployment-Anleitung (Schritt-für-Schritt)
+==== Deployment-Anleitung (Schritt-für-Schritt)
 
 Das Deployment von {application} erfolgt in folgenden Schritten:
 
@@ -25,7 +25,7 @@ Das Deployment von {application} erfolgt in folgenden Schritten:
 - Logs prüfen
 - Health-Check
 
-===== Erstkonfiguration der Anwendung
+==== Erstkonfiguration der Anwendung
 
 Nach erfolgter Installation sind folgende Initialkonfigurationen vorzunehmen:
 
@@ -47,7 +47,7 @@ Nach erfolgter Installation sind folgende Initialkonfigurationen vorzunehmen:
 
 Die Erstkonfiguration soll mit der IT-Sicherheitsrichtlinie sowie den Vorgaben aus dem Berechtigungskonzept abgestimmt werden.
 
-===== Update-/Upgrade-Prozess
+==== Update-/Upgrade-Prozess
 
 Der Update- und Upgrade-Prozess, durchgeführt vom Kunden gestaltet sich wie folgt:
 

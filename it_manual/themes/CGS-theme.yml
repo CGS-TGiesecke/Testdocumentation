@@ -53,11 +53,11 @@ heading:
     font-color: '3f6172'
     font-style: italic
   h4:
-    font-size: 12
+    font-size: 15
     font-color: '3f6172'
     font-style: italic
   h5:
-    font-size: 10
+    font-size: 12
     font-color: '3f6172'
     font-style: italic
 
