@@ -1,19 +1,19 @@
 
-==== Allgemeine Vorrausetzungen
+=== Allgemeine Vorrausetzungen
 
-===== Infrastruktur (VM oder Server)
+==== Infrastruktur (VM oder Server)
 
 Die Lösung wird auf einem *Linux-basierten Server* bereitgestellt (lokale VM oder Cloud-VM). 
 Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit Docker Compose ist geeignet.
 
 *Wichtig:* Eine VM ist *nicht zwingend erforderlich*. Die Lösung kann auf jedem Linux-Server mit Docker Compose betrieben werden.
 
-===== Betriebssystem
+==== Betriebssystem
 
 * *Linux*, z. B. Ubuntu Server LTS (24.04) oder vergleichbare Distributionen
 * Getestet mit Ubuntu; andere Linux-Distributionen auf Anfrage
 
-===== Docker-Umgebung
+==== Docker-Umgebung
 
 Die Bereitstellung erfolgt über *Docker Compose*.
 
@@ -24,7 +24,7 @@ Die Bereitstellung erfolgt über *Docker Compose*.
 
 *Installation:* Der Kunde muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
 
-===== Gemeinsames Verzeichnis (SHARED_FOLDER)
+==== Gemeinsames Verzeichnis (SHARED_FOLDER)
 
 Ein *beschreibbares Verzeichnis* auf dem Server für den Datenaustausch zwischen den Containern und für persistente Daten (Dokumente, Datenbanken, Vector-Store).
 

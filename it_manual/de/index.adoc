@@ -22,7 +22,9 @@ include::chapter/intro.adoc[]
 
 include::chapter/chapter1.adoc[]
 
-include::chapter/chapter2-0-req.adoc[]
+include::chapter/chapter2-0-1-req-general.adoc[]
+
+include::chapter/chapter2-0-2-network.adoc[]
 
 include::chapter/chapter2-1-third-components.adoc[]
 

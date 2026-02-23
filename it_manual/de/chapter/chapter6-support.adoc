@@ -1,5 +1,7 @@
 === Troubleshooting und Support
 
+ifeval::[{big-output} > 0]
+
 ==== Supportprozess und Kontaktinformationen
 
 *Supportprozess:*
@@ -31,6 +33,8 @@ ifeval::[{arc-assist} == 1]
 |Support-Email|???????
 |Telefon|???????
 |===
+
+endif::[]
 
 endif::[]
 

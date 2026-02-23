@@ -1,4 +1,4 @@
-===  LLM-Provider (Bereitstellung durch den Kunden)
+===  LLM-Provider - Bereitstellung durch den Kunden
 
 *Hinweis:* {application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
 

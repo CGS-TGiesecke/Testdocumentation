@@ -6,7 +6,9 @@ Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattf
 
 include::chapter/chapter2-2-llm-advice.adoc[]
 
-include::chapter/chapter2-0-req.adoc[]
+include::chapter/chapter2-0-1-req-general.adoc[]
+
+include::chapter/chapter2-0-2-network.adoc[]
 
 include::chapter/chapter2-2-llm.adoc[]
 
