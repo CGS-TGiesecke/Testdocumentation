@@ -22,5 +22,5 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 
-* SHARED_FOLDER
+* Shared Folder (SHARED_FOLDER)
 * Sharepoint Anbindung über die Microsoft Entra ID

@@ -8,4 +8,6 @@ Die Speicherung der Teildomukente (Embeddings) erfolgt in einem internen Vectors
 Die Dateien werden vom Kunden per Hand hochgeladen. Die Berechtigungen auf die einzelnen Dateien entsprechen denen der Verzeichnisse.
 Die Gesamte Datenhaltung und Zugriffsmanagement wird kundenseitig festgelegt und verwaltet.
 
+Ebenfalls enthalten sind Datenbank und Konfigurationsdateien im Shared Folder.
+
 
