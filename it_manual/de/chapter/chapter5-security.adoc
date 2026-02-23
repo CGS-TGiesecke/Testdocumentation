@@ -1,17 +1,6 @@
-=== IT-Sicherheit und Datenschutz
+=== Security und Compliance
 
-==== Zugriffsschutz und Berechtigungsmanagement
-
-Der Zugriff auf {application} ist durch ein mehrstufiges Berechtigungssystem sowie technische Schutzmaßnahmen abgesichert:
-
-- Anmeldung erfolgt ausschließlich über das vom Kunden gewählte und konfigurierte Anmeldeverfahren 
-- Passwortrichtlinien entsprechen den kundeneigenen IT-Sicherheitsvorgaben (Mindestlänge, Komplexität, regelmäßiger Wechsel).
-- Der Zugriff auf sensible Daten und Administrationsfunktionen ist ausschließlich ausgewählten Benutzerrollen vorbehalten.
-- Verschlüsselung des Datenverkehrs zwischen Client und Server durch TLS 1.2 oder höher.
-
-==== Security und Compliance
-
-===== TLS/HTTPS
+==== TLS/HTTPS
 
 Obligatorisch für Produktion. Zertifikate:
 
@@ -19,7 +8,7 @@ Obligatorisch für Produktion. Zertifikate:
 - DNS-01 (API-Token Provider)
 - Eigene Zertifikate (interne CA)
 
-===== Firewall
+==== Firewall
 
 **Ausgehende Verbindungen:**
 
@@ -27,7 +16,7 @@ Obligatorisch für Produktion. Zertifikate:
 - **LLM-Provider:** Je nach Anbieter
 - **Lokale Modelle:** Interne Verbindung
 
-===== Datenschutz
+==== Datenschutz
 
 Alle Anwendungsdaten befinden sich ausschließlich auf Kundenserver.
 
