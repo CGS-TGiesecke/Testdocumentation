@@ -1,15 +1,11 @@
 
 === Authentication
 
-Authentication protects applications and data and ensures compliance requirements are met.
+Authentication protects applications and data while fulfilling compliance requirements.
+The {application} application supports various authentication methods, which can be configured prior to delivery according to the customer's requirements.
 
 {application} supports:
 
+* OpenID Connect authentication with Microsoft Entra ID
 * SAML authentication with Microsoft Entra ID
-* OpenID authentication with Microsoft Entra ID
-
-include::chapter2-5-1-auth-saml.adoc[]
-
-include::chapter2-5-2-auth-openid.adoc[]
-
-include::chapter2-5-3-auth-pwd.adoc[]
+* Local user/password management

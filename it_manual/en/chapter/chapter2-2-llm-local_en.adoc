@@ -1,0 +1,34 @@
+
+==== Option C: Local Models (for Highest Data Protection Requirements)
+
+**For customers who do not want any cloud connection.**
+
+The platform supports local LLMs via **OpenAI-compatible APIs**.
+
+**Supported tools:**
+
+- **Ollama** (the simplest solution) – https://ollama.ai
+- **vLLM** (highest performance)
+- **LM Studio** (GUI-based)
+
+**Recommended models:**
+
+- **Llama 3.1 70B / Llama 3.3 70B** (very good quality)
+- **Qwen 2.5 72B** (excellent, multilingual)
+- **Mistral Large 2** (high quality)
+
+**Hardware requirements:**
+
+|===
+| Model       | VRAM    | GPU        | RAM 
+
+| 70B models  | 48-80 GB| A100/H100  | 128 GB 
+| 8B models   | 8-16 GB | RTX 4060 Ti| 16 GB 
+|===
+
+ifeval::[{big-output} == 2]
+
+include::chapter2-2-llm-local-o-en.adoc[]
+
+endif::[]
+

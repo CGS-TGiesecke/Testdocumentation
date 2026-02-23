@@ -1,0 +1,4 @@
+==== Authentication via Local User/Password Management
+
+Authentication via a local user/password management is used whenever the customer does not wish 
+to manage users and credentials outside the organization and prefers management within {application}.

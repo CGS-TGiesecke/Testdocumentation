@@ -1,5 +1,0 @@
-
-==== Schritt-für-Schritt-Anleitung: Authentifizierung über lokale Benutzer-/Passwortverwaltung (Kundendatenbank, LDAP)
-
-
-

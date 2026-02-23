@@ -1,0 +1,24 @@
+===  LLM-Providers - Provision by the customer
+
+**IMPORTANT:** {application} does **not provide an LLM**. The customer must set up and operate one of the following LLM providers themselves.
+
+*Overview of Supported LLM Providers*
+
+|===
+| Provider         | Recommendation  | Advantages                              | Setup Effort
+
+| **Azure OpenAI** 
+| **Preferred** 
+| Enterprise support, EU regions, easy integration 
+| Medium
+
+| **AWS Bedrock** 
+| Equivalent  
+| Good Claude models, AWS integration  
+| Medium
+
+| **Local models** 
+| For high data protection requirements  
+| Maximum data protection, no cloud  
+| High (GPU hardware required) 
+|===

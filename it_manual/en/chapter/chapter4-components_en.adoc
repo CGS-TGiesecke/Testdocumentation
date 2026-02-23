@@ -1,0 +1,14 @@
+
+=== System components
+
+The solution consists of the following components:
+
+* *Web/API Server:* AI Audit Assist backend, LLM API, RAG API, Caddy
+* *Worker:* Celery worker for asynchronous tasks
+* *Redis:* Message broker and caching
+* *Database:* SQLite
+* *Vector store:* ChromaDB for RAG
+* *Customer-specific MCP APIs:* for integration with external tools, systems, or data sources (e.g., feeds) (optional)
+
+*Deployment:* Via Docker Compose on a Linux server.
+

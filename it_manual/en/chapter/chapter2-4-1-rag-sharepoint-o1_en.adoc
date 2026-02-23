@@ -1,0 +1,30 @@
+===== Registration Steps in Microsoft Entra ID Admin Center
+
+*Sign-in*
+
+Sign in to the Microsoft Entra ID Admin Center with an account that has administrative rights for your organization.
+`https://entra.microsoft.com`
+
+*Navigate to "App Registrations"*
+
+* Select Entra ID
+* Navigate to "App Registrations".
+* Register a new application
+* Click "New registration" (top of the menu).
+
+*Enter application information*
+
+* Name: Choose a name for the application. *Suggestion:* {application}
+* Supported account types: Decide whether the application should support only internal users (single organization), 
+external users, or multiple organizations. The default is "Single tenant – Your-firma".
+
+*Note*: For {application} SharePoint integration, this setting is not relevant.
+
+*Create*
+
+* Click "Register".
+* After registration, you will receive:
+
+** Application ID *(Client ID)*
+** Directory ID *(Tenant ID)*
+** *Client secrets* generated under "Certificates & secrets"

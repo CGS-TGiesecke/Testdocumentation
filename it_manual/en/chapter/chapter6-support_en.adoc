@@ -1,0 +1,74 @@
+=== Troubleshooting and Support
+
+ifeval::[{big-output} > 0]
+
+==== Support Process and Contact Information
+
+*Support process:*
+
+|===
+|Level 1|Customer Support     | Response on working days `<` 24 h
+|Level 2|Technical Teams      | 
+|Level 3|Development Teams    |
+|===
+
+*Contact Information:*
+
+ifeval::[{cgs-assist} == 1] 
+
+|===
+|Company         |{author}
+|Website         |https://www.cgs-online.de/
+|Support Email   |support@cgs-online.de
+|Phone           |Support phone number
+|===
+
+endif::[]
+
+ifeval::[{arc-assist} == 1]
+
+|===
+|Company         |{author}
+|Website         |?????
+|Support Email   |???????
+|Phone           |???????
+|===
+
+endif::[]
+
+endif::[]
+
+=== Backup and Recovery
+
+*To be backed up by the customer*:
+
+* Database
+* SHARED_FOLDER
+* Configuration files
+
+=== Patch Management
+* Application: {author} provides updates → Customer is responsible for installation
+* Infrastructure: Customer responsibility (OS, Docker)
+
+
+=== RACI-Matrix 
+
+|===
+| *Area*    		   |  *{author}*    | *Customer*
+
+| Infrastructure 		| Consulted 		| Responsible 
+| Docker images 			| Responsible 		| Informed 
+| LLM provider setup 		| Consulted 		| Responsible 
+| LLM provider costs		| Informed 			| Accountable 
+| Database 				| Consulted 		| Responsible 
+| Backups 				| Consulted 		| Responsible 
+| Application updates	| Responsible 		| Accountable 
+| Security patches (OS)	| Consulted 		| Responsible 
+|===
+
+
+
+
+
+
+

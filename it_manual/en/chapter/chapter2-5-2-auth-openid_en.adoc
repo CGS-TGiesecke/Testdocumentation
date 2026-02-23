@@ -1,0 +1,23 @@
+
+==== OpenID Connect Authentication with Microsoft Entra ID
+
+OpenID authentication with Microsoft Entra ID is recommended for all professional, cloud-based, and enterprise-oriented applications to adequately address security, user convenience, and compliance requirements. The advantage of this authentication method is SSO (Single Sign-On), meaning users can log in to various applications with their corporate credentials (e.g., email/password for Microsoft 365).
+
+The necessary data for connecting {application} with the customer’s OpenID Connect authentication are:
+
+* *Tenant ID:* The organization/tenant ID.
+* *Application ID (Client):* The client ID of the application.
+* *Secrets:* Access keys (can be time-limited)
+* *Redirect URI:* Redirect after successful login to {application}
+
+These must be stored in the `init_config.yaml` file (see "Initial Configuration of the Application").
+This information matches the configuration for "SharePoint Integration via Microsoft Entra ID" or "SAML Authentication with Microsoft Entra ID."
+
+If this data is *not* available, the {application} application must first be registered by the customer in the Microsoft Entra Admin Center.
+ 
+ifeval::[{big-output} == 2]
+
+include::chapter2-5-2-auth-openid-o_en.adoc[]
+
+endif::[]
+

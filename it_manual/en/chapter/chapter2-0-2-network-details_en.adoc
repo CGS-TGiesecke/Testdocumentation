@@ -1,17 +1,3 @@
-===== Network / Ports
-
-**Required Ports:**
-
-|===
-| Port  | Protocol | Usage                                         | Required for 
-
-| **80**    | HTTP      | HTTP to HTTPS redirect, Let's Encrypt ACME challenge  | Production with Caddy 
-| **443**   | HTTPS     | Encrypted access (TLS)                               | Production (recommended) 
-| **8000**  | HTTP      | Direct access to application                         | Testing/Development
-|===
-
-**Production Recommendation:** Use a reverse proxy (e.g., Caddy, Nginx) with TLS certificates.
-
 ====== DNS Requirements for Caddy with Let's Encrypt
 
 If you want to use Caddy with automatic Let's Encrypt TLS certificates:
@@ -76,4 +62,3 @@ tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.
 - DNS configuration: A-record for the desired FQDN (e.g., `xxx-assist.yourcompany.com`) to server IP
 - Providing the FQDN for the Caddyfile configuration
 - Optional: Own TLS certificates if Let's Encrypt is not to be used
-

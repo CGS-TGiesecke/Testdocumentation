@@ -1,3 +1,11 @@
+=== General Information about the Application
+
+==== Name and Version of the Application
+
+The application described in this manual is called {application} and is currently available in version {revnumber} as of {revdate}.
+
+==== Overview and Features
+
 "{author}" is the manufacturer of {application}, an AI wrapper that offers various functionalities to make AI
 ifeval::[{cgs-assist} == 1]
  available, for example, to medium-sized enterprises

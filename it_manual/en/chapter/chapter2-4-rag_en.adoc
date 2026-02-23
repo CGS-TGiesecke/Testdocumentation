@@ -1,0 +1,26 @@
+
+=== Database and Storage
+
+Data storage:
+
+* SQLite: User data, metadata, logs
+* SHARED_FOLDER: Uploaded documents, configuration files, and mount for Docker
+* ChromaDB: Embeddings for RAG
+
+*All data resides on the customer’s server.*
+
+RAG (Retrieval-Augmented Generation) enables the extension of information sources within
+ifeval::[{cgs-assist} == 1]
+ AI Chat
+endif::[]
+ifeval::[{arc-assist} == 1]
+ AI Chat
+endif::[]
+or when using use cases by adding additional directories from the customer intranet.
+The {application} application supports various data integration options, which can be configured prior to delivery according to the customer's requirements.
+
+
+{application} supports:
+
+* Shared Folder (SHARED_FOLDER)
+* SharePoint connection via Microsoft Entra ID

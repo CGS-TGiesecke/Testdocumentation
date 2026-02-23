@@ -1,0 +1,23 @@
+
+===== Option B: AWS Bedrock (Equally Supported)
+
+**AWS Bedrock is a full-featured alternative to Azure OpenAI.**
+
+**Advantages:**
+
+- Excellent Claude models from Anthropic
+- Availability in EU regions (Frankfurt, Ireland)
+- Good integration for AWS customers
+- Often more cost-effective than Azure OpenAI
+
+**Requirements:**
+
+- Active AWS account
+- Access to the AWS Bedrock Service
+- Sufficient IAM permissions
+
+ifeval::[{big-output} == 2]
+
+include::chapter2-2-llm-aws-o-en.adoc[]
+
+endif::[]

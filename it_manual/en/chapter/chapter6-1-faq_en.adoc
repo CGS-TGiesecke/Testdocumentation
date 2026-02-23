@@ -1,0 +1,41 @@
+==== FAQ
+ 
+[cols="150px,2*", options="header"]
+|===
+|  Question | Answer 
+|What happens in the event of severe incidents? | For severe disruptions, a defined incident management process is used (e.g., escalation path, defined response times). Details are specified in contractual agreements and SLAs.
+|How does an update work? |  Updates are announced in advance and coordinated with the customer. Depending on the operating model, new container images are provided and rolled out during an agreed maintenance window. Critical security updates can be deployed on short notice as required.
+|Can we use our own security tools (VPN, Proxy, IDS/IPS)?| Yes, existing customer security mechanisms are generally integrated. Early coordination on firewall/proxy rules and possible SSL inspection is important to ensure functionality (e.g., connection to external LLM APIs or container registry).
+|Who is responsible for ongoing operations?| This depends on the operating model. With SaaS/Managed Service, technical operation is mainly by {author}; with on-prem/customer operation, the customer is responsible for infrastructure, OS, Docker/Kubernetes; {author} supports with application updates and configuration. See responsibility overview in the IT Requirements.
+|How long does a standard delivery take?|  For a typical pilot (PoC), plan for about 2–6 weeks if infrastructure is available and approvals proceed quickly. Transition to production depends largely on the customer’s internal processes (change management, security reviews).
+|How is the solution deployed?|Using a Docker Compose script on a Linux server.
+|Is special Azure integration necessary?|No. Only API key and endpoint are required.
+|Is a VM strictly required?|No. Any Linux server with Docker Compose is suitable.
+|Does the solution require a permanent internet connection? | Cloud providers (Azure/AWS): Yes 
+|     |Local models: Only for installation
+|Is an LLM included?| Customer must provide their own LLM provider (Azure OpenAI, AWS Bedrock, or local model).
+|Which LLM provider should I choose?| Recommendation:
+|	  |Azure OpenAI (preferred) – if you use Azure
+|	  |AWS Bedrock (equally supported) – if you use AWS
+|  	|Local models – for highest data protection
+|	  |All three are fully supported
+|Is Azure OpenAI mandatory?|No. Azure is preferred, but not mandatory. AWS Bedrock and local models are equal alternatives.
+|How do I set up Azure OpenAI?| See "Supported LLM Providers (Provision by customer)"
+|How do I set up AWS Bedrock?| See "Supported LLM Providers (Provision by customer)"
+|Where is the data stored?|All application data is stored on the customer’s server. For cloud LLMs, requests are transmitted for analysis (not stored long-term).
+|Do we need to pay for the LLM?|Yes. The customer must provide their own LLM provider (for cloud):
+|  	|Azure OpenAI: $100-500/month (50 users)
+|	  |AWS Bedrock: $80-400/month (50 users)
+|	  |Local: €0 API costs, but hardware investment required
+|How is authentication handled?|Via the local user/password management (customer’s DB)
+|  	| via SAML authentication with Microsoft Entra ID
+|  	| via OpenID authentication with Microsoft Entra ID
+|How is access secured?| Certificate-based security (TLS/HTTPS)
+|	  |Let's Encrypt (via Caddy)
+|	  |Own certificates (internal CA)
+|The application does not start in the browser.|Check if the web server service is running and the firewall allows the relevant ports.
+|User cannot log in.|Ensure the user is active in AD and the assigned role is correctly configured in the application’s user management.
+Check the correct authentication configuration (redirect_uri), and look for possible typos.
+|No access to connected SharePoint.|Check the correct authentication configuration (redirect_uri), and look for possible typos.
+|===
+

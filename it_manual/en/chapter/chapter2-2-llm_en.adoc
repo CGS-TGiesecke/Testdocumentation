@@ -1,0 +1,38 @@
+
+include::chapter2-2-llm-advice.adoc[]
+
+*Note:* Azure OpenAI is our preferred recommendation, but AWS Bedrock and local models are equally supported.
+
+*Choose a provider based on:*
+
+- Existing cloud infrastructure (Azure or AWS)
+- Data protection and compliance requirements
+- Budget and operating model
+
+*Customer responsibility:*
+
+* *Azure OpenAI:* Adjust token limits in Azure AI Foundry
+* *AWS Bedrock:* Check service quotas in the AWS Console
+* *Local models:* Provide sufficient GPU capacity
+
+==== Cost Overview LLM Providers
+
+*Azure OpenAI (approx., as of 2026):*
+
+* GPT-4o: $5-15 per 1M tokens
+* GPT-4o-mini: $0.15-0.60 per 1M tokens
+* **Typical (50 users): $100-500/month**
+
+*AWS Bedrock (approx., as of 2026):*
+
+* Claude 3.5 Sonnet: $3-8 per 1M input, $15-24 per 1M output
+* Claude 3 Haiku: $0.25-1 per 1M input, $1.25-5 per 1M output
+* *Typical (50 users): $80-400/month*
+
+*Local models:*
+
+* No API costs
+* Hardware investment: €5,000-50,000+
+* Ongoing electricity costs
+
+

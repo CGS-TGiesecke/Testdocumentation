@@ -1,0 +1,46 @@
+
+===== Step-by-Step: Setting up Azure OpenAI Service
+
+====== Step 1: Create Azure OpenAI Resource
+
+1. **Open Azure Portal:** [https://portal.azure.com](https://portal.azure.com)
+2. **Create resource:**
+   - Click "+ Create a resource"
+   - Search for "Azure OpenAI"
+   - Click "Create"
+3. **Resource configuration:**
+   - **Subscription:** Select your Azure subscription
+   - **Resource group:** Create a new or use existing
+   - **Region:** Choose a region (e.g., West Europe, North Europe)
+   - **Name:** Assign a unique name (e.g., `xxx-assist-openai-prod`)
+   - **Pricing tier:** Standard S0 or higher
+4. **Review and create:** Click "Review + Create" then "Create"
+
+====== Step 2: Deploy Models in Azure AI Foundry
+
+1. **Open Azure AI Foundry:** [https://ai.azure.com](https://ai.azure.com)
+2. **Model deployment:**
+   - Navigate to "Deployments"
+   - Click "+ Create new deployment"
+3. **Recommended models:**
+   - **Main model:** `gpt-4o` 
+   - **Optional:** `gpt-5` or higher 
+
+====== Step 3: Get API Credentials
+
+1. In Azure Portal → Your OpenAI Resource → "Keys and Endpoint"
+2. **Note for later configuration in the application:**
+   - API key
+   - Endpoint (e.g., `https://your-resource-name.openai.azure.com/`)
+   - Region (e.g., `westeurope`)
+   - Deployment name of the models
+
+**Example:**
+
+```
+Endpoint: https://xxx-assist-openai-prod.openai.azure.com/
+API Key: 1234567890abcdef...
+Region: westeurope
+Deployment Name: gpt-4o
+```
+

@@ -1,0 +1,52 @@
+
+===== Step-by-Step: Setting up AWS Bedrock
+
+====== Step 1: Enable AWS Bedrock
+
+1. **Open AWS Console:** [https://console.aws.amazon.com](https://console.aws.amazon.com)
+2. **Navigate to Bedrock:** Search for "Bedrock"
+3. **Select region:** e.g., eu-central-1 (Frankfurt), us-east-1
+4. **Enable Model Access:**
+   - Navigate to "Model access"
+   - Click on "Manage model access"
+   - Enable Anthropic Claude models
+   - Click on "Save changes"
+
+====== Step 2: Set up IAM permissions
+
+Create an IAM user with the following policy:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": "arn:aws:bedrock:*::foundation-model/*"
+    }
+  ]
+}
+```
+
+====== Step 3: Generate Access Keys
+
+1. IAM Console → Users → Your user → Security credentials
+2. Create access key
+3. **Note for later configuration in the application:**
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - AWS Region
+   - Model ID (e.g., `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+
+**Example:**
+
+```bash
+AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
+AWS Region: eu-central-1
+Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
+```

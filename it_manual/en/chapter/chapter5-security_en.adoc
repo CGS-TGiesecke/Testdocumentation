@@ -1,0 +1,30 @@
+=== Security and Compliance
+
+==== TLS/HTTPS
+
+Mandatory for production. Certificates:
+
+- Let's Encrypt (via Caddy)
+- DNS-01 (API token provider)
+- Own certificates (internal CA)
+
+==== Firewall
+
+**Outgoing connections:**
+
+- **Always:** Docker Hub / {author} Registry
+- **LLM provider:** Depending on provider
+- **Local models:** Internal connection
+
+==== Data Protection
+
+All application data is stored exclusively on customer servers.
+
+**LLM Provider (Cloud) model:**
+
+- For Azure OpenAI or AWS Bedrock: Requests are transmitted but not stored permanently
+- **Recommendation:** Choose EU region (GDPR)
+
+**Local models:** 
+
+- Highest level of GDPR compliance

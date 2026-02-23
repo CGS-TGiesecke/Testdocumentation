@@ -1,9 +1,8 @@
 
-== {application} – Technical Requirements
+== {application} – Technische Bereitstellungsanforderungen
 
-This document is intended for IT infrastructure and system administrators and describes the technical requirements 
-for the deployment and operation of the {application} platform at the customer site.
-
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen 
+Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattform beim Kunden.
 
 include::chapter/chapter2-2-llm-advice.adoc[]
 

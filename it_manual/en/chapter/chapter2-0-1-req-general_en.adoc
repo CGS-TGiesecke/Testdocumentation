@@ -1,0 +1,30 @@
+=== General Requirements
+
+==== Infrastructure (VM or Server)
+
+The solution is deployed on a *Linux-based server* (local VM or cloud VM).
+*No special cloud integration is required* – any Linux server with Docker Compose is suitable.
+
+*Important:* A VM is *not strictly required*. The solution can be operated on any Linux server with Docker Compose.
+
+==== Operating System
+
+* *Linux*, e.g., Ubuntu Server LTS (24.04) or comparable distributions
+* Tested with Ubuntu; other Linux distributions available upon request
+
+==== Docker Environment
+
+Deployment is performed via *Docker Compose*.
+
+*Required versions:*
+
+* *Docker Engine:* Version `>` 20.x
+* *Docker Compose:* Version `>` 1.29 or Compose V2
+
+*Installation:* The customer must install and configure Docker and Docker Compose on the server.
+
+==== Shared Directory (SHARED_FOLDER)
+
+A *writable directory* on the server for data exchange between containers and for persistent data (documents, databases, vector store).
+
+*Customer responsibility:* Provision of a directory with sufficient read/write permissions for the Docker containers.

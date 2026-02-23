@@ -18,35 +18,73 @@
 :cgs-assist: {cgs-assist}
 :big-output: {big-output}
 
-include::chapter/intro.adoc[]
+include::chapter/intro_en.adoc[]
 
-include::chapter/chapter1.adoc[]
+include::chapter/chapter1_en.adoc[]
 
-include::chapter/chapter2.adoc[]
+include::chapter/chapter2-0-1-req-general_en.adoc[]
 
-include::chapter/chapter2-4-rag.adoc[]
+include::chapter/chapter2-0-2-network_en.adoc[]
 
-include::chapter/chapter2-5-auth.adoc[]
-
-include::chapter/chapter3.adoc[]
-
-ifeval::[{big-output} == 1]
-include::chapter/chapter4-o.adoc[]
+ifeval::[{big-output} > 0]
+include::chapter/chapter2-0-2-network-details_en.adoc[]
 endif::[]
 
-include::chapter/chapter5.adoc[]
+include::chapter/chapter2-1-third-components_en.adoc[]
 
-include::chapter/chapter6.adoc[]
+include::chapter/chapter2-2-llm_en.adoc[]
 
-ifeval::[{big-output} == 1]
-include::chapter/chapter6-1-faq-o.adoc[]
+ifeval::[{big-output} > 0]
+include::chapter/chapter2-2-llm-azure_en.adoc[]
+
+include::chapter/chapter2-2-llm-aws_en.adoc[]
+
+include::chapter/chapter2-2-llm-local_en.adoc[]
 endif::[]
 
-include::chapter/chapter8.adoc[]
+include::chapter/chapter2-3-hardware_en.adoc
+
+include::chapter/chapter4-components_en.adoc[]
+
+include::chapter/chapter2-4-rag_en.adoc[]
+
+ifeval::[{big-output} > 0]
+include::chapter/chapter2-4-1-rag-sharedfolder_en.adoc[]
+
+include::chapter/chapter2-4-1-rag-sharepoint_en.adoc[]
+endif::[]
+
+include::chapter/chapter2-5-auth_en.adoc[]
+
+ifeval::[{big-output} > 0]
+include::chapter/chapter2-5-2-auth-openid_en.adoc[]
+
+include::chapter/chapter2-5-1-auth-saml_en.adoc[]
+
+include::chapter/chapter2-5-3-auth-pwd_en.adoc[]
+endif::[]
+
+ifeval::[{big-output} > 1]
+include::chapter/chapter3-install_en.adoc[]
+endif::[]
+
+include::chapter/chapter5-security_en.adoc[]
+
+include::chapter/chapter6-support_en.adoc[]
+
+ifeval::[{big-output} > 0]
+include::chapter/chapter6-1-faq_en.adoc[]
+
+include::chapter/chapter7-docu_en.adoc[]
+endif::[]
+
+ifeval::[{big-output} > 1]
+include::chapter/chapter8-apendix_en.adoc[]
+endif::[]
 
 <<<
 
-include::chapter/disclaimer.adoc[]
+include::chapter/disclaimer_en.adoc[]
 
 
 
