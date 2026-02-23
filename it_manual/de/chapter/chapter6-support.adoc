@@ -41,7 +41,19 @@ endif::[]
 
 endif::[]
 
-*RACI-Matrix* 
+=== Backup und Recovery
+
+Vom Kunden zu sichern:
+* Datenbank
+* SHARED_FOLDER
+* Konfigurationsdateien
+
+=== Patch-Management
+* Anwendung: {author} stellt Updates bereit → Kunde spielt ein
+* Infrastruktur: Kunde verantwortlich (OS, Docker)
+
+
+=== RACI-Matrix 
 
 |===
 | *Bereich* |  *{author}* | *Kunde*
