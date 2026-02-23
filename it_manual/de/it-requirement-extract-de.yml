@@ -1,6 +1,4 @@
-
-
-name: Asciidoctor Build IT-Handbook de html, pdf, docx
+name: Extract DE IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
@@ -15,9 +13,9 @@ on:
           - warning
           - debug
       pdfTheme:
-        description: 'Asciidoctor PDF Theme'
+        description: 'Application Theme'
         required: true
-        default: 'CGS'
+        default: 'ARC'
         type: choice
         options:
           - CGS
@@ -32,14 +30,13 @@ on:
           - 1
           - 2
       version:
-        description: 'Asciidoctor PDF Version'
+        description: 'Application Version'
         required: true
         default: '1.3.0'
         type: string
-
-  
+        
 env:
-  FILENAME: 'IT_HANDBOOK_DE'
+  FILENAME: 'it-requirement-extract'
   FILEPATH: 'it_manual/de'
 
 jobs:
@@ -102,12 +99,12 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/${{ env.FILENAME }}.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-           -D ${{ env.FILEPATH }} \
+           -D ${{ env.FILEPATH }}/ \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
@@ -119,7 +116,7 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=it_manual/themes \
-           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/it-requirement-extract.adoc
 
       - name: Build DOCX with Pandoc
         run: |
@@ -127,8 +124,8 @@ jobs:
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-
-      - name: Upload documentation artifact
+       
+      - name: Upload ${{ env.FILEPATH }} artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_${{ env.DATE }}
@@ -136,3 +133,4 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
+ 

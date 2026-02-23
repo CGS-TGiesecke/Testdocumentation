@@ -1,8 +1,9 @@
 
-== {application} – Technical Requirements
 
-This document is intended for IT infrastructure and system administrators and describes the technical requirements 
-for the deployment and operation of the {application} platform at the customer site.
+== {application} – Technische Bereitstellungsanforderungen
+
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die 
+technischen Voraussetzungen für die Bereitstellung und den Betrieb der AI Audit Assist Plattform beim Kunden.
 
 
 include::chapter/chapter2-2-llm-advice.adoc[]

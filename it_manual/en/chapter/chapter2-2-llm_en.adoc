@@ -1,5 +1,5 @@
 
-include::chapter2-2-llm-advice.adoc[]
+include::chapter2-2-llm-advice_en.adoc[]
 
 *Note:* Azure OpenAI is our preferred recommendation, but AWS Bedrock and local models are equally supported.
 

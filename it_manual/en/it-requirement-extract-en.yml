@@ -1,4 +1,4 @@
-name: Extract DE IT_REQUIREMENTS adoc to PDF & DOCX
+name: Extract EN IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
       pdfTheme:
         description: 'Application Theme'
         required: true
-        default: 'CGS'
+        default: 'ARC'
         type: choice
         options:
           - CGS
@@ -36,8 +36,8 @@ on:
         type: string
         
 env:
-  FILENAME: 'IT-REQUIREMENTS'
-  FILEPATH: 'it_manual/de'
+  FILENAME: 'it-requirement-extract'
+  FILEPATH: 'it_manual/en'
 
 jobs:
   build:
