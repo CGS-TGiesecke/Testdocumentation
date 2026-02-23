@@ -2,6 +2,8 @@
 
 include::chapter2-0-req-general.adoc[]
 
+include::chapter2-2-o.adoc[]
+
 include::chapter2-0-req-hardware.adoc[]
 
 
