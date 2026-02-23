@@ -20,8 +20,8 @@
 |  	|Lokale Modelle – höchster Datenschutz
 |	  |Alle drei werden vollständig unterstützt
 |Ist Azure OpenAI zwingend?|Nein. Azure ist bevorzugt, aber nicht zwingend. AWS Bedrock und lokale Modelle sind gleichwertige Alternativen.
-|Wie setze ich Azure OpenAI auf?| `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md` Siehe Abschnitt 2.2 für Schritt-für-Schritt-Anleitung
-|Wie setze ich AWS Bedrock auf?| `IT_REQUIREMENTS_AI_AUDIT_ASSIST_DE_EN.md` Siehe Abschnitt 2.3 für Schritt-für-Schritt-Anleitung
+|Wie setze ich Azure OpenAI auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
+|Wie setze ich AWS Bedrock auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
 |Wo liegen die Daten?|Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analyse übertragen (nicht dauerhaft gespeichert).
 |Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (bei Cloud):
 |  	|Azure OpenAI: $100-500/Monat (50 Nutzer)
@@ -35,4 +35,6 @@
 |	  |Eigene Zertifikate (interne CA)
 |Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
 |Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
+Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
+|Kein ZUgriff auf angebundenes SharePoint.|Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
 |===

@@ -22,27 +22,33 @@ include::chapter/intro.adoc[]
 
 include::chapter/chapter1.adoc[]
 
-include::chapter/chapter2.adoc[]
+include::chapter/chapter2-0-req.adoc[]
+
+include::chapter/chapter2-1-third-components.adoc[]
+
+include::chapter/chapter2-2-llm.adoc[]
 
 include::chapter/chapter2-4-rag.adoc[]
 
 include::chapter/chapter2-5-auth.adoc[]
 
-include::chapter/chapter3.adoc[]
-
-ifeval::[{big-output} == 1]
-include::chapter/chapter4-o.adoc[]
+ifeval::[{big-output} > 1]
+include::chapter/chapter3-install.adoc[]
 endif::[]
 
-include::chapter/chapter5.adoc[]
+include::chapter/chapter4-components.adoc[]
 
-include::chapter/chapter6.adoc[]
+include::chapter/chapter5-security.adoc[]
 
-ifeval::[{big-output} == 1]
-include::chapter/chapter6-1-faq-o.adoc[]
+include::chapter/chapter6-support.adoc[]
+
+ifeval::[{big-output} > 1]
+include::chapter/chapter7.adoc[]
 endif::[]
 
+ifeval::[{big-output} > 1]
 include::chapter/chapter8.adoc[]
+endif::[]
 
 <<<
 

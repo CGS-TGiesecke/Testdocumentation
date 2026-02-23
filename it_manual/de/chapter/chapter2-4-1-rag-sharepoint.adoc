@@ -13,6 +13,7 @@ Die notwendigen Daten, für die Anbindung von {application} mit Credentials an S
 
 Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 Diese Daten entsprechen denen in der Einrichtung "OpenID Connect Authentifizierung mit Microsoft Entra ID" oder "SAML-Authentifizierung mit Microsoft Entra ID".
+
 Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
 
 ifeval::[{big-output} == 2]

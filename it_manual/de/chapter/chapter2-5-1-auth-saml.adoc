@@ -14,7 +14,8 @@ Die notwendigen Daten, für die Anbindung von {application} mit SAML-Authentifiz
 * *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
 
 Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
-Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "OpenID Connect Authentifizierung mit Microsoft Entra ID"
+Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "OpenID Connect Authentifizierung mit Microsoft Entra ID".
+
 Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
 
 

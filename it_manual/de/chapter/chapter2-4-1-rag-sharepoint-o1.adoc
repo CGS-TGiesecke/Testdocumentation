@@ -3,9 +3,8 @@
 *Anmeldung*
 
 Melden Sie sich im Microsoft Entra ID Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
-```
-https://entra.microsoft.com
-```
+`https://entra.microsoft.com`
+
 *Navigation zu "App-Registrierungen"*
 
 * Wählen Sie Entra ID
@@ -29,7 +28,7 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Man
 ** Verzeichnis-ID *(Tenant-ID)*
 ** *Client-Secrets* unter "Zertifikate & Geheimnisse" generieren
 ```
-Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration.
+Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```
 *Berechtigungen konfigurieren (optional)*
 
