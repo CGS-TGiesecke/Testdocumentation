@@ -1,4 +1,4 @@
-===== Registrierungsschritte in Microsoft Entra ID
+===== Registrierungsschritte in Microsoft Entra ID ID Admin Center
 
 *Anmeldung*
 
