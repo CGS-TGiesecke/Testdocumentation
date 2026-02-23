@@ -6,36 +6,36 @@ This document is intended for IT infrastructure and system administrators and de
 for the deployment and operation of the {application} platform at the customer site.
 
 
-include::chapter/chapter2-2-llm-advice.adoc[]
+include::chapter/chapter2-2-llm-advice_en.adoc[]
 
-include::chapter/chapter2-0-1-req-general.adoc[]
+include::chapter/chapter2-0-1-req-general_en.adoc[]
 
-include::chapter/chapter2-0-2-network.adoc[]
+include::chapter/chapter2-0-2-network_en.adoc[]
 
-include::chapter/chapter2-0-2-network-details.adoc[]
+include::chapter/chapter2-0-2-network-details_en.adoc[]
 
-include::chapter/chapter2-2-llm.adoc[]
+include::chapter/chapter2-2-llm_en.adoc[]
 
-include::chapter/chapter2-2-llm-azure.adoc[]
+include::chapter/chapter2-2-llm-azure_en.adoc[]
 
-include::chapter/chapter2-2-llm-aws.adoc[]
+include::chapter/chapter2-2-llm-aws_en.adoc[]
 
-include::chapter/chapter2-2-llm-local.adoc[]
+include::chapter/chapter2-2-llm-local_en.adoc[]
 
-include::chapter/chapter2-3-hardware.adoc[]
+include::chapter/chapter2-3-hardware_en.adoc[]
 
-include::chapter/chapter4-components.adoc[]
+include::chapter/chapter4-components_en.adoc[]
 
-include::chapter/chapter2-4-rag.adoc[]
+include::chapter/chapter2-4-rag_en.adoc[]
 
-include::chapter/chapter2-5-auth.adoc[]
+include::chapter/chapter2-5-auth_en.adoc[]
 
-include::chapter/chapter5-security.adoc[]
+include::chapter/chapter5-security_en.adoc[]
 
-include::chapter/chapter6-support.adoc[]
+include::chapter/chapter6-support_en.adoc[]
 
-include::chapter/chapter6-1-faq.adoc[]
+include::chapter/chapter6-1-faq_en.adoc[]
 
 <<<
 
-include::chapter/zuletzt_checklist.adoc[]
+include::chapter/zuletzt_checklist_en.adoc[]
