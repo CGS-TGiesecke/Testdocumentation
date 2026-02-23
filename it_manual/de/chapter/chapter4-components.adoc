@@ -11,9 +11,3 @@ Die Lösung besteht aus folgenden Komponenten:
 * *Kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds (optional)
 
 *Deployment:* Über Docker Compose auf Linux-Server.
-
-ifeval::[{big-output} > 0]
-
-include::chapter4-components-o.adoc[]
-
-endif::[]
