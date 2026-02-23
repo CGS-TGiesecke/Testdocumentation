@@ -76,7 +76,9 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter6-1-faq.adoc[]
 
 include::chapter/chapter7-docu.adoc[]
+endif::[]
 
+ifeval::[{big-output} > 1]
 include::chapter/chapter8-apendix.adoc[]
 endif::[]
 
