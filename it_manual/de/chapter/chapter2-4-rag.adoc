@@ -17,18 +17,10 @@ ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
  oder bei der Nutzung von Use Cases um zusätzliche Verzeichnisse aus dem Kundenintranet.
-Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbiendung, die in Vorbereitung einer Auslieferung,
+Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbindung, die in Vorbereitung einer Auslieferung,
 nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 
 * SHARED_FOLDER
 * Sharepoint Anbindung über die Microsoft Entra ID
-
-ifeval::[{big-output} > 0]
-
-include::chapter2-4-1-rag-sharedfolder.adoc[]
-
-include::chapter2-4-1-rag-sharepoint.adoc[]
-
-endif::[]

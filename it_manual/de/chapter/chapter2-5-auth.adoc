@@ -11,12 +11,3 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden.
 * eine SAML-Authentifizierung mit Microsoft Entra ID
 * eine lokale Benutzer-/Passwortverwaltung
 
-ifeval::[{big-output} > 0]
-
-include::chapter2-5-2-auth-openid.adoc[]
-
-include::chapter2-5-1-auth-saml.adoc[]
-
-include::chapter2-5-3-auth-pwd.adoc[]
-
-endif::[]
