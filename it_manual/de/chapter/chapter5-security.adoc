@@ -40,12 +40,7 @@ Alle Anwendungsdaten befinden sich ausschließlich auf Kundenserver.
 
 - Höchste DSGVO-Konformität
 
-==== Protokollierung und Logging
 
-Es werden Protokolle (Logs) zur Sicherstellung von Nachvollziehbarkeit geführt:
-
-- Die Logfiles werden automatisch zentral archiviert in der SQLite DB.
-- Logdaten werden durch den Kunden gesichert und Datenschutzkonform behandelt.
 
 
 

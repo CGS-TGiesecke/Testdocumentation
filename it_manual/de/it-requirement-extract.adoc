@@ -10,14 +10,20 @@ include::chapter/chapter2-0-req.adoc[]
 
 include::chapter/chapter2-2-llm.adoc[]
 
+include::chapter/chapter2-3-hardware.adoc[]
+
+include::chapter/chapter4-components.adoc[]
+
 include::chapter/chapter2-4-rag.adoc[]
 
 include::chapter/chapter2-5-auth.adoc[]
 
-include::chapter/chapter4-components.adoc[]
-
 include::chapter/chapter5-security.adoc[]
 
 include::chapter/chapter6-support.adoc[]
+
+include::chapter/chapter6-1-faq.adoc[]
+
+<<<
 
 include::chapter/zuletzt_checklist.adoc[]
