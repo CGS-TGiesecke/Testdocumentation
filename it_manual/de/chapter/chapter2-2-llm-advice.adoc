@@ -1,0 +1,27 @@
+===  LLM-Provider (Bereitstellung durch den Kunden)
+
+*Hinweis:* {application} stellt *kein LLM* bereit. Der Kunde muss einen der folgenden LLM-Provider selbst einrichten und betreiben.
+
+{application} unterstützt:
+
+|===
+| Provider | Status | Empfehlung | Vorteile | Setup-Aufwand
+
+| *Azure OpenAI* 
+| Vollständig unterstützt 
+| *Bevorzugt* 
+| Enterprise-Support, EU-Regionen, einfache Integration 
+| Mittel
+
+| *AWS Bedrock* 
+| Vollständig unterstützt 
+| Gleichwertig  
+| Gute Claude-Modelle, AWS-Integration  
+| Mittel
+
+| *Lokale Modelle* 
+| Unterstützt 
+| Für hohe Datenschutzanforderungen  
+| Maximaler Datenschutz, keine Cloud  
+| Hoch (GPU-Hardware erforderlich) 
+|===

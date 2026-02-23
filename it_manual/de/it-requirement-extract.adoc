@@ -4,6 +4,8 @@
 Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen 
 Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattform beim Kunden.
 
+include::chapter/chapter2-2-llm-advice.adoc[]
+
 include::chapter/chapter2-0-req.adoc[]
 
 include::chapter/chapter2-2-llm.adoc[]
