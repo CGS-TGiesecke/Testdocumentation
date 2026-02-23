@@ -15,7 +15,7 @@ on:
       pdfTheme:
         description: 'Application Theme'
         required: true
-        default: 'CGS'
+        default: 'ARC'
         type: choice
         options:
           - CGS
