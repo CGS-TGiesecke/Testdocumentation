@@ -6,17 +6,11 @@ Voraussetzungen für die Bereitstellung und den Betrieb der {application} Plattf
 
 include::chapter/chapter2-0-req.adoc[]
 
-include::chapter/chapter2-1-third-components.adoc[]
-
 include::chapter/chapter2-2-llm.adoc[]
 
 include::chapter/chapter2-4-rag.adoc[]
 
 include::chapter/chapter2-5-auth.adoc[]
-
-ifeval::[{big-output} > 1]
-include::chapter/chapter3-install.adoc[]
-endif::[]
 
 include::chapter/chapter4-components.adoc[]
 

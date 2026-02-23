@@ -43,11 +43,11 @@ include::chapter/chapter5-security.adoc[]
 include::chapter/chapter6-support.adoc[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter7.adoc[]
+include::chapter/chapter7-docu.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter8.adoc[]
+include::chapter/chapter8-apendix.adoc[]
 endif::[]
 
 <<<
