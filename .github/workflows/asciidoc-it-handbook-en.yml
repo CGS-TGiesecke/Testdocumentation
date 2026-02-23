@@ -128,7 +128,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
