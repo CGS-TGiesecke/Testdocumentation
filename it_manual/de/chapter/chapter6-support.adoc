@@ -40,7 +40,8 @@ endif::[]
 
 === Backup und Recovery
 
-Vom Kunden zu sichern:
+*Vom Kunden zu sichern*:
+
 * Datenbank
 * SHARED_FOLDER
 * Konfigurationsdateien

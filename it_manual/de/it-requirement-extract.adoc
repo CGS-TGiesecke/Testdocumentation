@@ -10,7 +10,15 @@ include::chapter/chapter2-0-1-req-general.adoc[]
 
 include::chapter/chapter2-0-2-network.adoc[]
 
+include::chapter/chapter2-0-2-network-details.adoc[]
+
 include::chapter/chapter2-2-llm.adoc[]
+
+include::chapter2-2-llm-azure.adoc[]
+
+include::chapter2-2-llm-aws.adoc[]
+
+include::chapter2-2-llm-local.adoc[]
 
 include::chapter/chapter2-3-hardware.adoc[]
 

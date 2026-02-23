@@ -9,16 +9,6 @@ include::chapter2-2-llm-advice.adoc[]
 * Datenschutz- und Compliance-Anforderungen
 * Budget und Betriebsmodell
 
-ifeval::[{big-output} > 0]
-
-include::chapter2-2-llm-azure.adoc[]
-
-include::chapter2-2-llm-aws.adoc[]
-
-include::chapter2-2-llm-local.adoc[]
-
-endif::[]
-
 *Aufgabe des Kunden:*
 
 * *Azure OpenAI:* Token-Limits in Azure AI Foundry anpassen

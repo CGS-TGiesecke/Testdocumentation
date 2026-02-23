@@ -26,9 +26,21 @@ include::chapter/chapter2-0-1-req-general.adoc[]
 
 include::chapter/chapter2-0-2-network.adoc[]
 
+ifeval::[{big-output} > 0]
+include::chapter/chapter2-0-2-network-details.adoc[]
+endif::[]
+
 include::chapter/chapter2-1-third-components.adoc[]
 
 include::chapter/chapter2-2-llm.adoc[]
+
+ifeval::[{big-output} > 0]
+include::chapter2-2-llm-azure.adoc[]
+
+include::chapter2-2-llm-aws.adoc[]
+
+include::chapter2-2-llm-local.adoc[]
+endif::[]
 
 include::chapter/chapter2-3-hardware.adoc
 
@@ -47,13 +59,11 @@ include::chapter/chapter5-security.adoc[]
 include::chapter/chapter6-support.adoc[]
 
 ifeval::[{big-output} > 0]
-
 include::chapter/chapter6-1-faq.adoc[]
 
 include::chapter/chapter7-docu.adoc[]
 
 include::chapter/chapter8-apendix.adoc[]
-
 endif::[]
 
 <<<

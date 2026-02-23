@@ -1,0 +1,67 @@
+
+===== DNS-Anforderungen für Caddy mit Let's Encrypt
+
+Wenn Sie Caddy mit automatischen Let's Encrypt TLS-Zertifikaten verwenden möchten:
+
+- **FQDN erforderlich:** Die Anwendung muss über einen vollständigen Domainnamen erreichbar sein (z.B. `xxx-assist.ihrefirma.de`)
+- **DNS-Auflösung:** Der FQDN muss auf die öffentliche IP-Adresse des Servers zeigen (A-Record oder CNAME)
+- **Port 80 erreichbar:** Muss aus dem Internet erreichbar sein (für ACME HTTP-Challenge)
+
+**Caddyfile-Konfiguration benötigt:**
+
+```
+xxx-assist.ihrefirma.de {
+    reverse_proxy xxx_assist_backend:8000
+}
+```
+
+===== Alternative DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)
+
+Zertifikatsanfrage wird über DNS-Einträge verifiziert anstatt die Inhalte über HTTP bereitzustellen 
+
+Beispiel Provider-Syntax Cloudflare Token als Env-Var:
+
+```
+texttest.server.de {reverse_proxy xxx_assist_server:8000 {
+		header_up X-Forwarded-Proto {scheme}        
+		header_up X-Forwarded-Host {host}        
+		header_up X-Forwarded-Port {port}        
+		header_up X-Real-IP {remote_host}        
+		header_up Host {host}    }    
+		header {        
+		Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server    
+		} tls 	{# DNS-01 Challenge        
+				dns cloudflare {env.CLOUDFLARE_API_TOKEN}        
+				# optional: propagation_timeout 5m        
+				# optional: resolvers 1.1.1.1 8.8.8.8
+				}
+		}
+```
+
+**Wichtig:** in der Konfigurationsdatei des Caddy-Server muss das Plugin "caddy-dns" eingebunden werden, sonst wird "dns cloudflare" nicht gefunden.
+
+Beispiel Eigenes Zertifikat (PEM + Key):
+
+Wenn ein Zertifikat existiert (z. B. von eurer Firmen‑PKI, oder manuell erzeugt), wird es direkt eingebunden:
+
+```
+texttest.server.de {reverse_proxy xxx_assist_server:8000 header {
+	Strict-Transport-Security "max-age=31536000; includeSubDomains" -Server}    
+	# Zertifikat + Private Key (PEM)    
+	tls /etc/caddy/certs/test.server.de.fullchain.pem /etc/caddy/certs/test.server.de.key
+	}
+```
+
+**Wichtig:** Die Zertifikatskette muss vollständig sein(typisch “fullchain”) und die SANs (Subject Alternative Names) müssen zum Hostnamen passen.
+
+===== Alternative ohne öffentlichen DNS:
+
+- Verwendung eigener TLS-Zertifikate (z. B. von interner CA)
+- Zugriff nur über IP-Adresse: `http://<server-ip>:8000` (nur für Test/Entwicklung empfohlen)
+
+**Aufgabe des Kunden:** 
+
+- Firewall-Freigabe für Ports 80 und 443 (Produktion) oder 8000 (Test)
+- DNS-Konfiguration: A-Record für den gewünschten FQDN (z. B. `xxx-assist.ihrefirma.de`) auf Server-IP
+- Bereitstellung des FQDN für die Caddyfile-Konfiguration
+- Optional: Eigene TLS-Zertifikate, falls Let's Encrypt nicht verwendet werden soll
