@@ -1,5 +1,13 @@
 
-=== RAG 
+===  Datenbank und Storage
+
+Datenhaltung:
+
+* SQLite: Benutzerdaten, Metadaten, Logs
+* SHARED_FOLDER: Hochgeladene Dokumente, Konfigurationsdateien und Mount zum Docker
+* ChromaDB: Embeddings für RAG
+
+*Alle Daten liegen auf dem Kundenserver.*
 
 Das RAG (Retrieval-Augmented Generation) bietet die Möglichkeit zur Erweiterung der Informationsquellen im
 ifeval::[{cgs-assist} == 1]
@@ -14,12 +22,12 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 
-* integriertes DMS
+* SHARED_FOLDER
 * Sharepoint Anbindung über die Microsoft Entra ID
 
 ifeval::[{big-output} > 0]
 
-include::chapter2-4-1-rag-dms.adoc[]
+include::chapter2-4-1-rag-sharedfolder.adoc[]
 
 include::chapter2-4-1-rag-sharepoint.adoc[]
 
