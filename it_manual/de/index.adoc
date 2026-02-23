@@ -49,19 +49,19 @@ include::chapter/chapter4-components.adoc[]
 include::chapter/chapter2-4-rag.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter2-4-1-rag-sharedfolder.adoc[]
+include::chapter/chapter2-4-1-rag-sharedfolder.adoc[]
 
-include::chapter2-4-1-rag-sharepoint.adoc[]
+include::chapter/chapter2-4-1-rag-sharepoint.adoc[]
 endif::[]
 
 include::chapter/chapter2-5-auth.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter2-5-2-auth-openid.adoc[]
+include::chapter/chapter2-5-2-auth-openid.adoc[]
 
-include::chapter2-5-1-auth-saml.adoc[]
+include::chapter/chapter2-5-1-auth-saml.adoc[]
 
-include::chapter2-5-3-auth-pwd.adoc[]
+include::chapter/chapter2-5-3-auth-pwd.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
