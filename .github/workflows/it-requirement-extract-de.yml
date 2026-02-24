@@ -125,7 +125,8 @@ jobs:
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=it_manual/themes/reference.docx  \
+            --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=it_manual/themes/reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
        
       - name: Upload ${{ env.FILEPATH }} artifact
