@@ -1,4 +1,4 @@
-name: Extract DE IT_REQUIREMENTS adoc to PDF & DOCX
+name: ARC DE IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
