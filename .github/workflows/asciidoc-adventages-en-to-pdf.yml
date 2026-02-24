@@ -1,4 +1,4 @@
-name: Asciidoctor Build Advantages en to html, pdf, docx
+name: Build Advantages en to html, pdf, docx
 
 on:
   workflow_dispatch:
