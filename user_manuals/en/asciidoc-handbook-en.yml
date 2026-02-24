@@ -1,5 +1,5 @@
 
-name: Asciidoctor Build User-Handbook en to html, pdf, docx
+name: Build User-Handbook en to html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ on:
       version:
         description: 'Asciidoctor PDF Version'
         required: true
-        default: '1.3.0'
+        default: '1.4.0'
         type: string
 
   
@@ -93,7 +93,7 @@ jobs:
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
             -a imagesdir=images  \
-            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
+            -o ${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -110,14 +110,14 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=user_manuals/themes \
-           -o ${{ env.FILENAME }}Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
+           -o ${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Build DOCX with Pandoc
         run: |
-          pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH}}/metadata.yml \
             --resource-path=${{ env.FILEPATH}}  \
-            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
