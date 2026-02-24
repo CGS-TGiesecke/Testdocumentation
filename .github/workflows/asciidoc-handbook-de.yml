@@ -1,6 +1,6 @@
 
 
-name: Asciidoctor Build User-Handbook de to html, pdf, docx
+name: Build User-Handbook de to html, pdf, docx
 
 on:
   workflow_dispatch:
