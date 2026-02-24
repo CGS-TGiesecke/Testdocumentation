@@ -33,7 +33,7 @@ on:
       version:
         description: 'Asciidoctor PDF Version'
         required: true
-        default: '1.3.0'
+        default: '1.4.0'
         type: string
 
   
@@ -125,6 +125,8 @@ jobs:
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
+            --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=${{ env.FILEPATH }}/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
