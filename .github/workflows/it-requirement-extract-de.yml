@@ -136,18 +136,18 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
 
       - name: Generate Version Number
-       id: version
-       run: |
-        TAG=$(git describe --tags --abbrev=0)
-        COMMITS=$(git rev-list ${TAG}..HEAD --count)
-        SHA=$(git rev-parse --short HEAD)
-        if [ "$COMMITS" = "0" ]; then
-         VERSION="$TAG"
-        else
-         VERSION="${TAG}+${COMMITS}-${SHA}"
-        fi
-         echo "VERSION=$VERSION" >> $GITHUB_ENV
-    shell: bash
+        id: version
+        run: |
+         TAG=$(git describe --tags --abbrev=0)
+         COMMITS=$(git rev-list ${TAG}..HEAD --count)
+         SHA=$(git rev-parse --short HEAD)
+         if [ "$COMMITS" = "0" ]; then
+          VERSION="$TAG"
+         else
+          VERSION="${TAG}+${COMMITS}-${SHA}"
+         fi
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+     shell: bash
 
            
  
