@@ -116,11 +116,8 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=it_manual/themes \
-           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/it-req-export.adoc
-
-      - name: Zeige Verzeichnisstruktur und alle reference.docx
-        run: find . -name "style-reference.docx"
-          
+           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/${{ env.FILENAME }}.adoc
+      
       - name: Build DOCX with Pandoc (mit style-reference.docx)
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
