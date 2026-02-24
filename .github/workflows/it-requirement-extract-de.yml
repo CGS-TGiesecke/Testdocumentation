@@ -142,4 +142,6 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
             ${{ env.FILEPATH }}/*.docx
+            *.docx
+            it_manual/*.docx
  
