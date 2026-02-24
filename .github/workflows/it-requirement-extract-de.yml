@@ -36,7 +36,7 @@ on:
         type: string
         
 env:
-  FILENAME: 'it-requirement-extract'
+  FILENAME: 'it-req-export'
   FILEPATH: 'it_manual/de'
 
 jobs:
