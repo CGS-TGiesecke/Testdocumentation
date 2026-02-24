@@ -119,20 +119,16 @@ jobs:
            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/it-req-export.adoc
 
       - name: Zeige Verzeichnisstruktur und alle reference.docx
-        run: find . -name "reference.docx"
+        run: find . -name "style-reference.docx"
           
-      - name: Build DOCX with Pandoc (mit reference.docx)
+      - name: Build DOCX with Pandoc (mit style-reference.docx)
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=${{ env.FILEPATH }}/reference.docx \
+            --reference-doc=${{ env.FILEPATH }}/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
      
-      - name: export reference.docx
-        run: |
-          pandoc --print-default-data-file reference.docx > reference100.docx 
-       
       - name: Upload ${{ env.FILEPATH }} artifact
         uses: actions/upload-artifact@v4
         with:
@@ -141,7 +137,5 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
-            ${{ env.FILEPATH }}/*.docx
-            *.docx
-            it_manual/*.docx
+           
  
