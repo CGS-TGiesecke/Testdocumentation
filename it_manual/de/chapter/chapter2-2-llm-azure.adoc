@@ -15,9 +15,7 @@
 - Ausreichende Berechtigungen zum Erstellen von Ressourcen
 
 ifeval::[{big-output} == 2]
-
 include::chapter2-2-llm-azure-o.adoc[]
-
 endif::[]
 
 *Token-Rate-Limits dimensionieren*

@@ -8,9 +8,9 @@
 |Can we use our own security tools (VPN, Proxy, IDS/IPS)?| Yes, existing customer security mechanisms are generally integrated. Early coordination on firewall/proxy rules and possible SSL inspection is important to ensure functionality (e.g., connection to external LLM APIs or container registry).
 |Who is responsible for ongoing operations?| This depends on the operating model. With SaaS/Managed Service, technical operation is mainly by {author}; with on-prem/customer operation, the customer is responsible for infrastructure, OS, Docker/Kubernetes; {author} supports with application updates and configuration. See responsibility overview in the IT Requirements.
 |How long does a standard delivery take?|  For a typical pilot (PoC), plan for about 2–6 weeks if infrastructure is available and approvals proceed quickly. Transition to production depends largely on the customer’s internal processes (change management, security reviews).
-|How is the solution deployed?|Using a Docker Compose script on a Linux server.
+|How is the solution deployed?|Using a Docker script on a Linux server.
 |Is special Azure integration necessary?|No. Only API key and endpoint are required.
-|Is a VM strictly required?|No. Any Linux server with Docker Compose is suitable.
+|Is a VM strictly required?|No. Any Linux server with Docker is suitable.
 |Does the solution require a permanent internet connection? | Cloud providers (Azure/AWS): Yes 
 |     |Local models: Only for installation
 |Is an LLM included?| Customer must provide their own LLM provider (Azure OpenAI, AWS Bedrock, or local model).

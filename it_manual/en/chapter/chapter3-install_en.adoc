@@ -6,7 +6,7 @@ Deployment of {application} is carried out in the following steps:
 
 1. Prerequisites
 
-- *Docker* and *Docker Compose* are installed.
+- *Docker* and *Docker* are installed.
 - The files ``docker-compose.yml`` and ``.env`` are present in the working directory.
 
 2. Login to our DockerHub repository

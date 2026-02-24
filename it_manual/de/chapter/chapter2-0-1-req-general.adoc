@@ -4,9 +4,9 @@
 ==== Infrastruktur (VM oder Server)
 
 Die Lösung wird auf einem *Linux-basierten Server* bereitgestellt (lokale VM oder Cloud-VM). 
-Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit Docker Compose ist geeignet.
+Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit Docker ist geeignet.
 
-*Wichtig:* Eine VM ist *nicht zwingend erforderlich*. Die Lösung kann auf jedem Linux-Server mit Docker Compose betrieben werden.
+*Wichtig:* Eine VM ist *nicht zwingend erforderlich*. Die Lösung kann auf jedem Linux-Server mit Docker betrieben werden.
 
 ==== Betriebssystem
 
@@ -15,14 +15,13 @@ Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit
 
 ==== Docker-Umgebung
 
-Die Bereitstellung erfolgt über *Docker Compose*.
+Die Bereitstellung erfolgt über *Docker*.
 
 *Erforderliche Versionen:*
 
 * *Docker Engine:* Version `>` 20.x
-* *Docker Compose:* Version `>` 1.29 oder Compose V2
 
-*Installation:* Der Kunde muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
+*Installation:* Der Kunde muss Docker auf dem Server installieren und konfigurieren.
 
 ==== Gemeinsames Verzeichnis (SHARED_FOLDER)
 

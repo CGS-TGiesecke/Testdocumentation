@@ -3,9 +3,9 @@
 ==== Infrastructure (VM or Server)
 
 The solution is deployed on a *Linux-based server* (local VM or cloud VM).
-*No special cloud integration is required* – any Linux server with Docker Compose is suitable.
+*No special cloud integration is required* – any Linux server with Docker is suitable.
 
-*Important:* A VM is *not strictly required*. The solution can be operated on any Linux server with Docker Compose.
+*Important:* A VM is *not strictly required*. The solution can be operated on any Linux server with Docker.
 
 ==== Operating System
 
@@ -21,7 +21,7 @@ Deployment is performed via *Docker Compose*.
 * *Docker Engine:* Version `>` 20.x
 * *Docker Compose:* Version `>` 1.29 or Compose V2
 
-*Installation:* The customer must install and configure Docker and Docker Compose on the server.
+*Installation:* The customer must install and configure Docker on the server.
 
 ==== Shared Directory (SHARED_FOLDER)
 

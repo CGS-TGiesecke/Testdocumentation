@@ -10,7 +10,7 @@ endif::[]
 *Kunde:*
 
 - Alle enthaltenen Komponenten liegen in der Verantwortlichkeit des Kunden.
-- Er stellt die VM oder den Server bereit und muss Docker und Docker Compose auf dem Server installieren und konfigurieren.
+- Er stellt die VM oder den Server bereit und muss Docker auf dem Server installieren und konfigurieren.
 - Er stellt ein Verzeichnis (SHARED_FOLDER) mit ausreichenden Schreib-/Leserechten für die Docker-Container bereit.
 - Er stellt den LLM Provider bereit.
 - Er konfiguriert die Proxy-Anbindung (TLS/HTTPS)
@@ -21,7 +21,7 @@ endif::[]
 
 *{application}*
 
-Wir stellen die Anwendung in einem Docker Image bereit. Darin enthalten und über Docker Compose 
+Wir stellen die Anwendung in einem Docker Image bereit. Darin enthalten und über Docker 
 installiert sind die einzelnen Container ({application} Backend, LLM API, RAG API, Caddy Proxy, Redis, Celery-Worker, Kundenspezifische MCP Server API)
 
 Wir liefern

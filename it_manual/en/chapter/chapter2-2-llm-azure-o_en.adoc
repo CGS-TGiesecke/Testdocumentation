@@ -23,8 +23,7 @@
    - Navigate to "Deployments"
    - Click "+ Create new deployment"
 3. **Recommended models:**
-   - **Main model:** `gpt-4o` 
-   - **Optional:** `gpt-5` or higher 
+   - **Main model:** `gpt-5.1` or higher 
 
 ====== Step 3: Get API Credentials
 
@@ -41,6 +40,6 @@
 Endpoint: https://xxx-assist-openai-prod.openai.azure.com/
 API Key: 1234567890abcdef...
 Region: westeurope
-Deployment Name: gpt-4o
+Deployment Name: gpt-5.1
 ```
 

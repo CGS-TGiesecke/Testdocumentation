@@ -42,9 +42,9 @@ endif::[]
 
 *Vom Kunden zu sichern*:
 
-* Datenbank
-* SHARED_FOLDER
-* Konfigurationsdateien
+* SHARED_FOLDER enthält
+** Datenbank
+** Konfigurationsdateien
 
 === Patch-Management
 * Anwendung: {author} stellt Updates bereit → Kunde spielt ein

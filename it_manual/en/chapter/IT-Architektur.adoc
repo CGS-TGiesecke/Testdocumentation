@@ -10,7 +10,7 @@ endif::[]
 *Customer:*
 
 - All included components are the responsibility of the customer.
-- The customer provides the VM or server and must install and configure Docker and Docker Compose on the server.
+- The customer provides the VM or server and must install and configure Docker on the server.
 - The customer provides a directory (SHARED_FOLDER) with sufficient read/write permissions for the Docker containers.
 - The customer provides the LLM provider.
 - The customer configures the proxy connection (TLS/HTTPS).

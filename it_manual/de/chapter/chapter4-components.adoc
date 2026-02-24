@@ -10,4 +10,4 @@ Die Lösung besteht aus folgenden Komponenten:
 * *Vector-Store:* ChromaDB für RAG
 * *Kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds (optional)
 
-*Deployment:* Über Docker Compose auf Linux-Server.
+*Deployment:* Über Docker auf Linux-Server.

@@ -2,13 +2,13 @@
 
 *Erforderlich für:*
 
-* Download der Docker-Images (während der Installation)
+* Download des Docker-Images (während der Installation)
 * Verbindung zum LLM-Provider API (Azure OpenAI, AWS Bedrock - falls Cloud-Provider gewählt wird)
 
 *Wichtig:* 
 
 * *Bei Cloud-LLM-Providern (Azure OpenAI, AWS Bedrock):* Dauerhafte Internetverbindung erforderlich
-* *Bei lokalen Modellen:* Nur für Installation erforderlich (Download der Docker-Images)
+* *Bei lokalen Modellen:* Nur für Installation erforderlich (Download des Docker-Image)
 
 *Proxy-Unterstützung:* Die Lösung unterstützt den Betrieb hinter einem Proxy. Proxy-Konfiguration kann in den Umgebungsvariablen hinterlegt werden.
 

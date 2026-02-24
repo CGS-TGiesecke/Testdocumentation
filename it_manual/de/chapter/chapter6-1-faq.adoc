@@ -1,4 +1,4 @@
-==== FAQ
+=== FAQ
  
 [cols="150px,2*", options="header"]
 |===
@@ -8,9 +8,9 @@
 |Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. 
 |Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei {author}, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; {author} unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den IT-Requirements.
 |Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.
-|Wie wird die Lösung bereitgestellt?|Über ein Docker Compose-Skript auf einem Linux-Server.
+|Wie wird die Lösung bereitgestellt?|Über ein Docker Skript auf einem Linux-Server.
 |Ist eine spezielle Azure-Integration notwendig?|Nein. Nur API-Key und Endpoint werden benötigt.
-|Ist eine VM zwingend erforderlich?|Nein. Jeder Linux-Server mit Docker Compose ist geeignet.
+|Ist eine VM zwingend erforderlich?|Nein. Jeder Linux-Server mit Docker ist geeignet.
 |Benötigt die Lösung eine dauerhafte Internetverbindung? | Cloud-Provider (Azure/AWS): Ja 
 |	  |Lokale Modelle: Nur für Installation
 |Wird ein LLM mitgeliefert?| Kunde muss selbst einen LLM-Provider bereitstellen (Azure OpenAI, AWS Bedrock oder lokales Modell).

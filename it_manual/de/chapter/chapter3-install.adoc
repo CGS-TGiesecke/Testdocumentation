@@ -6,7 +6,7 @@ Das Deployment von {application} erfolgt in folgenden Schritten:
 
 1. Voraussetzungen
 
-- *Docker* und *Docker Compose* sind installiert.
+- *Docker* und *Docker* sind installiert.
 - Die Dateien ``docker-compose.yml`` und ``.env`` befinden sich im Arbeitsverzeichnis.
 
 2. Login in unser DockerHub-Repository
@@ -20,7 +20,7 @@ Das Deployment von {application} erfolgt in folgenden Schritten:
 4. Starten der Anwendung 
 
 - *.env-Datei prüfen:* Ist der Pfad zu ``SHARED_FOLDER'' korrekt gesetzt?
-- Anwendung starten: ``docker compose up -d``
+- Anwendung starten: ``docker up -d``
 
 5. Abschluss
 - Führen Sie nach Abschluss der Installation einen Neustart des Webservers durch.

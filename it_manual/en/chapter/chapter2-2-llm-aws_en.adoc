@@ -1,5 +1,5 @@
 
-===== Option B: AWS Bedrock (Equally Supported)
+===== AWS Bedrock (Equally Supported)
 
 **AWS Bedrock is a full-featured alternative to Azure OpenAI.**
 

@@ -2,7 +2,7 @@
 
 *Required for:*
 
-* Downloading Docker images (during installation)
+* Downloading Docker image (during installation)
 * Connecting to the LLM provider API (Azure OpenAI, AWS Bedrock – if a cloud provider is selected)
 
 *Important:*

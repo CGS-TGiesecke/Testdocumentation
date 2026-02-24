@@ -1,5 +1,5 @@
 
-==== Option C: Local Models (for Highest Data Protection Requirements)
+==== Local Models (for Highest Data Protection Requirements)
 
 **For customers who do not want any cloud connection.**
 

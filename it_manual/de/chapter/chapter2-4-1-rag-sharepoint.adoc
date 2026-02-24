@@ -17,13 +17,9 @@ Diese Daten entsprechen denen in der Einrichtung "OpenID Connect Authentifizieru
 Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
 
 ifeval::[{big-output} == 2]
-
 include::chapter2-4-1-rag-sharepoint-o1.adoc[]
-
 endif::[]
 
 ifeval::[{big-output} == 2]
-
 include::chapter2-4-1-rag-sharepoint-o2.adoc[]
-
 endif::[]
