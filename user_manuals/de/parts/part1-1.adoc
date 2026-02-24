@@ -71,19 +71,26 @@ include::part1-2-audit-execution.adoc[]
 ====  Navigationsbereich "Dokumente" 
 
 Hier werden alle verfügbaren und durchsuchbaren Dokumente angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
-Dabei kann die Dokumententabelle nach Dokumenttyp (pdf, excel etc.), nach Quelle (bspw. Netzwerklaufwerk oder Sharepoint) oder Inhalt gefiltert werden.
+Dabei kann die Dokumententabelle nach Dokumenttyp (pdf, excel etc.), nach Quelle (bspw. Dokumentname) oder Inhalt gefiltert werden.
 Da alle Dokumente mit Schlagwörtern verknüpft sind, kann man in Feld Inhalt nach beliebigen Schlagwörtern suchen, um die relevanten Dokumente zu finden.
 
 image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen", width=400]
 
 In der Baumnavigation werden nur die Ordner gelistet, auf die der Anwender berechtigt ist. 
-Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt in der Administration
+Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt bei der Erstellung.
 
 image::../images/Abbildung-33.jpg[Navigationsbereich - Dokumente - Baumnavigation, title="Navigationsbereich - Dokumente - Baumnavigation", width=150]
 
 Die Dokumente können über einen Button heruntergeladen werden und manuell die Ansicht aktualisiert werden. Über eine Hochlade-Funktion können neue Dokumente ins RAG hochgeladen, 
 über den Refresh Button das RAG aktualisiert oder einzelne Dokumente gelöscht werden. Da es bei sehr vielen Dokumenten zu Zeitverzögerungen kommen kann,
  wurde ein Lazy-Loading implementiert. Dadurch können über das Reload Icon die einzelnen Embeddings, also Teildokumente, manuel nachgeladen werden. 
+ 
+Beim Hochladen von Dokumenten muss ein Zeilordner ausgewählt oder mit Eingabe eines Bezeichners ein neuer Ordner erstellt werden. Beim Erstellen eines neuen Ordners wird der Anwender 
+über einen roten Text darauf hingewiesen, das der neue Ordner noch keine Berechtigungen besitzt. Diese müssen in der Administration vergeben werden, damit der neue Ordner inklusive
+Dokumente sichtbar ist.
+
+image::../images/Abbildung-50.jpg[Navigationsbereich - Dokumente - Neuer Ordner, title="Navigationsbereich - Dokumente - Neuer Ordner", width=400]
+ 
 Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau. Die Filterresultate aktualisieren 
 sich bereits während der Eingabe. Über Icon können Dokumente und somit die Inhalte des RAG bearbeitet werden werden.
 
