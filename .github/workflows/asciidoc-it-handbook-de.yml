@@ -1,6 +1,6 @@
 
 
-name: Asciidoctor Build IT-Handbook de html, pdf, docx
+name: Build IT-Handbook de html, pdf, docx
 
 on:
   workflow_dispatch:
