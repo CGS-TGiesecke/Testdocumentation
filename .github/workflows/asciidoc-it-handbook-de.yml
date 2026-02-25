@@ -128,32 +128,7 @@ jobs:
             --resource-path=${{ env.FILEPATH }}  \
             --reference-doc=it_manual/themes/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-
-      - name: Build adoc for pandoc über asciidoc
-        run: |
-          asciidoctor \
-           -D ${{ env.FILEPATH }} \
-           -a product_title="${{ env.PRODUCT_TITLE }}" \
-           -a revnumber="${{ env.REVNUMBER }}" \
-           -a application="${{ env.APPLICATION }}" \
-           -a author="${{ env.AUTHOR }}" \
-           -a big-output="${{ env.BIG_OUTPUT }}" \
-           -a company="${{ env.COMPANY }}" \
-           -a date="${{ env.DATE }}" \
-           -a cgs-assist="${{ env.CGS-ASSIST }}" \
-           -a arc-assist="${{ env.ARC-ASSIST }}" \
-           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=it_manual/themes \
-           -o bridge.adoc ${{ env.FILEPATH }}/index.adoc
-
-      - name: Build docx with pandoc from asciidoc
-        run: |
-          pandoc bridge.adoc \
-            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=it_manual/themes/style-reference.docx \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-            
+   
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
