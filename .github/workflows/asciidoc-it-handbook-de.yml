@@ -1,5 +1,6 @@
 
-name: Build IT-Handbook de html, pdf, docx
+
+name: Asciidoctor Build IT-Handbook de html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -120,13 +121,20 @@ jobs:
            -a pdf-themesdir=it_manual/themes \
            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      - name: Build DOCX with Pandoc
+      - name: Build DOCX with Pandoc von html
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=it_manual/themes/style-reference.docx \
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            
+      - name: Build DOCX with Pandoc von adoc
+        run: |
+          pandoc ${{ env.FILEPATH }}/index.adoc \
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=${{ env.FILEPATH }}/style-reference.docx \
+            --reference-doc=it_manual/themes/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
