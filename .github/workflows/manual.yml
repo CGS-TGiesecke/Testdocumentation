@@ -17,7 +17,9 @@ on:
         required: true
         # The data type of the input
         type: string
-
+env:
+  VERSION
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -29,9 +31,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
-
-    - name: Version wird angezeigt
       run: |
+        echo "Hello ${{ inputs.name }}"
         echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
         echo "Hello ${{ env.VERSION }}"
+ 
