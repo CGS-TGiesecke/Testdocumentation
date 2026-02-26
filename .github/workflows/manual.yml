@@ -32,5 +32,5 @@ jobs:
       run: |
         echo "Hello ${{ inputs.name }}"
         echo "Full ref: $GITHUB_REF"
-        echo "Tag name: $GITHUB_REF_NAME"
+        echo "Tag name: ${{ env.GITHUB_REF#refs/tags/ }}"
  
