@@ -125,6 +125,11 @@ jobs:
             --resource-path=${{ env.FILEPATH }}  \
             --reference-doc=it_manual/themes/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+
+      - name: Send greeting
+        run: 
+          echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+          echo "Hello ${{ env.VERSION }}"
      
       - name: Upload ${{ env.FILEPATH }} artifact
         uses: actions/upload-artifact@v4
