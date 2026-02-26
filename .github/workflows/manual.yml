@@ -30,3 +30,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+
+    - name: Version wird angezeigt
+      run: |
+        echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+        echo "Hello ${{ env.VERSION }}"
