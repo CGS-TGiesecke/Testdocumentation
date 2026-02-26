@@ -127,7 +127,7 @@ jobs:
             --from=html \
             --to=docx \
             --standalone \
-            --reference-doc=it_manual/themes/style-reference.docx \
+            --reference-doc=../export-styles/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
