@@ -1,7 +1,7 @@
 
 ==== Systemaufforderung
 
-Hier sind systemseitig textbasierte Anweisungen oder Fragen als Aufforderungen (prompts) hinterlegt und beschrieben.
+Auf dieser Seite sind systemseitig textbasierte Anweisungen oder Fragen als Aufforderungen (prompts) hinterlegt und beschrieben.
 Diese Prompts werden die einem Sprachmodell gegeben, um dessen Antwort zu steuern oder bestimmte Ausgaben zu erzeugen. 
 Prompts bestehen aus wenigen Wörtern, einem Satz oder auch mehreren Absätzen, je nachdem, wie detailliert 
 die gewünschte Antwort sein soll. Die Qualität und Klarheit des Prompts beeinflussen, wie relevant und nützlich die Antwort ist.

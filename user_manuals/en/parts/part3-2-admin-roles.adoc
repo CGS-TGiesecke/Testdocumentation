@@ -1,7 +1,7 @@
 
 ==== Role Management
 
-Here, roles can be created and edited. 
+On this site, roles can be created and edited. 
 
 image::../images/Abbildung-18.jpg[Administration - Role Management, title="Administration - Role Management", width=400]
 

@@ -1,7 +1,7 @@
 
 ==== LLMs und Einbettungsmodelle 
 
-Hier werden alle im System hinterlegten LLM Provider gelistet und verwaltet. LLM-Provider werden benötigt, 
+Auf dieser Seite werden alle im System hinterlegten LLM Provider gelistet und verwaltet. LLM-Provider werden benötigt, 
 um Zugang zu Large Language Models (LLMs) bereitzustellen. Diese Anbieter betreiben und warten die notwendige Infrastruktur, 
 um leistungsstarke KI-Sprachmodelle auszuführen.
 

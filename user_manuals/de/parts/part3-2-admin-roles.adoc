@@ -1,7 +1,7 @@
 
 ==== Rollenverwaltung
 
-Hier können Rollen angelegt und bearbeitet werden. 
+Auf dieser Seite werden Rollen angelegt und bearbeitet. 
 
 image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung", width=500]
 

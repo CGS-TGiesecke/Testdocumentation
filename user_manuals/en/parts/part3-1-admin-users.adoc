@@ -9,7 +9,7 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 ==== User Management
 
-Here, users can be created and edited. 
+On this site, users can be created and edited. 
 
 image::../images/Abbildung-16.jpg[Administration - User Management, title="Administration - User Management", width=400]
 

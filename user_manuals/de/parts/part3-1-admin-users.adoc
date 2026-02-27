@@ -1,15 +1,14 @@
 === Assist Administration
 
 Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können hier Benutzer und Rollen, 
-die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), LIzenzen und die systemseitig 
+die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), Lizenzen und die systemseitig 
 hinterlegten Anwendungsfälle verwaltet werden.
 Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemseitige, festgelegte Rolle.
 
 image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
 
 ==== Benutzerverwaltung
-
-Hier können Benutzer angelegt und bearbeitet werden. 
+Auf dieser Seiten werden Benutzer angelegt und bearbeitet. 
 
 image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 
