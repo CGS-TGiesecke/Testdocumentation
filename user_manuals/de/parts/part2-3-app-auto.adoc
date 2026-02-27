@@ -1,10 +1,28 @@
 
 ==== Navigationsbereich "Automatisierung"
 
-Hier werden, bei vorhandener Berechtigung, alle automatisierten KI Agents gelistet und verwaltet. 
-Diese Agents sind in der Administration festgelegt Anwendungsfälle die zur Automatisierung freigegeben wurden.
+Hier werden, bei vorhandener Berechtigung, alle automatisierten Agenten-Use Case gelistet und verwaltet. 
+Diese Agenten-Use Cases sind in der Administration festgelegte Anwendungsfälle die zur Automatisierung freigegeben wurden.
 Die markierte Nummer (rot) zeigt die summierte Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. 
-Die Anzeige der Ergebnisse(rot) wird neu berechnet, wenn die Lesebestätigung von einem User in einer der Rubriken gesetzt wird.
+Die Anzeige der Ergebnisse (rot) wird neu berechnet, wenn die Lesebestätigung von einem User in einer der Rubriken gesetzt wird.
+
+Dabei kann für jeden Agenten-Use Case festgelegt werden, ob die Aufgaben zu spezifischen Zeiten oder periodisch ausgeführt werden. 
+Beide Varianten können hier ausführlich konfiguriert werden. Zudem kann hier überprüft werden, ob die Agenten-Use Cases ihre Aufgaben erfolgreich 
+erfüllt haben und durchgelaufen sind. 
+
+Im unteren Bereich Ausführungsprotokolle werden alle Programmläufe gelistet. Die Ergebnisse können hier in ausführlichen Detailansichten eingesehen werden..
+
+image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung - Feeds", width=400]
+
+Zum Öffnen eines Agenten-Use Case wird auf das Symbol mit Namen geklickt.
+Die Lesebestätigung kann verschieden gesetzt werden. Wird die Lesebestätigung von einem User gesetzt, wird die Anzeige der neuen Abfragen (rot) 
+neu berechnet. Blauer Schrift kennzeichnet eine ungelesene Abfrage, Schwarz kennzeichnet eine gelesene Abfrage. 
+Jeder Leser kann den Eintrag als gelesen markieren oder ungelesen markieren. Zusätzlich kann der Benutzer mit dem Button "Ich habe es auch gelesen" 
+einen bereits von jemend als "gelesen" markierten Eintrag mit "von mir gelesen" kennzeichnen. 
+Die Lesemarkierung kann in der Übersicht erfolgen oder im Detaildialog.
+
+image::../images/Abbildung-43.jpg[Navigationsbereich - Automatisierung - Zeitpläne - Details, title="Navigationsbereich - Automatisierung - Feeds - Zeitpläne - Details", width=400]
+
 
 
 

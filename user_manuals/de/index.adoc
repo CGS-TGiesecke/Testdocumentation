@@ -25,10 +25,6 @@ include::parts/part2-2-app-useCases.adoc[]
 
 include::parts/part2-3-app-auto.adoc[]
 
-include::parts/part2-3-1-app-auto-audit-methodology.adoc[]
-
-include::parts/part2-3-2-app-auto-audit-execution.adoc[]
-
 include::parts/part2-4-app-docs.adoc[]
 
 include::parts/part2-5-app-portal.adoc[]
