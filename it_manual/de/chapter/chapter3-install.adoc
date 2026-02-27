@@ -6,6 +6,7 @@
 Es wird ein *Konfigurationspaket* als ZIP-Datei zur Verfügung gestellt, die den Grundaufbau der Konfiguration des {application} enthält.
 Diese enthält die folgende Dateistruktur:
 
+```
 |_ `docker-compose.yaml`
 |_ `.env.example`
 |_ configuration/
@@ -13,6 +14,7 @@ Diese enthält die folgende Dateistruktur:
   |_ init/
     |_ `init_config.yaml`
     |_ `authorization_roles.yaml`
+```
 
 Optional ist hier auch ein `Caddyfile.example` oder ein vorkonfiguriertes `Caddyfile` enthalten, das die Konfiguration des Reverse Proxy enthält.
 
