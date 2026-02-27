@@ -1,0 +1,25 @@
+
+==== SAML Authentication with Microsoft Entra ID
+
+SAML authentication with Microsoft Entra ID is always required when modern single sign-on functionality
+and centralized identity management are needed for applications that rely on SAML (Security Assertion Markup Language) instead of OpenID Connect—
+optimally complementing a company’s overall identity and security concept.
+SAML authentication with Microsoft Entra ID allows applications, especially legacy or specialized systems,
+to be centrally and securely integrated with Microsoft’s identity management.
+
+The necessary information for connecting {application} with the customer's SAML authentication is:
+
+* *Tenant ID:* The ID of the organization/tenant.
+* *Application ID (Client):* The client ID of the application.
+* *Secrets:* Access keys (can be time-limited)
+
+These must be stored in the `init_config.yaml` (see "Initial configuration of the application").
+This information corresponds to the details used in "Sharepoint integration via Microsoft Entra ID" or "OpenID Connect authentication with Microsoft Entra ID".
+
+If this information is *not* available, the customer must first register the application {application} in the Microsoft Entra Admin Center.
+
+ifeval::[{big-output} == 2]
+
+include::chapter2-5-1-auth-saml-o-en.adoc[]
+
+endif::[]

@@ -21,7 +21,7 @@ endif::[]
 
 *{application}*
 
-We provide the application as a Docker image. This includes, and is installed via Docker Compose, 
+We provide the application as a Docker image. This includes, and is installed via Docker, 
 the individual containers ({application} backend, LLM API, RAG API, Caddy proxy, Redis, Celery worker, customer-specific MCP server API).
 
 We deliver:

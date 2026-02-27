@@ -20,7 +20,7 @@
 
 include::chapter/intro.adoc[]
 
-include::chapter/chapter1.adoc[]
+include::chapter/chapter1-about.adoc[]
 
 include::chapter/chapter2-0-1-req-general.adoc[]
 
@@ -42,7 +42,7 @@ include::chapter/chapter2-2-llm-aws.adoc[]
 include::chapter/chapter2-2-llm-local.adoc[]
 endif::[]
 
-include::chapter/chapter2-3-hardware.adoc
+include::chapter/chapter2-3-hardware.adoc[]
 
 include::chapter/chapter4-components.adoc[]
 
@@ -62,6 +62,10 @@ include::chapter/chapter2-5-2-auth-openid.adoc[]
 include::chapter/chapter2-5-1-auth-saml.adoc[]
 
 include::chapter/chapter2-5-3-auth-pwd.adoc[]
+endif::[]
+
+ifeval::[{big-output} > 1]
+include::chapter/chapter4-monitoring.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]

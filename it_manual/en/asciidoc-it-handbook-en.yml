@@ -1,4 +1,4 @@
-name: Asciidoctor Build IT-Handbook en html, pdf, docx
+name: Build IT-Handbook en html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -32,7 +32,7 @@ on:
       version:
         description: 'Asciidoctor PDF Version'
         required: true
-        default: '1.3.0'
+        default: '1.4.0'
         type: string
 
   
@@ -122,6 +122,10 @@ jobs:
       - name: Build DOCX with Pandoc
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --from=html \
+            --to=docx \
+            --standalone \
+            --reference-doc=it_manual/themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx

@@ -17,4 +17,6 @@ Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrier
 Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
 In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 
-===== Berechtigung "Sites.Selected" auf SharePoint Seite beschreiben
+===== Berechtigung "Sites.Selected" auf SharePoint 
+
+*!!! Hier muss noch eine konkrete Beschreibung erfolgen !!!*

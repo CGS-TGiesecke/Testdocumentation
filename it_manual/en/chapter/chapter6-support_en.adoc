@@ -29,9 +29,9 @@ ifeval::[{arc-assist} == 1]
 
 |===
 |Company         |{author}
-|Website         |?????
-|Support Email   |???????
-|Phone           |???????
+|Website         |
+|Support Email   |AI-Audit-Assist@ARC-Institute.com
+|Phone           |+49-2159-6945-904
 |===
 
 endif::[]

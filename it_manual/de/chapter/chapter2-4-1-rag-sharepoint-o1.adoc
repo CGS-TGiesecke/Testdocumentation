@@ -16,7 +16,8 @@ Melden Sie sich im Microsoft Entra ID Admin Center mit einem Konto an, das über
 
 * Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
-mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant - Ihre-Firma". 
+mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant - Ihre-Firma".
+ 
 *Hinweis*: Für {application} Sharepoint Anbindung ist die Einstellung nicht relevant.
 
 *Erstellen*

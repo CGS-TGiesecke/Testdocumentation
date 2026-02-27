@@ -5,12 +5,7 @@
 Dieses Handbuch dient als zentrale Dokumentation für die Installation, Konfiguration, den Betrieb, die Wartung sowie den Support der Applikation {application}.
 Es richtet sich an IT-Administratoren, Systembetreuer und technische Anwender, die für die Verwaltung und den sicheren Betrieb der Anwendung verantwortlich sind.
 
-Das Handbuch hat das Ziel, alle notwendigen Informationen strukturiert und nachvollziehbar bereitzustellen, um:
-
-- die ordnungsgemäße Inbetriebnahme und Konfiguration sicherzustellen,
-- einen störungsfreien und sicheren Betrieb der Applikation zu gewährleisten,
-- regelmäßig anfallende Wartungsaufgaben und Anpassungen fachgerecht durchzuführen,
-- in Fehler- und Notfallsituationen schnell und effizient reagieren zu können.
+Das Handbuch hat das Ziel, alle notwendigen Informationen strukturiert und nachvollziehbar bereitzustellen.
 
 Darüber hinaus unterstützt das Handbuch dabei, die Einhaltung interner und externer Vorgaben (z. B. Datenschutz, IT-Sicherheit) sicherzustellen 
 und stellt eine Basis zur Schulung von IT-Mitarbeitenden dar.
@@ -31,13 +26,10 @@ Der Geltungsbereich bezieht sich auf
 Ausgeschlossen sind benutzerspezifische Konfigurationen, individuelle Anpassungen im Rahmen von Sonderprojekten sowie Aspekte, die außerhalb des Verantwortungsbereichs 
 der internen IT liegen (z. B. durch externe Dienstleister betreute Systeme).
 
-Das Handbuch ist für alle internen IT-Mitarbeitenden sowie berechtigte externe Partner, die mit der Administration und 
-dem Support der Anwendung {application} betraut sind, verbindlich.
-
 ==== Zielgruppe
 
 Das vorliegende Handbuch richtet sich in erster Linie an IT-Administratoren, Systembetreuer und technische Mitarbeitende des Kunden, die für die Installation, Konfiguration, 
-den Betrieb, die Wartung und den Support der Applikation {application} erantwortlich sind.
+den Betrieb, die Wartung und den Support der Applikation {application} verantwortlich sind.
 
 Darüber hinaus dient es als Nachschlagewerk für
 
@@ -61,7 +53,3 @@ Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diese
 - LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
 - RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert
 - MCP : Model Context Protocol ist ein Open-Source-Standard zur Verbindung von KI-Anwendungen mit externen Systemen
-- IT-Sicherheitsrichtlinie: Interne Vorgaben zur Gewährleistung der Informationssicherheit
-- DSGVO: Datenschutz-Grundverordnung der Europäischen Union
-
-Sofern weitere spezifische Begriffe in späteren Kapiteln verwendet werden, sind diese jeweils in einem Glossar am Ende des Handbuchs erklärt.

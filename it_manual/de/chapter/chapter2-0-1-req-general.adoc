@@ -19,7 +19,7 @@ Die Bereitstellung erfolgt über *Docker*.
 
 *Erforderliche Versionen:*
 
-* *Docker Engine:* Version `>` 20.x
+* *Docker Engine:* Version `>` 2.x
 
 *Installation:* Der Kunde muss Docker auf dem Server installieren und konfigurieren.
 

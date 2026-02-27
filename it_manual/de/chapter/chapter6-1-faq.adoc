@@ -6,7 +6,7 @@
 |Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. 
 |Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. 
 |Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. 
-|Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei {author}, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; {author} unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den IT-Requirements.
+|Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei {author}, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; {author} unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den "RACI-Matrix".
 |Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.
 |Wie wird die Lösung bereitgestellt?|Über ein Docker Skript auf einem Linux-Server.
 |Ist eine spezielle Azure-Integration notwendig?|Nein. Nur API-Key und Endpoint werden benötigt.
@@ -23,10 +23,7 @@
 |Wie setze ich Azure OpenAI auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
 |Wie setze ich AWS Bedrock auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
 |Wo liegen die Daten?|Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analyse übertragen (nicht dauerhaft gespeichert).
-|Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (bei Cloud):
-|  	|Azure OpenAI: $100-500/Monat (50 Nutzer)
-|	  |AWS Bedrock: $80-400/Monat (50 Nutzer)
-|	  |Lokal: €0 API-Kosten, aber Hardware-Investment
+|Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (siehe "Kostenübersicht LLM-Provider").
 |Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
 |  	| über SAML-Authentifizierung mit Microsoft Entra ID
 |  	| über OpenID Authentifizierung mit Microsoft Entra ID
@@ -36,5 +33,5 @@
 |Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
 |Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
 Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
-|Kein ZUgriff auf angebundenes SharePoint.|Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
+|Kein Zugriff auf angebundenes SharePoint.|Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
 |===

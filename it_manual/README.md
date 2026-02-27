@@ -1,6 +1,9 @@
 **IT Handbook**
 
-contains it-handbook in assciidoc for build. 
+Contains it-handbook in assciidoc for build.
+
+It also includes a separate script for creating the IT requirements.
+
 The related action can start manually to build pdf, html, docx from assciidoc file.
 IT handbook here in German and English by selected script.
 

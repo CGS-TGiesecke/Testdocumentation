@@ -5,12 +5,7 @@
 This manual serves as the central documentation for the installation, configuration, operation, maintenance, and support of the {application} application.
 It is intended for IT administrators, system operators, and technical users who are responsible for managing and securely operating the application.
 
-The purpose of this manual is to provide all necessary information in a structured and comprehensible way in order to:
-
-- ensure proper commissioning and configuration,
-- guarantee smooth and secure operation of the application,
-- professionally carry out regular maintenance tasks and adjustments,
-- enable fast and efficient responses to errors and emergencies.
+The purpose of this manual is to provide all necessary information in a structured and comprehensible way.
 
 Additionally, the manual helps ensure compliance with internal and external requirements (e.g., data protection, IT security) and serves as a basis for training IT staff.
 
@@ -29,9 +24,6 @@ The scope includes
 
 User-specific configurations, individual customizations as part of special projects, and aspects outside the responsibility of internal IT
 (e.g., systems managed by external service providers) are excluded.
-
-The manual is binding for all internal IT staff as well as authorized external partners who are entrusted with the administration and
-support of the {application} application.
 
 ==== Target Audience
 
@@ -60,7 +52,4 @@ The following terms and abbreviations are central to this manual:
 - LLM: Large Language Models are language models for text generation
 - RAG: Retrieval-Augmented Generation is a software system that processes information from LLMs and generates answers
 - MCP: Model Context Protocol is an open-source standard for connecting AI applications with external systems
-- IT security policy: Internal guidelines to ensure information security
-- GDPR: General Data Protection Regulation of the European Union
 
-If additional specific terms are used in later chapters, they are explained in a glossary at the end of the manual.

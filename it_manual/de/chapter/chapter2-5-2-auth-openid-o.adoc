@@ -16,7 +16,7 @@ Melden Sie sich im Microsoft Entra ID Admin Center mit einem Konto an, das über
 
 * Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
-mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant - CGS mbH". 
+mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur ein Mandant". 
 * Redirect-URL: muss eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `init_config.yaml`
 ** Auswahl "Web"
 ** Eintrag "nur Unternehmen user" übernehmen

@@ -1,59 +1,95 @@
 === Installation und Konfiguration
 
+
+==== Erstkonfiguration der Anwendung
+
+Es wird ein *Konfigurationspaket* als ZIP-Datei zur Verfügung gestellt, die den Grundaufbau der Konfiguration des {application} enthält.
+Diese enthält die folgende Dateistruktur:
+
+|_ `docker-compose.yaml`
+|_ `.env.example`
+|_ configuration/
+  |_ `config.yaml`
+  |_ init/
+    |_ `init_config.yaml`
+    |_ `authorization_roles.yaml`
+
+Optional ist hier auch ein `Caddyfile.example` oder ein vorkonfiguriertes `Caddyfile` enthalten, das die Konfiguration des Reverse Proxy enthält.
+
+Es sind folgende Initialkonfigurationen vorzunehmen:
+
+- Erzeugung einer Datei `.env` auf Basis von `.env.example`
+- Gewählte Authentifizierung konfigurieren
+- (optional) RAG-Ordner konfigurieren
+- (optional) SharePoint-Anbindung konfigurieren
+- (optional) Reverse Proxy konfigurieren
+
+===== `env.` File
+
+Die folgenden Werte sind konfigurierbar
+
+[cols="1,2,2", options="header"]
+|===
+| Variable | Pflicht | Beschreibung | Beispielwert(e)
+
+| `SHARED_FOLDER`
+| Pflicht
+| Pfad für gemeinsames Verzeichnis
+| `/opt/cgs-assist/shared`
+
+| `LOG_LEVEL`
+| 
+| Log-Level der Applikation (Standardwert: `INFO`)
+| `ERROR | WARNING | INFO`
+
+| `BRAVE_API_KEY`
+| 
+| API-Schlüssel für die Anbindung der Brave-Websuche
+| 
+|===
+
 ==== Deployment-Anleitung (Schritt-für-Schritt)
 
 Das Deployment von {application} erfolgt in folgenden Schritten:
 
 1. Voraussetzungen
 
-- *Docker* und *Docker* sind installiert.
-- Die Dateien ``docker-compose.yml`` und ``.env`` befinden sich im Arbeitsverzeichnis.
+- *Docker* ist installiert.
+- Die Dateien aus dem *Konfigurationspaket* befinden sich im Arbeitsverzeichnis.
+- (optional) Eine Proxy-Konfiguration ist vorbereitet.
 
-2. Login in unser DockerHub-Repository
+2. Konfigurationsdaten
+
+- Ermittlung und Übernahme der erforderlichen Daten (SharePoint-Anbindung, Authentifizierung) in die `init_config.yaml` (siehe "Erstkonfiguration der Anwendung")
+
+3. Login in Docker Hub Repository
   
-- Nutzen Sie den bereitgestellten Read-Access-Token: ``docker login -u {author} -p [ACCESS_TOKEN]``
-
-3. Konfigurationsdaten
-
-- Ermittlung und Übernahme der erforderlichen Daten (SharePoint Anbindung, Anbindung Authentifizierung, Module) in die `init_config.yaml`(siehe "Erstkonfiguration der Anwendung")
+- Nutzen Sie das bereitgestellte Read-Access-Token: `docker login -u cgsmbh -p [ACCESS_TOKEN]`
 
 4. Starten der Anwendung 
 
-- *.env-Datei prüfen:* Ist der Pfad zu ``SHARED_FOLDER'' korrekt gesetzt?
-- Anwendung starten: ``docker up -d``
+- Anwendung starten: `docker compose up -d`
+- Health Check abwarten
 
 5. Abschluss
-- Führen Sie nach Abschluss der Installation einen Neustart des Webservers durch.
-- Testen Sie die Erreichbarkeit der Webapplikation im Browser.
-- Status prüfen
-- Logs prüfen
-- Health-Check
 
-==== Erstkonfiguration der Anwendung
-
-Nach erfolgter Installation sind folgende Initialkonfigurationen vorzunehmen:
-
-*Authentifizierung konfigurieren*
-
-- vom Kunden gewählte Authentifizierung konfigurieren/aktivieren in `init_config.yaml`
-
-*Module konfigurieren*
-
-- LLM API: Provider & Modelle konfigurieren in `init_config.yaml`
-- RAG API: Vector Store & Embeddings einrichten in `init_config.yaml`
-- Workflow Engine: Automationen einrichten
+- Testen Sie die Erreichbarkeit der Webapplikation im Browser
 
 
-==== Update-/Upgrade-Prozess
+==== Update-Prozess
 
-Der Update- und Upgrade-Prozess, durchgeführt vom Kunden gestaltet sich wie folgt:
+Der Update-Prozess, durchgeführt vom Kunden, gestaltet sich wie folgt:
 
-- Vor jedem Update sind vollständige Backups der Anwendung und der Datenbank zu erstellen.
-- Prüfen Sie die Release Notes und Kompatibilitätslisten der neuen Version.
-- Stoppen Sie den Applikationsdienst bzw. setzen Sie die Anwendung in den Wartungsmodus.
-- Ersetzen Sie die Anwendungsdateien durch die neue Version gemäß Updateanleitung.
-- Führen Sie ggf. erforderliche Migrationsschritte für die Datenbank durch (siehe Update-Guide des Herstellers).
-- Starten Sie die Anwendung neu und prüfen Sie die korrekte Funktion.
+Empfehlung: Vor jedem Update sind vollständige Backups der Konfiguration und der Datenbank zu erstellen (`SHARED_FOLDER`).
+
+- Stoppen Sie die Applikation: `docker compose down`
+- Führen sie Updates der Konfiguration durch, falls notwendig
+- Laden Sie die neuen Images der Applikation von Docker Hub: `docker compose pull`
+-- hierzu ist ggf. ein Login bei Docker Hub notwendig (s.o.)
+- Starten Sie die Anwendung neu: `docker compose up -d`
+- Prüfen Sie die korrekte Funktion
+
+Ein Laden der aktualisierten Images 
 
 Nach Abschluss des Updates ist das Benutzerumfeld zu informieren und bei Bedarf eine Kurzanleitung zu veröffentlichen.
 

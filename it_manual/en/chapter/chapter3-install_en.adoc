@@ -1,57 +1,89 @@
 === Installation and Configuration
 
+==== Initial Application Configuration
+
+A *configuration package* is provided as a ZIP file, containing the basic configuration structure for {application}.
+It includes the following file structure:
+- `docker-compose.yaml`
+- `.env.example`
+- configuration/
+-- `config.yaml`
+-- init/
+--- `init_config.yaml`
+--- `authorization_roles.yaml`
+
+Optionally, a `Caddyfile.example` or a preconfigured `Caddyfile` for the reverse proxy configuration may also be included.
+
+The following initial configurations must be performed:
+
+- Create a `.env` file based on `.env.example`
+- Configure the authentication method
+- (optional) Configure RAG folder
+- (optional) Configure SharePoint integration
+- (optional) Configure reverse proxy
+
+===== `.env` File
+
+The following values are configurable
+
+[cols="1,2,2", options="header"]
+|===
+| Variable | Required | Description | Example value(s)
+
+| `SHARED_FOLDER`
+| Required
+| Path for shared directory
+| `/opt/cgs-assist/shared`
+
+| `LOG_LEVEL`
+| 
+| Log level of the application (default: `INFO`)
+| `ERROR | WARNING | INFO`
+
+| `BRAVE_API_KEY`
+| 
+| API key for Brave web search integration
+| 
+|===
+
 ==== Deployment Guide (Step-by-Step)
 
 Deployment of {application} is carried out in the following steps:
 
 1. Prerequisites
 
-- *Docker* and *Docker* are installed.
-- The files ``docker-compose.yml`` and ``.env`` are present in the working directory.
+- *Docker* is installed.
+- The files from the *configuration package* are present in the working directory.
+- (optional) A proxy configuration is prepared.
 
-2. Login to our DockerHub repository
+2. Configuration Data
+
+- Collect and enter the required data (SharePoint integration, authentication) into `init_config.yaml` (see "Initial Application Configuration")
+
+3. Login to Docker Hub Repository
   
-- Use the provided read-access token: ``docker login -u {author} -p [ACCESS_TOKEN]``
-
-3. Configuration Data
-
-- Collect and enter the required data (SharePoint integration, authentication, modules) into `init_config.yaml` (see "Initial Application Configuration")
+- Use the provided read-access token: `docker login -u cgsmbh -p [ACCESS_TOKEN]`
 
 4. Start the Application
 
-- *Check .env file:* Is the path to ``SHARED_FOLDER`` set correctly?
-- Start the application: ``docker compose up -d``
+- Start the application: `docker compose up -d`
+- Wait for health check
 
 5. Completion
-- After installation, restart the web server.
-- Test application accessibility in the browser.
-- Check status
-- Check logs
-- Health check
 
-==== Initial Application Configuration
+- Test application accessibility in the browser
 
-After installation, the following initial configurations must be performed:
+==== Update Process
 
-*Configure authentication*
+The update process, performed by the customer, is as follows:
 
-- Configure/activate the authentication method chosen by the customer in `init_config.yaml`
+Recommendation: Before each update, create complete backups of the configuration and database (`SHARED_FOLDER`).
 
-*Configure modules*
+- Stop the application: `docker compose down`
+- Update the configuration if necessary
+- Download the new application images from Docker Hub: `docker compose pull`
+	-- a Docker Hub login may be required (see above)
+- Restart the application: `docker compose up -d`
+- Check correct functionality
 
-- LLM API: Configure provider & models in `init_config.yaml`
-- RAG API: Set up vector store & embeddings in `init_config.yaml`
-- Workflow Engine: Set up automations
-
-==== Update/Upgrade Process
-
-The update and upgrade process, to be performed by the customer, is as follows:
-
-- Before every update, complete backups of the application and database must be created.
-- Check the release notes and compatibility lists for the new version.
-- Stop the application service or set the application to maintenance mode.
-- Replace the application files with the new version according to the update instructions.
-- If necessary, execute required database migration steps (see manufacturer's update guide).
-- Restart the application and verify correct functionality.
-
-After the update is complete, inform end users and, if necessary, publish a quick guide.
+After the update is complete, inform the user environment and, if necessary, publish a quick guide.

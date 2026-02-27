@@ -1,0 +1,29 @@
+=== General Information about the Application
+
+==== Name and Version of the Application
+
+The application described in this manual is called {application} and is currently available in version {revnumber} as of {revdate}.
+
+==== Overview and Features
+{application} is a browser-based web application that is hosted locally at the customer's site.
+Operation takes place in Docker containers on a Linux server (either on-premise or in a cloud VM).
+The application is used to leverage AI language models (Large Language Models, LLMs), which are connected via an external API, such as Azure OpenAI.
+
+With {application}, users can efficiently analyze documents, make queries, and process data based on AI technologies.
+
+{application} is delivered without its own AI language model(s). Instead, the tool accesses the customer's LLM infrastructure via an API connection. 
+In order for {application} to use a language model, a functional connection to a supported LLM must be set up.
+
+==== Optional/Customer-Specific Implementations/Extensions
+
+===== Agents and MCP
+
+AI agents are specialized software components that independently automate complex tasks.
+Through an MCP (Model Context Protocol) server, these agents are given secure and structured access to various databases and subsystems, such as ERP systems. 
+They can autonomously perform data queries or analyses, extract and process relevant information, and provide the results in a central, uniform format. 
+In this way, AI agents enable automated reports, dynamic analyses, or the control of processes—even across system boundaries, without the need for manual intervention.
+
+Further use cases:
+
+- Reading public feeds and making them automatically available within {application}
+- Categorizing incoming emails, including evaluating and prioritizing attachments

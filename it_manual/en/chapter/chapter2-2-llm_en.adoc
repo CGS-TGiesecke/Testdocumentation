@@ -15,6 +15,14 @@ include::chapter2-2-llm-advice_en.adoc[]
 * *AWS Bedrock:* Check service quotas in the AWS Console
 * *Local models:* Provide sufficient GPU capacity
 
+==== Model Overview
+
+Azure
+- https://ai.azure.com/catalog/models
+
+AWS Bedrock
+- https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
+
 ==== Cost Overview LLM Providers
 
 *Azure OpenAI (approx., as of 2026):*

@@ -3,7 +3,7 @@
 
 *Schritt 1: Azure OpenAI Ressource erstellen*
 
-1. *Azure Portal öffnen:* [https://portal.azure.com](https://portal.azure.com)
+1. *Azure Portal öffnen:* (https://portal.azure.com)
 2. *Ressource erstellen:*
    * Klicken Sie auf "+ Ressource erstellen"
    * Suchen Sie nach "Azure OpenAI"

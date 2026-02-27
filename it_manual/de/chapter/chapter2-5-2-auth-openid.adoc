@@ -10,7 +10,7 @@ Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect A
 * *Tenant-ID:* Die ID der Organisation/Mandenten.
 * *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
 * *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
-* *Redirect-URL: Mmleitung nach erfolgreicher Anmeldeung zu {application}
+* *Redirect-URL:* Mmleitung nach erfolgreicher Anmeldeung zu {application}
 
 Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "SAML-Authentifizierung mit Microsoft Entra ID".

@@ -1,0 +1,54 @@
+
+===== Registration Steps in Microsoft Entra ID Admin Center
+
+*Login*
+
+Sign in to the Microsoft Entra ID Admin Center with an account that has administrator rights for your organization.
+`https://entra.microsoft.com`
+
+*Navigation to "App Registrations"*
+
+* Select Entra ID
+* Navigate to "App Registrations".
+* Register a new application
+* Click on "New Registration" (at the top of the menu).
+
+*Enter Application Information*
+
+* Name: Choose a name for the application. Suggestion: {application}
+* Supported account types: Decide whether the application should support only internal users (only your own organization), external users, or
+multiple organizations. The default setting is "Single tenant".
+* Redirect URL: Must be provided (URL for redirecting to {application}, corresponds to the 'redirect_uri' in the init_config.yaml)
+** Select "Web"
+** Retain the entry "company users only"
+
+*Create*
+
+* Click "Register".
+* After registration you will receive:
+
+** Application ID (Client ID)
+** Directory ID (Tenant ID)
+** Generate Client Secrets under "Certificates & Secrets"
+```
+Note: Record/copy these values for your application configuration in `init_config.yaml`.
+```
+====== Configure Basic SAML Data in Entra ID
+
+Under "Single Sign-On", the type must be switched to SAML.
+
+*Basic SAML Configuration*
+
+* *Identifier (Entity ID)*: The unique identifier in the Admin Center.
+* *Reply URL: Application URL*: must match the "redirect_uri" in the init_config.yaml.
+
+*Attributes & Claims*
+
+These values must be created to ensure that user data is synchronized into the application {application} on every login.
+This ensures the application always contains the latest user data (first name, last name, email).
+
+
+
+
+
+
