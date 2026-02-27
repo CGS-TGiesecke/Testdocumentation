@@ -2,13 +2,13 @@
 *Your Partner for Artificial Intelligence*
 
 CGS mbH has decades of experience in the development, implementation, and support of complex software systems.
-In addition to "{application}", our AI experts are also happy to offer you AI consulting and support with the development or integration of AI systems.
+In addition to CGS Assist, our AI experts are also happy to offer you AI consulting and support with the development or integration of AI systems.
 
 *CGS mbH* 
 
-Lange Straße 1 
+Arndtstraße 3 
 
-38100 Braunschweig 
+38118 Braunschweig
 
 www.cgs-online.de 
 
@@ -20,7 +20,5 @@ www.rias-revision.de
 Stefan Franz 
 
 sfranz@cgs-online.de
-
-Tel. (+49) 531 / 1209-384 
 
 Mobil (+49) 177 / 792 8366

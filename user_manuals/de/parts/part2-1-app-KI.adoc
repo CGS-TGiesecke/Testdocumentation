@@ -18,16 +18,16 @@ Somit kann mit einem Klick die Antwort in der originalen Quelle verifiziert werd
 
 Vom System erlaubte Dokumente zur Nutzung im KI Chat sind  .pdf .docx .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=400]
+image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=600]
 
 Im Chateingabefeld werden bereits verwendete Zeichen gezählt und angezeigt. Zusätzlich ist eine automatische Rechtschreibkontrolle aktiviert.
 Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
 
-image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=400]
+image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=600]
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 
-image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=400]
+image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=600]
 
 Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
 Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.

@@ -7,5 +7,5 @@ um die Suchergebnisse z.B. aus der Dokumentensammlung. Das Wissen für die Antwo
 
 Vom System erlaubte Dokumente zur Nutzung in der Ordnerverwaltung sind: .pdf .docx .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung", width=400]
+image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung", width=600]
 

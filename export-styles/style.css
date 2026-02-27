@@ -9,9 +9,19 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Liberation Sans', Arial, sans-serif;
-  color: #3f6172;
+  color: #41396E;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+}
+
+h1 {
+  border-bottom: 2px solid #174EA6;
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 0.15em;
 }
 
 a {

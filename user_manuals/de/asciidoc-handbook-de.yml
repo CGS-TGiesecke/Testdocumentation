@@ -1,5 +1,4 @@
 
-
 name: Build User-Handbook de to html, pdf, docx
 
 on:
@@ -116,12 +115,9 @@ jobs:
       - name: Build DOCX with Pandoc
         run: |
           pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --from=html \
-            --to=docx \
-            --standalone \
-            --reference-doc=it_manual/themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=user_manuals/themes/style-reference.docx \
             -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact

@@ -11,7 +11,7 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 Hier können Benutzer angelegt und bearbeitet werden. 
 
-image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=400]
+image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=600]
 
 ===== Benutzer bearbeiten
 
@@ -20,6 +20,6 @@ Eine nachträgliche Änderung das Namen ist nicht möglich.
 Zusätzlich muss ein Passwort vergeben und dem Benutzer eine Rolle zugewiesen werden. Die zugewiesene Rolle kann jederzeit wieder geändert werden. 
 Wird eine zugewiesene Rolle gelöscht, wird diese auch an den zugeordneten Benutzern entfernt.
 
-image::../images/Abbildung-17.jpg[Administration - Benutzerverwaltung - Benutzer anlegen, title="Administration - Benutzerverwaltung - Benutzer anlegen", width=400]
+image::../images/Abbildung-17.jpg[Administration - Benutzerverwaltung - Benutzer anlegen, title="Administration - Benutzerverwaltung - Benutzer anlegen", width=300]
 
 Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.

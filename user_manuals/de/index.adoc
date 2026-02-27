@@ -35,7 +35,7 @@ include::parts/part2-5-app-portal.adoc[]
 
 include::parts/part3-1-admin-users.adoc[]
 
-include::parts/part3-1-admin-roles.adoc[]
+include::parts/part3-2-admin-roles.adoc[]
 
 include::parts/part3-3-admin-folders.adoc[]
 

@@ -4,7 +4,7 @@
 Hier kann die Lizenz verwaltet werden. Es besteht die Möglichkeit der Aktualisierung, wenn die vorhandene ausgetauscht wurde.
 Auch der Kontakt per Mail zum Assist Service ist von hier aus möglich
 
-image::../images/Abbildung-30.jpg[Administration - Lizenzverwaltung, title="Administration - Lizenzverwaltung", width=400]
+image::../images/Abbildung-30.jpg[Administration - Lizenzverwaltung, title="Administration - Lizenzverwaltung", width=600]
 
 Es kann nach Auswahl eine gänzlich neue Lizenz hochgeladen werden.
 
