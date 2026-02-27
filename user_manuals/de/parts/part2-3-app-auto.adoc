@@ -1,0 +1,10 @@
+
+==== Navigationsbereich "Automatisierung"
+
+Hier werden, bei vorhandener Berechtigung, alle automatisierten KI Agents gelistet und verwaltet. 
+Diese Agents sind in der Administration festgelegt Anwendungsfälle die zur Automatisierung freigegeben wurden.
+Die markierte Nummer (rot) zeigt die summierte Anzahl der aktuellen Ergebnisse das letzten Laufs aller Rubriken. 
+Die Anzeige der Ergebnisse(rot) wird neu berechnet, wenn die Lesebestätigung von einem User in einer der Rubriken gesetzt wird.
+
+
+

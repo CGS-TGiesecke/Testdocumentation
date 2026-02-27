@@ -1,0 +1,19 @@
+=== Assist Administration
+
+Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können hier Benutzer und Rollen, 
+die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), LIzenzen und die systemseitig 
+hinterlegten Anwendungsfälle verwaltet werden.
+Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemseitige, festgelegte Rolle.
+
+image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
+
+===== Benutzer bearbeiten
+
+Beim Erstellen eines Benutzers muss ein systemweit eindeutiger Benutzername vergeben werden. Dieser wird bei der Anmeldung case sensitive verwendet. 
+Eine nachträgliche Änderung das Namen ist nicht möglich.
+Zusätzlich muss ein Passwort vergeben und dem Benutzer eine Rolle zugewiesen werden. Die zugewiesene Rolle kann jederzeit wieder geändert werden. 
+Wird eine zugewiesene Rolle gelöscht, wird diese auch an den zugeordneten Benutzern entfernt.
+
+image::../images/Abbildung-17.jpg[Administration - Benutzerverwaltung - Benutzer anlegen, title="Administration - Benutzerverwaltung - Benutzer anlegen", width=400]
+
+Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.

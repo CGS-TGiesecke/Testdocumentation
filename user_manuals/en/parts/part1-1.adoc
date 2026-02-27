@@ -7,12 +7,16 @@ All chat histories are only saved in the browser storage and are no longer avail
 (if the "automatic cache clearing" setting is enabled) and re-logging in.
 All saved use case histories can be reopened even after closing the browser and logging in again.
 
-Before executing request, you can select whether the internal contents of the (RAG) for example from SharePoint or the database should 
+Before executing request, you can select whether the internal contents of the (RAG) for example from SharePoint and/or the database should 
 also be searched in addition to knowledge discovery.
+
+A drop-down menu allows you to select one of the various agents to be used for the query.
 
 Permissions on folders and included documents are taken into account when searching via the RAG.
 When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.
 This allows the answer to be verified in the original source with a single click.
+
+The document formats permitted by the system for use in the AI chat are: .pdf, .docx, .xlsx, .pptx, and .txt.
 
 image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area AI Chat - RAG used", width=400]
  
@@ -35,6 +39,8 @@ image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Naviga
 All activated use cases are displayed here, grouped by area. The assignment of use cases to the areas takes place during setup in the administration.
 Use cases are lists of use cases stored and approved in the administration, which only need to be filled with specific content before execution.
 These lists facilitate routine requests.
+
+The document formats permitted by the system for use in use cases are: .pdf, .docx, .xlsx, .pptx, and .txt.
 
 image::../images/Abbildung-6.jpg[Navigation area Uses Cases, title="Navigation area Uses Cases", width=400]
 
@@ -76,8 +82,11 @@ All documents are linked with keywords and can search by any keywords in the con
 
 image::../images/Abbildung-12.jpg[Navigation area Documents - delete in tree, title="Navigation area Documents - delete in tree", width=400]
 
-In the tree navigation, only the folders to which the user has access rights are listed.
-The assignment of documents to the respective folders is performed by document upload with new folder creation.
+In the tree navigation, only the folders to which the user is authorized are listed. The assignment of documents to the respective 
+folders takes place during upload or when folder are created via upload.
+
+All documents are always displayed. When a folder is clicked, the view is filtered to show only the documents in that folder. 
+If the folder is clicked again, the filtered view is reset to display all documents.
 
 image::../images/Abbildung-33.jpg[Navigation area Documents - tree navigation, title="Navigation area Documents - tree navigation", width=150]
 

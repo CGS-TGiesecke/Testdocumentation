@@ -1,0 +1,17 @@
+
+==== Rollenverwaltung
+
+Hier können Rollen angelegt und bearbeitet werden. 
+
+image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung", width=400]
+
+===== Rollen bearbeiten
+
+Beim Erstellen einer neuen Rolle muss ein systemweit eindeutiger Rollenname vergeben werden. Zu jeder Rolle kann eine Beschreibung angegeben werden. 
+Der Name und die Beschreibung können jederzeit wieder geändert werden.
+
+image::../images/Abbildung-19.jpg[Administration - Rollenverwaltung - Rollen anlegen, title="Administration - Rollenverwaltung - Rollen anlegen", width=400]
+
+Rollen können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden. 
+Die systemseitige erstellte Rollen können nicht gelöscht werden.
+

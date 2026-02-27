@@ -1,0 +1,38 @@
+=== Assist Anwendung
+
+==== Navigationsbereich "KI Chat"
+
+Auf der Seite hat man eine klassische Chat Oberfläche mit einem Eingabefenster für Prompts. 
+Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen 
+(Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
+Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
+
+Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob die internen Inhalte des (RAG) z.B. aus dem Sharepoint und/oder 
+der Datenbank *zusätzlich* zur Wissensfindung durchsucht werden sollen. 
+
+Über ein Drop-Down Fenster besteht die Möglichkeit einen der diversen Agenten auszuwählen, die bei der Abfrage eingesetzt werden sollen.
+
+Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über das RAG berücksichtig.
+Nutzt man das RAG werden bei der Antwort die Top 8 Embeddings für die Antwort und ein Link zur jeweiligen Quelle angezeigt. 
+Somit kann mit einem Klick die Antwort in der originalen Quelle verifiziert werden.
+
+Vom System erlaubte Dokumente zur Nutzung im KI Chat sind  .pdf .docx .xlsx, .pptx, .txt.
+
+image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=400]
+
+Im Chateingabefeld werden bereits verwendete Zeichen gezählt und angezeigt. Zusätzlich ist eine automatische Rechtschreibkontrolle aktiviert.
+Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
+
+image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=400]
+
+Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
+
+image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=400]
+
+Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
+Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.
+
+image::../images/Abbildung-5.jpg[Navigationsbereich KI Chat  - löschen, title="Navigationsbereich KI Chat  - löschen", width=300]
+
+
+

@@ -1,0 +1,30 @@
+
+==== Navigationsbereich "Anwendungsfälle" 
+
+Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt. Die Zordnung der Anwendungsfälle zu den bereichen, erfolgt bei Anlage in der Administration.
+Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen, die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. 
+Diese Listen erleichtern routinemäßige Anfragen.
+
+Vom System erlaubte Dokumente zur Nutzung im Bereich Anwendungsfälle sind: .pdf .docx .xlsx, .pptx, .txt.
+
+image::../images/Abbildung-6.jpg[Navigationsbereich Anwendungsfälle, title="Navigationsbereich Anwendungsfälle", width=400]
+
+Zum Öffnen eines konkreten Anwendungsfalles wird auf das Symbol mit Namen geklickt.
+
+image::../images/Abbildung-7.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=400]
+
+Klick auf ein Symbol mit Namen öffnet den Anwendungsfall zur Datenaufnahme.
+
+image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=400]
+
+Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf Ausführen“ abgeschickt werden.
+Während der Verarbeitung wird eine Wait Box angezeigt und der Statusverlauf als Info angezeigt.
+
+image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox", width=400]
+
+Nach der Rückmeldung zur Anfrage kann über einen Butten in den Navigationsbereich „Chat“ geöffnet werden, um auf diesen konkreten Use Case weitere Anfragen zu starten.
+Das Ergebnis einer Anfrage kann auch gespeichert werden und ist dann als separater Chat verfügbar.
+Um einen Use Case zu löschen, muss zuerst der Lösch Button betätigt werden und danach die Abfrage mit „OK“ bestätigt werden.
+
+image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles", width=400]
+

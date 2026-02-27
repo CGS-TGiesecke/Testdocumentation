@@ -1,0 +1,7 @@
+
+==== Systemaufforderung
+
+Hier werden textbasierte Anweisung oder Fragen als Aufforderungen (prompts) hinterlegt und beschrieben.
+
+image::../images/Abbildung-21.jpg[Administration - Systemaufforderungen, title="Administration - Systemaufforderungen", width=400]
+
