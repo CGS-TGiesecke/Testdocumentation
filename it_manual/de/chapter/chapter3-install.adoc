@@ -1,6 +1,5 @@
 === Installation und Konfiguration
 
-
 ==== Erstkonfiguration der Anwendung
 
 Es wird ein *Konfigurationspaket* als ZIP-Datei zur Verfügung gestellt, die den Grundaufbau der Konfiguration des {application} enthält.
