@@ -1,0 +1,36 @@
+=== Assist Application
+
+==== Navigation Area "AI Chat"
+
+The page features a classic chat interface with a prompt input window. 
+All chat histories are only saved in the browser storage and are no longer available after closing the browser 
+(if the "automatic cache clearing" setting is enabled) and re-logging in.
+All saved use case histories can be reopened even after closing the browser and logging in again.
+
+Before executing request, you can select whether the internal contents of the (RAG) for example from SharePoint and/or the database should 
+also be searched in addition to knowledge discovery.
+
+A drop-down menu allows you to select one of the various agents to be used for the query.
+
+Permissions on folders and included documents are taken into account when searching via the RAG.
+When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.
+This allows the answer to be verified in the original source with a single click.
+
+The document formats permitted by the system for use in the AI chat are: .pdf, .docx, .xlsx, .pptx, and .txt.
+
+image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area AI Chat - RAG used", width=500]
+ 
+Additionally, an automatic spell checker is activated. You have the option to submit a request via manual text entry, 
+via voice recording using a microphone, or by uploading a document.
+
+image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area AI Chat inputs", width=500]
+
+The contents can be saved to the clipboard for further processing using a “Copy” button.
+
+image::../images/Abbildung-4.jpg[Navigation area AI Chat  - Content saving, title="Navigation area AI Chat  - Content saving", width=500]
+
+To rename a chat, the edit button (pencil) can be used.
+To delete a chat in the tree menu on the left, the delete button must first be pressed and then the deletion confirmed by clicking the checkmark.
+
+image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Navigation area AI Chat - delete", width=300]
+

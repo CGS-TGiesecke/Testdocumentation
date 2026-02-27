@@ -1,0 +1,7 @@
+
+==== System Prompts
+
+Here, text-based instructions or questions are stored and described as prompts.
+
+image::../images/Abbildung-21.jpg[Administration - System Prompts, title="Administration - System Prompts", width=400]
+

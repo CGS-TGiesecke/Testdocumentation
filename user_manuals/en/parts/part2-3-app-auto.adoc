@@ -1,0 +1,12 @@
+
+==== Navigation Area "Automation"
+
+If you have the necessary authorization, all automated external services (AI agents) provided are listed and managed here.
+These agents are defined in the administration as use cases that have been approved for automation.
+The number highlighted in red shows the total number of current results from the latest run across all categories.
+The display of results (in red) is recalculated whenever a user marks a read confirmation in any of the categories.
+
+include::part1-1-audit-methodology.adoc[]
+
+include::part1-2-audit-execution.adoc[]
+

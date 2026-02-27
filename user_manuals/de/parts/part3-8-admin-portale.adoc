@@ -4,7 +4,7 @@
 Hier können verschiedene Verknüpfungen verwaltet werden. Es besteht die Möglichkeit zur Neuanlage, zum Löschen und Bearbeiten einzelner Einträge.
 Zusätzlich kann die gesamte Portalseite deaktiviert werden und diese ist dadurch nicht mehr in der Navigation verfügbar.
 
-image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite", width=600]
+image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite", width=500]
 
 Es können Seiten oder Applikationen verknüpft werden. Die Verknüpfung von Dokumenten auf Laufwerden oder Shares ist nicht möglich.
 

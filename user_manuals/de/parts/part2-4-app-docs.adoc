@@ -5,7 +5,7 @@ Hier werden alle verfügbaren und durchsuchbaren Dokumente angezeigt, für die d
 Dabei kann die Dokumententabelle nach Dokumenttyp (pdf, excel etc.), nach Quelle (bspw. Dokumentname) oder Inhalt gefiltert werden.
 Da alle Dokumente mit Schlagwörtern verknüpft sind, kann man in Feld Inhalt nach beliebigen Schlagwörtern suchen, um die relevanten Dokumente zu finden.
 
-image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen", width=600]
+image::../images/Abbildung-12.jpg[Navigationsbereich - Dokumente - Baum löschen, title="Navigationsbereich - Dokumente - Baum löschen", width=500]
 
 In der Baumnavigation werden nur die Ordner gelistet, auf die der Anwender berechtigt ist. Die Zuordnung der Dokumente zu den jeweiligen Ordnern erfolgt 
 beim Upload oder bei der Erstellung von Ordnern über Upload.
@@ -23,7 +23,7 @@ Beim Hochladen von Dokumenten muss ein Zeilordner ausgewählt oder mit Eingabe e
 über einen roten Text darauf hingewiesen, das der neue Ordner noch keine Berechtigungen besitzt. Diese müssen in der Administration vergeben werden, damit der neue Ordner inklusive
 Dokumente sichtbar ist.
 
-image::../images/Abbildung-50.jpg[Navigationsbereich - Dokumente - Neuer Ordner, title="Navigationsbereich - Dokumente - Neuer Ordner", width=400]
+image::../images/Abbildung-50.jpg[Navigationsbereich - Dokumente - Neuer Ordner, title="Navigationsbereich - Dokumente - Neuer Ordner", width=300]
  
 Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau. Die Filterresultate aktualisieren 
 sich bereits während der Eingabe. Über Icon können Dokumente und somit die Inhalte des RAG bearbeitet werden werden.
@@ -37,7 +37,7 @@ sich bereits während der Eingabe. Über Icon können Dokumente und somit die In
 
 Über einen Klick auf das Symbol vor der Dokument, können die Teildokumente angezeigt werden.
 
-image::../images/Abbildung-13.jpg[[Navigationsbereich - Dokumente - Teildokumente öffnen, title="[Navigationsbereich - Dokumente - Teildokumente öffnen", width=600]
+image::../images/Abbildung-13.jpg[[Navigationsbereich - Dokumente - Teildokumente öffnen, title="[Navigationsbereich - Dokumente - Teildokumente öffnen", width=500]
 
 
 

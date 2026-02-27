@@ -1,0 +1,12 @@
+
+==== License Management
+
+Here, the license can be managed. There is the possibility to update it if the existing license has been replaced.
+Contacting the Assist Service by mail is also possible from here.
+
+image::../images/Abbildung-30.jpg[Administration - License Management, title="Administration - License Management", width=400]
+
+A completely new license can be uploaded after selection.
+
+image::../images/Abbildung-31.jpg[Administration - License Management - Upload License, title="Administration - License Management - Upload License", width=400]
+

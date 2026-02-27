@@ -3,7 +3,7 @@
 
 Hier können Rollen angelegt und bearbeitet werden. 
 
-image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung", width=600]
+image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung", width=500]
 
 ===== Rollen bearbeiten
 

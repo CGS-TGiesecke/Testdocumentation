@@ -17,12 +17,38 @@
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
 
-include::parts/part1.adoc[]
+include::parts/part1-description.adoc[]
 
-include::parts/part1-1.adoc[]
+include::parts/part2-1-app-KI.adoc[]
 
-include::parts/part1-2.adoc[]
+include::parts/part2-2-app-useCases.adoc[]
+
+include::parts/part2-3-app-auto.adoc[]
+
+include::parts/part2-3-1-app-auto-audit-methodology.adoc[]
+
+include::parts/part2-3-2-app-auto-audit-execution.adoc[]
+
+include::parts/part2-4-app-docs.adoc[]
+
+include::parts/part2-5-app-portal.adoc[]
+
+include::parts/part3-1-admin-users.adoc[]
+
+include::parts/part3-2-admin-roles.adoc[]
+
+include::parts/part3-3-admin-folders.adoc[]
+
+include::parts/part3-4-admin-promps.adoc[]
+
+include::parts/part3-5-admin-llm.adoc[]
+
+include::parts/part3-6-admin-useCases.adoc[]
+
+include::parts/part3-7-admin-license.adoc[]
+
+include::parts/part3-8-admin-portale.adoc[]
 
 <<<
 
-include::parts/disclaimer.adoc[]
+include::parts/part4-disclaimer.adoc[]

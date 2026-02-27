@@ -3,7 +3,7 @@
 
 Hier werden alle vefügbaren Verlinkungen zu anderen Seiten oder Anwendungen angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
 
-image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal", width=600]
+image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal", width=500]
 
 Mit einem Klick auf das Symbol, wird die Verknüpfung, je nach Browsereinstellung, in einen neuen Browsertab oder Fenster geöffnet.
 

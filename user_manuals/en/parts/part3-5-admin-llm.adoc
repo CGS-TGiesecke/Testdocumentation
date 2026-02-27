@@ -1,0 +1,15 @@
+
+==== LLMs and Embedding Models
+
+Here, the providers are listed and managed.
+
+image::../images/Abbildung-22.jpg[Administration - LLMs and Embedding Models, title="Administration - LLMs and Embedding Models", width=400]
+
+New providers can be created and can only be removed in the overview table after a confirmed security prompt.
+
+image::../images/Abbildung-32.jpg[Administration - LLMs and Embedding Models - Create Provider, title="Administration - LLMs and Embedding Models - Create Provider", width=250]
+
+By clicking the arrow on the right edge, the configuration can be opened and the required models can be created or removed after a confirmed security prompt.
+
+image::../images/Abbildung-24.jpg[Administration - LLMs and Embedding Models - Edit Models, title="Administration - LLMs and Embedding Models - Edit Models", width=400]
+

@@ -4,7 +4,7 @@
 Hier werden konkrete Anwendungsfälle bzw. Vorlagen dafür hinterlegt. Anwendungsfälle sind Templates als fertige Routinen wie Checklisten um wiederkehrende, Use Case organisierte Anfragen zu stellen. 
 Die Gruppierung der Anwendungsfälle ist systemseitig festgelegt und wird unter Navigationsbereich „Anwendungsfälle“ wieder verwendet.
 
-image::../images/Abbildung-25.jpg[Navigationsbereich - Anwendungsfälle, title="Navigationsbereich - Anwendungsfälle", width=600]
+image::../images/Abbildung-25.jpg[Navigationsbereich - Anwendungsfälle, title="Navigationsbereich - Anwendungsfälle", width=500]
 
 Hinterlegte Vorlagen können deaktiviert werden und steuert damit die Sichtbarkeit/Verfügbarkeit unter Navigation „Anwendungsfälle“.
 

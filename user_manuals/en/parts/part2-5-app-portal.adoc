@@ -1,0 +1,12 @@
+
+==== Navigation Area "Portal"
+
+All available links to other pages or applications for which the user is authorized according to their role are displayed here.
+
+image::../images/Abbildung-40.jpg[Navigation area - Portal, title="Navigationsbereich -area", width=400]
+
+By clicking the icon, the link will be opened in a new browser tab or window, depending on the browser settings.
+
+
+
+

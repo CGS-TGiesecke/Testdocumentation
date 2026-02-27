@@ -11,7 +11,7 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 Hier können Benutzer angelegt und bearbeitet werden. 
 
-image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=600]
+image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 
 ===== Benutzer bearbeiten
 

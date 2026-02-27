@@ -1,0 +1,11 @@
+
+==== Portal Page
+
+Here, various links can be managed. It is possible to add, delete and edit individual entries.
+Additionally, the entire portal page can be deactivated, making it unavailable in the navigation.
+
+image::../images/Abbildung-41.jpg[Administration - Portal page, title="Administration - Portal page", width=400]
+
+Pages or applications can be linked. Linking documents on drives or shares is not possible.
+
+image::../images/Abbildung-42.jpg[Administration - Portal Page - create link, title="Administration - Portal page - create link", width=250]
