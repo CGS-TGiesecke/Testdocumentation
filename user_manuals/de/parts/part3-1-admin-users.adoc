@@ -7,6 +7,12 @@ Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemsei
 
 image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
 
+==== Benutzerverwaltung
+
+Hier können Benutzer angelegt und bearbeitet werden. 
+
+image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=400]
+
 ===== Benutzer bearbeiten
 
 Beim Erstellen eines Benutzers muss ein systemweit eindeutiger Benutzername vergeben werden. Dieser wird bei der Anmeldung case sensitive verwendet. 
