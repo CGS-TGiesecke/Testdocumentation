@@ -1,8 +1,8 @@
 
 ==== Navigation Area "Automation"
 
-All automated AI agents are listed and managed here, provided you have the necessary permissions.
-These agents are application cases defined in the administration that have been approved for automation.
+All automated agent use cases are listed and managed here, provided you have the necessary permissions.
+These agent use cases are application cases defined in the administration that have been approved for automation.
 The highlighted number (in red) shows the total number of current results from the most recent run across all categories.
 The display of the results (in red) is recalculated when a user sets the read confirmation in any of the categories.
 

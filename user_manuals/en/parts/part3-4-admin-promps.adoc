@@ -1,7 +1,10 @@
 
 ==== System Prompts
 
-Here, text-based instructions or questions are stored and described as prompts.
+Here, text-based instructions or questions are stored and described by the system as prompts.
+These prompts are provided to a language model to guide its response or generate specific outputs.
+Prompts can consist of a few words, a sentence, or even several paragraphs, depending on how detailed the desired response should be. 
+The quality and clarity of the prompt influence how relevant and useful the response is.
 
 image::../images/Abbildung-21.jpg[Administration - System Prompts, title="Administration - System Prompts", width=400]
 

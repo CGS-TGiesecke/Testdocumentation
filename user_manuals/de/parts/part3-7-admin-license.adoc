@@ -1,8 +1,10 @@
 
 ==== Lizenzverwaltung
 
-Hier kann die Lizenz verwaltet werden. Es besteht die Möglichkeit der Aktualisierung, wenn die vorhandene ausgetauscht wurde.
-Auch der Kontakt per Mail zum Assist Service ist von hier aus möglich
+Auf dieser Seite kann die für den Betrieb der Applikation {application} notwendige Lizenz verwaltet werden. 
+Es besteht die Möglichkeit der Aktualisierung, wenn eine vorhandene Lizenz ausgetauscht wurde.
+Auch der Kontakt per Mail zum {application} Support ist auf dieser Seite integriert. Beim Klick auf den Button öffnet der 
+Standard Mail Client des Benutzers mit vor eingestelltem Empfänger.
 
 image::../images/Abbildung-30.jpg[Administration - Lizenzverwaltung, title="Administration - Lizenzverwaltung", width=500]
 

@@ -1,7 +1,9 @@
 
 ==== LLMs und Einbettungsmodelle 
 
-Hier werden die Provider gelistet und verwaltet.
+Hier werden alle im System hinterlegten LLM Provider gelistet und verwaltet. LLM-Provider werden benötigt, 
+um Zugang zu Large Language Models (LLMs) bereitzustellen. Diese Anbieter betreiben und warten die notwendige Infrastruktur, 
+um leistungsstarke KI-Sprachmodelle auszuführen.
 
 image::../images/Abbildung-22.jpg[Administration - LLMs und Einbettungsmodelle, title="Administration - LLMs und Einbettungsmodelle", width=500]
 
@@ -9,7 +11,8 @@ Es können neue Provider angelegt und nur in der Übersichtstabelle, nach einer 
 
 image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle - Provider anlegen, title="Administration - LLMs und Einbettungsmodelle - Provider anlegen", width=250]
 
-Über den Pfeil am rechten Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt bzw. nach einer bestätigten Sicherheitsabfrage auch entfernt werden.
+Über den Pfeil am rechten Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt bzw. 
+nach einer bestätigten Sicherheitsabfrage auch entfernt werden.
 
 image::../images/Abbildung-24.jpg[Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
 

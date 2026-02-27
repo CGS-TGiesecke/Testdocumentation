@@ -1,7 +1,9 @@
 
 ==== LLMs and Embedding Models
 
-Here, the providers are listed and managed.
+All LLM providers stored in the system are listed and managed here. LLM providers are required to supply 
+access to Large Language Models (LLMs). These providers operate and maintain the necessary infrastructure 
+to run advanced AI language models.
 
 image::../images/Abbildung-22.jpg[Administration - LLMs and Embedding Models, title="Administration - LLMs and Embedding Models", width=400]
 

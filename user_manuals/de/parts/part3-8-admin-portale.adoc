@@ -1,8 +1,9 @@
 
 ==== Portal-Seite
 
-Hier können verschiedene Verknüpfungen verwaltet werden. Es besteht die Möglichkeit zur Neuanlage, zum Löschen und Bearbeiten einzelner Einträge.
-Zusätzlich kann die gesamte Portalseite deaktiviert werden und diese ist dadurch nicht mehr in der Navigation verfügbar.
+Auf dieser Seite können verschiedene Verknüpfungen verwaltet werden. Es besteht die Möglichkeit zur Neuanlage, zum Löschen und 
+Bearbeiten einzelner Einträge. Die Verfügbarkeit einzelner Verlinkungen kann über seperate Berechtigungen gesteuert werden.
+Zusätzlich kann die gesamte Portalseite aktiviert/deaktiviert werden und diese ist dann auch nicht mehr in der Navigation verfügbar.
 
 image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite", width=500]
 

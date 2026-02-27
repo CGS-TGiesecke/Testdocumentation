@@ -1,7 +1,9 @@
 
 ==== Navigationsbereich "Portal"
 
-Hier werden alle vefügbaren Verlinkungen zu anderen Seiten oder Anwendungen angezeigt, für die der Anwender mit seiner Rolle berechtigt ist.
+Diese Seite und somit auch der Menüpunkt können in der Administration komplett ein oder ausgeschaltet werden.
+Ist die Seite freigeschlatet, werden hier alle in der Administration hintzerlegten und somit verfügbaren Verlinkungen zu anderen Seiten 
+oder Anwendungen angezeigt, für die der Anwender berechtigt ist.
 
 image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal", width=500]
 

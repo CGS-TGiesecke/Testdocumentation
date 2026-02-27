@@ -1,8 +1,10 @@
 
 ==== License Management
 
-Here, the license can be managed. There is the possibility to update it if the existing license has been replaced.
-Contacting the Assist Service by mail is also possible from here.
+On this page, you can manage the license required to operate the {application} application. It is possible to 
+update the license if an existing one has been replaced.
+You can also contact {application} support by email directly from this page. 
+When you click the button, your default mail client will open with the recipient address pre-filled.
 
 image::../images/Abbildung-30.jpg[Administration - License Management, title="Administration - License Management", width=400]
 

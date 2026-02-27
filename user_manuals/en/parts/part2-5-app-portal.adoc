@@ -1,7 +1,9 @@
 
 ==== Navigation Area "Portal"
 
-All available links to other pages or applications for which the user is authorized according to their role are displayed here.
+This page, and therefore the corresponding menu item, can be completely enabled or disabled in the administration settings.
+If the page is enabled, all links to other pages or applications that are stored in the administration and are available 
+to the user are displayed here, provided the user has the necessary permissions.
 
 image::../images/Abbildung-40.jpg[Navigation area - Portal, title="Navigationsbereich -area", width=400]
 
