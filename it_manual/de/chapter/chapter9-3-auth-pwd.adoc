@@ -1,0 +1,8 @@
+
+==== Authentifizierung über lokale Benutzer-/Passwortverwaltung 
+
+Die Authentifizierung über eine lokale Benutzer-/Passwortverwaltung wird immer dann verwendet, 
+wenn der Kunde keine Verwaltung von Benutzern und Zugangsdaten ausserhalb der Organisation wünscht
+und Verwaltung im {application} erfolgen soll.
+
+

@@ -1,0 +1,20 @@
+
+==== Azure OpenAI (Recommended)
+
+*Why Azure OpenAI is recommended:*
+
+- Proven enterprise integration
+- Availability in EU regions (GDPR compliant)
+- Microsoft enterprise support
+- Reliable GPT models
+
+*Requirements:*
+
+- Active Azure subscription
+- Access granted to Azure OpenAI Service (may require approval)
+- Sufficient permissions to create resources
+
+
+
+
+

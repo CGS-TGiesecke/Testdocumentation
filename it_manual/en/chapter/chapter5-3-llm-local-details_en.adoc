@@ -1,0 +1,10 @@
+
+===== Setup example with Ollama
+
+```bash
+#Ollama installieren
+curl -fsSL https://ollama.ai/install.sh | sh
+#Modell herunterladen
+ollama pull llama3.1:70b
+#API läuft auf http://localhost:11434/v1 (OpenAI-kompatibel)
+```

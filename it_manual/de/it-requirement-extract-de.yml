@@ -13,22 +13,19 @@ on:
           - warning
           - debug
       pdfTheme:
-        description: 'Application Theme'
+        description: 'Application Theme ARC'
         required: true
         default: 'ARC'
         type: choice
         options:
-          - CGS
           - ARC
       outputType:
-        description: 'Output type: 0=it-req(default), 1=small, 2=large'
+        description: 'Output type: 0=it-req(default)'
         required: true
         default: '0'
         type: choice
         options:
           - 0
-          - 1
-          - 2
       version:
         description: 'Application Version'
         required: true

@@ -1,0 +1,16 @@
+
+==== {application} and SHARED_FOLDER
+
+This is a required data storage within {application}, where the customer stores all folders and easily maintainable documents.
+The necessary permissions for roles on these folders are set by the customer.
+The storage of document segments (embeddings) is handled in an internal vector store (ChromaDB).
+
+Files are uploaded manually by the customer. The permissions for individual files correspond to those of the containing directories.
+All data storage and access management are defined and managed by the customer.
+
+The shared folder also contains the database and configuration files.
+
+
+
+
+

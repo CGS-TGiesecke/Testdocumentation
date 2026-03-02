@@ -1,0 +1,43 @@
+
+=== Hardware Requirements
+
+The following minimum requirements apply for the productive operation of the {application}:
+
+===== Entry Level (RAG, 8 GB RAM)
+
+For small data volumes and low to moderate user numbers:
+
+* Document collection up to approx. 100 MB
+* Low to moderate concurrent users
+
+|===
+| *Memory (vRAM)*            | 8 GB
+| *Processor (vCPU)*         | 4 vCPUs
+| *Storage*                  | 250 GB SSD (virtual NVMe/SSD storage)
+|===
+
+===== Mid-Tier Level (RAG, 32 GB RAM)
+
+For growing data volumes and higher user numbers:
+
+* Document collection up to approx. 5 GB
+* Moderate to high concurrent user numbers
+
+|===
+| *Memory (vRAM)*            | 32 GB
+| *Processor (vCPU)*         | 8-12 vCPUs
+| *Storage*                  | 1 TB SSD (virtual NVMe/SSD storage)
+|===
+
+===== High-End Level (RAG, 64 GB RAM)
+
+For large data volumes, high user numbers, or compute-intensive tasks:
+
+* Document collection over 5 GB
+* Many concurrent users or complex, compute-intensive queries
+
+|===
+| *Memory (vRAM)*            | 64 GB
+| *Processor (vCPU)*         | 16-32 vCPUs
+| *Storage*                  | 2 TB SSD (virtual NVMe/SSD storage)
+|===

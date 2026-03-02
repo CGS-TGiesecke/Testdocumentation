@@ -1,0 +1,28 @@
+
+==== Netzwerk / Ports
+
+*Erforderlich für:*
+
+* Download des Docker-Images (während der Installation)
+* Verbindung zum LLM-Provider API (Azure OpenAI, AWS Bedrock - falls Cloud-Provider gewählt wird)
+
+*Wichtig:* 
+
+* *Bei Cloud-LLM-Providern (Azure OpenAI, AWS Bedrock):* Dauerhafte Internetverbindung erforderlich
+* *Bei lokalen Modellen:* Nur für Installation erforderlich (Download des Docker-Image)
+
+*Proxy-Unterstützung:* Die Lösung unterstützt den Betrieb hinter einem Proxy. Proxy-Konfiguration kann in den Umgebungsvariablen hinterlegt werden.
+
+*MCP Server API:* Auf Wunsch kundenspezifische Erweiterung der Suchfunktionen für Web-, lokale Kunden-, Bild-, Video- und Nachrichtensuchen sowie KI gestützte Zusammenfassungen 
+
+**Erforderliche Ports:**
+
+|===
+| Port | Protokoll | Verwendung | Erforderlich für 
+
+| **80** 	| HTTP 	| HTTP-zu-HTTPS-Redirect, Let's Encrypt ACME-Challenge 	| Produktion mit Caddy 
+| **443** 	| HTTPS | Verschlüsselter Zugriff (TLS) 						| Produktion (empfohlen) 
+| **8000** 	| HTTP 	| Direktzugriff auf Anwendung 							| Test/Entwicklung
+|===
+
+**Empfehlung für Produktion:** Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.

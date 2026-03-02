@@ -19,4 +19,40 @@ In the API permissions section, click "Grant admin consent for [your directory]"
 
 ===== Assigning "Sites.Selected" Permission on the SharePoint 
 
-*!!! Description needed !!!*
+The permissions alone on "Microsoft Graph" are not sufficient. Additionally, permissions must be explicitly 
+granted to the individual SharePoint sites, for example, using PowerShell. The permission "Sites.Selected" only allows access to those sites for which permissions have been explicitly granted.
+
+*Install Microsoft Graph PowerShell Module (if not already installed):*
+```
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+You may need the role of "SharePoint Administrator" or Global Administrator to perform the PowerShell operations.
+*Sign In:*
+```
+Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+```
+*Save the App ID of the registered application:*
+```
+$appId = "YOUR-APP-ID"
+```
+*Find the SharePoint Site ID:*
+```
+$site = Get-MgSite -Filter "displayName eq 'NAME-DEINER-SITE'"
+$siteId = $site.Id
+```
+*Grant permission on the site:*
+Example for granting Read permissions:
+```
+$permission = @{
+    Roles = @("read")
+    GrantedToIdentities = @(
+        @{
+            Application = @{
+                Id = $appId
+                DisplayName = "DEINE-APP-NAME"
+            }
+        }
+    )
+}
+New-MgSitePermission -SiteId $siteId -BodyParameter $permission
+```

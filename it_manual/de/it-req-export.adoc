@@ -6,35 +6,37 @@ Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und b
 technischen Voraussetzungen für die Bereitstellung und den Betrieb der AI Audit Assist Plattform beim Kunden.
 
 
-include::chapter/chapter2-2-llm-advice.adoc[]
+include::chapter/chapter4-1-llm-advice.adoc[]
 
-include::chapter/chapter2-0-1-req-general.adoc[]
+include::chapter/chapter2-0-req-general.adoc[]
 
-include::chapter/chapter2-0-2-network.adoc[]
+include::chapter/chapter3-0-network.adoc[]
 
-include::chapter/chapter2-0-2-network-details.adoc[]
+include::chapter/chapter3-1-network-details.adoc[]
 
-include::chapter/chapter2-2-llm.adoc[]
+include::chapter/chapter4-1-llm-advice.adoc[]
 
-include::chapter/chapter2-2-llm-azure.adoc[]
+include::chapter/chapter5-0-llm.adoc[]
 
-include::chapter/chapter2-2-llm-aws.adoc[]
+include::chapter/chapter5-1-llm-azure.adoc[]
 
-include::chapter/chapter2-2-llm-local.adoc[]
+include::chapter/chapter5-2-llm-aws.adoc[]
 
-include::chapter/chapter2-3-hardware.adoc[]
+include::chapter/chapter5-3-llm-local.adoc[]
 
-include::chapter/chapter4-components.adoc[]
+include::chapter/chapter6-hardware.adoc[]
 
-include::chapter/chapter2-4-rag.adoc[]
+include::chapter/chapter7-components.adoc[]
 
-include::chapter/chapter2-5-auth.adoc[]
+include::chapter/chapter8-0-rag.adoc[]
 
-include::chapter/chapter5-security.adoc[]
+include::chapter/chapter9-0-auth.adoc[]
 
-include::chapter/chapter6-support.adoc[]
+include::chapter/chapter12-security.adoc[]
 
-include::chapter/chapter6-1-faq.adoc[]
+include::chapter/chapter13-support.adoc[]
+
+include::chapter/chapter17-faq.adoc[]
 
 <<<
 

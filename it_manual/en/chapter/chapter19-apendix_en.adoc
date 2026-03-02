@@ -1,0 +1,54 @@
+
+=== Appendix
+
+==== IT Architecture
+
+ifeval::[{cgs-assist} == 1]
+image:IT-Komponenten-CGS-2026-01-30.jpg[IT-Architecture, title="IT-Architecture components CGS Assist", width="600"]
+endif::[]
+
+ifeval::[{arc-assist} == 1]
+image:IT-Komponenten-ARC-2026-02-09.jpg[IT-Architecture, title="IT-Architecture components AI Audit Assist", width="600"]
+endif::[]
+
+*Customer:*
+
+- All included components are the responsibility of the customer.
+- The customer provides the VM or server and must install and configure Docker on the server.
+- The customer provides a directory (SHARED_FOLDER) with sufficient read/write permissions for the Docker containers.
+- The customer provides the LLM provider.
+- The customer configures the proxy connection (TLS/HTTPS).
+- The customer configures the necessary firewall rules.
+- The customer configures integration with the existing authentication system.
+- The customer handles backup and recovery (database, SHARED_FOLDER, configuration files).
+
+*{application}*
+
+We provide the application as a Docker image. This includes, and is installed via Docker, 
+the individual containers ({application} backend, LLM API, RAG API, Caddy proxy, Redis, Celery worker, customer-specific MCP server API).
+
+We deliver:
+
+- User training
+- Manuals
+- Configuration guides
+- Deployment guides
+
+After deployment:
+
+- Updates/patches
+- Support
+
+==== Document Version History
+
+[cols="100px,100px, 3*", options="header"]
+|===
+| Date        | Author     | Change 
+
+| 23.02.2026  | {author}   | New order - chapters
+| 20.02.2026  | {author}   | Content change - authorizations
+| 19.02.2026  | {author}   | New content - authorizations
+| 13.02.2026  | {author}   | New content - RAG
+| 10.02.2026  | {author}   | Content change - IT architecture
+| 30.01.2026  | {author}   | Initial creation 
+|===

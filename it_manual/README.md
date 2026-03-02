@@ -2,7 +2,7 @@
 
 Contains it-handbook in assciidoc for build.
 
-It also includes a separate script for creating the IT requirements.
+It also includes a separate script for the IT requirements only for theme=ARC and outputType=0 creation.
 
 The related action can start manually to build pdf, html, docx from assciidoc file.
 IT handbook here in German and English by selected script.

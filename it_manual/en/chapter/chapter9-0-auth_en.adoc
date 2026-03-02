@@ -1,0 +1,11 @@
+
+=== Authentication
+
+Authentication protects applications and data while fulfilling compliance requirements.
+The {application} application supports various authentication methods, which can be configured prior to delivery according to the customer's requirements.
+
+{application} supports:
+
+* OpenID Connect authentication with Microsoft Entra ID
+* SAML authentication with Microsoft Entra ID
+* Local user/password management

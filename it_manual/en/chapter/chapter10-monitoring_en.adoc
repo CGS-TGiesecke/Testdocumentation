@@ -1,0 +1,45 @@
+
+=== Operation of the Application by the Customer
+
+==== Starting and Stopping the Application
+
+*Starting the application:*
+
+* Log in to the server with administrative privileges.
+* Start the {application} containers.
+* Check whether the web server and the database connection are active.
+* Test access to the web interface via the browser.
+
+*Stopping the application:*
+
+* Inform users about the planned shutdown.
+* Shut down the {application} containers in an orderly manner.
+* If necessary, stop scheduled background jobs and back up open database transactions.
+
+==== User Management / Roles
+
+User management is handled centrally in the administration interface of the {application} application.
+
+- Create, edit, and delete users
+- Assign roles such as “admin” or custom roles
+- Define individual permissions for specific functional areas (e.g., automation)
+- Regularly review active users and permissions (at least semi-annually)
+
+==== Integration with Other Systems (Interfaces, APIs)
+
+The application is connected to other systems via the following interfaces and APIs:
+
+* RAG API for communication with the vector store
+* LLM API for communication with the customer-configured LLM provider
+* Interface with a customer-configured authentication solution
+* (optional) MCP Server API to use customer-specified search functions
+
+The interfaces are regularly checked for their proper operation, and documented changes to the API standard are implemented at an early stage.
+
+==== Application Backup and Recovery
+
+Backup and recovery of the application is performed by the customer.
+
+==== Monitoring
+
+Monitoring is performed by the customer.

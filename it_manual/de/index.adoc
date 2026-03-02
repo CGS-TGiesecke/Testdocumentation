@@ -18,77 +18,109 @@
 :cgs-assist: {cgs-assist}
 :big-output: {big-output}
 
-include::chapter/intro.adoc[]
+include::chapter/chapter0-0-intro.adoc[]
 
 include::chapter/chapter1-about.adoc[]
 
-include::chapter/chapter2-0-1-req-general.adoc[]
+include::chapter/chapter2-0-req-general.adoc[]
 
-include::chapter/chapter2-0-2-network.adoc[]
+include::chapter/chapter3-0-network.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter/chapter2-0-2-network-details.adoc[]
+include::chapter/chapter3-1-network-details.adoc[]
 endif::[]
 
-include::chapter/chapter2-1-third-components.adoc[]
+include::chapter/chapter4-0-third-components.adoc[]
 
-include::chapter/chapter2-2-llm.adoc[]
+include::chapter/chapter4-1-llm-advice.adoc[]
+
+include::chapter/chapter5-0-llm.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter/chapter2-2-llm-azure.adoc[]
 
-include::chapter/chapter2-2-llm-aws.adoc[]
+include::chapter/chapter5-1-llm-azure.adoc[]
 
-include::chapter/chapter2-2-llm-local.adoc[]
+ifeval::[{big-output} == 2]
+include::chapter/chapter5-1-llm-azure-details.adoc[]
 endif::[]
 
-include::chapter/chapter2-3-hardware.adoc[]
+include::chapter/chapter5-2-llm-aws.adoc[]
 
-include::chapter/chapter4-components.adoc[]
-
-include::chapter/chapter2-4-rag.adoc[]
-
-ifeval::[{big-output} > 0]
-include::chapter/chapter2-4-1-rag-sharedfolder.adoc[]
-
-include::chapter/chapter2-4-1-rag-sharepoint.adoc[]
+ifeval::[{big-output} == 2]
+include::chapter/chapter5-2-llm-aws-details.adoc[]
 endif::[]
 
-include::chapter/chapter2-5-auth.adoc[]
+include::chapter/chapter5-3-llm-local.adoc[]
+
+ifeval::[{big-output} == 2]
+include::chapter/chapter5-3-llm-local-details.adoc[]
+endif::[]
+
+endif::[]
+
+include::chapter/chapter6-hardware.adoc[]
+
+include::chapter/chapter7-components.adoc[]
+
+include::chapter/chapter8-0-rag.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter/chapter2-5-2-auth-openid.adoc[]
 
-include::chapter/chapter2-5-1-auth-saml.adoc[]
+include::chapter/chapter8-1-0-rag-sharedfolder.adoc[]
 
-include::chapter/chapter2-5-3-auth-pwd.adoc[]
+include::chapter/chapter8-2-0-rag-sharepoint.adoc[]
+
+ifeval::[{big-output} == 2]
+include::chapter/chapter8-2-1-rag-sharepoint-details1.adoc[]
+
+include::chapter/chapter8-2-2-rag-sharepoint-details2.adoc[]
+endif::[]
+
+endif::[]
+
+include::chapter/chapter9-0-auth.adoc[]
+
+ifeval::[{big-output} > 0]
+
+include::chapter/chapter9-1-auth-openid.adoc[]
+
+ifeval::[{big-output} == 2]
+include::chapter/chapter9-1-auth-openid-details.adoc[]
+endif::[]
+
+include::chapter/chapter9-2-auth-saml.adoc[]
+
+ifeval::[{big-output} == 2]
+include::chapter/chapter9-2-auth-saml-details.adoc[]
+endif::[]
+
+include::chapter/chapter9-3-auth-pwd.adoc[]
+
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter4-monitoring.adoc[]
+include::chapter/chapter10-monitoring.adoc[]
+
+include::chapter/chapter11-install.adoc[]
 endif::[]
 
-ifeval::[{big-output} > 1]
-include::chapter/chapter3-install.adoc[]
-endif::[]
+include::chapter/chapter12-security.adoc[]
 
-include::chapter/chapter5-security.adoc[]
-
-include::chapter/chapter6-support.adoc[]
+include::chapter/chapter13-support.adoc[]
 
 ifeval::[{big-output} > 0]
-include::chapter/chapter6-1-faq.adoc[]
+include::chapter/chapter17-faq.adoc[]
 
-include::chapter/chapter7-docu.adoc[]
+include::chapter/chapter18-docu.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter8-apendix.adoc[]
+include::chapter/chapter19-apendix.adoc[]
 endif::[]
 
 <<<
 
-include::chapter/disclaimer.adoc[]
+include::chapter/chapter20-disclaimer.adoc[]
 
 
 

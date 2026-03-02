@@ -19,4 +19,41 @@ In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 
 ===== Berechtigung "Sites.Selected" auf SharePoint 
 
-*!!! Hier muss noch eine konkrete Beschreibung erfolgen !!!*
+Die Berechtigungen allein auf "Microsoft Graph" reichen nicht aus. Es müssen zusätzlich, z.B. mit PowerShell, 
+die Berechtigungen explizit auf die einzelnen SharePoint-Sites gewährt werden.
+Die Berechtigung "Sites.Selected" erlaubt nur Zugriff auf jene Sites, für die explizit Berechtigungen vergeben wurden.
+
+*Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden):*
+```
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+Benötigt wird evtl. die Rolle "SharePoint Administrator" oder Globaler Administrator, um die PowerShell-Operationen auszuführen.
+*Anmelden:*
+```
+Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+```
+*Die App-ID deiner registrierten Anwendung speichern:*
+```
+$appId = "DEINE-APP-ID"
+```
+*SharePoint Site ID herausfinden:*
+```
+$site = Get-MgSite -Filter "displayName eq 'NAME-DEINER-SITE'"
+$siteId = $site.Id
+```
+*Berechtigung auf der Site gewähren:*
+Beispiel zum Gewähren von Read-Berechtigungen:
+```
+$permission = @{
+    Roles = @("read")
+    GrantedToIdentities = @(
+        @{
+            Application = @{
+                Id = $appId
+                DisplayName = "DEINE-APP-NAME"
+            }
+        }
+    )
+}
+New-MgSitePermission -SiteId $siteId -BodyParameter $permission
+```

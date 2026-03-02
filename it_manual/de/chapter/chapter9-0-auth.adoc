@@ -1,0 +1,13 @@
+
+=== Authentifizierung
+
+Authentifizierung schützt Anwendungen sowie Daten und erfüllt Compliance-Vorgaben.
+Die Applikation {application} unterstützt verschiedene Formen der Authentifizierung, die in Vorbereitung einer Auslieferung,
+nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden.
+ 
+{application} unterstützt:
+
+* eine OpenID Connect Authentifizierung mit Microsoft Entra ID
+* eine SAML-Authentifizierung mit Microsoft Entra ID
+* eine lokale Benutzer-/Passwortverwaltung
+

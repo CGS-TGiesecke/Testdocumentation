@@ -1,0 +1,12 @@
+
+=== Required Third-Party Components
+
+Some third-party components are required for smooth operation and must be provided prior to installation.  
+Acquisition and maintenance of third-party components are the responsibility of the customer.
+
+The {application} platform is delivered *WITHOUT* third-party Large Language Model (LLM) components.  
+The customer must provide their own LLM provider.
+
+
+
+
