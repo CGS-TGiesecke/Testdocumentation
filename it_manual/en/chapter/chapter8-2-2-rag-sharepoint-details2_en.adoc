@@ -18,7 +18,7 @@ To allow a registered application in the Microsoft Entra Admin Center to access 
 For your app to operate with these permissions, a tenant administrator must grant consent:
 In the API permissions section, click "Grant admin consent for [your directory]".
 
-===== Assigning "Sites.Selected" Permission on the SharePoint 
+===== "Sites.Selected" Permission on the SharePoint 
 
 The permissions alone on "Microsoft Graph" are not sufficient. Additionally, permissions must be explicitly granted to 
 the individual SharePoint sites, for example, using PowerShell. 

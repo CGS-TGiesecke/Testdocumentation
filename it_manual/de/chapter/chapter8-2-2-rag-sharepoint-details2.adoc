@@ -27,7 +27,7 @@ Die Berechtigung "Sites.Selected" erlaubt nur Zugriff auf jene Sites, für die e
 *Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden):*
 ```
 Install-Module Microsoft.Graph -Scope CurrentUser
-````
+```
 Benötigt wird evtl. die Rolle "SharePoint Administrator" oder Globaler Administrator, um die PowerShell-Operationen auszuführen.
 
 *Anmelden:*
@@ -36,13 +36,13 @@ Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All",
 ```
 
 *Die App-ID deiner registrierten Anwendung speichern:*
-````
+```
 $appId = "IHRE-APP-ID"
-````
+```
 
 *SharePoint Site ID herausfinden:*
 ```
-$site = Get-MgSite -Filter "displayName eq 'NAME-DEINER-SITE'"
+$site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
 $siteId = $site.Id
 ```
 
@@ -56,7 +56,7 @@ $permission = @{
         @{
             Application = @{
                 Id = $appId
-                DisplayName = "DEINE-APP-NAME"
+                DisplayName = "IHRE-APP-NAME"
             }
         }
     )
