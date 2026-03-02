@@ -1,4 +1,4 @@
-name: Build IT-Handbook en html, pdf, docx
+name: Extract EN IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
@@ -13,31 +13,27 @@ on:
           - warning
           - debug
       pdfTheme:
-        description: 'Asciidoctor PDF Theme'
+        description: 'Application Theme ARC'
         required: true
-        default: 'CGS'
+        default: 'ARC'
         type: choice
         options:
-          - CGS
           - ARC
       outputType:
-        description: 'Output type: 0=it-req(default), 1=small, 2=large'
+        description: 'Output type: 0=it-req(default)'
         required: true
         default: '0'
         type: choice
         options:
           - 0
-          - 1
-          - 2
       version:
-        description: 'Asciidoctor PDF Version'
+        description: 'Application Version'
         required: true
         default: '1.4.0'
         type: string
-
-  
+        
 env:
-  FILENAME: 'IT_HANDBOOK_EN'
+  FILENAME: 'it-req-export'
   FILEPATH: 'it_manual/en'
 
 jobs:
@@ -63,13 +59,13 @@ jobs:
         run: |
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=AI Audit Assist: IT-Handbuch" >> $GITHUB_ENV
             echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
             echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
-            echo "PRODUCT_TITLE=CGS Assist: IT-Handbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - IT-Handbuch" >> $GITHUB_ENV
             echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
             echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
@@ -100,12 +96,12 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/${{ env.FILENAME }}.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-           -D ${{ env.FILEPATH }} \
+           -D ${{ env.FILEPATH }}/ \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
@@ -117,17 +113,20 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=it_manual/themes \
-           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/${{ env.FILENAME }}.adoc
 
       - name: Build DOCX with Pandoc
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --from=html \
+            --to=docx \
+            --standalone \
+            --reference-doc=it_manual/themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=${{ env.FILEPATH }}/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-
-      - name: Upload documentation artifact
+       
+      - name: Upload ${{ env.FILEPATH }} artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_${{ env.DATE }}
@@ -135,3 +134,4 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
+ 
