@@ -20,9 +20,16 @@ In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 
 ===== Berechtigung "Sites.Selected" auf SharePoint 
 
-Die Berechtigungen allein auf "Microsoft Graph" reichen nicht aus. Es müssen zusätzlich, z.B. mit PowerShell,
+Die Berechtigungen allein auf "Microsoft Graph" reichen nicht aus. Es müssen zusätzlich,
 die Berechtigungen explizit auf die einzelnen SharePoint-Sites gewährt werden.
 Die Berechtigung "Sites.Selected" erlaubt nur Zugriff auf jene Sites, für die explizit Berechtigungen vergeben wurden.
+
+Wenn die Berechtigungen auf eine einzelne SharePoint-Sites gewährt werden sollen, kann dies direkt über das SharePoint Admin Center oder 
+die SharePoint-Benutzeroberfläche erfolgen. 
+
+Wenn viele Sites oder unterschiedliche Berechtigungen verwalten werden müssen, ist das Verwenden des PowerShell-Moduls effizienter.
+
+*Step by Step PowerShell-Modul:* 
 
 *Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden):*
 ```

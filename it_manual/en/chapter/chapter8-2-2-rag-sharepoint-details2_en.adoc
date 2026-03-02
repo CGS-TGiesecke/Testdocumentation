@@ -21,8 +21,14 @@ In the API permissions section, click "Grant admin consent for [your directory]"
 ===== "Sites.Selected" Permission on the SharePoint 
 
 The permissions alone on "Microsoft Graph" are not sufficient. Additionally, permissions must be explicitly granted to 
-the individual SharePoint sites, for example, using PowerShell. 
+the individual SharePoint sites. 
 The permission "Sites.Selected" only allows access to those sites for which permissions have been explicitly granted.
+If permissions are to be granted to individual SharePoint sites, this can be done directly through the SharePoint Admin Center 
+or the SharePoint user interface. 
+
+However, if you need to manage many sites or different permissions, using the PowerShell module is more efficient.
+
+*Step by Step PowerShell Module:*
 
 *Install Microsoft Graph PowerShell Module (if not already installed):*
 ```
