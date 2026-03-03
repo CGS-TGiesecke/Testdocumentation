@@ -120,7 +120,7 @@ endif::[]
 
 <<<
 
-include::../../export-styles/contact-de.adoc[]
+include::../../themes/contact-de.adoc[]
 
 
 
