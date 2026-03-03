@@ -109,7 +109,7 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=user_manuals/themes \
+           -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Build DOCX with Pandoc
@@ -117,7 +117,7 @@ jobs:
           pandoc ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=user_manuals/themes/style-reference.docx \
+            --reference-doc=../../themes/style-reference.docx \
             -o ${{ env.FILEPATH}}/${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
