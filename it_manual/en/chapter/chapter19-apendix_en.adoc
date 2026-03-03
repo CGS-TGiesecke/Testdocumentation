@@ -31,8 +31,7 @@ We deliver:
 
 - User training
 - Manuals
-- Configuration guides
-- Deployment guides
+- Configuration guides- Deployment guides
 
 After deployment:
 
