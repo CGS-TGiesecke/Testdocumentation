@@ -6,7 +6,7 @@ ifeval::[{arc-assist} == 1]
 image::../..//themes/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
-=== Kontakt
+=== Contact
 
 ifeval::[{arg-assist} == 1]
 
@@ -14,7 +14,7 @@ Audit Research Center | ARC-Institute
 
 Mail: AI-Audit-Assist@ARC-Institute.com
 
-Tel.: +49-2159-6945-904
+Phone: +49-2159-6945-904
 
 Mobil: +49-151-64967383
  
@@ -23,29 +23,28 @@ endif::[]
 
 ifeval::[{cgs-assist} == 1]
 
-*Ihr Partner für Künstliche Intelligenz*
+*Your Partner for Artificial Intelligence*
 
-Die CGS mbH besitzt jahrzehntelange Erfahrung in der Entwicklung, Implementierung und Betreuung komplexer Softwaresysteme. 
-Mit unseren KI-Experten bieten wir Ihnen neben dem CGS Assist auch gerne KI-Beratung und Unterstützung 
-bei der Entwicklung oder Integration von KI-Systemen. 
+CGS mbH has decades of experience in the development, implementation, and support of complex software systems.
+In addition to CGS Assist, our AI experts are also happy to offer you AI consulting and support with the development or integration of AI systems.
 
 *CGS mbH* 
 
 Arndtstraße 3 
 
-38118 Braunschweig 
+38118 Braunschweig
 
 www.cgs-online.de 
 
 www.rias-revision.de 
 
 
-*Beratung & Vertrieb*
+*Consulting & Sales*
 
 Stefan Franz 
 
 sfranz@cgs-online.de
 
-Mobil (+49) 177 / 792 8366 
+Mobil (+49) 177 / 792 8366
 
 endif::[]	

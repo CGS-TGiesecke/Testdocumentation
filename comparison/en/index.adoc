@@ -39,7 +39,7 @@ endif::[]
 
 <<<
 
-include::chapter/chapter11-disclaimer.adoc[]
+include::../../themes/contact-en.adoc[]
 
 
 

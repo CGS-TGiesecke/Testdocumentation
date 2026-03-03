@@ -120,4 +120,4 @@ endif::[]
 
 <<<
 
-include::chapter/chapter20-disclaimer_en.adoc[]
+include::../../themes/contact-en.adoc[]

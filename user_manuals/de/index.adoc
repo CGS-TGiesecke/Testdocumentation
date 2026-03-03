@@ -47,4 +47,4 @@ include::parts/part3-8-admin-portale.adoc[]
 
 <<<
 
-include::parts/part4-disclaimer.adoc[]
+include::../../themes/contact-de.adoc[]
