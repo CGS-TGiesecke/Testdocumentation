@@ -8,7 +8,7 @@ lang: de
 sectnums: true
 sectnumlevels: 15
 figure_caption: Figure
-imagesdir:  ./themes
+imagesdir:  images
 big_output: "{{BIG_OUTPUT}}"
 subtitle: 
 arc-assist: "{CGS-ASSIST}"
