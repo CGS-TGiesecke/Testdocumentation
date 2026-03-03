@@ -126,6 +126,7 @@ jobs:
             --to=docx \
             --standalone \
             --reference-doc=./themes/style-reference.docx \ 
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=./themes  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 

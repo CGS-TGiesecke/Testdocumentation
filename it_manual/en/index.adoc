@@ -10,7 +10,7 @@
 :toc-title: Table of content
 :toclevels: 15
 :figure-caption: Figure
-:imagesdir: apfel
+:imagesdir: images
 :sectnums:
 :sectnumlevels: 15
 :application: {application}
