@@ -125,9 +125,8 @@ jobs:
             --from=html \
             --to=docx \
             --standalone \
-            --reference-doc=it_manual/themes/style-reference.docx \
-            --reference-doc=../../themes/style-reference.docx \ 
-            --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=./themes/style-reference.docx \ 
+            --resource-path=themes  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
