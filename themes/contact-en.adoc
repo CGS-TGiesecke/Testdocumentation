@@ -1,9 +1,9 @@
 ifeval::[{cgs-assist} == 1]
-image:cgs-logo.png[Firmenlogo,align=left, width=100]
+image::theme/cgs-logo.png[Firmenlogo,align=left, width=100]
 endif::[]
 
 ifeval::[{arc-assist} == 1]
-image:arc_logo.png[Firmenlogo,align=left, width=120]
+image::theme/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
 === Contact
