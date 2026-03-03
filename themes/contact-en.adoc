@@ -1,5 +1,5 @@
 ifeval::[{cgs-assist} == 1]
-image::cgs-logo.png[Firmenlogo,align=left, width=100]
+image::../../../cgs-logo.png[Firmenlogo,align=left, width=100]
 endif::[]
 
 ifeval::[{arc-assist} == 1]
