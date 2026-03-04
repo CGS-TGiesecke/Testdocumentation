@@ -1,4 +1,4 @@
-name: ARC EN IT_REQUIREMENTS adoc to PDF & DOCX
+name: Extract EN IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
@@ -13,22 +13,19 @@ on:
           - warning
           - debug
       pdfTheme:
-        description: 'Application Theme'
+        description: 'Application Theme ARC'
         required: true
         default: 'ARC'
         type: choice
         options:
-          - CGS
           - ARC
       outputType:
-        description: 'Output type: 0=it-req(default), 1=small, 2=large'
+        description: 'Output type: 0=it-req(default)'
         required: true
         default: '0'
         type: choice
         options:
           - 0
-          - 1
-          - 2
       version:
         description: 'Application Version'
         required: true
@@ -115,15 +112,18 @@ jobs:
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-           -a pdf-themesdir=it_manual/themes \
+           -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/${{ env.FILENAME }}.adoc
 
       - name: Build DOCX with Pandoc
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --from=html \
+            --to=docx \
+            --standalone \
+            --reference-doc=../../themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=it_manual/themes/style-reference.docx \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
        
       - name: Upload ${{ env.FILEPATH }} artifact
