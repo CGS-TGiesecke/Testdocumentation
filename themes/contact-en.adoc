@@ -8,7 +8,7 @@ endif::[]
 
 === Contact
 
-ifeval::[{arg-assist} == 1]
+ifeval::[{arc-assist} == 1]
 
 Audit Research Center | ARC-Institute
 
