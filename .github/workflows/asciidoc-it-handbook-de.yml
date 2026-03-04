@@ -1,5 +1,4 @@
 
-
 name: Build IT-Handbook de html, pdf, docx
 
 on:
@@ -124,14 +123,6 @@ jobs:
       - name: Build DOCX with Pandoc von html
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
-            --reference-doc=it_manual/themes/style-reference.docx \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-            
-      - name: Build DOCX with Pandoc von adoc
-        run: |
-          pandoc ${{ env.FILEPATH }}/index.adoc \
             --from=html \
             --to=docx \
             --standalone \
@@ -139,7 +130,7 @@ jobs:
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-
+            
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
