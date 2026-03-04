@@ -1,14 +1,14 @@
 ifeval::[{cgs-assist} == 1]
-image::../../themes/cgs-logo.png[Firmenlogo,align=left, width=100]
+image::../../../themes/cgs-logo.png[Firmenlogo,align=left, width=100]
 endif::[]
 
 ifeval::[{arc-assist} == 1]
-image::../../themes/arc_logo.png[Firmenlogo,align=left, width=120]
+image::../../../themes/arc_logo.png[Firmenlogo,align=left, width=120]
 endif::[]
 
 === Kontakt
 
-ifeval::[{arg-assist} == 1]
+ifeval::[{arc-assist} == 1]
 
 Audit Research Center | ARC-Institute
 
