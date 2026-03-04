@@ -10,7 +10,7 @@
 :toc-title: Inhaltsverzeichnis
 :toclevels: 15
 :figure-caption: Abbildung
-:imagesdir: theme
+:imagesdir: image
 :sectnums:
 :sectnumlevels: 15
 :application: {application}
