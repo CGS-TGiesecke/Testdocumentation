@@ -108,7 +108,8 @@ jobs:
         run: |
           asciidoctor-pdf \
            -D ${{ env.FILEPATH }} \
-           -a product_title="${{ env.PRODUCT_TITLE }}" \           -a revnumber="${{ env.REVNUMBER }}" \
+           -a product_title="${{ env.PRODUCT_TITLE }}" \           
+           -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
            -a author="${{ env.AUTHOR }}" \
            -a big-output="${{ env.BIG_OUTPUT }}" \
