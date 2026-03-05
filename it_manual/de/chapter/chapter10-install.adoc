@@ -87,11 +87,7 @@ Empfehlung: Vor jedem Update sind vollständige Backups der Konfiguration und de
 - Stoppen Sie die Applikation: `docker compose down`
 - Führen sie Updates der Konfiguration durch, falls notwendig
 - Laden Sie die neuen Images der Applikation von Docker Hub: `docker compose pull`
--- hierzu ist ggf. ein Login bei Docker Hub notwendig (s.o.)
+-- hierzu ist ggf. ein Login bei Docker Hub notwendig
 - Starten Sie die Anwendung neu: `docker compose up -d`
 - Prüfen Sie die korrekte Funktion
-
-Ein Laden der aktualisierten Images 
-
-Nach Abschluss des Updates ist das Benutzerumfeld zu informieren und bei Bedarf eine Kurzanleitung zu veröffentlichen.
 
