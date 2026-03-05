@@ -38,7 +38,7 @@ on:
 
   
 env:
-  FILENAME: 'IT_HANDBOOK_DE'
+  FILENAME: 'IT_HANDBOOK_DE_${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}'
   FILEPATH: 'it_manual/de'
 
 jobs:
@@ -100,9 +100,8 @@ jobs:
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a imagesdir=image  \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -119,25 +118,25 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=./themes \
-           -o ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc von html
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}.html \
             --from=html \
             --to=docx \
             --standalone \
             --reference-doc=../../themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}.docx
             
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_Typ_${{ env.BIG_OUTPUT }}_${{ env.DATE }}
+          name: ${{ env.FILENAME }}
           path: |
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}.pdf
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}.html
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}.docx
             ${{ env.FILEPATH }}/image/*
