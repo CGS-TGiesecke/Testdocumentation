@@ -123,7 +123,7 @@ jobs:
 
       - name: Build DOCX with Pandoc von html
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_${{ env.THEME }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.html \
             --from=html \
             --to=docx \
             --standalone \
