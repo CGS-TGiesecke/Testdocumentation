@@ -110,12 +110,10 @@ include::chapter/chapter13-support.adoc[]
 
 ifeval::[{big-output} > 0]
 include::chapter/chapter17-faq.adoc[]
-
-include::chapter/chapter18-docu.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter19-apendix.adoc[]
+include::chapter/chapter18-apendix.adoc[]
 endif::[]
 
 <<<

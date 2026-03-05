@@ -1,8 +1,0 @@
-
-=== Maintenance and Servicing
-
-==== Documentation of Changes (Changelog)
-
-All changes to the application and infrastructure are documented in the changelog.
-
-These documents are stored centrally, updated regularly, and made available to the entire IT team.
