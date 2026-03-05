@@ -27,10 +27,10 @@
 ==== Infrastruktur
 
 - [ ] Linux-Server bereitgestellt
-- [ ] Docker + Docker Compose installiert
+- [ ] Docker installiert
 - [ ] SHARED_FOLDER erstellt
 - [ ] Firewall-Freigaben (Ports 80, 443)
 - [ ] DNS konfiguriert (für Caddy)
 - [ ] Ausgehende Verbindungen freigegeben
 - [ ] Authentifizierungs-Anbindung 
-- [ ] SharePoint-Anbindung via Microsoft Entra ID
+- [ ] SharePoint-Anbindung über Microsoft Entra ID

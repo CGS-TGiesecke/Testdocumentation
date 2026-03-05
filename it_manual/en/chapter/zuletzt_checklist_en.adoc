@@ -27,7 +27,7 @@
 ==== Infrastructure
 
 - [ ] Linux server provided
-- [ ] Docker + Docker Compose installed
+- [ ] Docker installed
 - [ ] SHARED_FOLDER created
 - [ ] Firewall open (ports 80, 443)
 - [ ] DNS configured (for Caddy)
