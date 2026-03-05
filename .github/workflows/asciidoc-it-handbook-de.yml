@@ -86,7 +86,7 @@ jobs:
       - name: Fill metadata template
         run: |
           envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
-          echo "OUTPUT_NAME=${{ FILENAME}}${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_${{ env.REVNUMBER }}_${{ env.DATE }}" >> $GITHUB_ENV
+          echo "OUTPUT_NAME=${{ env.FILENAME }}${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_${{ env.REVNUMBER }}_${{ env.DATE }}" >> $GITHUB_ENV
 
       - name: Build HTML with Asciidoctor
         run: |
