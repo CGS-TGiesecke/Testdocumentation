@@ -38,7 +38,7 @@ on:
 
   
 env:
-  FILENAME: 'IT_HANDBOOK_DE_${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}'
+  FILENAME: 'IT_HANDBOOK_DE_'
   FILEPATH: 'it_manual/de'
 
 jobs:
@@ -82,6 +82,7 @@ jobs:
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
           echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
+          echo "OUTPUT_NAME=${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}" >> $GITHUB_ENV
 
       - name: Fill metadata template
         run: |
@@ -101,7 +102,7 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}.html ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.OUTPUT_NAME }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -118,25 +119,25 @@ jobs:
            -a arc-assist="${{ env.ARC-ASSIST }}" \
            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
            -a pdf-themesdir=./themes \
-           -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.OUTPUT_NAME }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc von html
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}.html \
+          pandoc ${{ env.FILEPATH }}/${{ env.OUTPUT_NAME }}.html \
             --from=html \
             --to=docx \
             --standalone \
             --reference-doc=../../themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}.docx
+            -o ${{ env.FILEPATH }}/${{ env.OUTPUT_NAME }}.docx
             
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}
+          name: ${{ env.OUTPUT_NAME }}
           path: |
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}.pdf
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}.html
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}.docx
+            ${{ env.FILEPATH }}/${{ env.OUTPUT_NAME }}.pdf
+            ${{ env.FILEPATH }}/${{ env.OUTPUT_NAME }}.html
+            ${{ env.FILEPATH }}/${{ env.OUTPUT_NAME }}.docx
             ${{ env.FILEPATH }}/image/*
