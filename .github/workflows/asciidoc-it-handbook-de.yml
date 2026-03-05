@@ -82,18 +82,19 @@ jobs:
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
           echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
-          echo "OUTPUT_NAME=${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t_${{ github.event.inputs.outputType }} }}_v_${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
-
+          
       - name: Fill metadata template
         run: |
           envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
+          echo "OUTPUT_NAME=${{ FILENAME}}${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_${{ env.REVNUMBER }}_${{ env.DATE }}" >> $GITHUB_ENV
 
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
             -D ${{ env.FILEPATH }}/ \
             -a product_title="${{ env.PRODUCT_TITLE }}" \
-            -a revnumber="${{ env.REVNUMBER }}
+            -a revnumber="${{ env.REVNUMBER }}" \
+            -a application="${{ env.APPLICATION }}" \
             -a author="${{ env.AUTHOR }}" \
             -a big-output="${{ env.BIG_OUTPUT }}" \
             -a company="${{ env.COMPANY }}" \
@@ -107,8 +108,7 @@ jobs:
         run: |
           asciidoctor-pdf \
            -D ${{ env.FILEPATH }} \
-           -a product_title="${{ env.PRODUCT_TITLE }}" \
-           -a revnumber="${{ env.REVNUMBER }}" \
+           -a product_title="${{ env.PRODUCT_TITLE }}" \           -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
            -a author="${{ env.AUTHOR }}" \
            -a big-output="${{ env.BIG_OUTPUT }}" \
