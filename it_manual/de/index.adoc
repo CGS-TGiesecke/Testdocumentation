@@ -114,6 +114,8 @@ endif::[]
 
 ifeval::[{big-output} > 1]
 include::chapter/chapter18-apendix.adoc[]
+
+include::chapter/zuletzt_checklist.adoc[]
 endif::[]
 
 <<<

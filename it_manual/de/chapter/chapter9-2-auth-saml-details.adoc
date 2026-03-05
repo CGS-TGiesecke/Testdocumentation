@@ -35,7 +35,7 @@ Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration 
 ```
 ====== SAML-Basisdaten in Entra ID konfigurieren
 
-Unter "Einmaliges Anmelden (Single Sign-On)" > muss auf SML umgeschaltet werden.
+Unter "Einmaliges Anmelden (Single Sign-On)" > *muss* auf SML umgeschaltet werden.
 
 *Grundlegende SAML-Konfiguration*
 

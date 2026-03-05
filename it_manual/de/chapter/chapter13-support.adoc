@@ -5,6 +5,8 @@ ifeval::[{big-output} > 0]
 
 ==== Supportprozess und Kontaktinformationen
 
+Die hier notierten Angaben unterscheiden sich unter Umständen von den vertraglich gültigen Vereinbarungen.
+
 *Supportprozess:*
 
 |===
@@ -43,13 +45,13 @@ endif::[]
 
 *Vom Kunden zu sichern*:
 
-* SHARED_FOLDER enthält
+* SHARED_FOLDER dieser enthält:
 ** Datenbank
 ** Konfigurationsdateien
 
 === Patch-Management
-* Anwendung: {author} stellt Updates bereit → Kunde spielt ein
-* Infrastruktur: Kunde verantwortlich (OS, Docker)
+* Anwendung: {author} stellt Updates bereit und der Kunde spielt ein
+* Infrastruktur: Kunde ist verantwortlich (OS, Docker)
 
 
 === RACI-Matrix 

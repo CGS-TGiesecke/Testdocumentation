@@ -5,6 +5,8 @@ ifeval::[{big-output} > 0]
 
 ==== Support Process and Contact Information
 
+The information noted here may differ from the legally binding contractual agreements.
+
 *Support process:*
 
 |===
