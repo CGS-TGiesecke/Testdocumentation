@@ -34,18 +34,18 @@ Die folgenden Werte sind konfigurierbar
 |===
 | Variable | Pflicht | Beschreibung | Beispielwert(e)
 
-| "SHARED_FOLDER"
-| Pflicht
+| SHARED_FOLDER
+| Ja
 | Pfad für gemeinsames Verzeichnis
 | `/opt/cgs-assist/shared`
 
-| "LOG_LEVEL"
-| 
-| Log-Level der Applikation (Standardwert: "INFO")
-| "ERROR oder WARNING oder INFO"
+| LOG_LEVEL
+| Nein
+| Log-Level der Applikation (Standardwert: INFO)
+| ERROR / WARNING / INFO
 
-| "BRAVE_API_KEY"
-| 
+| BRAVE_API_KEY
+| Nein
 | API-Schlüssel für die Anbindung der Brave-Websuche
 | 
 |===

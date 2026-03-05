@@ -30,22 +30,21 @@ The following initial configurations must be performed:
 
 The following values are configurable
 
-[cols="1,2,2", options="header"]
 |===
 | Variable | Required | Description | Example value(s)
 
-| "SHARED_FOLDER"
-| Required
+| SHARED_FOLDER
+| Yes
 | Path for shared directory
 | `/opt/cgs-assist/shared`
 
-| "LOG_LEVEL"
-| 
-| Log level of the application (default: "INFO")
-| ERROR or WARNING or INFO
+| LOG_LEVEL
+| No
+| Log level of the application (default: INFO)
+| ERROR / WARNING / INFO
 
-| "BRAVE_API_KEY"
-| 
+| BRAVE_API_KEY
+| No
 | API key for Brave web search integration
 | 
 |===
