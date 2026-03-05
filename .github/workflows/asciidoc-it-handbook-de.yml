@@ -101,8 +101,8 @@ jobs:
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -o ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
+            -a pdf-theme="${{ env.THEME }}" \
+            -o ${{ env.FILENAME }}_${{ env.THEME }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -117,9 +117,9 @@ jobs:
            -a date="${{ env.DATE }}" \
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
            -a arc-assist="${{ env.ARC-ASSIST }}" \
-           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+           -a pdf-theme="${{ env.THEME }}" \
            -a pdf-themesdir=./themes \
-           -o ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
+           -o ${{ env.FILENAME }}_${{ env.THEME }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - name: Build DOCX with Pandoc von html
         run: |
@@ -130,12 +130,12 @@ jobs:
             --reference-doc=../../themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_${{ env.THEME }}_t=${{ env.BIG_OUTPUT }}_v=${{ env.REVNUMBER }}_${{ env.DATE }}.docx
             
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t=${{ env.BIG_OUTPUT }}_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ env.THEME }}_t=${{ env.BIG_OUTPUT }}_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
