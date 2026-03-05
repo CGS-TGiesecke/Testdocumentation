@@ -85,7 +85,7 @@ Der Update-Prozess, durchgeführt vom Kunden, gestaltet sich wie folgt:
 Empfehlung: Vor jedem Update sind vollständige Backups der Konfiguration und der Datenbank zu erstellen (`SHARED_FOLDER`).
 
 - Stoppen Sie die Applikation: `docker compose down`
-- Führen sie Updates der Konfiguration durch, falls notwendig
+- Führen sie Updates der Konfiguration durch, falls notwendig (siehe "Deployment-Anleitung (Schritt-für-Schritt)"
 - Laden Sie die neuen Images der Applikation von Docker Hub: `docker compose pull`
 -- hierzu ist ggf. ein Login bei Docker Hub notwendig
 - Starten Sie die Anwendung neu: `docker compose up -d`

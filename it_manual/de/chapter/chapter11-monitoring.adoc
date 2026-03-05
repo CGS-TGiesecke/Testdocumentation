@@ -32,13 +32,13 @@ Die Anwendung ist über folgende Schnittstellen und APIs mit anderen Systemen ve
 * RAG-API zur Kommunikation mit dem Vector-Store
 * LLM-API zur Kommunikation mit dem vom Kunden konfigurierten LLM Provider
 * Schnittstelle mit vom Kunden konfigurierte Authentifizierung
+* Schnittstelle mit vom Kunden konfigurierte SharePoint Anbindung
 * (optional) MCP Server API zur Nutzung kundenspezifizierten Suchfunktionen
-
-Die Schnittstellen werden regelmäßig auf ihre Funktionsfähigkeit geprüft und dokumentierte Änderungen am API-Standard werden frühzeitig implementiert.
 
 ==== Backup und Recovery der Applikation
 
 Backup und Recovery der Applikation erfolgt durch den Kunden.
+Im SHARED_FOLDER enthalten sind Datenbank und Konfigurationsdateien.
 
 ==== Überwachung/Monitoring
 

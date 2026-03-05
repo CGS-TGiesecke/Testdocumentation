@@ -85,7 +85,7 @@ Recommendation: Before each update, create complete backups of the configuration
 - Stop the application: `docker compose down`
 - Update the configuration if necessary
 - Download the new application images from Docker Hub: `docker compose pull`
-	-- a Docker Hub login may be required
+	-- a Docker Hub login may be required (see "Deployment Guide (Step-by-Step)")
 - Restart the application: `docker compose up -d`
 - Check correct functionality
 
