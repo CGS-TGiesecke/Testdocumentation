@@ -82,7 +82,7 @@ jobs:
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
           echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
-          echo "OUTPUT_NAME=${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t_${{ env.BIG_OUTPUT }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}" >> $GITHUB_ENV
+          echo "OUTPUT_NAME=${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_t_${{ github.event.inputs.outputType }} }}_v_${{ github.event.inputs.outputType }}_${{ DATE=$(date '+%d.%m.%Y') }}" >> $GITHUB_ENV
 
       - name: Fill metadata template
         run: |
