@@ -26,7 +26,7 @@ Es sind folgende Initialkonfigurationen vorzunehmen:
 - (optional) SharePoint-Anbindung konfigurieren
 - (optional) Reverse Proxy konfigurieren
 
-===== `env.` File
+===== Umgebungsvariablen einrichten (`env.` File)
 
 Die folgenden Werte sind konfigurierbar
 
