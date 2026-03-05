@@ -30,7 +30,7 @@ Es sind folgende Initialkonfigurationen vorzunehmen:
 
 Die folgenden Werte sind konfigurierbar
 
-[cols="1,2,2", options="header"]
+[cols="1,2,2,*", options="header"]
 |===
 | Variable | Pflicht | Beschreibung | Beispielwert(e)
 
