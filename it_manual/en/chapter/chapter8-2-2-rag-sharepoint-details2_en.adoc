@@ -1,5 +1,6 @@
 
-To allow a registered application in the Microsoft Entra Admin Center to access SharePoint resources (e.g., lists, sites, files), some additional steps are required.
+To allow a registered application in the Microsoft Entra Admin Center to access SharePoint 
+resources (e.g., lists, sites, files), some additional steps are required.
 
 ===== Managing SharePoint Permissions
 
@@ -18,11 +19,12 @@ To allow a registered application in the Microsoft Entra Admin Center to access 
 For your app to operate with these permissions, a tenant administrator must grant consent:
 In the API permissions section, click "Grant admin consent for [your directory]".
 
-===== "Sites.Selected" Permission on the SharePoint 
+===== Permissions on SharePoint 
 
 The permissions alone on "Microsoft Graph" are not sufficient. Additionally, permissions must be explicitly granted to 
 the individual SharePoint sites. 
 The permission "Sites.Selected" only allows access to those sites for which permissions have been explicitly granted.
+
 If permissions are to be granted to individual SharePoint sites, this can be done directly through the SharePoint Admin Center 
 or the SharePoint user interface. 
 
@@ -30,30 +32,29 @@ However, if you need to manage many sites or different permissions, using the Po
 
 *Step by Step PowerShell Module:*
 
-*Install Microsoft Graph PowerShell Module (if not already installed):*
+Install Microsoft Graph PowerShell Module (if not already installed):
 ```
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 You may need the role of "SharePoint Administrator" or Global Administrator to perform the PowerShell operations.
 
-*Sign In:*
+Sign In:
 ```
 Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
 ```
 
-*Save the App ID of your registered application:*
+Save the App ID of registered application:
 ```
 $appId = "YOUR-APP-ID"
 ```
 
-*Find the SharePoint Site ID:*
+Find the SharePoint Site ID:
 ```
 $site = Get-MgSite -Filter "displayName eq 'NAME-OF-YOUR-SITE'"
 $siteId = $site.Id
 ```
 
-*Grant permission on the site:*
-
+Grant permission on the site:
 Example for granting Read permissions:
 ```
 $permission = @{

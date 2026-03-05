@@ -21,7 +21,7 @@ ifeval::[{cgs-assist} == 1]
 |Company         |{author}
 |Website         |https://www.cgs-online.de/
 |Support Email   |support@cgs-online.de
-|Phone           |Support phone number
+|Phone           |
 |===
 
 endif::[]

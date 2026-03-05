@@ -1,5 +1,6 @@
 
-Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
+Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung 
+im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
 
 ===== SharePoint-Berechtigungen verwalten
 
@@ -18,11 +19,11 @@ Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrier
 Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
 In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
 
-===== Berechtigung "Sites.Selected" auf SharePoint 
+===== Berechtigungen setzen auf SharePoint 
 
-Die Berechtigungen allein auf "Microsoft Graph" reichen nicht aus. Es müssen zusätzlich,
-die Berechtigungen explizit auf die einzelnen SharePoint-Sites gewährt werden.
-Die Berechtigung "Sites.Selected" erlaubt nur Zugriff auf jene Sites, für die explizit Berechtigungen vergeben wurden.
+Die Berechtigungen allein auf "Microsoft Graph" reichen nicht aus. Es müssen zusätzlich, die Berechtigungen explizit auf die 
+einzelnen SharePoint-Sites gewährt werden. Die Berechtigung "Sites.Selected" erlaubt nur Zugriff auf jene Sites, für die 
+explizit Berechtigungen vergeben wurden.
 
 Wenn die Berechtigungen auf eine einzelne SharePoint-Sites gewährt werden sollen, kann dies direkt über das SharePoint Admin Center oder 
 die SharePoint-Benutzeroberfläche erfolgen. 
@@ -31,30 +32,29 @@ Wenn viele Sites oder unterschiedliche Berechtigungen verwalten werden müssen, 
 
 *Step by Step PowerShell-Modul:* 
 
-*Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden):*
+Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden):
 ```
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 Benötigt wird evtl. die Rolle "SharePoint Administrator" oder Globaler Administrator, um die PowerShell-Operationen auszuführen.
 
-*Anmelden:*
+Anmelden:
 ```
 Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
 ```
 
-*Die App-ID deiner registrierten Anwendung speichern:*
+Die App-ID der registrierten Anwendung speichern:
 ```
 $appId = "IHRE-APP-ID"
 ```
 
-*SharePoint Site ID herausfinden:*
+SharePoint Site ID herausfinden:
 ```
 $site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
 $siteId = $site.Id
 ```
 
-*Berechtigung auf der Site gewähren:*
-
+Berechtigung auf der Site gewähren:
 Beispiel zum Gewähren von Read-Berechtigungen:
 ```
 $permission = @{

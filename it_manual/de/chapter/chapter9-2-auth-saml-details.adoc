@@ -45,7 +45,19 @@ Unter "Einmaliges Anmelden (Single Sign-On)" > muss auf SML umgeschaltet werden.
 *Attribute & Ansprüche*
 
 Diese Daten müssen angelegt werden, damit bei jeder Anmeldung die Benutzerdaten in die Applickation {application} gespiegelt werden können.
-Damit wird sichergestellt das die Applikation immer die neuesten Bnutzerdaten (Vorname, Nachname, EMail) enthält.
+Damit wird sichergestellt das die Applikation immer die neuesten Benutzerdaten (Vorname, Nachname, EMail) enthält.
+
+*SAML Certificates*
+
+Die dort angebotene "Federation Metadata XML" *muss* heruntergeladen und im SHARED_FOLDER *abgelegt* werden und identisch der Angabe "idp_metadata_path" in der `init_config.yaml` sein.
+
+Die Datei enthält:
+
+* Entity ID
+* SSO URL
+* Zertifikate zum Validieren der Signaturen
+
+
 
 
 

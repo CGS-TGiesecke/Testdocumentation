@@ -99,9 +99,9 @@ include::chapter/chapter9-3-auth-pwd_en.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter10-monitoring_en.adoc[]
+include::chapter/chapter10-install_en.adoc[]
 
-include::chapter/chapter11-install_en.adoc[]
+include::chapter/chapter11-monitoring_en.adoc[]
 endif::[]
 
 include::chapter/chapter12-security_en.adoc[]

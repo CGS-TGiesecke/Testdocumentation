@@ -40,12 +40,22 @@ Under "Single Sign-On", the type must be switched to SAML.
 *Basic SAML Configuration*
 
 * *Identifier (Entity ID)*: The unique identifier in the Admin Center.
-* *Reply URL: Application URL*: must match the "redirect_uri" in the init_config.yaml.
+* *Reply URL*: Application URL, must be identical to the value specified for "redirect_uri" in the `init_config.yaml`.
 
 *Attributes & Claims*
 
 These values must be created to ensure that user data is synchronized into the application {application} on every login.
 This ensures the application always contains the latest user data (first name, last name, email).
+
+*SAML Certificates*
+
+The provided "Federation Metadata XML" *must* be downloaded and *placed* in the SHARED_FOLDER. It must be identical to the value specified for "idp_metadata_path" in `init_config.yaml`.
+
+The file contains:
+
+* Entity ID
+* SSO URL
+* Certificates for validating signatures
 
 
 
