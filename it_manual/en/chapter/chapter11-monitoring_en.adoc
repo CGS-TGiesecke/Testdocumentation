@@ -43,3 +43,5 @@ Backup and recovery of the application is performed by the customer.
 ==== Monitoring
 
 Monitoring is performed by the customer.
+Log outputs of the application {application} for troubleshooting are configurable (see "env. file").
+

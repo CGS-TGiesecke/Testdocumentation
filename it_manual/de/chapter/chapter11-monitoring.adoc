@@ -43,4 +43,5 @@ Backup und Recovery der Applikation erfolgt durch den Kunden.
 ==== Überwachung/Monitoring
 
 Überwachung/Monitoring erfolgt durch den Kunden.
+Logausgaben der Applikation {application} für Fehlersuche o.ä. sind konfigurierbar (siehe "env. File").
 
