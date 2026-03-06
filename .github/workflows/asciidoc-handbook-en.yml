@@ -11,14 +11,6 @@ on:
         options:
           - CGS
           - ARC
-      outputType:
-        description: 'Asciidoctor Output type'
-        required: true
-        default: '0'
-        type: choice
-        options:
-          - 0
-          - 1
       version:
         description: 'Asciidoctor PDF Version'
         required: true
@@ -66,7 +58,6 @@ jobs:
             echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
           echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
-          echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
           # Setze Unternehmen statisch
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
@@ -84,7 +75,6 @@ jobs:
             -a revnumber="${{ env.REVNUMBER }}" \
             -a application="${{ env.APPLICATION }}" \
             -a author="${{ env.AUTHOR }}" \
-            -a big-output="${{ env.BIG_OUTPUT }}" \
             -a company="${{ env.COMPANY }}" \
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
@@ -101,7 +91,6 @@ jobs:
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
            -a author="${{ env.AUTHOR }}" \
-           -a big-output="${{ env.BIG_OUTPUT }}" \
            -a company="${{ env.COMPANY }}" \
            -a date="${{ env.DATE }}" \
            -a cgs-assist="${{ env.CGS-ASSIST }}" \
@@ -124,7 +113,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_Typ_${{ env.BIG_OUTPUT }}_${{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_{{ env.DATE }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.html
