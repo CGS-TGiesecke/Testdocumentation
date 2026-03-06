@@ -1,31 +1,20 @@
-name: Extract ARC_IT_REQUIREMENTS_EN adoc to PDF & DOCX
+name: Extract EN IT_REQUIREMENTS adoc to PDF & DOCX
 
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
       pdfTheme:
         description: 'Application Theme ARC'
         required: true
         default: 'ARC'
-        type: choice
-        options:
-          - ARC
+        type: string
+        readOnly: true
       outputType:
         description: 'Output type: 0=it-req(default)'
         required: true
         default: '0'
-        type: choice
-        options:
-          - 0
+        type: string
+        readOnly: true
       version:
         description: 'Application Version'
         required: true

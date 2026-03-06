@@ -15,7 +15,6 @@ sectnums: true
 sectnumlevels: 15
 figure_caption: Abbildung
 imagesdir: image
-big_output: "{{BIG_OUTPUT}}"
 subtitle: 
 arc-assist: "{CGS-ASSIST}"
 cgs-assist: "{ARC-ASSIST}"
