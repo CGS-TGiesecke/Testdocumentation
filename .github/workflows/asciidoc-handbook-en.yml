@@ -3,15 +3,6 @@ name: Build User-Handbook en to html, pdf, docx
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
       pdfTheme:
         description: 'Asciidoctor PDF Theme'
         required: true
