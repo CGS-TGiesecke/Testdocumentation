@@ -1,4 +1,5 @@
-name: Build User-Handbook en to html, pdf, docx
+
+name: Build User-Handbook de to html, pdf, docx
 
 on:
   workflow_dispatch:
@@ -19,8 +20,8 @@ on:
 
   
 env:
-  FILENAME: 'USER_MANUAL_EN'
-  FILEPATH: 'user_manuals/en'
+  FILENAME: 'USER_MANUAL_DE'
+  FILEPATH: 'user_manuals/de'
 
 jobs:
   build:
@@ -45,13 +46,13 @@ jobs:
         run: |
           # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            echo "PRODUCT_TITLE=AI Audit Assist: Userhandbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=AI Audit Assist: Benutzerhandbuch" >> $GITHUB_ENV
             echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
             echo "APPLICATION=AI Audit Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=1" >> $GITHUB_ENV
             echo "CGS-ASSIST=0" >> $GITHUB_ENV
           else
-            echo "PRODUCT_TITLE=CGS Assist: Userhandbook" >> $GITHUB_ENV
+            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - Benutzerhandbuch" >> $GITHUB_ENV
             echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
             echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
@@ -113,7 +114,7 @@ jobs:
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_{{ env.DATE }}
+          name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_${{ env.DATE }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.html
