@@ -22,6 +22,6 @@ jobs:
     steps:
         - run: |
             echo "Ausgewählt:"
-            if [ "${{ github.event.inputs.UC1}}" = "true" ]; then echo " - UC1 Grundsatz - Dokumentenabgleich"; fi
+            if [ "${{ github.event.inputs.UC1 }}" = "true" ]; then echo " - UC1 Grundsatz - Dokumentenabgleich"; fi
             if [ "${{ github.event.inputs.UC2 }}" = "true" ]; then echo " - UC2 Grundsatz - Textanonymisierung"; fi
             if [ "${{ github.event.inputs.UC3 }}" = "true" ]; then echo " - UC3 CGS Intern - Vorlage zur Use Case-Erstellung"; fi
