@@ -17,7 +17,7 @@ image::../images/Abbildung-33.jpg[Navigationsbereich - Dokumente - Baumnavigatio
 
 Die Dokumente können über einen Button heruntergeladen werden und manuell die Ansicht aktualisiert werden. Über eine Hochlade-Funktion können neue Dokumente ins RAG hochgeladen, 
 über den Refresh Button das RAG aktualisiert oder einzelne Dokumente gelöscht werden. Da es bei sehr vielen Dokumenten zu Zeitverzögerungen kommen kann,
- wurde ein Lazy-Loading implementiert. Dadurch können über das Reload Icon die einzelnen Embeddings, also Teildokumente, manuel nachgeladen werden. 
+ wurde ein Lazy-Loading implementiert. Dadurch können über das Reload Icon die einzelnen Embeddings (Informationen (meist Wörter, Sätze, Bilder oder andere Daten) in mathematische Vektoren), manuel nachgeladen werden. 
  
 Beim Hochladen von Dokumenten muss ein Zeilordner ausgewählt oder mit Eingabe eines Bezeichners ein neuer Ordner erstellt werden. Beim Erstellen eines neuen Ordners wird der Anwender 
 über einen roten Text darauf hingewiesen, das der neue Ordner noch keine Berechtigungen besitzt. Diese müssen in der Administration vergeben werden, damit der neue Ordner inklusive

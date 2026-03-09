@@ -15,12 +15,24 @@ image::../images/Abbildung-16.jpg[Administration - User Management, title="Admin
 
 ===== Edit User
 
-When creating a user, a system-wide unique username must be assigned. This is used case sensitive during login. 
-Subsequent changes to the username are not possible.
-In addition, a name, a password must be assigned and a role must be given to the user. The assigned role can be changed at any time.
-User name editing or changing ist not possible.If an assigned role is deleted, it is also removed from the associated users.
+The use of user management depends on the configured authentication method.
 
-image::../images/Abbildung-17.jpg[Administration - User Management - create user, title="Administration - User Management - create user", width=400]
+===== OpenID Connect Authentication with Microsoft Entra ID
+Adding and editing users via the {application} interface is *not* possible.
+Password management via Microsoft.
+Role assignment for {application} via the {application} interface is possible.
+Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
 
-Users cannot be deactivated and can only be removed in the overview table after a confirmed security prompt.
+===== SAML Authentication with Microsoft Entra ID
+Adding and editing users via the {application} interface is *not* possible.
+Password management via Microsoft.
+Role assignment for {application} via the {application} interface is possible.
+Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
+
+===== Local User/Password Management
+Adding and editing users via the {application} interface is possible.
+Password management via the {application} interface is possible.
+Role assignment for {application} via the {application} interface is possible.
+Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
+
 

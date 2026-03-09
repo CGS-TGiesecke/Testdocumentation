@@ -11,6 +11,9 @@ Before executing request, you can select whether the internal contents of the (R
 also be searched in addition to knowledge discovery.
 
 A drop-down menu allows you to select one of the various agents to be used for the query.
+These agents make the use of AI in the company safe, structured, and manageable. They specifically control "what the AI is allowed to do and what not" and provide clear, transparent interfaces to data and systems.
+The AI can *only* access such data as explicitly permitted by the agent (e.g., "search" only, but not "delete").
+No direct and uncontrolled access to company systems is possible.
 
 Permissions on folders and included documents are taken into account when searching via the RAG.
 When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.

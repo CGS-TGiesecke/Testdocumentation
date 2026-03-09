@@ -5,6 +5,9 @@ All activated use cases are displayed here, grouped by area. The assignment of u
 Use cases are lists of use cases stored and approved in the administration, which only need to be filled with specific content before execution.
 These lists facilitate routine requests.
 
+There is also the option to display use cases that must follow a defined sequence in a workflow-based manner. This means that Use Case 2, 
+which depends on Use Case 1 as a prerequisite, becomes available only after Use Case 1 has been executed.
+
 The document formats permitted by the system for use in use cases are: .pdf, .docx, .xlsx, .pptx, and .txt.
 
 image::../images/Abbildung-6.jpg[Navigation area Uses Cases, title="Navigation area Uses Cases", width=400]

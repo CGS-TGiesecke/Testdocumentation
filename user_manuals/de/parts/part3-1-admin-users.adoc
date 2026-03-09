@@ -14,11 +14,22 @@ image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Ad
 
 ===== Benutzer bearbeiten
 
-Beim Erstellen eines Benutzers muss ein systemweit eindeutiger Benutzername vergeben werden. Dieser wird bei der Anmeldung case sensitive verwendet. 
-Eine nachträgliche Änderung das Namen ist nicht möglich.
-Zusätzlich muss ein Passwort vergeben und dem Benutzer eine Rolle zugewiesen werden. Die zugewiesene Rolle kann jederzeit wieder geändert werden. 
-Wird eine zugewiesene Rolle gelöscht, wird diese auch an den zugeordneten Benutzern entfernt.
+Die Nutzung der Benutzerverwaltung ist abhängig von der konfigurierten Authentifizierungsmethode.
 
-image::../images/Abbildung-17.jpg[Administration - Benutzerverwaltung - Benutzer anlegen, title="Administration - Benutzerverwaltung - Benutzer anlegen", width=300]
+===== OpenID Connect Authentifizierung mit Microsoft Entra ID
+Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist nicht möglich.
+Passwortwortverwaltung über Microsoft.
+Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
+Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
 
+===== SAML-Authentifizierung mit Microsoft Entra ID
+Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist nicht möglich.
+Passwortwortverwaltung über Microsoft.
+Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
+Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+
+===== Lokale Benutzer-/Passwortverwaltung
+Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist möglich.
+Passwortwortverwaltung über die Oberfläche des {application} ist möglich.
+Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
 Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.

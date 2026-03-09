@@ -17,7 +17,8 @@ image::../images/Abbildung-33.jpg[Navigation area Documents - tree navigation, t
 
 The documents can be downloaded via a button, and the view can be manually refreshed. New documents can be uploaded to the RAG using an upload function, 
 the RAG can be updated via the refresh button, or individual documents can be deleted. Since processing a large number of documents can cause delays, 
-lazy-loading has been implemented. This allows individual embeddings, i.e., document segments, to be manually reloaded using the reload icon.
+lazy-loading has been implemented. This allows individual embeddings (representations in which information (such as words, sentences, images, or other data ) 
+is converted into mathematical vectors), to be manually reloaded using the reload icon.
 
 When uploading documents, a folder must be selected, or a new folder can be created by entering a name. 
 When creating a new folder, the user is notified by a red message that the new folder does not yet have any permissions. 

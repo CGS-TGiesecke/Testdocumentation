@@ -12,7 +12,7 @@ der Datenbank *zusätzlich* zur Wissensfindung durchsucht werden sollen.
 
 Über ein Drop-Down Fenster besteht die Möglichkeit einen der diversen Agenten auszuwählen, die bei der Abfrage eingesetzt werden sollen.
 Diese Agenten machen einen KI‑Einsatz im Unternehmen sicher, strukturiert und beherrschbar. Sie steuern gezielt, „was die KI darf und was nicht“ und bieten klare, nachvollziehbare Schnittstellen zu Daten und Systemen.
-Die KI kann nur auf solche Daten zugreifen, wie es der Agent explizit erlaubt (z.B. nur „suchen“, aber nicht „löschen“).
+Die KI kann *nur* auf solche Daten zugreifen, wie es der Agent explizit erlaubt (z.B. nur „suchen“, aber nicht „löschen“).
 Es ist also kein direkter unkontrollierter Zugriff auf Unternehmenssysteme möglich.
 
 Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über das RAG berücksichtig.

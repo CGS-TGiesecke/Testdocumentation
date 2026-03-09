@@ -1,9 +1,12 @@
 
 ==== Navigationsbereich "Anwendungsfälle" 
 
-Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt. Die Zordnung der Anwendungsfälle zu den bereichen, erfolgt bei Anlage in der Administration.
+Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt. Die Zordnung der Anwendungsfälle zu den Bereichen, erfolgt bei Anlage in der Administration.
 Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen, die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. 
-Diese Listen erleichtern routinemäßige Anfragen.
+Diese Listen erleichtern routinemäßige Anfragen. 
+
+Es besteht auch die Möglichkeit die Anwendungsfälle die einem Ablauf folgen müssen, workflowbasiert anzuzeigen. Das bedeutet erst wenn Anwendungsfall 1 ausgeführt ist, steht Anwendungsfall 2, 
+dessen Voraussetzung Anwendungsfall 1 ist, zur Verfügung.
 
 Vom System erlaubte Dokumente zur Nutzung im Bereich Anwendungsfälle sind: .pdf .docx .xlsx, .pptx, .txt.
 
