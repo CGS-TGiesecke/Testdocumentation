@@ -94,3 +94,9 @@ role: # geht so nur in pdf
     padding: [12, 12, 12, 12] 
 
 
+.highlight {
+    font_color: '3f6172'   # für die Textfarbe
+    background_color: 'ECECEC'  # als Hintergrund
+    border_radius: 5
+    padding: [12, 12, 12, 12] 
+}
