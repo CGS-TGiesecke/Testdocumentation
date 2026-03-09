@@ -8,31 +8,28 @@ Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemsei
 image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
 
 ==== Benutzerverwaltung
-Auf dieser Seiten werden Benutzer angelegt und bearbeitet. 
+
+Die Nutzung der Benutzerverwaltung ist abhängig von der konfigurierten Authentifizierungsmethode. 
 
 image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 
-===== Benutzer bearbeiten
-
-Die Nutzung der Benutzerverwaltung ist abhängig von der konfigurierten Authentifizierungsmethode.
-
-====== OpenID Connect Authentifizierung mit Microsoft Entra ID
+*OpenID Connect Authentifizierung mit Microsoft Entra ID*
 
 * Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
 * Passwortwortverwaltung über Microsoft.
 * Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
 * Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
-  Nach erneuter Anmeldung werden die Daten synchrinisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
+  Nach erneuter Anmeldung werden die Daten synchronisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
 
-====== SAML-Authentifizierung mit Microsoft Entra ID
+*SAML-Authentifizierung mit Microsoft Entra ID*
 
 * Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
 * Passwortwortverwaltung über Microsoft.
 * Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
 * Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
-  Nach erneuter Anmeldung werden die Daten synchrinisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
+  Nach erneuter Anmeldung werden die Daten synchronisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
 
-====== Lokale Benutzer-/Passwortverwaltung
+*Lokale Benutzer-/Passwortverwaltung*
 
 * Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist möglich.
 * Passwortwortverwaltung über die Oberfläche des {application} ist möglich.

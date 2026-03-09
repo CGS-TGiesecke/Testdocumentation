@@ -9,15 +9,11 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 ==== User Management
 
-On this site, users can be created and edited. 
+The use of user management depends on the configured authentication method.
 
 image::../images/Abbildung-16.jpg[Administration - User Management, title="Administration - User Management", width=400]
 
-===== Edit User
-
-The use of user management depends on the configured authentication method.
-
-====== OpenID Connect Authentication with Microsoft Entra ID
+*OpenID Connect Authentication with Microsoft Entra ID*
 
 * Adding and editing users via the {application} interface is *not* possible.
 * Password management via Microsoft.
@@ -25,7 +21,7 @@ The use of user management depends on the configured authentication method.
 * Users can only be removed from the {application} overview table after confirming a security prompt.
   After logging in again, the data will be synchronized and the user may be present again in {application}.
 
-====== SAML Authentication with Microsoft Entra ID
+*SAML Authentication with Microsoft Entra ID*
 
 * Adding and editing users via the {application} interface is *not* possible.
 * Password management via Microsoft.
@@ -33,7 +29,7 @@ The use of user management depends on the configured authentication method.
 * Users can only be removed from the {application} overview table after confirming a security prompt.
   After logging in again, the data will be synchronized and the user may be present again in {application}.
 
-====== Local User/Password Management
+*Local User/Password Management*
 
 * Adding and editing users via the {application} interface is possible.
 * Password management via the {application} interface is possible.
