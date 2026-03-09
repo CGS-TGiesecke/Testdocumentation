@@ -1,0 +1,40 @@
+name: Build IT-Handbook de html, pdf, docx
+
+on:
+  workflow_dispatch:
+    inputs:
+      use_case:
+        description: "Welcher Use Case?"
+        required: true
+        type: choice
+        options:
+          - UC1
+          - UC2
+          - UC3
+      input2_for_uc1:
+        description: "Spezialinput für UC1"
+        required: false
+        type: string
+      input2_for_uc2:
+        description: "Spezialinput für UC2"
+        required: false
+        type: string
+      input2_for_uc3:
+        description: "Spezialinput für UC3"
+        required: false
+        type: string
+
+jobs:
+  check-use-case:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check input
+        run: |
+          echo "Use Case: ${{ github.event.inputs.use_case }}"
+          if [[ "${{ github.event.inputs.use_case }}" == "UC1" ]]; then
+            echo "UC1 Input: ${{ github.event.inputs.input2_for_uc1 }}"
+          elif [[ "${{ github.event.inputs.use_case }}" == "UC2" ]]; then
+            echo "UC2 Input: ${{ github.event.inputs.input2_for_uc2 }}"
+          elif [[ "${{ github.event.inputs.use_case }}" == "UC3" ]]; then
+            echo "UC3 Input: ${{ github.event.inputs.input2_for_uc3 }}"
+          fi
