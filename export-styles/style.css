@@ -153,3 +153,11 @@ pre, code {
   white-space: pre; /* erhält Zeilenumbrüche und Leerzeichen */
   overflow-x: auto;
 }
+
+.highlight {
+  background-color: #e0e0e0; /* Hellgrauer Hintergrund */
+  color: #000000;           /* Schwarze Schrift */
+  width: 100vw;             /* Über die gesamte Breite */
+  padding: 20px;            /* Etwas Innenabstand */
+  box-sizing: border-box;   
+}
