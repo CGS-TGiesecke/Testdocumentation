@@ -91,7 +91,7 @@ jobs:
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+            -a stylesheet=../../themes/html-style.css \
             -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
 
       - name: Build PDF with Asciidoctor-pdf
