@@ -18,21 +18,24 @@ image::../images/Abbildung-16.jpg[Administration - User Management, title="Admin
 The use of user management depends on the configured authentication method.
 
 ===== OpenID Connect Authentication with Microsoft Entra ID
-Adding and editing users via the {application} interface is *not* possible.
-Password management via Microsoft.
-Role assignment for {application} via the {application} interface is possible.
-Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
+
+* Adding and editing users via the {application} interface is *not* possible.
+* Password management via Microsoft.
+* Role assignment for {application} via the {application} interface is possible.
+* Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
 
 ===== SAML Authentication with Microsoft Entra ID
-Adding and editing users via the {application} interface is *not* possible.
-Password management via Microsoft.
-Role assignment for {application} via the {application} interface is possible.
-Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
+
+* Adding and editing users via the {application} interface is *not* possible.
+* Password management via Microsoft.
+* Role assignment for {application} via the {application} interface is possible.
+* Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
 
 ===== Local User/Password Management
-Adding and editing users via the {application} interface is possible.
-Password management via the {application} interface is possible.
-Role assignment for {application} via the {application} interface is possible.
-Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
+
+* Adding and editing users via the {application} interface is possible.
+* Password management via the {application} interface is possible.
+* Role assignment for {application} via the {application} interface is possible.
+* Users cannot be deactivated and can only be removed from the overview table after confirming a security prompt.
 
 
