@@ -1,4 +1,4 @@
-name: Build IT-Handbook de html, pdf, docx
+name: Build Catalog
 
 on:
   workflow_dispatch:
