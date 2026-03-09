@@ -80,7 +80,7 @@ jobs:
             -a date="${{ env.DATE }}" \
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+            -a stylesheet=../../themes/html-style.css \
             -a imagesdir=images  \
             -o ${{ env.FILENAME }}_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH}}/index.adoc
 

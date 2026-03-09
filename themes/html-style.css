@@ -1,27 +1,43 @@
 body {
-  font-family: 'Liberation Serif', Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #232323;
-  background: white;
-  margin: 2cm;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Liberation Sans', Arial, sans-serif;
-  color: #41396E;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  color: #222222;
+  font-family: 'Noto Serif', serif;
+  margin: 1.27cm;
 }
 
 h1 {
-  border-bottom: 2px solid #174EA6;
-  padding-bottom: 0.2em;
+  font-size: 23px;
+  color: #3f6172;
+  font-style: italic;
 }
 
 h2 {
-  border-bottom: 1px solid #CCC;
-  padding-bottom: 0.15em;
+  font-size: 21px;
+  color: #3f6172;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 19px;
+  color: #3f6172;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 15px;
+  color: #3f6172;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 23px;
+  color: #3f6172;
+  font-style: italic;
+}
+
+h6 {
+  font-size: 12px;
+  color: #3f6172;
+  font-style: italic;
 }
 
 a {
@@ -59,23 +75,17 @@ ul, ol {
   margin-bottom: 1em;
 }
 
-table {
+table, th, td {
+  border: 1px solid #EEEEEE;
   border-collapse: collapse;
-  width: auto;
-  table-layout: auto;
-  display: inline-table;
-  margin: 1em 0;
-  font-size: 0.96em;
 }
-
-th, td {
-  border: 1px solid #dee2e6;
-  padding: 0.5em 1em;
-  text-align: left;
-}
-
 th {
-  background: #e3f2fd;
+  background-color: #ECECEC;
+  color: #3f6172;
+  font-style: italic;
+}
+td {
+  color: #222222;
 }
 
 img {
@@ -155,9 +165,8 @@ pre, code {
 }
 
 .highlight {
-  background-color: #e0e0e0; /* Hellgrauer Hintergrund */
-  color: #000000;           /* Schwarze Schrift */
-  width: 100vw;             /* Über die gesamte Breite */
-  padding: 20px;            /* Etwas Innenabstand */
-  box-sizing: border-box;   
+  color: #3f6172;
+  background-color: #ECECEC;
+  border-radius: 5px;
+  padding: 12px;
 }
