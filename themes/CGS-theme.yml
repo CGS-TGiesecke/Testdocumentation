@@ -86,10 +86,4 @@ image-caption:
   margin_top: 4
   margin_bottom: 8
 
-.highlight {
-  background-color: #e0e0e0; /* Hellgrauer Hintergrund */
-  color: #000000;           /* Schwarze Schrift */
-  width: 100vw;             /* Über die gesamte Breite */
-  padding: 20px;            /* Etwas Innenabstand */
-  box-sizing: border-box;   
-}
+
