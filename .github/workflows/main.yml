@@ -3,38 +3,25 @@ name: Build Catalog
 on:
   workflow_dispatch:
     inputs:
-      use_case:
-        description: "Welcher Use Case?"
-        required: true
-        type: choice
-        options:
-          - UC1
-          - UC2
-          - UC3
-      input2_for_uc1:
-        description: "Spezialinput für UC1"
+      UC1:
+        description: "UC1"
         required: false
-        type: string
-      input2_for_uc2:
-        description: "Spezialinput für UC2"
+        type: boolean
+      UC2:
+        description: "UC2"
         required: false
-        type: string
-      input2_for_uc3:
-        description: "Spezialinput für UC3"
+        type: boolean
+      UC3:
+        description: "UC3"
         required: false
-        type: string
-
+        type: boolean
+        
 jobs:
-  check-use-case:
+  show-selection:
     runs-on: ubuntu-latest
     steps:
-      - name: Check input
-        run: |
-          echo "Use Case: ${{ github.event.inputs.use_case }}"
-          if [[ "${{ github.event.inputs.use_case }}" == "UC1" ]]; then
-            echo "UC1 Input: ${{ github.event.inputs.input2_for_uc1 }}"
-          elif [[ "${{ github.event.inputs.use_case }}" == "UC2" ]]; then
-            echo "UC2 Input: ${{ github.event.inputs.input2_for_uc2 }}"
-          elif [[ "${{ github.event.inputs.use_case }}" == "UC3" ]]; then
-            echo "UC3 Input: ${{ github.event.inputs.input2_for_uc3 }}"
-          fi
+        - run: |
+            echo "Ausgewählt:"
+            if [ "${{ github.event.inputs.UC1}}" = "true" ]; then echo " - UC1"; fi
+            if [ "${{ github.event.inputs.UC2 }}" = "true" ]; then echo " - UC2"; fi
+            if [ "${{ github.event.inputs.UC3 }}" = "true" ]; then echo " - UC3"; fi
