@@ -16,23 +16,25 @@ image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Ad
 
 Die Nutzung der Benutzerverwaltung ist abhängig von der konfigurierten Authentifizierungsmethode.
 
-===== OpenID Connect Authentifizierung mit Microsoft Entra ID
+====== OpenID Connect Authentifizierung mit Microsoft Entra ID
 
-* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist nicht möglich.
+* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
 * Passwortwortverwaltung über Microsoft.
 * Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
+  Nach erneuter Anmeldung werden die Daten synchrinisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
 
-===== SAML-Authentifizierung mit Microsoft Entra ID
+====== SAML-Authentifizierung mit Microsoft Entra ID
 
-* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist nicht möglich.
+* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
 * Passwortwortverwaltung über Microsoft.
 * Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
+  Nach erneuter Anmeldung werden die Daten synchrinisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
 
-===== Lokale Benutzer-/Passwortverwaltung
+====== Lokale Benutzer-/Passwortverwaltung
 
 * Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist möglich.
 * Passwortwortverwaltung über die Oberfläche des {application} ist möglich.
 * Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nicht deaktiviert werden und nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, entfernt werden.
+* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
