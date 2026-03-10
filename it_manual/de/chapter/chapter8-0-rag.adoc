@@ -9,14 +9,14 @@ Datenhaltung:
 
 *Alle Daten liegen auf dem Kundenserver.*
 
-Das RAG (Retrieval-Augmented Generation) bietet die Möglichkeit zur Erweiterung der Informationsquellen im
+Das RAG (Retrieval-Augmented Generation) bietet die Möglichkeit aktuelle, überprüfbare Informationen im
 ifeval::[{cgs-assist} == 1]
  KI Chat
 endif::[]
 ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
- oder bei der Nutzung von Use Cases um zusätzliche Verzeichnisse aus dem Kundenintranet.
+ auf eigener Datenbasis zu nutzen und in der Dokumentenansicht die Transparenz woher die Information stammen.
 Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbindung, die in Vorbereitung einer Auslieferung,
 nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  

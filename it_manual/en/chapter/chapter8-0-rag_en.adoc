@@ -9,16 +9,16 @@ Data storage:
 
 *All data resides on the customer’s server.*
 
-RAG (Retrieval-Augmented Generation) enables the extension of information sources within
+RAG (Retrieval-Augmented Generation) enables the use of current, verifiable information in
 ifeval::[{cgs-assist} == 1]
- AI Chat
+ KI Chat
 endif::[]
 ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
-or when using use cases by adding additional directories from the customer intranet.
-The {application} application supports various data integration options, which can be configured prior to delivery according to the customer's requirements.
-
+ using your own data basis and provides transparency in the document view regarding the source of the information.
+The application {application} supports various options for data integration, which can be configured according to 
+the requirements present at the customer's site in preparation for delivery.
 
 {application} supports:
 

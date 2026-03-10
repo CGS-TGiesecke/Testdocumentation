@@ -12,7 +12,7 @@ Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit
 
 Für den produktiven Betrieb der Applikation {application} gelten folgende, lastbedingte Mindestanforderungen:
  
-*Entry Level (RAG, 8 GB RAM)*
+===== Entry Level (RAG, 8 GB RAM)
 
 Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen:
 
@@ -24,7 +24,7 @@ Für kleinere Datenmengen und geringe bis moderate Nutzerzahlen:
 | *Nutzer*					| 1-5
 |===
 
-*Mid-Tier Level (RAG, 32 GB RAM)*
+===== Mid-Tier Level (RAG, 32 GB RAM)
 
 Für wachsende Datenmengen und höhere Nutzerzahlen:
 
@@ -36,7 +36,7 @@ Für wachsende Datenmengen und höhere Nutzerzahlen:
 | *Nutzer*					| 10-50
 |===
 
-*High-End Level (RAG, 64 GB RAM)*
+===== High-End Level (RAG, 64 GB RAM)
 
 Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 
@@ -47,6 +47,7 @@ Für große Datenmengen, hohe Nutzerzahlen oder rechenintensive Aufgaben:
 | *Szenarien*				| über 5 GB Dokumente
 | *Nutzer*					| 50+
 |===
+
 
 ==== Betriebssystem
 

@@ -56,6 +56,8 @@ endif::[]
 
 endif::[]
 
+include::chapter/chapter7-components.adoc[]
+
 include::chapter/chapter8-0-rag.adoc[]
 
 ifeval::[{big-output} > 0]
@@ -107,7 +109,6 @@ include::chapter/chapter17-faq.adoc[]
 endif::[]
 
 ifeval::[{big-output} > 1]
-include::chapter/chapter18-apendix.adoc[]
 
 <<<
 
