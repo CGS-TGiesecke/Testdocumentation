@@ -48,3 +48,50 @@ AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
 Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 ```
+
+===== Identifizierung mit Amazon Resource Name (ARNs)
+
+Amazon Resource Names (ARNs) identifizieren AWS-Ressourcen eindeutig. Müssen Ressourcen eindeutig über ganz AWS hinweg spezifiziert werden, 
+wie etwa in IAM-Richtlinien, Amazon Relational Database Service (Amazon RDS)-Tags und API-Aufrufe, dann wird eine ARN benötigt.
+
+Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
+
+*Beispiel:*
+```
+arn:partition:service:region:account-id:resource-type/<resource-id>
+
+arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
+```
+
+====== Unterstützte Modelle
+ 
+*OpenAI OSS*
+ 
+Es werden beide verfügbaren Models unterstützt:
+
+|===
+| Modell | Max Tokens 
+
+| gpt-oss-20b 
+| 128k
+
+| gpt-oss-120b 		
+| 128k 
+|===
+ 
+*Qwen*
+ 
+Es werden alle verfügbaren Qwen-Modelle unterstützt:
+
+|===
+| Modell | Max Tokens 
+
+| Qwen3-235B-A22B-2507-Instruct) 
+| 260k
+
+| Qwen3-32B 		
+| 16k 
+ 
+| Qwen3-Coder-30B-A3B-Instruct 		
+| 260k 
+|===
