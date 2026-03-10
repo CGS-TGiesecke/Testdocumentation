@@ -13,7 +13,7 @@ Obligatorisch für Produktion. Zertifikate:
 
 **Ausgehende Verbindungen:**
 
-- **Immer:** Docker Hub / {author} Registry
+- **Immer:** Docker Hub / Repository
 - **LLM-Provider:** Je nach Anbieter
 - **Lokale Modelle:** Interne Verbindung
 

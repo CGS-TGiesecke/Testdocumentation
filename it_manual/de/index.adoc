@@ -28,8 +28,6 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter3-1-network-details.adoc[]
 endif::[]
 
-include::chapter/chapter4-0-third-components.adoc[]
-
 include::chapter/chapter4-1-llm-advice.adoc[]
 
 include::chapter/chapter5-0-llm.adoc[]
@@ -108,12 +106,9 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter17-faq.adoc[]
 endif::[]
 
-ifeval::[{big-output} > 1]
-
 <<<
 
 include::chapter/zuletzt_checklist.adoc[]
-endif::[]
 
 <<<
 

@@ -23,13 +23,13 @@ h3 {
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 17px;
   color: #3f6172;
   font-style: italic;
 }
 
 h5 {
-  font-size: 23px;
+  font-size: 15px;
   color: #3f6172;
   font-style: italic;
 }
@@ -122,7 +122,7 @@ ol {
   list-style-type: decimal; /* Zahlen */
 }
 li {
-  margin-bottom: .4em; /* Abstand zwischen Listeneinträgen */
+  margin-bottom: .2em; /* Abstand zwischen Listeneinträgen */
 }
 ul ul, ol ul, ul ol, ol ol {
   margin-top: 0.3em;

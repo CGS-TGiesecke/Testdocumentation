@@ -37,7 +37,7 @@ Die folgenden Werte sind konfigurierbar
 | SHARED_FOLDER
 | Ja
 | Pfad für gemeinsames Verzeichnis
-| `/opt/cgs-assist/shared`
+| `/opt/assist/shared`
 
 | LOG_LEVEL
 | Nein
