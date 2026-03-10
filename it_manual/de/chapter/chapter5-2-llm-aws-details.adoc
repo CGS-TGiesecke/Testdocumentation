@@ -63,7 +63,7 @@ arn:partition:service:region:account-id:resource-type/<resource-id>
 arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 ```
 
-====== Unterstützte Modelle
+===== Unterstützte Modelle
  
 *OpenAI OSS*
  

@@ -1,75 +1,45 @@
 
-===== Step-by-Step: Setting up AWS Bedrock
+===== Step-by-Step: Setting up Azure OpenAI Service
 
-====== Step 1: Enable AWS Bedrock
+====== Step 1: Create Azure OpenAI Resource
 
-1. *Open AWS Console:* (https://console.aws.amazon.com)
-2. *Navigate to Bedrock:* Search for "Bedrock"
-3. *Select region:* e.g., eu-central-1 (Frankfurt), us-east-1
-4. *Enable Model Access:*
-   - Navigate to "Model access"
-   - Click on "Manage model access"
-   - Enable Anthropic Claude models
-   - Click on "Save changes"
+1. *Open Azure Portal:* (https://portal.azure.com)
+2. *Create resource:*
+   - Click "+ Create a resource"
+   - Search for "Azure OpenAI"
+   - Click "Create"
+3. *Resource configuration:*
+   - *Subscription:* Select your Azure subscription
+   - *Resource group:* Create a new or use existing
+   - *Region:* Choose a region (e.g., West Europe, North Europe)
+   - *Name:* Assign a unique name (e.g., `xxx-assist-openai-prod`)
+   - *Pricing tier:* Standard S0 or higher
+4. *Review and create:* Click "Review + Create" then "Create"
 
-====== Step 2: Set up IAM permissions
+====== Step 2: Deploy Models in Azure AI Foundry
 
-Create an IAM user with the following policy:
+1. *Open Azure AI Foundry:* (https://ai.azure.com)
+2. *Model deployment:*
+   - Navigate to "Deployments"
+   - Click "+ Create new deployment"
+3. *Recommended models:*
+   - *Main model:* `gpt-5.1` or higher 
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModel",
-        "bedrock:InvokeModelWithResponseStream"
-      ],
-      "Resource": "arn:aws:bedrock:*::foundation-model/*"
-    }
-  ]
-}
-```
+====== Step 3: Get API Credentials
 
-====== Step 3: Generate Access Keys
-
-1. IAM Console → Users → Your user → Security credentials
-2. Create access key
-3. *Note for later configuration in the application:*
-   - AWS Access Key ID
-   - AWS Secret Access Key
-   - AWS Region
-   - Model ID (e.g., `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+1. In Azure Portal → Your OpenAI Resource → "Keys and Endpoint"
+2. *Note for later configuration in the application:*
+   - API key
+   - Endpoint (e.g., https://your-resource-name.openai.azure.com/)
+   - Region (e.g., westeurope)
+   - Deployment name of the models
 
 *Example:*
 
-```bash
-AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
-AWS Region: eu-central-1
-Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 ```
-*Dimensioning token rate limits*
+Endpoint: https://xxx-assist-openai-prod.openai.azure.com/
+API Key: 1234567890abcdef...
+Region: westeurope
+Deployment Name: gpt-5.1
+```
 
-Rules of thumb for TPM (Tokens per Minute):
-
-|===
-| User Scenario      | Recommended TPM    | Rationale
-
-| 1–5 users (test)   
-| 30,000 – 50,000    
-| Sufficient for testing
-
-| 10–25 users        
-| 80,000 – 120,000   
-| Moderate usage
-
-| 25–50 users        
-| 150,000 – 250,000  
-| Production environment
-
-| 50+ users          
-| 300,000+           
-| High load
-|===
