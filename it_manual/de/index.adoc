@@ -18,8 +18,6 @@
 :cgs-assist: {cgs-assist}
 :big-output: {big-output}
 
-include::chapter/chapter0-0-intro.adoc[]
-
 include::chapter/chapter1-about.adoc[]
 
 include::chapter/chapter2-0-req-general.adoc[]
@@ -57,10 +55,6 @@ include::chapter/chapter5-3-llm-local-details.adoc[]
 endif::[]
 
 endif::[]
-
-include::chapter/chapter6-hardware.adoc[]
-
-include::chapter/chapter7-components.adoc[]
 
 include::chapter/chapter8-0-rag.adoc[]
 

@@ -17,6 +17,20 @@ Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stell
 die LLM-Infrastruktur des Kunden zurück. Damit {application} ein Sprachmodell nutzen kann, muss eine funktionsfähige Anbindung 
 an ein unterstütztes LLM eingerichtet werden.
 
+==== Systemkomponenten 
+
+Die Lösung besteht aus folgenden Komponenten:
+
+* *Web-/API-Server:* AI Audit Assist Backend, LLM API, RAG API, Caddy
+* *Worker:* Celery-Worker für asynchrone Tasks
+* *Redis:* Message-Broker und Caching
+* *Datenbank:* SQLite
+* *Vector-Store:* ChromaDB für RAG
+* *Kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds (optional)
+
+*Deployment:* Über Docker auf Linux-Server.
+
+
 ==== Optionale/kundenspezifische Implementierungen/Erweiterungen
 
 ===== Agents und MCP
