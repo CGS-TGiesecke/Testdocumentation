@@ -30,8 +30,7 @@ Die Lösung besteht aus folgenden Komponenten:
 
 *Deployment:* Über Docker auf Linux-Server.
 
-
-==== Optionale/kundenspezifische Implementierungen/Erweiterungen
+==== Optionale kundenspezifische Implementierungen bzw.Erweiterungen
 
 ===== Agents und MCP
 
@@ -45,3 +44,18 @@ Weitere Anwendungsbeispiele:
 
 - öffentliche Feeds ausgelesen und automatisiert innerhalb von {application} zur Verfügung stellen
 - eingehendes E-Mails kategorisieren, inkl. Anhängen bewerten und priorisieren
+
+==== Begriffsdefinitionen und Abkürzungen
+
+Im Folgenden werden zentrale Begriffe und Abkürzungen aufgeführt, die in diesem Handbuch verwendet werden:
+
+- Applikation {application}: Die in diesem Handbuch behandelte KI-Plattform für den Mittelstand
+- Admin: IT-Administrator mit erweiterten Zugriffsrechten auf die Anwendung und zugehörige Systeme
+- User: Allgemeiner Benutzer der Anwendung mit eingeschränkten Rechten
+- Backup: Datensicherung zur Wiederherstellung im Fall eines Ausfalls oder Datenverlusts
+- Restore: Wiederherstellung von gesicherten Daten.
+- DMS: Dokumenten Management System ist eine hi­e­r­ar­chische Dokumentenablage
+- API: Application Programming Interface ist Programmierschnittstelle zur Integration mit anderen Systemen.
+- LLM : Large Language Models sind Sprachmodelle zur Textgenerierung
+- RAG : Retrieval-Augmented Generation ist ein Softwaresystem das Informationen aus LLM "aufbereitet" und Anworten generiert
+- MCP : Model Context Protocol ist ein Open-Source-Standard zur Verbindung von KI-Anwendungen mit externen Systemen
