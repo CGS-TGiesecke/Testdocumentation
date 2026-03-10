@@ -4,6 +4,8 @@
 ==== Name und Version der Applikation
 
 Die in diesem Handbuch beschriebene Anwendung trägt den Namen {application} und liegt in der aktuellen Version {revnumber} vom {revdate} vor.
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen Voraussetzungen für die Bereitstellung 
+und den Betrieb der AI Audit Assist Plattform beim Kunden.
 
 ==== Übersicht und Funktionen
 
