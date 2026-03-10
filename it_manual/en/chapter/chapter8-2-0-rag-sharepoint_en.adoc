@@ -1,5 +1,5 @@
 
-==== SharePoint Integration via Microsoft Entra ID
+==== SharePoint Integration with Microsoft Entra ID
 
 The integration of SharePoint must be implemented via an API using the customer’s data.
 In SharePoint, individual areas are referred to as sites. For example, when a new group is created in MS Teams, SharePoint automatically creates a corresponding SharePoint site linked to this group.

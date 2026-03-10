@@ -35,7 +35,7 @@ Erstellen Sie einen IAM-User mit folgender Policy:
 
 1. IAM Console → Users → Ihr User → Security credentials
 2. Create access key
-3. *Notieren Sie für die spätere Konfiguration in der Appllikation:*
+3. *Notieren Sie für die spätere Konfiguration in der Applikation:*
    * AWS Access Key ID
    * AWS Secret Access Key
    * AWS Region

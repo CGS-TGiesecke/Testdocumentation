@@ -14,7 +14,7 @@ The necessary information for connecting {application} with the customer's SAML 
 * *Secrets:* Access keys (can be time-limited)
 
 These must be stored in the `init_config.yaml` (see "Initial Application Configuration").
-This information corresponds to the details used in "Sharepoint integration via Microsoft Entra ID" or "OpenID Connect authentication with Microsoft Entra ID".
+This information corresponds to the details used in "Sharepoint integration with Microsoft Entra ID" or "OpenID Connect authentication with Microsoft Entra ID".
 
 If this information is *not* available, the customer must first register the application {application} in the Microsoft Entra Admin Center.
 

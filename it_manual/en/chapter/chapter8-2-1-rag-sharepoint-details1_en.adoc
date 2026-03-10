@@ -1,5 +1,5 @@
 
-===== Registration Steps in Microsoft Entra ID Admin Center
+===== Registration Steps in Microsoft Entra Admin Center
 
 *Sign-in*
 

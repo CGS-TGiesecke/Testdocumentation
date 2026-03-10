@@ -33,14 +33,15 @@ multiple organizations. The default setting is "Single tenant".
 ```
 Note: Record/copy these values for your application configuration in `init_config.yaml`.
 ```
-====== Configure Basic SAML Data in Entra ID
+
+*Configure Basic SAML Data*
 
 Under "Single Sign-On", the type *must* be switched to SAML.
 
 *Basic SAML Configuration*
 
 * *Identifier (Entity ID)*: The unique identifier in the Admin Center.
-* *Reply URL*: Application URL, must be identical to the value specified for "redirect_uri" in the `init_config.yaml`.
+* *Redirect-URL*: Application URL, must be identical to the value specified for "redirect_uri" in the `init_config.yaml`.
 
 *Attributes & Claims*
 

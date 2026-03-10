@@ -1,5 +1,5 @@
 
-===== Registration Steps in Microsoft Entra ID Admin Center
+===== Registration Steps in Microsoft Entra Admin Center
 
 *Sign-in*
 
@@ -17,7 +17,7 @@ Sign in to the Microsoft Entra ID Admin Center with an account that has administ
 
 * Name: Choose a name for the application. *Suggestion:* {application}
 * Supported account types: Decide whether the application should support only internal users (single organization), external users, or multiple organizations. The default is "Single tenant – CGS mbH".
-* Redirect URI: must be entered (URL for redirection to {application}, corresponds to 'redirect_uri' in the `init_config.yaml`)
+* Redirect-URL: must be entered (URL for redirection to {application}, corresponds to 'redirect_uri' in the `init_config.yaml`)
    ** Select "Web"
    ** Use "only company users" option
 

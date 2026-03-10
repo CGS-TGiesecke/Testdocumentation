@@ -28,7 +28,7 @@
 *Schritt 3: API-Credentials auslesen*
 
 1. Im Azure Portal → Ihre OpenAI Ressource → "Keys and Endpoint"
-2. *Notieren Sie für die spätere Konfiguration in der Appllikation:*
+2. *Notieren Sie für die spätere Konfiguration in der Applikation:*
    * API Key
    * Endpoint (z. B. `https://ihr-ressourcenname.openai.azure.com/`)
    * Region (z. B. `westeurope`)

@@ -8,7 +8,7 @@ The necessary data for connecting {application} with the customer’s OpenID Con
 * *Tenant ID:* The organization/tenant ID.
 * *Application ID (Client):* The client ID of the application.
 * *Secrets:* Access keys (can be time-limited)
-* *Redirect URI:* Redirect after successful login to {application}
+* *Redirect-URL:* Redirect after successful login to {application}
 
 These must be stored in the `init_config.yaml` file (see "Initial Configuration of the Application").
 This information matches the configuration for "SharePoint Integration via Microsoft Entra ID" or "SAML Authentication with Microsoft Entra ID."
