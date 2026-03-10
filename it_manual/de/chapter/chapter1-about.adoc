@@ -30,7 +30,7 @@ Die Lösung besteht aus folgenden Komponenten:
 
 *Deployment:* Über Docker auf Linux-Server.
 
-==== Optionale kundenspezifische Implementierungen bzw.Erweiterungen
+==== Optionale kundenspezifische Implementierungen bzw. Erweiterungen
 
 ===== Agents und MCP
 

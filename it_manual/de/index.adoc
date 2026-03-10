@@ -1,22 +1,7 @@
-= {product_title}
-:doctype: book
-:author: 
-:revdate: {date}
-:revnumber: {revnumber}
-:toc: left
-:toc-interactive: true
-:toc-mode: offcanvas
-:toc-mode: responsive
-:toc-title: Inhaltsverzeichnis
-:toclevels: 15
-:figure-caption: Abbildung
-:imagesdir: image
-:sectnums:
-:sectnumlevels: 15
-:application: {application}
-:arc-assist: {arc-assist}
-:cgs-assist: {cgs-assist}
-:big-output: {big-output}
+== {application} – Technische Bereitstellungsanforderungen
+
+Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die 
+technischen Voraussetzungen für die Bereitstellung und den Betrieb der AI Audit Assist Plattform beim Kunden.
 
 include::chapter/chapter1-about.adoc[]
 
