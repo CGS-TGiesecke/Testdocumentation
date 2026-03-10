@@ -54,8 +54,6 @@ endif::[]
 
 endif::[]
 
-include::chapter/chapter7-components.adoc[]
-
 include::chapter/chapter8-0-rag.adoc[]
 
 ifeval::[{big-output} > 0]

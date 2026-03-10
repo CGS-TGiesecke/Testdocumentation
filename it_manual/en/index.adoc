@@ -18,8 +18,6 @@
 :cgs-assist: {cgs-assist}
 :big-output: {big-output}
 
-include::chapter/chapter0-0-intro_en.adoc[]
-
 include::chapter/chapter1-about_en.adoc[]
 
 include::chapter/chapter2-0-req-general_en.adoc[]
@@ -29,8 +27,6 @@ include::chapter/chapter3-0-network_en.adoc[]
 ifeval::[{big-output} > 0]
 include::chapter/chapter3-1-network-details_en.adoc[]
 endif::[]
-
-include::chapter/chapter4-0-third-components_en.adoc[]
 
 include::chapter/chapter4-1-llm-advice_en.adoc[]
 
@@ -57,10 +53,6 @@ include::chapter/chapter5-3-llm-local-details_en.adoc[]
 endif::[]
 
 endif::[]
-
-include::chapter/chapter6-hardware_en.adoc[]
-
-include::chapter/chapter7-components_en.adoc[]
 
 include::chapter/chapter8-0-rag_en.adoc[]
 
@@ -112,13 +104,10 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter17-faq_en.adoc[]
 endif::[]
 
-ifeval::[{big-output} > 1]
-include::chapter/chapter18-apendix_en.adoc[]
 
 <<<
 
 include::chapter/zuletzt_checklist_en.adoc[]
-endif::[]
 
 <<<
 

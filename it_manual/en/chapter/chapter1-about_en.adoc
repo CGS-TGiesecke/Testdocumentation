@@ -4,6 +4,8 @@
 ==== Name and Version of the Application
 
 The application described in this manual is called {application} and is currently available in version {revnumber} as of {revdate}.
+This document is intended for IT infrastructure and system administrators and describes the technical requirements 
+for the deployment and operation of the {application} platform at the customer site.
 
 ==== Overview and Features
 {application} is a browser-based web application that is hosted locally at the customer's site.
@@ -15,7 +17,20 @@ With {application}, users can efficiently analyze documents, make queries, and p
 {application} is delivered without its own AI language model(s). Instead, the tool accesses the customer's LLM infrastructure via an API connection. 
 In order for {application} to use a language model, a functional connection to a supported LLM must be set up.
 
-==== Optional/Customer-Specific Implementations/Extensions
+==== System components
+
+The solution consists of the following components:
+
+* *Web/API Server:* AI Audit Assist backend, LLM API, RAG API, Caddy
+* *Worker:* Celery worker for asynchronous tasks
+* *Redis:* Message broker and caching
+* *Database:* SQLite
+* *Vector store:* ChromaDB for RAG
+* *Customer-specific MCP APIs:* for integration with external tools, systems, or data sources (e.g., feeds) (optional)
+
+*Deployment:* Via Docker on a Linux server.
+
+==== Optional Customer-Specific Implementations or Extensions
 
 ===== Agents and MCP
 
