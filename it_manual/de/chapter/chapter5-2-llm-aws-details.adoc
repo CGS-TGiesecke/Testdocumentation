@@ -67,7 +67,7 @@ arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
  
 *OpenAI OSS*
  
-Es werden beide verfügbaren Models unterstützt:
+Es werden beide verfügbaren Modelle unterstützt:
 
 |===
 | Modell | Max Tokens 
@@ -86,7 +86,7 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 |===
 | Modell | Max Tokens 
 
-| Qwen3-235B-A22B-2507-Instruct) 
+| Qwen3-235B-A22B-2507-Instruct
 | 260k
 
 | Qwen3-32B 		

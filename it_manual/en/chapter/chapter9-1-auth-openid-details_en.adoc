@@ -4,7 +4,7 @@
 *Sign-in*
 
 Sign in to the Microsoft Entra ID Admin Center with an account that has administrative rights for your organization.
-`https://entra.microsoft.com`
+https://entra.microsoft.com
 
 *Navigate to "App Registrations"*
 

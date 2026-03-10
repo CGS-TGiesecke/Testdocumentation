@@ -11,7 +11,7 @@ The necessary data for connecting {application} with the customer’s OpenID Con
 * *Redirect-URL:* Redirect after successful login to {application}
 
 These must be stored in the `init_config.yaml` file (see "Initial Configuration of the Application").
-This information matches the configuration for "SharePoint Integration via Microsoft Entra ID" or "SAML Authentication with Microsoft Entra ID."
+This information matches the configuration for "SharePoint Integration with Microsoft Entra ID" or "SAML Authentication with Microsoft Entra ID."
 
 If this data is *not* available, the {application} application must first be registered by the customer in the Microsoft Entra Admin Center.
  

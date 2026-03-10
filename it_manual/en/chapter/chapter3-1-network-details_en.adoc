@@ -3,11 +3,11 @@
 
 If you want to use Caddy with automatic Let's Encrypt TLS certificates:
 
-- **FQDN required:** The application must be accessible via a fully qualified domain name (e.g., `xxx-assist.yourcompany.com`)
-- **DNS resolution:** The FQDN must point to the public IP address of the server (A-record or CNAME)
-- **Port 80 reachable:** Must be accessible from the internet (for ACME HTTP challenge)
+- *FQDN required:* The application must be accessible via a fully qualified domain name (e.g., `xxx-assist.yourcompany.com`)
+- *DNS resolution:* The FQDN must point to the public IP address of the server (A-record or CNAME)
+- *Port 80 reachable:* Must be accessible from the internet (for ACME HTTP challenge)
 
-**Caddyfile configuration required:**
+*Caddyfile configuration required:*
 ```
 xxx-assist.yourcompany.com {
 reverse_proxy xxx_assist_backend:8000
@@ -36,7 +36,7 @@ dns cloudflare {env.CLOUDFLARE_API_TOKEN}
 }
 ```
 
-**Important:** The "caddy-dns" plugin must be included in the Caddy server configuration file; otherwise, "dns cloudflare" will not be found.
+*Important:* The "caddy-dns" plugin must be included in the Caddy server configuration file; otherwise, "dns cloudflare" will not be found.
 
 Example: Own certificate (PEM + key):
 
@@ -50,14 +50,14 @@ tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.
 ```
 
 
-**Important:** The certificate chain must be complete (typically "fullchain") and the SANs (Subject Alternative Names) must match the hostname.
+*Important:* The certificate chain must be complete (typically "fullchain") and the SANs (Subject Alternative Names) must match the hostname.
 
 ====== Alternative without public DNS:
 
 - Use your own TLS certificates (e.g., from an internal CA)
 - Access only via IP address: `http://<server-ip>:8000` (only recommended for testing/development)
 
-**Customer responsibility:** 
+*Customer responsibility:* 
 
 - Firewall release for ports 80 and 443 (production) or 8000 (test)
 - DNS configuration: A-record for the desired FQDN (e.g., `xxx-assist.yourcompany.com`) to server IP

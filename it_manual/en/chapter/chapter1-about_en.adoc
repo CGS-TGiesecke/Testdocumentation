@@ -8,6 +8,7 @@ This document is intended for IT infrastructure and system administrators and de
 for the deployment and operation of the {application} platform at the customer site.
 
 ==== Overview and Features
+
 {application} is a browser-based web application that is hosted locally at the customer's site.
 Operation takes place in Docker containers on a Linux server (either on-premise or in a cloud VM).
 The application is used to leverage AI language models (Large Language Models, LLMs), which are connected via an external API, such as Azure OpenAI.
