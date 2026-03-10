@@ -27,7 +27,7 @@
 |Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (siehe "Kostenübersicht LLM-Provider").
 |Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
 |  	| über SAML-Authentifizierung mit Microsoft Entra ID
-|  	| über OpenID Authentifizierung mit Microsoft Entra ID
+|  	| über OpenID Connect Authentifizierung mit Microsoft Entra ID
 |Wie ist der Zugriff abgesichert?| Absicherung Zertifikate (TLS/HTTPS)
 |	  |Let's Encrypt (via Caddy)
 |	  |Eigene Zertifikate (interne CA)

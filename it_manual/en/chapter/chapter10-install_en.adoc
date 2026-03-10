@@ -26,9 +26,9 @@ The following initial configurations must be performed:
 - (optional) Configure SharePoint integration
 - (optional) Configure reverse proxy
 
-===== Set up environment variables (`.env` File)
+===== Set up environment variables 
 
-The following values are configurable
+The following values are configurable in `.env` File
 
 |===
 | Variable | Required | Description | Example value(s)

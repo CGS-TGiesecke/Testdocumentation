@@ -23,4 +23,4 @@ the requirements present at the customer's site in preparation for delivery.
 {application} supports:
 
 * Shared Folder (SHARED_FOLDER)
-* SharePoint connection via Microsoft Entra ID
+* SharePoint connection with Microsoft Entra ID

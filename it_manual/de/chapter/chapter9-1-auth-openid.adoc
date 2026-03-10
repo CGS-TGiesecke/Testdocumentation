@@ -1,7 +1,7 @@
 
 ==== OpenID Connect Authentifizierung mit Microsoft Entra ID
 
-Die OpenID-Authentifizierung mit Microsoft Entra ID wird für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
+Die OpenID Connect Authentifizierung mit Microsoft Entra ID wird für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
 um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Vorteil dieser Anmeldeform ist SSO (Single Sign-On)
 d.h. Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Passwort bei Microsoft 365) in verschiedensten Anwendungen anmelden.
 
@@ -9,7 +9,6 @@ Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect A
 
 * *Tenant-ID:* Die ID der Organisation/Mandenten.
 * *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
-* *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
 * *Redirect-URL:* Umleitung nach erfolgreicher Anmeldung zu {application}
 
 Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 

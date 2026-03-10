@@ -28,7 +28,7 @@
 |	  |Local: €0 API costs, but hardware investment required
 |How is authentication handled?|Via the local user/password management (customer’s DB)
 |  	| via SAML authentication with Microsoft Entra ID
-|  	| via OpenID authentication with Microsoft Entra ID
+|  	| via OpenID Connect authentication with Microsoft Entra ID
 |How is access secured?| Certificate-based security (TLS/HTTPS)
 |	  |Let's Encrypt (via Caddy)
 |	  |Own certificates (internal CA)

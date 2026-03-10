@@ -3,8 +3,7 @@
 
 *Anmeldung*
 
-Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
-`https://entra.microsoft.com`
+Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt (https://entra.microsoft.com).
 
 *Navigation zu "App-Registrierungen"*
 
