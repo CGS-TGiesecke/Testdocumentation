@@ -49,6 +49,7 @@ jobs:
            -a UC1="${{ github.event.inputs.UC1 }}" \
            -a UC2="${{ github.event.inputs.UC2 }}" \
            -a UC3="${{ github.event.inputs.UC3 }}" \
+           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog"" \
            -a pdf-theme="CGS" \
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH}}/index.adoc
