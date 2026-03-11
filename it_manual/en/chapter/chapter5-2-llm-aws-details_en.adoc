@@ -1,7 +1,7 @@
 
 ===== Step-by-Step: Setting up AWS Bedrock
 
-====== Step 1: Enable AWS Bedrock
+*Step 1: Enable AWS Bedrock*
 
 1. *Open AWS Console:* (https://console.aws.amazon.com)
 2. *Navigate to Bedrock:* Search for "Bedrock"
@@ -12,7 +12,7 @@
    - Enable Anthropic Claude models
    - Click on "Save changes"
 
-====== Step 2: Set up IAM permissions
+*Step 2: Set up IAM permissions*
 
 Create an IAM user with the following policy:
 
@@ -32,7 +32,7 @@ Create an IAM user with the following policy:
 }
 ```
 
-====== Step 3: Generate Access Keys
+*Step 3: Generate Access Keys*
 
 1. IAM Console → Users → Your user → Security credentials
 2. Create access key
@@ -74,7 +74,7 @@ Rules of thumb for TPM (Tokens per Minute):
 | High load
 |===
 
-===== Identification with Amazon Resource Name (ARNs)
+*Step 3: Entry ARN (Amazon Resource Name)*
 
 Amazon Resource Names (ARNs) allow access to a specific Foundation Model (`<model-id>`) in the AWS Bedrock Service (Region: `eu-central-1`).  
 The ARN is required to uniquely reference models within applications or pipelines, and to assign permissions for users/AWS services appropriately.
