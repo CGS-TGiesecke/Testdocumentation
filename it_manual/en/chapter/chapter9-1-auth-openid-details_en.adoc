@@ -1,38 +1,5 @@
 
-===== Registration Steps in Microsoft Entra Admin Center
-
-*Sign-in*
-
-Sign in to the Microsoft Entra ID Admin Center with an account that has administrative rights for your organization.
-https://entra.microsoft.com
-
-*Navigate to "App Registrations"*
-
-* Select Entra ID
-* Navigate to "App Registrations".
-* Register a new application
-* Click "New registration" (top menu).
-
-*Enter application information*
-
-* Name: Choose a name for the application. *Suggestion:* {application}
-* Supported account types: Decide whether the application should support only internal users (single organization), external users, or multiple organizations. The default is "Single tenant – CGS mbH".
-* Redirect-URL: must be entered (URL for redirection to {application}, corresponds to 'redirect_uri' in the `init_config.yaml`)
-   ** Select "Web"
-   ** Use "only company users" option
-
-*Create*
-
-* Click "Register".
-* After registration, you will receive:
-
-   ** Application ID *(Client ID)*
-   ** Directory ID *(Tenant ID)*
-   ** *Client secrets* generated under "Certificates & secrets"
-
-```
-Note: Record/copy these values for your application configuration in `init_config.yaml`.
-```
+include::chapter20-registration-MS-Entra-ID.adoc[]
 
 *Additional Settings*
 

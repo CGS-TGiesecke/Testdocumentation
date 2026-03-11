@@ -136,6 +136,8 @@ All available Qwen models are supported:
 
 ===== Supported Embedding Models
 
+*Amazon Titan*
+
 |===
 | Model | Max Tokens
 
