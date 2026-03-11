@@ -49,20 +49,7 @@ AWS Region: eu-central-1
 Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 ```
 
-===== Token-Rate-Limits dimensionieren
-
-**Faustregeln für TPM (Tokens per Minute):**
-
-|===
-| Nutzerszenario | Empfohlenes TPM | Begründung 
-
-| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
-| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
-| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
-| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
-|===
-
-*Schritt 4: Eintrag ARN (Amazon Resource Name)*
+*Eintrag ARN (Amazon Resource Name)*
 
 Mit Amazon Resource Names (ARNs) kann im AWS Bedrock Service (Region: `eu-central-1`) auf ein spezifisches Foundation Model (`<model-id>`) zugegriffen werden. 
 Er wird benötigt, um Modelle innerhalb von Anwendungen oder Pipelines eindeutig zu referenzieren und um Rechte für Nutzer/AWS-Services korrekt zu vergeben.
@@ -135,4 +122,17 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 
 | amazon.titan-embed-text-v2:0
 | 8k
+|===
+
+*Token-Rate-Limits dimensionieren*
+
+**Faustregeln für TPM (Tokens per Minute):**
+
+|===
+| Nutzerszenario | Empfohlenes TPM | Begründung 
+
+| 1-5 Nutzer (Test) | 30.000 - 50.000 	| Ausreichend für Tests 
+| 10-25 Nutzer 		| 80.000 - 120.000 	| Moderate Nutzung 
+| 25-50 Nutzer 		| 150.000 - 250.000 | Produktivumgebung 
+| 50+ Nutzer 		| 300.000+ 			| Hohe Last 
 |===
