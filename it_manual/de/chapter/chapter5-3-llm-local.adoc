@@ -1,8 +1,7 @@
 
 ==== Lokale Modelle (für höchste Datenschutzanforderungen)
 
-Für Kunden, die keine Cloud-Anbindung wünschen.
-
+Es gibt auch Möglichkeiten für Kunden, die keine Cloud-Anbindung wünschen.
 Die Plattform {application} unterstützt lokale LLMs über *OpenAI-kompatible APIs*.
 
 ===== Unterstützte Tools

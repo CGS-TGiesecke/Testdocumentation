@@ -1,8 +1,7 @@
 
 ==== Local Models (for Highest Data Protection Requirements)
 
-*For customers who do not want any cloud connection.*
-
+There are also options available for customers who do not want cloud connectivity.
 The platform {application} supports local LLMs via *OpenAI-compatible APIs*.
 
 ===== Supported tools

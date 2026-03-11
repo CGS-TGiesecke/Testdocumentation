@@ -28,7 +28,7 @@ Es sind folgende Initialkonfigurationen vorzunehmen:
 
 ===== Umgebungsvariablen einrichten 
 
-Die folgenden Werte sind konfigurierbar in der `env.` Datei
+Die folgenden Werte sind konfigurierbar in der `.env` Datei
 
 
 |===
