@@ -5,14 +5,14 @@
 
 Beschreibungen der Anwendungsfälle im {application}
 
-ifeval::[{UC1} = 1]
+ifeval::[{UC1} == 1]
 include::chapter/chapterUC1-1[]
 endif[]
 
-ifeval::[{UC2} = 1]
+ifeval::[{UC2} == 1]
 include::chapter/chapterUC2-1[]
 endif[]
 
-ifeval::[{UC3} = 1]
+ifeval::[{UC3} == 1]
 include::chapter/chapterUC3-1[]
 endif[]
