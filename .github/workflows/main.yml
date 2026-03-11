@@ -1,27 +1,62 @@
+name: Build Comparison de to html, pdf, docx
+
 name: Build Catalog
 
 on:
   workflow_dispatch:
     inputs:
       UC1:
-        description: "Grundsatz - Dokumentenabgleich"
+        description: "Grundsatz"
         required: false
         type: boolean
       UC2:
-        description: "Grundsatz - Textanonymisierung"
+        description: "Durchführung des Prüfungsengagements"
         required: false
         type: boolean
       UC3:
-        description: "CGS Intern - Vorlage zur Use Case-Erstellung"
+        description: "CGS Intern"
         required: false
         type: boolean
         
+ env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  FILENAME: 'USE_CASE_CATALOG_DE'
+  FILEPATH: 'usesCasesCatalog/de'
+        
 jobs:
-  show-selection:
+  build:
     runs-on: ubuntu-latest
     steps:
-        - run: |
-            echo "Ausgewählt:"
-            if [ "${{ github.event.inputs.UC1 }}" = "true" ]; then echo " - UC1 Grundsatz - Dokumentenabgleich"; fi
-            if [ "${{ github.event.inputs.UC2 }}" = "true" ]; then echo " - UC2 Grundsatz - Textanonymisierung"; fi
-            if [ "${{ github.event.inputs.UC3 }}" = "true" ]; then echo " - UC3 CGS Intern - Vorlage zur Use Case-Erstellung"; fi
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Asciidoctor & Asciidoctor-pdf
+        run: |
+          sudo gem install asciidoctor asciidoctor-pdf
+
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2'
+
+      - name: Install envsubst (gettext)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: Build PDF with Asciidoctor-pdf
+        run: |
+          asciidoctor-pdf \
+           -D ${{ env.FILEPATH}}/ \
+           -a UC1="${{ github.event.inputs.UC1 }}" \
+           -a UC2="${{ github.event.inputs.UC2 }}" \
+           -a UC3="${{ github.event.inputs.UC3 }}" \
+           -a pdf-theme="CGS" \
+           -a pdf-themesdir=./themes \
+           -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH}}/index.adoc
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.FILENAME }}
+          path: |
+            ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
+
