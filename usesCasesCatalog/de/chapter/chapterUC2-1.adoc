@@ -1,0 +1,29 @@
+
+=== Durchführung des Prüfungsengagements
+
+|===
+| Nr | Titel | Beschreibung | Vorgänger | Nachfolger
+
+| 2.1.1
+| Prozessanalyse, durchgängige Strukturierung
+| Verschaffen Sie sich einen umfassenden Überblick als Grundlage für die nächsten Prüfungsschritte.
+|
+| 2.1.3
+
+| 2.1.2
+| Interviewleitfäden erstellen
+| Entwickeln Sie strukturierte Fragen, abgestimmt auf Prüfungsziele und Risiken.
+|
+| 
+
+| 2.1.3
+| Dokumentenprüfung Agent
+| Automatische E-Mail-Verarbeitung und risikoorientierte Dokumentenbewertung
+| 2.1.1
+| 
+
+|===
+
+
+
+
