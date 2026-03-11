@@ -1,15 +1,13 @@
 
-= {product_title}
+== {application} 
 
-== {application} – Anwendungsfälle
+Beschreibungen der Anwendungsfälle
 
-Beschreibungen der Anwendungsfälle im {application}
-
-ifeval::[{UC1} == "true"]
+ifeval::[{UC1} == true]
 include::chapter/chapterUC1-1[]
 endif[]
 
-ifeval::[{UC2} == "true"]
+ifeval::[{UC2} == 'true']
 include::chapter/chapterUC2-1[]
 endif[]
 
