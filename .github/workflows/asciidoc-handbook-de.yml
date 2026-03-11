@@ -20,6 +20,7 @@ on:
 
   
 env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   FILENAME: 'USER_MANUAL_DE'
   FILEPATH: 'user_manuals/de'
 
