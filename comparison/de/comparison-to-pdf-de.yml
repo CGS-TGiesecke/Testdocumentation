@@ -25,6 +25,7 @@ on:
         default: '1.4.0'
         type: string
 env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   FILENAME: 'COMPARISON_DE'
   FILEPATH: 'comparison/de'
 
