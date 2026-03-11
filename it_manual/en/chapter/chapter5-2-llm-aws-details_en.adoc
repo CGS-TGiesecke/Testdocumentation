@@ -51,7 +51,7 @@ AWS Region: eu-central-1
 Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 ```
 
-====== Entry ARN (Amazon Resource Name)
+===== Entry ARN (Amazon Resource Name)
 
 Amazon Resource Names (ARNs) allow access to a specific Foundation Model (`<model-id>`) in the AWS Bedrock Service (Region: `eu-central-1`).  
 The ARN is required to uniquely reference models within applications or pipelines, and to assign permissions for users/AWS services appropriately.
