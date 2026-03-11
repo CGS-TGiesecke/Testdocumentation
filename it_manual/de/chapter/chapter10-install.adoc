@@ -34,17 +34,22 @@ Die folgenden Werte sind konfigurierbar in der `env.` Datei
 |===
 | Variable | Pflicht | Beschreibung | Beispielwert(e)
 
-| SHARED_FOLDER
+| `SHARED_FOLDER`
 | Ja
 | Pfad für gemeinsames Verzeichnis
 | `/opt/assist/shared`
 
-| LOG_LEVEL
+| `JWT_SECRET_KEY`
+| Required
+| Hash for JWT creation (32-64 bytes)
+| `hdhfh5jdnb7a9563b93f7099f6f0f4caa6cf63b88e8d3e7`
+
+| `LOG_LEVEL`
 | Nein
 | Log-Level der Applikation (Standardwert: INFO)
 | ERROR / WARNING / INFO
 
-| BRAVE_API_KEY
+| `BRAVE_API_KEY`
 | Nein
 | API-Schlüssel für die Anbindung der Brave-Websuche
 | 

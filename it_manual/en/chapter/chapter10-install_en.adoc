@@ -33,17 +33,22 @@ The following values are configurable in `.env` File
 |===
 | Variable | Required | Description | Example value(s)
 
-| SHARED_FOLDER
+| `SHARED_FOLDER`
 | Yes
 | Path for shared directory
 | `/opt/cgs-assist/shared`
 
-| LOG_LEVEL
+| `JWT_SECRET_KEY`
+| Required
+| Hash for JWT creation (32-64 bytes)
+| `hdhfh5jdnb7a9563b93f7099f6f0f4caa6cf63b88e8d3e7`
+
+| `LOG_LEVEL`
 | No
 | Log level of the application (default: INFO)
 | ERROR / WARNING / INFO
 
-| BRAVE_API_KEY
+| `BRAVE_API_KEY`
 | No
 | API key for Brave web search integration
 | 

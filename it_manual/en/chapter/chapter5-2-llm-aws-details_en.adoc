@@ -120,3 +120,15 @@ All available Qwen models are supported:
 | Qwen3-Coder-30B-A3B-Instruct
 | 260k
 |===
+
+===== Supported Embedding Models
+
+|===
+| Model | Max Tokens
+
+| amazon.titan-embed-text-v1
+| 128k
+
+| amazon.titan-embed-text-v2:0
+| 128k
+|===

@@ -95,3 +95,15 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 | Qwen3-Coder-30B-A3B-Instruct 		
 | 260k 
 |===
+
+===== Unterstützte Embedding Models
+
+|===
+| Modell | Max Tokens
+
+| amazon.titan-embed-text-v1
+| 8k
+
+| amazon.titan-embed-text-v2:0
+| 8k
+|===
