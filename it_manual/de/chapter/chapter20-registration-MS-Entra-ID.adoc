@@ -20,7 +20,7 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
 * Umleitungs-URIs: *muss* eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `init_config.yaml`
 *Hinweis*: Für {application} Sharepoint Anbindung ist die Einstellung nicht relevant.
-** Für OpenID Connect zusätzlich die Auswahl "Web" und dort Eintrag "nur Unternehmen user" übernehmen
+* Für OpenID Connect zusätzlich die Auswahl "Web" und dort Eintrag "nur Unternehmen user" übernehmen
 
 *Erstellen*
 

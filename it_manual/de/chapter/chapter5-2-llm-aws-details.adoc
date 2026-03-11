@@ -68,7 +68,7 @@ arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 - *bedrock:* Service (hier: Bedrock)
 - *eu-central-1:* AWS-Region (hier: EU [Frankfurt])
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
-- *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `"cohere.command-text-v14"`)
+- *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `gpt-oss-20b`)
 
 *Verwendungszwecke*
 

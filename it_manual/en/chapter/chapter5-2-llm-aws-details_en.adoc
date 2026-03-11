@@ -93,7 +93,7 @@ arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 - *bedrock:* Service (here: Bedrock)
 - *eu-central-1:* AWS region (here: EU [Frankfurt])
 - *foundation-model:* Specifies that this is a foundation model
-- *<model-id>:* The unique model identifier (e.g., `"cohere.command-text-v14"`)
+- *<model-id>:* The unique model identifier (e.g., `gpt-oss-20b`)
 
 *Use Cases*
 
