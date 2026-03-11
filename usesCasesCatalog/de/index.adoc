@@ -3,15 +3,15 @@
 
 Beschreibungen der Anwendungsfälle
 
-ifeval::[{UC1} == true]
+ifeval::[{UC1} == 1]
 include::chapter/chapterUC1-1[]
 endif[]
 
-ifeval::[{UC2} == 'true']
+ifeval::[{UC2} == 1]
 include::chapter/chapterUC2-1[]
 endif[]
 
-ifeval::[{UC3} == "true"]
+ifeval::[{UC3} == 1]
 include::chapter/chapterUC3-1[]
 endif[]
 
