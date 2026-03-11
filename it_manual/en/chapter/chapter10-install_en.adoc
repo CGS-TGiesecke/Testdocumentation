@@ -21,6 +21,8 @@ Optionally, a `Caddyfile.example` or a preconfigured `Caddyfile` for the reverse
 The following initial configurations must be performed:
 
 - Create a `.env` file based on `.env.example`
+- Configure the LLM-Provider
+- Configure the ARN for LLM provider modell
 - Configure the authentication method
 - (optional) Configure RAG folder
 - (optional) Configure SharePoint integration
@@ -66,7 +68,7 @@ Deployment of {application} is carried out in the following steps:
 
 2. Configuration Data
 
-- Collect and enter the required data (SharePoint integration, authentication) into `init_config.yaml` (see "Initial Application Configuration")
+- Collect and enter the required data (SharePoint integration, authentication, LLM-Provider) into `init_config.yaml` (see "Initial Application Configuration")
 
 3. Login to Docker Hub Repository
   
