@@ -43,19 +43,19 @@ jobs:
       - name: Define  variables
         run: |
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC1 }}" = "UC1" ]; then
+          if [ "${{ github.event.inputs.UC1 }}" = true ]; then
             echo "UC1=1" >> $GITHUB_ENV
           else
             echo "UC1=0" >> $GITHUB_ENV
           fi
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC2 }}" = "UC2" ]; then
+          if [ "${{ github.event.inputs.UC2 }}" = true ]; then
             echo "UC2=1" >> $GITHUB_ENV
           else
             echo "UC2=0" >> $GITHUB_ENV
           fi
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC3 }}" = "UC3" ]; then
+          if [ "${{ github.event.inputs.UC3 }}" = true ]; then
             echo "UC3=1" >> $GITHUB_ENV
           else
             echo "UC3=0" >> $GITHUB_ENV
@@ -68,7 +68,7 @@ jobs:
            -a UC1="${{ env.UC1 }}" \
            -a UC2="${{ env.UC2 }}" \
            -a UC3="${{ env.UC3 }}" \
-           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog"" \
+           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog" \
            -a pdf-theme="CGS" \
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH}}/index.adoc
