@@ -29,7 +29,6 @@ on:
 
   
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   FILENAME: 'IT_HANDBOOK_DE'
   FILEPATH: 'it_manual/de'
 
