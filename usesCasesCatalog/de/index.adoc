@@ -16,4 +16,3 @@ endif[]
 ifeval::[{UC3} = 1]
 include::chapter/chapterUC3-1[]
 endif[]
-
