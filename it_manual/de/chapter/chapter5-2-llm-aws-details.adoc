@@ -109,7 +109,7 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 | 260k 
 |===
 
-===== Unterstützte Embedding Models
+===== Unterstützte Embedding Modelle
 
 |===
 | Modell | Max Tokens

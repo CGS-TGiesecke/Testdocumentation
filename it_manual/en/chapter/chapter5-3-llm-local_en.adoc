@@ -5,17 +5,36 @@
 
 The platform {application} supports local LLMs via *OpenAI-compatible APIs*.
 
-*Supported tools:*
+===== Supported tools
 
-- *Ollama* (the simplest solution) 
-- *vLLM* (highest performance) -
-- *LM Studio* (GUI-based) 
+|===
+| Tool | Note
 
-*Recommended models:*
+| Ollama
+| the simplest solution
 
-- *Llama* (very good quality) 
-- *Qwen* (excellent, multilingual)
-- *Mistral* (high quality)
+| vLLM
+| highest performance
+
+| LM Studio
+| GUI-based
+|=== 
+
+===== Recommended models
+
+|===
+| Models | Note
+
+| Llama
+| excellent, multilingual
+
+| Qwen
+| hight performance
+
+| Mistral
+| high quality
+|=== 
+
 
 
 
