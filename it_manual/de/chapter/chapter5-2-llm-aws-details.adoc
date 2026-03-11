@@ -51,17 +51,30 @@ Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
 
 ===== Identifizierung mit Amazon Resource Name (ARNs)
 
-Amazon Resource Names (ARNs) identifizieren AWS-Ressourcen eindeutig. Müssen Ressourcen eindeutig über ganz AWS hinweg spezifiziert werden, 
-wie etwa in IAM-Richtlinien, Amazon Relational Database Service (Amazon RDS)-Tags und API-Aufrufe, dann wird eine ARN benötigt.
+Mit Amazon Resource Names (ARNs) kann im AWS Bedrock Service (Region: `eu-central-1`) auf ein spezifisches Foundation Model (`<model-id>`) zugegriffen werden. 
+Er wird benötigt, um Modelle innerhalb von Anwendungen oder Pipelines eindeutig zu referenzieren und um Rechte für Nutzer/AWS-Services korrekt zu vergeben.
 
 Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
 
 *Beispiel:*
 ```
-arn:partition:service:region:account-id:resource-type/<resource-id>
-
 arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 ```
+
+*Aufbau des ARN*
+
+- *arn:* AWS Ressourcentypkennung ("arn")
+- *aws:* Amazon Web Services
+- *bedrock:* Service (hier: Bedrock)
+- *eu-central-1:* AWS-Region (hier: EU [Frankfurt])
+- *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
+- *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `"cohere.command-text-v14"`)
+
+*Verwendungszwecke*
+
+- *Zugriffssteuerung:* Definieren in IAM Policies, um Zugriffsrechte für bestimmte Foundation Models zu vergeben.
+- *Service-Integration:* Zur Nutzung des Modells via SDK, AWS CLI oder direkt im Service.
+- *Referenzierung in Infrastruktur-Code:* Für CDK, Terraform oder CloudFormation-Vorlagen.
 
 ===== Unterstützte Modelle
  

@@ -76,17 +76,30 @@ Rules of thumb for TPM (Tokens per Minute):
 
 ===== Identification with Amazon Resource Name (ARNs)
 
-Amazon Resource Names (ARNs) uniquely identify AWS resources. When resources need to be specified uniquely across AWS—for example, 
-in IAM policies, Amazon Relational Database Service (Amazon RDS) tags, or API calls—an ARN is required.
+Amazon Resource Names (ARNs) allow access to a specific Foundation Model (`<model-id>`) in the AWS Bedrock Service (Region: `eu-central-1`).  
+The ARN is required to uniquely reference models within applications or pipelines, and to assign permissions for users/AWS services appropriately.
 
 See: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html
 
 Example:
 ```
-arn:partition:service:region:account-id:resource-type/<resource-id>
-
 arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 ```
+
+*Structure of the ARN*
+
+- *arn:* AWS resource type identifier ("arn")
+- *aws:* Amazon Web Services
+- *bedrock:* Service (here: Bedrock)
+- *eu-central-1:* AWS region (here: EU [Frankfurt])
+- *foundation-model:* Specifies that this is a foundation model
+- *<model-id>:* The unique model identifier (e.g., `"cohere.command-text-v14"`)
+
+*Use Cases*
+
+- *Access Control:* Define in IAM policies to assign permissions for specific foundation models.
+- *Service Integration:* For using the model via SDK, AWS CLI, or directly in the service.
+- *Referencing in Infrastructure Code:* For CDK, Terraform or CloudFormation templates.
 
 ===== Supported Models
 
