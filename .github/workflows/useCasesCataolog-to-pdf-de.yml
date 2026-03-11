@@ -1,3 +1,5 @@
+name: Build Comparison de to html, pdf, docx
+
 name: Build Catalog
 
 on:
@@ -16,7 +18,7 @@ on:
         required: false
         type: boolean
         
-env:
+ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   FILENAME: 'USE_CASE_CATALOG_DE'
   FILEPATH: 'usesCasesCatalog/de'
@@ -37,14 +39,38 @@ jobs:
         with:
           pandoc-version: '3.1.6.2'
           
+      - name: Install envsubst (gettext)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: Define  variables
+        run: |
+          # Setze Auswahl dynamisch
+          if [ "${{ github.event.inputs.UC1 }}" = "UC1" ]; then
+            echo "UC1=1" >> $GITHUB_ENV
+          else
+            echo "UC1=0" >> $GITHUB_ENV
+          fi
+          # Setze Auswahl dynamisch
+          if [ "${{ github.event.inputs.UC2 }}" = "UC2" ]; then
+            echo "UC2=1" >> $GITHUB_ENV
+          else
+            echo "UC2=0" >> $GITHUB_ENV
+          fi
+          # Setze Auswahl dynamisch
+          if [ "${{ github.event.inputs.UC3 }}" = "UC3" ]; then
+            echo "UC3=1" >> $GITHUB_ENV
+          else
+            echo "UC3=0" >> $GITHUB_ENV
+          fi
+          
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
            -D ${{ env.FILEPATH}}/ \
-           -a UC1="${{ github.event.inputs.UC1 }}" \
-           -a UC2="${{ github.event.inputs.UC2 }}" \
-           -a UC3="${{ github.event.inputs.UC3 }}" \
-           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog" \
+           -a UC1="${{ env.UC1 }}" \
+           -a UC2="${{ env.UC2 }}" \
+           -a UC3="${{ env.UC3 }}" \
+           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog"" \
            -a pdf-theme="CGS" \
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH}}/index.adoc
