@@ -24,6 +24,9 @@ env:
 jobs:
   parse-json:
     runs-on: ubuntu-latest
+    env:
+      JSONPATH: ${{ env.FILEPATH}}/usecases.json
+
     steps:
       # Repository auschecken (damit die JSON-Datei verfügbar ist)
       - name: Checkout
@@ -33,24 +36,25 @@ jobs:
       - name: Load JSON file
         id: load_json
         run: |
-          json=$(cat ${{ env.FILEPATH}}/usecases.json)
+          json=$(cat )
           echo "json=$json" >> $GITHUB_OUTPUT
 
-      # Einzelne Werte auslesen (mit jq)
-      - name: Parse JSON with jq
-        id: parsed
-        run: |
-          name1=$(jq -r '.UseCases[0].name' usecases.json)
-          desc1=$(jq -r '.UseCases[0].description' usecases.json)
 
-          echo "name1=$name1" >> $GITHUB_OUTPUT
-          echo "desc1=$desc1" >> $GITHUB_OUTPUT
-
-      # Ausgabe anzeigen
-      - name: Show results
+      # JSON sicher in einen Output schreiben (multiline delimiter)
+      - name: Load JSON (multiline output)
+        id: load_json
+        shell: bash
         run: |
-          echo "UseCase1 name: ${{ steps.parsed.outputs.name1 }}"
-          echo "UseCase1 description: ${{ steps.parsed.outputs.desc1 }}"
+          echo "json<<__JSON__" >> "$GITHUB_OUTPUT"
+          cat "$FILEPATH" >> "$GITHUB_OUTPUT"
+          echo "__JSON__" >> "$GITHUB_OUTPUT"
+
+      # Beispiel 1: Direkt in einer Expression (ohne Shell-Parsing) nutzen
+      - name: Use first item via fromJSON (expression only)
+        run: |
+          echo "Name[0]: ${{ fromJSON(steps.load_json.outputs.json).UseCases[0].name }}"
+          echo "Beschreibung[0]: ${{ fromJSON(steps.load_json.outputs.json).UseCases[0].description }}"
+
 
   build:
     runs-on: ubuntu-latest
