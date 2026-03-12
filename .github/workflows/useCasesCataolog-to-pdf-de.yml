@@ -33,7 +33,7 @@ jobs:
       - name: Load JSON file
         id: load_json
         run: |
-          json=$(cat usecases.json)
+          json=$(cat ${{ env.FILEPATH}}/usecases.json)
           echo "json=$json" >> $GITHUB_OUTPUT
 
       # Einzelne Werte auslesen (mit jq)
