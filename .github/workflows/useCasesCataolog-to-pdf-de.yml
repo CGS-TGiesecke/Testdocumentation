@@ -60,6 +60,12 @@ jobs:
           else
             echo "UC3=0" >> $GITHUB_ENV
           fi
+
+      - name: Read version from file
+        id: read_version
+        run: |
+          VERSION=$(cat VERSION.txt)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
           
       - name: Build PDF with Asciidoctor-pdf
         run: |
