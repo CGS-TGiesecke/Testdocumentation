@@ -1,4 +1,4 @@
-IONname: Build Catalog
+name: Build Catalog
 
 on:
   workflow_dispatch:
