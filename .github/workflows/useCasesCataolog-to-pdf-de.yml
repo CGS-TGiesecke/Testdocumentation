@@ -39,7 +39,6 @@ jobs:
           json=$(cat )
           echo "json=$json" >> $GITHUB_OUTPUT
 
-
       # JSON sicher in einen Output schreiben (multiline delimiter)
       - name: Load JSON (multiline output)
         id: load_json
