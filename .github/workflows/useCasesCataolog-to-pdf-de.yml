@@ -1,4 +1,4 @@
-name: Build Catalog
+IONname: Build Catalog
 
 on:
   workflow_dispatch:
@@ -77,12 +77,12 @@ jobs:
            -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog" \
            -a pdf-theme="CGS" \
            -a pdf-themesdir=./themes \
-           -o ${{ env.FILENAME }}_${{ env.FILEPATH}}.pdf ${{ env.FILEPATH}}/index.adoc
+           -o ${{ env.FILENAME }}_${{ env.VESION }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ env.FILEPATH}}
+          name: ${{ env.FILENAME }}_${{ env.VESION }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
 
