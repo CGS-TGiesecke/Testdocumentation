@@ -64,7 +64,7 @@ jobs:
       - name: Read version from file
         id: read_version
         run: |
-          VERSION=$(cat ../../VERSION.txt)
+          VERSION=$(cat VERSION.txt)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           
       - name: Build PDF with Asciidoctor-pdf
