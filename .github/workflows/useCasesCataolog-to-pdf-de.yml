@@ -25,7 +25,7 @@ jobs:
   parse-json:
     runs-on: ubuntu-latest
     env:
-      JSONPATH: ${{ env.FILEPATH}}/usecases.json
+      JSONPATH: usesCasesCatalog/de/usecases.json
 
     steps:
       # Repository auschecken (damit die JSON-Datei verfügbar ist)
