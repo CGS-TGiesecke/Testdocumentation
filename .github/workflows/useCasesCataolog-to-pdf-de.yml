@@ -22,6 +22,36 @@ env:
   FILEPATH: 'usesCasesCatalog/de'
         
 jobs:
+  parse-json:
+    runs-on: ubuntu-latest
+    steps:
+      # Repository auschecken (damit die JSON-Datei verfügbar ist)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # JSON einlesen
+      - name: Load JSON file
+        id: load_json
+        run: |
+          json=$(cat usecases.json)
+          echo "json=$json" >> $GITHUB_OUTPUT
+
+      # Einzelne Werte auslesen (mit jq)
+      - name: Parse JSON with jq
+        id: parsed
+        run: |
+          name1=$(jq -r '.UseCases[0].name' usecases.json)
+          desc1=$(jq -r '.UseCases[0].description' usecases.json)
+
+          echo "name1=$name1" >> $GITHUB_OUTPUT
+          echo "desc1=$desc1" >> $GITHUB_OUTPUT
+
+      # Ausgabe anzeigen
+      - name: Show results
+        run: |
+          echo "UseCase1 name: ${{ steps.parsed.outputs.name1 }}"
+          echo "UseCase1 description: ${{ steps.parsed.outputs.desc1 }}"
+
   build:
     runs-on: ubuntu-latest
     steps:
