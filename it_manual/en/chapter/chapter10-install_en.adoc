@@ -21,8 +21,6 @@ Optionally, a `Caddyfile.example` or a preconfigured `Caddyfile` for the reverse
 The following initial configurations must be performed:
 
 - Create a `.env` file based on `.env.example`
-- Configure the LLM-Provider
-- Configure the ARN for LLM provider modell
 - Configure the authentication method
 - (optional) Configure RAG folder
 - (optional) Configure SharePoint integration

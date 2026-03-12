@@ -9,8 +9,40 @@
 4. *Enable Model Access:*
    - Navigate to "Model access"
    - Click on "Manage model access"
-   - Enable Anthropic Claude models
+   - Enable OpenAI OSS models
    - Click on "Save changes"
+   
+*Step 1a: Use entry ARN (Amazon Resource Name)*
+
+Amazon Resource Names (ARNs) allow access to a specific Foundation Model (`<model-id>`) in the AWS Bedrock Service (Region: `eu-central-1`).  
+The ARN is required to uniquely reference models within applications or pipelines, and to assign permissions for users/AWS services appropriately.
+
+See: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html
+
+Example:
+```
+arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
+```
+*Info:* To restrict the policy directly to a specific region, this can be specified directly instead of '*'.
+```
+"Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
+```
+*Info:* Amazon ARNs (Amazon Resource Names) are unique identifiers used to uniquely reference AWS resources such as AI models.
+See: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
+
+*Example:*
+```
+arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
+```
+
+*Structure of the ARN*
+
+- *arn:* AWS resource type identifier ("arn")
+- *aws:* Amazon Web Services
+- *bedrock:* Service (here: Bedrock)
+- *eu-central-1:* AWS region (here: EU [Frankfurt])
+- *foundation-model:* Specifies that this is a foundation model
+- *<model-id>:* The unique model identifier (e.g. `openai.gpt-oss-20b-1:0`)
 
 *Step 2: Set up IAM permissions*
 
@@ -40,7 +72,7 @@ Create an IAM user with the following policy:
    - AWS Access Key ID
    - AWS Secret Access Key
    - AWS Region
-   - Model ID (e.g., `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+   - Model ID (e.g., `openai.gpt-oss-20b-1:0`)
 
 *Example:*
 
@@ -48,35 +80,8 @@ Create an IAM user with the following policy:
 AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
-Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
+Model ID: openai.gpt-oss-20b-1:0
 ```
-
-===== Entry ARN (Amazon Resource Name)
-
-Amazon Resource Names (ARNs) allow access to a specific Foundation Model (`<model-id>`) in the AWS Bedrock Service (Region: `eu-central-1`).  
-The ARN is required to uniquely reference models within applications or pipelines, and to assign permissions for users/AWS services appropriately.
-
-See: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html
-
-Example:
-```
-arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
-```
-
-*Structure of the ARN*
-
-- *arn:* AWS resource type identifier ("arn")
-- *aws:* Amazon Web Services
-- *bedrock:* Service (here: Bedrock)
-- *eu-central-1:* AWS region (here: EU [Frankfurt])
-- *foundation-model:* Specifies that this is a foundation model
-- *<model-id>:* The unique model identifier (e.g., `gpt-oss-20b`)
-
-*Use Cases*
-
-- *Access Control:* Define in IAM policies to assign permissions for specific foundation models.
-- *Service Integration:* For using the model via SDK, AWS CLI, or directly in the service.
-- *Referencing in Infrastructure Code:* For CDK, Terraform or CloudFormation templates.
 
 ===== Supported Models
 
@@ -85,13 +90,13 @@ arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 Both available models are supported:
 
 |===
-| Model | Max Tokens
+| Model ID | Max Tokens 
 
-| gpt-oss-20b
+| openai.gpt-oss-20b-1:0 
 | 128k
 
-| gpt-oss-120b
-| 128k
+| openai.gpt-oss-120b-1:0 		
+| 128k 
 |===
 
 *Qwen*
@@ -99,30 +104,23 @@ Both available models are supported:
 All available Qwen models are supported:
 
 |===
-| Model | Max Tokens
+| Model ID| Max Tokens 
 
-| Qwen3-235B-A22B-2507-Instruct
+| qwen.qwen3-235b-a22b-2507-v1:0
 | 260k
 
-| Qwen3-32B
-| 16k
-
-| Qwen3-Coder-30B-A3B-Instruct
-| 260k
+| qwen.qwen3-32b-v1:0 		
+| 16k 
+ 
+| qwen.qwen3-coder-30b-a3b-v1:0 		
+| 260k 
 |===
 
 ===== Supported Embedding Models
 
 *Amazon Titan*
 
-|===
-| Model | Max Tokens
-
-| amazon.titan-embed-text-v1
-| 128k
-
-| amazon.titan-embed-text-v2:0
-| 128k
-|===
+* amazon.titan-embed-text-v1
+* amazon.titan-embed-text-v2:0
 
 

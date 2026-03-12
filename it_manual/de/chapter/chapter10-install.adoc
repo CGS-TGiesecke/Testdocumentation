@@ -21,8 +21,6 @@ Optional ist hier auch ein `Caddyfile.example` oder ein vorkonfiguriertes `Caddy
 Es sind folgende Initialkonfigurationen vorzunehmen:
 
 - Erzeugung einer Datei `.env` auf Basis von `.env.example`
-- gewählten LLM Provider konfigurieren
-- ARN für LLM Provider Model konfigurieren
 - gewählte Authentifizierung konfigurieren
 - (optional) RAG-Ordner konfigurieren
 - (optional) SharePoint-Anbindung konfigurieren
@@ -31,7 +29,6 @@ Es sind folgende Initialkonfigurationen vorzunehmen:
 ===== Umgebungsvariablen einrichten 
 
 Die folgenden Werte sind konfigurierbar in der `.env` Datei
-
 
 |===
 | Variable | Pflicht | Beschreibung | Beispielwert(e)
@@ -83,7 +80,6 @@ Das Deployment von {application} erfolgt in folgenden Schritten:
 5. Abschluss
 
 - Testen Sie die Erreichbarkeit der Webapplikation im Browser
-
 
 ==== Update-Prozess
 

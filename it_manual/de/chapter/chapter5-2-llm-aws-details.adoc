@@ -9,9 +9,9 @@
 4. *Model Access aktivieren:*
    * Navigieren Sie zu "Model access"
    * Klicken Sie auf "Manage model access"
-   * Aktivieren Sie Anthropic Claude-Modelle
+   * Aktivieren Sie OpenAI OSS Modelle
    * Klicken Sie auf "Save changes"
-
+ 
 *Schritt 2: IAM-Berechtigungen einrichten*
 
 Erstellen Sie einen IAM-User mit folgender Policy:
@@ -30,6 +30,26 @@ Erstellen Sie einen IAM-User mit folgender Policy:
   ]
 }
 ```
+*Info:* Um die Policy direkt auf eine Region einzuschränken, kann diese statt '*' direkt mit angegeben werden.
+```
+"Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
+```
+
+*Info:* Amazon ARNs (Amazon Resource Names) sind eindeutige Bezeichner, mit denen AWS‑Ressourcen wie KI-Modelle eindeutig identifiziert werden.
+Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
+
+*Beispiel:*
+```
+arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
+```
+*Aufbau des ARN*
+
+- *arn:* AWS Ressourcentypkennung ("arn")
+- *aws:* Amazon Web Services
+- *bedrock:* Service (hier: Bedrock)
+- *eu-central-1:* AWS-Region (hier: EU [Frankfurt])
+- *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
+- *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `openai.gpt-oss-20b-1:0`)
 
 *Schritt 3: Access Keys generieren*
 
@@ -39,43 +59,15 @@ Erstellen Sie einen IAM-User mit folgender Policy:
    * AWS Access Key ID
    * AWS Secret Access Key
    * AWS Region
-   * Model ID (z. B. `anthropic.claude-3-5-sonnet-20240620-v1:0`)
+   * Model ID (z. B. `openai.gpt-oss-20b-1:0`)
 
 *Beispiel:*
 ```bash
 AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
-Model ID: anthropic.claude-3-5-sonnet-20240620-v1:0
+Model ID: openai.gpt-oss-20b-1:0
 ```
-
-===== ARN (Amazon Resource Name)
-
-Mit Amazon Resource Names (ARNs) kann im AWS Bedrock Service (Region: `eu-central-1`) auf ein spezifisches Foundation Model (`<model-id>`) zugegriffen werden. 
-Er wird benötigt, um Modelle innerhalb von Anwendungen oder Pipelines eindeutig zu referenzieren und um Rechte für Nutzer/AWS-Services korrekt zu vergeben.
-Wird z.B. in Policy für IAM-User angegeben.
-
-Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
-
-*Beispiel:*
-```
-arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
-```
-
-*Aufbau des ARN*
-
-- *arn:* AWS Ressourcentypkennung ("arn")
-- *aws:* Amazon Web Services
-- *bedrock:* Service (hier: Bedrock)
-- *eu-central-1:* AWS-Region (hier: EU [Frankfurt])
-- *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
-- *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `gpt-oss-20b`)
-
-*Verwendungszwecke*
-
-- *Zugriffssteuerung:* Definieren in IAM Policies, um Zugriffsrechte für bestimmte Foundation Models zu vergeben.
-- *Service-Integration:* Zur Nutzung des Modells via SDK, AWS CLI oder direkt im Service.
-- *Referenzierung in Infrastruktur-Code:* Für CDK, Terraform oder CloudFormation-Vorlagen.
 
 ===== Unterstützte Modelle
  
@@ -84,12 +76,12 @@ arn:aws:bedrock:eu-central-1::foundation-model/<model-id>
 Es werden beide verfügbaren Modelle unterstützt:
 
 |===
-| Modell | Max Tokens 
+| Modell ID | Max Tokens 
 
-| gpt-oss-20b 
+| openai.gpt-oss-20b-1:0 
 | 128k
 
-| gpt-oss-120b 		
+| openai.gpt-oss-120b-1:0 		
 | 128k 
 |===
  
@@ -98,15 +90,15 @@ Es werden beide verfügbaren Modelle unterstützt:
 Es werden alle verfügbaren Qwen-Modelle unterstützt:
 
 |===
-| Modell | Max Tokens 
+| Modell ID| Max Tokens 
 
-| Qwen3-235B-A22B-2507-Instruct
+| qwen.qwen3-235b-a22b-2507-v1:0
 | 260k
 
-| Qwen3-32B 		
+| qwen.qwen3-32b-v1:0 		
 | 16k 
  
-| Qwen3-Coder-30B-A3B-Instruct 		
+| qwen.qwen3-coder-30b-a3b-v1:0 		
 | 260k 
 |===
 
@@ -114,13 +106,7 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 
 *Amazon Titan*
 
-|===
-| Modell | Max Tokens
+* amazon.titan-embed-text-v1
+* amazon.titan-embed-text-v2:0
 
-| amazon.titan-embed-text-v1
-| 8k
-
-| amazon.titan-embed-text-v2:0
-| 8k
-|===
 
