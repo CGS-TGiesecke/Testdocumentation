@@ -7,11 +7,11 @@ automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft
 
 Die notwendigen Daten, für die Anbindung von {application} mit Credentials an Sharepoint des Kunden sind:
 
+* *Anwendungs-ID:* Die Client-ID der Anwendung.
 * *Tenant-ID:* Die ID der Organisation/Mandenten.
-* *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
 * *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
 
-Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
-Diese Daten entsprechen denen in der Einrichtung "OpenID Connect Authentifizierung mit Microsoft Entra ID" oder "SAML-Authentifizierung mit Microsoft Entra ID".
+Diese daten müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 
-Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst in Microsoft Entra Admin Center registriert werden.
+Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst über das 
+Microsoft Entra Admin Center registriert werden.

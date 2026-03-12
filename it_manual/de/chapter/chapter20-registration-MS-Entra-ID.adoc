@@ -1,5 +1,5 @@
 
-===== Registrierungsschritte im Microsoft Entra Admin Center
+===== Applikation erstellen im Microsoft Entra Admin Center
 
 *Anmeldung*
 
@@ -15,10 +15,12 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 
 *Anwendungsinformationen eingeben*
 
-* Name: Wählen Sie einen Namen für die Anwendung. *Vorschlag:* {application}
+* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
-* Umleitungs-URIs: *muss* eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `init_config.yaml`
+* Redirect‑URI: optional, kann auch später eingetragen werden, siehe Folgeschritte
+
+*muss* eingetragen werden (url zur Weiterleitung auf {application}, entspricht der 'redirect_uri' in der `init_config.yaml`
 *Hinweis*: Für {application} Sharepoint Anbindung ist die Einstellung nicht relevant.
 * Für OpenID Connect zusätzlich die Auswahl "Web" und dort Eintrag "nur Unternehmen user" übernehmen
 
@@ -33,3 +35,24 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```
+
+Um die App Microsoft‑Graph zu nutzen:
+
+* Links API-Berechtigungen öffnen
+* Berechtigung hinzufügen
+* API auswählen, z. B. Microsoft Graph
+* Delegierte oder Anwendungsberechtigungen hinzufügen
+* Admin Consent erteilen (falls nötig)
+
+*Für die App-Authentifizierung:*
+
+* Links Zertifikate & Geheimnisse wählen
+* Neuer geheimer Clientschlüssel → Wert kopieren (wird nur einmal angezeigt!)
+* Oder alternativ ein Zertifikat hochladen.
+
+*Redirect‑URI später konfigurieren*
+
+* Links Authentifizierung
+* Plattform hinzufügen
+* Web auswählen
+* Redirect‑URIs eintragen

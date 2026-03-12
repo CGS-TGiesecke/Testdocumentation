@@ -1,7 +1,40 @@
 
-include::chapter20-registration-MS-Entra-ID.adoc[]
+===== Applikation registrieren im Microsoft Entra Admin Center für SharePoint
 
-*Berechtigungen konfigurieren (optional)*
+*Anmeldung*
 
-* Unter "API-Berechtigungen" können die Berechtigungen für den Zugriff auf SharePoint-Sites mit Hilfe der Graph API verwaltet werden.
+Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+`https://entra.microsoft.com`
 
+*Navigation zu "App-Registrierungen"*
+
+* Wählen Sie ganz links Entra ID
+* Navigieren Sie zu "App-Registrierungen".
+* Neue Anwendung registrieren
+* Klicken Sie auf "Neue Registrierung" (oben im Menü).
+
+*Anwendungsinformationen eingeben*
+
+* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
+* Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
+mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
+* Redirect‑URI: optional, für Sharepoint nicht notwendig
+
+*Erstellen*
+
+* Klicken Sie auf "Registrieren".
+
+*Für die App-Authentifizierung:*
+
+* Links Zertifikate & Geheimnisse wählen
+* Neuer geheimer Clientschlüssel → Wert kopieren (wird nur einmal angezeigt!)
+* Oder alternativ ein Zertifikat hochladen.
+
+*Konfigurationsdaten:*
+
+** Anwendungs-ID: *Client-ID*
+** Mandant-ID: *Tenant-ID*
+** geheimer Clientschlüssel: *Client-Secrets* 
+```
+Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
+```
