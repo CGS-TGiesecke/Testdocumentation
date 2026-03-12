@@ -41,7 +41,7 @@ jobs:
 
       # JSON sicher in einen Output schreiben (multiline delimiter)
       - name: Load JSON (multiline output)
-        id: load_json
+        id: load_json_out
         shell: bash
         run: |
           echo "json<<__JSON__" >> "$GITHUB_OUTPUT"
@@ -51,8 +51,8 @@ jobs:
       # Beispiel 1: Direkt in einer Expression (ohne Shell-Parsing) nutzen
       - name: Use first item via fromJSON (expression only)
         run: |
-          echo "Name[0]: ${{ fromJSON(steps.load_json.outputs.json).UseCases[0].name }}"
-          echo "Beschreibung[0]: ${{ fromJSON(steps.load_json.outputs.json).UseCases[0].description }}"
+          echo "Name[0]: ${{ fromJSON(steps.load_json_out.outputs.json).UseCases[0].name }}"
+          echo "Beschreibung[0]: ${{ fromJSON(steps.load_json_out.outputs.json).UseCases[0].description }}"
 
 
   build:
