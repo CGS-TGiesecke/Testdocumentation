@@ -22,6 +22,36 @@ env:
   FILEPATH: 'usesCasesCatalog/de'
         
 jobs:
+  parse-json:
+    runs-on: ubuntu-latest
+    steps:
+      # Repository auschecken (damit die JSON-Datei verfügbar ist)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # JSON einlesen
+      - name: Load JSON file
+        id: load_json
+        run: |
+          json=$(cat usecases.json)
+          echo "json=$json" >> $GITHUB_OUTPUT
+
+      # Einzelne Werte auslesen (mit jq)
+      - name: Parse JSON with jq
+        id: parsed
+        run: |
+          name1=$(jq -r '.UseCases[0].name' usecases.json)
+          desc1=$(jq -r '.UseCases[0].description' usecases.json)
+
+          echo "name1=$name1" >> $GITHUB_OUTPUT
+          echo "desc1=$desc1" >> $GITHUB_OUTPUT
+
+      # Ausgabe anzeigen
+      - name: Show results
+        run: |
+          echo "UseCase1 name: ${{ steps.parsed.outputs.name1 }}"
+          echo "UseCase1 description: ${{ steps.parsed.outputs.desc1 }}"
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +65,7 @@ jobs:
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@v2
         with:
-          pandoc-version: '3.1.6.2'
+          pandoc-version: '3.9'
           
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
@@ -43,23 +73,29 @@ jobs:
       - name: Define  variables
         run: |
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC1 }}" = "UC1" ]; then
+          if [ "${{ github.event.inputs.UC1 }}" = true ]; then
             echo "UC1=1" >> $GITHUB_ENV
           else
             echo "UC1=0" >> $GITHUB_ENV
           fi
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC2 }}" = "UC2" ]; then
+          if [ "${{ github.event.inputs.UC2 }}" = true ]; then
             echo "UC2=1" >> $GITHUB_ENV
           else
             echo "UC2=0" >> $GITHUB_ENV
           fi
           # Setze Auswahl dynamisch
-          if [ "${{ github.event.inputs.UC3 }}" = "UC3" ]; then
+          if [ "${{ github.event.inputs.UC3 }}" = true ]; then
             echo "UC3=1" >> $GITHUB_ENV
           else
             echo "UC3=0" >> $GITHUB_ENV
           fi
+
+      - name: Read version from file
+        id: read_version
+        run: |
+          VERSION=$(cat VERSION.txt)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
           
       - name: Build PDF with Asciidoctor-pdf
         run: |
@@ -68,15 +104,14 @@ jobs:
            -a UC1="${{ env.UC1 }}" \
            -a UC2="${{ env.UC2 }}" \
            -a UC3="${{ env.UC3 }}" \
-           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog"" \
+           -a application="CGS Assist: Software für den Mittelstand - Uses Case Katalog" \
            -a pdf-theme="CGS" \
            -a pdf-themesdir=./themes \
-           -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH}}/index.adoc
+           -o ${{ env.FILENAME }}_${{ env.VERSION }}.pdf ${{ env.FILEPATH}}/index.adoc
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}
+          name: ${{ env.FILENAME }}_${{ env.VERSION }}
           path: |
             ${{ env.FILEPATH}}/${{ env.FILENAME }}*.pdf
-
