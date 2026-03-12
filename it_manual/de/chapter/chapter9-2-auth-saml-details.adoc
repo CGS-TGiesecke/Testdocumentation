@@ -55,7 +55,7 @@ Die Datei enthält:
 ** Anwendungs-ID: *Client-ID*
 ** Mandant-ID: *Tenant-ID*
 ** geheimer Clientschlüssel: *Client-Secrets*, kann zeitlich begrenzt werden
-** Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
+** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ``` 

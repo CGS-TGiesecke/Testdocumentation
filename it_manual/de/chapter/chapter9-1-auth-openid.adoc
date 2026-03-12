@@ -12,7 +12,7 @@ Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect A
 * *Client-Secrets* geheimer Clientschlüssel, kann zeitlich begrenzt werden
 * *Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
 
-Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
+Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 
 Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst über das 
 Microsoft Entra Admin Center registriert werden.  
