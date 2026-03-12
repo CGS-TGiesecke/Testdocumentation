@@ -36,7 +36,7 @@ jobs:
       - name: Load JSON file
         id: load_json
         run: |
-          json=$(cat )
+          json=$(cat $JSONPATH)
           echo "json=$json" >> $GITHUB_OUTPUT
 
       # JSON sicher in einen Output schreiben (multiline delimiter)
@@ -45,7 +45,7 @@ jobs:
         shell: bash
         run: |
           echo "json<<__JSON__" >> "$GITHUB_OUTPUT"
-          cat "$FILEPATH" >> "$GITHUB_OUTPUT"
+          cat "$JSONPATH" >> "$GITHUB_OUTPUT"
           echo "__JSON__" >> "$GITHUB_OUTPUT"
 
       # Beispiel 1: Direkt in einer Expression (ohne Shell-Parsing) nutzen
