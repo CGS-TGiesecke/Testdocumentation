@@ -9,15 +9,15 @@ Beschreibungen der Anwendungsfälle
 
 ifeval::[{UC1} == 1]
 include::chapter/chapterUC1-1.adoc[]
-endif[]
+endif::[]
 
 ifeval::[{UC2} == 1]
 include::chapter/chapterUC2-1.adoc[]
-endif[]
+endif::[]
 
 ifeval::[{UC3} == 1]
 include::chapter/chapterUC3-1.adoc[]
-endif[]
+endif::[]
 
 
 
