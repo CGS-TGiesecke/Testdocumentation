@@ -1,5 +1,5 @@
 
-===== Applikation registrieren im Microsoft Entra Admin Center für OpenID Connect
+===== Applikation registrieren im Microsoft Entra Admin Center für SAML
 
 *Anmeldung*
 
@@ -18,7 +18,7 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 * Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
-* Redirect‑URI:* Anwendungs-Url, muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
+* Redirect‑URI:* muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
 
 *Erstellen*
 
@@ -26,14 +26,14 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *SAML als Authentifizierungsmethode aktivieren*
 
-* In der App links auf Single sign‑on gehen
+* In der App linke Seite auf Single-Sign-On gehen
 * SAML auswählen
 * Es öffnet sich die Seite SAML‑basierte Konfiguration
 
 *Grundlegende SAML-Konfiguration*
 
 * *Bezeichner (Entity ID)*: Die eindeutige Kennung im Admin Center.
-* *Redirect-URL*: Anwendungs-Url, muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
+* *Redirect-URL*: muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
 
 *Attribute & Claims*
 
@@ -54,7 +54,8 @@ Die Datei enthält:
 
 ** Anwendungs-ID: *Client-ID*
 ** Mandant-ID: *Tenant-ID*
-** geheimer Clientschlüssel: *Client-Secrets* 
+** geheimer Clientschlüssel: *Client-Secrets*, kann zeitlich begrenzt werden
+** Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ``` 

@@ -20,10 +20,10 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
 * Redirect‑URI:* 
 
-** Links Authentifizierung
+** Linke Seite Klick Authentifizierung
 ** Plattform hinzufügen
 ** Web auswählen
-** Redirect‑URIs eintragen
+** Redirect‑URIs eintragen, muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
 
 *Erstellen*
 
@@ -31,7 +31,7 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *Für die App-Authentifizierung:*
 
-* Links Zertifikate & Geheimnisse wählen
+* Linke Seite Klick Zertifikate & Geheimnisse wählen
 * Neuer geheimer Clientschlüssel → Wert kopieren (wird nur einmal angezeigt!)
 * Oder alternativ ein Zertifikat hochladen.
 
@@ -39,7 +39,8 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 ** Anwendungs-ID: *Client-ID*
 ** Mandant-ID: *Tenant-ID*
-** geheimer Clientschlüssel: *Client-Secrets* 
+** geheimer Clientschlüssel: *Client-Secrets*, kann zeitlich begrenzt werden
+** Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```

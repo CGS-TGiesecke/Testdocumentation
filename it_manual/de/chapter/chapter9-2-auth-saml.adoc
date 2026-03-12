@@ -11,7 +11,8 @@ Die notwendigen Daten, für die Anbindung von {application} mit SAML-Authentifiz
 
 * *Tenant-ID:* Die ID der Organisation/Mandenten.
 * *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
-* *Secrets:* Zugangsschlüssels (kann zeitlich begrenzt werden)
+* *Client-Secrets* geheimer Clientschlüssel, kann zeitlich begrenzt werden
+* *Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
 
 Diese werden müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 Diese Daten entsprechen denen in der Einrichtung "Sharepoint Anbindung über die Microsoft Entra ID" oder "OpenID Connect Authentifizierung mit Microsoft Entra ID".
