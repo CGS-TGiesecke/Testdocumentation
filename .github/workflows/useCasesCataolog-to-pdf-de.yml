@@ -32,13 +32,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # JSON einlesen
-      - name: Load JSON file
-        id: load_json
-        run: |
-          json=$(cat $JSONPATH)
-          echo "json=$json" >> $GITHUB_OUTPUT
-
       # JSON sicher in einen Output schreiben (multiline delimiter)
       - name: Load JSON (multiline output)
         id: load_json_out
