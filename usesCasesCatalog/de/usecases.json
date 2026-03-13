@@ -2,18 +2,32 @@
 {
   "UseCases": [
     {
-      "id": "UseCase1",
-      "name": "Name 1",
+      "id": "UC1",
+      "name": "UseCase1",
       "description": "Beschreibung 1",
       "vorgaenger": "",
-      "nachfolger": "UseCase2"
+      "nachfolger": ""
     },
     {
-      "id": "UseCase2",
-      "name": "Name 2",
+      "id": "UC2",
+      "name": "UseCase2",
       "description": "Beschreibung 2",
-      "vorgaenger": "UseCase1",
+      "vorgaenger": "",
       "nachfolger": ""
+    },
+    {
+      "id": "UC3",
+      "name": "UseCase3",
+      "description": "Beschreibung 3",
+      "vorgaenger": "UC1",
+      "nachfolger": ""
+    },
+    {
+      "id": "UC4",
+      "name": "UseCase4",
+      "description": "Beschreibung 4",
+      "vorgaenger": "",
+      "nachfolger": "UC3"
     }
   ]
 }

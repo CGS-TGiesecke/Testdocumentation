@@ -3,18 +3,11 @@ name: Build Catalog
 on:
   workflow_dispatch:
     inputs:
-      UC1:
-        description: "Grundsatz"
-        required: false
-        type: boolean
-      UC2:
-        description: "Durchführung des Prüfungsengagements"
-        required: false
-        type: boolean
-      UC3:
-        description: "CGS Intern"
-        required: false
-        type: boolean
+      UC1:  { type: boolean, required: false, default: false, description: "UC1" }
+      UC2:  { type: boolean, required: false, default: false, description: "UC2" }
+      UC3:  { type: boolean, required: false, default: false, description: "UC3" }
+      UC4:  { type: boolean, required: false, default: false, description: "UC4" }
+
         
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -24,33 +17,29 @@ env:
 jobs:
   parse-json:
     runs-on: ubuntu-latest
+    env:
+      JSONPATH: usesCasesCatalog/de/usecases.json
+
     steps:
       # Repository auschecken (damit die JSON-Datei verfügbar ist)
       - name: Checkout
         uses: actions/checkout@v4
 
-      # JSON einlesen
-      - name: Load JSON file
-        id: load_json
+      # JSON sicher in einen Output schreiben (multiline delimiter)
+      - name: Load JSON (multiline output)
+        id: load_json_out
+        shell: bash
         run: |
-          json=$(cat usecases.json)
-          echo "json=$json" >> $GITHUB_OUTPUT
+          echo "json<<__JSON__" >> "$GITHUB_OUTPUT"
+          cat "$JSONPATH" >> "$GITHUB_OUTPUT"
+          echo "__JSON__" >> "$GITHUB_OUTPUT"
 
-      # Einzelne Werte auslesen (mit jq)
-      - name: Parse JSON with jq
-        id: parsed
+      # Beispiel 1: Direkt in einer Expression (ohne Shell-Parsing) nutzen
+      - name: Use first item via fromJSON (expression only)
         run: |
-          name1=$(jq -r '.UseCases[0].name' usecases.json)
-          desc1=$(jq -r '.UseCases[0].description' usecases.json)
+          echo "Name[0]: ${{ fromJSON(steps.load_json_out.outputs.json).UseCases[0].name }}"
+          echo "Beschreibung[0]: ${{ fromJSON(steps.load_json_out.outputs.json).UseCases[0].description }}"
 
-          echo "name1=$name1" >> $GITHUB_OUTPUT
-          echo "desc1=$desc1" >> $GITHUB_OUTPUT
-
-      # Ausgabe anzeigen
-      - name: Show results
-        run: |
-          echo "UseCase1 name: ${{ steps.parsed.outputs.name1 }}"
-          echo "UseCase1 description: ${{ steps.parsed.outputs.desc1 }}"
 
   build:
     runs-on: ubuntu-latest
@@ -70,16 +59,20 @@ jobs:
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
 
-      - name: Define  variables
+      - name: Setze Werte in variablen
         run: |
           # Setze Auswahl dynamisch
           if [ "${{ github.event.inputs.UC1 }}" = true ]; then
             echo "UC1=1" >> $GITHUB_ENV
+            # Nachfolger
+            echo "UC3=1" >> $GITHUB_ENV
           else
             echo "UC1=0" >> $GITHUB_ENV
           fi
           # Setze Auswahl dynamisch
           if [ "${{ github.event.inputs.UC2 }}" = true ]; then
+            # Vorgänger
+            echo "UC1=1" >> $GITHUB_ENV
             echo "UC2=1" >> $GITHUB_ENV
           else
             echo "UC2=0" >> $GITHUB_ENV
