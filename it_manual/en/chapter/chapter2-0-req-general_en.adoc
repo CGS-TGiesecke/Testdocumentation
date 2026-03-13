@@ -65,6 +65,9 @@ Deployment is performed via *Docker*.
 * *Docker Engine:* Version `>` 2.x
 
 *Installation:* The customer must install and configure Docker on the server.
+Docker stores data (images, containers, volumes) on Linux by default in the directory /var/lib/docker.
+Volumes used for persistent data are typically located in /var/lib/docker/volumes.
+For operation, we recommend providing at least 20 GB of storage for the Docker data directory.
 
 ==== Shared Directory (SHARED_FOLDER)
 
