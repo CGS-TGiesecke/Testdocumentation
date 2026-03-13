@@ -34,7 +34,10 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 ** Anwendungs-ID: *Client-ID*
 ** Mandant-ID: *Tenant-ID*
-** geheimer Clientschlüssel: *Client-Secrets*, kann zeitlich begrenzt werden
+
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** geheimer Clientschlüssel  (unter Zertifikate & Geheimnisse): *Client-Secrets*, kann zeitlich begrenzt werden
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```

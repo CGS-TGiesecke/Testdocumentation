@@ -37,9 +37,9 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *Konfigurationsdaten:*
 
-** Anwendungs-ID: *Client-ID*
-** Mandant-ID: *Tenant-ID*
-** geheimer Clientschlüssel: *Client-Secrets*, kann zeitlich begrenzt werden
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** geheimer Clientschlüssel (unter Übersicht): *Client-Secrets*, kann zeitlich begrenzt werden
 ** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.

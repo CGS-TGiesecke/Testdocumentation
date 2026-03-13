@@ -7,9 +7,9 @@ automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft
 
 Die notwendigen Daten, für die Anbindung von {application} mit Credentials an Sharepoint des Kunden sind:
 
-* *Tenant-ID:* Die ID der Organisation/Mandenten.
-* *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
-* *Client-Secrets* geheimer Clientschlüssel, kann zeitlich begrenzt werden
+* *Verzeichnis-ID (Mandant):* Die Tenant ID der Organisation/Mandenten (unter Übersicht).
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung (unter Übersicht).
+* *Client-Secrets*: der geheime Clientschlüssel, kann zeitlich begrenzt werden (unter Zertifikate & Geheimnisse).
 
 Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 

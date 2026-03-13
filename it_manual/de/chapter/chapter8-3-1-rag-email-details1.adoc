@@ -32,11 +32,11 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *Konfigurationsdaten:*
 
-** Anwendungs-ID: *Client-ID*
-** Mandant-ID: *Tenant-ID*
-** Wert des geheimen Clientschlüssel: *Client-Secrets Value*, kann zeitlich begrenzt werden
-** Id des geheimen Clientschlüssel: *Client Secret ID*
-* *Object ID*: (unter *Overview*)
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** Wert des geheimen Clientschlüssel (unter Zertifikate & Geheimnisse): *Client-Secrets Value*, kann zeitlich begrenzt werden
+** ID des geheimen Clientschlüssel (unter Zertifikate & Geheimnisse): *Client Secret ID*
+** ID der App-Registrierung (unter Übersicht): *Object ID*
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```
