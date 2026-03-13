@@ -128,7 +128,7 @@ jobs:
           asciidoctor-pdf \
             -D "${{ env.FILEPATH }}/" \
             $PARAMS \
-            -a product_title=${{ env.PRODUCT_TITLE }} \
+            -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a pdf-theme="CGS" \
             -a pdf-themesdir=./themes \
             -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH }}/index.adoc
