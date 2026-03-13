@@ -56,26 +56,28 @@ jobs:
           done
 
           # Inputs in Bash-Variablen
-          UC1=${{ github.event.inputs.UC1 && '1' || '0' }}
-          UC2=${{ github.event.inputs.UC2 && '1' || '0' }}
-          UC3=${{ github.event.inputs.UC3 && '1' || '0' }}
-          UC4=${{ github.event.inputs.UC4 && '1' || '0' }}
-          UC5=${{ github.event.inputs.UC5 && '1' || '0' }}
-          UC6=${{ github.event.inputs.UC6 && '1' || '0' }}
-          UC7=${{ github.event.inputs.UC7 && '1' || '0' }}
-          UC8=${{ github.event.inputs.UC8 && '1' || '0' }}
-          UC9=${{ github.event.inputs.UC9 && '1' || '0' }}
-          UC10=${{ github.event.inputs.UC10 && '1' || '0' }}
-          UC11=${{ github.event.inputs.UC11 && '1' || '0' }}
-          UC12=${{ github.event.inputs.UC12 && '1' || '0' }}
-          UC13=${{ github.event.inputs.UC13 && '1' || '0' }}
-          UC14=${{ github.event.inputs.UC14 && '1' || '0' }}
-          UC15=${{ github.event.inputs.UC15 && '1' || '0' }}
-          UC16=${{ github.event.inputs.UC16 && '1' || '0' }}
-          UC17=${{ github.event.inputs.UC17 && '1' || '0' }}
-          UC18=${{ github.event.inputs.UC18 && '1' || '0' }}
-          UC19=${{ github.event.inputs.UC19 && '1' || '0' }}
-          UC20=${{ github.event.inputs.UC20 && '1' || '0' }}
+
+          UC1=$([ "${{ github.event.inputs.UC1 }}" = "true" ] && echo 1 || echo 0)
+          UC2=$([ "${{ github.event.inputs.UC2 }}" = "true" ] && echo 1 || echo 0)
+          UC3=$([ "${{ github.event.inputs.UC3 }}" = "true" ] && echo 1 || echo 0)
+          UC4=$([ "${{ github.event.inputs.UC4 }}" = "true" ] && echo 1 || echo 0)
+          UC5=$([ "${{ github.event.inputs.UC5 }}" = "true" ] && echo 1 || echo 0)
+          UC6=$([ "${{ github.event.inputs.UC6 }}" = "true" ] && echo 1 || echo 0)
+          UC7=$([ "${{ github.event.inputs.UC7 }}" = "true" ] && echo 1 || echo 0)
+          UC8=$([ "${{ github.event.inputs.UC8 }}" = "true" ] && echo 1 || echo 0)
+          UC9=$([ "${{ github.event.inputs.UC9 }}" = "true" ] && echo 1 || echo 0)
+          UC10=$([ "${{ github.event.inputs.UC10 }}" = "true" ] && echo 1 || echo 0)
+          UC11=$([ "${{ github.event.inputs.UC11 }}" = "true" ] && echo 1 || echo 0)
+          UC12=$([ "${{ github.event.inputs.UC12 }}" = "true" ] && echo 1 || echo 0)
+          UC13=$([ "${{ github.event.inputs.UC13 }}" = "true" ] && echo 1 || echo 0)
+          UC14=$([ "${{ github.event.inputs.UC14 }}" = "true" ] && echo 1 || echo 0)
+          UC15=$([ "${{ github.event.inputs.UC15 }}" = "true" ] && echo 1 || echo 0)
+          UC16=$([ "${{ github.event.inputs.UC16 }}" = "true" ] && echo 1 || echo 0)
+          UC17=$([ "${{ github.event.inputs.UC17 }}" = "true" ] && echo 1 || echo 0)
+          UC18=$([ "${{ github.event.inputs.UC18 }}" = "true" ] && echo 1 || echo 0)
+          UC19=$([ "${{ github.event.inputs.UC19 }}" = "true" ] && echo 1 || echo 0)
+          UC20=$([ "${{ github.event.inputs.UC20 }}" = "true" ] && echo 1 || echo 0)
+
 
           # Hard Dependencies (rekursiv)
           changed=1
