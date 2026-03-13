@@ -13,12 +13,14 @@ on:
           - CGS
           - ARC
       version:
-        description: 'Asciidoctor PDF Version'
+        description: 'Assist Version (auto=latest)'
         required: true
-        default: '1.4.0'
-        type: string
-
-  
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - 1.4.0
+          - 1.3.1
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   FILENAME: 'USER_MANUAL_DE'
@@ -30,6 +32,38 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Resolve version (auto-from-file or manual)
+        id: resolve
+        shell: bash
+        run: |
+          set -euo pipefail
+          INPUT_VERSION="${{ github.event.inputs.version }}"
+          VERSION_FILE="VERSION.txt"
+
+          if [[ "${INPUT_VERSION}" == "auto" ]]; then
+            if [[ ! -f "${VERSION_FILE}" ]]; then
+              echo "Error: ${VERSION_FILE} not found while version=auto." >&2
+              exit 1
+            fi
+            # Erste nicht-leere Zeile lesen
+            VERSION="$(awk 'NF{print; exit}' "${VERSION_FILE}")"
+            if [[ -z "${VERSION}" ]]; then
+              echo "Error: No non-empty line found in ${VERSION_FILE}." >&2
+              exit 1
+            fi
+          else
+            VERSION="${INPUT_VERSION}"
+          fi
+
+          # Optional: einfache SemVer-Validierung (z. B. 1.2.3, 1.2.3-rc1)
+          if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9\.-]+)?$ ]]; then
+            echo "Error: Version '${VERSION}' does not match expected format (e.g., 1.4.0 or 1.4.0-rc1)." >&2
+            exit 1
+          fi
+
+          echo "Resolved version: ${VERSION}"
+          echo "USED_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Install Asciidoctor & Asciidoctor-pdf
         run: |
@@ -38,7 +72,7 @@ jobs:
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@v2
         with:
-          pandoc-version: '3.1.6.2'
+          pandoc-version: '3.9'
 
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
@@ -59,7 +93,7 @@ jobs:
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
             echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
-          echo "REVNUMBER=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          echo "REVNUMBER=$USED_VERSION" >> $GITHUB_ENV
           # Setze Unternehmen statisch
           echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
