@@ -32,37 +32,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - name: Resolve version (auto-from-file or manual)
+      - name: Resolve version (auto-from-file or manual)
         id: resolve
         shell: bash
         run: |
-          set -euo pipefail
-          INPUT_VERSION="${{ github.event.inputs.version }}"
-          VERSION_FILE="VERSION.txt"
+           set -euo pipefail
+           INPUT_VERSION="${{ github.event.inputs.version }}"
+           VERSION_FILE="VERSION.txt"
 
-          if [[ "${INPUT_VERSION}" == "auto" ]]; then
-            if [[ ! -f "${VERSION_FILE}" ]]; then
-              echo "Error: ${VERSION_FILE} not found while version=auto." >&2
-              exit 1
-            fi
-            # Erste nicht-leere Zeile lesen
-            VERSION="$(awk 'NF{print; exit}' "${VERSION_FILE}")"
-            if [[ -z "${VERSION}" ]]; then
-              echo "Error: No non-empty line found in ${VERSION_FILE}." >&2
-              exit 1
-            fi
-          else
-            VERSION="${INPUT_VERSION}"
-          fi
+           if [[ "${INPUT_VERSION}" == "auto" ]]; then
+             if [[ ! -f "${VERSION_FILE}" ]]; then
+               echo "Error: ${VERSION_FILE} not found while version=auto." >&2
+               exit 1
+             fi
+             # Erste nicht-leere Zeile lesen
+             VERSION="$(awk 'NF{print; exit}' "${VERSION_FILE}")"
+             if [[ -z "${VERSION}" ]]; then
+               echo "Error: No non-empty line found in ${VERSION_FILE}." >&2
+               exit 1
+             fi
+           else
+             VERSION="${INPUT_VERSION}"
+           fi
 
-          # Optional: einfache SemVer-Validierung (z. B. 1.2.3, 1.2.3-rc1)
-          if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9\.-]+)?$ ]]; then
-            echo "Error: Version '${VERSION}' does not match expected format (e.g., 1.4.0 or 1.4.0-rc1)." >&2
-            exit 1
-          fi
+           # Optional: einfache SemVer-Validierung (z. B. 1.2.3, 1.2.3-rc1)
+           if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9\.-]+)?$ ]]; then
+             echo "Error: Version '${VERSION}' does not match expected format (e.g., 1.4.0 or 1.4.0-rc1)." >&2
+             exit 1
+           fi
 
-          echo "Resolved version: ${VERSION}"
-          echo "USED_VERSION=${VERSION}" >> $GITHUB_ENV
+           echo "Resolved version: ${VERSION}"
+           echo "USED_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Install Asciidoctor & Asciidoctor-pdf
         run: |
