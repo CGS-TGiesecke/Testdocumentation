@@ -32,9 +32,6 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *Konfigurationsdaten:*
 
-** Anwendungs-ID: *Client-ID*
-** Mandant-ID: *Tenant-ID*
-
 ** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
 ** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
 ** geheimer Clientschlüssel  (unter Zertifikate & Geheimnisse): *Client-Secrets*, kann zeitlich begrenzt werden
