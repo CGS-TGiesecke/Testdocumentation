@@ -1,40 +1,40 @@
 
+===== Registering an Application in the Microsoft Entra Admin Center for Mail Integration (Microsoft 365 / Graph)
 
-===== Registering the application in the Microsoft Entra Admin Center for SharePoint
+*Sign in*
 
-*Login*
-
-Sign in to the Microsoft Entra Admin Center using an account that has administrator permissions for your organization.  
+Sign in to the Microsoft Entra Admin Center with an account that has administrator rights for your organization.  
 `https://entra.microsoft.com`
 
-*Navigation to "App registrations"*
+*Navigate to "App registrations"*
 
-* Select Entra ID on the far left  
-* Navigate to "App registrations"  
-* Register a new application  
+* Select Entra ID on the far left
+* Navigate to "App registrations"
+* Register a new application
 * Click "New registration" (top menu)
 
 *Enter application information*
 
-* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-client-app  
-* Supported account types: Decide whether the application should support only internal users (your own organization), external users, or multiple organizations. The default is "Single tenant".  
-* Redirect‑URI: optional, not required for SharePoint
+* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-client-app
+* Supported account types: Decide whether the application should support only internal users (single tenant), external users, or multiple organizations. Default is "Single tenant".
+* Enter Redirect URIs, must match the "redirect_uri" value in `init_config.yaml` (required for OIDC).
 
 *Create*
 
-* Click "Register".
+* Click "Register"
 
-*For application authentication:*
+*For app authentication:*
 
-* On the left, select “Certificates & secrets”  
-* Create a new client secret → copy the value (it will only be shown once!)  
-* Or alternatively upload a certificate.
+* Select Certificates & secrets on the left side
+* Create a new client secret → copy the value (displayed only once!)
+* Or alternatively upload a certificate
 
 *Configuration data:*
 
-** Application ID: *Client ID*  
-** Tenant ID: *Tenant ID*  
-** Client secret: *Client Secret*, can be time‑limited 
-```
-Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
-```
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID*
+** Value of the client secret (under Certificates & secrets): *Client Secret Value*, can be time‑limited
+** ID of the client secret (under Certificates & secrets): *Client Secret ID*
+** ID of the app registration (under Overview): *Object ID*
+
+Note: Record/copy these values for your application configuration in `init_config.yaml`.

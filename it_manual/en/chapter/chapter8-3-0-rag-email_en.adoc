@@ -1,16 +1,29 @@
 
-==== SharePoint Integration with Microsoft Entra ID
+==== E-Mail Integration with Microsoft Entra ID
 
-The integration of SharePoint must be implemented via an API using the customer’s data.
-In SharePoint, individual areas are referred to as sites. For example, when a new group is created in MS Teams, SharePoint automatically creates a corresponding SharePoint site linked to this group.
+E-mail integration must be implemented via an API using the customer’s data.  
+Microsoft Graph is the central API for accessing Microsoft 365 services –  
+e.g., Outlook mail, calendars, OneDrive, Teams, etc.
 
-The necessary data for connecting {application} with credentials to the customer’s SharePoint includes:
+For an application to access user data such as e‑mails through the Graph API,  
+Microsoft must ensure that:
 
-* *Tenant-ID:* The ID of the organization/tenant.
-* *Anwendungs-ID:* The client ID of the application.
-* *Client-Secrets* Access keys (can be time-limited)
+* the identity of the user or application is known  
+* the required permissions have been granted  
 
-These details must be stored in the init_config.yaml file (see ‘Initial configuration of the application’).
+Microsoft Entra ID is responsible for this.
 
-If this data is *not* available, the {application} must first be registered by the customer in the Microsoft Entra Admin Center.
+The necessary information for integrating {application} with Mail (Microsoft 365 / Graph) for the customer is:
 
+* *Directory ID (Tenant):* The tenant ID of the organization (under Overview).  
+* *Application ID (Client):* The client ID of the application (under Overview).  
+* *Redirect URI:* Redirect target after successful login back to {application} (under Overview).  
+* *Client Secret Value:* Value of the secret client key, can be time‑limited (under Certificates & secrets).  
+* *Client Secret ID:* ID of the secret client key (under Certificates & secrets).  
+* *Object ID:* The unique, immutable technical identifier of the app registration (under Overview).  
+
+This information must be stored in the `init_config.yaml` file  
+(see “Initial application configuration”).
+
+If this information is *not* available, the customer must first register  
+the application {application} in the Microsoft Entra Admin Center.

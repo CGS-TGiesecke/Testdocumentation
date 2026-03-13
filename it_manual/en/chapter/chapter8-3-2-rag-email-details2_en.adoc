@@ -1,72 +1,72 @@
 
-To allow a registered application in the Microsoft Entra Admin Center to access SharePoint 
-resources (e.g., lists, sites, files), some additional steps are required.
 
-===== Managing SharePoint Permissions
+To allow a registered application in the Microsoft Entra Admin Center to access e-mail resources, 
+additional steps are required.
 
-*Adding API Permissions*
+===== Microsoft Graph – Manage Permissions
+
+*Add API permissions*
 
 * Navigate to your app registration:
-* Entra Admin Center → Entra ID → Applications → App Registrations → Select your application.
-* Click on “API permissions”.
+* Entra Admin Center → Entra ID → Applications → App registrations → Select your application
+* Click “API permissions”
 * Add permissions:
-  ** Click "Add a permission".
-  ** Select "Microsoft Graph"
-  ** You must grant application permissions ("Application permissions"). The minimum required permission is "Sites.Read.All" or "Sites.Selected".
+** Click “Add a permission”
+** Select “Microsoft Graph”
+** You must assign Application permissions
+*** "Mail.Read" (allows the app to read e-mails in mailboxes)
 
-===== Granting Admin Consent
+===== Grant admin consent
 
-For your app to operate with these permissions, a tenant administrator must grant consent:
-In the API permissions section, click "Grant admin consent for [your directory]".
+For your app to work with these permissions, a tenant administrator must approve them:
+In the API permissions section, click “Grant admin consent for [Your Directory]”.
 
-===== Permissions on SharePoint 
+===== Microsoft Graph Mail Access – RBAC Setup
 
-The permissions alone on "Microsoft Graph" are not sufficient. Additionally, permissions must be explicitly granted to 
-the individual SharePoint sites. 
-The permission "Sites.Selected" only allows access to those sites for which permissions have been explicitly granted.
+To ensure the application can only access a specific mailbox, an *Application Access Policy* 
+is configured together with a *mail-enabled security group*.
 
-If permissions are to be granted to individual SharePoint sites, this can be done directly through the SharePoint Admin Center 
-or the SharePoint user interface. 
+====== Create a mail-enabled security group
 
-However, if you need to manage many sites or different permissions, using the PowerShell module is more efficient.
+In the *Microsoft / Exchange Admin Center*, create a *mail-enabled security group*.
 
-*Step by Step PowerShell Module:*
+*Example group configuration:*
 
-Install Microsoft Graph PowerShell Module (if not already installed):
+* Name: <application>-RBAC-Mailbox-Group
+* E-mail address of the group: <application>-rbac-mailbox@<customerdomain>
+
+====== Add the mailbox to the group
+
+Add the mailbox that the application should be allowed to access to the newly created group.
+
+In our case: <application>@<customerdomain>
+
+*Connect to Exchange Online*
+PowerShell:
+```powershell
+Connect-ExchangeOnline
 ```
-Install-Module Microsoft.Graph -Scope CurrentUser
+*Create Application Access Policy*
+PowerShell:
 ```
-You may need the role of "SharePoint Administrator" or Global Administrator to perform the PowerShell operations.
-
-Sign In:
+New-ApplicationAccessPolicy `
+  -AppId <APP_CLIENT_ID> `
+  -PolicyScopeGroupId "<application>-rbac-mailbox@<customerdomain>" `
+  -AccessRight RestrictAccess `
+  -Description "RBAC access for <application> mail processing"
 ```
-Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+*Test the policy*
+PowerShell:
 ```
-
-Save the App ID of registered application:
+Test-ApplicationAccessPolicy `
+  -AppId <APP_CLIENT_ID> `
+  -Identity <application>@<customerdomain>
 ```
-$appId = "YOUR-APP-ID"
+*Check the mailbox*
+PowerShell:
 ```
-
-Find the SharePoint Site ID:
+Get-Recipient -Identity <application>@<customerdomain> | Format-List Name, RecipientType, PrimarySmtpAddress
 ```
-$site = Get-MgSite -Filter "displayName eq 'NAME-OF-YOUR-SITE'"
-$siteId = $site.Id
-```
-
-Grant permission on the site:
-Example for granting Read permissions:
-```
-$permission = @{
-    Roles = @("read")
-    GrantedToIdentities = @(
-        @{
-            Application = @{
-                Id = $appId
-                DisplayName = "YOUR-APP-NAME"
-            }
-        }
-    )
-}
-New-MgSitePermission -SiteId $siteId -BodyParameter $permission
-```
+*Result:*
+The application can only access mailboxes that are members of the defined security group.
+In our case: – <application>@<customerdomain></customerdomain></application>

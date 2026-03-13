@@ -24,3 +24,4 @@ the requirements present at the customer's site in preparation for delivery.
 
 * Shared Folder (SHARED_FOLDER)
 * SharePoint connection with Microsoft Entra ID
+* E-Mail Integration with Microsoft Entra ID
