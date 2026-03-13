@@ -7,10 +7,10 @@ d.h. Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Pass
 
 Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect Authentifizierung des Kunden sind:
 
-* *Anwendungs-ID:* Die Client-ID der Anwendung.
-* *Tenant-ID:* Die ID der Organisation/Mandenten.
-* *Client-Secrets* geheimer Clientschlüssel, kann zeitlich begrenzt werden
-* *Redirect‑URI:* Umleitung nach erfolgreicher Anmeldung zu {application}
+* *Verzeichnis-ID (Mandant):* Die Tenant ID der Organisation/Mandenten (unter Übersicht).
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung (unter Übersicht).
+* *Client-Secrets*: der geheime Clientschlüssel, kann zeitlich begrenzt werden (unter Zertifikate & Geheimnisse).
+* *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application} (unter Übersicht).
 
 Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 

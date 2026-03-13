@@ -14,6 +14,7 @@ Die notwendigen Daten, für die Integration von {application} und Mail(Microsoft
 
 * *Verzeichnis-ID (Mandant):* Die Tenant ID der Organisation/Mandenten (unter Übersicht).
 * *Anwendungs-ID (Client):* Die Client-ID der Anwendung (unter Übersicht).
+* *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application} (unter Übersicht).
 * *Client-Secrets Value*: Wert des geheimen Clientschlüssel, kann zeitlich begrenzt werden (unter Zertifikate & Geheimnisse).
 * *Client Secret ID*: Id des geheimen Clientschlüssel (unter Zertifikate & Geheimnisse).
 * *Object ID*: der eindeutige, unveränderliche technische Identifikator der App-Registrierung (unter Übersicht).

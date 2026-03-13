@@ -9,10 +9,10 @@ zentral und sicher an das Identitätsmanagement von Microsoft anzubinden.
 
 Die notwendigen Daten, für die Anbindung von {application} mit SAML-Authentifizierung des Kunden sind:
 
-** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
-** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
-** geheimer Clientschlüssel (unter Übersicht): *Client-Secrets*, kann zeitlich begrenzt werden
-** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
+* *Verzeichnis-ID (Mandant):* Die Tenant ID der Organisation/Mandenten (unter Übersicht).
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung (unter Übersicht).
+* *Client-Secrets*: der geheime Clientschlüssel, kann zeitlich begrenzt werden (unter Zertifikate & Geheimnisse).
+* *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application} (unter Übersicht).
 
 Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
 
