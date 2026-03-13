@@ -32,9 +32,9 @@ Sign in to the Microsoft Entra Admin Center using an account that has administra
 
 *Configuration data:*
 
-** Application ID: *Client ID*  
-** Tenant ID: *Tenant ID*  
-** Client secret: *Client Secret*, can be time‑limited 
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID* 
+** Client secret(under Certificates & secrets ): *Client Secret*, can be time-limited 
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```

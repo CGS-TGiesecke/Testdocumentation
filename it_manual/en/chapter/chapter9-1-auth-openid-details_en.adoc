@@ -37,10 +37,10 @@ external users, or multiple organizations. The default is "Single tenant".
 
 *Configuration data:*
 
-** Application ID: *Client ID*  
-** Tenant ID: *Tenant ID*  
-** Client secret: *Client Secret*, can be time‑limited  
-** Redirect‑URI: *Redirect‑URI* redirect after successful login to {application}
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID* 
+** Client secret(under Certificates & secrets ): *Client Secret*, can be time-limited 
+** Redirect‑URI (under Overview): *Redirect‑URI* redirect after successful login to {application}
 ```
 Note: Record/copy these values for your application configuration in init_config.yaml.
 ```
