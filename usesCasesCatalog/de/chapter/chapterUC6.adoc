@@ -1,0 +1,18 @@
+
+=== CGS Intern
+
+|===
+| Nr | Titel | Beschreibung | Vorgänger | Nachfolger
+
+| 3.1.1 
+| Release Notes Generator
+| Generates structured release notes from Git commit history
+|
+|
+
+| 3.1.2 		
+| Template for Use Case Creation 
+| Describe and create new custom use cases for this system.
+|
+|
+|===

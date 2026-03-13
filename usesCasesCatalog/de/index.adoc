@@ -4,16 +4,85 @@
 Beschreibungen der Anwendungsfälle
 
 ifeval::[{UC1} == 1]
-include::chapter/chapterUC1-1.adoc[]
+include::chapter/chapterUC1.adoc[]
 endif::[]
 
 ifeval::[{UC2} == 1]
-include::chapter/chapterUC2-1.adoc[]
+include::chapter/chapterUC2.adoc[]
 endif::[]
 
 ifeval::[{UC3} == 1]
-include::chapter/chapterUC3-1.adoc[]
+include::chapter/chapterUC3.adoc[]
 endif::[]
+
+ifeval::[{UC4} == 1]
+include::chapter/chapterUC4.adoc[]
+endif::[]
+
+ifeval::[{UC5} == 1]
+include::chapter/chapterUC5.adoc[]
+endif::[]
+
+ifeval::[{UC6} == 1]
+include::chapter/chapterUC6.adoc[]
+endif::[]
+
+ifeval::[{UC7} == 1]
+include::chapter/chapterUC7.adoc[]
+endif::[]
+
+ifeval::[{UC8} == 1]
+include::chapter/chapterUC8.adoc[]
+endif::[]
+
+ifeval::[{UC9} == 1]
+include::chapter/chapterUC9.adoc[]
+endif::[]
+
+ifeval::[{UC10} == 1]
+include::chapter/chapterUC10.adoc[]
+endif::[]
+
+ifeval::[{UC11} == 1]
+include::chapter/chapterUC11.adoc[]
+endif::[]
+
+ifeval::[{UC12} == 1]
+include::chapter/chapterUC12.adoc[]
+endif::[]
+
+ifeval::[{UC13} == 1]
+include::chapter/chapterUC13.adoc[]
+endif::[]
+
+ifeval::[{UC14} == 1]
+include::chapter/chapterUC14.adoc[]
+endif::[]
+
+ifeval::[{UC15} == 1]
+include::chapter/chapterUC15.adoc[]
+endif::[]
+
+ifeval::[{UC16} == 1]
+include::chapter/chapterUC16.adoc[]
+endif::[]
+
+ifeval::[{UC17} == 1]
+include::chapter/chapterUC17.adoc[]
+endif::[]
+
+ifeval::[{UC18} == 1]
+include::chapter/chapterUC8.adoc[]
+endif::[]
+
+ifeval::[{UC19} == 1]
+include::chapter/chapterUC19.adoc[]
+endif::[]
+
+ifeval::[{UC20} == 1]
+include::chapter/chapterUC20.adoc[]
+endif::[]
+
 
 
 
