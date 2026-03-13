@@ -1,58 +1,46 @@
-
 name: Build Catalog
 
 on:
   workflow_dispatch:
     inputs:
-      UC1:  { type: boolean, required: false, default: false, description: "UC1" }
-      UC2:  { type: boolean, required: false, default: false, description: "UC2" }
-      UC3:  { type: boolean, required: false, default: false, description: "UC3" }
-      UC4:  { type: boolean, required: false, default: false, description: "UC4" }
-      UC5:  { type: boolean, required: false, default: false, description: "UC5" }
-      UC6:  { type: boolean, required: false, default: false, description: "UC6" }
-      UC7:  { type: boolean, required: false, default: false, description: "UC7" }
-      UC8:  { type: boolean, required: false, default: false, description: "UC8" }
-      UC9:  { type: boolean, required: false, default: false, description: "UC9" }
-      UC10: { type: boolean, required: false, default: false, description: "UC10" }
-      UC11: { type: boolean, required: false, default: false, description: "UC11" }
-      UC12: { type: boolean, required: false, default: false, description: "UC12" }
-      UC13: { type: boolean, required: false, default: false, description: "UC13" }
-      UC14: { type: boolean, required: false, default: false, description: "UC14" }
-      UC15: { type: boolean, required: false, default: false, description: "UC15" }
-      UC16: { type: boolean, required: false, default: false, description: "UC16" }
-      UC17: { type: boolean, required: false, default: false, description: "UC17" }
-      UC18: { type: boolean, required: false, default: false, description: "UC18" }
-      UC19: { type: boolean, required: false, default: false, description: "UC19" }
-      UC20: { type: boolean, required: false, default: false, description: "UC20" }
+      UC1:  { type: boolean, default: false }
+      UC2:  { type: boolean, default: false }
+      UC3:  { type: boolean, default: false }
+      UC4:  { type: boolean, default: false }
+      UC5:  { type: boolean, default: false }
+      UC6:  { type: boolean, default: false }
+      UC7:  { type: boolean, default: false }
+      UC8:  { type: boolean, default: false }
+      UC9:  { type: boolean, default: false }
+      UC10: { type: boolean, default: false }
+      UC11: { type: boolean, default: false }
+      UC12: { type: boolean, default: false }
+      UC13: { type: boolean, default: false }
+      UC14: { type: boolean, default: false }
+      UC15: { type: boolean, default: false }
+      UC16: { type: boolean, default: false }
+      UC17: { type: boolean, default: false }
+      UC18: { type: boolean, default: false }
+      UC19: { type: boolean, default: false }
+      UC20: { type: boolean, default: false }
 
 env:
   FILENAME: "USE_CASE_CATALOG_DE"
   FILEPATH: "usesCasesCatalog/de"
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
 
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Install Asciidoctor
+        run: sudo gem install asciidoctor asciidoctor-pdf
 
-      - name: Install Asciidoctor & Asciidoctor-pdf
-        run: |
-          sudo gem install asciidoctor asciidoctor-pdf
-
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: '3.9'
-
-      - name: Declare dependency matrix + resolve hard dependencies
+      - name: Load and resolve dependencies
         id: deps
         run: |
           declare -A DEP
-          
-          # Dependency definitions (from your JSON)
           DEP[UC2]="UC4"
           DEP[UC4]="UC1 UC20"
           DEP[UC6]="UC14 UC15"
@@ -61,24 +49,42 @@ jobs:
           DEP[UC17]="UC8"
           DEP[UC20]="UC3"
 
-          # Initialize all vars
+          # Input übergeben
           for i in {1..20}; do
             UC="UC$i"
-            VALUE="${{ github.event.inputs[format('UC%s', i)] }}"
-            if [ "$VALUE" = "true" ]; then
-              eval "$UC=1"
-            else
-              eval "$UC=0"
-            fi
+            VAL="${{ github.event.inputs.UC1 }}"
           done
 
-          # Recursive dependency resolution (hard dependencies)
+          # Inputs in Bash-Variablen
+          UC1=${{ github.event.inputs.UC1 && '1' || '0' }}
+          UC2=${{ github.event.inputs.UC2 && '1' || '0' }}
+          UC3=${{ github.event.inputs.UC3 && '1' || '0' }}
+          UC4=${{ github.event.inputs.UC4 && '1' || '0' }}
+          UC5=${{ github.event.inputs.UC5 && '1' || '0' }}
+          UC6=${{ github.event.inputs.UC6 && '1' || '0' }}
+          UC7=${{ github.event.inputs.UC7 && '1' || '0' }}
+          UC8=${{ github.event.inputs.UC8 && '1' || '0' }}
+          UC9=${{ github.event.inputs.UC9 && '1' || '0' }}
+          UC10=${{ github.event.inputs.UC10 && '1' || '0' }}
+          UC11=${{ github.event.inputs.UC11 && '1' || '0' }}
+          UC12=${{ github.event.inputs.UC12 && '1' || '0' }}
+          UC13=${{ github.event.inputs.UC13 && '1' || '0' }}
+          UC14=${{ github.event.inputs.UC14 && '1' || '0' }}
+          UC15=${{ github.event.inputs.UC15 && '1' || '0' }}
+          UC16=${{ github.event.inputs.UC16 && '1' || '0' }}
+          UC17=${{ github.event.inputs.UC17 && '1' || '0' }}
+          UC18=${{ github.event.inputs.UC18 && '1' || '0' }}
+          UC19=${{ github.event.inputs.UC19 && '1' || '0' }}
+          UC20=${{ github.event.inputs.UC20 && '1' || '0' }}
+
+          # Hard Dependencies (rekursiv)
           changed=1
           while [ $changed -eq 1 ]; do
             changed=0
             for i in {1..20}; do
               UC="UC$i"
-              if [ "$(eval echo \$$UC)" -eq 1 ]; then
+              val=$(eval echo \$$UC)
+              if [ "$val" -eq 1 ]; then
                 for D in ${DEP[$UC]}; do
                   if [ "$(eval echo \$$D)" -eq 0 ]; then
                     eval "$D=1"
@@ -89,35 +95,28 @@ jobs:
             done
           done
 
-          # Export to environment
+          # Export final values
           for i in {1..20}; do
             UC="UC$i"
             echo "$UC=$(eval echo \$$UC)" >> $GITHUB_ENV
           done
-
-      - name: Read version
-        run: |
-          echo "VERSION=$(cat VERSION.txt)" >> $GITHUB_ENV
 
       - name: Build PDF
         run: |
           PARAMS=""
           for i in {1..20}; do
             UC="UC$i"
-            PARAMS="$PARAMS -a $UC=${{ env[$UC] }}"
+            PARAMS="$PARAMS -a $UC=${!UC}"
           done
 
           asciidoctor-pdf \
             -D "${{ env.FILEPATH }}/" \
             $PARAMS \
-            -a application="CGS Assist: Software für den Mittelstand - Use Case Katalog" \
             -a pdf-theme="CGS" \
-            -a pdf-themesdir=./themes \
-            -o "${{ env.FILENAME }}_${{ env.VERSION }}.pdf" \
+            -o "${{ env.FILENAME }}.pdf" \
             "${{ env.FILEPATH }}/index.adoc"
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILENAME }}_${{ env.VERSION }}
+          name: "${{ env.FILENAME }}"
           path: "${{ env.FILEPATH }}/*.pdf"
