@@ -63,6 +63,7 @@ Die Bereitstellung erfolgt über *Docker*.
 * *Docker Engine:* Version `>` 2.x
 
 *Installation:* Der Kunde muss Docker auf dem Server installieren und konfigurieren.
+
 Docker speichert Daten (Images, Container, Volumes) standardmäßig unter Linux im Verzeichnis `/var/lib/docker`. 
 Volumes für persistente Daten liegen typischerweise in `/var/lib/docker/volumes`.
 Für den Betrieb empfehlen wir mindestens 20 GB Speicher für das Docker-Datenverzeichnis zur Verfügung stellen.
@@ -71,7 +72,9 @@ Für den Betrieb empfehlen wir mindestens 20 GB Speicher für das Docker-Datenve
 
 Ein *beschreibbares Verzeichnis* auf dem Server für den Datenaustausch zwischen den Containern und für persistente Daten (Dokumente, Datenbanken, Vector-Store).
 
-*Aufgabe des Kunden:* Bereitstellung eines Verzeichnisses mit ausreichenden Schreib-/Leserechten für die Docker-Container.
+*Aufgabe des Kunden:* 
+Bereitstellung eines Verzeichnisses (SHARED_FOLDER) mit ausreichenden Schreib-/Leserechten für die Docker-Container.
+Da in diesem Verzeichnis Datenbank und Konfigurationsdateien enthalten sind, ist wachsender Speicherbedarf einzuplanen.
 
 
 

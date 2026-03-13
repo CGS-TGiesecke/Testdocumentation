@@ -4,7 +4,7 @@
 Datenhaltung:
 
 * SQLite: Benutzerdaten, Metadaten, Logs
-* SHARED_FOLDER: Hochgeladene Dokumente, Konfigurationsdateien und Mount zum Docker
+* SHARED_FOLDER: Datenbank, Hochgeladene Dokumente, Konfigurationsdateien und Mount zum Docker
 * ChromaDB: Embeddings für RAG
 
 *Alle Daten liegen auf dem Kundenserver.*
@@ -17,10 +17,12 @@ ifeval::[{arc-assist} == 1]
  AI Chat
 endif::[]
  auf eigener Datenbasis zu nutzen und in der Dokumentenansicht die Transparenz woher die Information stammen.
+ 
 Die Applikation {application} unterstützt verschiedene Möglichkeiten der Datenanbindung, die in Vorbereitung einer Auslieferung,
 nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden können.
  
 {application} unterstützt:
 
 * Shared Folder (SHARED_FOLDER)
-* Sharepoint Anbindung über die Microsoft Entra ID
+* Sharepoint Integration über die Microsoft Entra ID
+* E-Mail Integration über die Microsoft Entra ID

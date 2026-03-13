@@ -22,7 +22,7 @@ on:
           - 1
           - 2
       version:
-        description: 'Assist Version (auto=last)'
+        description: 'Assist Version (auto=latest)'
         required: true
         default: 'auto'
         type: choice

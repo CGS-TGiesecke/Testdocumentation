@@ -1,0 +1,70 @@
+
+Um E-Mail Ressourcen durch eine registrierte Anwendung im Microsoft Entra Admin Center abzudecken, 
+sind weitere zusätzliche Schritte nötig.
+
+===== Microsoft Graph - Berechtigungen verwalten
+
+*Hinzufügen von API-Berechtigungen*
+
+* Navigieren Sie zu Ihrer App-Registrierung:
+* Entra Admin Center → Entra ID → Anwendungen → App-Registrierungen → Ihre Anwendung wählen.
+* Klicken Sie auf „API-Berechtigungen“.
+* Fügen Sie Berechtigungen hinzu:
+** Klicken Sie auf "Berechtigung hinzufügen".
+** Wählen Sie „Microsoft Graph“
+** Sie müssen Anwendungsberechtigungen („Application permissions“) vergeben. 
+*** "Mail.Read" (erlaubt der App, E-Mails in Postfächern zu lesen)
+
+===== Admin-Zustimmung erteilen
+
+Damit Ihre App mit diesen Permissions arbeiten kann, muss ein Mandanten-Administrator die Berechtigungen genehmigen:
+In den API-Berechtigungen auf "Admin-Zustimmung für [Ihr Verzeichnis]" klicken.
+
+===== Microsoft Graph Mail Zugriff – RBAC Setup
+
+Damit die Anwendung nur auf ein bestimmtes Postfach zugreifen kann, wird eine *Application Access Policy* mit 
+einer *E-Mail-aktivierten Sicherheitsgruppe* eingerichtet.
+
+====== E-Mail-aktivierte Sicherheitsgruppe erstellen
+
+Im *Microsoft / Exchange Admin Center* eine *Mail-enabled Security Group* erstellen.
+
+*Beispiel für die Gruppe*:
+
+* Name: {application}-RBAC-Mailbox-Gruppe
+* E-Mail-Adresse der Gruppe: {application}-rbac-mailbox@<Kundendomain>
+
+====== Postfach zur Gruppe hinzufügen
+
+Zur eben erstellten Gruppe das Postfach hinzufügen, auf das die Anwendung zugreifen darf.
+
+In unserem Fall: <cgs-assist>@<Kundendomain>
+
+*Verbindung zu Exchange Online*
+```powershell
+Connect-ExchangeOnline
+```
+
+*Application Access Policy erstellen*
+```powershell
+New-ApplicationAccessPolicy `
+  -AppId <APP_CLIENT_ID> `
+  -PolicyScopeGroupId "{application}-rbac-mailbox@\<Kundendomain>" `
+  -AccessRight RestrictAccess `
+  -Description "RBAC Zugriff für {application} Mail Verarbeitung"
+```
+
+*Policy testen*
+```powershell
+Test-ApplicationAccessPolicy `
+  -AppId \<APP_CLIENT_ID> `
+  -Identity ai-ben@\<Kundendomain>
+```
+
+*Postfach prüfen*
+```powershell
+Get-Recipient -Identity <cgs-assist>@\<tenant-domain> | Format-List Name, RecipientType, PrimarySmtpAddress
+```
+
+*Ergebnis:* Die Anwendung kann nur auf Postfächer zugreifen, die sich in der definierten Sicherheitsgruppe befinden.
+In unserem Fall: - <cgs-assist>@\<tenant-domain>

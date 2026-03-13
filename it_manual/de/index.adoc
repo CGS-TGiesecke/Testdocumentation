@@ -57,7 +57,6 @@ endif::[]
 include::chapter/chapter8-0-rag.adoc[]
 
 ifeval::[{big-output} > 0]
-
 include::chapter/chapter8-1-0-rag-sharedfolder.adoc[]
 
 include::chapter/chapter8-2-0-rag-sharepoint.adoc[]
@@ -66,6 +65,17 @@ ifeval::[{big-output} == 2]
 include::chapter/chapter8-2-1-rag-sharepoint-details1.adoc[]
 
 include::chapter/chapter8-2-2-rag-sharepoint-details2.adoc[]
+endif::[]
+
+endif::[]
+
+ifeval::[{big-output} > 0]
+include::chapter/chapter8-3-0-rag-email.adoc[]
+
+ifeval::[{big-output} == 2]
+include::chapter/chapter8-3-1-rag-email-details1.adoc[]
+
+include::chapter/chapter8-3-2-rag-email-details2.adoc[]
 endif::[]
 
 endif::[]

@@ -1,0 +1,24 @@
+
+==== Sharepoint Anbindung mit Microsoft Entra ID 
+
+Die E-mail Integration muss über eine API mit den Kundendaten erfolgen. Microsoft Graph ist die zentrale API, 
+um auf Dienste in Microsoft 365 zuzugreifen – z. B. Outlook‑Mails, Kalender, OneDrive, Teams usw.
+Damit eine Anwendung über die Graph‑API auf Benutzerdaten wie E-Mails zugreifen darf, muss Microsoft sicherstellen, dass:
+
+* die Identität des Benutzers oder der App bekannt ist
+* die nötigen Berechtigungen erteilt wurden.
+
+Genau dafür ist Microsoft Entra ID zuständig.
+
+Die notwendigen Daten, für die Integration von {application} und Mail(Microsoft 365 / Graph) des Kunden sind:
+
+* *Tenant-ID:* Die ID der Organisation/Mandenten.
+* *Anwendungs-ID (Client):* Die Client-ID der Anwendung.
+* *Client-Secrets Value*: Wert des geheimen Clientschlüssel, kann zeitlich begrenzt werden
+* *Client Secret ID*: Id des geheimen Clientschlüssel
+* *Object ID*: (unter *Overview*)
+
+Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstkonfiguration der Anwendung"). 
+
+Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst über das 
+Microsoft Entra Admin Center registriert werden.

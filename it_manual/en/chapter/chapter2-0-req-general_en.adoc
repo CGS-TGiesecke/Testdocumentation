@@ -73,4 +73,6 @@ For operation, we recommend providing at least 20 GB of storage for the Docker d
 
 A *writable directory* on the server for data exchange between containers and for persistent data (documents, databases, vector store).
 
-*Customer responsibility:* Provision of a directory with sufficient read/write permissions for the Docker containers.
+*Customer responsibility:* 
+Provision of a directory (SHARED_FOLDER) with sufficient read/write permissions for the Docker containers.
+Since this directory contains the database and configuration files, you should plan for increasing storage requirements.

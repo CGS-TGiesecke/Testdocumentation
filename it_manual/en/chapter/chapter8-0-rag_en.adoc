@@ -4,7 +4,7 @@
 Data storage:
 
 * SQLite: User data, metadata, logs
-* SHARED_FOLDER: Uploaded documents, configuration files, and mount for Docker
+* SHARED_FOLDER: Database, Uploaded documents, configuration files, and mount for Docker
 * ChromaDB: Embeddings for RAG
 
 *All data resides on the customer’s server.*
