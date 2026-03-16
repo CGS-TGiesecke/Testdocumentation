@@ -37,20 +37,6 @@ jobs:
         run: |
           sudo gem install asciidoctor asciidoctor-pdf
 
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: '3.9'
-
-      - name: Install envsubst (gettext)
-        run: sudo apt-get update && sudo apt-get install -y gettext
-
-      - name: Define metadata variables
-        run: |
-            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - Use Case Auswahl" >> $GITHUB_ENV
-           
-
-
       - name: Load and resolve dependencies
         id: deps
         run: |
@@ -128,7 +114,6 @@ jobs:
           asciidoctor-pdf \
             -D "${{ env.FILEPATH }}/" \
             $PARAMS \
-            -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a pdf-theme="CGS" \
             -a pdf-themesdir=./themes \
             -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH }}/index.adoc
