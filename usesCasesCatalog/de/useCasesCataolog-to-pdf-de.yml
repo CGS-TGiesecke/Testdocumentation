@@ -131,8 +131,7 @@ jobs:
             -a product_title="${{ env.PRODUCT_TITLE }}" \
             -a pdf-theme="CGS" \
             -a pdf-themesdir=./themes \
-            -o "${{ env.FILENAME }}.pdf" \
-            "${{ env.FILEPATH }}/index.adoc"
+            -o ${{ env.FILENAME }}.pdf ${{ env.FILEPATH }}/index.adoc
 
       - uses: actions/upload-artifact@v4
         with:
