@@ -25,16 +25,6 @@ Die Benutzerverwaltung erfolgt zentral in der Administrationsoberfläche der App
 * Festlegen individueller Rechte für bestimmte Funktionsbereiche (z. B. Automatisierung)
 * Regelmäßige Überprüfung aktiver Benutzer und Rechte (mindestens halbjährlich)
 
-==== Anbindung an andere Systeme (Schnittstellen, APIs)
-
-Die Anwendung ist über folgende Schnittstellen und APIs mit anderen Systemen verbunden:
-
-* RAG-API zur Kommunikation mit dem Vector-Store
-* LLM-API zur Kommunikation mit dem vom Kunden konfigurierten LLM Provider
-* Schnittstelle mit vom Kunden konfigurierte Authentifizierung
-* Schnittstelle mit vom Kunden konfigurierte SharePoint Anbindung
-* (optional) MCP Server API zur Nutzung kundenspezifizierten Suchfunktionen
-
 ==== Backup und Recovery der Applikation
 
 Backup und Recovery der Applikation erfolgt durch den Kunden.

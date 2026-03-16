@@ -25,16 +25,6 @@ User management is handled centrally in the administration interface of the {app
 - Define individual permissions for specific functional areas (e.g., automation)
 - Regularly review active users and permissions (at least semi-annually)
 
-==== Integration with Other Systems (Interfaces, APIs)
-
-The application is connected to other systems via the following interfaces and APIs:
-
-* RAG API for communication with the vector store
-* LLM API for communication with the customer-configured LLM provider
-* Interface with a customer-configured authentication solution
-* Interface with a customer-configured SharePoint solution
-* (optional) MCP Server API to use customer-specified search functions
-
 ==== Application Backup and Recovery
 
 Backup and recovery of the application is performed by the customer.
