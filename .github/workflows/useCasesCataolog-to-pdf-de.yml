@@ -49,6 +49,8 @@ jobs:
           DEP[UC6]="UC14 UC15"
           DEP[UC8]="UC17"
           DEP[UC12]="UC16"
+          DEP[UC13]="UC15"
+          DEP[UC14]="UC15"
           DEP[UC17]="UC8"
           DEP[UC20]="UC3"
 
