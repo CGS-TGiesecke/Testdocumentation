@@ -45,12 +45,15 @@ jobs:
         run: |
           declare -A DEP
           DEP[UC2]="UC4"
-          DEP[UC4]="UC1 UC20"
+          DEP[UC3]="UC20"
+          DEP[UC4]="UC2 UC20"
           DEP[UC6]="UC14 UC15"
           DEP[UC8]="UC17"
           DEP[UC12]="UC16"
           DEP[UC13]="UC15"
-          DEP[UC14]="UC15"
+          DEP[UC14]="UC6 UC15"
+          DEP[UC15]="UC6 UC14 UC13"
+          DEP[UC16]="UC12"
           DEP[UC17]="UC8"
           DEP[UC20]="UC3"
 
