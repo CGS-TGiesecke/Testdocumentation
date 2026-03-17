@@ -1,37 +1,27 @@
 === Assist Administration
 
-Innerhalb der Assist Administration gibt es die Möglichkeit, alle Systemrelevanten Daten zentral zu verwalten. So können hier Benutzer und Rollen, 
-die Speicherordner der Dokumente (RAG), Konfigurationen der Schnittstellen, die Systemaufforderungen (Promps), Lizenzen und die systemseitig 
-hinterlegten Anwendungsfälle verwaltet werden.
-Der Zugriff auf diese Funktionen der Administration erfolgt über eine systemseitige, festgelegte Rolle.
+Innerhalb der Administration können systemrelevante Daten zentral verwaltet werden: Benutzer, Rollen, Dokumentordner, Schnittstellenkonfigurationen, Systemaufforderungen (Prompts), Lizenzen sowie systemseitig hinterlegte Anwendungsfälle. +
+Der Zugriff erfolgt über eine speziell zugewiesene Rolle.
 
 image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
 
 ==== Benutzerverwaltung
 
-Die Nutzung der Benutzerverwaltung ist abhängig von der konfigurierten Authentifizierungsmethode. 
+Abhängig von der Authentifizierungsmethode 
 
 image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 
-*OpenID Connect Authentifizierung mit Microsoft Entra ID*
+*OpenID Connect/SAML (Microsoft Entra ID)*
 
-* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
-* Passwortwortverwaltung über Microsoft.
-* Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
-  Nach erneuter Anmeldung werden die Daten synchronisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
-
-*SAML-Authentifizierung mit Microsoft Entra ID*
-
-* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist *nicht* möglich.
-* Passwortwortverwaltung über Microsoft.
-* Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
-  Nach erneuter Anmeldung werden die Daten synchronisiert und der Benutzer ist evtl. im {application} wieder vorhanden.
+* Benutzer können *nicht* im Assist angelegt oder bearbeitet werden.
+* Passwörter werden über Microsoft verwaltet.
+* Rollenzuweisungen für Assist sind möglich.
+* Entfernen von Benutzern aus der Oberfläche ist möglich, jedoch werden diese durch erneute Synchronisation ggf. wieder angezeigt.
 
 *Lokale Benutzer-/Passwortverwaltung*
 
-* Hinzufügen und bearbeiten von Benutzern über die Oberfläche des {application} ist möglich.
-* Passwortwortverwaltung über die Oberfläche des {application} ist möglich.
-* Rollenzuweisung für {application} über die Oberfläche des {application} ist möglich.
-* Benutzer können nur in der Übersichtstabelle, nach einer bestätigten Sicherheitsabfrage, aus der Applikation {application} entfernt werden.
+* Benutzer können angelegt und bearbeitet werden.
+* Passwortverwaltung erfolgt im Assist.
+* Rollen können zugewiesen werden.
+* Entfernen erfolgt mit Sicherheitsabfrage.
+

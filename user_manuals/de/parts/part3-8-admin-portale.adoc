@@ -1,12 +1,10 @@
 
 ==== Portal-Seite
 
-Auf dieser Seite können verschiedene Verknüpfungen verwaltet werden. Es besteht die Möglichkeit zur Neuanlage, zum Löschen und 
-Bearbeiten einzelner Einträge. Die Verfügbarkeit einzelner Verlinkungen kann über seperate Berechtigungen gesteuert werden.
-Zusätzlich kann die gesamte Portalseite aktiviert/deaktiviert werden und diese ist dann auch nicht mehr in der Navigation verfügbar.
+Verknüpfungen können erstellt, bearbeitet oder gelöscht werden. Berechtigungen steuern die Sichtbarkeit. Die gesamte Seite kann aktiviert/deaktiviert werden.
 
 image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite", width=500]
 
-Es können Seiten oder Applikationen verknüpft werden. Die Verknüpfung von Dokumenten auf Laufwerden oder Shares ist nicht möglich.
+Es können Anwendungen oder Webseiten verknüpft werden; Dateien oder Laufwerks‑Shares sind ausgeschlossen.
 
 image::../images/Abbildung-42.jpg[Administration - Portal-Seite - Link erstellen, title="Administration - Portal-Seite - Link erstellen", width=250]

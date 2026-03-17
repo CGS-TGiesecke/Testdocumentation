@@ -1,30 +1,25 @@
 
 ==== Navigationsbereich "Anwendungsfälle" 
 
-Hier werden alle aktivierten Anwendungsfälle, nach den Bereichen gruppiert, angezeigt. Die Zordnung der Anwendungsfälle zu den Bereichen, erfolgt bei Anlage in der Administration. Anwendungsfälle sind in der Administration hinterlegte und freigegebene Use Case Listen, die vor der Ausführung nur noch mit konkreten Inhalten zu befüllen sind. Diese Listen erleichtern routinemäßige Anfragen. 
+Hier werden alle aktivierten Anwendungsfälle gruppiert angezeigt. Die Zuordnung zu Bereichen erfolgt in der Administration. Anwendungsfälle sind freigegebene Use‑Case‑Listen, die vor der Ausführung mit konkreten Eingaben befüllt werden.
+Einige Anwendungsfälle können workflowbasiert angezeigt werden (z. B. erst Anwendungsfall 1, dann 2, sofern 1 abgeschlossen wurde).
 
-Es besteht auch die Möglichkeit die Anwendungsfälle die einem Ablauf folgen müssen, workflowbasiert anzuzeigen. Das bedeutet erst wenn Anwendungsfall 1 ausgeführt ist, steht Anwendungsfall 2, dessen Voraussetzung Anwendungsfall 1 ist, zur Verfügung.
-
-Vom System erlaubte Dokumente zur Nutzung im Bereich Anwendungsfälle sind: .pdf .docx .xlsx, .pptx, .txt.
+*Erlaubte Dokumente* sind: .pdf .docx .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-6.jpg[Navigationsbereich Anwendungsfälle, title="Navigationsbereich Anwendungsfälle", width=500]
 
-Zum Öffnen eines konkreten Anwendungsfalles wird auf das Symbol mit Namen geklickt.
+Zum Öffnen eines Anwendungsfalls wird auf das entsprechende Symbol geklickt. 
 
 image::../images/Abbildung-7.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=500]
 
-Klick auf ein Symbol mit Namen öffnet den Anwendungsfall zur Datenaufnahme.
+Anschließend können vorbereitete Use Cases mit Eingaben befüllt und durch „Ausführen“ gestartet werden. 
 
 image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=500]
 
-Hier werden bereits fertig hinterlegte Use Cases angezeigt, die mit Eingaben befüllt werden können. Anschließend kann die Abfrage durch Klick auf Ausführen“ abgeschickt werden.
-Während der Verarbeitung wird eine Wait Box angezeigt und der Statusverlauf als Info angezeigt.
-
+Während der Verarbeitung wird eine Wartebox mit Statusinformationen angezeigt.
 image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox", width=400]
 
-Nach der Rückmeldung zur Anfrage kann über einen Butten in den Navigationsbereich „Chat“ geöffnet werden, um auf diesen konkreten Use Case weitere Anfragen zu starten.
-Das Ergebnis einer Anfrage kann auch gespeichert werden und ist dann als separater Chat verfügbar.
-Um einen Use Case zu löschen, muss zuerst der Lösch Button betätigt werden und danach die Abfrage mit „OK“ bestätigt werden.
+Ergebnisse können gespeichert und als eigener Chat weitergeführt werden. Löschen erfolgt ebenfalls zweistufig.
 
 image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles", width=500]
 

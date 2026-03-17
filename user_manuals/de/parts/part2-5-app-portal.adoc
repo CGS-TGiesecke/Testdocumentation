@@ -1,13 +1,11 @@
 
 ==== Navigationsbereich "Portal"
 
-Diese Seite und somit auch der Menüpunkt können in der Administration komplett ein oder ausgeschaltet werden.
-Ist die Seite freigeschlatet, werden hier alle in der Administration hintzerlegten und somit verfügbaren Verlinkungen zu anderen Seiten 
-oder Anwendungen angezeigt, für die der Anwender berechtigt ist.
+Dieser Bereich kann in der Administration aktiviert oder deaktiviert werden. Bei aktivierter Portal‑Seite werden alle freigegebenen Verknüpfungen zu anderen Anwendungen oder Webseiten angezeigt.
+
+Ein Klick öffnet die Verknüpfung in einem neuen Browser‑Tab oder Fenster. Die Verlinkung lokaler Dateien oder Shares ist nicht möglich.
 
 image::../images/Abbildung-40.jpg[Navigationsbereich - Portal, title="Navigationsbereich - Portal", width=500]
-
-Mit einem Klick auf das Symbol, wird die Verknüpfung, je nach Browsereinstellung, in einen neuen Browsertab oder Fenster geöffnet.
 
 
 

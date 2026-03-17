@@ -1,10 +1,9 @@
 
 ==== Ordnerverwaltung
 
-Auf dieser Seite werden alle angelegtenkönnen Ordner angezteigt. Diesen Ordnern können hier Berechtigungen durch die Rollen zugewiesen werden. 
-Dadurch wird die Sichtbarkeit und der Zugriff auf diese Ordner unter Navigationsbereich „Dokumente“ gesteuert.
+Diese Seite zeigt alle Ordner an. Rollen können Berechtigungen zugeordnet werden, wodurch die Sichtbarkeit im Bereich „Dokumente“ gesteuert wird.
 
-Vom System erlaubte Dokumente zur Nutzung in der Ordnerverwaltung sind: .pdf .docx .xlsx, .pptx, .txt.
+*Erlaubte Dokumente* sind: .pdf .docx .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung", width=500]
 

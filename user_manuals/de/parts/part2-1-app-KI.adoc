@@ -2,30 +2,21 @@
 
 ==== Navigationsbereich "KI Chat"
 
-Auf der Seite hat man eine klassische Chat Oberfläche mit einem Eingabefenster für Prompts. 
-Alle Chatverläufe werden nur im Browser Storage gespeichert und sind nach dem Browser schließen 
-(Wenn Einstellung "automatischem Cache leeren") und der Neuanmeldung nicht weiter verfügbar.
-Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen und der Neuanmeldung wieder geöffnet werden.
+Die Oberfläche bietet ein klassisches Chat‑Fenster mit Eingabefeld für Prompts. Alle Chatverläufe werden ausschließlich lokal im Browser gespeichert und sind – sofern die Einstellung „automatisches Cache‑Löschen“ aktiviert ist – nach dem Schließen des Browsers nicht mehr verfügbar. Gespeicherte Use‑Case‑Verläufe können dagegen auch nach einer Neuanmeldung wieder geöffnet werden.
 
-Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob die internen Inhalte des (RAG) z.B. aus dem Sharepoint und/oder 
-der Datenbank *zusätzlich* zur Wissensfindung durchsucht werden sollen. 
+Vor dem Ausführen einer Anfrage kann festgelegt werden, ob interne Inhalte aus dem RAG (z. B. SharePoint oder Datenbank) zusätzlich durchsucht werden sollen 
 
-Über ein Drop-Down Fenster besteht die Möglichkeit einen der diversen, meist kontextbezogenen Agenten auszuwählen, die bei der Abfrage 
-eingesetzt werden sollen. Diese Agenten machen einen KI‑Einsatz im Unternehmen sicher, strukturiert und beherrschbar. 
-Sie steuern gezielt, „was die KI darf und was nicht“ und bieten klare, nachvollziehbare Schnittstellen zu Daten und Systemen.
-Die KI kann *nur* auf solche Daten zugreifen, wie es der Agent explizit erlaubt (z.B. nur „suchen“, aber nicht „löschen“).
-Es ist also kein direkter unkontrollierter Zugriff auf Unternehmenssysteme möglich.
+Über ein Dropdown‑Menü können verschiedene, meist kontextbezogene KI‑Agenten ausgewählt werden. Diese steuern granular, welche Aktionen die KI ausführen darf. Die KI kann ausschließlich auf die Daten zugreifen, die vom Agenten explizit freigegeben sind (z. B. nur suchen, nicht löschen).
 
 Die Berechtigungen auf Ordner und enthaltene Dokumente werden bei der Suche über das RAG berücksichtig.
 Nutzt man das RAG werden bei der Antwort die Top 8 Embeddings für die Antwort und ein Link zur jeweiligen Quelle angezeigt. 
 Somit kann mit einem Klick die Antwort in der originalen Quelle verifiziert werden.
 
-Vom System erlaubte Dokumente zur Nutzung im KI Chat sind  .pdf .docx .xlsx, .pptx, .txt.
+*Erlaubte Dokumente* sind  .pdf .docx .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=500]
 
-Im Chateingabefeld werden bereits verwendete Zeichen gezählt und angezeigt. Zusätzlich ist eine automatische Rechtschreibkontrolle aktiviert.
-Es bestehen die Möglichkeiten zur Anfrage über eine manuelle Texteingabe, über eine Sprachaufnahme per Mikrofon oder das Laden eines Dokumentes.
+Das Eingabefeld zeigt eine Zeichenzählung und verfügt über automatische Rechtschreibprüfung. Anfragen können per Texteingabe, Mikrofon oder über den Upload eines Dokuments gestellt werden.
 
 image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=500]
 
@@ -39,8 +30,7 @@ ifeval::[{arc-assist} == 1]
 image::../images/arc-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich AI Chat  - speichern", width=500]
 endif::[]
 
-Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
-Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.
+Chats können per Copy‑Button kopiert, über den Stift umbenannt oder mit einer zweistufigen Bestätigung gelöscht werden.
 
 image::../images/Abbildung-5.jpg[Navigationsbereich KI Chat  - löschen, title="Navigationsbereich KI Chat  - löschen", width=300]
 

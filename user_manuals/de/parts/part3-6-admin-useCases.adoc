@@ -1,16 +1,13 @@
 
 ==== Anwendungsfälle
 
-Auf dieser Seite wurden konkrete Anwendungsfälle bzw. Vorlagen dafür hinterlegt. Anwendungsfälle sind Templates als fertige Routinen wie Checklisten um wiederkehrende, Use Case organisierte Anfragen zu stellen. 
-Die Gruppierung der Anwendungsfälle ist systemseitig festgelegt und wird unter Navigationsbereich „Anwendungsfälle“ wieder verwendet.
+Hier werden Vorlagen für Anwendungsfälle verwaltet. Die Gruppierung ist systemseitig festgelegt.
 
 image::../images/Abbildung-25.jpg[Navigationsbereich - Anwendungsfälle, title="Navigationsbereich - Anwendungsfälle", width=500]
 
-Hinterlegte Vorlagen können deaktiviert werden und steuert damit die Sichtbarkeit/Verfügbarkeit unter Navigation „Anwendungsfälle“.
+Vorlagen können deaktiviert werden und steuern die Sichtbarkeit im Bereich „Anwendungsfälle“.
 
-Ein Anwendungsfall bzw. Vorlage kann für die Automatiseirung aktiviert werden (KI Agent). Zusätzlich mussen die Berechtigungen gesetzt werden.
-Danach ist er unter dem Navigationsbereich "Automatisierung" für berechtigte Nutzer sichtbar und kann für zeitgesteuerte Ausführungen konfiguriert werden.
-Zusätzlich wird die Statistik zur Bewertung des Anwendungsfalles angezeigt, also wie viele Sterne bei der Benutzung als Feedback bewertet wurden.
+Anwendungsfälle können für die Automatisierung freigegeben und mit Berechtigungen versehen werden. Bewertungsstatistiken (Sterne) werden angezeigt.
 
 image::../images/Abbildung-48.jpg[Administration - Anwendungsfälle, title="Administration - Anwendungsfälle", width=250]
 
