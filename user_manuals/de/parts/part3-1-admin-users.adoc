@@ -7,7 +7,7 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 ==== Benutzerverwaltung
 
-Abhängig von der Authentifizierungsmethode 
+Die Benutzerverwaltung ist Abhängig von der Authentifizierungsmethod.
 
 image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 

@@ -17,6 +17,7 @@ Anschließend können vorbereitete Use Cases mit Eingaben befüllt und durch „
 image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=500]
 
 Während der Verarbeitung wird eine Wartebox mit Statusinformationen angezeigt.
+
 image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox, title="Navigationsbereich - Anwendungsfälle - Waitbox", width=400]
 
 Ergebnisse können gespeichert und als eigener Chat weitergeführt werden. Löschen erfolgt ebenfalls zweistufig.
