@@ -1,12 +1,12 @@
 === Anwendungsbeschreibung 
 
-{application} (nachfolgend Assist genannt) bietet eine leistungsstarke KI‑Plattform, mit der Unternehmen ihr Wissen intelligent nutzen und in produktive Ergebnisse umwandeln können. Über spezialisierte Chats und vorkonfigurierte Use Cases erhalten Mitarbeitende schnellen und präzisen Zugriff auf relevantes Unternehmenswissen – basierend auf hinterlegten Dokumenten oder cloudbasierten Quellen. Der Assist ermöglicht eine mühelose Analyse komplexer Inhalte, die einfache Formulierung von Anfragen und eine effiziente Datenverarbeitung 
+{application} bietet eine leistungsstarke KI‑Plattform, mit der Unternehmen ihr Wissen intelligent nutzen und in produktive Ergebnisse umwandeln können. Über spezialisierte Chats und vorkonfigurierte Use Cases erhalten Mitarbeitende schnellen und präzisen Zugriff auf relevantes Unternehmenswissen – basierend auf hinterlegten Dokumenten oder cloudbasierten Quellen. {application} ermöglicht eine mühelose Analyse komplexer Inhalte, die einfache Formulierung von Anfragen und eine effiziente Datenverarbeitung 
 
-Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen, dass die Anwendung künstliche Intelligenz zur automatischen Generierung von Inhalten verwendet. Da die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann, wird der Nutzer gebeten, die Ergebnisse sorgfältig zu prüfen. Dieser Hinweis muss bestätigt werden, um Assist weiter nutzen zu können.
+Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen, dass die Anwendung künstliche Intelligenz zur automatischen Generierung von Inhalten verwendet. Da die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann, wird der Nutzer gebeten, die Ergebnisse sorgfältig zu prüfen. Dieser Hinweis muss bestätigt werden, um {application} weiter nutzen zu können.
 
 image::../images/Abbildung-47.jpg[Navigationsbereich - KI Bestätigung, title="Navigationsbereich - KI Bestätigung", width=400]
 
-Bestimmte wiederkehrende Anwendungsfälle werden im Assist als Templates verwaltet, um Routinen zu vereinfachen. Diese Anwendungsfälle sind als Use Cases in Form von Checklisten angelegt. Bei entsprechender Berechtigung können mit Hilfe von KI‑Agents automatisierte Berichte, dynamische Auswertungen oder Prozesssteuerungen – auch über Systemgrenzen hinweg – genutzt werden.
+Bestimmte wiederkehrende Anwendungsfälle werden im {application} als Templates verwaltet, um Routinen zu vereinfachen. Diese Anwendungsfälle sind als Use Cases in Form von Checklisten angelegt. Bei entsprechender Berechtigung können mit Hilfe von KI‑Agents automatisierte Berichte, dynamische Auswertungen oder Prozesssteuerungen – auch über Systemgrenzen hinweg – genutzt werden.
 
 ifeval::[{cgs-assist} == 1]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=500]

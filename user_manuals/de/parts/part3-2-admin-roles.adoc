@@ -5,12 +5,10 @@ Hier werden Rollen angelegt und bearbeitet. Rollennamen müssen systemweit einde
 
 image::../images/Abbildung-18.jpg[Administration - Rollenverwaltung, title="Administration - Rollenverwaltung", width=500]
 
-===== Rollen bearbeiten
-
-Rollennamen müssen systemweit eindeutig sein, Beschreibungen können ergänzt und jederzeit geändert werden.
+Rollen können nicht deaktiviert werden und sind nur über die Übersicht mit Sicherheitsabfrage entfernbar. Systemseitige Rollen sind nicht löschbar.
 
 image::../images/Abbildung-19.jpg[Administration - Rollenverwaltung - Rollen anlegen, title="Administration - Rollenverwaltung - Rollen anlegen", width=300]
 
-Rollen können nicht deaktiviert werden und sind nur über die Übersicht mit Sicherheitsabfrage entfernbar. Systemseitige Rollen sind nicht löschbar.
+
 
 

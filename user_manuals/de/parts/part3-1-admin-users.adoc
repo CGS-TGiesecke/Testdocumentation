@@ -1,4 +1,4 @@
-=== Assist Administration
+=== {application} Administration
 
 Innerhalb der Administration können systemrelevante Daten zentral verwaltet werden: Benutzer, Rollen, Dokumentordner, Schnittstellenkonfigurationen, Systemaufforderungen (Prompts), Lizenzen sowie systemseitig hinterlegte Anwendungsfälle. +
 Der Zugriff erfolgt über eine speziell zugewiesene Rolle.
@@ -7,21 +7,21 @@ image::../images/Abbildung-15.jpg[Administration, title="Administration", width=
 
 ==== Benutzerverwaltung
 
-Die Benutzerverwaltung ist Abhängig von der Authentifizierungsmethod.
+Die Benutzerverwaltung ist Abhängig von der Authentifizierungsmethode.
 
 image::../images/Abbildung-16.jpg[Administration - Benutzerverwaltung, title="Administration - Benutzerverwaltung", width=500]
 
 *OpenID Connect/SAML (Microsoft Entra ID)*
 
-* Benutzer können *nicht* im Assist angelegt oder bearbeitet werden.
+* Benutzer können *nicht* im {application} angelegt oder bearbeitet werden.
 * Passwörter werden über Microsoft verwaltet.
-* Rollenzuweisungen für Assist sind möglich.
-* Entfernen von Benutzern aus der Oberfläche ist möglich, jedoch werden diese durch erneute Synchronisation ggf. wieder angezeigt.
+* Rollenzuweisungen für {application} sind möglich.
+* Entfernen von Benutzern aus {application} ist möglich, jedoch werden diese durch erneute Synchronisation ggf. wieder angezeigt.
 
 *Lokale Benutzer-/Passwortverwaltung*
 
-* Benutzer können angelegt und bearbeitet werden.
-* Passwortverwaltung erfolgt im Assist.
+* Benutzer können im {application} angelegt und bearbeitet werden.
+* Passwortverwaltung erfolgt im {application}.
 * Rollen können zugewiesen werden.
-* Entfernen erfolgt mit Sicherheitsabfrage.
+* Entfernen aus {application} ist endgültig möglich und erfolgt mit Sicherheitsabfrage.
 

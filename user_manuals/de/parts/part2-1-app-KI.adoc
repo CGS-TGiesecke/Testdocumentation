@@ -1,6 +1,12 @@
-=== Assist Anwendung
+=== {application} Anwendung
 
+ifeval::[{cgs-assist} == 1]
 ==== Navigationsbereich "KI Chat"
+endif::[]
+
+ifeval::[{arc-assist} == 1]
+==== Navigationsbereich "AI Chat"
+endif::[]
 
 Die Oberfläche bietet ein klassisches Chat‑Fenster mit Eingabefeld für Prompts. Alle Chatverläufe werden ausschließlich lokal im Browser gespeichert und sind – sofern die Einstellung „automatisches Cache‑Löschen“ aktiviert ist – nach dem Schließen des Browsers nicht mehr verfügbar. Gespeicherte Use‑Case‑Verläufe können dagegen auch nach einer Neuanmeldung wieder geöffnet werden.
 
@@ -14,25 +20,25 @@ Somit kann mit einem Klick die Antwort in der originalen Quelle verifiziert werd
 
 *Erlaubte Dokumente* sind  .pdf .docx .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-49.jpg[Navigationsbereich KI Chat - RAG verwendet, title="Navigationsbereich KI Chat RAG verwendet", width=500]
+image::../images/Abbildung-49.jpg[Navigationsbereich Chat - RAG verwendet, title="Navigationsbereich Chat RAG verwendet", width=500]
 
 Das Eingabefeld zeigt eine Zeichenzählung und verfügt über automatische Rechtschreibprüfung. Anfragen können per Texteingabe, Mikrofon oder über den Upload eines Dokuments gestellt werden.
 
-image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navigationsbereich KI Chat inputs", width=500]
+image::../images/Abbildung-38.jpg[Navigationsbereich Chat inputs, title="Navigationsbereich Chat inputs", width=500]
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 
 ifeval::[{cgs-assist} == 1]
-image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=500]
+image::../images/cgs-Abbildung-4.jpg[Navigationsbereich Chat  - speichern, title="Navigationsbereich Chat  - speichern", width=500]
 endif::[]
 
 ifeval::[{arc-assist} == 1]
-image::../images/arc-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich AI Chat  - speichern", width=500]
+image::../images/arc-Abbildung-4.jpg[Navigationsbereich Chat  - speichern, title="Navigationsbereich Chat  - speichern", width=500]
 endif::[]
 
 Chats können per Copy‑Button kopiert, über den Stift umbenannt oder mit einer zweistufigen Bestätigung gelöscht werden.
 
-image::../images/Abbildung-5.jpg[Navigationsbereich KI Chat  - löschen, title="Navigationsbereich KI Chat  - löschen", width=300]
+image::../images/Abbildung-5.jpg[Navigationsbereich Chat  - löschen, title="Navigationsbereich Chat  - löschen", width=300]
 
 
 

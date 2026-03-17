@@ -1,7 +1,7 @@
 
 ==== Lizenzverwaltung
 
-Hier wird die Lizenz für den Assist verwaltet. Lizenzen können aktualisiert oder ersetzt werden. Ein Supportkontakt per Mail ist integriert.
+Hier wird die Lizenz für {application} verwaltet. Lizenzen können aktualisiert oder ersetzt werden. Ein Supportkontakt per Mail ist integriert.
 
 image::../images/Abbildung-30.jpg[Administration - Lizenzverwaltung, title="Administration - Lizenzverwaltung", width=500]
 
