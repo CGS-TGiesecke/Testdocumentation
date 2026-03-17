@@ -44,7 +44,7 @@ jobs:
         id: deps
         run: |
           declare -A DEP
-          DEP[UC2]="UC4"
+          DEP[UC1]="UC4"
           DEP[UC3]="UC20"
           DEP[UC4]="UC2 UC20"
           DEP[UC6]="UC14 UC15"
