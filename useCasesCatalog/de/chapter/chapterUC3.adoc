@@ -9,10 +9,4 @@
 | Generates structured release notes from Git commit history
 |
 |
-
-| 3.1.2 		
-| Template for Use Case Creation 
-| Describe and create new custom use cases for this system.
-|
-|
 |===
