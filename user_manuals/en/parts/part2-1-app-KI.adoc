@@ -1,6 +1,12 @@
-=== Assist Application
+=== {application} Application
 
+ifeval::[{cgs-assist} == 1]
+==== Navigation Area "KI Chat"
+endif::[]
+
+ifeval::[{arc-assist} == 1]
 ==== Navigation Area "AI Chat"
+endif::[]
 
 This page provides a classic chat interface with an input field for prompts. All chat histories are stored only in the browser’s local storage. They are removed after closing the browser if the "automatic cache clearing" setting is enabled. All saved use case histories remain available even after closing and logging in again.
 
@@ -12,17 +18,17 @@ Folder‑level permissions and document‑level access rights are respected when
 
 *Supported document formats* for use in the AI Chat are: .pdf, .docx, .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area AI Chat - RAG used", width=500]
+image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area Chat - RAG used", width=500]
  
 An automatic spell checker is enabled. You can submit a request by typing text, using voice input via a microphone, or uploading a document.
 
-image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area AI Chat inputs", width=500]
+image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area Chat inputs", width=500]
 
 Generated content can be copied to the clipboard using the “Copy” button.
 
-image::../images/Abbildung-4.jpg[Navigation area AI Chat  - Content saving, title="Navigation area AI Chat  - Content saving", width=500]
+image::../images/Abbildung-4.jpg[Navigation area AI Chat  - Content saving, title="Navigation area Chat  - Content saving", width=500]
 
 Chats can be renamed using the edit (pencil) button. To delete a chat, click the delete icon in the tree menu and confirm the deletion by clicking the checkmark.
 
-image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Navigation area AI Chat - delete", width=300]
+image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Navigation area Chat - delete", width=300]
 

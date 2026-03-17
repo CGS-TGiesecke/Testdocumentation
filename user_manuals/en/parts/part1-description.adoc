@@ -1,6 +1,6 @@
 === Description 
 
-{application} provides a powerful AI platform that enables organizations to intelligently leverage their knowledge and convert it into productive outcomes. Through specialized chat interfaces and predefined use cases, employees gain fast and precise access to relevant company information—whether sourced from internal documents or cloud‑based repositories. Assist streamlines the analysis of complex content, simplifies the formulation of requests, and enables efficient data processing. In this way, artificial intelligence becomes a true driver of productivity in everyday work.
+{application} provides a powerful AI platform that enables organizations to intelligently leverage their knowledge and convert it into productive outcomes. Through specialized chat interfaces and predefined use cases, employees gain fast and precise access to relevant company information—whether sourced from internal documents or cloud‑based repositories. {application} streamlines the analysis of complex content, simplifies the formulation of requests, and enables efficient data processing. In this way, artificial intelligence becomes a true driver of productivity in everyday work.
 
 Upon first login, users are informed that the application uses artificial intelligence to automatically generate content. The output is based on probabilities and may contain errors. Users are therefore asked to carefully review all results. This notice must be acknowledged before continuing to use the assistant.
 
