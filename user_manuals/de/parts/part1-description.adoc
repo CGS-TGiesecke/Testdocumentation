@@ -1,8 +1,9 @@
 === Anwendungsbeschreibung 
 
-Es ist innerhalb von {application}, im weiteren nur noch Assist genannt, möglich, KI-unterstütztes Unternehmenswissen in separaten Chats oder vorbereiteten Anwendungsfällen abzufragen und zu nutzen. 
-Dieses Wissen basiert, je nach Einstellung, auf den Inhalten der hinterlegten Dokumente oder einer Cloud. 
-Mit dem Assist können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
+{application} (nachfolgend Assist genannt) bietet eine leistungsstarke KI‑Plattform, mit der Unternehmen ihr Wissen intelligent nutzen und 
+in produktive Ergebnisse verwandeln können. Über spezialisierte Chats und vorkonfigurierte Use Cases erhalten Mitarbeitende schnellen, 
+präzisen Zugriff auf relevantes Unternehmenswissen – basierend auf hinterlegten Dokumenten oder cloudbasierten Quellen.
+Der Assist ermöglicht eine mühelose Analyse komplexer Inhalte, die unkomplizierte Formulierung von Anfragen und die effiziente Verarbeitung von Daten. 
 
 Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen das die Anwendung künstliche Intelligenz verwendet, um Inhalte automatisch zu generieren. 
 Da die Ausgabe auf Wahrscheinlichkeiten basiert und Fehler enthalten kann, wird der Nutzer gebeten die Ergebnisse sorgfältig zu prüfen.
@@ -12,7 +13,6 @@ image::../images/Abbildung-47.jpg[Navigationsbereich - KI Bestätigung, title="N
 
 Bestimmte regelmäßige Anwendungsfälle werden im Assist als Templates verwaltet, um Routinen zu vereinfachen. Die Anwendungsfälle sind mit Use Cases wie eine Art Checkliste erstellt.
 Es können bei entsprechender Berechtigung, mit Hilfe von KI Agents automatisierte Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, genutzt werden.
-
 
 ifeval::[{cgs-assist} == 1]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=500]

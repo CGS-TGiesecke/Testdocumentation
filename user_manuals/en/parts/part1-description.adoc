@@ -1,15 +1,13 @@
 === Description 
 
-It's possible in {application},in the following, only referred to as Assist, it is possible to query and utilize AI-supported company knowledge in separate chats or pre-configured use cases.
-Depending on the setting, this knowledge is based either on the contents of the stored documents or on cloud resources.
-All chat histories are stored in the browser and are no longer available after closing the browser (if the "automatic cache clearing" setting is enabled) and logging in again.
-All saved use case histories can be reopened even after closing the browser and logging in again.
+{application} (hereinafter Assist) provides a powerful AI platform that enables organizations to leverage their knowledge intelligently and turn it into productive outcomes. Through specialized chats and preconfigured use cases, employees gain fast and precise access to relevant company information—whether sourced from internal documents or cloud‑based repositories.
+Assist streamlines the analysis of complex content, simplifies the formulation of inquiries, and enables efficient data processing. In this way, artificial intelligence becomes a true driver of productivity in everyday work.
 
 Upon first login, users are informed that the application uses artificial intelligence to automatically generate content. 
 The output is based on probabilities and may contain errors. Users are asked to carefully review the results. 
 This notice must be acknowledged in order to continue using the assistant.
 
-image::../images/Abbildung-47.jpg[Navigation - KI confirmation, title="Navigation - KI confirmation", width=500]
+image::../images/Abbildung-confirm.jpg[Navigation - KI confirmation, title="Navigation - KI confirmation", width=500]
 
 Certain regular use cases are managed as templates within Assist to simplify routines. The use cases are designed like a kind of checklist.
 With the appropriate permissions, automated, scheduled queries on automatically provided information sources, known as feeds, can be created.
@@ -45,4 +43,4 @@ The colors indicate the notification level as follows:
 |red	| Error during execution of the action
 |===
 
-image::../images/Abbildung-confirm.jpg[Notifications, title="Notifications", width=400]
+image::../images/Abbildung-47.jpg[Notifications, title="Notifications", width=400]

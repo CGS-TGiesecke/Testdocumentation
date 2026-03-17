@@ -10,8 +10,9 @@ Alle gespeicherten Use Case Verläufe können auch nach dem Browser schließen u
 Es kann vor dem Ausführen von Anfragen ausgewählt werden, ob die internen Inhalte des (RAG) z.B. aus dem Sharepoint und/oder 
 der Datenbank *zusätzlich* zur Wissensfindung durchsucht werden sollen. 
 
-Über ein Drop-Down Fenster besteht die Möglichkeit einen der diversen Agenten auszuwählen, die bei der Abfrage eingesetzt werden sollen.
-Diese Agenten machen einen KI‑Einsatz im Unternehmen sicher, strukturiert und beherrschbar. Sie steuern gezielt, „was die KI darf und was nicht“ und bieten klare, nachvollziehbare Schnittstellen zu Daten und Systemen.
+Über ein Drop-Down Fenster besteht die Möglichkeit einen der diversen, meist kontextbezogenen Agenten auszuwählen, die bei der Abfrage 
+eingesetzt werden sollen. Diese Agenten machen einen KI‑Einsatz im Unternehmen sicher, strukturiert und beherrschbar. 
+Sie steuern gezielt, „was die KI darf und was nicht“ und bieten klare, nachvollziehbare Schnittstellen zu Daten und Systemen.
 Die KI kann *nur* auf solche Daten zugreifen, wie es der Agent explizit erlaubt (z.B. nur „suchen“, aber nicht „löschen“).
 Es ist also kein direkter unkontrollierter Zugriff auf Unternehmenssysteme möglich.
 
@@ -30,7 +31,13 @@ image::../images/Abbildung-38.jpg[Navigationsbereich KI Chat inputs, title="Navi
 
 Die Inhalte lassen sich mit einem „Copy“ Button in der Zwischenablage speichern zur weiteren Verarbeitung.
 
+ifeval::[{cgs-assist} == 1]
 image::../images/cgs-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich KI Chat  - speichern", width=500]
+endif::[]
+
+ifeval::[{arc-assist} == 1]
+image::../images/arc-Abbildung-4.jpg[Navigationsbereich KI Chat  - speichern, title="Navigationsbereich AI Chat  - speichern", width=500]
+endif::[]
 
 Um einen Chat umzubenennen, kann der Edit Button (Stift) benutz werden.
 Um einen Chat im linken Baummenü zu löschen, muss zuerst der Löschen Button betätigt werden und danach das Löschen mit Klick auf den Haken bestätigt werden.
