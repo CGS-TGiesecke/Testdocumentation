@@ -47,7 +47,7 @@ jobs:
           declare -A DEP
           DEP[UC1]="UC4"
           DEP[UC3]="UC20"
-          DEP[UC4]="UC2 UC20"
+          DEP[UC4]="UC1 UC20"
           DEP[UC6]="UC14 UC15"
           DEP[UC8]="UC17"
           DEP[UC12]="UC16"
