@@ -1,10 +1,10 @@
 
 {
   "UseCases": [
-    {"id": "UC1",		"name": "UseCase1","description": "Beschreibung 1",	"benötigt": ""},
+    {"id": "UC1",	  "name": "UseCase1",       "description": "Beschreibung 1",   "benötigt": ""},
     {"id": "UC2",     "name": "UseCase2",       "description": "Beschreibung 2",   "benötigt": "UC4"        },
-    {"id": "UC3",     "name": "UseCase3",       "description": "Beschreibung 3",   "benötigt": ""           },
-    {"id": "UC4",     "name": "UseCase4",       "description": "Beschreibung 4",   "benötigt": "UC1, UC20"  },
+    {"id": "UC3",     "name": "UseCase3",       "description": "Beschreibung 3",   "benötigt": "UC20"       },
+    {"id": "UC4",     "name": "UseCase4",       "description": "Beschreibung 4",   "benötigt": "UC2, UC20"  },
     {"id": "UC5",     "name": "UseCase5",       "description": "Beschreibung 5",   "benötigt": ""           },
     {"id": "UC6",     "name": "UseCase6",       "description": "Beschreibung 6",   "benötigt": "UC14, UC15" },
     {"id": "UC7",     "name": "UseCase7",       "description": "Beschreibung 7",   "benötigt": ""           },
@@ -14,9 +14,9 @@
     {"id": "UC11",    "name": "UseCase11",      "description": "Beschreibung 11",  "benötigt": ""           },
     {"id": "UC12",    "name": "UseCase12",      "description": "Beschreibung 12",  "benötigt": "UC16"       },
     {"id": "UC13",    "name": "UseCase13",      "description": "Beschreibung 13",  "benötigt": "UC15"       },
-    {"id": "UC14",    "name": "UseCase14",      "description": "Beschreibung 14",  "benötigt": "UC15"       },
+    {"id": "UC14",    "name": "UseCase14",      "description": "Beschreibung 14",  "benötigt": "UC6,UC15"   },
     {"id": "UC15",    "name": "UseCase15",      "description": "Beschreibung 15",  "benötigt": "UC6,UC14,UC13" },
-    {"id": "UC16",    "name": "UseCase16",      "description": "Beschreibung 16",  "benötigt": ""           },
+    {"id": "UC16",    "name": "UseCase16",      "description": "Beschreibung 16",  "benötigt": "UC12"       },
     {"id": "UC17",    "name": "UseCase17",      "description": "Beschreibung 17",  "benötigt": "UC8"        },
     {"id": "UC18",    "name": "UseCase18",      "description": "Beschreibung 18",  "benötigt": ""           },
     {"id": "UC19",    "name": "UseCase19",      "description": "Beschreibung 19",  "benötigt": ""           },
