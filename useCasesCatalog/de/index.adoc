@@ -72,7 +72,7 @@ include::chapter/chapterUC17.adoc[]
 endif::[]
 
 ifeval::[{UC18} == 1]
-include::chapter/chapterUC8.adoc[]
+include::chapter/chapterUC18.adoc[]
 endif::[]
 
 ifeval::[{UC19} == 1]
