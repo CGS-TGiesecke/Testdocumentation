@@ -1,5 +1,5 @@
 
-==== Systemaufforderung
+==== Systemaufforderungen
 
 Hier sind textbasierte Prompts hinterlegt, die als Anweisungen für Sprachmodelle dienen. Sie steuern die Art und Qualität der KI‑Antworten.
 
