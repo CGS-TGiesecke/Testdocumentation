@@ -1,13 +1,11 @@
 
 ==== Navigation Area "Portal"
 
-This page, and therefore the corresponding menu item, can be completely enabled or disabled in the administration settings.
-If the page is enabled, all links to other pages or applications that are stored in the administration and are available 
-to the user are displayed here, provided the user has the necessary permissions.
+This page, and the corresponding menu entry, can be enabled or disabled in the administration. If enabled, all links configured in the administration and available to the current user are displayed here.
 
 image::../images/Abbildung-40.jpg[Navigation area - Portal, title="Navigationsbereich -area", width=400]
 
-By clicking the icon, the link will be opened in a new browser tab or window, depending on the browser settings.
+Clicking an icon opens the link in a new browser tab or window, depending on browser settings.
 
 
 

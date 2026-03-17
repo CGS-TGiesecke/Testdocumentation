@@ -1,14 +1,11 @@
 
 ==== Navigation Area "Use Cases" 
 
-All activated use cases are displayed here, grouped by area. The assignment of use cases to the areas takes place during setup in the administration.
-Use cases are lists of use cases stored and approved in the administration, which only need to be filled with specific content before execution.
-These lists facilitate routine requests.
+All activated use cases are displayed here, grouped by category. Assignment of use cases to categories is configured in the administration area. Use cases are predefined templates that only need to be filled with specific information before execution. They simplify routine tasks.
 
-There is also the option to display use cases that must follow a defined sequence in a workflow-based manner. This means that Use Case 2, 
-which depends on Use Case 1 as a prerequisite, becomes available only after Use Case 1 has been executed.
+Use cases that must be executed in a defined sequence can also be displayed in a workflow‑based manner. A dependent use case becomes available only after its prerequisite has been completed.
 
-The document formats permitted by the system for use in use cases are: .pdf, .docx, .xlsx, .pptx, and .txt.
+*Supported document formats* for use cases are: .pdf, .docx, .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-6.jpg[Navigation area Uses Cases, title="Navigation area Uses Cases", width=400]
 
@@ -16,18 +13,15 @@ To open a specific use case, click on the icon with the name.
 
 image::../images/Abbildung-7.jpg[Navigation area Uses Cases - select one uses case, title="Navigation area Uses Cases - select one uses case", width=400]
 
-Clicking on an icon with a name opens the use case for data entry.
+To open a specific use case, click its corresponding icon. 
 
 image::../images/Abbildung-8.jpg[Navigation area Uses Cases - select one uses case, title="Navigation area Uses Cases - select one uses case", width=400]
 
-Here, preconfigured use cases are displayed that can be filled with inputs. Afterwards, the query can be submitted by clicking "Execute".
-During processing, a wait box is displayed and the status history is shown as information.
+After filling in the required fields, the request can be executed by clicking “Execute.” A loading dialog appears while processing, and status updates are displayed.
 
 image::../images/Abbildung-9.jpg[Navigation area Uses Cases - Waitbox, title="Navigation area Uses Cases - Waitbox", width=400]
 
-After receiving feedback on the request, a button can be used to open the "Chat" navigation area in order to initiate further requests for this specific use case.
-The result of a request can also be saved and is then available as a separate chat.
-To delete a use case, the Delete button must first be pressed and then the action confirmed by clicking "OK".
+After receiving the result, a button allows you to open the AI Chat to perform follow‑up queries related to the use case. Results can be saved and will then appear as separate chats. To delete a use case, click the delete button and confirm the action with “OK.”
 
 image::../images/Abbildung-11.jpg[Navigation area Uses Cases - delete single use case, title="Navigation area Uses Cases - delete single use case", width=400]
 

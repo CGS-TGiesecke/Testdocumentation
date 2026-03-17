@@ -2,38 +2,27 @@
 
 ==== Navigation Area "AI Chat"
 
-The page features a classic chat interface with a prompt input window. 
-All chat histories are only saved in the browser storage and are no longer available after closing the browser 
-(if the "automatic cache clearing" setting is enabled) and re-logging in.
-All saved use case histories can be reopened even after closing the browser and logging in again.
+This page provides a classic chat interface with an input field for prompts. All chat histories are stored only in the browser’s local storage. They are removed after closing the browser if the "automatic cache clearing" setting is enabled. All saved use case histories remain available even after closing and logging in again.
 
-Before executing request, you can select whether the internal contents of the (RAG) for example from SharePoint and/or the database should 
-also be searched in addition to knowledge discovery.
+Before executing a request, you can select whether internal RAG content (e.g., documents from SharePoint or the database) should also be searched in addition to the general knowledge base.
 
-A drop-down menu allows you to select one of the various agents to be used for the query.
-These agents make the use of AI in the company safe, structured, and manageable. They specifically control "what the AI is allowed to do and what not" and provide clear, transparent interfaces to data and systems.
-The AI can *only* access such data as explicitly permitted by the agent (e.g., "search" only, but not "delete").
-No direct and uncontrolled access to company systems is possible.
+A drop‑down menu allows you to choose from various agents for executing the query. These agents ensure that AI use within the organization is safe, structured, and controlled. They define exactly what the AI is allowed to do and provide transparent access boundaries to data and systems. The AI can only access the data explicitly permitted by the selected agent (e.g., “search” but not “delete”). Unrestricted access to company systems is not possible.
 
-Permissions on folders and included documents are taken into account when searching via the RAG.
-When using the RAG, the answer will display the top 8 embeddings for the answer and a link to the respective source.
-This allows the answer to be verified in the original source with a single click.
+Folder‑level permissions and document‑level access rights are respected when using the RAG. When RAG is enabled, the answer displays the top eight embeddings used for generating the response, including a link to the respective source. This allows users to verify information with a single click.
 
-The document formats permitted by the system for use in the AI chat are: .pdf, .docx, .xlsx, .pptx, and .txt.
+*Supported document formats* for use in the AI Chat are: .pdf, .docx, .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-49.jpg[Navigation area AI Chat - RAG used, title="Navigation area AI Chat - RAG used", width=500]
  
-Additionally, an automatic spell checker is activated. You have the option to submit a request via manual text entry, 
-via voice recording using a microphone, or by uploading a document.
+An automatic spell checker is enabled. You can submit a request by typing text, using voice input via a microphone, or uploading a document.
 
 image::../images/Abbildung-38.jpg[Navigation area AI Chat inputs, title="Navigation area AI Chat inputs", width=500]
 
-The contents can be saved to the clipboard for further processing using a “Copy” button.
+Generated content can be copied to the clipboard using the “Copy” button.
 
 image::../images/Abbildung-4.jpg[Navigation area AI Chat  - Content saving, title="Navigation area AI Chat  - Content saving", width=500]
 
-To rename a chat, the edit button (pencil) can be used.
-To delete a chat in the tree menu on the left, the delete button must first be pressed and then the deletion confirmed by clicking the checkmark.
+Chats can be renamed using the edit (pencil) button. To delete a chat, click the delete icon in the tree menu and confirm the deletion by clicking the checkmark.
 
 image::../images/Abbildung-5.jpg[Navigation area AI Chat - delete, title="Navigation area AI Chat - delete", width=300]
 

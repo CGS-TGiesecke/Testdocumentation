@@ -1,14 +1,13 @@
 
 ==== License Management
 
-On this page, you can manage the license required to operate the {application} application. It is possible to 
-update the license if an existing one has been replaced.
-You can also contact {application} support by email directly from this page. 
-When you click the button, your default mail client will open with the recipient address pre-filled.
+This page allows you to manage the license required to operate the CGS Assist application. Licenses can be updated if an existing license has been replaced.
+
+You can also contact CGS Assist support by email using the integrated button. Clicking it opens your default email client with the recipient field pre-filled.
 
 image::../images/Abbildung-30.jpg[Administration - License Management, title="Administration - License Management", width=400]
 
-A completely new license can be uploaded after selection.
+A completely new license file can be uploaded after selecting it.
 
 image::../images/Abbildung-31.jpg[Administration - License Management - Upload License, title="Administration - License Management - Upload License", width=400]
 

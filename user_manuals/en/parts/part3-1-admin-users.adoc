@@ -1,40 +1,28 @@
 === Assist Administration
 
-Within Assist Administration, there is the possibility to centrally manage all system-relevant data. Here, users and roles, 
-the document storage folders (RAG), interface configurations, system prompts, licenses, and the system-side 
-stored use cases can be managed.
-Access to these administration functions is granted via a system-defined, pre-configured role.
+Within Assist Administration, all system‑relevant data can be centrally managed. This includes user and role management, document storage folders (RAG), interface configurations, system prompts, licenses, and the system‑stored use cases. Access to administrative functions is granted via a system-defined, preconfigured role.
 
 image::../images/Abbildung-15.jpg[Administration, title="Administration", width=150]
 
 ==== User Management
 
-The use of user management depends on the configured authentication method.
+The availability of user management options depends on the configured authentication method.
 
 image::../images/Abbildung-16.jpg[Administration - User Management, title="Administration - User Management", width=400]
 
-*OpenID Connect Authentication with Microsoft Entra ID*
+*OpenID Connect/SAML (Microsoft Entra ID)*
 
-* Adding and editing users via the {application} interface is *not* possible.
-* Password management via Microsoft.
-* Role assignment for {application} via the {application} interface is possible.
-* Users can only be removed from the {application} overview table after confirming a security prompt.
-  After logging in again, the data will be synchronized and the user may be present again in {application}.
-
-*SAML Authentication with Microsoft Entra ID*
-
-* Adding and editing users via the {application} interface is *not* possible.
-* Password management via Microsoft.
-* Role assignment for {application} via the {application} interface is possible.
-* Users can only be removed from the {application} overview table after confirming a security prompt.
-  After logging in again, the data will be synchronized and the user may be present again in {application}.
+* Adding or editing users via the CGS Assist interface is *not* possible.
+* Password management is handled through Microsoft.
+* Role assignment for CGS Assist is possible via the CGS Assist interface.
+* Users can only be removed from the CGS Assist overview after confirming a security prompt. After logging in again, the data will be synchronized, and the user may reappear in the system.
 
 *Local User/Password Management*
 
-* Adding and editing users via the {application} interface is possible.
-* Password management via the {application} interface is possible.
-* Role assignment for {application} via the {application} interface is possible.
-* Users can only be removed from the {application} overview table after confirming a security prompt.
+* Adding and editing users via the CGS Assist interface is possible.
+* Passwords can be managed directly in the CGS Assist interface.
+* Role assignment for CGS Assist is possible via the CGS Assist interface.
+* Users can be removed from the overview after confirming a security prompt.
 
 
 

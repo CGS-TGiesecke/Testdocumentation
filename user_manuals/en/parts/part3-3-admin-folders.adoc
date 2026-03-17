@@ -1,10 +1,9 @@
 
 ==== Folder Management
 
-On this page, all created folders can be displayed. Permissions can be assigned to these folders through roles here. 
-This controls the visibility and access to these folders within the "Documents" navigation area.
+This page displays all created folders. Permissions for these folders can be assigned through roles. These permissions control the visibility and accessibility of folders within the “Documents” navigation area.
 
-The document formats permitted by the system for use in the folder management are: .pdf, .docx, .xlsx, .pptx, and .txt.
+*Supported document formats* in folder management are: .pdf, .docx, .xlsx, .pptx, .txt.
 
 image::../images/Abbildung-20.jpg[Administration - Folder Management, title="Administration - Folder Management", width=400]
 
