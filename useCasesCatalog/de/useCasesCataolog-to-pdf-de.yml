@@ -59,7 +59,7 @@ jobs:
           DEP[UC20]="UC3"
 
           # Input übergeben
-          for i in {1..20}; do
+          for i in {0..20}; do
             UC="UC$i"
             VAL="${{ github.event.inputs.UC1 }}"
           done
@@ -107,7 +107,7 @@ jobs:
           done
 
           # Export final values
-          for i in {1..20}; do
+          for i in {0..20}; do
             UC="UC$i"
             echo "$UC=$(eval echo \$$UC)" >> $GITHUB_ENV
           done

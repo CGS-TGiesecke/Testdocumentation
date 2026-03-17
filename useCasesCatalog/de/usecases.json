@@ -1,10 +1,10 @@
 
 {
   "UseCases": [
-    {"id": "UC1",	  "name": "UseCase1",       "description": "Beschreibung 1",   "benötigt": ""},
-    {"id": "UC2",     "name": "UseCase2",       "description": "Beschreibung 2",   "benötigt": "UC4"        },
+    {"id": "UC1",	  "name": "UseCase1",       "description": "Beschreibung 1",   "benötigt": "UC4"},
+    {"id": "UC2",     "name": "UseCase2",       "description": "Beschreibung 2",   "benötigt": ""           },
     {"id": "UC3",     "name": "UseCase3",       "description": "Beschreibung 3",   "benötigt": "UC20"       },
-    {"id": "UC4",     "name": "UseCase4",       "description": "Beschreibung 4",   "benötigt": "UC2, UC20"  },
+    {"id": "UC4",     "name": "UseCase4",       "description": "Beschreibung 4",   "benötigt": "UC1, UC20"  },
     {"id": "UC5",     "name": "UseCase5",       "description": "Beschreibung 5",   "benötigt": ""           },
     {"id": "UC6",     "name": "UseCase6",       "description": "Beschreibung 6",   "benötigt": "UC14, UC15" },
     {"id": "UC7",     "name": "UseCase7",       "description": "Beschreibung 7",   "benötigt": ""           },
