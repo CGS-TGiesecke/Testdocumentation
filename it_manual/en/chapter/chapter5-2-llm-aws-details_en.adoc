@@ -3,6 +3,7 @@
 ===== Step-by-Step: Setting up AWS Bedrock
 
 *Step 1: Activate AWS Bedrock*
+
 * Open AWS Console: https://console.aws.amazon.com
 * Navigate to Bedrock: enter “Bedrock” in the search bar
 * Select region: e.g., eu-central-1 (Frankfurt) or us-east-1
@@ -13,12 +14,14 @@
 ** Click *Save changes*
 
 *Notes:*
+
 * Some 3rd‑party providers (e.g., Anthropic) require 5–15 minutes for activation
 * Model Access is mandatory. IAM alone is not sufficient – models must be activated manually.
 * Model IDs must match exactly. Incorrect or outdated IDs will cause *AccessDeniedException*.
 * Region must be consistent. Model region, Bedrock API region, and IAM policy must match.
 
 *Step 2: Configure IAM Permissions*
+
 To allow an EC2 instance (or other AWS services) to access Bedrock, either an IAM Role *or* IAM User is required.
 
 * IAM Role (recommended for AWS resources)
@@ -27,11 +30,11 @@ To allow an EC2 instance (or other AWS services) to access Bedrock, either an IA
 |===
 |Method | Advantages | Disadvantages
 
-IAM Role 
+|IAM Role 
 | Automatic, secure temporary credentials via IMDS (Instance Metadata Service), no key management required 
 | Only suitable for AWS resources (not for local developers)
 
-IAM User 
+|IAM User 
 | Usable for local tools & developers, even outside AWS 
 | Permanent keys must be stored securely & rotated
 |===
@@ -72,12 +75,12 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 
 *ARN Structure*
 
-*arn:* Resource type identifier
-*aws:* Amazon Web Services
-*bedrock:* Service (Bedrock)
-*eu-central-1:* AWS region (EU [Frankfurt])
-*foundation-model:* Specifies this is a foundation model
-*<model-id>:*</model-id> The unique model identifier (e.g., openai.gpt-oss-20b-1:0)
+* *arn:* Resource type identifier
+* *aws:* Amazon Web Services
+* *bedrock:* Service (Bedrock)
+* *eu-central-1:* AWS region (EU [Frankfurt])
+* *foundation-model:* Specifies this is a foundation model
+* *<model-id>:*</model-id> The unique model identifier (e.g., openai.gpt-oss-20b-1:0)
 
 *Step 4: Generate Access Keys (not required for IAM Role)*
 
