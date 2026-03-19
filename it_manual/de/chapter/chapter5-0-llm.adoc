@@ -22,7 +22,7 @@ Azure
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
-(Hinweis: Diese Links dienen ausschließlich der Modellübersicht — CGS Assist integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.)
+(Hinweis: Diese Links dienen ausschließlich der Modellübersicht — {application} integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.)
 
 ==== Kostenübersicht LLM-Provider
 

@@ -8,7 +8,7 @@ Dieses Kapitel beschreibt die technischen Grundanforderungen für den Betrieb vo
 Die Lösung wird auf einem *Linux‑basierten Server* bereitgestellt — entweder als *lokale VM*, physischer Server oder *Cloud‑Instanz*.
 Eine spezielle Cloud‑Integration ist *nicht erforderlic*, jeder Linux‑Server mit einer funktionierenden Docker‑Installation ist geeignet.
 *Hinweis:* +
-Eine dedizierte VM ist nicht zwingend notwendig. CGS Assist kann auch auf einem bestehenden Linux‑Server betrieben werden, solange die Ressourcenanforderungen erfüllt sind.
+Eine dedizierte VM ist nicht zwingend notwendig. {application} kann auch auf einem bestehenden Linux‑Server betrieben werden, solange die Ressourcenanforderungen erfüllt sind.
 
 ===== Serveranforderungen
 
