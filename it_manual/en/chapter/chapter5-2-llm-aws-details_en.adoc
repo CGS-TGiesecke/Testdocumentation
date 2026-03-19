@@ -17,7 +17,7 @@
 
 * Some 3rd‑party providers (e.g., Anthropic) require 5–15 minutes for activation
 * Model Access is mandatory. IAM alone is not sufficient – models must be activated manually.
-* Model IDs must match exactly. Incorrect or outdated IDs will cause *AccessDeniedException*.
+* Model IDs must match exactly. Incorrect or outdated IDs will cause AccessDeniedException.
 * Region must be consistent. Model region, Bedrock API region, and IAM policy must match.
 
 *Step 2: Configure IAM Permissions*
@@ -42,7 +42,7 @@ To allow an EC2 instance (or other AWS services) to access Bedrock, either an IA
 *Create IAM Role or IAM User*
 
 Create an IAM Role or IAM User and assign the required Bedrock policy. +
-Custom IAM policies must be created *before* creating the IAM Role or User, so they can be selected and assigned during creation.
+Custom IAM policies must be created *before* creating the IAM Role or IAM User, so they can be selected and assigned during creation.
 
 The minimal policy required for Bedrock access is:
 ```json
