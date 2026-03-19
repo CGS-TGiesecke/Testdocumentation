@@ -29,7 +29,7 @@ an ein unterstütztes LLM eingerichtet werden.
 
 Die Lösung besteht aus folgenden Komponenten:
 
-* *Web-/API-Server:* AI Audit Assist Backend, LLM API, RAG API, Caddy
+* *Web-/API-Server:* {application} Backend, LLM API, RAG API, Caddy
 * *Worker:* Celery-Worker für asynchrone Tasks
 * *Redis:* Message-Broker und Caching
 * *Datenbank:* SQLite
