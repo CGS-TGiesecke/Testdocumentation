@@ -30,11 +30,11 @@ To allow an EC2 instance (or other AWS services) to access Bedrock, either an IA
 |===
 |Method | Advantages | Disadvantages
 
-|IAM Role 
+|IAM Role
 | Automatic, secure temporary credentials via IMDS (Instance Metadata Service), no key management required 
 | Only suitable for AWS resources (not for local developers)
 
-|IAM User 
+|IAM User
 | Usable for local tools & developers, even outside AWS 
 | Permanent keys must be stored securely & rotated
 |===
@@ -102,10 +102,10 @@ Model ID: openai.gpt-oss-20b-1:0
 
 *Assigning IAM User / IAM Role to EC2 Instance*
 
-IAM Role (recommended): +
+*IAM Role (recommended)*: +
 Assign the role to the EC2 instance via → EC2 → Instance → Actions → Security → Modify IAM role.
 
-IAM User: +
+*IAM User*: +
 For an IAM User the AWS credentials at the EC2 instance be stored in the application's configuration.
 
 ===== Supported Models
