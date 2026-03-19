@@ -1,17 +1,18 @@
 
 *Hinweis:* Azure OpenAI ist unsere bevorzugte Empfehlung, aber AWS Bedrock und lokale Modelle werden gleichwertig unterstützt.
 
-*Wählen Sie einen Provider basierend auf:*
+*Der Kunde entscheidet anhand von:*
 
-* Vorhandener Cloud-Infrastruktur (Azure oder AWS)
-* Datenschutz- und Compliance-Anforderungen
-* Budget und Betriebsmodell
+* bestehender Cloud‑Infrastruktur (Azure / AWS)
+* Datenschutz‑ und Compliance‑Vorgaben
+* Budget für API‑Kosten
+* internen Betriebsprozessen
 
-*Aufgabe des Kunden:*
+*Aufgaben des Kunden:*
 
-* *Azure OpenAI:* Token-Limits in Azure AI Foundry anpassen
-* *AWS Bedrock:* Service Quotas in AWS Console prüfen
-* *Lokale Modelle:* Ausreichende GPU-Kapazität bereitstellen
+* Azure OpenAI: Token-Limits in Azure AI Foundry anpassen
+* AWS Bedrock: Service Quotas in AWS Console prüfen
+* Lokale Modelle: Ausreichende GPU-Kapazität bereitstellen
 
 ==== Übersicht über Modelle
 
@@ -20,6 +21,8 @@ Azure
 
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
+
+(Hinweis: Diese Links dienen ausschließlich der Modellübersicht — CGS Assist integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.)
 
 ==== Kostenübersicht LLM-Provider
 

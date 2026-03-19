@@ -1,8 +1,18 @@
 
 ==== Authentifizierung über lokale Benutzer-/Passwortverwaltung 
 
-Die Authentifizierung über eine lokale Benutzer-/Passwortverwaltung wird immer dann verwendet, 
-wenn der Kunde keine Verwaltung von Benutzern und Zugangsdaten ausserhalb der Organisation wünscht
-und Verwaltung im {application} erfolgen soll.
+Diese Methode wird verwendet, wenn:
+
+* keine externe Identity‑Provider‑Integration gewünscht ist
+* ie Verwaltung vollständig innerhalb von {application} erfolgen soll
+* ein besonders abgeschottetes Umfeld existiert (z. B. isolierte Netze)
+
+Eigenschaften:
+
+* Benutzer werden in der internen SQLite‑Datenbank verwaltet
+* Rollen und Berechtigungen werden in der Administrationsoberfläche gepflegt
+* Passwort‑Policies können kundenseitig umgesetzt werden
+
+Diese Methode ist funktional, bietet jedoch weniger Komfort als SSO‑Varianten.
 
 

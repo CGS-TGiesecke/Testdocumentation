@@ -10,12 +10,9 @@
 
 * *Bei Cloud-LLM-Providern (Azure OpenAI, AWS Bedrock):* Dauerhafte Internetverbindung erforderlich
 * *Bei lokalen Modellen:* Nur für Installation erforderlich (Download des Docker-Image)
+* Die Anwendung unterstützt Proxy‑Umgebungen (Konfiguration über Umgebungsvariablen möglich).
 
-*Proxy-Unterstützung:* Die Lösung unterstützt den Betrieb hinter einem Proxy. Proxy-Konfiguration kann in den Umgebungsvariablen hinterlegt werden.
-
-*MCP Server API:* Auf Wunsch kundenspezifische Erweiterung der Suchfunktionen für Web-, lokale Kunden-, Bild-, Video- und Nachrichtensuchen sowie KI gestützte Zusammenfassungen 
-
-**Erforderliche Ports:**
+*Erforderliche Ports:*
 
 |===
 | Port | Protokoll | Verwendung | Erforderlich für 
@@ -25,4 +22,4 @@
 | **8000** 	| HTTP 	| Direktzugriff auf Anwendung 							| Test/Entwicklung
 |===
 
-**Empfehlung für Produktion:** Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.
+*Empfehlung für Produktion:* Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.

@@ -1,12 +1,14 @@
 
 === Allgemeine Vorrausetzungen
 
+Dieses Kapitel beschreibt die technischen Grundanforderungen für den Betrieb von {application}. Die Anwendung wird vollständig beim Kunden betrieben und benötigt lediglich eine Linux‑Umgebung mit installiertem Docker.
+
 ==== Infrastruktur (VM oder Server)
 
-Die Lösung wird auf einem *Linux-basierten Server* bereitgestellt (lokale VM oder Cloud-VM). 
-Es ist *keine spezielle Cloud-Integration erforderlich* - jeder Linux-Server mit Docker ist geeignet.
-
-*Wichtig:* Eine VM ist *nicht zwingend erforderlich*. Die Lösung kann auf jedem Linux-Server mit Docker betrieben werden.
+Die Lösung wird auf einem *Linux‑basierten Server* bereitgestellt — entweder als *lokale VM*, physischer Server oder *Cloud‑Instanz*.
+Eine spezielle Cloud‑Integration ist *nicht erforderlic*, jeder Linux‑Server mit einer funktionierenden Docker‑Installation ist geeignet.
+*Hinweis:* +
+Eine dedizierte VM ist nicht zwingend notwendig. CGS Assist kann auch auf einem bestehenden Linux‑Server betrieben werden, solange die Ressourcenanforderungen erfüllt sind.
 
 ===== Serveranforderungen
 
@@ -39,8 +41,12 @@ Für den produktiven Betrieb der Applikation {application} gelten folgende, last
  
 ==== Betriebssystem
 
-* *Linux*, z. B. Ubuntu Server LTS (24.04) oder vergleichbare Distributionen
-* Getestet mit Ubuntu; andere Linux-Distributionen auf Anfrage
+Unterstützt werden:
+
+* *Linux‑Distributionen*, bevorzugt *Ubuntu Server LTS (24.04)*
+* Andere Distributionen sind in der Regel kompatibel und können auf Anfrage getestet werden.
+
+Ubuntu wurde als Referenzsystem für Tests genutzt.
 
 ==== Docker-Umgebung
 
@@ -58,7 +64,12 @@ Für den Betrieb empfehlen wir mindestens 20 GB Speicher für das Docker-Datenve
 
 ==== Gemeinsames Verzeichnis (SHARED_FOLDER)
 
-Ein *beschreibbares Verzeichnis* auf dem Server für den Datenaustausch zwischen den Containern und für persistente Daten (Dokumente, Datenbanken, Vector-Store).
+Ein *beschreibbares Verzeichnis* auf dem Server für den Datenaustausch zwischen den Containern und für persistente Daten. Hier werden u. a. gespeichert:
+
+* Dokumente
+* Konfigurationsdateien
+* Datenbank (SQLite)
+* Vector‑Store (ChromaDB)
 
 *Aufgabe des Kunden:* 
 Bereitstellung eines Verzeichnisses (SHARED_FOLDER) mit ausreichenden Schreib-/Leserechten für die Docker-Container.

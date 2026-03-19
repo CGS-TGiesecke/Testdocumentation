@@ -1,18 +1,18 @@
 
 ==== Azure OpenAI (Empfohlen)
 
-**Warum Azure OpenAI empfohlen wird:**
+*Warum Azure OpenAI empfohlen wird:*
 
-- Bewährte Enterprise-Integration
-- Verfügbarkeit in EU-Regionen (DSGVO-konform)
-- Microsoft Enterprise Support
-- Bewährte GPT Modelle
+* Bewährte Enterprise-Integration
+* EU‑Regionen für DSGVO‑konformen Betrieb
+* Microsoft Enterprise Support
+* Zugriff auf die neuesten GPT‑Modelle
 
-**Voraussetzungen:**
+*Voraussetzungen:*
 
-- Aktives Azure-Abonnement (Subscription)
-- Freigabe für Azure OpenAI Service (kann Genehmigung erfordern)
-- Ausreichende Berechtigungen zum Erstellen von Ressourcen
+* Aktives Azure-Abonnement (Subscription)
+* Freischaltung für Azure OpenAI Service (teilweise genehmigungspflichtig)
+* Berechtigungen zum Erstellen und Konfigurieren von Ressource
 
 
 

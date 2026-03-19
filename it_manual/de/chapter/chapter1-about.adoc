@@ -12,9 +12,14 @@ und den Betrieb der {application} Plattform beim Kunden.
 
 {application} ist eine browserbasierte Webanwendung, die lokal beim Kunden gehostet wird. 
 Der Betrieb erfolgt in Docker-Containern auf einem Linux-Server (entweder on-premise oder in einer Cloud-VM). 
-Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. 
 
-Mit {application} können Nutzer effizient Dokumente analysieren, Abfragen stellen und Daten verarbeiten, basierend auf KI-Technologien.
+Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. 
+Mit {application} können Benutzer u.a.
+
+* Dokumente analysieren
+* Abfragen an KI‑Modelle stellen
+* Daten verarbeiten
+* Informationen kontextbezogen aufbereiten
 
 {application} wird ohne eigene(s) KI-Sprachmodell(e) ausgeliefert. Stattdessen greift das Tool über eine API-Anbindung auf 
 die LLM-Infrastruktur des Kunden zurück. Damit {application} ein Sprachmodell nutzen kann, muss eine funktionsfähige Anbindung 
@@ -29,7 +34,7 @@ Die Lösung besteht aus folgenden Komponenten:
 * *Redis:* Message-Broker und Caching
 * *Datenbank:* SQLite
 * *Vector-Store:* ChromaDB für RAG
-* *Kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds (optional)
+* *optional kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds
 
 *Deployment:* Über Docker auf Linux-Server.
 
@@ -39,9 +44,15 @@ Die Lösung besteht aus folgenden Komponenten:
 
 KI Agents sind spezialisierte Software-Komponenten, die eigenständig komplexe Aufgaben automatisieren. 
 Über einen MCP (Model Context Protocol) Server erhalten diese Agents sicheren und strukturierten Zugriff auf verschiedenste Datenbanken und Subsysteme, 
-wie beispielsweise ERP-Systeme. Sie können dort eigenständig Datenabfragen oder Analysen durchführen, relevante Informationen extrahieren, 
-verarbeiten und die Ergebnisse in einem zentralen, einheitlichen Format bereitstellen. Auf diese Weise ermöglichen KI Agents automatisierte 
-Berichte, dynamische Auswertungen oder die Steuerung von Prozessen – und das über Systemgrenzen hinweg, ohne dass manuelle Eingriffe notwendig sind.
+wie beispielsweise ERP-Systeme. 
+Die Agents können:
+
+* Daten abfragen oder analysieren
+* relevante Informationen extrahieren
+* Ergebnisse zentralisiert bereitstellen
+* Prozesse automatisiert steuern
+
+Dies ermöglicht u. a. automatisierte Berichte, dynamische Auswertungen oder Prozessautomatisierungen — ohne manuelle Eingriffe und über Systemgrenzen hinweg.
 
 Weitere Anwendungsbeispiele:
 
