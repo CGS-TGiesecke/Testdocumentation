@@ -60,7 +60,7 @@ The minimal policy required for Bedrock access is:
  ]
 }
 ```
-To restrict the policy to a specific region, replace * with the region:
+To restrict the policy to a specific region, replace '*' with the region:
 ```
 "Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
 ```
@@ -102,11 +102,11 @@ Model ID: openai.gpt-oss-20b-1:0
 
 *Assigning IAM User / IAM Role to EC2 Instance*
 
-*IAM Role (recommended):* +
+IAM Role (recommended): +
 Assign the role to the EC2 instance via → EC2 → Instance → Actions → Security → Modify IAM role.
 
-*IAM User:* +
-For an IAM User, AWS credentials must be stored in the application's configuration on the EC2 instance.
+IAM User: +
+For an IAM User the AWS credentials at the EC2 instance be stored in the application's configuration.
 
 ===== Supported Models
 
