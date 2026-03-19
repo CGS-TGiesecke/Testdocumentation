@@ -11,17 +11,17 @@
 ** Manage model access
 ** Die benötigten Modelle auswählen (z. B. OpenAI OSS, Meta, Anthropic etc.)
 ** Save changes klicken
+
 *Hinweise:* 
 
 * Bei manchen 3rd‑Party-Anbietern (z. B. Anthropic) dauert die Freischaltung 5–15 Minuten
 * Model Access ist zwingend notwendig. IAM allein reicht nicht – Modelle müssen manuell aktiviert werden.
-* Modell‑IDs müssen exakt stimmen. Fehlerhafte oder veraltete IDs erzeugen AccessDeniedException.
+* Model‑IDs müssen exakt stimmen. Fehlerhafte oder veraltete IDs erzeugen AccessDeniedException.
 * Region muss konsistent sein. Modellregion, Bedrock API‑Region und IAM‑Policy müssen übereinstimmen.
  
 *Schritt 2: IAM-Berechtigungen einrichten*
 
-Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen kann, werden 
-IAM-User *oder* IAM-Role verwendet.
+Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen können, werden IAM-User *oder* IAM-Role verwendet.
 
 * IAM-Role (empfohlen für AWS‑Ressourcen)
 * IAM-User mit Access Keys (empfohlen für lokale Entwicklerumgebungen)
@@ -38,8 +38,10 @@ IAM-User *oder* IAM-Role verwendet.
 | Dauerhafte Schlüssel müssen sicher gespeichert & rotiert werden
 |===
 
-Erstellen Sie entweder einen IAM‑User oder eine IAM‑Role und weisen Sie ihr die erforderliche Bedrock‑Policy zu. +
-Benutzerdefinierte IAM‑Policies müssen vor der Erstellung des IAM‑Users oder der IAM‑Role erzeugt werden, damit sie während der Erstellung ausgewählt und zugewiesen werden können.
+*Erstellen IAM‑User oder IAM‑Role*
+
+Erstellung eines IAM‑User oder einer IAM‑Role und Zuweisung der erforderliche Bedrock‑Policy. +
+Benutzerdefinierte IAM‑Policies müssen vor der Erstellung des IAM‑Users oder der IAM‑Role erzeugt werden, damit diese während der Erstellung ausgewählt und zugewiesen werden können.
 
 Die minimale Policy für Bedrock‑Zugriff ist:
 ```json
@@ -62,7 +64,7 @@ Die minimale Policy für Bedrock‑Zugriff ist:
 "Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
 ```
 
-*Info:* Amazon ARNs (Amazon Resource Names) sind eindeutige Bezeichner, mit denen AWS‑Ressourcen wie KI-Modelle eindeutig identifiziert werden.
+*Info:* Amazon ARNs (Amazon Resource Names) sind eindeutige Bezeichner, mit denen AWS‑Ressourcen wie KI-Modelle eindeutig identifiziert werden. +
 Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
 
 *Beispiel:*
@@ -78,7 +80,7 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `openai.gpt-oss-20b-1:0`)
 
-*Schritt 3: Access Keys generieren (entfällt bei IAM-Role)*
+*Schritt 4: Access Keys generieren (entfällt bei IAM-Role)*
 
 1. AWS IAM Console → Users → Ihr User → Security credentials
 2. Create access key
@@ -96,19 +98,10 @@ AWS Region: eu-central-1
 Model ID: openai.gpt-oss-20b-1:0
 ```
 
-Zuteilen der IAM-Role / IAM-User zu der EC2-Instanz
+*Zuteilen der IAM-Role / IAM-User zur EC2-Instanz*
 
-*IAM Role (empfohlen)*
-
-* IAM Role erstellen
-* Rolle der EC2‑Instanz zuweisen → EC2 → Instance → Actions → Security → Modify IAM role
-
-*IAM User*
-
-* Für einen IAM‑User müssen auf der Instanz AWS‑Credentials hinterlegt werden, z. B.:
-```
-~/.aws/credentials
-```
+IAM Role (empfohlen): Rolle der EC2‑Instanz zuweisen → EC2 → Instance → Actions → Security → Modify IAM role
+IAM User: Für einen IAM‑User werden auf der Instanz die AWS‑Credentials über die Konfiguration der Applikation hinterlegt.
 
 ===== Unterstützte Modelle
  
