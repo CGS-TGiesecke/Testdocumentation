@@ -11,12 +11,17 @@
 ** Manage model access
 ** Die benötigten Modelle auswählen (z. B. OpenAI OSS, Meta, Anthropic etc.)
 ** Save changes klicken
-*Hinweis:* Bei manchen 3rd‑Party-Anbietern (z. B. Anthropic) dauert die Freischaltung 5–15 Minuten
+*Hinweise:* 
+
+* Bei manchen 3rd‑Party-Anbietern (z. B. Anthropic) dauert die Freischaltung 5–15 Minuten
+* Model Access ist zwingend notwendig. IAM allein reicht nicht – Modelle müssen manuell aktiviert werden.
+* Modell‑IDs müssen exakt stimmen. Fehlerhafte oder veraltete IDs erzeugen AccessDeniedException.
+* Region muss konsistent sein. Modellregion, Bedrock API‑Region und IAM‑Policy müssen übereinstimmen.
  
 *Schritt 2: IAM-Berechtigungen einrichten*
 
 Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen kann, werden 
-IAM-User oder IAM-Role verwendet.
+IAM-User *oder* IAM-Role verwendet.
 
 * IAM-Role (empfohlen für AWS‑Ressourcen)
 * IAM-User mit Access Keys (empfohlen für lokale Entwicklerumgebungen)
