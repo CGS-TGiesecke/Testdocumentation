@@ -3,18 +3,40 @@
 
 *Schritt 1: AWS Bedrock aktivieren*
 
-1. *AWS Console öffnen:* (https://console.aws.amazon.com)
-2. *Zu Bedrock navigieren:* Suchen Sie nach "Bedrock"
-3. *Region wählen:* z. B. eu-central-1 (Frankfurt), us-east-1
-4. *Model Access aktivieren:*
-   * Navigieren Sie zu "Model access"
-   * Klicken Sie auf "Manage model access"
-   * Aktivieren Sie OpenAI OSS Modelle
-   * Klicken Sie auf "Save changes"
+* AWS Console öffnen: https://console.aws.amazon.com
+* Zu Bedrock navigieren: in der Suche „Bedrock“ eingeben
+* Region wählen: z. B. eu-central-1 (Frankfurt) oder us-east-1
+* Model Access aktivieren:
+** Links auf Model access klicken
+** Manage model access
+** Die benötigten Modelle auswählen (z. B. OpenAI OSS, Meta, Anthropic etc.)
+** Save changes klicken
+*Hinweis:* Bei manchen 3rd‑Party-Anbietern (z. B. Anthropic) dauert die Freischaltung 5–15 Minuten
  
 *Schritt 2: IAM-Berechtigungen einrichten*
 
-Erstellen Sie einen IAM-User mit folgender Policy:
+Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen kann, werden 
+IAM-User oder IAM-Role verwendet.
+
+* IAM-Role (empfohlen für AWS‑Ressourcen)
+* IAM-User mit Access Keys (empfohlen für lokale Entwicklerumgebungen)
+
+|===
+|Methode|Vorteile|Nachteile
+
+|IAM-Role
+| Automatische, sichere temporäre Credentials via IMDS (Instance Metadata Service), Keine Schlüsselverwaltung
+| Nur für AWS‑Ressourcen geeignet (nicht für Entwickler lokal)
+
+|IAM-User
+| Für lokale Tools & Entwickler nutzbar, auch außerhalb von AWS
+| Dauerhafte Schlüssel müssen sicher gespeichert & rotiert werden
+|===
+
+Erstellen Sie entweder einen IAM‑User oder eine IAM‑Role und weisen Sie ihr die erforderliche Bedrock‑Policy zu. +
+Benutzerdefinierte IAM‑Policies müssen vor der Erstellung des IAM‑Users oder der IAM‑Role erzeugt werden, damit sie während der Erstellung ausgewählt und zugewiesen werden können.
+
+Die minimale Policy für Bedrock‑Zugriff ist:
 ```json
 {
   "Version": "2012-10-17",
@@ -51,9 +73,9 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `openai.gpt-oss-20b-1:0`)
 
-*Schritt 3: Access Keys generieren*
+*Schritt 3: Access Keys generieren (entfällt bei IAM-Role)*
 
-1. IAM Console → Users → Ihr User → Security credentials
+1. AWS IAM Console → Users → Ihr User → Security credentials
 2. Create access key
 3. *Notieren Sie für die spätere Konfiguration in der Applikation:*
    * AWS Access Key ID
@@ -67,6 +89,20 @@ AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG...
 AWS Region: eu-central-1
 Model ID: openai.gpt-oss-20b-1:0
+```
+
+Zuteilen der IAM-Role / IAM-User zu der EC2-Instanz
+
+*IAM Role (empfohlen)*
+
+* IAM Role erstellen
+* Rolle der EC2‑Instanz zuweisen → EC2 → Instance → Actions → Security → Modify IAM role
+
+*IAM User*
+
+* Für einen IAM‑User müssen auf der Instanz AWS‑Credentials hinterlegt werden, z. B.:
+```
+~/.aws/credentials
 ```
 
 ===== Unterstützte Modelle
