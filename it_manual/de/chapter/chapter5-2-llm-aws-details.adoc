@@ -21,7 +21,7 @@
  
 *Schritt 2: IAM-Berechtigungen einrichten*
 
-Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen können, werden IAM-User *oder* IAM-Role verwendet.
+Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen können, werden IAM-Role *oder* IAM-User verwendet.
 
 * IAM-Role (empfohlen für AWS‑Ressourcen)
 * IAM-User mit Access Keys (empfohlen für lokale Entwicklerumgebungen)
@@ -38,10 +38,10 @@ Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen kön
 | Dauerhafte Schlüssel müssen sicher gespeichert & rotiert werden
 |===
 
-*Erstellen IAM‑User oder IAM‑Role*
+*Erstellen IAM‑Role oder IAM‑User*
 
-Erstellung eines IAM‑User oder einer IAM‑Role und Zuweisung der erforderliche Bedrock‑Policy. +
-Benutzerdefinierte IAM‑Policies müssen vor der Erstellung des IAM‑Users oder der IAM‑Role erzeugt werden, damit diese während der Erstellung ausgewählt und zugewiesen werden können.
+Erstellung einer IAM‑Role oder eines IAM‑User und Zuweisung der erforderliche Bedrock‑Policy. +
+Benutzerdefinierte IAM‑Policies müssen *vor* der Erstellung der IAM‑Role oder des IAM‑Users erzeugt werden, damit diese während der Erstellung ausgewählt und zugewiesen werden können.
 
 Die minimale Policy für Bedrock‑Zugriff ist:
 ```json
@@ -59,7 +59,7 @@ Die minimale Policy für Bedrock‑Zugriff ist:
   ]
 }
 ```
-*Info:* Um die Policy direkt auf eine Region einzuschränken, kann diese statt '*' direkt mit angegeben werden.
+Um die Policy direkt auf eine Region einzuschränken, kann diese statt mit '*' auch direkt mit angegeben werden.
 ```
 "Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
 ```
@@ -98,10 +98,10 @@ AWS Region: eu-central-1
 Model ID: openai.gpt-oss-20b-1:0
 ```
 
-*Zuteilen der IAM-Role / IAM-User zur EC2-Instanz*
+*Zuteilen der IAM-User / IAM-Role zur EC2-Instanz*
 
-IAM Role (empfohlen): Rolle der EC2‑Instanz zuweisen → EC2 → Instance → Actions → Security → Modify IAM role
-IAM User: Für einen IAM‑User werden auf der Instanz die AWS‑Credentials über die Konfiguration der Applikation hinterlegt.
+IAM Role (empfohlen): Rolle der EC2‑Instanz zuweisen über → EC2 → Instance → Actions → Security → Modify IAM role. +
+IAM User: Für einen IAM‑User sind die AWS‑Credentials für die EC2 Instanz in der Konfiguration der Applikation hinterlegt. 
 
 ===== Unterstützte Modelle
  
