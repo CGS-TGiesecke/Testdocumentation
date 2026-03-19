@@ -100,8 +100,10 @@ Model ID: openai.gpt-oss-20b-1:0
 
 *Zuteilen der IAM-User / IAM-Role zur EC2-Instanz*
 
-IAM Role (empfohlen): Rolle der EC2‑Instanz zuweisen über → EC2 → Instance → Actions → Security → Modify IAM role. +
-IAM User: Für einen IAM‑User sind die AWS‑Credentials für die EC2 Instanz in der Konfiguration der Applikation hinterlegt. 
+*IAM Role (empfohlen)*: +
+Rolle der EC2‑Instanz zuweisen über → EC2 → Instance → Actions → Security → Modify IAM role. +
+*IAM User*: +
+Für einen IAM‑User sind die AWS‑Credentials für die EC2 Instanz in der Konfiguration der Applikation hinterlegt. 
 
 ===== Unterstützte Modelle
  
