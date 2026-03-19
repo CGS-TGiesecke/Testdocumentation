@@ -4,7 +4,7 @@
 Diese Methode wird verwendet, wenn:
 
 * keine externe Identity‑Provider‑Integration gewünscht ist
-* ie Verwaltung vollständig innerhalb von {application} erfolgen soll
+* Die Verwaltung vollständig innerhalb von {application} erfolgen soll
 * ein besonders abgeschottetes Umfeld existiert (z. B. isolierte Netze)
 
 Eigenschaften:
@@ -13,6 +13,6 @@ Eigenschaften:
 * Rollen und Berechtigungen werden in der Administrationsoberfläche gepflegt
 * Passwort‑Policies können kundenseitig umgesetzt werden
 
-Diese Methode ist funktional, bietet jedoch weniger Komfort als SSO‑Varianten.
+
 
 

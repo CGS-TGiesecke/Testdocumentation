@@ -36,7 +36,7 @@ The following values are configurable in `.env` File
 | `SHARED_FOLDER`
 | Yes
 | Path for shared directory
-| `/opt/cgs-assist/shared`
+| `/opt/assist/shared`
 
 | `JWT_SECRET_KEY`
 | Required
