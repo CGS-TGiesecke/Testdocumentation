@@ -16,7 +16,7 @@ Sign in to the Microsoft Entra Admin Center using an account that has administra
 
 *Enter application information*
 
-* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-client-app  
+* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-sharepoint-app  
 * Supported account types: Decide whether the application should support only internal users (your own organization), external users, or multiple organizations. The default is "Single tenant".  
 * Redirect‑URI: optional, not required for SharePoint
 

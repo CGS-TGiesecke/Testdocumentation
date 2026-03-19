@@ -15,7 +15,7 @@ Sign in to the Microsoft Entra Admin Center with an account that has administrat
 
 *Enter application information*
 
-* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-client-app
+* Name: Choose a name for the application. The name will be visible later. *Suggestion:* {application}-email-app
 * Supported account types: Decide whether the application should support only internal users (single tenant), external users, or multiple organizations. Default is "Single tenant".
 * Enter Redirect URIs, must match the "redirect_uri" value in `init_config.yaml` (required for OIDC).
 

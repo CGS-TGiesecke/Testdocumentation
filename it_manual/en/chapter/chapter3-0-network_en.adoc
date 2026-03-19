@@ -1,19 +1,10 @@
 
 ==== Network / Ports
 
-*Required for:*
-
-* Downloading Docker image (during installation)
-* Connecting to the LLM provider API (Azure OpenAI, AWS Bedrock – if a cloud provider is selected)
-
-*Important:*
-
 * *For cloud LLM providers (Azure OpenAI, AWS Bedrock):* Permanent internet connection required
 * *For local models:* Internet connection only required during installation (Docker image download)
 
 *Proxy support:* The solution supports operation behind a proxy. Proxy configuration can be set via environment variables.
-
-*MCP Server API:* Optional customer-specific extension for search capabilities (web, local customer, image, video, news searches) and AI-powered summaries.
 
 *Required Ports:*
 

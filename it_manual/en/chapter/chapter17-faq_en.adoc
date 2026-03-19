@@ -35,6 +35,8 @@
 |The application does not start in the browser.|Check if the web server service is running and the firewall allows the relevant ports.
 |User cannot log in.|Ensure the user is active in AD and the assigned role is correctly configured in the application’s user management.
 Check the correct authentication configuration (redirect_uri), and look for possible typos.
-|No access to connected SharePoint.|Check the correct authentication configuration (redirect_uri), and look for possible typos.
+|Which external documents/directories can be integrated??| {application} supports:
+|	  |SharePoint integration via Microsoft Entra ID
+|  	  |Email integration via Microsoft Entra ID
 |===
 

@@ -15,7 +15,7 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 
 *Anwendungsinformationen eingeben*
 
-* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
+* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-sharepoint-app
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
 * Redirect‑URI: optional, für Sharepoint nicht notwendig

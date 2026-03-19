@@ -62,9 +62,7 @@ include::chapter/chapter8-1-0-rag-sharedfolder.adoc[]
 include::chapter/chapter8-2-0-rag-sharepoint.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter8-2-1-rag-sharepoint-details1.adoc[]
-
-include::chapter/chapter8-2-2-rag-sharepoint-details2.adoc[]
+include::chapter/chapter8-2-1-rag-sharepoint-details-neu.adoc[]
 endif::[]
 
 endif::[]
@@ -73,9 +71,7 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter8-3-0-rag-email.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter8-3-1-rag-email-details1.adoc[]
-
-include::chapter/chapter8-3-2-rag-email-details2.adoc[]
+include::chapter/chapter8-3-1-rag-email-details-neu.adoc[]
 endif::[]
 
 endif::[]
@@ -87,13 +83,13 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter9-1-auth-openid.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter9-1-auth-openid-details.adoc[]
+include::chapter/chapter9-1-auth-openid-details-neu.adoc[]
 endif::[]
 
 include::chapter/chapter9-2-auth-saml.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter9-2-auth-saml-details.adoc[]
+include::chapter/chapter9-2-auth-saml-details-neu.adoc[]
 endif::[]
 
 include::chapter/chapter9-3-auth-pwd.adoc[]
@@ -121,7 +117,3 @@ include::chapter/zuletzt_checklist.adoc[]
 <<<
 
 include::../../themes/contact-de.adoc[]
-
-
-
-

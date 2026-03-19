@@ -34,5 +34,7 @@
 |Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
 |Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
 Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
-|Kein Zugriff auf angebundenes SharePoint.|Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
+|Welche externen Dokumente/Verzeichnisse können integriert werden?|{application} unterstützt:
+|	  |SharePoint Integration über MS Entra ID
+|  	  |E-Mail Integration über MS Entra ID
 |===

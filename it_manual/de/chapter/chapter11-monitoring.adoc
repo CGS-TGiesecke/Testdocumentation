@@ -25,6 +25,11 @@ Die Benutzerverwaltung erfolgt zentral in der Administrationsoberfläche der App
 * Festlegen individueller Rechte für bestimmte Funktionsbereiche (z. B. Automatisierung)
 * Regelmäßige Überprüfung aktiver Benutzer und Rechte (mindestens halbjährlich)
 
+==== Patch-Management
+
+* Anwendung: {author} stellt Updates bereit und der Kunde spielt ein
+* Infrastruktur: Kunde ist verantwortlich (OS, Docker)
+
 ==== Backup und Recovery der Applikation
 
 Backup und Recovery der Applikation erfolgt durch den Kunden.

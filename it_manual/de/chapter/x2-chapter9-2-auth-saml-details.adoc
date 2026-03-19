@@ -15,7 +15,7 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 
 *Anwendungsinformationen eingeben*
 
-* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
+* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-SAML-app
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
 * Redirect‑URI:* muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
@@ -26,8 +26,7 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *SAML als Authentifizierungsmethode aktivieren*
 
-* In der App linke Seite auf Single-Sign-On gehen
-* SAML auswählen
+* Öffnen Entra ID → Enterprise applications → (Kunde App) → Single sign‑on → SAML
 * Es öffnet sich die Seite SAML‑basierte Konfiguration
 
 *Grundlegende SAML-Konfiguration*

@@ -1,5 +1,5 @@
 
-===== Applikation registrieren im Microsoft Entra Admin Center für Mail-Integration (Microsoft 365 / Graph)
+===== Applikation registrieren im Microsoft Entra Admin Center für OpenID Connect
 
 *Anmeldung*
 
@@ -15,10 +15,15 @@ Melden Sie sich im Microsoft Entra Admin Center mit einem Konto an, das über Ad
 
 *Anwendungsinformationen eingeben*
 
-* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-client-app
+* Name: Wählen Sie einen Namen für die Anwendung. Der Name ist später sichtbar. *Vorschlag:* {application}-openid-app
 * Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer (nur eigene Organisation), externe Benutzer oder 
 mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Mandant". 
-* Redirect‑URIs eintragen, muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein (wird für OIDC benötigt).
+* Redirect‑URI:* 
+
+** Linke Seite Klick Authentifizierung
+** Plattform hinzufügen
+** Web auswählen
+** Redirect‑URIs eintragen, muss identisch der Angabe "redirect_uri" in der `init_config.yaml` sein.
 
 *Erstellen*
 
@@ -26,7 +31,7 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 *Für die App-Authentifizierung:*
 
-* Linke Seite Zertifikate & Geheimnisse wählen
+* Linke Seite Klick Zertifikate & Geheimnisse wählen
 * Neuer geheimer Clientschlüssel → Wert kopieren (wird nur einmal angezeigt!)
 * Oder alternativ ein Zertifikat hochladen.
 
@@ -34,9 +39,19 @@ mehrere Organisationen unterstützen soll. Standard eingestellt ist "Nur mein Ma
 
 ** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
 ** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
-** Wert des geheimen Clientschlüssel (unter Zertifikate & Geheimnisse): *Client-Secrets Value*, kann zeitlich begrenzt werden
-** ID des geheimen Clientschlüssel (unter Zertifikate & Geheimnisse): *Client Secret ID*
-** ID der App-Registrierung (unter Übersicht): *Object ID*
+** geheimer Clientschlüssel (unter Übersicht): *Client-Secrets*, kann zeitlich begrenzt werden
+** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
 ```
 Hinweis: Notieren/Kopieren Sie sich die Werte für Ihre Anwendungskonfiguration `init_config.yaml`.
 ```
+
+*Weitere Einstellungen*
+
+* Klicken Sie ganz links auf "Unternehmens-Apps".
+* Wählen Sie "{application}".
+* Klicken Sie links im Menü auf "Benutzer und Gruppen".
+* Wählen Sie "ihre_nutzer_gruppe". 
+* Dort setzen Sie die Berechtigung "User.Resad" auf "Delegiert"
+
+
+

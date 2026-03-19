@@ -55,7 +55,7 @@ Docker stores data (images, containers, volumes) on Linux by default in the dire
 Volumes used for persistent data are typically located in /var/lib/docker/volumes.
 For operation, we recommend providing at least 20 GB of storage for the Docker data directory.
 
-==== Shared Directory (SHARED_FOLDER)
+==== SHARED_FOLDER
 
 A *writable directory* on the server for data exchange between containers and for persistent data (documents, databases, vector store).
 

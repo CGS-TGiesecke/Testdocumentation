@@ -1,0 +1,53 @@
+
+===== Registering the application in the Microsoft Entra Admin Center for OpenID Connect
+
+*1. Sign in*
+
+* Open the Microsoft Entra Admin Center: https://entra.microsoft.com
+* Sign in using an account with administrator permissions for your organization.
+
+*2. Navigate to “App registrations”*
+
+* In the left navigation pane, select Entra ID.
+* Click App registrations.
+* Select New registration from the top menu.
+
+*3. Enter application information*
+
+* Name: Enter a descriptive name for the application, e.g.: {application}-openid-app
+* Supported account types: Choose whether the application will support:
+** internal users only (default: Single tenant),
+** external users, or
+** multiple organizations.
+* Configure Redirect URI:
+** On the left menu, select Authentication.
+** Click Add a platform.
+** Select Web.
+** Enter your Redirect URI — this must match the value of "redirect_uri" in your init_config.yaml.
+
+*4. Create the application*
+
+Click Register.
+
+*5. Configure application authentication*
+
+* In the left menu, open Certificates & secrets.
+* Create a new client secret and immediately copy the value (displayed only once).
+* Alternatively, upload a certificate instead of using a client secret.
+
+*6.Collect configuration values*
+
+[.highlight]#Record the following values for later use for the file init_config.yaml:#
+
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID* 
+** Client secret(under Certificates & secrets ): *Client Secret*, can be time-limited 
+** Redirect‑URI (under Overview): *Redirect‑URI* redirect after successful login to {application}
+
+*7. Additional settings*
+
+* In the left navigation panel, click Enterprise applications.
+* Select your application: {application}.
+* In the left menu, select Users and groups.
+* Choose the user group that should have access.
+* Assign the permission User.Read as Delegated.

@@ -1,0 +1,74 @@
+
+===== Applikation registrieren im Microsoft Entra Admin Center für SAML
+
+*1. Anmeldung*
+
+* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
+* Melden Sie sich mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+
+*2. Navigation zu „App‑Registrierungen“*
+
+* Wählen Sie im linken Menü Entra ID.
+* Klicken Sie auf App‑Registrierungen.
+* Klicken Sie oben auf Neue Registrierung.
+
+*3. Anwendungsinformationen eingeben*
+
+* Name: Wählen Sie einen Namen für die Anwendung, z. B.: {application}-SAML-app
+* Unterstützte Kontotypen: Wählen Sie, welche Benutzer die Anwendung nutzen dürfen. Standard: Nur mein Mandant (Single‑Tenant).
+* Redirect‑URI: Tragen Sie eine Redirect‑URI ein. Diese muss identisch zur Angabe redirect_uri in der Datei init_config.yaml sein.
+
+*4. Anwendung erstellen*
+
+* Klicken Sie auf Registrieren.
+
+====== SAML-Konfiguration
+
+*5. SAML als Authentifizierungsmethode aktivieren*
+
+* Öffnen Sie: Entra ID → Enterprise applications → Ihre Anwendung → Single sign‑on
+* Wählen Sie SAML aus.
+* Die Seite SAML-basierte Konfiguration öffnet sich.
+
+*6. Grundlegende SAML‑Konfiguration*
+
+* Bezeichner (Entity ID): Verwenden Sie die eindeutige Kennung aus dem Admin Center.
+* Reply/Redirect‑URL: Muss identisch zur redirect_uri in der Datei init_config.yaml sein.
+
+*7. Attribute & Claims einrichten*
+
+* Damit die Anwendung stets aktuelle Benutzerdaten erhält, müssen Claims für folgende Werte eingerichtet werden:
+** Vorname
+** Nachname
+** E‑Mail
+
+Dies stellt sicher, dass die Anwendung {application} bei jeder Anmeldung die aktuellen Profildaten des Benutzers erhält.
+
+*8. SAML‑Zertifikate (SAML Certificates)*
+
+* Laden Sie die Datei Federation Metadata XML herunter.
+* Speichern Sie die Datei im SHARED_FOLDER. Der Ablagepfad muss identisch zum Eintrag idp_metadata_path in init_config.yaml sein.
+
+Die XML‑Datei enthält u. a.:
+
+* Entity ID
+* SSO‑URL
+* Signatur‑Zertifikate
+
+*9. Wichtige Konfigurationsdaten erfassen*
+
+[.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
+
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** geheimer Clientschlüssel (unter Übersicht): *Client-Secrets*, kann zeitlich begrenzt werden
+** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
+
+
+
+
+
+
+
+
+

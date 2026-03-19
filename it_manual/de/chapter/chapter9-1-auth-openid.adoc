@@ -1,9 +1,7 @@
 
 ==== OpenID Connect Authentifizierung mit Microsoft Entra ID
 
-Die OpenID Connect Authentifizierung mit Microsoft Entra ID wird für alle professionellen, cloud- und unternehmensorientierten Anwendungen empfohlen, 
-um Sicherheit, Nutzerkomfort und Compliance-Anforderungen adäquat adressieren zu können. Vorteil dieser Anmeldeform ist SSO (Single Sign-On)
-d.h. Benutzer können sich mit ihren Unternehmensanmeldedaten (z. B. E-Mail/Passwort bei Microsoft 365) in verschiedensten Anwendungen anmelden.
+OpenID Connect mit Microsoft Entra ID bietet sich für alle professionellen Cloud‑ und Business‑Anwendungen an, da es sicheres Single Sign‑On mit Unternehmensanmeldedaten und zentrale Identitäts‑ und Compliance‑Funktionen bereitstellt.
 
 Die notwendigen Daten, für die Anbindung von {application} mit OpenID Connect Authentifizierung des Kunden sind:
 

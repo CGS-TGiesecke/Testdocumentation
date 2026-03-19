@@ -1,9 +1,7 @@
 
 ==== Sharepoint Anbindung mit Microsoft Entra ID 
 
-Die Anbindung von Sharepoint muss über eine API mit den Kundendaten erfolgen. 
-In SharePoint werden einzelne Bereiche als Sites bezeichnet. Wenn z.B. eine neue Gruppe in MS Teams erstellt wird, erstellt SharePoint 
-automatisch eine entsprechende SharePoint-Site, die mit dieser Gruppe verknüpft ist.
+Die Anbindung von SharePoint erfolgt über definierte API‑Schnittstellen auf Kundendaten, wobei SharePoint einzelne Arbeitsbereiche als „Sites“ organisiert und beispielsweise beim Anlegen einer neuen Microsoft‑Teams‑Gruppe automatisch eine verknüpfte SharePoint‑Site erzeugt.
 
 Die notwendigen Daten, für die Anbindung von {application} mit Credentials an Sharepoint des Kunden sind:
 

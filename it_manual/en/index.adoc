@@ -63,9 +63,7 @@ include::chapter/chapter8-1-0-rag-sharedfolder_en.adoc[]
 include::chapter/chapter8-2-0-rag-sharepoint_en.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter8-2-1-rag-sharepoint-details1_en.adoc[]
-
-include::chapter/chapter8-2-2-rag-sharepoint-details2_en.adoc[]
+include::chapter/chapter8-2-1-rag-sharepoint-details-new_en.adoc[]
 endif::[]
 
 endif::[]
@@ -74,9 +72,7 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter8-3-0-rag-email_en.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter8-3-1-rag-email-details1_en.adoc[]
-
-include::chapter/chapter8-3-2-rag-email-details2_en.adoc[]
+include::chapter/chapter8-3-1-rag-email-details-new_en.adoc[]
 endif::[]
 
 endif::[]
@@ -88,13 +84,13 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter9-1-auth-openid_en.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter9-1-auth-openid-details_en.adoc[]
+include::chapter/chapter9-1-auth-openid-details-new_en.adoc[]
 endif::[]
 
 include::chapter/chapter9-2-auth-saml_en.adoc[]
 
 ifeval::[{big-output} == 2]
-include::chapter/chapter9-2-auth-saml-details_en.adoc[]
+include::chapter/chapter9-2-auth-saml-details-new_en.adoc[]
 endif::[]
 
 include::chapter/chapter9-3-auth-pwd_en.adoc[]

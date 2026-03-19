@@ -1,0 +1,54 @@
+
+===== Applikation registrieren im Microsoft Entra Admin Center für OpenID Connect
+
+*1. Anmeldung*
+
+* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
+* Melden Sie sich mit einem Konto an, das über Administratorrechte in Ihrer Organisation verfügt.
+
+*2. Navigation zu „App‑Registrierungen“*
+
+* Wählen Sie im linken Menü Entra ID.
+* Klicken Sie auf App‑Registrierungen.
+* Klicken Sie oben auf Neue Registrierung.
+
+*3. Anwendungsinformationen eingeben*
+
+* Name: Geben Sie einen geeigneten Namen ein, z. B.: {application}-openid-app
+* Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer, externe Benutzer oder mehrere Organisationen unterstützen soll. Standard: Single Tenant (Nur Konten in diesem Organisationsverzeichnis).
+* Redirect‑URI konfigurieren:
+** Wählen Sie im linken Menü Authentifizierung (Authentication).
+** Klicken Sie auf Plattform hinzufügen.
+** Wählen Sie Web.
+** Geben Sie die Redirect‑URI ein — sie muss exakt dem Wert redirect_uri in der init_config.yaml entsprechen.
+
+*4. Anwendung erstellen*
+
+* Klicken Sie auf Registrieren.
+
+*5. Authentifizierung der Anwendung konfigurieren*
+
+* Öffnen Sie im linken Menü Zertifikate & Geheimnisse.
+* Erstellen Sie einen neuen geheimen Clientschlüssel (Client Secret).
+* Kopieren Sie den Secret‑Wert sofort (wird nur einmal angezeigt!).
+* Optional: Laden Sie ein Zertifikat hoch, falls Zertifikats‑Authentifizierung bevorzugt wird.
+
+*6. Wichtige Konfigurationsdaten erfassen*
+
+[.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
+
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** geheimer Clientschlüssel (unter Übersicht): *Client-Secrets*, kann zeitlich begrenzt werden
+** Redirect-URI: *Redirect‑URI* Umleitung nach erfolgreicher Anmeldung zu {application}
+
+*7. Zusätzliche Einstellungen*
+
+* Navigieren Sie im linken Menü zu Enterprise Applications.
+* Wählen Sie Ihre Anwendung {application} aus.
+* Klicken Sie auf Benutzer und Gruppen (Users and groups).
+* Wählen Sie die Benutzergruppe, die Zugriff erhalten soll.
+* Setzen Sie die Berechtigung User.Read auf Delegiert (Delegated).
+
+
+

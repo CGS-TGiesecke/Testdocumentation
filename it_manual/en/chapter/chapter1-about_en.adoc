@@ -44,3 +44,4 @@ Further use cases:
 
 - Reading public feeds and making them automatically available within {application}
 - Categorizing incoming emails, including evaluating and prioritizing attachments
+- permission‑controlled SharePoint integration into the RAG

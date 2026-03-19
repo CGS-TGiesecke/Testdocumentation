@@ -41,19 +41,6 @@ endif::[]
 
 endif::[]
 
-=== Backup und Recovery
-
-*Vom Kunden zu sichern*:
-
-* SHARED_FOLDER dieser enthält:
-** Datenbank
-** Konfigurationsdateien
-
-=== Patch-Management
-* Anwendung: {author} stellt Updates bereit und der Kunde spielt ein
-* Infrastruktur: Kunde ist verantwortlich (OS, Docker)
-
-
 === RACI-Matrix 
 
 |===

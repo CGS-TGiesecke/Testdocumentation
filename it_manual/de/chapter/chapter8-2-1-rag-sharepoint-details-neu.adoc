@@ -1,0 +1,107 @@
+
+===== Applikation registrieren im Microsoft Entra Admin Center für SharePoint
+
+*1. Anmeldung*
+
+* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
+* Melden Sie sich mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+
+*2. Navigation zu „App‑Registrierungen“*
+
+* Wählen Sie im linken Menü Entra ID.
+* Klicken Sie auf App‑Registrierungen.
+* Wählen Sie Neue Registrierung (oben im Menü).
+
+*3. Anwendungsinformationen eingeben*
+
+* Name: Geben Sie einen eindeutigen Namen ein, z. B.:{application}-sharepoint-app
+* Unterstützte Kontotypen: Wählen Sie aus, wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+* Redirect‑URI: Optional – für SharePoint‑App‑Only Zugriff nicht erforderlich.
+
+*4. Anwendung erstellen*
+
+* Klicken Sie auf Registrieren, um die App anzulegen.
+
+*5. App‑Authentifizierung konfigurieren*
+
+* Öffnen Sie in Ihrer App links den Bereich Zertifikate & Geheimnisse.
+* Wählen Sie Neuer geheimer Clientschlüssel.
+* Kopieren Sie den Secret‑Wert direkt nach dem Erstellen (wird nur einmal angezeigt).
+* Alternativ: Laden Sie ein Zertifikat hoch, falls Zertifikatsbasierte Authentifizierung bevorzugt wird.
+
+*6. Wichtige Konfigurationsdaten erfassen*
+
+[.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
+
+** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
+** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
+** geheimer Clientschlüssel  (unter Zertifikate & Geheimnisse): *Client-Secrets*, kann zeitlich begrenzt werden
+
+Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung 
+im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
+
+*7. API‑Berechtigungen hinzufügen*
+
+* Öffnen Sie: Entra ID → Anwendungen → App‑Registrierungen → Ihre Anwendung
+* Wählen Sie API‑Berechtigungen. Klicken Sie auf Berechtigung hinzufügen.
+* Wählen Sie Microsoft Graph.
+* Fügen Sie Application permissions hinzu.
+** Mindestberechtigungen für SharePoint‑Zugriff:
+** Sites.Read.All (tenantweiter Lesezugriff) oder Sites.Selected (empfohlen: Least‑Privilege‑Prinzip)
+
+*8. Admin‑Zustimmung erteilen*
+
+Damit die Anwendung die Berechtigungen nutzen kann:
+
+* Öffnen Sie erneut den Bereich API‑Berechtigungen.
+* Klicken Sie auf: „Admin‑Zustimmung für <ihr verzeichnis=""> erteilen“</ihr>.
+* Bestätigen Sie die Freigabe.
+
+====== SharePoint-Berechtigungen auf Site‑Ebene setzen
+
+*Wichtig:* „Sites.Selected“ erlaubt nur Zugriff auf explizit zugewiesene Sites. Ein Admin muss daher jede Site einzeln freigeben.
+
+Es gibt zwei Wege:
+
+* Direkt über das SharePoint Admin Center / UI
+* Oder automatisiert über Microsoft Graph PowerShell (empfohlen bei vielen Sites)
+
+*PowerShell Variante* 
+
+*9. Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden)*
+```
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+Benötigt wird evtl. die Rolle "SharePoint Administrator" oder Globaler Administrator, um die PowerShell-Operationen auszuführen.
+
+*10. Anmelden*
+```
+Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+```
+
+*11. App‑ID der registrierten Anwendung festlegen*
+```
+$appId = "IHRE-APP-ID"
+```
+
+*12. SharePoint Site‑ID ermitteln*
+```
+$site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
+$siteId = $site.Id
+```
+
+*13. Berechtigung auf der Site vergeben (Beispiel: Lesezugriff)*
+```
+$permission = @{
+    Roles = @("read")
+    GrantedToIdentities = @(
+        @{
+            Application = @{
+                Id = $appId
+                DisplayName = "IHRE-APP-NAME"
+            }
+        }
+    )
+}
+New-MgSitePermission -SiteId $siteId -BodyParameter $permission
+```
