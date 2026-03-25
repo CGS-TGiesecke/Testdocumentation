@@ -3,33 +3,28 @@
 
 *1. Anmeldung*
 
-* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Melden Sie sich mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+* Öffnen Microsoft Entra Admin Center: https://entra.microsoft.com
+* Anmeldung mit einem Konto an, das über Administratorrechte verfügt.
 
-*2. Navigation zu „App‑Registrierungen“*
+*2. Neue App‑Registrierung anlegen*
 
-* Wählen Sie im linken Menü Entra ID.
-* Klicken Sie auf App‑Registrierungen.
-* Wählen Sie Neue Registrierung (oben im Menü).
+* Navigieren zu *Entra ID → App‑Registrierungen*.
+* Klicken auf *Neue Registrierung*.
+* Anwendungsinformationen eingeben*
 
-*3. Anwendungsinformationen eingeben*
+** *Name*: Geben Sie einen eindeutigen Namen ein, z. B.:{application}-sharepoint-app
+** *Unterstützte Kontotypen*: Wählen Sie aus, wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+** *Redirect‑URI*: Optional – für SharePoint‑App‑Only Zugriff nicht erforderlich.
+* Klicken auf *Registrieren*
 
-* Name: Geben Sie einen eindeutigen Namen ein, z. B.:{application}-sharepoint-app
-* Unterstützte Kontotypen: Wählen Sie aus, wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
-* Redirect‑URI: Optional – für SharePoint‑App‑Only Zugriff nicht erforderlich.
+*3. App‑Authentifizierung konfigurieren*
 
-*4. Anwendung erstellen*
+* Öffnen *Zertifikate & Geheimnisse*.
+* Wählen *Neuer geheimer Clientschlüssel*.
+* Kopieren des Secret‑Wert direkt nach dem Erstellen (wird nur einmal angezeigt).
+* Alternativ: Hochladen der Zertifikate, falls Zertifikatsbasierte Authentifizierung bevorzugt wird.
 
-* Klicken Sie auf Registrieren, um die App anzulegen.
-
-*5. App‑Authentifizierung konfigurieren*
-
-* Öffnen Sie in Ihrer App links den Bereich Zertifikate & Geheimnisse.
-* Wählen Sie Neuer geheimer Clientschlüssel.
-* Kopieren Sie den Secret‑Wert direkt nach dem Erstellen (wird nur einmal angezeigt).
-* Alternativ: Laden Sie ein Zertifikat hoch, falls Zertifikatsbasierte Authentifizierung bevorzugt wird.
-
-*6. Wichtige Konfigurationsdaten erfassen*
+*4. Wichtige Konfigurationsdaten erfassen*
 
 [.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
 
@@ -37,60 +32,91 @@
 ** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
 ** geheimer Clientschlüssel  (unter Zertifikate & Geheimnisse): *Client-Secrets*, kann zeitlich begrenzt werden
 
-Um SharePoint-Ressourcen (z. B. Listen, Websites, Dateien) durch eine registrierte Anwendung 
-im Microsoft Entra Admin Center abzudecken, sind weitere zusätzliche Schritte nötig.
+*5. API‑Berechtigungen hinzufügen*
 
-*7. API‑Berechtigungen hinzufügen*
-
-* Öffnen Sie: Entra ID → Anwendungen → App‑Registrierungen → Ihre Anwendung
-* Wählen Sie API‑Berechtigungen. Klicken Sie auf Berechtigung hinzufügen.
-* Wählen Sie Microsoft Graph.
-* Fügen Sie Application permissions hinzu.
-** Mindestberechtigungen für SharePoint‑Zugriff:
-** Sites.Read.All (tenantweiter Lesezugriff) oder Sites.Selected (empfohlen: Least‑Privilege‑Prinzip)
+* Öffnen registreierte App → *API‑Berechtigungen*.
+* Wählen *Berechtigung hinzufügen → Microsoft Graph → Application permissions*.
+** Mindestberechtigungen erforderlich:
+** Sites.Read.All (tenantweiter Lesezugriff) oder Sites.Selected (*empfohlen*: Least‑Privilege‑Prinzip)
 
 *8. Admin‑Zustimmung erteilen*
 
 Damit die Anwendung die Berechtigungen nutzen kann:
 
-* Öffnen Sie erneut den Bereich API‑Berechtigungen.
-* Klicken Sie auf: „Admin‑Zustimmung für <ihr verzeichnis=""> erteilen“</ihr>.
-* Bestätigen Sie die Freigabe.
+* Öffnen *API‑Berechtigungen*.
+* Klicken auf: *Admin‑Zustimmung für <mandant> erteilen“</mandant>*.
+* Bestätigen Freigabe.
 
-====== SharePoint-Berechtigungen auf Site‑Ebene setzen
+====== SharePoint‑Siteberechtigungen bei Sites.Selected vergeben
 
-*Wichtig:* „Sites.Selected“ erlaubt nur Zugriff auf explizit zugewiesene Sites. Ein Admin muss daher jede Site einzeln freigeben.
+*Wichtig:* „Sites.Selected“ *keinen* tenantweiten Zugriff. Die App muss explizit für *jede einzelne Site* freigegeben werden.
 
-Es gibt zwei Wege:
+Dies kann erfolgen über:
 
-* Direkt über das SharePoint Admin Center / UI
-* Oder automatisiert über Microsoft Graph PowerShell (empfohlen bei vielen Sites)
+* das *SharePoint Admin Center (UI)*
+* *Microsoft Graph PowerShell* (empfohlen bei vielen Sites)
+* *PnP PowerShell*
 
-*PowerShell Variante* 
+*PnP PowerShell‑Variante*
+1. Verbinden
+```
+Connect-PnPOnline `
+    -Url "https://<tenant>.sharepoint.com/sites/<SiteName>" `
+    -ClientId "<AppId>" `
+    -Thumbprint "<CertThumbprint>" `
+    -Tenant "<tenant>.onmicrosoft.com"
+```
+2. App bekommt explizit Site‑Berechtigung
+```
+$Site = "https://<tenant>.sharepoint.com/sites/<SiteName>"
+$AppId = "<AppRegistrationId>"
 
-*9. Microsoft Graph PowerShell Modul installieren (falls nicht vorhanden)*
+Grant-PnPAzureADAppSitePermission `
+    -AppId $AppId `
+    -DisplayName "My Automation App" `
+    -Permissions "Write" `
+    -Site $Site
+```
+Mögliche Werte für -Permissions:
+
+* Read
+* Write
+* FullControl
+
+3. Berechtigung aktivieren / bestätigen (optional)
+Anzeigen:
+```
+Get-PnPAzureADAppSitePermission -Site $Site
+```
+Ändern:
+```
+Set-PnPAzureADAppSitePermission `
+    -AppId $AppId `
+    -Permissions "FullControl" `
+    -Site $Site
+```
+
+*Microsoft Graph PowerShell‑Variante* 
+
+*1. Modul installieren*
 ```
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
-Benötigt wird evtl. die Rolle "SharePoint Administrator" oder Globaler Administrator, um die PowerShell-Operationen auszuführen.
-
-*10. Anmelden*
+Benötigt wird evtl. die Rolle "SharePoint Administrator" oder "Globaler Administrator".
+*2. Anmelden*
 ```
 Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
 ```
-
-*11. App‑ID der registrierten Anwendung festlegen*
+*3. App‑ID festlegen*
 ```
 $appId = "IHRE-APP-ID"
 ```
-
-*12. SharePoint Site‑ID ermitteln*
+*4. Site‑ID ermitteln*
 ```
 $site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
 $siteId = $site.Id
 ```
-
-*13. Berechtigung auf der Site vergeben (Beispiel: Lesezugriff)*
+*5. Berechtigung setzen*
 ```
 $permission = @{
     Roles = @("read")
