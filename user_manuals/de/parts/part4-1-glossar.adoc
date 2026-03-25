@@ -1,7 +1,7 @@
 
 === Glossar
 
-*AI Chat* +
+*KI Chat* +
 Bereich der Anwendung, in dem freie KI‑Abfragen gestellt werden können. Antworten basieren auf dem ausgewählten KI‑Agenten und optional auf dem RAG‑System. +
 
 *Agent / KI‑Agent* +
