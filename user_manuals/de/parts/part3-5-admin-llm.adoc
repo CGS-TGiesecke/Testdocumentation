@@ -1,7 +1,7 @@
 
 ==== LLMs und Einbettungsmodelle 
 
-Die Seite listet alle LLM‑Provider.
+Die Seite listet alle LLM‑Provider die u.a. im Chat verwendet werden können.
 
 image::../images/Abbildung-22.jpg[Administration - LLMs und Einbettungsmodelle, title="Administration - LLMs und Einbettungsmodelle", width=600]
 

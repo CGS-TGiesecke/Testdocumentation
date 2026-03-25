@@ -1,0 +1,27 @@
+
+=== Glossar
+
+*AI Chat* +
+Bereich der Anwendung, in dem freie KI‑Abfragen gestellt werden können. Antworten basieren auf dem ausgewählten KI‑Agenten und optional auf dem RAG‑System. +
+*Agent / KI‑Agent* +
+Ein spezielles KI‑Modul, das mit definierten Fähigkeiten arbeitet (z. B. „nur lesen“, „suchen“, „analysieren“). Steuert, welche Aktionen die KI ausführen darf. +
+*Anwendungsfall (Use Case)* +
+Vorkonfigurierte Aufgaben oder Workflows, die Benutzer mit Eingaben versehen und ausführen können. Beispiele: Berichtsanalysen, Checklisten, automatisierte Auswertungen. +
+*Automatisierung* + 
+Bereich, in dem zeitgesteuerte oder eventbasierte KI‑Agenten ausgeführt werden. Ergebnisse erscheinen als Feeds. +
+*Baumnavigation* + 
+Navigationsbereich am linken Rand, über den Unterseiten und Unterordner geöffnet oder gefiltert werden können. +
+*Embeddings* + 
+Vektorisierte Darstellungen von Dokumentinhalten. Sie ermöglichen semantische Suche und RAG‑gestützte Antworten. +
+*Lazy‑Loading* + 
+Mechanismus, bei dem Embeddings oder Dokumenteinträge erst geladen werden, wenn sie benötigt werden – hilft bei sehr großen Datenbeständen. +
+*LLM (Large Language Model)* + 
+Großes Sprachmodell, das von der Anwendung für die Generierung von Antworten genutzt wird. Beispiele: Azure‑Modelle, AWS‑Modelle oder lokale Modelle. +
+*Portal‑Seite* + 
+Optionaler Bereich zur Anzeige von freigegebenen Links zu Anwendungen oder Webseiten. +
+*RAG (Retrieval‑Augmented Generation)* + 
+Technik, bei der die KI relevante Inhalte aus Dokumenten einbezieht, bevor eine Antwort generiert wird. Die Antwort enthält Quellverweise. +
+*Systemaufforderungen (Prompts)* + 
+Vordefinierte Texte, die das Verhalten des KI‑Modells steuern (z. B. „antworte präzise und kompakt“). +
+*Use‑Case‑Liste* + 
+Vorbereitete Sammlung von Schritten und Parametern, die für einen Anwendungsfall ausgeführt werden. +

@@ -17,6 +17,8 @@
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
 
+include::parts/part0-quickstart.adoc[]
+
 include::parts/part1-description.adoc[]
 
 include::parts/part2-1-app-KI.adoc[]
@@ -44,6 +46,10 @@ include::parts/part3-6-admin-useCases.adoc[]
 include::parts/part3-7-admin-license.adoc[]
 
 include::parts/part3-8-admin-portale.adoc[]
+
+include::parts/part4-1-glossar.adoc[]
+
+include::parts/part4-2-faq.adoc[]
 
 <<<
 

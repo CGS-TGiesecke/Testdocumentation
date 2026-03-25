@@ -1,0 +1,86 @@
+
+=== Quickstart – In wenigen Schritten zum ersten Ergebnis
+
+==== Überblick
+
+Dieser Quickstart‑Leitfaden zeigt neuen Anwendern die wichtigsten Schritte, um AI Audit Assist schnell und effizient zu nutzen – vom ersten Login bis zur erfolgreichen Analyse eines Dokuments oder der Ausführung eines Anwendungsfalls.
+
+==== Anmeldung und erste Hinweise
+
+1. Öffnen Sie die Anwendung im Browser. +
+2. Melden Sie sich über Microsoft Entra ID (OpenID Connect/SAML) oder mit einem lokalen Benutzerkonto an. +
+3. Beim ersten Start erscheint ein Hinweis, dass KI‑Modelle probabilistische Antworten generieren können. +
+→ Bestätigen Sie den Hinweis, um fortzufahren.
+
+==== Navigationsbereiche kennenlernen
+
+Oben im Fenster befinden sich die Hauptbereiche der Anwendung:
+ifeval::[{cgs-assist} == 1]
+*AI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
+endif::[]
+ifeval::[{arc-assist} == 1]
+*KI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
+endif::[]
+*Anwendungsfälle* – Vorkonfigurierte Workflows / Use Cases
+*Automatisierung* – Automatisierte Agentenläufe und Ergebnisse
+*Dokumente* – Dokumente anzeigen, durchsuchen, hochladen
+*Portal* – Verknüpfte Anwendungen und externe Webseiten (optional)
+
+Links befindet sich die Baumnavigation, über die Unterseiten geöffnet werden.
+
+ifeval::[{cgs-assist} == 1]
+==== Erster KI‑Chat
+
+1. Navigieren Sie zu *KI Chat*.
+endif::[]
+ifeval::[{arc-assist} == 1]
+==== Erster AI‑Chat
+
+1. Navigieren Sie zu *AI Chat*.
+endif::[]
+
+2. Geben Sie eine Frage oder Aufgabe ein, z. B.: „Fasse mir dieses Dokument zusammen.“
+3. Optional:
+** Wählen Sie einen passenden *KI‑Agenten* aus (z. B. Recherche, Analyse).
+** Aktivieren Sie die *RAG‑Suche*, um interne Dokumente einzubeziehen.
+4. Senden Sie die Anfrage.
+5. Ergebnisse können kopiert, gespeichert oder als neuer Chat weitergeführt werden.
+
+==== Dokument hochladen und durchsuchen
+
+1. Wechseln Sie in den Bereich *Dokumente*.
+2. Klicken Sie auf *Dokument hochladen*.
+3. Wählen Sie den Zielordner oder erstellen Sie einen neuen.
+4. Nach dem Upload können Sie:
+** Dokumente filtern (Typ, Quelle, Schlagwörter)
+** Embeddings nachladen
+** Dokumente aus dem RAG entfernen oder löschen
+5. Nutzen Sie später im AI‑Chat die RAG‑Suche, um Inhalte aus Ihren Dokumenten automatisch einzubeziehen.
+
+==== Ersten Anwendungsfall starten
+
+1. Öffnen Sie den Bereich *Anwendungsfälle*.
+2. Wählen Sie einen freigegebenen Use Case aus (z. B. Analyse, Berichtsgenerierung, Checkliste).
+3. Füllen Sie die Eingabefelder oder Parameter aus.
+4. Klicken Sie auf *Ausführen*.
+5. Während der Verarbeitung wird der Fortschritt angezeigt.
+6. Ergebnisse können gespeichert, exportiert oder als neuer Chat geöffnet werden.
+
+==== Ergebnisse automatisierter Agenten prüfen
+
+Falls Sie für die Automatisierung berechtigt sind:
+
+1. Navigieren Sie zu *Automatisierung*.
+2. Neue Einträge sind blau markiert.
+3. Klicken Sie auf einen Eintrag, um Details einzusehen.
+4. Markieren Sie Einträge als „gelesen“ oder bestätigen Sie: „Ich habe es auch gelesen.“
+
+==== Wichtige Hinweise für den Alltag
+
+1. *Chats werden lokal gespeichert.* → Wenn der Browser Cache automatisch löscht, gehen Chats verloren.
+2. *RAG‑Ergebnisse enthalten Quellenlinks*, um die KI‑Antworten nachvollziehbar zu machen.
+3. *Zwei‑stufige Bestätigungen* schützen vor unbeabsichtigtem Löschen.
+4. Falls Sie Symbole und Farben in der Oberfläche sehen:
+** *Grün*: Erfolgreich
+** *Blau*: Hinweis
+** *Rot*: Fehler
