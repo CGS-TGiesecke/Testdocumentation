@@ -5,13 +5,11 @@
 |-----|-----
 
 |Warum finde ich bestimmte Dokumente nicht im Bereich „Dokumente“?
-|Dafür gibt es mehrere mögliche Gründe: Ihnen fehlt die Berechtigung für den entsprechenden Ordner.
+|Dafür gibt es mehrere mögliche Gründe: +
 
-|	
-| Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen.
-
-|	
-|Filter (z. B. Quelle, Dateityp) sind aktiv.
+* Ihnen fehlt die Berechtigung für den entsprechenden Ordner.
+* Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen.
+* Filter (z. B. Quelle, Dateityp) sind aktiv.
 
 |	
 |Embeddings sind noch nicht geladen.
@@ -30,6 +28,7 @@
 
 |Warum kann ich Benutzer nicht bearbeiten oder anlegen?
 |Das ist abhängig von der Authentifizierungsmethode: +
+
 * Entra ID / OpenID / SAML: Benutzer werden extern verwaltet.
 * Lokale Authentifizierung: Benutzer können direkt in der Anwendung verwaltet werden.
 

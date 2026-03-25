@@ -3,7 +3,7 @@
 
 ==== Überblick
 
-Dieser Quickstart‑Leitfaden zeigt neuen Anwendern die wichtigsten Schritte, um AI Audit Assist schnell und effizient zu nutzen – vom ersten Login bis zur erfolgreichen Analyse eines Dokuments oder der Ausführung eines Anwendungsfalls.
+Dieser Quickstart‑Leitfaden zeigt neuen Anwendern die wichtigsten Schritte, um {application} schnell und effizient zu nutzen – vom ersten Login bis zur erfolgreichen Analyse eines Dokuments oder der Ausführung eines Anwendungsfalls.
 
 ==== Anmeldung und erste Hinweise
 

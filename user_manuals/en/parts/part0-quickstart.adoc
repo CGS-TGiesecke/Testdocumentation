@@ -3,7 +3,7 @@
 
 ==== Overview
 
-This quickstart guide gives new users the essential steps to use AI Audit Assist quickly and efficiently – from the first login to analyzing a document or executing a use case.
+This quickstart guide gives new users the essential steps to use {application} quickly and efficiently – from the first login to analyzing a document or executing a use case.
 
 ==== Login and Initial Notice
 
