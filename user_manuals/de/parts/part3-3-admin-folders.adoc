@@ -5,5 +5,5 @@ Diese Seite zeigt alle Ordner an. Rollen können Berechtigungen zugeordnet werde
 
 *Erlaubte Dokumente* sind: .pdf .docx .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung", width=500]
+image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Administration - Ordnerverwaltung", width=600]
 

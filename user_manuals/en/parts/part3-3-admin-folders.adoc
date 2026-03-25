@@ -5,5 +5,5 @@ This page displays all created folders. Permissions for these folders can be ass
 
 *Supported document formats* in folder management are: .pdf, .docx, .xlsx, .pptx, .txt.
 
-image::../images/Abbildung-20.jpg[Administration - Folder Management, title="Administration - Folder Management", width=400]
+image::../images/Abbildung-20.jpg[Administration - Folder Management, title="Administration - Folder Management", width=600]
 
