@@ -16,30 +16,18 @@ This quickstart guide gives new users the essential steps to use {application} q
 
 The main areas of the application are located at the top of the window:
 
-ifeval::[{cgs-assist} == 1]
-*AI Chat* – Free‑form AI queries, search in own documents, AI agents
-endif::[]
-ifeval::[{arc-assist} == 1]
-*KI Chat* – Free‑form AI queries, search in own documents, AI agents
-endif::[]
-*Use Cases* – Preconfigured workflows / use cases
-*Automation* – Automated agent runs and results
-*Documents* – View, search, upload documents
-*Portal* – Linked applications and external websites (optional)
+* *AI Chat* – Free‑form AI queries, search in own documents, AI agents
+* *Use Cases* – Preconfigured workflows / use cases
+* *Automation* – Automated agent runs and results
+* *Documents* – View, search, upload documents
+* *Portal* – Linked applications and external websites (optional)
 
 On the left side, the tree navigation allows you to open subpages.
 
-ifeval::[{cgs-assist} == 1]
+
 ==== First KI Chat
 
-1. Navigate to *KI Chat*.
-endif::[]
-ifeval::[{arc-assist} == 1]
-==== First AI Chat
-
 1. Navigate to *AI Chat*.
-endif::[]
-
 2. Enter a question or task, e.g.: “Summarize this document for me.”
 3. Optional:
 ** Select a suitable *AI agent* (e.g., research, analysis).

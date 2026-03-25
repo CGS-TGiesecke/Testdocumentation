@@ -16,16 +16,11 @@ Dieser Quickstart‑Leitfaden zeigt neuen Anwendern die wichtigsten Schritte, um
 
 Oben im Fenster befinden sich die Hauptbereiche der Anwendung:
 
-ifeval::[{cgs-assist} == 1]
-*AI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
-endif::[]
-ifeval::[{arc-assist} == 1]
-*KI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
-endif::[]
-*Anwendungsfälle* – Vorkonfigurierte Workflows / Use Cases
-*Automatisierung* – Automatisierte Agentenläufe und Ergebnisse
-*Dokumente* – Dokumente anzeigen, durchsuchen, hochladen
-*Portal* – Verknüpfte Anwendungen und externe Webseiten (optional)
+* *KI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
+* *Anwendungsfälle* – Vorkonfigurierte Workflows / Use Cases
+* *Automatisierung* – Automatisierte Agentenläufe und Ergebnisse
+* *Dokumente* – Dokumente anzeigen, durchsuchen, hochladen
+* *Portal* – Verknüpfte Anwendungen und externe Webseiten (optional)
 
 Links befindet sich die Baumnavigation, über die Unterseiten geöffnet werden.
 
@@ -33,13 +28,6 @@ ifeval::[{cgs-assist} == 1]
 ==== Erster KI‑Chat
 
 1. Navigieren Sie zu *KI Chat*.
-endif::[]
-ifeval::[{arc-assist} == 1]
-==== Erster AI‑Chat
-
-1. Navigieren Sie zu *AI Chat*.
-endif::[]
-
 2. Geben Sie eine Frage oder Aufgabe ein, z. B.: „Fasse mir dieses Dokument zusammen.“
 3. Optional:
 ** Wählen Sie einen passenden *KI‑Agenten* aus (z. B. Recherche, Analyse).
@@ -56,7 +44,7 @@ endif::[]
 ** Dokumente filtern (Typ, Quelle, Schlagwörter)
 ** Embeddings nachladen
 ** Dokumente aus dem RAG entfernen oder löschen
-5. Nutzen Sie später im AI‑Chat die RAG‑Suche, um Inhalte aus Ihren Dokumenten automatisch einzubeziehen.
+5. Nutzen Sie später im KI‑Chat die RAG‑Suche, um Inhalte aus Ihren Dokumenten automatisch einzubeziehen.
 
 ==== Ersten Anwendungsfall starten
 

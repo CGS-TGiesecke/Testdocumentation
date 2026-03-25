@@ -1,7 +1,4 @@
 
-=== Glossar
-
-
 === Glossary
 
 *AI Chat* +
@@ -14,7 +11,7 @@ A specialized AI module operating with defined capabilities (e.g., “read only,
 A preconfigured task or workflow that users can execute after entering required information. Examples include report analyses, checklists, and automated evaluations. +
 
 *Automation* +
-Area where time‑controlled or event‑driven AI agents are executed. Results appear as feeds. +
+Area where time‑controlled or event‑driven AI agents are executed. +
 
 *Tree Navigation* +
 Navigation panel on the left side that allows opening or filtering subpages and subfolders. +

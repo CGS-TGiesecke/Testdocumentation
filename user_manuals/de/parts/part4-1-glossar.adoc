@@ -11,7 +11,7 @@ Ein spezielles KI‑Modul, das mit definierten Fähigkeiten arbeitet (z. B. �
 Vorkonfigurierte Aufgaben oder Workflows, die Benutzer mit Eingaben versehen und ausführen können. Beispiele: Berichtsanalysen, Checklisten, automatisierte Auswertungen. +
 
 *Automatisierung* + 
-Bereich, in dem zeitgesteuerte oder eventbasierte KI‑Agenten ausgeführt werden. Ergebnisse erscheinen als Feeds. +
+Bereich, in dem zeitgesteuerte oder eventbasierte KI‑Agenten ausgeführt werden. +
 
 *Baumnavigation* + 
 Navigationsbereich am linken Rand, über den Unterseiten und Unterordner geöffnet oder gefiltert werden können. +
