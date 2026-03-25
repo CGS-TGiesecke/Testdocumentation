@@ -51,6 +51,4 @@ include::parts/part4-1-glossar.adoc[]
 
 include::parts/part4-2-faq.adoc[]
 
-<<<
-
 include::../../themes/contact-de.adoc[]

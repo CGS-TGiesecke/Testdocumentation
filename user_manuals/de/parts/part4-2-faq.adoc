@@ -46,3 +46,4 @@
 
 |Warum wird meine Portal‑Seite nicht angezeigt?
 |Der Portal‑Bereich muss in der Administration aktiviert und Ihre Rolle muss dafür berechtigt sein.
+|===
