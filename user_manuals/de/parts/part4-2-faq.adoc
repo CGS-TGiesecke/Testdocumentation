@@ -6,13 +6,10 @@
 
 |Warum finde ich bestimmte Dokumente nicht im Bereich „Dokumente“?
 |Dafür gibt es mehrere mögliche Gründe: +
-
-* Ihnen fehlt die Berechtigung für den entsprechenden Ordner.
-* Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen.
-* Filter (z. B. Quelle, Dateityp) sind aktiv.
-
-|	
-|Embeddings sind noch nicht geladen.
+* Ihnen fehlt die Berechtigung für den entsprechenden Ordner. +
+* Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen. +
+* Filter (z. B. Quelle, Dateityp) sind aktiv. +
+* Embeddings sind noch nicht geladen.+
 
 | Warum erscheinen bestimmte Ordner nicht in der Baumnavigation?
 |Ordner werden nur angezeigt, wenn Ihre Rolle eine Berechtigung dafür besitzt. Neue Ordner müssen in der Administration freigegeben werden.
@@ -28,9 +25,8 @@
 
 |Warum kann ich Benutzer nicht bearbeiten oder anlegen?
 |Das ist abhängig von der Authentifizierungsmethode: +
-
-* Entra ID / OpenID / SAML: Benutzer werden extern verwaltet.
-* Lokale Authentifizierung: Benutzer können direkt in der Anwendung verwaltet werden.
+* Entra ID / OpenID / SAML: Benutzer werden extern verwaltet. +
+* Lokale Authentifizierung: Benutzer können direkt in der Anwendung verwaltet werden. +
 
 |Warum wird mein Bereich „Automatisierung“ nicht angezeigt?
 |Automatisierungen müssen in der Administration aktiviert und Ihre Rolle muss dafür berechtigt sein.
