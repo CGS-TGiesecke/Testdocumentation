@@ -12,9 +12,9 @@ image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle -
 Über den Pfeil am linken Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt oder,
 nach einer bestätigten Sicherheitsabfrage, auch entfernt werden.
 
-image::../images/Abbildung-24-azure.jpg[Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten", width=500]
+image::../images/Abbildung-24-azure.jpg[Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten", width=600]
 
-image::../images/Abbildung-24-aws.jpg[Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
+image::../images/Abbildung-24-aws.jpg[Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten", width=600]
 
-image::../images/Abbildung-24-lokal.jpg[Administration - LLMs und Einbettungsmodelle - Lokales Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
+image::../images/Abbildung-24-lokal.jpg[Administration - LLMs und Einbettungsmodelle - Lokales Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Lokal Model bearbeiten", width=600]
 
