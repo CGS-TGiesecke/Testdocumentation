@@ -10,9 +10,9 @@
 
 * Navigieren zu *Entra ID → App‑Registrierungen*.
 * Klicken auf *Neue Registrierung*.
-* Anwendungsinformationen eingeben*
+* Anwendungsinformationen eingeben:
 
-** *Name*: Geben Sie einen eindeutigen Namen ein, z. B.:{application}-sharepoint-app
+** *Name*: Geben Sie einen eindeutigen Namen ein, z. B.: {application}-sharepoint-app
 ** *Unterstützte Kontotypen*: Wählen Sie aus, wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
 ** *Redirect‑URI*: Optional – für SharePoint‑App‑Only Zugriff nicht erforderlich.
 * Klicken auf *Registrieren*
@@ -39,7 +39,7 @@
 ** Mindestberechtigungen erforderlich:
 ** Sites.Read.All (tenantweiter Lesezugriff) oder Sites.Selected (*empfohlen*: Least‑Privilege‑Prinzip)
 
-*8. Admin‑Zustimmung erteilen*
+*6. Admin‑Zustimmung erteilen*
 
 Damit die Anwendung die Berechtigungen nutzen kann:
 
@@ -47,9 +47,10 @@ Damit die Anwendung die Berechtigungen nutzen kann:
 * Klicken auf: *Admin‑Zustimmung für <mandant> erteilen“</mandant>*.
 * Bestätigen Freigabe.
 
-====== SharePoint‑Siteberechtigungen bei Sites.Selected vergeben
+*7. SharePoint‑Siteberechtigungen bei Sites.Selected vergeben*
 
-*Wichtig:* „Sites.Selected“ *keinen* tenantweiten Zugriff. Die App muss explizit für *jede einzelne Site* freigegeben werden.
+*Wichtig:* „Sites.Selected“ *keinen* tenantweiten Zugriff. +
+Die App muss explizit für *jede einzelne Site* freigegeben werden.
 
 Dies kann erfolgen über:
 
@@ -58,7 +59,8 @@ Dies kann erfolgen über:
 * *PnP PowerShell*
 
 *PnP PowerShell‑Variante*
-1. Verbinden
+
+*1. Verbinden*
 ```
 Connect-PnPOnline `
     -Url "https://<tenant>.sharepoint.com/sites/<SiteName>" `
@@ -66,7 +68,8 @@ Connect-PnPOnline `
     -Thumbprint "<CertThumbprint>" `
     -Tenant "<tenant>.onmicrosoft.com"
 ```
-2. App bekommt explizit Site‑Berechtigung
+
+*2. App bekommt explizit Site‑Berechtigung*
 ```
 $Site = "https://<tenant>.sharepoint.com/sites/<SiteName>"
 $AppId = "<AppRegistrationId>"
@@ -83,7 +86,8 @@ Mögliche Werte für -Permissions:
 * Write
 * FullControl
 
-3. Berechtigung aktivieren / bestätigen (optional)
+*3. Berechtigung aktivieren / bestätigen (optional)*
+
 Anzeigen:
 ```
 Get-PnPAzureADAppSitePermission -Site $Site
@@ -103,19 +107,23 @@ Set-PnPAzureADAppSitePermission `
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 Benötigt wird evtl. die Rolle "SharePoint Administrator" oder "Globaler Administrator".
+
 *2. Anmelden*
 ```
 Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
 ```
+
 *3. App‑ID festlegen*
 ```
 $appId = "IHRE-APP-ID"
 ```
+
 *4. Site‑ID ermitteln*
 ```
 $site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
 $siteId = $site.Id
 ```
+
 *5. Berechtigung setzen*
 ```
 $permission = @{
