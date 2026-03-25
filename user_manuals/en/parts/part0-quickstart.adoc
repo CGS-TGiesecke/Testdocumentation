@@ -1,0 +1,87 @@
+
+=== Quickstart – Getting Your First Results in Just a Few Steps
+
+==== Overview
+
+This quickstart guide gives new users the essential steps to use AI Audit Assist quickly and efficiently – from the first login to analyzing a document or executing a use case.
+
+==== Login and Initial Notice
+
+1. Open the application in your browser. +
+2. Log in using Microsoft Entra ID (OpenID Connect/SAML) or with a local user account. +
+3. On the first start, you will see a notice explaining that AI models generate probabilistic answers and may contain errors. +
+→ Confirm the notice to proceed.
+
+==== Getting to Know the Navigation Areas
+
+The main areas of the application are located at the top of the window:
+
+ifeval::[{cgs-assist} == 1]
+*AI Chat* – Free‑form AI queries, search in own documents, AI agents
+endif::[]
+ifeval::[{arc-assist} == 1]
+*KI Chat* – Free‑form AI queries, search in own documents, AI agents
+endif::[]
+*Use Cases* – Preconfigured workflows / use cases
+*Automation* – Automated agent runs and results
+*Documents* – View, search, upload documents
+*Portal* – Linked applications and external websites (optional)
+
+On the left side, the tree navigation allows you to open subpages.
+
+ifeval::[{cgs-assist} == 1]
+==== First KI Chat
+
+1. Navigate to *KI Chat*.
+endif::[]
+ifeval::[{arc-assist} == 1]
+==== First AI Chat
+
+1. Navigate to *AI Chat*.
+endif::[]
+
+2. Enter a question or task, e.g.: “Summarize this document for me.”
+3. Optional:
+** Select a suitable *AI agent* (e.g., research, analysis).
+** Activate the *RAG search* to include internal documents.
+4. Send the request.
+5. Results can be copied, saved, or continued as a new chat.
+
+==== Uploading and Searching Documents
+
+1. Open the *Documents* area.
+2. Click *Upload Document*.
+3. Select a target folder or create a new one.
+4. After uploading, you can:
+** Filter documents (type, source, tags)
+** Load embeddings
+** Remove documents from RAG or delete them
+5. Later, use the RAG search in AI Chat to automatically include your documents in the AI response.
+
+==== Starting Your First Use Case
+
+1. Open the *Use Cases* area.
+2. Select an available use case (e.g., analysis, report creation, checklist).
+3. Fill in the required fields or parameters.
+4. Click *Execute*.
+5. A progress indicator will be shown during processing.
+6. Results can be saved, exported, or opened as a new chat.
+
+==== Reviewing Automated Agent Results
+
+If you have permission to use automation:
+
+1. Navigate to *Automation*.
+2. New entries are highlighted in blue.
+3. Click an entry to view details.
+4. Mark entries as “read” or confirm: “I have read this as well.”
+
+==== Important Notes for Daily Use
+
+1. *Chats are stored locally.* → If your browser clears the cache automatically, chat histories will be lost.
+2. *RAG results include source links* so AI responses can be verified.
+3. *Two‑step confirmations* protect you from unintended deletion.
+4. If you see colors or icons in the interface:
+** *Green:* Successful
+** *Blue:* Information
+** *Red:* Error

@@ -2,12 +2,19 @@
 === FAQ – Häufig gestellte Fragen
 
 |===
+|-----|-----
+
 |Warum finde ich bestimmte Dokumente nicht im Bereich „Dokumente“?
-|Dafür gibt es mehrere mögliche Gründe: +
-* Ihnen fehlt die Berechtigung für den entsprechenden Ordner.
-* Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen.
-* Filter (z. B. Quelle, Dateityp) sind aktiv.
-* Embeddings sind noch nicht geladen.
+|Dafür gibt es mehrere mögliche Gründe: Ihnen fehlt die Berechtigung für den entsprechenden Ordner.
+
+|	
+| Der Ordner wurde neu angelegt und hat noch keine Rollen zugewiesen bekommen.
+
+|	
+|Filter (z. B. Quelle, Dateityp) sind aktiv.
+
+|	
+|Embeddings sind noch nicht geladen.
 
 | Warum erscheinen bestimmte Ordner nicht in der Baumnavigation?
 |Ordner werden nur angezeigt, wenn Ihre Rolle eine Berechtigung dafür besitzt. Neue Ordner müssen in der Administration freigegeben werden.

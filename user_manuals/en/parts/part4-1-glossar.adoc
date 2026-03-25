@@ -1,0 +1,41 @@
+
+=== Glossar
+
+
+=== Glossary
+
+*AI Chat* +
+Area of the application where free‑form AI queries can be entered. Responses are based on the selected AI agent and optionally on the RAG system. +
+
+*Agent / AI Agent* +
+A specialized AI module operating with defined capabilities (e.g., “read only,” “search,” “analyze”). Controls which actions the AI is allowed to perform. +
+
+*Use Case* +
+A preconfigured task or workflow that users can execute after entering required information. Examples include report analyses, checklists, and automated evaluations. +
+
+*Automation* +
+Area where time‑controlled or event‑driven AI agents are executed. Results appear as feeds. +
+
+*Tree Navigation* +
+Navigation panel on the left side that allows opening or filtering subpages and subfolders. +
+
+*Embeddings* +
+Vectorized representations of document content. They enable semantic search and RAG‑supported responses. +
+
+*Lazy Loading* +
+A mechanism where embeddings or document entries are loaded only when needed—useful for very large document sets. +
+
+*LLM (Large Language Model)* +
+A large language model used by the application to generate responses. Examples include Azure models, AWS models, or local models. +
+
+*Portal Page* +
+Optional area displaying approved links to applications or external websites. +
+
+*RAG (Retrieval‑Augmented Generation)* +
+A technique where the AI incorporates relevant content from documents before generating an answer. Responses include source references. +
+
+*System Prompts* +
+Predefined texts that guide the behavior of the AI model (e.g., “answer concisely and precisely”). +
+
+*Use Case List* +
+A prepared collection of steps and parameters that are executed as part of a use case. +

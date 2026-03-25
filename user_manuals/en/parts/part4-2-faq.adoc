@@ -1,0 +1,50 @@
+
+
+=== FAQ – Frequently Asked Questions
+
+|===
+|Why can’t I find certain documents in the *Documents* area?
+|There are several possible reasons: +
+* You do not have permission for the corresponding folder. +
+* The folder was newly created and has not yet been assigned roles. +
+* Filters (e.g., source, file type) are active. +
+* Embeddings have not been loaded yet.
+
+|Why do certain folders not appear in the tree navigation?
+|Folders are only displayed if your role has permission for them. New folders must be approved in the administration.
+
+|My chats disappeared after restarting the browser – why?
+|Chats are stored locally in the browser. If your browser automatically clears the cache, chat histories will be removed. Use‑case histories, however, are stored on the server.
+
+|What does the “RAG used” notice in a chat response mean?
+|The response was generated using documents retrieved via embeddings. The top 8 matches are displayed, each with a direct link to the source.
+
+|Can I configure an AI agent to read only and not modify data?
+|Yes. Every agent can be configured granularly.
+
+|Why can’t I edit or create users?
+|This depends on the authentication method: +
+* Entra ID / OpenID / SAML: Users are managed externally. +
+* Local authentication: Users can be managed directly within the application.
+
+|Why is my *Automation* area not visible?
+|Automations must be activated in the administration, and your role must be granted permission to access them.
+
+|What does the red number in the *Automation* area represent?
+|It indicates the number of new results generated since your last visit or reading confirmation.
+
+|Why can’t I link files or network drives in the portal?
+|For security reasons, the portal page only allows URLs (HTTP/HTTPS). Local files or network paths cannot be linked.
+
+|Why is a confirmation always required before deleting something?
+|To prevent data loss, {application} uses a two‑step deletion process for chats, documents, and use cases.
+
+|Which file types are allowed for uploads?
+|The system consistently allows the following formats: .pdf, .docx, .xlsx, .pptx, .txt
+
+|Can I update embeddings manually?
+|Yes. In the document list, embeddings can be loaded individually or in bulk—especially useful with lazy loading.
+
+|Why is my portal page not displayed?
+|The portal area must be activated in the administration, and your role must be granted permission.
+|===
