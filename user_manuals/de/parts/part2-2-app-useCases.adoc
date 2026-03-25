@@ -1,7 +1,7 @@
 
 ==== Navigationsbereich "Anwendungsfälle" 
 
-Hier werden alle aktivierten Anwendungsfälle gruppiert angezeigt. Die Zuordnung zu Bereichen erfolgt in der Administration. Anwendungsfälle sind freigegebene Use‑Case‑Listen, die vor der Ausführung mit konkreten Eingaben befüllt werden.
+Hier werden alle aktivierten Anwendungsfälle gruppiert angezeigt. Die Zuordnung zu Bereichen erfolgt in der Administration. Anwendungsfälle sind freigegebene Attribute Listen, die vor der Ausführung mit konkreten Eingaben befüllt werden.
 Einige Anwendungsfälle können workflowbasiert angezeigt werden (z. B. erst Anwendungsfall 1, dann 2, sofern 1 abgeschlossen wurde).
 
 *Erlaubte Dokumente* sind: .pdf .docx .xlsx, .pptx, .txt.
@@ -12,7 +12,7 @@ Zum Öffnen eines Anwendungsfalls wird auf das entsprechende Symbol geklickt.
 
 image::../images/Abbildung-7.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=500]
 
-Anschließend können vorbereitete Use Cases mit Eingaben befüllt und durch „Ausführen“ gestartet werden. 
+Anschließend können vorbereitete Anwendungsfälle mit Eingaben befüllt und durch „Ausführen“ gestartet werden. 
 
 image::../images/Abbildung-8.jpg[Navigationsbereich - Anwendungsfälle - Auswahl des Falles, title="Navigationsbereich - Anwendungsfälle - Auswahl des Falles", width=500]
 

@@ -1,12 +1,6 @@
 === {application} Application
 
-ifeval::[{cgs-assist} == 1]
-==== Navigation Area "KI Chat"
-endif::[]
-
-ifeval::[{arc-assist} == 1]
 ==== Navigation Area "AI Chat"
-endif::[]
 
 This page provides a classic chat interface with an input field for prompts. All chat histories are stored only in the browser’s local storage. They are removed after closing the browser if the "automatic cache clearing" setting is enabled. All saved use case histories remain available even after closing and logging in again.
 

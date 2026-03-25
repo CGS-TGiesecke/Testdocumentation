@@ -6,7 +6,7 @@ Bei der ersten Anmeldung wird der Nutzer darauf hingewiesen, dass die Anwendung 
 
 image::../images/Abbildung-47.jpg[Navigationsbereich - KI Bestätigung, title="Navigationsbereich - KI Bestätigung", width=400]
 
-Bestimmte wiederkehrende Anwendungsfälle werden im {application} als Templates verwaltet, um Routinen zu vereinfachen. Diese Anwendungsfälle sind als Use Cases in Form von Checklisten angelegt. Bei entsprechender Berechtigung können mit Hilfe von KI‑Agents automatisierte Berichte, dynamische Auswertungen oder Prozesssteuerungen – auch über Systemgrenzen hinweg – genutzt werden.
+Bestimmte wiederkehrende Anwendungsfälle werden im {application} als Templates verwaltet, um Routinen zu vereinfachen. Diese Anwendungsfälle sind in Form von Checklisten angelegt. Bei entsprechender Berechtigung können mit Hilfe von KI‑Agents automatisierte Berichte, dynamische Auswertungen oder Prozesssteuerungen – auch über Systemgrenzen hinweg – genutzt werden.
 
 ifeval::[{cgs-assist} == 1]
 image::../images/cgs-Abbildung-start.jpg[CGS Assist,title="CGS Assist", width=500]

@@ -1,14 +1,8 @@
 === {application} Anwendung
 
-ifeval::[{cgs-assist} == 1]
-==== Navigationsbereich "KI Chat"
-endif::[]
+==== Navigationsbereich - "KI Chat"
 
-ifeval::[{arc-assist} == 1]
-==== Navigationsbereich "AI Chat"
-endif::[]
-
-Die Oberfläche bietet ein klassisches Chat‑Fenster mit Eingabefeld für Prompts. Alle Chatverläufe werden ausschließlich lokal im Browser gespeichert und sind – sofern die Einstellung „automatisches Cache‑Löschen“ aktiviert ist – nach dem Schließen des Browsers nicht mehr verfügbar. Gespeicherte Use‑Case‑Verläufe können dagegen auch nach einer Neuanmeldung wieder geöffnet werden.
+Die Oberfläche bietet ein klassisches Chat‑Fenster mit Eingabefeld für Prompts. Alle Chatverläufe werden ausschließlich lokal im Browser gespeichert und sind – sofern die Einstellung „automatisches Cache‑Löschen“ aktiviert ist – nach dem Schließen des Browsers nicht mehr verfügbar. Gespeicherte Verläufe können dagegen auch nach einer Neuanmeldung wieder geöffnet werden.
 
 Vor dem Ausführen einer Anfrage kann festgelegt werden, ob interne Inhalte aus dem RAG (z. B. SharePoint oder Datenbank) zusätzlich durchsucht werden sollen 
 

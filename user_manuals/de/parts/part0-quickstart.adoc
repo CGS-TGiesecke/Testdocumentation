@@ -15,6 +15,7 @@ Dieser Quickstart‑Leitfaden zeigt neuen Anwendern die wichtigsten Schritte, um
 ==== Navigationsbereiche kennenlernen
 
 Oben im Fenster befinden sich die Hauptbereiche der Anwendung:
+
 ifeval::[{cgs-assist} == 1]
 *AI Chat* – Freie KI‑Abfragen, Suche in eigenen Dokumenten, KI‑Agenten
 endif::[]
