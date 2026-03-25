@@ -5,11 +5,15 @@ All LLM providers stored in the system are listed and managed here. These provid
 
 image::../images/Abbildung-22.jpg[Administration - LLMs and Embedding Models, title="Administration - LLMs and Embedding Models", width=400]
 
-New providers can be created and can only be removed from the overview after confirming a security prompt.
+New providers and models can be created or, after a security prompt, removed again. You can also preselect whether an AWS, Azure, or local provider should be created.
 
 image::../images/Abbildung-32.jpg[Administration - LLMs and Embedding Models - Create Provider, title="Administration - LLMs and Embedding Models - Create Provider", width=250]
 
-By clicking the arrow on the right, the provider configuration can be opened, and required models may be created or removed (removal also requires a confirmed security prompt).
+By clicking the arrow on the left, the provider configuration can be opened, and required models may be created or removed (removal also requires a confirmed security prompt).
 
-image::../images/Abbildung-24.jpg[Administration - LLMs and Embedding Models - Edit Models, title="Administration - LLMs and Embedding Models - Edit Models", width=400]
+image::../images/Abbildung-24-aws.jpg[Administration - LLMs and Embedding Models - Edit AWS Model, title="Administration - LLMs and Embedding Models - Edit AWS Model", width=500]
+
+image::../images/Abbildung-24-azure.jpg[Administration - LLMs and Embedding Models - Edit Azure Model, title="Administration - LLMs and Embedding Models - Edit Azure Model", width=500]
+
+image::../images/Abbildung-24-local.jpg[Administration - LLMs and Embedding Models - Edit local Model, title="Administration - LLMs and Embedding Models - Edit Azure Model", width=500]
 

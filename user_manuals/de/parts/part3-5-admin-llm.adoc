@@ -5,12 +5,16 @@ Die Seite listet alle LLM‑Provider.
 
 image::../images/Abbildung-22.jpg[Administration - LLMs und Einbettungsmodelle, title="Administration - LLMs und Einbettungsmodelle", width=500]
 
-Neue Provider und Modelle können angelegt oder mit Sicherheitsabfrage entfernt werden.
+Neue Provider und Modelle können angelegt oder, nach einer Sicherheitsabfrage, wieder entfernt werden. Dabei kann vorausgewählt werden ob AWS, Azure oder lokaler Provider erstellt werden soll.
  
 image::../images/Abbildung-32.jpg[Administration - LLMs und Einbettungsmodelle - Provider anlegen, title="Administration - LLMs und Einbettungsmodelle - Provider anlegen", width=250]
 
-Über den Pfeil am rechten Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt bzw. 
-nach einer bestätigten Sicherheitsabfrage auch entfernt werden.
+Über den Pfeil am linken Rand kann die Konfiguration geöffnet werden und die notwendigen Modelle können erstellt oder,
+nach einer bestätigten Sicherheitsabfrage, auch entfernt werden.
 
-image::../images/Abbildung-24.jpg[Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
+image::../images/Abbildung-24-azure.jpg[Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten", width=500]
+
+image::../images/Abbildung-24-aws.jpg[Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
+
+image::../images/Abbildung-24-lokal.jpg[Administration - LLMs und Einbettungsmodelle - Lokales Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Modelle bearbeiten", width=500]
 
