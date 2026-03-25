@@ -12,8 +12,8 @@
 * Klicken auf *Neue Registrierung*.
 * Anwendungsinformationen eingeben:
 
-** *Name*: Geben Sie einen eindeutigen Namen ein, z. B.: {application}-sharepoint-app
-** *Unterstützte Kontotypen*: Wählen Sie aus, wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+** *Name*: einen eindeutigen Namen wählen, z. B.: {application}-sharepoint-app
+** *Unterstützte Kontotypen*: Wählen wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
 ** *Redirect‑URI*: Optional – für SharePoint‑App‑Only Zugriff nicht erforderlich.
 * Klicken auf *Registrieren*
 

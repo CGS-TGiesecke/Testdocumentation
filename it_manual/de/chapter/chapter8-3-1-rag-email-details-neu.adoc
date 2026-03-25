@@ -3,33 +3,28 @@
 
 *1. Anmeldung*
 
-* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Melden Sie sich mit einem Konto an, das über Administratorrechte verfügt.
+* Öffnen Microsoft Entra Admin Center: https://entra.microsoft.com
+* Anmeldung mit einem Konto an, das über Administratorrechte verfügt.
 
-*2. Navigation zu „App‑Registrierungen“*
+*2. Neue App‑Registrierung anlegen*
 
-* Wählen Sie links im Menü Entra ID.
-* Klicken Sie auf App‑Registrierungen.
-* Wählen Sie Neue Registrierung.
+* Navigieren zu *Entra ID → App‑Registrierungen*.
+* Klicken auf *Neue Registrierung*.
+* Anwendungsinformationen eingeben:
 
-*3. Anwendungsinformationen eingeben*
+** *Name*: einen eindeutigen Namen wählen, z. B.: {application}-email-app
+** *Unterstützte Kontotypen*: Wählen wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+** *Redirect‑URI*: Eintrag Redirect‑URI, die identisch mit redirect_uri in der Datei init_config.yaml ist (für OIDC erforderlich).
+* Klicken auf *Registrieren*
 
-* Name: Wählen Sie einen aussagekräftigen Namen, z. B.: {application}-email-app
-* Unterstützte Kontotypen: Standard ist: Nur Konten in diesem Organisationsverzeichnis (Single‑Tenant). Wählen Sie andere Optionen nur, wenn Multi‑Tenant‑ oder externe Nutzung erforderlich ist.
-* Redirect‑URI: Tragen Sie die Redirect‑URI ein, die identisch mit redirect_uri in der Datei init_config.yaml ist (für OIDC erforderlich).
+*3. App‑Authentifizierung konfigurieren*
 
-*4. Anwendung erstellen*
+* Öffnen *Zertifikate & Geheimnisse*.
+* Wählen *Neuer geheimer Clientschlüssel*.
+* Kopieren des Secret‑Wert direkt nach dem Erstellen (wird nur einmal angezeigt).
+* Alternativ: Hochladen der Zertifikate, falls Zertifikatsbasierte Authentifizierung bevorzugt wird.
 
-* Klicken Sie auf Registrieren.
-
-*5. App‑Authentifizierung konfigurieren*
-
-* Öffnen Sie im linken Menü Zertifikate & Geheimnisse.
-* Klicken Sie auf Neuer geheimer Clientschlüssel.
-* Kopieren Sie den Secret‑Wert sofort (wird nur einmal angezeigt!).
-* Alternativ: Laden Sie ein Zertifikat hoch, falls Zertifikatsauthentifizierung genutzt werden soll.
-
-*6. Wichtige Konfigurationsdaten notieren*
+*4. Wichtige Konfigurationsdaten notieren*
 
 [.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
 
@@ -44,46 +39,45 @@ sind weitere zusätzliche Schritte nötig.
 
 ====== Microsoft Graph - Berechtigungen verwalten
 
-*7. API‑Berechtigungen hinzufügen*
+*5. API‑Berechtigungen hinzufügen*
 
-* Öffnen Sie: Entra Admin Center → Entra ID → Anwendungen → App‑Registrierungen → Ihre Anwendung
-* Klicken Sie auf API‑Berechtigungen.
-* Wählen Sie Berechtigung hinzufügen.
-* Wählen Sie Microsoft Graph.
-* Unter Anwendungsberechtigungen (Application permissions) fügen Sie hinzu:
+* Öffnen registreierte App → *API‑Berechtigungen*.
+* Wählen *Berechtigung hinzufügen → Microsoft Graph → Application permissions*.
 ** Mail.Read (ermöglicht der App das Lesen von E‑Mails in Postfächern)
 
-*8. Admin‑Zustimmung erteilen*
+*6. Admin‑Zustimmung erteilen*
 
-* Gehen Sie wieder zu API‑Berechtigungen.
-* Klicken Sie auf Admin‑Zustimmung für <ihr verzeichnis=""> erteilen</ihr>.
-* Bestätigen Sie die Aktion als Mandanten‑Administrator.
+Damit die Anwendung die Berechtigungen nutzen kann:
+
+* Öffnen *API‑Berechtigungen*.
+* Klicken auf: *Admin‑Zustimmung für <mandant> erteilen“</mandant>*.
+* Bestätigen Freigabe.
 
 ====== Microsoft Graph Mail Zugriff – RBAC Setup
 
-Um sicherzustellen, dass die Anwendung nur auf bestimmte Postfächer zugreifen kann, richten Sie eine
-Application Access Policy mithilfe einer E-Mail‑aktivierten Sicherheitsgruppe ein.
+Um sicherzustellen, dass die Anwendung nur auf bestimmte Postfächer zugreifen kann, muss eine
+Application Access Policy mithilfe einer E-Mail‑aktivierten Sicherheitsgruppe eingerichtet sein.
 
-*9. E-Mail‑aktivierte Sicherheitsgruppe erstellen (Exchange Admin Center)*
+*7. E-Mail‑aktivierte Sicherheitsgruppe erstellen (Exchange Admin Center)*
 
-* Erstellen Sie eine neue Gruppe:
+* Erstellen neue Gruppe:
 
 ** Gruppenname: <application>-RBAC-Mailbox-Gruppe
 ** Gruppen‑E-Mail‑Adresse: <application>-rbac-mailbox@<kundendomain>
 
-*10. Zugangsmailbox zur Gruppe hinzufügen*
+*8. Zugangsmailbox zur Gruppe hinzufügen*
 
-* Fügen Sie der Sicherheitsgruppe das Postfach hinzu, auf das die Anwendung zugreifen soll:
+* Hinzufügen der Sicherheitsgruppe zum Postfach, auf das die Anwendung zugreifen soll:
 ** <application>@<kundendomain>
 
 ====== PowerShell‑Konfiguration
 
-*11. Verbindung zu Exchange Online herstellen*
+*8. Verbindung zu Exchange Online herstellen*
 ```powershell
 Connect-ExchangeOnline
 ```
 
-*12. Application Access Policy erstellen*
+*10. Application Access Policy erstellen*
 ```powershell
 New-ApplicationAccessPolicy `
   -AppId <APP_CLIENT_ID> `
@@ -92,14 +86,14 @@ New-ApplicationAccessPolicy `
   -Description "RBAC Zugriff für <application> Mail Verarbeitung"
 ```
 
-*13. Policy testen*
+*11. Policy testen*
 ```powershell
 Test-ApplicationAccessPolicy `
   -AppId \<APP_CLIENT_ID> `
   -Identity <application>@\<Kundendomain>
 ```
 
-*14. Postfach prüfen*
+*12. Postfach prüfen*
 ```powershell
 Get-Recipient -Identity <application>@\<Kundendomain> | Format-List Name, RecipientType, PrimarySmtpAddress
 ```

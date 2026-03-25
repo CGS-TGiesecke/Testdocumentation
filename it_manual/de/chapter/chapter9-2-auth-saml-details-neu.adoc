@@ -3,39 +3,38 @@
 
 *1. Anmeldung*
 
-* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Melden Sie sich mit einem Konto an, das über Administratorrechte für Ihre Organisation verfügt.
+* Öffnen Microsoft Entra Admin Center: https://entra.microsoft.com
+* Anmeldung mit einem Konto an, das über Administratorrechte verfügt.
 
-*2. Navigation zu „App‑Registrierungen“*
+*2. Neue App‑Registrierung anlegen*
 
-* Wählen Sie im linken Menü Entra ID.
-* Klicken Sie auf App‑Registrierungen.
-* Klicken Sie oben auf Neue Registrierung.
+* Navigieren zu *Entra ID → App‑Registrierungen*.
+* Klicken auf *Neue Registrierung*.
+* Anwendungsinformationen eingeben*
 
-*3. Anwendungsinformationen eingeben*
+** *Name*: einen eindeutigen Namen wählen, z. B.: {application}-openid-app
+** *Unterstützte Kontotypen*: Wählen wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+* Anwendungsinformationen eingeben:
 
-* Name: Wählen Sie einen Namen für die Anwendung, z. B.: {application}-SAML-app
-* Unterstützte Kontotypen: Wählen Sie, welche Benutzer die Anwendung nutzen dürfen. Standard: Nur mein Mandant (Single‑Tenant).
-* Redirect‑URI: Tragen Sie eine Redirect‑URI ein. Diese muss identisch zur Angabe redirect_uri in der Datei init_config.yaml sein.
-
-*4. Anwendung erstellen*
-
-* Klicken Sie auf Registrieren.
+** *Name*: einen eindeutigen Namen wählen, z. B.: {application}-email-app
+** *Unterstützte Kontotypen*: Wählen wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+** *Redirect‑URI*: Eintrag Redirect‑URI, die identisch mit redirect_uri in der Datei init_config.yaml ist (für OIDC erforderlich).
+* Klicken auf *Registrieren*
 
 ====== SAML-Konfiguration
 
-*5. SAML als Authentifizierungsmethode aktivieren*
+*3. SAML als Authentifizierungsmethode aktivieren*
 
-* Öffnen Sie: Entra ID → Enterprise applications → Ihre Anwendung → Single sign‑on
-* Wählen Sie SAML aus.
+* Öffnen Entra ID → Enterprise applications → Ihre Anwendung → Single sign‑on
+* Wählen SAML.
 * Die Seite SAML-basierte Konfiguration öffnet sich.
 
-*6. Grundlegende SAML‑Konfiguration*
+*4. Grundlegende SAML‑Konfiguration*
 
 * Bezeichner (Entity ID): Verwenden Sie die eindeutige Kennung aus dem Admin Center.
 * Reply/Redirect‑URL: Muss identisch zur redirect_uri in der Datei init_config.yaml sein.
 
-*7. Attribute & Claims einrichten*
+*5. Attribute & Claims einrichten*
 
 * Damit die Anwendung stets aktuelle Benutzerdaten erhält, müssen Claims für folgende Werte eingerichtet werden:
 ** Vorname
@@ -44,7 +43,7 @@
 
 Dies stellt sicher, dass die Anwendung {application} bei jeder Anmeldung die aktuellen Profildaten des Benutzers erhält.
 
-*8. SAML‑Zertifikate (SAML Certificates)*
+*6. SAML‑Zertifikate (SAML Certificates)*
 
 * Laden Sie die Datei Federation Metadata XML herunter.
 * Speichern Sie die Datei im SHARED_FOLDER. Der Ablagepfad muss identisch zum Eintrag idp_metadata_path in init_config.yaml sein.
@@ -55,7 +54,7 @@ Die XML‑Datei enthält u. a.:
 * SSO‑URL
 * Signatur‑Zertifikate
 
-*9. Wichtige Konfigurationsdaten erfassen*
+*7. Wichtige Konfigurationsdaten erfassen*
 
 [.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
 

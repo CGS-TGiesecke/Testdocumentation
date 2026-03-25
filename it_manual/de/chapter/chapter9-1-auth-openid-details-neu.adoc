@@ -3,24 +3,22 @@
 
 *1. Anmeldung*
 
-* Öffnen Sie das Microsoft Entra Admin Center: https://entra.microsoft.com
-* Melden Sie sich mit einem Konto an, das über Administratorrechte in Ihrer Organisation verfügt.
+* Öffnen Microsoft Entra Admin Center: https://entra.microsoft.com
+* Anmeldung mit einem Konto an, das über Administratorrechte verfügt.
 
-*2. Navigation zu „App‑Registrierungen“*
+*2. Neue App‑Registrierung anlegen*
 
-* Wählen Sie im linken Menü Entra ID.
-* Klicken Sie auf App‑Registrierungen.
-* Klicken Sie oben auf Neue Registrierung.
+* Navigieren zu *Entra ID → App‑Registrierungen*.
+* Klicken auf *Neue Registrierung*.
+* Anwendungsinformationen eingeben*
 
-*3. Anwendungsinformationen eingeben*
-
-* Name: Geben Sie einen geeigneten Namen ein, z. B.: {application}-openid-app
-* Unterstützte Kontotypen: Entscheiden Sie, ob die Anwendung nur interne Benutzer, externe Benutzer oder mehrere Organisationen unterstützen soll. Standard: Single Tenant (Nur Konten in diesem Organisationsverzeichnis).
-* Redirect‑URI konfigurieren:
-** Wählen Sie im linken Menü Authentifizierung (Authentication).
-** Klicken Sie auf Plattform hinzufügen.
-** Wählen Sie Web.
-** Geben Sie die Redirect‑URI ein — sie muss exakt dem Wert redirect_uri in der init_config.yaml entsprechen.
+** *Name*: einen eindeutigen Namen wählen, z. B.: {application}-openid-app
+** *Unterstützte Kontotypen*: Wählen wer die Anwendung nutzen darf. Standard: Nur mein Mandant (Single Tenant).
+** *Redirect‑URI* konfigurieren:
+*** Wählen im linken Menü Authentifizierung (Authentication).
+*** Klicken auf Plattform hinzufügen.
+*** Wählen Web.
+*** Eingabe Redirect‑URI — diese muss exakt dem Wert redirect_uri in der init_config.yaml entsprechen.
 
 *4. Anwendung erstellen*
 
