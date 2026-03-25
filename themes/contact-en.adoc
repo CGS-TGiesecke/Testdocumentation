@@ -1,3 +1,7 @@
+
+
+<<<
+
 ifeval::[{cgs-assist} == 1]
 image::../../../themes/cgs-logo.png[Firmenlogo,align=left, width=100]
 endif::[]

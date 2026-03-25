@@ -3,12 +3,14 @@
 === FAQ – Frequently Asked Questions
 
 |===
+|Questions |Answers
+
 |Why can’t I find certain documents in the *Documents* area?
 |There are several possible reasons: +
 * You do not have permission for the corresponding folder. +
 * The folder was newly created and has not yet been assigned roles. +
 * Filters (e.g., source, file type) are active. +
-* Embeddings have not been loaded yet.+
+* Embeddings have not been loaded yet. +
 
 |Why do certain folders not appear in the tree navigation?
 |Folders are only displayed if your role has permission for them. New folders must be approved in the administration.
