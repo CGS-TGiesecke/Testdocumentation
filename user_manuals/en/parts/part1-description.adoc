@@ -4,7 +4,7 @@
 
 Upon first login, users are informed that the application uses artificial intelligence to automatically generate content. The output is based on probabilities and may contain errors. Users are therefore asked to carefully review all results. This notice must be acknowledged before continuing to use the assistant.
 
-image::../images/Abbildung-confirm.jpg[Navigation - KI confirmation, title="Navigation - KI confirmation", width=500]
+image::../images/Abbildung-confirm.jpg[Navigation - AI confirmation, title="Navigation - AI confirmation", width=500]
 
 Certain recurring use cases are available as templates within Assist to simplify routine tasks. These use cases are designed like checklists. With the appropriate permissions, automated and scheduled queries can be created based on automatically supplied information sources (feeds).
 

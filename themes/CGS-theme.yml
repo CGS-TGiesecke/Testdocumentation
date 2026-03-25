@@ -1,4 +1,3 @@
-
 extends: default
 title_page:
   background_image: image:CGS-TitlePage.png[]
