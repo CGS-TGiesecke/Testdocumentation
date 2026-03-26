@@ -58,8 +58,6 @@ Dies kann erfolgen über:
 * *Microsoft Graph PowerShell* (empfohlen bei vielen Sites)
 * *PnP PowerShell*
 
------------------------------------------------------------------------------------------
-
 *SharePoint Admin Center (UI) Variante*
 
 *1. Öffnen SharePoint Admin Center*
@@ -113,7 +111,6 @@ Die UI‑Freigabe erfolgt sitebasiert:
 
 Wenn die App andere Sites benötigt → diesen Vorgang für jede Site einzeln wiederholen.
 
------------------------------------------------------------------------------------------
 
 *Microsoft Graph PowerShell‑Variante* 
 
@@ -154,8 +151,6 @@ $permission = @{
 }
 New-MgSitePermission -SiteId $siteId -BodyParameter $permission
 ```
-
------------------------------------------------------------------------------------------
 
 *PnP PowerShell‑Variante*
 
