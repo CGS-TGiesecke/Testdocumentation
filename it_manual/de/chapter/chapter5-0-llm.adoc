@@ -22,12 +22,21 @@ Azure
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
-[.highlight]#
-*Hinweis*: +
+[.highlight]#*Hinweis1*: +
 Diese Links dienen ausschließlich der Modellübersicht — {application} integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments. +
 Unterstützung bei der Einrichtung der empfohlenen LLM-Provider ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten. +
 Diese empfohlenen LLM-Provider werden vollständig unterstützt. +
 Alternative oder erweiterte LLM-Provider sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
+[.highlight]#*Hinweis2*: Diese Links dienen ausschließlich der Modellübersicht — {application} integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments. Unterstützung bei der Einrichtung der empfohlenen LLM-Provider ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten. Diese empfohlenen LLM-Provider werden vollständig unterstützt. Alternative oder erweiterte LLM-Provider sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
+[.highlight]#*Hinweis3*:# 
+[.highlight]#Diese Links dienen ausschließlich der Modellübersicht — {application} integriert keine Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.#
+[.highlight]#Unterstützung bei der Einrichtung der empfohlenen LLM-Provider ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.# 
+[.highlight]#Diese empfohlenen LLM-Provider werden vollständig unterstützt.# 
+[.highlight]#Alternative oder erweiterte LLM-Provider sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
+
 
 ==== Kostenübersicht LLM-Provider
 
