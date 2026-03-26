@@ -17,3 +17,5 @@ The necessary information for connecting {application} with the customer's SAML 
 These details must be stored in the init_config.yaml file (see ‘Initial configuration of the application’).
 
 If this data is *not* available, the {application} must first be registered by the customer in the Microsoft Entra Admin Center.
+
+[.highlight]#*Note*: This form of authentication is fully supported by {application}. Alternative or extended forms are also possible but are not included in the standard scope and are offered separately.#

@@ -44,4 +44,4 @@ AWS Bedrock
 * Hardware investment: €5,000-50,000+
 * Ongoing electricity costs
 
-[.highlight]#*Note*: Support for setting up the models is available; however, it is not included in the standard scope and is offered separately.#
+[.highlight]#*Note*: Support for setting up the models from {author} is available; however, it is not included in the standard scope and is offered separately.#

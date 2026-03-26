@@ -57,5 +57,5 @@ Faustregeln für TPM (Tokens per Minute):
 | 50+ Nutzer 		| 300.000+ 			| Hohe Last 
 |===
 
-[.highlight]#*Hinweis*: Unterstützung bei der Einrichtung der Modelle ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+[.highlight]#*Hinweis*: Unterstützung durch {author} bei der Einrichtung der Modelle ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 

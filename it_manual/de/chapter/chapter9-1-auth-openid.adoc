@@ -15,4 +15,6 @@ Diese Angaben müssen in der `init_config.yaml` hinterlegt werden (siehe "Erstko
 Sind diese Daten *nicht* vorhanden, muss die Applikation {application} vom Kunden erst über das 
 Microsoft Entra Admin Center registriert werden.  
 
+[.highlight]#*Hinweis*: Diese Form der Authentifizierung wird von {application} vollständig unterstützt. Alternative oder erweiterte Forme sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 

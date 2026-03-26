@@ -13,6 +13,8 @@ Eigenschaften:
 * Rollen und Berechtigungen werden in der Administrationsoberfläche gepflegt
 * Passwort‑Policies können kundenseitig umgesetzt werden
 
+[.highlight]#*Hinweis*: Diese Form der Authentifizierung wird von {application} vollständig unterstützt. Alternative oder erweiterte Forme sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 
 
 

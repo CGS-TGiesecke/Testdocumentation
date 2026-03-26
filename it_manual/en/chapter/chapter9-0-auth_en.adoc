@@ -9,3 +9,5 @@ The {application} application supports various authentication methods, which can
 * OpenID Connect authentication with Microsoft Entra ID
 * SAML authentication with Microsoft Entra ID
 * Local user/password management
+
+[.highlight]#*Note*: These forms of authentication are fully supported by {application}. Alternative or extended forms are also possible but are not included in the standard scope and are offered separately.#

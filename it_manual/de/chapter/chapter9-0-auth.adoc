@@ -11,3 +11,5 @@ nach den beim Kunden vorhandenen Anforderungen, konfiguriert werden.
 * eine SAML-Authentifizierung mit Microsoft Entra ID
 * eine lokale Benutzer-/Passwortverwaltung
 
+[.highlight]#*Hinweis*: Diese Formen der Authentifizierung werden von {application} vollständig unterstützt. Alternative oder erweiterte Formen sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
