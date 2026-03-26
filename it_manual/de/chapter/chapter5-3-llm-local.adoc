@@ -34,9 +34,7 @@ Die Plattform {application} unterstützt lokale LLMs über *OpenAI-kompatible AP
 | hohe Qualität
 |=== 
 
-[.highlight]#*Hinweis*: +
-Dieses Modell wird von {application} vollständig unterstützt. +
-Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+[.highlight]#*Hinweis*: Dieses Modell wird von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 
 
 

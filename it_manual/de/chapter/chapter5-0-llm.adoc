@@ -22,8 +22,7 @@ Azure
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
-[.highlight]#*Hinweis*: +
-Diese Links dienen ausschließlich der Modellübersicht — {application} integriert *keine* Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.#
+*Hinweis*: Diese Links dienen ausschließlich der Modellübersicht — {application} integriert *keine* Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.
 
 ==== Kostenübersicht LLM-Provider
 
@@ -58,6 +57,5 @@ Faustregeln für TPM (Tokens per Minute):
 | 50+ Nutzer 		| 300.000+ 			| Hohe Last 
 |===
 
-[.highlight]#*Hinweis*: +
-Unterstützung bei der Einrichtung der empfohlenen LLM-Provider ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+[.highlight]#*Hinweis*: Unterstützung bei der Einrichtung der Modelle ist möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 

@@ -1,5 +1,5 @@
 
-*Note:* Azure OpenAI is our preferred recommendation, but AWS Bedrock and local models are equally supported.
+[.highlight]#*Note:* Azure OpenAI is our preferred recommendation, but AWS Bedrock and local models are equally supported.#
 
 *Choose a provider based on:*
 
@@ -21,6 +21,9 @@ Azure
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
+*Hinweis*: Diese Links dienen ausschließlich der Modellübersicht — {application} integriert *keine* Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.
+
+
 ==== Cost Overview LLM Providers
 
 *Azure OpenAI (approx., as of 2026):*
@@ -40,3 +43,5 @@ AWS Bedrock
 * No API costs
 * Hardware investment: €5,000-50,000+
 * Ongoing electricity costs
+
+[.highlight]#*Note*: Support for setting up the models is available; however, it is not included in the standard scope and is offered separately.#
