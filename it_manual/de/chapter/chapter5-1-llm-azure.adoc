@@ -15,5 +15,11 @@
 * Berechtigungen zum Erstellen und Konfigurieren von Ressource
 
 
+===== Unterstützte Modelle
+
+===== Unterstützte Embedding Modelle
+
+[.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 
 

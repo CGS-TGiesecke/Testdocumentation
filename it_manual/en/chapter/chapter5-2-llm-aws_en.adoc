@@ -14,6 +14,48 @@
 - Access granted to Azure OpenAI Service (may require approval)
 - Sufficient permissions to create resources
 
+===== Supported Models
+
+*OpenAI OSS*
+
+Both available models are supported:
+
+|===
+| Model ID | Max Tokens 
+
+| openai.gpt-oss-20b-1:0 
+| 128k
+
+| openai.gpt-oss-120b-1:0 		
+| 128k 
+|===
+
+*Qwen*
+
+All available Qwen models are supported:
+
+|===
+| Model ID| Max Tokens 
+
+| qwen.qwen3-235b-a22b-2507-v1:0
+| 260k
+
+| qwen.qwen3-32b-v1:0 		
+| 16k 
+ 
+| qwen.qwen3-coder-30b-a3b-v1:0 		
+| 260k 
+|===
+
+===== Supported Embedding Models
+
+*Amazon Titan*
+
+* amazon.titan-embed-text-v1
+* amazon.titan-embed-text-v2:0
+
+[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
+
 
 
 

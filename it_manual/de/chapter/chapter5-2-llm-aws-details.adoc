@@ -105,46 +105,6 @@ Rolle der EC2‑Instanz zuweisen über → EC2 → Instance → Actions → Secu
 *IAM User*: +
 Für einen IAM‑User sind die AWS‑Credentials für die EC2 Instanz in der Konfiguration der Applikation hinterlegt. 
 
-===== Unterstützte Modelle
- 
-*OpenAI OSS*
- 
-Es werden beide verfügbaren Modelle unterstützt:
 
-|===
-| Modell ID | Max Tokens 
-
-| openai.gpt-oss-20b-1:0 
-| 128k
-
-| openai.gpt-oss-120b-1:0 		
-| 128k 
-|===
- 
-*Qwen*
- 
-Es werden alle verfügbaren Qwen-Modelle unterstützt:
-
-|===
-| Modell ID| Max Tokens 
-
-| qwen.qwen3-235b-a22b-2507-v1:0
-| 260k
-
-| qwen.qwen3-32b-v1:0 		
-| 16k 
- 
-| qwen.qwen3-coder-30b-a3b-v1:0 		
-| 260k 
-|===
-
-===== Unterstützte Embedding Modelle
-
-*Amazon Titan*
-
-* amazon.titan-embed-text-v1
-* amazon.titan-embed-text-v2:0
-
-[.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 
 

@@ -66,8 +66,4 @@ Rules of thumb for TPM (Tokens per Minute):
 | High load
 |===
 
-===== Supported Models
 
-===== Supported Embedding Models
-
-[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#

@@ -34,7 +34,7 @@ The platform {application} supports local LLMs via *OpenAI-compatible APIs*.
 | high quality
 |=== 
 
-[.highlight]#*Note*: This model is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
+[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
 
 
 
