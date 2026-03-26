@@ -16,30 +16,24 @@
 * Fahren Sie die {application} Container geordnet herunter.
 * Beenden Sie ggf. geplante Hintergrundjobs und sichern Sie offene Datenbanktransaktionen.
 
-==== Benutzerverwaltung / Rollenvergabe 
+==== Benutzerverwaltung / Rollenverwaltung 
 
-Die Benutzerverwaltung erfolgt nach gewählter Form der Authentifizierung. 
+Die *Benutzerverwaltung* erfolgt nach gewählter Form der Authentifizierung. 
 
 |===
-|Authentifizerung|Benutzer erstellen|Benutzer bearbeiten|Benutzer löschen
+|Authentifizerung|Benutzer erstellen/bearbeiten/löschen
 
 |OpenID Connect Authentifizierung mit Microsoft Entra ID
 |nein (nur über Microsoft Entra Admin Center)
-|nein (nur über Microsoft Entra Admin Center)
-|nein (nur über Microsoft Entra Admin Center)
 
 |SAML Authentifizierung mit Microsoft Entra ID
-|nein (nur über Microsoft Entra Admin Center)
-|nein (nur über Microsoft Entra Admin Center)
-|nein (nur über Microsoft Entra Admin Center)
+|nein, nur über Microsoft Entra Admin Center. Bei jeder Anmeldung werden die aktuellen Profildaten des Benutzers in {application} gespiegelt.
 
 |lokale Benutzer-/Passwortverwaltung
 |ja (nur über {application})
-|ja (nur über {application})
-|ja (nur über {application})
 |===
 
-Die Rollenverwaltung erfolgt nur über {application}. 
+Die *Rollenverwaltung* erfolgt nur über {application}. 
 
 ==== Patch-Management
 
