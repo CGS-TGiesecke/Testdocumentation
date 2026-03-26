@@ -70,7 +70,7 @@ Application Access Policy mithilfe einer E-Mail‑aktivierten Sicherheitsgruppe 
 * Hinzufügen der Sicherheitsgruppe zum Postfach, auf das die Anwendung zugreifen soll:
 ** <application>@<kundendomain>
 
-====== PowerShell‑Konfiguration
+====== Konfiguration Berechtigungen mit PowerShell
 
 *8. Verbindung zu Exchange Online herstellen*
 ```powershell
