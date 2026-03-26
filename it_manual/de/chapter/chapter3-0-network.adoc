@@ -14,7 +14,6 @@
 
 *Erforderliche Ports:*
 
-[role="auto-table"]
 |===
 | Port | Protokoll | Verwendung | Erforderlich für 
 

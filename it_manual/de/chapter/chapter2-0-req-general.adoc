@@ -15,7 +15,6 @@ Eine dedizierte VM ist nicht zwingend notwendig. {application} kann auch auf ein
 
 Für den produktiven Betrieb der Applikation {application} gelten folgende, lastbedingte Mindestanforderungen:
 
-[role="auto-table"]
 |===
 |Level | Arbeitsspeicher (vRAM)|Prozessor (vCPU)|Speicher|Szenarien|Nutzer
 
