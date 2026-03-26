@@ -14,10 +14,6 @@
 * Freischaltung für Azure OpenAI Service (teilweise genehmigungspflichtig)
 * Berechtigungen zum Erstellen und Konfigurieren von Ressource
 
-+++
-*Diese Konfiguration wird vollständig unterstützt.* +
-Alternative oder erweiterte Konfigurationen sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.
-+++
 
 
 

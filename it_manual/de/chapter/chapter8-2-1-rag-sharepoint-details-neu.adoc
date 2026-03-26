@@ -49,7 +49,7 @@ Damit die Anwendung die Berechtigungen nutzen kann:
 
 *7. SharePoint‑Siteberechtigungen bei Sites.Selected vergeben*
 
-*Wichtig:* „Sites.Selected“ *keinen* tenantweiten Zugriff. +
+*Wichtig:* „Sites.Selected“ hat *keinen* tenantweiten Zugriff. +
 Die App muss explizit für *jede einzelne Site* freigegeben werden.
 
 Dies kann erfolgen über:
@@ -58,7 +58,7 @@ Dies kann erfolgen über:
 * *Microsoft Graph PowerShell* (empfohlen bei vielen Sites)
 * *PnP PowerShell*
 
-*SharePoint Admin Center (UI) Variante*
+====== Sites.Selected Berechtigung SharePoint Admin Center (UI)
 
 *1. Öffnen SharePoint Admin Center*
 
@@ -91,7 +91,7 @@ Hier zu sehen:
 Dies wird durch Administratoren vergeben.
 Die UI‑Freigabe erfolgt sitebasiert:
 
-✅ Schrittfolge:
+Schrittfolge:
 
 * Öffnen im SharePoint Admin Center: Aktive Websites
 * Auswahl die konkrete Site
@@ -99,7 +99,7 @@ Die UI‑Freigabe erfolgt sitebasiert:
 * Scrolle zu: *App-Berechtigungen / Site-App-Berechtigungen*
 (Ableitbar aus: site collection / web / list scopes erscheinen unter „Site App Permissions“.) 
 * Dort erscheint die App mit der Anfrage
-* Vergib Berechtigungen:
+* Vergeben einer Berechtigung:
 ** Lesen
 ** Bearbeiten
 ** Vollzugriff
@@ -111,8 +111,7 @@ Die UI‑Freigabe erfolgt sitebasiert:
 
 Wenn die App andere Sites benötigt → diesen Vorgang für jede Site einzeln wiederholen.
 
-
-*Microsoft Graph PowerShell‑Variante* 
+====== Sites.Selected mit Microsoft Graph PowerShell
 
 *1. Modul installieren*
 ```
@@ -152,7 +151,7 @@ $permission = @{
 New-MgSitePermission -SiteId $siteId -BodyParameter $permission
 ```
 
-*PnP PowerShell‑Variante*
+====== Sites.Selected Berechtigung mit PnP PowerShell
 
 *1. Verbinden*
 ```
