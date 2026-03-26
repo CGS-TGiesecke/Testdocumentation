@@ -58,6 +58,105 @@ Dies kann erfolgen über:
 * *Microsoft Graph PowerShell* (empfohlen bei vielen Sites)
 * *PnP PowerShell*
 
+-----------------------------------------------------------------------------------------
+
+*SharePoint Admin Center (UI) Variante*
+
+*1. Öffnen SharePoint Admin Center*
+
+* Gehe zu: https://<tenant>-admin.sharepoint.com
+* Anmelden mit mindestens SharePoint Administrator (App-Installationen und Freigaben benötigen Adminrechte.)
+
+*2. Navigieren zu den Apps*
+
+* Links im Menü: Mehr Features 
+* Bereich Apps → Öffnen (App-Administration wird im SharePoint Admin Center unter Apps → App-Berechtigungen geführt.)
+
+*3. Öffnen der App‑Berechtigungsübersicht*
+
+* Klicken auf: App-Berechtigungen
+* Dort sind alle Apps, die im Tenant installiert wurden – inkl. mehrfacher Einträge, wenn dieselbe App in verschiedenen Sites installiert ist.
+
+*4. Auswahl App, die freigegeben wird*
+
+* Suchen der App in der Liste.
+* Klicken auf die Zeile → Details öffnen.
+
+Hier zu sehen:
+
+* auf welchen Sites die App installiert ist
+* welche Berechtigungen sie anfragt
+
+*5. Site-spezifische Berechtigungen vergeben*
+
+* Apps mit *Sites.Selected* benötigen expliziten Zugriff pro Site (Standard ist NULL = kein Zugriff).
+Dies wird durch Administratoren vergeben.
+Die UI‑Freigabe erfolgt sitebasiert:
+
+✅ Schrittfolge:
+
+* Öffnen im SharePoint Admin Center: Aktive Websites
+* Auswahl die konkrete Site
+* Klick auf: Einstellungen
+* Scrolle zu: *App-Berechtigungen / Site-App-Berechtigungen*
+(Ableitbar aus: site collection / web / list scopes erscheinen unter „Site App Permissions“.) 
+* Dort erscheint die App mit der Anfrage
+* Vergib Berechtigungen:
+** Lesen
+** Bearbeiten
+** Vollzugriff
+
+*6. Freigabe bestätigen*
+
+* Speichern Berechtigung
+* Die App ist nur für diese eine Site einsatzbereit.
+
+Wenn die App andere Sites benötigt → diesen Vorgang für jede Site einzeln wiederholen.
+
+-----------------------------------------------------------------------------------------
+
+*Microsoft Graph PowerShell‑Variante* 
+
+*1. Modul installieren*
+```
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+Benötigt wird evtl. die Rolle "SharePoint Administrator" oder "Globaler Administrator".
+
+*2. Anmelden*
+```
+Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+```
+
+*3. App‑ID festlegen*
+```
+$appId = "IHRE-APP-ID"
+```
+
+*4. Site‑ID ermitteln*
+```
+$site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
+$siteId = $site.Id
+```
+
+*5. Berechtigung setzen*
+```
+$permission = @{
+    Roles = @("read")
+    GrantedToIdentities = @(
+        @{
+            Application = @{
+                Id = $appId
+                DisplayName = "IHRE-APP-NAME"
+            }
+        }
+    )
+}
+New-MgSitePermission -SiteId $siteId -BodyParameter $permission
+```
+
+-----------------------------------------------------------------------------------------
+
 *PnP PowerShell‑Variante*
 
 *1. Verbinden*
@@ -98,44 +197,4 @@ Set-PnPAzureADAppSitePermission `
     -AppId $AppId `
     -Permissions "FullControl" `
     -Site $Site
-```
-
-*Microsoft Graph PowerShell‑Variante* 
-
-*1. Modul installieren*
-```
-Install-Module Microsoft.Graph -Scope CurrentUser
-```
-Benötigt wird evtl. die Rolle "SharePoint Administrator" oder "Globaler Administrator".
-
-*2. Anmelden*
-```
-Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
-```
-
-*3. App‑ID festlegen*
-```
-$appId = "IHRE-APP-ID"
-```
-
-*4. Site‑ID ermitteln*
-```
-$site = Get-MgSite -Filter "displayName eq 'NAME-IHRER-SITE'"
-$siteId = $site.Id
-```
-
-*5. Berechtigung setzen*
-```
-$permission = @{
-    Roles = @("read")
-    GrantedToIdentities = @(
-        @{
-            Application = @{
-                Id = $appId
-                DisplayName = "IHRE-APP-NAME"
-            }
-        }
-    )
-}
-New-MgSitePermission -SiteId $siteId -BodyParameter $permission
 ```
