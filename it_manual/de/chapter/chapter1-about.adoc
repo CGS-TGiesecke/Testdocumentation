@@ -3,7 +3,7 @@
 
 ==== Name und Version der Applikation
 
-Die in diesem Handbuch beschriebene Anwendung trägt den Namen {application} und liegt in der aktuellen Version {revnumber} vom {revdate} vor.
+Die in diesem Handbuch beschriebene Anwendung trägt den Namen {application} und liegt in der aktuellen Version {revnumber} vom {revdate} vor. +
 Dieses Dokument richtet sich an IT-Infrastruktur und Systemadministratoren und beschreibt die technischen Voraussetzungen für die Bereitstellung 
 und den Betrieb der {application} Plattform beim Kunden.
 
@@ -44,7 +44,7 @@ Die Lösung besteht aus folgenden Komponenten:
 
 KI Agents sind spezialisierte Software-Komponenten, die eigenständig komplexe Aufgaben automatisieren. 
 Über einen MCP (Model Context Protocol) Server erhalten diese Agents sicheren und strukturierten Zugriff auf verschiedenste Datenbanken und Subsysteme, 
-wie beispielsweise ERP-Systeme. 
+wie beispielsweise ERP-Systeme. +
 Die Agents können:
 
 * Daten abfragen oder analysieren
@@ -56,5 +56,5 @@ Dies ermöglicht u. a. automatisierte Berichte, dynamische Auswertungen oder P
 
 Weitere Anwendungsbeispiele:
 
-- öffentliche Feeds ausgelesen und automatisiert innerhalb von {application} zur Verfügung stellen
-- eingehendes E-Mails kategorisieren, inkl. Anhängen bewerten und priorisieren
+- öffentliche Feeds auslesen und automatisiert innerhalb von {application} zur Verfügung stellen
+- eingehendes E-Mails kategorisieren, inkl. Anhängen bewerten und priorisieren und zur Verfügung stellen

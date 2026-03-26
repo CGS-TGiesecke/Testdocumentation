@@ -16,7 +16,7 @@
 * Fahren Sie die {application} Container geordnet herunter.
 * Beenden Sie ggf. geplante Hintergrundjobs und sichern Sie offene Datenbanktransaktionen.
 
-==== Benutzerverwaltung / Rollen 
+==== Benutzerverwaltung / Rollenvergabe 
 
 Die Benutzerverwaltung erfolgt nach gewählter Form der Authentifizierung. 
 
@@ -28,7 +28,7 @@ Die Benutzerverwaltung erfolgt nach gewählter Form der Authentifizierung.
 |nein (nur über Microsoft Entra Admin Center)
 |nein (nur über Microsoft Entra Admin Center)
 
-|SAML-Authentifizierung mit Microsoft Entra ID
+|SAML Authentifizierung mit Microsoft Entra ID
 |nein (nur über Microsoft Entra Admin Center)
 |nein (nur über Microsoft Entra Admin Center)
 |nein (nur über Microsoft Entra Admin Center)
@@ -37,6 +37,9 @@ Die Benutzerverwaltung erfolgt nach gewählter Form der Authentifizierung.
 |ja (nur über {application})
 |ja (nur über {application})
 |ja (nur über {application})
+|===
+
+Die Rollenverwaltung erfolgt nur über {application}. 
 
 ==== Patch-Management
 

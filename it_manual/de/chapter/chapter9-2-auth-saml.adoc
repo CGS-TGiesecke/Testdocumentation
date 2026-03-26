@@ -1,5 +1,5 @@
 
-==== SAML-Authentifizierung mit Microsoft Entra ID
+==== SAML Authentifizierung mit Microsoft Entra ID
 
 Die SAML‑Authentifizierung mit Microsoft Entra ID ermöglicht es, speziell ältere oder SAML‑basierte Anwendungen sicher in ein zentrales Single‑Sign‑On‑ und Identitätsmanagement einzubinden und so nahtlos in das unternehmensweite Sicherheits‑ und Identitätskonzept zu integrieren.
 

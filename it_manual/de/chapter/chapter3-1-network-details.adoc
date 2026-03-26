@@ -3,11 +3,11 @@
 
 Wenn Sie Caddy mit automatischen Let's Encrypt TLS-Zertifikaten verwenden möchten:
 
-- **FQDN erforderlich:** Die Anwendung muss über einen vollständigen Domainnamen erreichbar sein (z.B. `xxx-assist.ihrefirma.de`)
-- **DNS-Auflösung:** Der FQDN muss auf die öffentliche IP-Adresse des Servers zeigen (A-Record oder CNAME)
-- **Port 80 erreichbar:** Muss aus dem Internet erreichbar sein (für ACME HTTP-Challenge)
+- *FQDN erforderlich:* Die Anwendung muss über einen vollständigen Domainnamen erreichbar sein (z.B. `xxx-assist.ihrefirma.de`)
+- *DNS-Auflösung:* Der FQDN muss auf die öffentliche IP-Adresse des Servers zeigen (A-Record oder CNAME)
+- *Port 80 erreichbar:* Muss aus dem Internet erreichbar sein (für ACME HTTP-Challenge)
 
-**Caddyfile-Konfiguration benötigt:**
+*Caddyfile-Konfiguration benötigt:*
 
 ```
 xxx-assist.ihrefirma.de {
@@ -38,7 +38,7 @@ texttest.server.de {reverse_proxy xxx_assist_server:8000 {
 		}
 ```
 
-**Wichtig:** in der Konfigurationsdatei des Caddy-Server muss das Plugin "caddy-dns" eingebunden werden, sonst wird "dns cloudflare" nicht gefunden.
+*Wichtig:* in der Konfigurationsdatei des Caddy-Server muss das Plugin "caddy-dns" eingebunden werden, sonst wird "dns cloudflare" nicht gefunden.
 
 Beispiel Eigenes Zertifikat (PEM + Key):
 
@@ -52,14 +52,14 @@ texttest.server.de {reverse_proxy xxx_assist_server:8000 header {
 	}
 ```
 
-**Wichtig:** Die Zertifikatskette muss vollständig sein(typisch “fullchain”) und die SANs (Subject Alternative Names) müssen zum Hostnamen passen.
+*Wichtig:* Die Zertifikatskette muss vollständig sein(typisch “fullchain”) und die SANs (Subject Alternative Names) müssen zum Hostnamen passen.
 
 ===== Alternative ohne öffentlichen DNS:
 
 - Verwendung eigener TLS-Zertifikate (z. B. von interner CA)
 - Zugriff nur über IP-Adresse: `http://<server-ip>:8000` (nur für Test/Entwicklung empfohlen)
 
-**Aufgabe des Kunden:** 
+*Aufgaben des Kunden:* 
 
 - Firewall-Freigabe für Ports 80 und 443 (Produktion) oder 8000 (Test)
 - DNS-Konfiguration: A-Record für den gewünschten FQDN (z. B. `xxx-assist.ihrefirma.de`) auf Server-IP
