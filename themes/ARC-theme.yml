@@ -41,7 +41,7 @@ table:
   border-color: 'EEEEEE'
   head:
     font-color: '3f6172'
-    background-color: 'cfd6e9'
+    background-color: 'f6f6f6'
     font-style: italic
   body:
     font-color: '222222'
