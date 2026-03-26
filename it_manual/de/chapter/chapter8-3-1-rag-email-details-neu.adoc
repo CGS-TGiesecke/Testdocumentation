@@ -72,7 +72,7 @@ Application Access Policy mithilfe einer E-Mail‑aktivierten Sicherheitsgruppe 
 
 ====== Konfiguration Berechtigungen mit PowerShell
 
-*8. Verbindung zu Exchange Online herstellen*
+*9. Verbindung zu Exchange Online herstellen*
 ```powershell
 Connect-ExchangeOnline
 ```

@@ -57,3 +57,8 @@ role: # geht so nur in pdf
     font-style: italic
     border_radius: 2
     padding: [12, 12, 12, 12]
+role:
+  auto-table:
+    table-layout: auto;  
+    width: auto;  
+    border-collapse: collapse;

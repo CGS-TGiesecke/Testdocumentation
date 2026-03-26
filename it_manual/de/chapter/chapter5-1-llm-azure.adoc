@@ -19,7 +19,7 @@
 
 alle gpt-*  ??????
 
-===== Unterstützte Embedding Modelleqwen
+===== Unterstützte Embedding Modelle
 
 text-embedding-3-large  ??????
 

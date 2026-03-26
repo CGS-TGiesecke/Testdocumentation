@@ -55,8 +55,8 @@ Die App muss explizit für *jede einzelne Site* freigegeben werden.
 Dies kann erfolgen über:
 
 * das *SharePoint Admin Center (UI)*
-* *Microsoft Graph PowerShell* (empfohlen bei vielen Sites)
-* *PnP PowerShell*
+* *Microsoft Graph PowerShell*
+* *PnP.PowerShell*
 
 ====== Sites.Selected Berechtigung SharePoint Admin Center (UI)
 
@@ -151,18 +151,18 @@ $permission = @{
 New-MgSitePermission -SiteId $siteId -BodyParameter $permission
 ```
 
-====== Sites.Selected Berechtigung mit PnP PowerShell
+====== Sites.Selected Berechtigung mit PnP.PowerShell
 
-* 1. Prüfen, ob PnP.PowerShell installiert ist*
+*1. Prüfen, ob PnP.PowerShell installiert ist*
 ```
 Get-Module -ListAvailable PnP.PowerShell
 ```
 
-* 2. PnP.PowerShell installieren (PowerShell 7 (empfohlen))*
+*2. PnP.PowerShell installieren (PowerShell 7 empfohlen)*
 ```
 Install-Module PnP.PowerShell -Scope CurrentUser
 ```
-Falls eine Abfrage kommt → mit Y bestätigen.
+Falls eine Abfrage kommt → mit 'Y' bestätigen.
 
 *3. Modul importieren*
 ```
