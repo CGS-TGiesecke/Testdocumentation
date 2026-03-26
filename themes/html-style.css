@@ -18,8 +18,8 @@ h5 { font-size: 15px; color: #3f6172; font-style: italic; margin-top: 12pt; marg
 h6 { font-size: 12px; color: #3f6172; font-style: italic; margin-top: 10pt; margin-bottom: 5pt; }
 
 table, th, td { border: 1px solid #EEEEEE; border-collapse: collapse; padding: 2px 2px; }
-th { background-color: #ECECEC; color: #3f6172; font-style: italic; }
+th { background-color: #FBF6EA; color: #3f6172; font-style: italic; }
 td { color: #222222; }
 code, pre { background: #f6f6f6; border-radius: 4px; }
-.highlight { color: #3f6172; background-color: #ECECEC; border-radius: 5px; padding: 12px; }
+.highlight { color: #3f6172; background-color: #FBF6EA; border-radius: 2px; padding: 12px 12px; }
 .figure-caption, figcaption { color: #006699; font-size: 8pt; font-style: italic; }
