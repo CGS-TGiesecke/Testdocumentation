@@ -110,10 +110,6 @@ ifeval::[{big-output} > 0]
 include::chapter/chapter17-faq.adoc[]
 endif::[]
 
-<<<
-
 include::chapter/zuletzt_checklist.adoc[]
-
-<<<
 
 include::../../themes/contact-de.adoc[]

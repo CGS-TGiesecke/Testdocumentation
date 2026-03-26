@@ -16,22 +16,32 @@
 * Shut down the {application} containers in an orderly manner.
 * If necessary, stop scheduled background jobs and back up open database transactions.
 
-==== User Management / Roles
+==== User Management / Role Management
 
-User management is handled centrally in the administration interface of the {application} application.
+*User management* is performed according to the selected form of authentication.
 
-- Create, edit, and delete users
-- Assign roles such as “admin” or custom roles
-- Define individual permissions for specific functional areas (e.g., automation)
-- Regularly review active users and permissions (at least semi-annually)
+|===
+|Authentication|Create/edit/delete users
+
+|OpenID Connect authentication with Microsoft Entra ID
+|*no*, only via Microsoft Entra Admin Center
+
+|SAML authentication with Microsoft Entra ID
+|*no*, only via Microsoft Entra Admin Center. During each login, the user's current profile data is synchronized into {application}.
+
+|local user/password management
+|*yes*, only via {application}
+|===
+
+*Role management* is performed only via {application}.
 
 ==== Application Backup and Recovery
 
-Backup and recovery of the application is performed by the customer.
+Backup and recovery of the application is performed by the customer. +
 SHARED_FOLDER contains the database and configuration files.
 
 ==== Monitoring
 
-Monitoring is performed by the customer.
+Monitoring is performed by the customer. +
 Log outputs of the application {application} for troubleshooting are configurable (see "Set up environment variables").
 

@@ -24,16 +24,16 @@ Die *Benutzerverwaltung* erfolgt nach gewählter Form der Authentifizierung.
 |Authentifizerung|Benutzer erstellen/bearbeiten/löschen
 
 |OpenID Connect Authentifizierung mit Microsoft Entra ID
-|nein (nur über Microsoft Entra Admin Center)
+|*nein*, nur über Microsoft Entra Admin Center
 
 |SAML Authentifizierung mit Microsoft Entra ID
-|nein, nur über Microsoft Entra Admin Center. Bei jeder Anmeldung werden die aktuellen Profildaten des Benutzers in {application} gespiegelt.
+|*nein*, nur über Microsoft Entra Admin Center. Bei jeder Anmeldung werden die aktuellen Profildaten des Benutzers in {application} gespiegelt.
 
 |lokale Benutzer-/Passwortverwaltung
-|ja (nur über {application})
+|*ja*, nur über {application}
 |===
 
-Die *Rollenverwaltung* erfolgt nur über {application}. 
+Die *Rollenverwaltung* erfolgt *nur* innerhalb {application}. 
 
 ==== Patch-Management
 
@@ -42,11 +42,11 @@ Die *Rollenverwaltung* erfolgt nur über {application}.
 
 ==== Backup und Recovery der Applikation
 
-Backup und Recovery der Applikation erfolgt durch den Kunden.
+Backup und Recovery der Applikation erfolgt durch den Kunden. +
 Im SHARED_FOLDER enthalten sind Datenbank und Konfigurationsdateien.
 
 ==== Überwachung/Monitoring
 
-Überwachung/Monitoring erfolgt durch den Kunden.
+Überwachung/Monitoring erfolgt durch den Kunden. +
 Logausgaben der Applikation {application} für Fehlersuche o.ä. sind konfigurierbar (siehe "Umgebungsvariablen einrichten").
 

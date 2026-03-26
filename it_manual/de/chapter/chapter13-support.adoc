@@ -1,11 +1,12 @@
 
+
 === Troubleshooting und Support
 
 ifeval::[{big-output} > 0]
 
 ==== Supportprozess und Kontaktinformationen
 
-Die hier notierten Angaben unterscheiden sich unter Umständen von den vertraglich gültigen Vereinbarungen.
+Die hier notierten Angaben unterscheiden sich unter Umständen von den gültigen vertraglichen Vereinbarungen.
 
 *Supportprozess:*
 
@@ -41,7 +42,7 @@ endif::[]
 
 endif::[]
 
-=== RACI-Matrix 
+==== RACI-Matrix 
 
 |===
 | *Bereich* |  *{author}* | *Kunde*
