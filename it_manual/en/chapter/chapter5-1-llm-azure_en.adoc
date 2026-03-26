@@ -18,11 +18,15 @@
 
 ===== Supported Models
 
-????????
+all gpt-* ????
 
 ===== Supported Embedding Models
 
-????????
+text-embedding-3-large ??????
+
+===== Supported Audio Models
+
+whisper ?????
 
 [.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
 

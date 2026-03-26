@@ -41,7 +41,7 @@ table:
   border-color: 'EEEEEE'
   head:
     font-color: '3f6172'
-    background-color: 'FBF6EA'
+    background-color: 'cfd6e9'
     font-style: italic
   body:
     font-color: '222222'
@@ -53,6 +53,6 @@ image-caption:
 role: # geht so nur in pdf
   highlight:
     font_color: '3f6172'   # für die Textfarbe
-    background_color: 'FBF6EA'  # als Hintergrund
+    background_color: 'cfd6e9'  # als Hintergrund
     border_radius: 2
     padding: [12, 12, 12, 12]

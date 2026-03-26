@@ -17,7 +17,15 @@
 
 ===== Unterstützte Modelle
 
-===== Unterstützte Embedding Modelle
+alle gpt-*  ??????
+
+===== Unterstützte Embedding Modelleqwen
+
+text-embedding-3-large  ??????
+
+===== Unterstützte Audio Modelle
+
+whisper  ??????
 
 [.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 
