@@ -14,7 +14,6 @@
 * Freischaltung für Azure OpenAI Service (teilweise genehmigungspflichtig)
 * Berechtigungen zum Erstellen und Konfigurieren von Ressource
 
-[.highlight]#*Hinweis*: Dieses Modell wird von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 
 
 

@@ -145,4 +145,6 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 * amazon.titan-embed-text-v1
 * amazon.titan-embed-text-v2:0
 
+[.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 

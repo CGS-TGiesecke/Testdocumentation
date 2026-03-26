@@ -13,7 +13,7 @@ und den Betrieb der {application} Plattform beim Kunden.
 {application} ist eine browserbasierte Webanwendung, die lokal beim Kunden gehostet wird. 
 Der Betrieb erfolgt in Docker-Containern auf einem Linux-Server (entweder on-premise oder in einer Cloud-VM). 
 
-Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. 
+Die Anwendung dient zur Nutzung von KI-Sprachmodellen (Large Language Models, LLMs), welche über eine externe API angebunden werden, u. a. Azure OpenAI. +
 Mit {application} können Benutzer u.a.
 
 * Dokumente analysieren

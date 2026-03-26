@@ -111,7 +111,7 @@ Schrittfolge:
 
 Wenn die App andere Sites benötigt → diesen Vorgang für jede Site einzeln wiederholen.
 
-====== Sites.Selected mit Microsoft Graph PowerShell
+====== Sites.Selected Berechtigung mit Microsoft Graph PowerShell
 
 *1. Modul installieren*
 ```
