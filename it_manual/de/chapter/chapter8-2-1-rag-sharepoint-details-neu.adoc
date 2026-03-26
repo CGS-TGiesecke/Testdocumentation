@@ -26,7 +26,7 @@
 
 *4. Wichtige Konfigurationsdaten erfassen*
 
-[.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
+[.highlight]#*Hinweis:* Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
 
 ** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
 ** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
@@ -153,7 +153,23 @@ New-MgSitePermission -SiteId $siteId -BodyParameter $permission
 
 ====== Sites.Selected Berechtigung mit PnP PowerShell
 
-*1. Verbinden*
+* 1. Prüfen, ob PnP.PowerShell installiert ist*
+```
+Get-Module -ListAvailable PnP.PowerShell
+```
+
+* 2. PnP.PowerShell installieren (PowerShell 7 (empfohlen))*
+```
+Install-Module PnP.PowerShell -Scope CurrentUser
+```
+Falls eine Abfrage kommt → mit Y bestätigen.
+
+*3. Modul importieren*
+```
+Import-Module PnP.PowerShell
+```
+
+*4. Verbinden*
 ```
 Connect-PnPOnline `
     -Url "https://<tenant>.sharepoint.com/sites/<SiteName>" `
@@ -162,7 +178,7 @@ Connect-PnPOnline `
     -Tenant "<tenant>.onmicrosoft.com"
 ```
 
-*2. App bekommt explizit Site‑Berechtigung*
+*5. App bekommt explizit Site‑Berechtigung*
 ```
 $Site = "https://<tenant>.sharepoint.com/sites/<SiteName>"
 $AppId = "<AppRegistrationId>"
@@ -179,7 +195,7 @@ Mögliche Werte für -Permissions:
 * Write
 * FullControl
 
-*3. Berechtigung aktivieren / bestätigen (optional)*
+*6. Berechtigung aktivieren / bestätigen (optional)*
 
 Anzeigen:
 ```

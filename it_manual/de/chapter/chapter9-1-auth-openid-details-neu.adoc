@@ -33,7 +33,7 @@
 
 *6. Wichtige Konfigurationsdaten erfassen*
 
-[.highlight]#Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
+[.highlight]#*Hinweis:* Notieren bzw. kopieren Sie die folgenden Werte für init_config.yaml:#
 
 ** Anwendungs-ID (unter Übersicht): *Anwendungs-ID (Client)*
 ** Mandant-ID (unter Übersicht): *Verzeichnis-ID (Mandant)*
