@@ -1,0 +1,110 @@
+
+= Fragebogen zur Kontaktdatenerfassung
+:toc:
+
+Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit *n/a* markiert werden.
+
+== 1. Primärer Ansprechpartner (Business / Projekt)
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|===
+
+
+== 2. Technischer Ansprechpartner (IT / Infrastruktur)
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|===  
+
+== 3. Ansprechpartner für Abrechnung (Billing / Finance)
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|===
+
+== 4. Ansprechpartner für Support (Operativer Betrieb)
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|=== 
+
+== 5. Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
+
+*System / Zuordnung:*  
+*Name:*  
+*E-Mail:*  
+*Telefonnummer:*  
+*Rolle / Funktion:*  
+*Bemerkungen / Notizen:*
+|===
+|  |System / Zuordnung|Name  |E-Mail|Telefonnummer|Rolle / Funktion|Bemerkungen 
+
+|1| |	|	|	|	|	
+|2| |	|	|	|	|	
+|3| |	|	|	|	|	
+|4| |	|	|	|	|	
+|5| |	|	|	|	|	
+|===  
+
+== 6. Eskalationskette
+
+=== Level 1 – Erste Eskalationsstufe
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|=== 
+
+=== Level 2 – Zweite Eskalationsstufe
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|=== 
+
+=== Level 3 – Höchste Eskalationsstufe
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|===  
