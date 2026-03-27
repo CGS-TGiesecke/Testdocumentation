@@ -5,15 +5,15 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 
 ==== Primärer Ansprechpartner (Business / Projekt)
 
-[cols="1,7,7,7,7,7,7"]
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+| |  1| 2| 3 
 
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
+|Name| |	|	
+|E-Mail| |	|	
+|Telefonnummer| |	|	
+|Rolle / Funktion| |	|	
+|Verfügbarkeit (Tage & Uhrzeiten)| |	|	
+|Bemerkungen / Notizen| |	|	
 |===
 
 
