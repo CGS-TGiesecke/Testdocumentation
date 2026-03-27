@@ -14,7 +14,31 @@ nach einer bestätigten Sicherheitsabfrage, auch entfernt werden.
 
 image::../images/Abbildung-24-azure.jpg[Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Azure Model bearbeiten", width=600]
 
+Für Azure Provider Modelle werden folgende Eingaben benötigt:
+
+* Key Name
+* Display Name
+* API Key
+* API Endpoint
+* API Version
+
 image::../images/Abbildung-24-aws.jpg[Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - AWS Model bearbeiten", width=600]
 
+Für AWS Provider Modelle werden folgende Eingaben benötigt:
+
+* Key Name
+* Display Name
+* IAM Access Key
+* IAM Secret Access Key
+* Region
+
 image::../images/Abbildung-24-lokal.jpg[Administration - LLMs und Einbettungsmodelle - Lokales Model bearbeiten, title="Administration - LLMs und Einbettungsmodelle - Lokal Model bearbeiten", width=600]
+
+Für Lokale Modelle werden folgende Eingaben benötigt:
+
+* Key Name
+* Display Name
+* API Key
+* API Endpoint
+* API Version
 
