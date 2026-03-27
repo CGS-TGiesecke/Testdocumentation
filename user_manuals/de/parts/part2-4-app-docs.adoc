@@ -9,13 +9,13 @@ Die Baumnavigation zeigt nur berechtigte Ordner. Ein Klick filtert die Liste auf
 
 image::../images/Abbildung-33.jpg[Navigationsbereich - Dokumente - Baumnavigation, title="Navigationsbereich - Dokumente - Baumnavigation", width=150]
 
-Dokumente können heruntergeladen oder die Ansicht manuell aktualisiert werden. Neue Dokumente können hochgeladen und das RAG aktualisiert werden. Bei vielen Dokumenten ist Lazy‑Loading aktiviert, sodass Embeddings einzeln nachgeladen werden können.
+Dokumente können heruntergeladen oder die Ansicht manuell aktualisiert werden. Neue Dokumente können hochgeladen und das RAG aktualisiert werden. Beim Hochladen vieler Dokumente kann es etwas Zeit in Anspruch nehmen. Dafür ist ein Lazy-Loading implementiert, sodass Embeddings auch einzeln aktualisiert werden können.
 
 Beim Hochladen muss ein Zielordner gewählt oder ein neuer Ordner benannt werden. Neue Ordner haben zunächst keine Berechtigungen, diese müssen in der Administration vergeben werden.
 
 image::../images/Abbildung-50.jpg[Navigationsbereich - Dokumente - Neuer Ordner, title="Navigationsbereich - Dokumente - Neuer Ordner", width=300]
  
-Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau. Die Filterresultate aktualisieren sich bereits während der Eingabe.
+Im oberen Bereich befinden sich Filter und Sortierungsmöglichkeiten nach Quelle, ID und Vorschau, um die angezeigte Anzahl zu begrenzen. Die Filterresultate aktualisieren sich bereits während der Eingabe.
 
 *Symbole*:
 |===
@@ -25,7 +25,7 @@ Im oberen Bereich befinden sich Filter- um die Anzahl zu begrenzen und Sortierun
 |image:../images/Abbildung-37.jpg[Dokument endgültig löschen, width=30]| Dokument endgültig löschen
 |===
 
-Teildokumente (Vectorisierte Inhalte) können über das Symbol vor dem Dokument angezeigt werden.
+Teildokumente (Vectorisierte Inhalte) können über einen Klick auf das Pfeilsymbol vor dem Dokument angezeigt werden.
 
 image::../images/Abbildung-13.jpg[[Navigationsbereich - Dokumente - Teildokumente öffnen, title="[Navigationsbereich - Dokumente - Teildokumente öffnen", width=500]
 

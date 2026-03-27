@@ -5,6 +5,6 @@ Verknüpfungen können erstellt, bearbeitet oder gelöscht werden. Berechtigunge
 
 image::../images/Abbildung-41.jpg[Administration - Portal-Seite, title="Administration - Portal-Seite", width=500]
 
-Es können Anwendungen oder Webseiten verknüpft werden; Dateien oder Laufwerks‑Shares sind ausgeschlossen.
+Es können Anwendungen oder Webseiten verknüpft werden, Dateien oder Laufwerks‑Shares sind ausgeschlossen.
 
 image::../images/Abbildung-42.jpg[Administration - Portal-Seite - Link erstellen, title="Administration - Portal-Seite - Link erstellen", width=250]

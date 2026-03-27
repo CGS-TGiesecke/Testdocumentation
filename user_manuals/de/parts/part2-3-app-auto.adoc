@@ -6,7 +6,7 @@ Dieser Bereich zeigt – bei entsprechender Berechtigung – alle automatisierte
 
 Jeder Agenten‑Use‑Case kann zeitlich gesteuert werden (konkret oder periodisch). Ergebnisse und deren Details sind über die Ausführungsprotokolle einsehbar.
 
-image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung - Feeds", width=400]
+image::../images/Abbildung-28.jpg[Navigationsbereich - Automatisierung, title="Navigationsbereich - Automatisierung - Feeds", width=500]
 
 Ungelesene Einträge erscheinen blau, gelesene schwarz. Nutzer können Einträge als gelesen oder ungelesen markieren; zusätzlich kann „Ich habe es auch gelesen“ gesetzt werden.
 

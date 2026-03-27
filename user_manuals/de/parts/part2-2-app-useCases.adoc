@@ -22,5 +22,5 @@ image::../images/Abbildung-9.jpg[Navigationsbereich - Anwendungsfälle - Waitbox
 
 Ergebnisse können gespeichert und als eigener Chat weitergeführt werden. Löschen erfolgt ebenfalls zweistufig.
 
-image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles", width=500]
+image::../images/Abbildung-11.jpg[Navigationsbereich - Anwendungsfälle - Löschen eines Falles, title="Navigationsbereich - Anwendungsfälle - Löschen eines Falles", width=400]
 

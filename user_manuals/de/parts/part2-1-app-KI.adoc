@@ -1,6 +1,7 @@
+
 === {application} Anwendung
 
-==== Navigationsbereich - "KI Chat"
+==== Navigationsbereich "KI Chat"
 
 Die Oberfläche bietet ein klassisches Chat‑Fenster mit Eingabefeld für Prompts. Alle Chatverläufe werden ausschließlich lokal im Browser gespeichert und sind – sofern die Einstellung „automatisches Cache‑Löschen“ aktiviert ist – nach dem Schließen des Browsers nicht mehr verfügbar. Gespeicherte Verläufe können dagegen auch nach einer Neuanmeldung wieder geöffnet werden.
 

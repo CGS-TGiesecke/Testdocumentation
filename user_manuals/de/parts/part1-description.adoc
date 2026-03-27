@@ -1,3 +1,4 @@
+
 === Anwendungsbeschreibung 
 
 {application} bietet eine leistungsstarke KI‑Plattform, mit der Unternehmen ihr Wissen intelligent nutzen und in produktive Ergebnisse umwandeln können. Über spezialisierte Chats und vorkonfigurierte Use Cases erhalten Mitarbeitende schnellen und präzisen Zugriff auf relevantes Unternehmenswissen – basierend auf hinterlegten Dokumenten oder cloudbasierten Quellen. {application} ermöglicht eine mühelose Analyse komplexer Inhalte, die einfache Formulierung von Anfragen und eine effiziente Datenverarbeitung 

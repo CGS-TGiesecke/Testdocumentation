@@ -24,7 +24,6 @@ Oben im Fenster befinden sich die Hauptbereiche der Anwendung:
 
 Links befindet sich die Baumnavigation, über die Unterseiten geöffnet werden.
 
-ifeval::[{cgs-assist} == 1]
 ==== Erster KI‑Chat
 
 1. Navigieren Sie zu *KI Chat*.
