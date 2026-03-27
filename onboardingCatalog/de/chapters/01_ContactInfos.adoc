@@ -6,14 +6,14 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 ==== Primärer Ansprechpartner (Business / Projekt)
 
 |===
-| |  1| 2| 3 
+| |  1. Person| Vertretung 
 
-|Name| |	|	
-|E-Mail| |	|	
-|Telefonnummer| |	|	
-|Rolle / Funktion| |	|	
-|Verfügbarkeit (Tage & Uhrzeiten)| |	|	
-|Bemerkungen / Notizen| |	|	
+|Name| |		
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |		
+|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Bemerkungen / Notizen| |		
 |===
 
 
