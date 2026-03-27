@@ -9,6 +9,8 @@
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
 :toclevels: 15
+:pdf-page-size: A4
+:pdf-page-layout: landscape
 :sectnums:
 :sectnumlevels: 15
 :application: {application}
