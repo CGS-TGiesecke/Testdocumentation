@@ -20,8 +20,6 @@
 
 include::chapters/01_ContactInfos.adoc[]
 
-include::chapters/02_TechnicalRequirements.adoc[]
-
 include::chapters/02_TechnicalSituation.adoc[]
 
 include::chapters/03_TechnicalRequirements.adoc[]

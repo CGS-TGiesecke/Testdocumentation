@@ -2,16 +2,88 @@
 
 === Erforderliche Konfigurationen
 
-==== Abklärung der Login-Methode
+==== Welche Login-Methode soll verwendet werden?
 
-==== Welche Modelle / Provider (Azure / AWS / Lokal)?
+{application} unterstützt:
 
-==== Welche Use Cases?
+* eine OpenID Connect Authentifizierung mit Microsoft Entra ID
+* eine SAML Authentifizierung mit Microsoft Entra ID
+* eine lokale Benutzer-/Passwortverwaltung
 
-==== Welche Systeme sollen angebunden werden?
+==== Welches Modelle/Provider soll verwendet werden?
+
+{application} unterstützt:
+
+|===
+| Provider | Status | Empfehlung | Vorteile | Setup-Aufwand
+
+| *Azure OpenAI* 
+| Vollständig unterstützt 
+| *Bevorzugt* 
+| Enterprise-Support, EU-Regionen, einfache Integration 
+| Mittel
+
+| *AWS Bedrock* 
+| Vollständig unterstützt 
+| Gleichwertig  
+| Gute Claude-Modelle, AWS-Integration  
+| Mittel
+
+| *Lokale Modelle* 
+| Unterstützt 
+| Für hohe Datenschutzanforderungen  
+| Maximaler Datenschutz, keine Cloud  
+| Hoch (GPU-Hardware erforderlich) 
+|===
+
+==== Welche Use Cases / Formate der Übergabe?
+
+==== Welche externen Systeme sollen angebunden werden?
+
+|===
+| System | Integrationstyp | Beschreibung | Erforderlich 
+
+| Active Directory 	| LDAP	| Authentifizierung Benutzer aus AD |  
+| Email Server 	| API | Integration Email über SMTP				|  
+| SharePoint 	| API 	| Integration Dokumenten				| 
+| SAP 	| API 	| Integration Daten					| 
+|  	|  	| 					| 
+|  	|  	| 					| 
+|  	|  	| 					| 
+|===
 
 ==== Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
 
-==== Lizenz: Welcher Zeitraum, wie viele User?
+*Erforderliche Ports:*
+
+|===
+| Port | Protokoll | Verwendung | Erforderlich für 
+
+| **80** 	| HTTP 	| HTTP-zu-HTTPS-Redirect, Let's Encrypt ACME-Challenge 	| Produktion mit Caddy 
+| **443** 	| HTTPS | Verschlüsselter Zugriff (TLS) 						| Produktion (empfohlen) 
+| **8000** 	| HTTP 	| Direktzugriff auf Anwendung 							| Test/Entwicklung
+|===
+
+*Empfehlung:* Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.
+
+{application} unterstützt:
+
+* Caddy mit Let's Encrypt (Reverse Proxy)
+* DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)
+* ohne öffentlichen DNS (keine Portfreigabe)
+
+==== Erforderliche Lizenz
+
+|===
+| Anzahl User | Gültig von | Gültig bis
+|	|	|
+|===
 
 ==== Initiale Admin-Nutzer
+
+|===
+| | ADMIN_USERNAME 	| ADMIN_PASSWORD 
+|1|					|
+|2|					|
+|3|					|	
+|===

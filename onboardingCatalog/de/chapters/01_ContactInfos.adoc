@@ -13,92 +13,99 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |Telefonnummer| |		
 |Rolle / Funktion| |		
 |Verfügbarkeit (Tage & Uhrzeiten)| |		
-|Bemerkungen / Notizen| |		
+|Bemerkungen| |		
 |===
 
 
 ==== Technischer Ansprechpartner (IT / Infrastruktur)
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+| |  1. Person| Vertretung 
 
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
-|===  
+|Name| |		
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |		
+|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Bemerkungen| |		
+|===
 
 ==== Ansprechpartner für Abrechnung (Billing / Finance)
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+| |  1. Person| Vertretung 
 
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
+|Name| |		
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |		
+|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Bemerkungen| |		
 |===
 
 ==== Ansprechpartner für Support (Operativer Betrieb)
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
+| |  1. Person| Vertretung 
 
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
+|Name| |		
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |		
+|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Bemerkungen| |		
 |=== 
 
 ==== Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
 
 |===
-|  |System / Zuordnung|Name  |E-Mail|Telefonnummer|Rolle / Funktion|Bemerkungen 
+| |  1. Person| Vertretung 
 
-|1| |	|	|	|	|	
-|2| |	|	|	|	|	
-|3| |	|	|	|	|	
-|4| |	|	|	|	|	
-|5| |	|	|	|	|	
-|===  
+|System / Zuordnung| |	
+|Name| |	
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |			
+|Bemerkungen| |		
+|=== 
 
 ==== Eskalationskette
 
 ===== Level 1 – Geringste Eskalationsstufe
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
-
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
+| |  1. Person| Vertretung 
+	
+|Name| |	
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |
+|Verfügbarkeit| |			
+|Bemerkungen| |		
 |=== 
 
 ===== Level 2 – Zweite Eskalationsstufe
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
-
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
-|=== 
+| |  1. Person| Vertretung 
+	
+|Name| |	
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |
+|Verfügbarkeit| |			
+|Bemerkungen| |		
+|===  
 
 ===== Level 3 – Höchste Eskalationsstufe
 
 |===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
-
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
+| |  1. Person| Vertretung 
+	
+|Name| |	
+|E-Mail| |		
+|Telefonnummer| |		
+|Rolle / Funktion| |
+|Verfügbarkeit| |			
+|Bemerkungen| |		
 |===  
