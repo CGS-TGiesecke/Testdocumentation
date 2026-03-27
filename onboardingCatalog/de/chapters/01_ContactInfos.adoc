@@ -1,10 +1,9 @@
 
-= Fragebogen zur Kontaktdatenerfassung
-:toc:
+== Fragebogen zur Kontaktdatenerfassung
 
 Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit *n/a* markiert werden.
 
-== 1. Primärer Ansprechpartner (Business / Projekt)
+=== Primärer Ansprechpartner (Business / Projekt)
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
@@ -17,7 +16,7 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |===
 
 
-== 2. Technischer Ansprechpartner (IT / Infrastruktur)
+=== Technischer Ansprechpartner (IT / Infrastruktur)
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
@@ -29,7 +28,7 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |5| |	|	|	|	|
 |===  
 
-== 3. Ansprechpartner für Abrechnung (Billing / Finance)
+=== Ansprechpartner für Abrechnung (Billing / Finance)
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
@@ -41,7 +40,7 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |5| |	|	|	|	|
 |===
 
-== 4. Ansprechpartner für Support (Operativer Betrieb)
+=== Ansprechpartner für Support (Operativer Betrieb)
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit (Tage & Uhrzeiten)|Bemerkungen / Notizen 
@@ -53,14 +52,8 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |5| |	|	|	|	|
 |=== 
 
-== 5. Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
+=== Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
 
-*System / Zuordnung:*  
-*Name:*  
-*E-Mail:*  
-*Telefonnummer:*  
-*Rolle / Funktion:*  
-*Bemerkungen / Notizen:*
 |===
 |  |System / Zuordnung|Name  |E-Mail|Telefonnummer|Rolle / Funktion|Bemerkungen 
 
@@ -71,21 +64,9 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |5| |	|	|	|	|	
 |===  
 
-== 6. Eskalationskette
+=== Eskalationskette
 
-=== Level 1 – Erste Eskalationsstufe
-
-|===
-| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
-
-|1| |	|	|	|	|
-|2| |	|	|	|	|
-|3| |	|	|	|	|
-|4| |	|	|	|	|
-|5| |	|	|	|	|
-|=== 
-
-=== Level 2 – Zweite Eskalationsstufe
+==== Level 1 – Geringste Eskalationsstufe
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
@@ -97,7 +78,19 @@ Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende
 |5| |	|	|	|	|
 |=== 
 
-=== Level 3 – Höchste Eskalationsstufe
+==== Level 2 – Zweite Eskalationsstufe
+
+|===
+| |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
+
+|1| |	|	|	|	|
+|2| |	|	|	|	|
+|3| |	|	|	|	|
+|4| |	|	|	|	|
+|5| |	|	|	|	|
+|=== 
+
+==== Level 3 – Höchste Eskalationsstufe
 
 |===
 | |Name  |E-Mail|Telefonnummer|Rolle / Funktion|  Verfügbarkeit|Bemerkungen
