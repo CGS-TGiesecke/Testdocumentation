@@ -1,0 +1,17 @@
+
+
+=== Erforderliche Konfigurationen
+
+==== Abklärung der Login-Methode
+
+==== Welche Modelle / Provider (Azure / AWS / Lokal)?
+
+==== Welche Use Cases?
+
+==== Welche Systeme sollen angebunden werden?
+
+==== Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
+
+==== Lizenz: Welcher Zeitraum, wie viele User?
+
+==== Initiale Admin-Nutzer
