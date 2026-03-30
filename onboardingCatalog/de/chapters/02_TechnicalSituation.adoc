@@ -4,21 +4,21 @@
 
 ==== Server-Infrastruktur 
 
-===
+====
 Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?
 .
 .
 .
 .
-===
+====
 
-***
+****
 Beschreibung des verwendeten Betriebssystems (Windows Server, Linux)
 .
 .
 .
 :
-***
+****
 
 Beschreibung der auf dem Server installierten und betriebenen Systemdienste (Webserver, Datenbank)
 
