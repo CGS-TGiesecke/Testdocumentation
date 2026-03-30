@@ -4,7 +4,6 @@
 
 ==== Server-Infrastruktur 
 
-.bbbb
 ====
 Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?
  +
@@ -14,7 +13,7 @@ Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?
  +
 ====
 
-.aaaaa
+
 ****
 Beschreibung des verwendeten Betriebssystems (Windows Server, Linux)
 . +
