@@ -80,7 +80,8 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `openai.gpt-oss-20b-1:0`)
 
-*Foundation Model vs. Inference Profile* +
+*Foundation Model und Inference Profile* +
+*Info:* Modelle sind in verschiedenen AWS-Regionen verfügbar oder unterstützten Cross-Regionen Routing. Nicht alle Modelle können Beides. +
 siehe https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
 Foundation Model verwenden, wenn:
