@@ -10,6 +10,8 @@
 * eine SAML Authentifizierung mit Microsoft Entra ID
 * eine lokale Benutzer-/Passwortverwaltung
 
+
+
 ==== Welches Modelle/Provider soll verwendet werden?
 
 {application} unterstützt:
@@ -83,6 +85,7 @@
 
 |===
 | | ADMIN_USERNAME 	| ADMIN_PASSWORD 
+
 |1|					|
 |2|					|
 |3|					|	
