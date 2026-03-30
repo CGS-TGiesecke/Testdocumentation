@@ -2,13 +2,23 @@
 
 === Erforderliche Konfigurationen
 
-==== Welche Login-Methode soll verwendet werden?
+====
+==== Welche Server Variante soll verwendet werden (lokale VM, physischer Server oder Cloud‑Instanz)?
+ +
+ +
+ +
+ +
+ +
+====
 
-{application} unterstützt:
-
-* eine OpenID Connect Authentifizierung mit Microsoft Entra ID
-* eine SAML Authentifizierung mit Microsoft Entra ID
-* eine lokale Benutzer-/Passwortverwaltung
+====
+==== Welche Login-Methode soll verwendet werden (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)
+ +
+ +
+ +
+ +
+ +
+====
 
 
 
@@ -74,19 +84,20 @@
 * DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)
 * ohne öffentlichen DNS (keine Portfreigabe)
 
-==== Erforderliche Lizenz
+====
+==== Erforderliche Lizenz (Anzahl Nutzer, Gültig bis)
+ +
+ +
+ +
+ +
+ +
+====
 
-|===
-| Anzahl User | Gültig von | Gültig bis
-| 500	|	|
-|===
-
-==== Initiale Admin-Nutzer
-
-|===
-| | ADMIN_USERNAME 	| ADMIN_PASSWORD 
-
-|1|					|
-|2|					|
-|3|					|	
-|===
+====
+==== Initiale Admin-Nutzer ( jeweils ADMIN_USERNAME und ADMIN_PASSWORD)
+ +
+ +
+ +
+ +
+ +
+====

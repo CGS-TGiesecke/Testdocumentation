@@ -13,25 +13,56 @@ Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?
  +
 ====
 
-
-****
+====
 Beschreibung des verwendeten Betriebssystems (Windows Server, Linux)
-. +
-. +
-. +
-. +
-****
+ +
+ +
+ +
+ +
+====
 
+====
 Beschreibung der auf dem Server installierten und betriebenen Systemdienste (Webserver, Datenbank)
+ +
+ +
+ +
+ +
+====
 
+====
 Beschreibung der Virtualisierungsmethoden und Sicherheitslösungen
+ +
+ +
+ +
+ +
+====
 
 ==== Support und Aktualisierungen (Ansprechpartner, Prozesse)
 
-* Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? 
-** Definition Level lieferantenseitige Unterstützung (basic, middle, hight) 
-* Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Update benötigt wird?
-** Definition Level lieferantenseitige Release Management (Hotfix)
-* Welche Prozesse sind lieferantenseitig definiert, um Aktualisierungen einzuspielen?
+====
+Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? 
+* Definition Level lieferantenseitige Unterstützung (basic, middle, hight) 
+ +
+ +
+ +
+ +
+====
+
+====
+Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Update benötigt wird?
+* Definition Level lieferantenseitige Release Management (Hotfix)
+ +
+ +
+ +
+ +
+====
+
+====
+Welche Prozesse sind lieferantenseitig definiert, um Aktualisierungen einzuspielen?
+ +
+ +
+ +
+ +
+====
 
 
