@@ -76,7 +76,7 @@
 
 |===
 | Anzahl User | Gültig von | Gültig bis
-|	|	|
+| 500	|	|
 |===
 
 ==== Initiale Admin-Nutzer

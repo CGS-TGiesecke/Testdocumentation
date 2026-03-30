@@ -4,5 +4,9 @@
 
 ==== Support und Aktualisierungen (Ansprechpartner, Prozesse)
 
+Wer steht als Kontaktperson zur Verfügung, wenn Unterstützung oder ein Update benötigt wird? +
+Welche Wege und Abläufe (“Prozesse”) sind definiert, um Support zu erhalten oder Aktualisierungen einzuspielen?
 
 ==== Server-Infrastruktur (Betriebssystem etc.)
+
+Beschreiben der technischen Grundlagen für einen Server, wie z.B. das verwendete Betriebssystem (Windows Server, Linux), die auf dem Server installierten und betriebenen Systemdienste (Webserver, Datenbank), Virtualisierungsmethoden und Sicherheitslösungen.
