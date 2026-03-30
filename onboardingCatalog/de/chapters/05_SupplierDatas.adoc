@@ -3,19 +3,11 @@
 ==== Support und Aktualisierungen (Ansprechpartner, Prozesse)
 
 ====
-Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? 
-* Definition Level lieferantenseitige Unterstützung (basic, middle, hight) 
- +
- +
- +
- +
+Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird?  
+include::../../../themes/contact-de.adoc[]
 ====
 
 ====
 Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Update benötigt werden?
-* Definition Level lieferantenseitige Release Management (Hotfix)
- +
- +
- +
- +
+include::../../../../../themes/contact-de.adoc[]
 ====
