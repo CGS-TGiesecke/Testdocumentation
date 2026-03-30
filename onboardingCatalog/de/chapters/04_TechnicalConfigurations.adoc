@@ -1,10 +1,10 @@
 
-=== Erforderliche Konfigurationen
+== Erforderliche Konfigurationsdaten
 
 ====
 Konfigurationsdaten Server Variante
 |===
-|hostname|ip_address|os|os_version|cpu_cores|ram_gb|storage_gb|location
+|Hostname|IP Adresse|BS|BS Version|CPU|RAM(GB)|Speicher(GB)|Satndort
 
 |
 |
@@ -12,6 +12,15 @@ Konfigurationsdaten Server Variante
 |
 |
 |
+|
+|
+|===
+====
+====
+Konfigurationsdaten SHARED_FOLDER
+|===
+|Name|Path 
+
 |
 |
 |===
@@ -39,7 +48,7 @@ Konfigurationsdaten Login-Methode
 ====
 Konfigurationsdaten LLM-Provider
 |===
-|provider_type| endpoint|region| deployment_name| model| api_version
+|Provider| Endpoint|Region|API-Key| Deployment Name| Model
 
 |azure_openai
 |
@@ -86,7 +95,7 @@ Konfigurationsdaten externe Systeme
 ====
 Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)
 |===
-|domain|port http|port https |firewall_rules|proxy_required|proxy_config|tls_certificates
+|Domain|Port http|Port https |Firewall|Proxy erforderl.|Proxy Konfiguration|Zertifikate
 
 |
 |
@@ -100,18 +109,30 @@ Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)
 ====
 Konfigurationsdaten initiale Admin User
 |===
-|Variante|Wert
+|Variante|Name|Wert 
 
-|OIDC_ADMIN_USER_1
-|d13467ef-abcd-xxxx-xxxx-xxxx-1a2b3c4d
+|OIDC
+|ADMIN_USER_1
+|
 
-|OIDC_ADMIN_USER_2
-|d13467ef-abcd-xxxx-xxxx-xxxx-1a2b2n3b
+|OIDC
+|ADMIN_USER_2
+|
 
-|SAML_ADMIN_USER_1
-|eargswaeg-object_id-1
+|SAML
+|ADMIN_USER_1
+|
 
-|SAML_ADMIN_USER_2
-|rbhtswaeg-object_id-2
+|SAML
+|ADMIN_USER_2
+|
+
+|LOKAL
+|ADMIN_USER_1
+|
+
+LOKAL
+|ADMIN_USER_2
+|
 |===
 ====

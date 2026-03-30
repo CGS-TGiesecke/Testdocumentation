@@ -1,8 +1,8 @@
 
-=== Soll-Stand Server-Infrastruktur
+== Soll-Stand Server-Infrastruktur
 
 ====
-Welche Server Variante wird verwendet(lokale VM, physischer Server oder Cloud‑Instanz)?
+Welche Server Variante soll verwendet werden (lokale VM, physischer Server oder Cloud‑Instanz)?
  +
  +
  +
@@ -18,7 +18,7 @@ Ist Unterstützung bei der Einrichtung Server Variante notwendig (basic, middle,
  +
 ====
 ====
-Welche Login-Methode wird verwendet (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)?
+Welche Login-Methode soll verwendet werden (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)?
  +
  +
  +
@@ -34,7 +34,7 @@ Ist Unterstützung bei der Einrichtung Login-Methode notwendig (basic, middle, h
  +
 ====
 ====
-Welche LLM Modelle/Provider wird verwendet (Azure OpenAI, AWS Bedrock, Lokale Modelle)?
+Welche LLM Modelle/Provider sollen verwendet werden (Azure OpenAI, AWS Bedrock, Lokale Modelle)?
  +
  +
  +
@@ -67,7 +67,6 @@ Welches Format wird für die Übergabe der Use Cases an Lieferant verwendet?
 ====
 ====
 Welche externen Systeme sollen angebunden werden?
-
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
@@ -80,10 +79,34 @@ Welche externen Systeme sollen angebunden werden?
 |===
 ====
 ====
+Ist Unterstützung bei der Einrichtung externen Systeme notwendig (basic, middle, hight)?
+ +
+ +
+ +
+ +
+ +
+====
+====
+Welche eigenen Agenten (MCP-Server) sind notwendig?
+ +
+ +
+ +
+ +
+ +
+====
+====
 Welche Netzwerk-Methode soll verwendet werden (HTTP/S, Reverse Proxy, SSL-Zertifikate)? +
 Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
 DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
 ohne öffentlichen DNS (keine Portfreigabe) +
+ +
+ +
+ +
+ +
+ +
+====
+====
+Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle, hight)?
  +
  +
  +

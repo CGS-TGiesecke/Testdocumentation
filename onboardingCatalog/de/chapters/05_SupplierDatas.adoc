@@ -1,6 +1,6 @@
 
 
-=== Support und Aktualisierungen (Ansprechpartner, Prozesse)
+== Support und Aktualisierungen 
 
 ====
 Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? + 

@@ -1,8 +1,8 @@
 
 
-=== Organisatorische Angaben
+== Organisatorische Angaben
 
-==== Unterstützung/Hilfe erforderlich
+=== Unterstützung/Hilfe erforderlich
 
 * Definition Level lieferantenseitige Unterstützung (basic, middle, hight)
 * Definition Level lieferantenseitige Release Management (Hotfix)
@@ -10,13 +10,13 @@ Wann
 Wo
 Wie
 
-==== Workshops / Schulungen
+=== Workshops / Schulungen
 
 Wann 
 Wo
 Wie
 
-==== Projektübergabemeeting
+=== Projektübergabemeeting
 
 Wann 
 Wo
