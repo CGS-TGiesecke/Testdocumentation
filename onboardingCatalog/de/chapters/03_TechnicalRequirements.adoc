@@ -1,18 +1,8 @@
 
-
-=== Erforderliche Konfigurationen
-
-====
-==== Welche Server Variante soll verwendet werden (lokale VM, physischer Server oder Cloud‑Instanz)?
- +
- +
- +
- +
- +
-====
+=== Soll-Stand Server-Infrastruktur
 
 ====
-==== Welche Login-Methode soll verwendet werden (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)
+Welche Server Variante soll verwendet werden (lokale VM, physischer Server oder Cloud‑Instanz)?
  +
  +
  +
@@ -20,37 +10,45 @@
  +
 ====
 
+====
+Welche Login-Methode soll verwendet werden (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)*
+ +
+ +
+ +
+ +
+ +
+====
 
 
-==== Welches Modelle/Provider soll verwendet werden?
+====
+Welche Modelle/Provider soll verwendet werden (Azure OpenAI, AWS Bedrock, Lokale Modelle) 
+ +
+ +
+ +
+ +
+ +
+====
 
-{application} unterstützt:
+====
+Welche Use Cases werden benötigt?
+ +
+ +
+ +
+ +
+ +
+====
 
-|===
-| Provider | Status | Empfehlung | Vorteile | Setup-Aufwand
+====
+Welches Format wird für die Übergabe der Use Cases an Lieferant verwendet?
+ +
+ +
+ +
+ +
+ +
+====
 
-| *Azure OpenAI* 
-| Vollständig unterstützt 
-| *Bevorzugt* 
-| Enterprise-Support, EU-Regionen, einfache Integration 
-| Mittel
-
-| *AWS Bedrock* 
-| Vollständig unterstützt 
-| Gleichwertig  
-| Gute Claude-Modelle, AWS-Integration  
-| Mittel
-
-| *Lokale Modelle* 
-| Unterstützt 
-| Für hohe Datenschutzanforderungen  
-| Maximaler Datenschutz, keine Cloud  
-| Hoch (GPU-Hardware erforderlich) 
-|===
-
-==== Welche Use Cases / Formate der Übergabe?
-
-==== Welche externen Systeme sollen angebunden werden?
+====
+Welche externen Systeme sollen angebunden werden?
 
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
@@ -61,31 +59,24 @@
 | SAP 	| API 	| Integration Daten					| 
 |  	|  	| 					| 
 |  	|  	| 					| 
-|  	|  	| 					| 
 |===
-
-==== Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
-
-*Erforderliche Ports:*
-
-|===
-| Port | Protokoll | Verwendung | Erforderlich für 
-
-| **80** 	| HTTP 	| HTTP-zu-HTTPS-Redirect, Let's Encrypt ACME-Challenge 	| Produktion mit Caddy 
-| **443** 	| HTTPS | Verschlüsselter Zugriff (TLS) 						| Produktion (empfohlen) 
-| **8000** 	| HTTP 	| Direktzugriff auf Anwendung 							| Test/Entwicklung
-|===
-
-*Empfehlung:* Einsatz eines Reverse Proxys (z. B. Caddy, Nginx) mit TLS-Zertifikaten.
-
-{application} unterstützt:
-
-* Caddy mit Let's Encrypt (Reverse Proxy)
-* DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)
-* ohne öffentlichen DNS (keine Portfreigabe)
+====
 
 ====
-==== Erforderliche Lizenz (Anzahl Nutzer, Gültig bis)
+Welche Verbindungs-Methode soll verwendet werden (HTTP/S, Reverse Proxy, SSL-Zertifikate)?
+Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
+DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
+ohne öffentlichen DNS (keine Portfreigabe) +
+ +
+ +
+ +
+ +
+ +
+====
+
+
+====
+Welche Lizenz ist erforderlich(Anzahl Nutzer, Gültigkeit von/bis)?
  +
  +
  +
@@ -94,7 +85,7 @@
 ====
 
 ====
-==== Initiale Admin-Nutzer ( jeweils ADMIN_USERNAME und ADMIN_PASSWORD)
+Wer sind die initialen Admin-Nutzer(jeweils ADMIN_USERNAME und ADMIN_PASSWORD)?
  +
  +
  +

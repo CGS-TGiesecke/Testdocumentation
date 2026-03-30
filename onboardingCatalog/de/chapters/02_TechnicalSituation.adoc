@@ -1,8 +1,5 @@
 
-
-=== Umgebung / Vorbedingungen
-
-==== Server-Infrastruktur 
+=== Ist-Stand Server-Infrastruktur 
 
 ====
 Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?
@@ -30,39 +27,13 @@ Beschreibung der auf dem Server installierten und betriebenen Systemdienste (Web
 ====
 
 ====
-Beschreibung der Virtualisierungsmethoden und Sicherheitslösungen
+Beschreibung der Virtualisierungsmethoden und Sicherheitslösungen (Firewall)
  +
  +
  +
  +
 ====
 
-==== Support und Aktualisierungen (Ansprechpartner, Prozesse)
 
-====
-Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? 
-* Definition Level lieferantenseitige Unterstützung (basic, middle, hight) 
- +
- +
- +
- +
-====
-
-====
-Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Update benötigt wird?
-* Definition Level lieferantenseitige Release Management (Hotfix)
- +
- +
- +
- +
-====
-
-====
-Welche Prozesse sind lieferantenseitig definiert, um Aktualisierungen einzuspielen?
- +
- +
- +
- +
-====
 
 

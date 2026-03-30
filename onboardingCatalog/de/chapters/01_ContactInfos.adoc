@@ -1,7 +1,7 @@
 
 === Fragebogen zur Kontaktdatenerfassung
 
-Bitte tragen Sie die folgenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit *n/a* markiert werden.
+Bitte tragen Sie die fhelenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit *n/a* markiert werden.
 
 ==== Primärer Ansprechpartner (Business / Projekt)
 

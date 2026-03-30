@@ -1,0 +1,47 @@
+
+=== Erforderliche Konfigurationen
+
+====
+Konfigurationsdaten Server Variante
+ +
+ +
+ +
+ +
+ +
+====
+
+====
+Konfigurationsdaten Login-Methode
+ +
+ +
+ +
+ +
+ +
+====
+
+====
+Konfigurationsdaten LLM-Provider
+ +
+ +
+ +
+ +
+ +
+====
+
+====
+Konfigurationsdaten externe Systeme
+ +
+ +
+ +
+ +
+ +
+====
+
+====
+Konfigurationsdaten Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
+ +
+ +
+ +
+ +
+ +
+====
