@@ -34,11 +34,9 @@ Die Lösung besteht aus folgenden Komponenten:
 * *Redis:* Message-Broker und Caching
 * *Datenbank:* SQLite
 * *Vector-Store:* ChromaDB für RAG
-* *optional kundenspezifische MCP APIs:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds
+* *optional kundenspezifische MCP APIs/Agents:* zum Austausch mit externen Tools, Systemen oder Datenquellen z.B. Feeds
 
 *Deployment:* Über Docker auf Linux-Server.
-
-==== Optionale kundenspezifische Implementierungen bzw. Erweiterungen
 
 ===== Agents und MCP
 

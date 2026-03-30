@@ -80,6 +80,29 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *<model-id>:* Die eindeutige Modell-Identifikation (z.B. `openai.gpt-oss-20b-1:0`)
 
+*Foundation Model vs. Inference Profile* +
+siehe https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
+
+*Foundation Model verwenden, wenn:*
+
+* vollständige Kontrolle über die Region benötigt wird (z. B. Compliance, Datenschutz).
+* Standard‑Workloads ohne Cross‑Region benötigt werden.
+
+*Inference Profile verwenden, wenn:*
+
+* Ausfallsicherheit, Skalierung und Cross‑Region‑Routing benötigt wird.
+* Kosten einzelnen Teams/Projekten zugeordnet werden sollen.
+* mehrere Workloads über die gleiche Profil‑ID gesteuert werden sollen.
+
+*Beispiel für den Aufruf eines Modelles als Inference Profile*
+```
+arn:aws:bedrock:eu-north-1::inference-profile/eu.anthropic.claude-sonnet-4-6
+```
+*Beispiel für den Aufruf eines Modelles als Foundation Model*
+```
+arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
+```
+ 
 *Schritt 4: Access Keys generieren (entfällt bei IAM-Role)*
 
 1. AWS IAM Console → Users → Ihr User → Security credentials
