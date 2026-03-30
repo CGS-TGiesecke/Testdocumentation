@@ -17,15 +17,43 @@
 
 ===== Unterstützte Modelle
 
-alle gpt-*  ??????
+|===
+| Modell ID | Max Tokens
+
+| gpt-4o 
+|128k
+
+| gpt-4o-mini 
+|128k
+
+| gpt-4.1 
+|128k
+
+| gpt-5.1
+|128k
+
+| gpt-5-mini
+|128k
+
+|===  
 
 ===== Unterstützte Embedding Modelle
 
-text-embedding-3-large  ??????
+|===
+| Modell ID | Max Tokens 
+
+| text-embedding-3-large 
+| 8k
+|===  
 
 ===== Unterstützte Audio Modelle
 
-whisper  ??????
+|===
+| Modell ID | Max request (audio file size) 
+
+| wisper 
+| 25 MB
+|=== 
 
 [.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
 

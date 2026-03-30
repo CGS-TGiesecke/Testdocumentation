@@ -47,6 +47,26 @@ All available Qwen models are supported:
 | 260k 
 |===
 
+===== Supported Inferenceprofile
+
+*Anthropic*
+
+|===
+| Inference Profil ID| Max Tokens 
+
+| eu.anthropic.claude-sonnet-4-20250514-v1:0
+| 16k
+
+| eu.anthropic.claude-sonnet-4-6 		
+| 64k 
+ 
+| eu.anthropic.claude-haiku-4-5-20251001-v1:0 		
+| 64k 
+
+| eu.anthropic.claude-opus-4-6-v1 		
+| 128k 
+|===
+
 ===== Supported Embedding Models
 
 *Amazon Titan*

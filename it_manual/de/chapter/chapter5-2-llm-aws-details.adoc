@@ -80,13 +80,13 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *openai.gpt-oss-20b-1:0:* Die eindeutige Modell-Identifikation
 
-*Inference Profile* +
-*Info:* Neuere Modelle funktionieren mit Inferenz Profilen. Mit regionsübergreifender Inferenz kann, wenn notwendig, der Datenverkehr auf mehrere AWS-Regionen verteilt werden. +
+*Inferenceprofile* +
+*Info:* Neuere Modelle funktionieren mit Inferenceprofilen. Mit regionsübergreifender Inferenz kann, wenn notwendig, der Datenverkehr auf mehrere AWS-Regionen verteilt werden. +
 siehe https://docs.aws.amazon.com/de_de/bedrock/latest/userguide/inference-profiles-support.html
 
-Der Aufruf eines Inferenz Profiles enthält immer die Quellregion (`eu-central-1`), den Profileaufruf (`inference-profile`) und die Zielregionen (`eu`) und das Modell (`anthropic.claude-sonnet-4-6`).
+Der Aufruf eines Inferenceprofiles enthält immer die Quellregion (`eu-central-1`), den Profileaufruf (`inference-profile`) und die Zielregionen (`eu`) und das Modell (`anthropic.claude-sonnet-4-6`).
 
-Beispiel für den Aufruf eines Inference Profiles
+Beispiel für den Aufruf eines Inferenceprofiles
 ```
 arn:aws:bedrock:eu-central-1::inference-profile/eu.anthropic.claude-sonnet-4-6
 ```
@@ -94,10 +94,8 @@ arn:aws:bedrock:eu-central-1::inference-profile/eu.anthropic.claude-sonnet-4-6
 - *aws:* Amazon Web Services
 - *bedrock:* Service (hier: Bedrock)
 - *eu-central-1:* AWS-Quellregion 
-- *inference-profile:* Spezifiziert, dass es sich um ein Inferenz-Profil handelt (nicht um ein Modell)
-- *eu.anthropic.claude-sonnet-4-6:* Die eindeutige Profil-Identifikation (hat die AWS-Zielregionen eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-3) +
-siehe https://docs.aws.amazon.com/de_de/bedrock/latest/userguide/inference-profiles-support.html
-
+- *inference-profile:* Spezifiziert, dass es sich um ein Inferenceprofil handelt (nicht um ein Modell)
+- *eu.anthropic.claude-sonnet-4-6:* Die eindeutige Profil-Identifikation (`eu-central-1` hat z.B. die AWS-Zielregionen eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-3)
 
 *Schritt 4: Access Keys generieren (entfällt bei IAM-Role)*
 
