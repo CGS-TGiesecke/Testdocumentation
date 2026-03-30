@@ -9,16 +9,26 @@ Konfigurationsdaten Server Variante
  +
  +
 ====
-
 ====
 Konfigurationsdaten Login-Methode
- +
- +
- +
- +
- +
-====
+|===
+|Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
 
+|Open ID Connect
+|
+|
+|
+|
+|
+
+|SAML
+|
+|
+|
+|
+|
+|===
+====
 ====
 Konfigurationsdaten LLM-Provider
  +
@@ -27,16 +37,26 @@ Konfigurationsdaten LLM-Provider
  +
  +
 ====
-
 ====
 Konfigurationsdaten externe Systeme
- +
- +
- +
- +
- +
-====
+|===
+|Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
 
+|SharePoint
+|
+|
+|
+|
+|
+
+|Email
+|
+|
+|
+|
+|
+|===
+====
 ====
 Konfigurationsdaten Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
  +
