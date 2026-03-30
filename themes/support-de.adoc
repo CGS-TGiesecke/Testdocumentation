@@ -1,5 +1,4 @@
 
-*Kontaktinformationen:*
 
 ifeval::[{cgs-assist} == 1] 
 

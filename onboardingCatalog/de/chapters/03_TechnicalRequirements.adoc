@@ -80,7 +80,7 @@ Welche externen Systeme sollen angebunden werden?
 |===
 ====
 ====
-Welche Verbindungs-Methode soll verwendet werden (HTTP/S, Reverse Proxy, SSL-Zertifikate)? +
+Welche Netzwerk-Methode soll verwendet werden (HTTP/S, Reverse Proxy, SSL-Zertifikate)? +
 Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
 DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
 ohne öffentlichen DNS (keine Portfreigabe) +
@@ -99,7 +99,7 @@ Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
  +
 ====
 ====
-Wer sind die initialen Admin-Nutzer (jeweils ADMIN_USERNAME und ADMIN_PASSWORD)?
+Wer sind die initialen Admin-Nutzer?
  +
  +
  +

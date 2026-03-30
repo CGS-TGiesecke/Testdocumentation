@@ -3,39 +3,65 @@
 
 ====
 Konfigurationsdaten Server Variante
- +
- +
- +
- +
- +
+|===
+|hostname|ip_address|os|os_version|cpu_cores|ram_gb|storage_gb|location
+
+|
+|
+|
+|
+|
+|
+|
+|
+|===
 ====
 ====
 Konfigurationsdaten Login-Methode
 |===
-|Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
+|Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets
 
 |Open ID Connect
 |
 |
 |
 |
-|
+
 
 |SAML
 |
 |
 |
 |
-|
+
 |===
 ====
 ====
 Konfigurationsdaten LLM-Provider
- +
- +
- +
- +
- +
+|===
+|provider_type| endpoint|region| deployment_name| model| api_version
+
+|azure_openai
+|
+|
+|
+|
+|
+
+|aws_bedrock
+|
+|
+|
+|
+|
+
+|local_model
+|
+|
+|
+|
+|
+|===
 ====
 ====
 Konfigurationsdaten externe Systeme
@@ -58,10 +84,34 @@ Konfigurationsdaten externe Systeme
 |===
 ====
 ====
-Konfigurationsdaten Erreichbarkeit (HTTP/S, Reverse Proxy, SSL-Zertifikate)
- +
- +
- +
- +
- +
+Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)
+|===
+|domain|port http|port https |firewall_rules|proxy_required|proxy_config|tls_certificates
+
+|
+|
+|
+|
+|
+|
+|
+|===
+====
+====
+Konfigurationsdaten initiale Admin User
+|===
+|Variante|Wert
+
+|OIDC_ADMIN_USER_1
+|d13467ef-abcd-xxxx-xxxx-xxxx-1a2b3c4d
+
+|OIDC_ADMIN_USER_2
+|d13467ef-abcd-xxxx-xxxx-xxxx-1a2b2n3b
+
+|SAML_ADMIN_USER_1
+|eargswaeg-object_id-1
+
+|SAML_ADMIN_USER_2
+|rbhtswaeg-object_id-2
+|===
 ====
