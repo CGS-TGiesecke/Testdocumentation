@@ -1,10 +1,22 @@
 
+=== Organisatorische Angaben
 
-== Organisatorische Angaben
+=== Unterstützung/Hilfe 
 
-=== Unterstützung/Hilfe erforderlich
+|===
+|Level|Beschreibung
 
-* Definition Level lieferantenseitige Unterstützung (basic, middle, hight)
+|Basic
+|Kurze Rückfrage per Mail oder Telefon
+
+|Enterprise
+|Mehrere Telkos und Mails
+
+|Professionell
+|täglich Telkos oder Mails, Step by Step Anleitung
+|===
+====
+
 * Definition Level lieferantenseitige Release Management (Hotfix)
 Wann 
 Wo

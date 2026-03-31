@@ -4,56 +4,53 @@
 ====
 Welche Server Variante soll verwendet werden?
 |===
-|lokale VM|
-|physischer Server|
+|Physischer Server|
+|Lokale VM|
 |Cloud‑Instanz|
 |===
 ====
 ====
-Ist Unterstützung bei der Einrichtung Server Variante notwendig (basic, middle, hight)?
- +
- +
- +
- +
- +
+Ist Unterstützung bei der Einrichtung Server Variante notwendig?
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
 ====
 ====
-Welche Login-Methode soll verwendet werden (OpenID Connect, SAML, lokale Benutzer-/Passwortverwaltung)?
- +
- +
- +
- +
- +
+Welche Login-Methode soll verwendet werden?
+|===
+|OpenID Connect (SSO)|
+|SAML (SSO)|
+|Lokale Benutzer-/Passwortverwaltung|
+|===
 ====
 ====
-Ist Unterstützung bei der Einrichtung Login-Methode notwendig (basic, middle, hight)?
- +
- +
- +
- +
- +
+Ist Unterstützung bei der Einrichtung Login-Methode notwendig?
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
 ====
 ====
-Welche LLM Modelle/Provider sollen verwendet werden (Azure OpenAI, AWS Bedrock, Lokale Modelle)?
- +
- +
- +
- +
- +
+Welche Provider und Modelle sollen verwendet werden?
+|===
+|Azure OpenAI|
+|AWS Bedrock|
+|Lokale Modelle|
+|===
 ====
 ====
-Ist Unterstützung bei der Einrichtung LLM Modelle/Provider notwendig (basic, middle, hight)?
- +
- +
- +
- +
- +
+Ist Unterstützung bei der Einrichtung LLM Modelle/Provider notwendig?
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
 ====
 ====
 Welche Use Cases werden benötigt?
- +
- +
- +
  +
  +
 ====
@@ -61,20 +58,19 @@ Welche Use Cases werden benötigt?
 Werden komplett alle Use Cases zur ersten Übergabe benötigt?
  +
  +
- +
+====
+====
+Welches Format wird für die Übergabe der Use Cases verwendet?
  +
  +
 ====
 ====
-Welches Format wird für die Übergabe der Use Cases an Lieferant verwendet?
-Title +
-Description +
-Description (Long) +
-Required Input Fields (name, type, short description, options if applicable) +
-Requires Context Documents +
-Requires Database +
-AI Model +
-Provider +
+Ist Unterstützung bei Use Cases notwendig?
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
 ====
 ====
 Welche externen Systeme sollen angebunden werden?
@@ -91,52 +87,41 @@ Welche externen Systeme sollen angebunden werden?
 ====
 ====
 Ist Unterstützung bei der Einrichtung externen Systeme notwendig (basic, middle, hight)?
- +
- +
- +
- +
- +
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
 ====
 ====
 Welche eigenen Agenten (MCP-Server) sind notwendig?
  +
  +
- +
- +
- +
 ====
 ====
-Welche Netzwerk-Methode soll verwendet werden (HTTP/S, Reverse Proxy, SSL-Zertifikate)? +
-Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
-DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
-ohne öffentlichen DNS (keine Portfreigabe) +
- +
- +
- +
- +
- +
+Welche Netzwerk-Methode soll verwendet werden? 
+|===
+|Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe)|
+|DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)|
+|ohne öffentlichen DNS (keine Portfreigabe)|
+|===
 ====
 ====
 Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle, hight)?
- +
- +
- +
- +
- +
+|===
+|Basic|
+|Enterprise|
+|Professionell|
+|===
+====
 ====
 ====
 Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
  +
  +
- +
- +
- +
 ====
 ====
 Wer sind die initialen Admin-Nutzer?
- +
- +
- +
  +
  +
 ====
