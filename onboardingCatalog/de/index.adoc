@@ -24,6 +24,3 @@ include::chapters/03_TechnicalSituation.adoc[]
 
 include::chapters/04_TechnicalRequirements.adoc[]
 
-include::chapters/05_TechnicalConfigurations.adoc[]
-
-include::chapters/06_SupplierDatas.adoc[]

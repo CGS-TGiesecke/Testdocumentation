@@ -70,7 +70,7 @@
 |
 |===
 
-==== Welche initialer Admin-Nutzer werden benötigt?
+==== Welche initialen Admin-Nutzer werden benötigt?
 |===
 |Name|Beschreibung 
 
@@ -81,7 +81,7 @@
 |
 |===
 
-==== Werden initiale Rollen benötigt?
+==== Welche initialen Rollen werden benötigt?
 |===
 |Rolle|Beschreibung 
 
