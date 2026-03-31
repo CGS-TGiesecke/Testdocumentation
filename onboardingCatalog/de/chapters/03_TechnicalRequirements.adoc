@@ -1,13 +1,18 @@
 
-== Soll-Stand Server-Infrastruktur
+=== Soll-Stand Server-Infrastruktur
 
 ====
-Welche Server Variante soll verwendet werden (lokale VM, physischer Server oder Cloud‑Instanz)?
- +
- +
- +
- +
- +
+Welche Server Variante soll verwendet werden?
+|===
+|lokale VM
+|
+
+|physischer Server
+|
+
+|Cloud‑Instanz
+|
+|===
 ====
 ====
 Ist Unterstützung bei der Einrichtung Server Variante notwendig (basic, middle, hight)?
@@ -58,12 +63,23 @@ Welche Use Cases werden benötigt?
  +
 ====
 ====
+Werden komplett alle Use Cases zur ersten Übergabe benötigt?
+ +
+ +
+ +
+ +
+ +
+====
+====
 Welches Format wird für die Übergabe der Use Cases an Lieferant verwendet?
- +
- +
- +
- +
- +
+Title +
+Description +
+Description (Long) +
+Required Input Fields (name, type, short description, options if applicable) +
+Requires Context Documents +
+Requires Database +
+AI Model +
+Provider +
 ====
 ====
 Welche externen Systeme sollen angebunden werden?

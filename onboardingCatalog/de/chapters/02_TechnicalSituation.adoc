@@ -1,5 +1,5 @@
 
-== Ist-Stand Server-Infrastruktur 
+=== Ist-Stand Server-Infrastruktur 
 
 ====
 Liegt die Betreuung der IT-Infrastruktur beim Kunden oder externe Vergabe?

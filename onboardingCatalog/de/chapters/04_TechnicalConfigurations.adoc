@@ -1,8 +1,8 @@
 
-== Erforderliche Konfigurationsdaten
+=== Erforderliche Konfigurationsdaten
 
 ====
-Konfigurationsdaten Server Variante
+*Konfigurationsdaten Server Variante*
 |===
 |Hostname|IP Adresse|BS|BS Version|CPU|RAM(GB)|Speicher(GB)|Satndort
 
@@ -17,7 +17,7 @@ Konfigurationsdaten Server Variante
 |===
 ====
 ====
-Konfigurationsdaten SHARED_FOLDER
+*Konfigurationsdaten SHARED_FOLDER*
 |===
 |Name|Path 
 
@@ -26,7 +26,7 @@ Konfigurationsdaten SHARED_FOLDER
 |===
 ====
 ====
-Konfigurationsdaten Login-Methode
+*Konfigurationsdaten Login-Methode*
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets
 
@@ -46,7 +46,7 @@ Konfigurationsdaten Login-Methode
 |===
 ====
 ====
-Konfigurationsdaten LLM-Provider
+*Konfigurationsdaten LLM-Provider*
 |===
 |Provider| Endpoint|Region|API-Key| Deployment Name| Model
 
@@ -73,7 +73,7 @@ Konfigurationsdaten LLM-Provider
 |===
 ====
 ====
-Konfigurationsdaten externe Systeme
+*Konfigurationsdaten externe Systeme*
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
 
@@ -93,7 +93,7 @@ Konfigurationsdaten externe Systeme
 |===
 ====
 ====
-Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)
+*Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)*
 |===
 |Domain|Port http|Port https |Firewall|Proxy erforderl.|Proxy Konfiguration|Zertifikate
 
@@ -107,7 +107,7 @@ Konfigurationsdaten Netzwerk (HTTP/S, Reverse Proxy, SSL-Zertifikate)
 |===
 ====
 ====
-Konfigurationsdaten initiale Admin User
+*Konfigurationsdaten initiale Admin User*
 |===
 |Variante|Name|Wert 
 

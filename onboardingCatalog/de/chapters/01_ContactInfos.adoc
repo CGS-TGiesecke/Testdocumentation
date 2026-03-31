@@ -1,5 +1,5 @@
 
-== Kontaktdaten
+=== Kontaktdaten
 
 Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit "n/a" markiert werden.
 
@@ -47,7 +47,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 ====
 
 ==== 
-Ansprechpartner für Support (Operativer Betrieb)
+*Ansprechpartner für Support (Operativer Betrieb)*
 |===
 | |  1. Person| Vertretung 
 
@@ -61,7 +61,7 @@ Ansprechpartner für Support (Operativer Betrieb)
 ====
 
 ==== 
-Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
+*Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)*
 |===
 | |  1. Person| Vertretung 
 
@@ -74,10 +74,10 @@ Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)
 |===
 ====
 
-== Eskalationskette
+=== Eskalationskette
 
 ====
-Level 1 – Geringste Eskalationsstufe
+*Level 1 – Geringste Eskalationsstufe*
 |===
 | |  1. Person| Vertretung 
 	
@@ -91,7 +91,7 @@ Level 1 – Geringste Eskalationsstufe
 ====
 
 ====
-Level 2 – Mittlere Eskalationsstufe
+*Level 2 – Mittlere Eskalationsstufe*
 |===
 | |  1. Person| Vertretung 
 	
@@ -105,7 +105,7 @@ Level 2 – Mittlere Eskalationsstufe
 ==== 
 
 ====
-Level 3 – Höchste Eskalationsstufe
+*Level 3 – Höchste Eskalationsstufe*
 |===
 | |  1. Person| Vertretung 
 	
