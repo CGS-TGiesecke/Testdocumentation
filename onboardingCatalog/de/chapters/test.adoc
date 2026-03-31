@@ -7,6 +7,7 @@ Hallo
   <input name="kunde" placeholder="Kunde"><br>
   <input name="datum" type="date"><br>
   <button type="button" onclick="exportForm()">Exportieren</button>
+  <button type="button" onclick="importForm()">Importieren</button>
 </form>
 
 <script>
@@ -28,21 +29,21 @@ function exportForm() {
 }
 
 /* -------- JSON IMPORT -------- */
-function importForm(event) {
-  const file = event.target.files[0];
+
+function importForm() {
+  const fileInput = document.getElementById("importfile");
+  const file = fileInput.files[0];
   if (!file) return;
 
   const reader = new FileReader();
   reader.onload = function(e) {
-    try {
-      const data = JSON.parse(e.target.result);
-      fillForm(data);
-      alert("Daten erfolgreich geladen!");
-    } catch (err) {
-      alert("Ungültige JSON-Datei!");
-    }
+    const data = JSON.parse(e.target.result);
+    fillForm(data);
+    alert("Daten erfolgreich geladen!");
   };
   reader.readAsText(file);
+}
+
 }
 
 /* -------- Formularfelder befüllen -------- */
