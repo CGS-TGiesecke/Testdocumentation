@@ -49,21 +49,21 @@
 |===
 |Provider| Endpoint|Region|API-Key| Deployment Name| Model
 
-|azure_openai
+|Azure OpenAI
 |
 |
 |
 |
 |
 
-|aws_bedrock
+|AWS Bedrock
 |
 |
 |
 |
 |
 
-|local_model
+|Lokaes Modell
 |
 |
 |
@@ -138,7 +138,7 @@ LOKAL
 ====
 *Konfigurationsdaten initiale Rollen*
 |===
-|Rolle|Beschreibung| 
+|Rolle|Beschreibung 
 
 |Admin
 |Volle Berechtigungen 

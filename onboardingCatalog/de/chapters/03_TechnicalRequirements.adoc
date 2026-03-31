@@ -46,9 +46,8 @@
 ==== Welche Art von Use Cases wird benötigt?
 |===
 |Standard|
-|Individuell|
-|ARC Standard|
 |Fachbereich Standard|
+|Individuell|
 |===
 
 ==== Wann werden welche Use Cases benötigt?
@@ -64,8 +63,7 @@
 |alle
 |zur ersten Übergabe 
 |===
-==== Welches Format wird für die Übergabe der Use Cases verwendet?
-==== Ist Unterstützung bei Use Cases notwendig?
+==== Ist Unterstützung bei ERstellung der Use Cases notwendig?
 |===
 |Basic|
 |Enterprise|
@@ -93,7 +91,8 @@
 ==== Welche Agenten (MCP-Server) sind notwendig?
 |===
 |Standard|
-|Kundenspezifisch|
+|Fachbereich Standard|
+|Individuell|
 |===
 
 ==== Welche Netzwerk-Methode soll verwendet werden? 
@@ -112,7 +111,7 @@
 
 ==== Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
 
-==== Wer sind die initialen Admin-Nutzer?
+==== Werden mehr als ein initialer Admin-Nutzer benötigt?
 
-==== Welche initialen Rollen sind notwendig?
+==== Werden initiale Rollen benötigt?
 
