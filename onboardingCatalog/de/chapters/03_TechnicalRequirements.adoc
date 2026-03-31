@@ -51,10 +51,20 @@
 |Fachbereich Standard|
 |===
 
-==== Werden komplett alle Use Cases zur ersten Übergabe benötigt?
+==== Wann werden welche Use Cases benötigt?
+|===
+| Anzahl|Datum Lieferung
 
+|1-10
+|
+
+|11-20
+|
+
+|alle
+|zur ersten Übergabe 
+|===
 ==== Welches Format wird für die Übergabe der Use Cases verwendet?
-
 ==== Ist Unterstützung bei Use Cases notwendig?
 |===
 |Basic|
@@ -70,7 +80,7 @@
 | Email Server 	| API | Integration Email über SMTP				|  
 | SharePoint 	| API 	| Integration Dokumenten				| 
 | SAP 	| API 	| Integration Daten					| 
-| andere 	|  	| 					| THG-A
+| andere 	|  	| 					| 
 |===
 
 ==== Ist Unterstützung bei der Einrichtung externen Systeme notwendig ?
@@ -93,7 +103,7 @@
 |ohne öffentlichen DNS (keine Portfreigabe)|
 |===
 
-==== Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle, hight)?
+==== Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig?
 |===
 |Basic|
 |Enterprise|

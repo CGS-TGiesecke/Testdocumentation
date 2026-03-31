@@ -17,7 +17,6 @@
 |Professionell
 |täglich Telkos oder Mails, Step by Step Anleitung
 |===
-====
 
 ===== Release Management
 |===
@@ -28,21 +27,21 @@
 
 ==== Abnahmetests
 |===
-|Name|Beschreibung|Datum|Ergebnis(erfolgreich, beanstandet)
+|Name|Beschreibung|Datum|Ergebnis (erfolgreich, beanstandet)
 
 |Installationstest
-|Abnahme durch It-Verantwortliche/Fachbereich
+|Abnahme durch IT-Verantwortliche/Fachbereich
 |
 |
 
-|Akzeptanztest
+|Endabnahmetest
 |Abnahme durch Endbenutzer/Fachbereich
 |
 |
 |===
 
 
-=== Workshops / Schulungen
+==== Workshops / Schulungen
 
 |===
 |Wann |
@@ -50,7 +49,7 @@
 |Wie|
 |===
 
-=== Projektübergabemeeting
+==== Projektübergabe
 
 |===
 |Wann |
