@@ -3,7 +3,7 @@
 
 === Erforderliche Konfigurationsdaten
 
-==== Konfiguration Server Variante
+==== Wie lautet die Konfiguration der Server Variante?
 |===
 |Hostname|IP Adresse|BS|BS Version|CPU|RAM(GB)|Speicher(GB)|Satndort
 
@@ -17,7 +17,7 @@
 |
 |===
 
-==== Konfiguration SHARED_FOLDER
+==== Wie lautet die Konfiguration für SHARED_FOLDER?
 |===
 |Name|Path 
 
@@ -25,7 +25,7 @@
 |
 |===
 
-==== Konfiguration Login-Methode
+==== Wie lautet die Konfiguration der Login-Methode?
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets
 
@@ -43,7 +43,7 @@
 
 |===
 
-==== Konfiguration LLM-Provider
+==== Wie lautet die Konfiguration der LLM-Provider?
 |===
 |Provider| Endpoint|Region|API-Key
 
@@ -69,7 +69,7 @@
 |
 |===
 
-==== Konfiguration externe Systeme
+==== Wie lautet die Konfiguration der externen Systeme?
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
 
@@ -88,7 +88,7 @@
 |
 |===
 
-==== Konfiguration Netzwerk 
+==== Wie lautet die Konfiguration vom Netzwerk Zugang?
 |===
 |Domain|Port http|Port https |Firewall|Proxy erforderl.|Proxy Konfiguration|Zertifikate
 
@@ -101,7 +101,7 @@
 |
 |===
 
-==== Konfiguration initiale Admin User
+==== Wie lautet die Konfiguration initiale Admin User?
 |===
 |Variante|Name|Wert/ID 
 
@@ -130,7 +130,7 @@
 |
 |===
 
-==== Konfiguration initiale Rollen
+==== Wie lautet die Konfiguration initiale Rollen?
 |===
 |Rolle|Beschreibung 
 
