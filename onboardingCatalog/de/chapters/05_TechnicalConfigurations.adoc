@@ -45,7 +45,7 @@
 
 ==== Konfiguration LLM-Provider
 |===
-|Provider| Endpoint|Region|API-Key| Deployment Name| Model
+|Provider| Endpoint|Region|API-Key
 
 |Azure OpenAI
 |

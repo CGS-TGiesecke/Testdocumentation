@@ -11,8 +11,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |		
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |		
-|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Rolle / Funktion| |				
 |Bemerkungen| |		
 |===
 ====
@@ -26,8 +25,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |		
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |		
-|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Rolle / Funktion| |			
 |Bemerkungen| |		
 |===
 ====
@@ -40,8 +38,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |		
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |		
-|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Rolle / Funktion| |				
 |Bemerkungen| |		
 |===
 ====
@@ -54,8 +51,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |		
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |		
-|Verfügbarkeit (Tage & Uhrzeiten)| |		
+|Rolle / Funktion| |				
 |Bemerkungen| |		
 |===
 ====
@@ -84,8 +80,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |	
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |
-|Verfügbarkeit| |			
+|Rolle / Funktion| |		
 |Bemerkungen| |		
 |=== 
 ====
@@ -98,8 +93,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |	
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |
-|Verfügbarkeit| |			
+|Rolle / Funktion| |			
 |Bemerkungen| |		
 |=== 
 ==== 
@@ -112,8 +106,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |Name| |	
 |E-Mail| |		
 |Telefonnummer| |		
-|Rolle / Funktion| |
-|Verfügbarkeit| |			
+|Rolle / Funktion| |			
 |Bemerkungen| |		
 |===
 ==== 
