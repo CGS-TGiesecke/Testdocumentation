@@ -4,14 +4,9 @@
 ====
 Welche Server Variante soll verwendet werden?
 |===
-|lokale VM
-|
-
-|physischer Server
-|
-
-|Cloud‑Instanz
-|
+|lokale VM|
+|physischer Server|
+|Cloud‑Instanz|
 |===
 ====
 ====
