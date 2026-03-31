@@ -1,7 +1,39 @@
 
 <<<
 
-=== Soll-Stand Server-Infrastruktur
+=== Server-Infrastruktur
+
+==== Welches Betriebssytem wird verwendet (Windows Server, Linux)
+|===
+|Bezeichnung|Version
+
+|Windows Server
+|
+
+|Linux
+|
+|===
+
+==== Welche besonderen Anforderungen existieren (DSGVO, Daten nur in EU, Support/Update Zeiten u.ä.)?
+|===
+|NrBezeichnung|Bemerkung
+
+|1
+|DSGVO
+|
+
+|2
+|Daten nur in EU
+|
+
+|3
+|Support/Update bestimmte Zeiten
+|
+
+|4
+|Sonstige
+|
+|===
 
 ==== Welche Server Variante soll verwendet werden?
 |===

@@ -25,17 +25,19 @@
 ==== Workshops / Schulungen
 
 |===
-| Datum |Verantwortlich
+|Nr| Ort|Datum |Verantwortlich
 
-|
-|
+|1|	|	|
+|2|	|	|
+|3|	|	|
 |===
 
 ==== Abschluss/Übergabe
 
 |===
-| Datum |Verantwortlich
+|Nr| Ort|Datum |Verantwortlich
 
-|
-|
+|1|	|	|
+|2|	|	|
+|3|	|	|
 |===
