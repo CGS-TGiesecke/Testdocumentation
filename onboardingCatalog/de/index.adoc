@@ -18,14 +18,14 @@
 
 include::chapters/01_ContactInfos.adoc[]
 
-include::chapters/02_TechnicalSituation.adoc[]
+include::chapters/02_OrganizationalTasks.adoc[]
+
+include::chapters/03_TechnicalSituation.adoc[]
 
 include::chapters/03_TechnicalRequirements.adoc[]
 
-include::chapters/04_TechnicalConfigurations.adoc[]
+include::chapters/05_TechnicalConfigurations.adoc[]
 
-include::chapters/05_SupplierDatas.adoc[]
-
-include::chapters/06_OrganizationalTasks.adoc[]
+include::chapters/06_SupplierDatas.adoc[]
 
 include::../../themes/contact-de.adoc[]
