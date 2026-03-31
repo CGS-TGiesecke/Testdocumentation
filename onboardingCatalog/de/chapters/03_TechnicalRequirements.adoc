@@ -34,7 +34,7 @@ Ist Unterstützung bei der Einrichtung Login-Methode notwendig?
 |===
 ====
 ====
-Welche Provider und Modelle sollen verwendet werden?
+Welche LLM Modelle/Provider sollen verwendet werden?
 |===
 |Azure OpenAI|
 |AWS Bedrock|
@@ -81,12 +81,11 @@ Welche externen Systeme sollen angebunden werden?
 | Email Server 	| API | Integration Email über SMTP				|  
 | SharePoint 	| API 	| Integration Dokumenten				| 
 | SAP 	| API 	| Integration Daten					| 
-|  	|  	| 					| 
-|  	|  	| 					| 
+| andere 	|  	| 					| THG-A
 |===
 ====
 ====
-Ist Unterstützung bei der Einrichtung externen Systeme notwendig (basic, middle, hight)?
+Ist Unterstützung bei der Einrichtung externen Systeme notwendig ?
 |===
 |Basic|
 |Enterprise|
@@ -113,7 +112,6 @@ Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle
 |Enterprise|
 |Professionell|
 |===
-====
 ====
 ====
 Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
