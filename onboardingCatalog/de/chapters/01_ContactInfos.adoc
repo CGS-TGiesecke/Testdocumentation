@@ -48,7 +48,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |===
 ====
 
-==== 
+====   
 *Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)*
 |===
 |Nr|System/Zuordnung| Name|E-Mail| Telefon|Rolle/Funktion|Bemerkungen

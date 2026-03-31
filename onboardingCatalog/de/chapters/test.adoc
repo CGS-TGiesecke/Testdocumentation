@@ -1,0 +1,29 @@
+
+Hallo
+
+++++
+<form id="dataform">
+  <input name="projektname" placeholder="Projektname"><br>
+  <input name="kunde" placeholder="Kunde"><br>
+  <input name="datum" type="date"><br>
+  <button type="button" onclick="exportForm()">Exportieren</button>
+</form>
+
+<script>
+function exportForm() {
+  const form = document.getElementById("dataform");
+  const formData = new FormData(form);
+  const obj = Object.fromEntries(formData.entries());
+
+  const blob = new Blob(
+    [JSON.stringify(obj, null, 2)],
+    { type: "application/json" }
+  );
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "formular.json";
+  a.click();
+}
+</script>
+++++
