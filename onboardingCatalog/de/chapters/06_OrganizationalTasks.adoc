@@ -1,7 +1,9 @@
 
 === Organisatorische Angaben
 
-=== Unterstützung/Hilfe 
+==== Unterstützung/Hilfe 
+
+===== Einrichtung/Installation
 
 |===
 |Level|Beschreibung
@@ -17,19 +19,41 @@
 |===
 ====
 
-* Definition Level lieferantenseitige Release Management (Hotfix)
-Wann 
-Wo
-Wie
+===== Release Management
+|===
+|Wann |
+|Wo|
+|Wie|
+|===
+
+==== Abnahmetests
+|===
+|Name|Beschreibung|Datum|Ergebnis(erfolgreich, beanstandet)
+
+|Installationstest
+|Abnahme durch It-Verantwortliche/Fachbereich
+|
+|
+
+|Akzeptanztest
+|Abnahme durch Endbenutzer/Fachbereich
+|
+|
+|===
+
 
 === Workshops / Schulungen
 
-Wann 
-Wo
-Wie
+|===
+|Wann |
+|Wo|
+|Wie|
+|===
 
 === Projektübergabemeeting
 
-Wann 
-Wo
-Wie
+|===
+|Wann |
+|Wo|
+|Wie|
+|===

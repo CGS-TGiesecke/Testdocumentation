@@ -136,3 +136,19 @@ LOKAL
 |
 |===
 ====
+====
+*Konfigurationsdaten initiale Rollen*
+|===
+|Rolle|Beschreibung| 
+
+|Admin
+|Volle Berechtigungen 
+
+|Rolle A
+|
+
+|Rolle B
+|
+
+|===
+====

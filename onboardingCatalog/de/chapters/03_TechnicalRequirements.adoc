@@ -1,79 +1,68 @@
 
 === Soll-Stand Server-Infrastruktur
 
-====
-Welche Server Variante soll verwendet werden?
+==== Welche Server Variante soll verwendet werden?
 |===
 |Physischer Server|
 |Lokale VM|
 |Cloud‑Instanz|
 |===
-====
-====
-Ist Unterstützung bei der Einrichtung Server Variante notwendig?
+
+==== Ist Unterstützung bei der Einrichtung Server Variante notwendig?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche Login-Methode soll verwendet werden?
+
+==== Welche Login-Methode soll verwendet werden?
 |===
 |OpenID Connect (SSO)|
 |SAML (SSO)|
 |Lokale Benutzer-/Passwortverwaltung|
 |===
-====
-====
-Ist Unterstützung bei der Einrichtung Login-Methode notwendig?
+
+==== Ist Unterstützung bei der Einrichtung Login-Methode notwendig?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche LLM Modelle/Provider sollen verwendet werden?
+
+==== Welche LLM Modelle/Provider sollen verwendet werden?
 |===
 |Azure OpenAI|
 |AWS Bedrock|
 |Lokale Modelle|
 |===
-====
-====
-Ist Unterstützung bei der Einrichtung LLM Modelle/Provider notwendig?
+
+==== Ist Unterstützung bei der Einrichtung LLM Modelle/Provider notwendig?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche Use Cases werden benötigt?
- +
- +
-====
-====
-Werden komplett alle Use Cases zur ersten Übergabe benötigt?
- +
- +
-====
-====
-Welches Format wird für die Übergabe der Use Cases verwendet?
- +
- +
-====
-====
-Ist Unterstützung bei Use Cases notwendig?
+
+==== Welche Art von Use Cases wird benötigt?
+|===
+|Standard|
+|Individuell|
+|ARC Standard|
+|Fachbereich Standard|
+|===
+
+==== Werden komplett alle Use Cases zur ersten Übergabe benötigt?
+
+==== Welches Format wird für die Übergabe der Use Cases verwendet?
+
+==== Ist Unterstützung bei Use Cases notwendig?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche externen Systeme sollen angebunden werden?
+
+==== Welche externen Systeme sollen angebunden werden?
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
@@ -83,43 +72,37 @@ Welche externen Systeme sollen angebunden werden?
 | SAP 	| API 	| Integration Daten					| 
 | andere 	|  	| 					| THG-A
 |===
-====
-====
-Ist Unterstützung bei der Einrichtung externen Systeme notwendig ?
+
+==== Ist Unterstützung bei der Einrichtung externen Systeme notwendig ?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche eigenen Agenten (MCP-Server) sind notwendig?
- +
- +
-====
-====
-Welche Netzwerk-Methode soll verwendet werden? 
+
+==== Welche Agenten (MCP-Server) sind notwendig?
+|===
+|Standard|
+|Kundenspezifisch|
+|===
+
+==== Welche Netzwerk-Methode soll verwendet werden? 
 |===
 |Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe)|
 |DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)|
 |ohne öffentlichen DNS (keine Portfreigabe)|
 |===
-====
-====
-Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle, hight)?
+
+==== Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig (basic, middle, hight)?
 |===
 |Basic|
 |Enterprise|
 |Professionell|
 |===
-====
-====
-Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
- +
- +
-====
-====
-Wer sind die initialen Admin-Nutzer?
- +
- +
-====
+
+==== Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
+
+==== Wer sind die initialen Admin-Nutzer?
+
+==== Welche initialen Rollen sind notwendig?
+

@@ -2,30 +2,11 @@
 === Ist-Stand Server-Infrastruktur 
 
 ==== Liegt die Betreuung der IT-Infrastruktur beim Kunden oder gibt es eine externe Betreuung?
-====
- +
- +
-====
-====
-Beschreibung des verwendeten Betriebssystems (Windows Server, Linux)
- +
- +
-====
-====
-Beschreibung der auf dem Server installierten und betriebenen Systemdienste (Webserver, Datenbank)
- +
- +
-====
-====
-Beschreibung der Virtualisierungsmethoden und Sicherheitslösungen (Firewall)
- +
- +
-====
-====
-Ist Microsoft Entra ID bereits in Verwendung?
- +
- +
-====
+==== Welche Betriebssyteme werden verwendet (Windows Server, Linux)
+==== Beschreibung der auf dem Server installierten und betriebenen Systemdienste (Webserver, Datenbank)
+==== Beschreibung der Virtualisierungsmethoden und Sicherheitslösungen (Firewall)
+==== Ist Microsoft Entra ID bereits in Verwendung?
+
 
 
 
