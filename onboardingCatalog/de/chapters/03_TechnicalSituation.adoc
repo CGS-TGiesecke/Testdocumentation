@@ -3,7 +3,10 @@
 
 ==== Liegt die Betreuung der IT-Infrastruktur beim Kunden oder gibt es eine externe Betreuung?
 ==== Welche Betriebssyteme werden verwendet (Windows Server, Linux)
-==== Ist Microsoft Entra ID bereits in Verwendung?
+==== Ist bereits eine Authentifizierung in Verwendung?
+==== Ist Microsoft Entra ID in Verwendung?
+==== Welche besonderen Anforderungen existieren (DSGVO, Daten nur in EU, Support/Update Zeiten u.ä.)?
+
 
 
 

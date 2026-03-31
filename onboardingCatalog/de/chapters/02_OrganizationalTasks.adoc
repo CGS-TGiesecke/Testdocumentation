@@ -3,21 +3,6 @@
 
 ==== Unterstützung/Hilfe 
 
-===== Einrichtung/Installation
-
-|===
-|Level|Beschreibung
-
-|Basic
-|Kurze Rückfrage per Mail oder Telefon
-
-|Enterprise
-|Mehrere Telkos und Mails
-
-|Professionell
-|fast täglich Telkos oder Mails, Step by Step Anleitung
-|===
-
 ===== Release Management
 
 |===
@@ -60,9 +45,12 @@
 ==== Workshops / Schulungen
 
 |===
-|Wann |
-|Wo|
-|Wie|
+| Bezeichnung|Wann ||Wo||Wie|
+
+|Einführung
+|
+|
+|
 |===
 
 ==== Abschluss/Übergabe

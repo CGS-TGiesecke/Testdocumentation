@@ -10,13 +10,6 @@
 |Cloud‑Instanz|
 |===
 
-==== Ist Unterstützung bei der Einrichtung Server Variante notwendig?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
-|===
-
 ==== Welche Login-Methode soll verwendet werden?
 |===
 |OpenID Connect (SSO)|
@@ -24,76 +17,40 @@
 |Lokale Benutzer-/Passwortverwaltung|
 |===
 
-==== Ist Unterstützung bei der Einrichtung Login-Methode notwendig?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
-|===
-
-==== Welche LLM Modelle/Provider sollen verwendet werden?
+==== Welche LLM Provider sollen verwendet werden?
 |===
 |Azure OpenAI|
 |AWS Bedrock|
 |Lokale Modelle|
 |===
 
-==== Ist Unterstützung bei der Einrichtung LLM Modelle/Provider notwendig?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
-|===
-
 ==== Welche Art von Use Cases wird benötigt?
 |===
 |Standard|
-|Fachbereich Standard|
+|Revision Standard|
 |Individuell|
 |===
 
-==== Wann werden welche Use Cases benötigt?
+==== Welche Form der Übergabe von Use Cases Beschreibungen?
 |===
-| Anzahl|Datum Lieferung
-
-|1-10
-|
-
-|11-20
-|
-
-|alle
-|zur ersten Übergabe 
-|===
-==== Ist Unterstützung bei Erstellung der Use Cases notwendig?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
+|Form|Kontaktadresse
+|Per Mail und Mail Anhang|
 |===
 
 ==== Welche externen Systeme sollen angebunden werden?
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
-| Active Directory 	| LDAP	| Authentifizierung Benutzer aus AD |  
 | Email Server 	| API | Integration Email über SMTP				|  
 | SharePoint 	| API 	| Integration Dokumenten				| 
 | SAP 	| API 	| Integration Daten					| 
 | andere 	|  	| 					| 
 |===
 
-==== Ist Unterstützung bei der Einrichtung externen Systeme notwendig ?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
-|===
-
 ==== Welche Agenten (MCP-Server) sind notwendig?
 |===
 |Standard|
-|Fachbereich Standard|
+|Revision Standard|
 |Individuell|
 |===
 
@@ -104,33 +61,56 @@
 |ohne öffentlichen DNS (keine Portfreigabe)|
 |===
 
-==== Ist Unterstützung bei der Einrichtung Netzwerk-Methode notwendig?
-|===
-|Basic|
-|Enterprise|
-|Professionell|
-|===
-
 ==== Welche Lizenz ist erforderlich ?
 |===
 |Anzahl|Gültig von|Laufzeit (in Monaten)
 
 |50
-|01.01.2026
-|24 Monate
+|
+|
 |===
 
 ==== Werden mehr als ein initialer Admin-Nutzer benötigt?
 |===
-|Nein|
-|Ja|
-|Anzahl|
+|Variante|Name|Wert/ID 
+
+|OIDC
+|ADMIN_USER_1
+|
+
+|OIDC
+|ADMIN_USER_2
+|
+
+|SAML
+|ADMIN_USER_1
+|
+
+|SAML
+|ADMIN_USER_2
+|
+
+|LOKAL
+|ADMIN_USER_1
+|
+
+|LOKAL
+|ADMIN_USER_2
+|
 |===
 
 ==== Werden initiale Rollen benötigt?
 |===
-|Nein|
-|Ja|
-|Anzahl|
+|Rolle|Beschreibung 
+
+|Admin
+|Volle Berechtigungen 
+
+|Rolle A
+|
+
+|Rolle B
+|
+
 |===
 
