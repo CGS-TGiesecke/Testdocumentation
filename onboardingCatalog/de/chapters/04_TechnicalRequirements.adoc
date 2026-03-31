@@ -112,8 +112,25 @@
 |===
 
 ==== Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
+|===
+|Anzahl|Gültig von|Laufzeit (in Monaten)
+
+|50
+|12 Monate
+|
+|===
 
 ==== Werden mehr als ein initialer Admin-Nutzer benötigt?
+|===
+|Nein|
+|Ja|
+|Anzahl|
+|===
 
 ==== Werden initiale Rollen benötigt?
+|===
+|Nein|
+|Ja|
+|Anzahl|
+|===
 
