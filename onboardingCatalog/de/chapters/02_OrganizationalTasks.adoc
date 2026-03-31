@@ -34,10 +34,9 @@
 |Fehler
 |Show stopper
 |
-
 |===
 
-==== Tests/Abnahmen
+==== Test/Abnahme
 |===
 |Name|Beschreibung|Datum|Ergebnis (erfolgreich, beanstandet)
 

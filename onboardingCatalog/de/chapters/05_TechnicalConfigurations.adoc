@@ -3,7 +3,7 @@
 
 === Erforderliche Konfigurationsdaten
 
-==== Konfigurationsdaten Server Variante
+==== Konfiguration Server Variante
 |===
 |Hostname|IP Adresse|BS|BS Version|CPU|RAM(GB)|Speicher(GB)|Satndort
 
@@ -17,7 +17,7 @@
 |
 |===
 
-==== Konfigurationsdaten SHARED_FOLDER
+==== Konfiguration SHARED_FOLDER
 |===
 |Name|Path 
 
@@ -25,7 +25,7 @@
 |
 |===
 
-==== Konfigurationsdaten Login-Methode
+==== Konfiguration Login-Methode
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets
 
@@ -43,7 +43,7 @@
 
 |===
 
-==== Konfigurationsdaten LLM-Provider
+==== Konfiguration LLM-Provider
 |===
 |Provider| Endpoint|Region|API-Key| Deployment Name| Model
 
@@ -69,7 +69,7 @@
 |
 |===
 
-==== Konfigurationsdaten externe Systeme
+==== Konfiguration externe Systeme
 |===
 |Variante|Mandant-ID|Client-ID|Redirect‑URI|Client-Secrets|Object ID
 
@@ -88,7 +88,7 @@
 |
 |===
 
-==== Konfigurationsdaten Netzwerk 
+==== Konfiguration Netzwerk 
 |===
 |Domain|Port http|Port https |Firewall|Proxy erforderl.|Proxy Konfiguration|Zertifikate
 
@@ -101,7 +101,7 @@
 |
 |===
 
-==== Konfigurationsdaten initiale Admin User
+==== Konfiguration initiale Admin User
 |===
 |Variante|Name|Wert/ID 
 
@@ -130,7 +130,7 @@
 |
 |===
 
-==== Konfigurationsdaten initiale Rollen
+==== Konfiguration initiale Rollen
 |===
 |Rolle|Beschreibung 
 

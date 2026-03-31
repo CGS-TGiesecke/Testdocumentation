@@ -111,13 +111,13 @@
 |Professionell|
 |===
 
-==== Welche Lizenz ist erforderlich (Anzahl Nutzer, Gültigkeit von/bis)?
+==== Welche Lizenz ist erforderlich ?
 |===
 |Anzahl|Gültig von|Laufzeit (in Monaten)
 
 |50
-|12 Monate
-|
+|01.01.2026
+|24 Monate
 |===
 
 ==== Werden mehr als ein initialer Admin-Nutzer benötigt?
