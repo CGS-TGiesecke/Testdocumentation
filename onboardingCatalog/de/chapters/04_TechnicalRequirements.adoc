@@ -1,4 +1,6 @@
 
+<<<
+
 === Soll-Stand Server-Infrastruktur
 
 ==== Welche Server Variante soll verwendet werden?
@@ -63,7 +65,7 @@
 |alle
 |zur ersten Übergabe 
 |===
-==== Ist Unterstützung bei ERstellung der Use Cases notwendig?
+==== Ist Unterstützung bei Erstellung der Use Cases notwendig?
 |===
 |Basic|
 |Enterprise|

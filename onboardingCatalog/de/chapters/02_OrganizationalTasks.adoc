@@ -15,26 +15,43 @@
 |Mehrere Telkos und Mails
 
 |Professionell
-|täglich Telkos oder Mails, Step by Step Anleitung
+|fast täglich Telkos oder Mails, Step by Step Anleitung
 |===
 
 ===== Release Management
+
 |===
-|Wann |
-|Wo|
-|Wie|
+|Name|Beschreibung|
+
+|Verbesserung
+|Funktionsverbesserungen
+|
+
+|Fehler 
+|Normal
+|
+
+|Fehler
+|Show stopper
+|
+
 |===
 
-==== Abnahmetests
+==== Tests/Abnahmen
 |===
 |Name|Beschreibung|Datum|Ergebnis (erfolgreich, beanstandet)
+
+|Akzeptanztest
+|Abnahme durch Endbenutzer/Fachbereich
+|
+|
 
 |Installationstest
 |Abnahme durch IT-Verantwortliche/Fachbereich
 |
 |
 
-|Endabnahmetest
+|Endabnahme
 |Abnahme durch Endbenutzer/Fachbereich
 |
 |
@@ -49,7 +66,7 @@
 |Wie|
 |===
 
-==== Projektübergabe
+==== Abschluss/Übergabe
 
 |===
 |Wann |

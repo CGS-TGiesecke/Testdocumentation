@@ -1,13 +1,11 @@
 
 
-=== Support und Aktualisierungen 
+=== Support und Updates 
 
-====
-Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? + 
+==== Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Unterstützung benötigt wird? + 
 include::../../../themes/support-de.adoc[]
-====
 
-====
-Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Update benötigt werden? +
+
+==== Wer steht als lieferantenseitige Kontaktperson zur Verfügung, wenn Updates benötigt werden? +
 include::../../../themes/support-de.adoc[]
-====
+

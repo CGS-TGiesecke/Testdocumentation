@@ -1,8 +1,10 @@
 
+<<<
+
 === Erforderliche Konfigurationsdaten
 
+.Konfigurationsdaten Server Variante
 ====
-*Konfigurationsdaten Server Variante*
 |===
 |Hostname|IP Adresse|BS|BS Version|CPU|RAM(GB)|Speicher(GB)|Satndort
 
@@ -108,7 +110,7 @@
 ====
 *Konfigurationsdaten initiale Admin User*
 |===
-|Variante|Name|Wert 
+|Variante|Name|Wert/ID 
 
 |OIDC
 |ADMIN_USER_1
@@ -130,7 +132,7 @@
 |ADMIN_USER_1
 |
 
-LOKAL
+|LOKAL
 |ADMIN_USER_2
 |
 |===
