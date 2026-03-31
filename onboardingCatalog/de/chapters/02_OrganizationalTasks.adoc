@@ -45,10 +45,8 @@
 ==== Workshops / Schulungen
 
 |===
-| Bezeichnung|Wann ||Wo||Wie|
+| Datum |Verantwortlich
 
-|Einführung
-|
 |
 |
 |===
@@ -56,7 +54,8 @@
 ==== Abschluss/Übergabe
 
 |===
-|Wann |
-|Wo|
-|Wie|
+| Datum |Verantwortlich
+
+|
+|
 |===

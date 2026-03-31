@@ -63,38 +63,20 @@
 
 ==== Welche Lizenz ist erforderlich ?
 |===
-|Anzahl|Gültig von|Laufzeit (in Monaten)
+|Anzahl User|Gültig ab|Laufzeit (in Monaten)
 
 |50
 |
 |
 |===
 
-==== Werden mehr als ein initialer Admin-Nutzer benötigt?
+==== Welche initialer Admin-Nutzer werden benötigt?
 |===
-|Variante|Name|Wert/ID 
+|Name|Beschreibung 
 
-|OIDC
 |ADMIN_USER_1
 |
 
-|OIDC
-|ADMIN_USER_2
-|
-
-|SAML
-|ADMIN_USER_1
-|
-
-|SAML
-|ADMIN_USER_2
-|
-
-|LOKAL
-|ADMIN_USER_1
-|
-
-|LOKAL
 |ADMIN_USER_2
 |
 |===
