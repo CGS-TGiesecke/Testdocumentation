@@ -4,69 +4,58 @@
 Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit "n/a" markiert werden.
 
 ==== 
-*Primärer Ansprechpartner (Business / Projekt)*
+*Primärer Ansprechpartner (Business/Projekt)*
 |===
-| |  1. Person| Vertretung 
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
 
-|Name| |		
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |				
-|Bemerkungen| |		
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |===
 ====
 
 
 ==== 
-*Technischer Ansprechpartner (IT / Infrastruktur)*
+*Technischer Ansprechpartner (IT/Infrastruktur)*
 |===
-| |  1. Person| Vertretung 
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
 
-|Name| |		
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |			
-|Bemerkungen| |		
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |===
 ====
 
 ==== 
-*Ansprechpartner für Abrechnung (Billing / Finance)*
+*Ansprechpartner für Abrechnung (Billing/Finanz)*
 |===
-| |  1. Person| Vertretung 
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
 
-|Name| |		
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |				
-|Bemerkungen| |		
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |===
 ====
 
 ==== 
 *Ansprechpartner für Support (Operativer Betrieb)*
 |===
-| |  1. Person| Vertretung 
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
 
-|Name| |		
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |				
-|Bemerkungen| |		
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |===
 ====
 
 ==== 
 *Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)*
 |===
-| |  1. Person| Vertretung 
+|Nr|System/Zuordnung| Name|E-Mail| Telefon|Rolle/Funktion|Bemerkungen
 
-|System / Zuordnung| |	
-|Name| |	
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |			
-|Bemerkungen| |		
+|1|	|	|	|	|	|	|
+|2|	|	|	|	|	|	|
+|3|	|	|	|	|	|	|	
 |===
 ====
 
@@ -75,38 +64,32 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 ====
 *Level 1 – Geringste Eskalationsstufe*
 |===
-| |  1. Person| Vertretung 
-	
-|Name| |	
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |		
-|Bemerkungen| |		
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
+
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |=== 
 ====
 
 ====
 *Level 2 – Mittlere Eskalationsstufe*
 |===
-| |  1. Person| Vertretung 
-	
-|Name| |	
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |			
-|Bemerkungen| |		
-|=== 
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
+
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
+|===
 ==== 
 
 ====
 *Level 3 – Höchste Eskalationsstufe*
 |===
-| |  1. Person| Vertretung 
-	
-|Name| |	
-|E-Mail| |		
-|Telefonnummer| |		
-|Rolle / Funktion| |			
-|Bemerkungen| |		
+| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
+
+|1|	|	|	|	|	
+|2|	|	|	|	|	
+|3|	|	|	|	|			
 |===
 ==== 

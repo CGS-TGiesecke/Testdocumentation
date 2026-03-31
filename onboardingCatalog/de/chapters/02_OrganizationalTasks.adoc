@@ -1,26 +1,6 @@
 
 === Organisatorische Angaben
 
-==== Unterstützung/Hilfe 
-
-===== Release Management
-
-|===
-|Name|Beschreibung|
-
-|Verbesserung
-|Funktionsverbesserungen
-|
-
-|Fehler 
-|Normal
-|
-
-|Fehler
-|Show stopper
-|
-|===
-
 ==== Test/Abnahme
 |===
 |Name|Beschreibung|Datum|Ergebnis (erfolgreich, beanstandet)
