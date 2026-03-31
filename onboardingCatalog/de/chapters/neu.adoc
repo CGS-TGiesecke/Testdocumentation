@@ -92,14 +92,11 @@ Gewünschte Variante:
 Pfad Zertifikat: ______________________
 Pfad Key: ____________________________
 
-
-
 ✅ 4.4 Firewall / Proxy
 
 Nutzt das Unternehmen Proxy? ☐ Ja ☐ Nein
 
 Wenn Ja → Proxy-URL: __________________________
-
 
 SSL-Inspection aktiv? ☐ Ja ☐ Nein
 Ausgehende Verbindungen zu LLM‑Provider erlaubt?
@@ -107,9 +104,6 @@ Ausgehende Verbindungen zu LLM‑Provider erlaubt?
 ☐ Azure OpenAI
 ☐ AWS Bedrock
 ☐ lokaler Endpoint
-
-
-
 
 5. Authentifizierung (eine oder mehrere Optionen)
 CGS Assist unterstützt drei Varianten: [IT_HANDBOO...31.03.2026 | PDF]
