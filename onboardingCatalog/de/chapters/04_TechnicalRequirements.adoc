@@ -16,7 +16,7 @@
 
 ==== Welche besonderen Anforderungen existieren (DSGVO, Daten nur in EU, Support/Update Zeiten u.ä.)?
 |===
-|NrBezeichnung|Bemerkung
+|Nr|Bezeichnung|Bemerkung
 
 |1
 |DSGVO
@@ -56,17 +56,11 @@
 |Lokale Modelle|
 |===
 
-==== Welche Art von Use Cases wird benötigt?
+==== Welche Netzwerk-Methode soll verwendet werden? 
 |===
-|Standard|
-|Revision Standard|
-|Individuell|
-|===
-
-==== Welche Form der Übergabe von Use Cases Beschreibungen?
-|===
-|Form|Kontaktadresse
-|Per Mail und Mail Anhang|
+|Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe)|
+|DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)|
+|ohne öffentlichen DNS (keine Portfreigabe)|
 |===
 
 ==== Welche externen Systeme sollen angebunden werden?
@@ -74,7 +68,7 @@
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
 | Email Server 	| API | Integration Email über SMTP				|  
-| SharePoint 	| API 	| Integration Dokumenten				| 
+| SharePoint 	| API 	| Integration Dokumente				| 
 | SAP 	| API 	| Integration Daten					| 
 | andere 	|  	| 					| 
 |===
@@ -86,11 +80,17 @@
 |Individuell|
 |===
 
-==== Welche Netzwerk-Methode soll verwendet werden? 
+==== Welche Art von Use Cases wird benötigt?
 |===
-|Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe)|
-|DNS‑01 (öffentlich trusted, ohne Freigabe 80/443)|
-|ohne öffentlichen DNS (keine Portfreigabe)|
+|Standard|
+|Revision Standard|
+|Individuell|
+|===
+
+==== Welche Form der Übergabe von Use Cases Beschreibungen?
+|===
+|Form|Empfänger
+|Per Mail|
 |===
 
 ==== Welche Lizenz ist erforderlich ?

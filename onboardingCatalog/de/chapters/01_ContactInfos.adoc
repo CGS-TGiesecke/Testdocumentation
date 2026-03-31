@@ -53,9 +53,9 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |===
 |Nr|System/Zuordnung| Name|E-Mail| Telefon|Rolle/Funktion|Bemerkungen
 
-|1|	|	|	|	|	|	|
-|2|	|	|	|	|	|	|
-|3|	|	|	|	|	|	|	
+|1|	|	|	|	|	|
+|2|	|	|	|	|	|
+|3|	|	|	|	|	|	
 |===
 ====
 
