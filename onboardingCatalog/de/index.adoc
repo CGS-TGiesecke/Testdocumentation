@@ -8,10 +8,10 @@
 :toc-mode: offcanvas
 :toc-mode: responsive
 :toc-title: Inhaltsverzeichnis
-:toclevels: 15
+:toclevels: 5
 :imagesdir: image
 :sectnums:
-:sectnumlevels: 15
+:sectnumlevels: 5
 :application: {application}
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}

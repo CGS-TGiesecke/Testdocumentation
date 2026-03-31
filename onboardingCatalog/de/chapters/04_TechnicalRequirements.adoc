@@ -3,7 +3,7 @@
 
 === Server-Infrastruktur
 
-==== Welches Betriebssytem wird verwendet (Windows Server, Linux)
+==== Welches Betriebssytem wird verwendet?
 |===
 |Bezeichnung|Version
 
@@ -14,7 +14,7 @@
 |
 |===
 
-==== Welche besonderen Anforderungen existieren (DSGVO, Daten nur in EU, Support/Update Zeiten u.ä.)?
+==== Welche besonderen Anforderungen existieren?
 |===
 |Nr|Bezeichnung|Bemerkung
 
@@ -90,6 +90,7 @@
 ==== Welche Form der Übergabe von Use Cases Beschreibungen?
 |===
 |Form|Empfänger
+
 |Per Mail|
 |===
 
@@ -98,6 +99,14 @@
 |Anzahl User|Gültig ab|Laufzeit (in Monaten)
 
 |50
+|
+|
+
+|100
+|
+|
+
+|150
 |
 |
 |===
