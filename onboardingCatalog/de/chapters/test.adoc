@@ -10,20 +10,52 @@ Hallo
 </form>
 
 <script>
+
+/* -------- JSON EXPORT -------- */
 function exportForm() {
   const form = document.getElementById("dataform");
   const formData = new FormData(form);
   const obj = Object.fromEntries(formData.entries());
 
-  const blob = new Blob(
-    [JSON.stringify(obj, null, 2)],
-    { type: "application/json" }
-  );
+  const blob = new Blob([JSON.stringify(obj, null, 2)], {
+    type: "application/json"
+  });
 
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "formular.json";
   a.click();
 }
+
+/* -------- JSON IMPORT -------- */
+function importForm(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      fillForm(data);
+      alert("Daten erfolgreich geladen!");
+    } catch (err) {
+      alert("Ungültige JSON-Datei!");
+    }
+  };
+  reader.readAsText(file);
+}
+
+/* -------- Formularfelder befüllen -------- */
+function fillForm(data) {
+  const form = document.getElementById("dataform");
+
+  for (const [key, value] of Object.entries(data)) {
+    const field = form.querySelector(`[name="${key}"]`);
+    if (field) {
+      field.value = value;
+    }
+  }
+}
+
 </script>
 ++++
