@@ -18,7 +18,9 @@
 
 include::chapters/01_ContactInfos.adoc[]
 
-include::chapters/02_OrganizationalTasks.adoc[]
+include::chapters/02_Escalation.adoc[]
+
+include::chapters/03_OrganizationalTasks.adoc[]
 
 include::chapters/04_TechnicalRequirements.adoc[]
 
