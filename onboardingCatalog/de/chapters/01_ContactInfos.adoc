@@ -6,12 +6,10 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 ==== 
 *Primäre Ansprechpartner*
 |===
-| |Name|E-Mail|Telefon|Bemerkungen
+|Rolle/Funktion |Name|E-Mail|Telefon|Bemerkungen
 
-|Business/Projekt|	|	|	|		
-|IT/Infrastruktur|	|	|	|		
-|Billing/Finanz|	|	|	|	
-|Operativer Betrieb|	|	|	|		
+|	|	|	|	|		
+		
 |===
 ====
 

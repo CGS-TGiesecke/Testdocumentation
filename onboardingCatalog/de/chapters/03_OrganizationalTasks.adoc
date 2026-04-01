@@ -1,48 +1,97 @@
 
 <<<
 
-=== Organisatorische Angaben
+=== Organisatorisches
 
+==== Zeitplan
 ====
-*Workshops / Schulungen*
 |===
-|	|Datum geplant|Beschreibung
+|	|Datum geplant|Kommentar
 
-|Start
+|Workshops / Schulungen
+|
+|
+
+|ntegration Use Cases
+|
+|
+
+|Technische Installation
+|
+|
+
+|Abschluss / Übergabe
 |
 |
 |===
 ====
 
-====
-*Integration Use Cases*
-|===
-|	|Datum geplant|Beschreibung
+==== Welches Betriebssytem wird verwendet?
+===
+Windows Server / Linux
+ +
+===
 
-|Start
-|
-|
-|===
-====
+==== Welche besonderen Anforderungen existieren?
+===
+ +
+ +
+===
 
-====
-*Technische Installation*
-|===
-|	|Datum geplant|Beschreibung
+==== Welche Server Variante soll verwendet werden?
+===
+On-Premise / Cloud‑Instanz
+ +
+===
 
-|Start
-|
-|
-|===
-====
+==== Welche Login-Methode soll verwendet werden?
+===
+OpenID Connect (SSO) / SAML (SSO) / Lokale Benutzer-/Passwortverwaltung
+===
 
-====
-*Abschluss / Übergabe*
-|===
-|	|Datum geplant|Beschreibung
+==== Welche LLM Provider sollen verwendet werden?
+===
+Azure OpenAI +
+AWS Bedrock +
+Lokale Modelle +
+===
 
-|Start
+==== Welche Netzwerk-Methode soll verwendet werden? 
+===
+Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
+DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
+ohne öffentlichen DNS (keine Portfreigabe) +
+===
+
+==== Welche externen Systeme sollen angebunden werden?
+|===
+| System | Integrationstyp | Beschreibung | Erforderlich 
+
+| Email Server 	| API | Integration Email über SMTP				|  
+| SharePoint 	| API 	| Integration Dokumente				| 
+| andere 	|  	| 					| 
+|===
+
+
+==== Welche Lizenz ist erforderlich?
+|===
+|Anzahl User|Gültig ab|Laufzeit (in Jahren)
+
+|
 |
 |
 |===
-====
+
+==== Welche initialen Admin-Nutzer werden benötigt (falls bekannt)?
+|===
+|Name|Beschreibung 
+
+|ADMIN_USER_1
+|
+
+|ADMIN_USER_2
+|
+|===
+
+
+

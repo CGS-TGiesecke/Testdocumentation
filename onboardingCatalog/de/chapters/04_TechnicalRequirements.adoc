@@ -1,8 +1,6 @@
 
 <<<
 
-=== Server-Infrastruktur
-
 ==== Welches Betriebssytem wird verwendet?
 |===
 |Bezeichnung|Version
