@@ -1,190 +1,197 @@
-1. Allgemeine Unternehmensdaten
-1.1 Ansprechpartner Projektleitung
 
-Name: ____________________________________
-Position/Funktion: __________________________
-E-Mail: ____________________________________
-Telefon: ___________________________________
+=== Allgemeine Unternehmensdaten
 
-1.2 Technischer Ansprechpartner
+==== Ansprechpartner Projektleitung
 
-Name: ____________________________________
-E-Mail: ____________________________________
-Telefon: ___________________________________
+|===
+|Name|
+|Position/Funktion|
+|E-Mail|
+|Telefon|
+|===
 
-1.3 Unternehmensinformationen
+==== Technischer Ansprechpartner
 
-Firmenname: _______________________________
-Standort / Rechenzentrum / Cloud-Provider: ______________________
+|===
+|Name|
+|Position/Funktion|
+|E-Mail|
+|Telefon|
+|===
 
+==== Unternehmensinformationen
 
-2. Auswahl des LLM‑Providers (eine Option auswählen)
-(CGS Assist liefert keine Modelle mit, Provider muss vom Kunden bereitgestellt werden)  [IT_HANDBOO...31.03.2026 | PDF]
-✅ Option A – Azure OpenAI (empfohlen)
+|===
+|Firmenname|
+|Standort / Rechenzentrum / Cloud-Provider|
+|===
 
-☐ Azure Subscription vorhanden
-☐ Azure OpenAI Ressource erstellt
-☐ Modell deployed (z. B. gpt-4o / gpt‑4o‑mini)
-☐ API-Key bereitgestellt
-☐ Endpoint bereitgestellt
-Region: ____________________________
+=== Auswahl des LLM‑Providers (eine Option auswählen)
 
-✅ Option B – AWS Bedrock
+CGS Assist liefert keine Modelle mit, Provider muss vom Kunden bereitgestellt werden
 
-☐ AWS Konto vorhanden
-☐ Zugriff auf Bedrock aktiviert
-☐ IAM Credentials vorhanden
-☐ Gewähltes Modell (z. B. Claude Sonnet / Haiku): ___________________
+*Option A – Azure OpenAI*
+|===
+|gewählt|
+|Azure Subscription vorhanden|
+|Azure OpenAI Ressource erstellt|
+|Modell deployed (z. B. gpt-4o / gpt‑4o‑mini)|
+|API-Key bereitgestellt|
+|Endpoint bereitgestellt|
+|Region|
+|===
 
-✅ Option C – Lokale Modelle (Ollama / vLLM / LM Studio)
+*Option B – AWS Bedrock*
+|===
+|gewählt|
+|AWS Konto vorhanden|
+|Zugriff auf Bedrock aktiviert|
+|IAM Credentials vorhanden|
+|Gewähltes Modell (z. B. Claude Sonnet / Haiku)|
+|===
 
-☐ GPU‑Server vorhanden
-☐ Lokale OpenAI-kompatible API lauffähig
-☐ Modell bereitgestellt (z. B. Llama, Qwen, Mistral)
-Endpoint‑URL: ________________________
+*Option C – Lokale Modelle*
+|===
+|gewählt|
+|GPU‑Server vorhanden|
+|Lokale OpenAI-kompatible API lauffähig|
+|Modell bereitgestellt (z. B. Llama, Qwen, Mistral)|
+|Endpoint‑URL|
+|===
 
+=== Infrastruktur für CGS Assist
 
-3. Infrastruktur für CGS Assist
-CGS Assist läuft in Docker‑Containern auf einem Linux-Server. [IT_HANDBOO...31.03.2026 | PDF]
-✅ 3.1 Server / VM
+CGS Assist läuft in Docker‑Containern auf einem Linux-Server.
 
-Betriebssystem (bevorzugt Ubuntu 24.04 LTS): ____________________
-CPU/RAM (Entry/Mid/High-Tier entsprechend Datenvolumen) vorhanden?
+==== Server / VM
+|===
+|Betriebssystem (bevorzugt Ubuntu 24.04 LTS)|
+|CPU/RAM (Entry/Mid/High-Tier entsprechend Datenvolumen) vorhanden|
+|Dokumentgrößen geplant| □ bis 100 MB □ bis 5 GB □ >5 GB
+|===
 
-Dokumentgrößen geplant: □ bis 100 MB □ bis 5 GB □ >5 GB
+==== Docker Umgebung
+|===
+|Docker Engine >2.x installiert|
+|Docker Datenverzeichnis ausreichend groß (>20 GB)|
+|===
 
+==== SHARED_FOLDER
+Wird für Datenbank, Dokumente, Konfiguration, Embeddings benötigt
+|=== 
+|Pfad zum Verzeichnis|
+|Lese-/Schreibrechte gegeben|
+|Speicherwachstum berücksichtigt|
+|===
 
-Speicherplatz verfügbar (250 GB – 2 TB je nach Tier): ☐ Ja ☐ Nein
+=== Netzwerk, Firewall & DNS
 
-✅ 3.2 Docker Umgebung
+==== Erforderliche Ports
+|===
+|Port 80 (HTTP, für Let’s Encrypt Challenge) verfügbar?| ☐ Ja ☐ Nein
+|Port 443 (HTTPS, produktiver Zugriff) verfügbar?| ☐ Ja ☐ Nein
+|Port 8000 (Testbetrieb) verfügbar?| ☐ Ja ☐ Nein
+|===
+==== DNS-Konfiguration
+|=== 
+|FQDN (z. B. assist.<firma>.de)| 
+|A‑Record zeigt auf Server-IP?| ☐ Ja ☐ Nein
+|===
 
-☐ Docker Engine >2.x installiert
-☐ Docker Datenverzeichnis ausreichend groß (>20 GB)
-☐ Docker‑Compose verfügbar (optional)
-
-✅ 3.3 SHARED_FOLDER
-(wird für Datenbank, Dokumente, Konfiguration, Embeddings benötigt) 
-Pfad zum Verzeichnis: ____________________________________ [IT_HANDBOO...31.03.2026 | PDF]
-
-☐ Lese-/Schreibrechte gegeben
-☐ Speicherwachstum berücksichtigt
-
-
-4. Netzwerk, Firewall & DNS
-✅ 4.1 Erforderliche Ports
-
-Port 80 (HTTP, für Let’s Encrypt Challenge) verfügbar? ☐ Ja ☐ Nein
-Port 443 (HTTPS, produktiver Zugriff) verfügbar? ☐ Ja ☐ Nein
-Port 8000 (Testbetrieb) verfügbar? ☐ Ja ☐ Nein
-
-✅ 4.2 DNS-Konfiguration
-
-FQDN (z. B. assist.<firma>.de): _________________________</firma>
-A‑Record zeigt auf Server-IP? ☐ Ja ☐ Nein
-
-✅ 4.3 TLS / Zertifikate
+==== TLS / Zertifikate
 Gewünschte Variante:
+|===
+|Automatisches TLS über Caddy + Let’s Encrypt| 
+|DNS‑01 Challenge| Provider:
+|Eigene Zertifikate (Fullchain + Key)|
+|Pfad Zertifikat|
+|Pfad Key|
+|===
 
-☐ Automatisches TLS über Caddy + Let’s Encrypt [IT_HANDBOO...31.03.2026 | PDF]
-☐ DNS‑01 Challenge (Provider: __________________)
-☐ Eigene Zertifikate (Fullchain + Key)
+==== Firewall / Proxy
+|===
+|Nutzt das Unternehmen Proxy?| ☐ Ja ☐ Nein
+|Wenn Ja → Proxy-URL|
+|SSL-Inspection aktiv?| ☐ Ja ☐ Nein
+|Ausgehende Verbindungen zu LLM‑Provider erlaubt?|
+|Azure OpenAI|
+|AWS Bedrock|
+|lokaler Endpoint|
+|===
 
-Pfad Zertifikat: ______________________
-Pfad Key: ____________________________
+=== Authentifizierung (eine oder mehrere Optionen)
 
-✅ 4.4 Firewall / Proxy
+CGS Assist unterstützt drei Varianten:
 
-Nutzt das Unternehmen Proxy? ☐ Ja ☐ Nein
+==== OpenID Connect (MS Entra ID)
+|===
+|Tenant ID|
+|Client ID|
+|Client Secret|
+|Redirect URI|
+|===
 
-Wenn Ja → Proxy-URL: __________________________
+==== SAML (MS Entra ID)
+|===
+|Tenant ID|
+|Client ID|
+|Client Secret|
+|Redirect URI|
+|===
 
-SSL-Inspection aktiv? ☐ Ja ☐ Nein
-Ausgehende Verbindungen zu LLM‑Provider erlaubt?
+==== Lokale Benutzerverwaltung
+|===
+|Gewünscht|
+|Rollen/Berechtigungen vom Kunden verwaltet?| ☐ Ja ☐ Nein
+|===
 
-☐ Azure OpenAI
-☐ AWS Bedrock
-☐ lokaler Endpoint
+=== Externe Integrationen (optional)
 
-5. Authentifizierung (eine oder mehrere Optionen)
-CGS Assist unterstützt drei Varianten: [IT_HANDBOO...31.03.2026 | PDF]
-✅ 5.1 OpenID Connect (MS Entra ID)
+==== SharePoint Integration
+(ermöglicht automatisierten Zugriff auf Dokumente) 
+|===
+|Gewünscht|
+|Tenant ID|
+|Client ID|
+|Client Secret|
+|Welche Sites sollen angebunden werden?|
+|===
 
-Tenant ID: ____________________
-Client ID: ____________________
-Client Secret: _________________
-Redirect URI: _________________
+==== E-Mail Integration (Microsoft Graph)
+(z. B. für KI‑Auswertung von E-Mails) 
+|===
+|Gewünscht|
+|Tenant ID|
+|Client ID|
+|Client Secret + Secret ID|
+|Redirect URI|
+|Object ID|
+|==
 
-✅ 5.2 SAML (MS Entra ID)
+=== Datenschutz & Compliance
+==== Datenhaltung
+|===
+|Sind DSGVO-Anforderungen erfüllt?|☐ Ja ☐ Nein
+|Nutzung eines Cloud‑LLM erlaubt?|☐ Ja (Azure/AWS)
+|lokales Modell erforderlich|
+|===
 
-Tenant ID: ____________________
-Client ID: ____________________
-Client Secret: _________________
-Redirect URI: _________________
+==== Protokollierung & Logs
+|===
+|Dürfen technische Logs auf dem Server gespeichert werden?| ☐ Ja ☐ Nein
+|Gibt es besondere Vorgaben zur Aufbewahrung?|
+|===
 
-✅ 5.3 Lokale Benutzerverwaltung
+=== Betrieb & Verantwortlichkeiten
 
-☐ Gewünscht
-Rollen/Berechtigungen vom Kunden verwaltet? ☐ Ja ☐ Nein
-
-
-6. Externe Integrationen (optional)
-✅ 6.1 SharePoint Integration
-(ermöglicht automatisierten Zugriff auf Dokumente)  [IT_HANDBOO...31.03.2026 | PDF]
-
-☐ Gewünscht
-Tenant ID: _______________________
-Client ID: ________________________
-Client Secret: ____________________
-Welche Sites sollen angebunden werden?
-
-
-
-✅ 6.2 E-Mail Integration (Microsoft Graph)
-(z. B. für KI‑Auswertung von E-Mails)  [IT_HANDBOO...31.03.2026 | PDF]
-
-☐ Gewünscht
-Tenant ID: _______________________
-Client ID: ________________________
-Client Secret + Secret ID: _________
-Redirect URI: _____________________
-Object ID: ________________________
-
-
-7. Datenschutz & Compliance
-✅ 7.1 Datenhaltung
-
-Sind DSGVO-Anforderungen erfüllt?
-☐ Ja ☐ Nein
-Nutzung eines Cloud‑LLM erlaubt?
-☐ Ja (Azure/AWS)
-☐ Nein (lokales Modell erforderlich)
-
-✅ 7.2 Protokollierung & Logs
-
-Dürfen technische Logs auf dem Server gespeichert werden? ☐ Ja ☐ Nein
-Gibt es besondere Vorgaben zur Aufbewahrung?
-
-
-
-
-8. Betrieb & Verantwortlichkeiten
-✅ 8.1 Wer übernimmt welche Aufgaben?
-(Auszug basiert auf RACI Matrix) [IT_HANDBOO...31.03.2026 | PDF]
-
-Infrastruktur: ☐ Kunde ☐ CGS
-Docker Betrieb: ☐ Kunde ☐ CGS
-LLM Setup: ☐ Kunde ☐ CGS
-Backups: ☐ Kunde ☐ CGS
-Updates der Applikation: ☐ CGS
-Security Patches OS: ☐ Kunde
-
-✅ 8.2 Wartungsfenster & Erreichbarkeit
-
-Gewünschte Wartungszeiten: ________________________
-Ansprechpartner im Störfall: ________________________
+==== Wartungsfenster & Erreichbarkeit
+|===
+|Gewünschte Wartungszeiten|
+|Ansprechpartner im Störfall|
+|===
 
 
-9. Weitere Anmerkungen / Wünsche
+=== Weitere Anmerkungen / Wünsche
 
 
 
