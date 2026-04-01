@@ -59,7 +59,7 @@ tls /etc/caddy/certs/test.server.com.fullchain.pem /etc/caddy/certs/test.server.
 
 *Customer responsibility:* 
 
-- Firewall release for ports 80 and 443 (production) or 8000 (test)
+- Firewall release for ports 80 and 443 (production)
 - DNS configuration: A-record for the desired FQDN (e.g., `xxx-assist.yourcompany.com`) to server IP
 - Providing the FQDN for the Caddyfile configuration
 - Optional: Own TLS certificates if Let's Encrypt is not to be used

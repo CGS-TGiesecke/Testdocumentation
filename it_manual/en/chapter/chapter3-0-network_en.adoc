@@ -13,7 +13,6 @@
 
 | **80**   | HTTP     | HTTP-to-HTTPS redirect, Let's Encrypt ACME challenge | Production with Caddy
 | **443**  | HTTPS    | Encrypted access (TLS)                   | Production (recommended)
-| **8000** | HTTP     | Direct access to application             | Testing/Development
 |===
 
 *Production recommendation:* Use a reverse proxy (e.g., Caddy, Nginx) with TLS certificates.

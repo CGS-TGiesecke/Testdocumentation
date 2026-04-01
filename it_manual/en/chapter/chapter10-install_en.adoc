@@ -70,7 +70,7 @@ Deployment of {application} is carried out in the following steps:
 
 3. Login to Docker Hub Repository
   
-- Use the provided read-access token: `docker login -u cgsmbh [ACCESS_TOKEN]`
+- Use the provided read-access token: `docker login -u cgsmbh`
 
 4. Start the Application
 

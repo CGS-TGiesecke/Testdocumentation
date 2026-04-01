@@ -1,0 +1,107 @@
+
+===== Registering an Application in the Microsoft Entra Admin Center for Mail Integration (Microsoft 365 / Graph)
+
+*1. Sign in*
+
+* Open the Microsoft Entra Admin Center: https://entra.microsoft.com
+* Sign in with an account that has administrator privileges for your organization.
+
+*2. Navigate to “App registrations”*
+
+* In the left navigation panel, select Entra ID.
+* Click App registrations.
+* Select New registration.
+
+*3. Enter application information*
+
+* Name: Enter a meaningful name, e.g.: {application}-email-app
+* Supported account types: Choose the appropriate option. Default: Accounts in this organizational directory only (Single tenant).
+* Redirect URI: Add your redirect URI as required for OIDC.It must match the value redirect_uri in your init_config.yaml.
+
+*4. Create the application*
+
+* Click Register.
+
+*5. Configure application authentication*
+
+* Open Certificates & secrets in the left menu.
+* Select New client secret.
+* Copy the generated client secret value immediately (shown only once).
+* Alternatively: Upload a certificate instead of creating a client secret.
+
+*6. Collect configuration values*
+
+[.highlight]#Record the following values for later use for the file init_config.yaml:#
+
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID*
+** Value of the client secret (under Certificates & secrets): *Client Secret Value*, can be time‑limited
+** ID of the client secret (under Certificates & secrets): *Client Secret ID*
+** ID of the app registration (under Overview): *Object ID*
+
+====== Managing Microsoft Graph Permissions
+
+*7. Add Graph API permissions*
+
+* Navigate to your app: Entra Admin Center → Entra ID → Applications → App registrations → Select your app
+* Open API permissions.
+* Click Add a permission.
+* Choose Microsoft Graph.
+* Select Application permissions.
+* Add the required permission:
+** Mail.Read (allows the application to read mail in mailboxes)
+
+*8. Grant admin consent*
+
+To enable the application to use these permissions:
+
+* In API permissions, click
+* Grant admin consent for <your tenant=""></your>.
+* Confirm as a tenant administrator.
+
+====== Microsoft Graph Mail Access — RBAC Setup
+
+To ensure that the application can only access specific mailboxes, configure an Application Access Policy using a mail-enabled security group.
+
+*9. Create a mail-enabled security group*
+
+* In the Microsoft / Exchange Admin Center, create a new group:*
+** Group name: <application>-RBAC-Mailbox-Group
+** Group email address: <application>-rbac-mailbox@<customer-domain>
+
+*10. Add the target mailbox to the group*
+
+* Add the mailbox the application should access, e.g.:
+** <application>@<customer-domain>
+
+====== PowerShell Configuration for Application Access Policy
+
+*11. Connect to Exchange Online*
+```powershell
+Connect-ExchangeOnline
+```
+
+*12. Create the Application Access Policy*
+```
+New-ApplicationAccessPolicy `
+  -AppId <APP_CLIENT_ID> `
+  -PolicyScopeGroupId "<application>-rbac-mailbox@<customerdomain>" `
+  -AccessRight RestrictAccess `
+  -Description "RBAC access for <application> mail processing"
+```
+
+*13. Test the access policy*
+```
+Test-ApplicationAccessPolicy `
+  -AppId <APP_CLIENT_ID> `
+  -Identity <application>@<customerdomain>
+```
+
+*14. Verify mailbox configuration*
+```
+Get-Recipient -Identity <application>@<customerdomain> | Format-List Name, RecipientType, PrimarySmtpAddress
+```
+
+*Result:*
+The application can only access mailboxes that are members of the defined security group.
+In our case: – <application>@<customerdomain></customerdomain></application>

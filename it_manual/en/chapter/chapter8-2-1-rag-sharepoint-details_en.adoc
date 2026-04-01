@@ -1,0 +1,107 @@
+
+
+===== Registering the application in the Microsoft Entra Admin Center for SharePoint
+
+*1. Sign in*
+
+* Open the Microsoft Entra Admin Center: https://entra.microsoft.com
+* Sign in with an account that has administrator privileges in your organization.
+
+2. Navigate to “App registrations”
+
+* In the left navigation pane, select Entra ID.
+* Select App registrations.
+* Click New registration (top menu).
+
+*3. Enter application information*
+
+* Name: Provide a meaningful name, e.g.: {application}-sharepoint-app
+* Supported account types: Choose the appropriate option for your use case. Default: Accounts in this organizational directory only (Single tenant).
+* Redirect URI: Optional — not required for SharePoint App‑Only access.
+
+*4. Create the application*
+
+* Click Register to complete the creation of the application.
+
+*5. Configure application authentication*
+
+* Open Certificates & secrets in the left menu.
+* Select New client secret.
+* Copy the generated secret value immediately (it is shown only once).
+* Alternatively: upload a certificate if certificate‑based auth is preferred.
+
+*6. Store essential configuration data*
+
+[.highlight]#Record the following values for later use for the file init_config.yaml:#
+
+** Application ID (under Overview): *Application (client) ID*
+** Tenant ID (under Overview): *Directory (tenant) ID* 
+** Client secret(under Certificates & secrets ): *Client Secret*, can be time-limited 
+
+To allow a registered application in the Microsoft Entra Admin Center to access SharePoint 
+resources (e.g., lists, sites, files), some additional steps are required.
+
+*7. Add API permissions*
+
+* Navigate to your application: Entra ID → Applications → App registrations → Select your application
+* Click API permissions.
+* Select Add a permission.
+* Choose Microsoft Graph.
+** Under Application permissions, add one of the required SharePoint permissions:
+** Sites.Read.All (tenant-wide read access), or Sites.Selected (recommended: least‑privilege approach)
+
+*8. Grant admin consent*
+
+To activate the permissions:
+
+* In API permissions, click
+* Grant admin consent for <your tenant=""></your>.
+* Confirm the action as a tenant administrator.
+
+Assign SharePoint Site Permissions
+
+Important:
+Adding Microsoft Graph permissions alone is not sufficient.
+For Sites.Selected, every SharePoint site must be granted access explicitly.
+
+You can:
+grant permissions directly via the SharePoint Admin Center, or
+use the Microsoft Graph PowerShell module (recommended for multiple sites).
+
+*9.Install Microsoft Graph PowerShell Module (if not already installed)*
+```
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+You may need the role of "SharePoint Administrator" or Global Administrator to perform the PowerShell operations.
+
+*10.Sign In*
+```
+Connect-MgGraph -Scopes "Sites.Read.All", "Sites.Write.All", "Sites.Manage.All", "AppRoleAssignment.ReadWrite.All"
+```
+
+*11. Store the App ID of registered application*
+```
+$appId = "YOUR-APP-ID"
+```
+
+*12. Retrieve the SharePoint Site ID*
+```
+$site = Get-MgSite -Filter "displayName eq 'NAME-OF-YOUR-SITE'"
+$siteId = $site.Id
+```
+
+*13. Grant site permissions (example: read access)*
+```
+$permission = @{
+    Roles = @("read")
+    GrantedToIdentities = @(
+        @{
+            Application = @{
+                Id = $appId
+                DisplayName = "YOUR-APP-NAME"
+            }
+        }
+    )
+}
+New-MgSitePermission -SiteId $siteId -BodyParameter $permission
+```

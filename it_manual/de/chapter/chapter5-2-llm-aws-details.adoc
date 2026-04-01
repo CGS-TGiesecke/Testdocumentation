@@ -1,4 +1,42 @@
 
+===== Unterstützte Modelle
+ 
+*OpenAI*
+ 
+Es werden beide verfügbaren Modelle unterstützt:
+
+* gpt-oss-120b
+* gpt-oss-20b
+	
+*Qwen*
+ 
+Es werden alle verfügbaren Qwen-Modelle unterstützt:
+
+* Qwen3 235B A22B 2507
+* Qwen3 32B (dense)
+* Qwen3-Coder-30B-A3B-Instruct
+
+===== Unterstützte Inferenceprofile
+
+*Anthropic*
+
+* Claude Sonnet 4
+* Claude Sonnet 4.5
+* Claude Sonnet 4.6
+* Claude Haiku 4.5
+* Claude Opus 4.6
+* Claude Opus 4.6
+
+===== Unterstützte Embedding Modelle
+
+*Amazon Titan*
+
+* Amazon Titan Text Embeddings V1
+* Amazon Titan Text Embeddings V2
+
+
+[.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 ===== Schritt-für-Schritt: AWS Bedrock aufsetzen
 
 *Schritt 1: AWS Bedrock aktivieren*
@@ -80,7 +118,6 @@ arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 - *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
 - *openai.gpt-oss-20b-1:0:* Die eindeutige Modell-Identifikation
 
-*Inferenceprofile* +
 *Info:* Neuere Modelle funktionieren mit Inferenceprofilen. Mit regionsübergreifender Inferenz kann, wenn notwendig, der Datenverkehr auf mehrere AWS-Regionen verteilt werden. +
 siehe https://docs.aws.amazon.com/de_de/bedrock/latest/userguide/inference-profiles-support.html
 

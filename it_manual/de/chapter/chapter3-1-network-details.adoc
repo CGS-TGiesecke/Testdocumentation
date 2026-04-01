@@ -61,7 +61,7 @@ texttest.server.de {reverse_proxy xxx_assist_server:8000 header {
 
 *Aufgaben des Kunden:* 
 
-- Firewall-Freigabe für Ports 80 und 443 (Produktion) oder 8000 (Test)
+- Firewall-Freigabe für Ports 80 und 443 (Produktion)
 - DNS-Konfiguration: A-Record für den gewünschten FQDN (z. B. `xxx-assist.ihrefirma.de`) auf Server-IP
 - Bereitstellung des FQDN für die Caddyfile-Konfiguration
 - Optional: Eigene TLS-Zertifikate, falls Let's Encrypt nicht verwendet werden soll

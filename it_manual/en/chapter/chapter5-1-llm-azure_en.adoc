@@ -16,47 +16,7 @@
 - Access to the AWS Bedrock Service
 - Sufficient IAM permissions
 
-===== Supported Models
 
-|===
-| Modell ID | Max Tokens
-
-| gpt-4o 
-|128k
-
-| gpt-4o-mini 
-|128k
-
-| gpt-4.1 
-|128k
-
-| gpt-5.1
-|128k
-
-| gpt-5-mini
-|128k
-|===
-
-===== Supported Embedding Models
-
-|===
-| Modell ID | Max Tokens 
-
-| text-embedding-3-large 
-| 8k
-|===
-
-
-===== Supported Audio Models
-
-|===
-| Modell ID | Max request (audio file size) 
-
-| wisper 
-| 25 MB
-|=== 
-
-[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
 
 
 

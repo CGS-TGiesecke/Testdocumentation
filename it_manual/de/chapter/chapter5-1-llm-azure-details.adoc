@@ -1,4 +1,14 @@
 
+===== Unterstützte Modelle
+
+* gpt-4o 
+* gpt-4o-mini 
+* gpt-4.1 
+* gpt-5.1
+* gpt-5-mini
+ 
+[.highlight]#*Hinweis*: Diese Modelle werden von {application} vollständig unterstützt. Alternative oder erweiterte Modelle sind ebenfalls möglich, fallen jedoch nicht unter den Standardumfang und werden separat angeboten.#
+
 ===== Schritt-für-Schritt: Azure OpenAI Service aufsetzen
 
 *Schritt 1: Azure OpenAI Ressource erstellen*
