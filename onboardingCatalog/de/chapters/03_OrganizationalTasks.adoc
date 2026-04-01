@@ -1,4 +1,6 @@
 
+<<<
+
 === Organisatorische Angaben
 
 ====
@@ -24,7 +26,7 @@
 ====
 
 ====
-*Techn. Installation*
+*Technische Installation*
 |===
 |	|Datum geplant|Beschreibung
 
