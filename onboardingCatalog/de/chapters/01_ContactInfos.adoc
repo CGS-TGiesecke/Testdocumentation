@@ -4,47 +4,14 @@
 Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit "n/a" markiert werden.
 
 ==== 
-*Primärer Ansprechpartner (Business/Projekt)*
+*Primäre Ansprechpartner ()*
 |===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
+| |Name|E-Mail|Telefon|Bemerkungen
 
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|===
-====
-
-
-==== 
-*Technischer Ansprechpartner (IT/Infrastruktur)*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|===
-====
-
-==== 
-*Ansprechpartner für Abrechnung (Billing/Finanz)*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|===
-====
-
-==== 
-*Ansprechpartner für Support (Operativer Betrieb)*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
+|Business/Projekt|	|	|	|		
+|IT/Infrastruktur|	|	|	|		
+|Billing/Finanz|	|	|	|	
+|Operativer Betrieb|	|	|	|		
 |===
 ====
 

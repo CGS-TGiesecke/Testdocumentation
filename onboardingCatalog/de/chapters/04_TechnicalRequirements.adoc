@@ -75,23 +75,8 @@
 
 ==== Welche Agenten (MCP-Server) sind notwendig?
 |===
-|Standard|
 |Revision Standard|
 |Individuell|
-|===
-
-==== Welche Art von Use Cases wird benötigt?
-|===
-|Standard|
-|Revision Standard|
-|Individuell|
-|===
-
-==== Welche Form der Übergabe von Use Cases Beschreibungen?
-|===
-|Form|Empfänger
-
-|Per Mail|
 |===
 
 ==== Welche Lizenz ist erforderlich ?

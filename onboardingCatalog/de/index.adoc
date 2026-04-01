@@ -22,6 +22,5 @@ include::chapters/02_OrganizationalTasks.adoc[]
 
 include::chapters/04_TechnicalRequirements.adoc[]
 
-include::chapters/neu.adoc[]
 
 
