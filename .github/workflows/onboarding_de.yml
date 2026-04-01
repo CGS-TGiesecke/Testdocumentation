@@ -142,7 +142,7 @@ jobs:
             --from=html \
             --to=docx \
             --standalone \
-            --lua-filter=../../themes/table-style.lua \
+            --lua-filter=${{ FILEPATH }}/table-style.lua \
             --reference-doc=../../themes/style-reference.docx \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
