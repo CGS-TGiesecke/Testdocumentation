@@ -11,18 +11,24 @@
 |===
 
 |===
+|	|Datum geplant|Beschreibung
+
 |Integration Use Cases
 |
 |
 |===
 
 |===
+|	|Datum geplant|Beschreibung
+
 |Techn. Installation
 |
 |
 |===
 
 |===
+|	|Datum geplant|Beschreibung
+
 |Abschluss / Übergabe
 |
 |
