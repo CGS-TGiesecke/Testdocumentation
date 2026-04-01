@@ -9,8 +9,9 @@ IT handbook here in German and English by selected script.
 
 *Before start:*
 
-- you must change some values (version, theme, output type (0=iT-requeriments, 1=S(small), 2=L(large)). 
+- you must change some values (version, theme, output type (0=iT-requeriments, 1=L(large)). 
 - these variables change some places of names in files or exclude some chapters of content.
+- version is auto=>default=>latest.
 
 *Note:*
 
