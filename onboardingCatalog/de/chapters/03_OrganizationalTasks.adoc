@@ -2,34 +2,44 @@
 === Organisatorische Angaben
 
 ====
+*Workshops / Schulungen*
 |===
 |	|Datum geplant|Beschreibung
 
-|Workshops / Schulungen
+|Start
 |
 |
 |===
+====
 
-|===
-|	|Datum geplant|Beschreibung
-
-|Integration Use Cases
-|
-|
-|===
-
+====
+*Integration Use Cases*
 |===
 |	|Datum geplant|Beschreibung
 
-|Techn. Installation
+|Start
 |
 |
 |===
+====
 
+====
+*Techn. Installation*
 |===
 |	|Datum geplant|Beschreibung
 
-|Abschluss / Übergabe
+|Start
+|
+|
+|===
+====
+
+====
+*Abschluss / Übergabe*
+|===
+|	|Datum geplant|Beschreibung
+
+|Start
 |
 |
 |===
