@@ -1,22 +1,30 @@
 
 === Organisatorische Angaben
 
+====
 |===
 |	|Datum geplant|Beschreibung
 
 |Workshops / Schulungen
 |
 |
+|===
 
+|===
 |Integration Use Cases
 |
 |
+|===
 
+|===
 |Techn. Installation
 |
 |
+|===
 
+|===
 |Abschluss / Übergabe
 |
 |
 |===
+====
