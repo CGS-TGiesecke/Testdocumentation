@@ -1,6 +1,6 @@
 
 function Table(el)
-  el.attributes['custom-style'] = 'TableGrid'
+  el.attributes['custom-style'] = 'Table Grid'
   return el
 end
 
