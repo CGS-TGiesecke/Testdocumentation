@@ -4,7 +4,7 @@
 Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende Felder können freigelassen oder mit "n/a" markiert werden.
 
 ==== 
-*Primäre Ansprechpartner ()*
+*Primäre Ansprechpartner*
 |===
 | |Name|E-Mail|Telefon|Bemerkungen
 
@@ -23,40 +23,8 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |1|	|	|	|	|	|
 |2|	|	|	|	|	|
 |3|	|	|	|	|	|	
+|4|	|	|	|	|	|	
+|5|	|	|	|	|	|	
 |===
 ====
 
-=== Eskalationskette
-
-====
-*Level 1 – Geringste Eskalationsstufe*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|=== 
-====
-
-====
-*Level 2 – Mittlere Eskalationsstufe*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|===
-==== 
-
-====
-*Level 3 – Höchste Eskalationsstufe*
-|===
-| Nr|Name|E-Mail|Telefon|Rolle/Funktion|Bemerkungen
-
-|1|	|	|	|	|	
-|2|	|	|	|	|	
-|3|	|	|	|	|			
-|===
-==== 
