@@ -21,8 +21,7 @@ Azure
 AWS Bedrock
 - https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html
 
-*Hinweis*: Diese Links dienen ausschließlich der Modellübersicht — {application} integriert *keine* Modelle selbst, sondern nutzt vom Kunden bereitgestellte Deployments.
-
+*Note:* These links are provided solely for model overview purposes — {application} does not integrate any models itself, but instead uses deployments supplied by the customer.
 
 ==== Cost Overview LLM Providers
 
@@ -43,5 +42,29 @@ AWS Bedrock
 * No API costs
 * Hardware investment: €5,000-50,000+
 * Ongoing electricity costs
+
+==== Dimensioning token rate limits
+
+Rules of thumb for TPM (Tokens per Minute):
+
+|===
+| User Scenario      | Recommended TPM    | Rationale
+
+| 1–5 users (test)   
+| 30,000 – 50,000    
+| Sufficient for testing
+
+| 10–25 users        
+| 80,000 – 120,000   
+| Moderate usage
+
+| 25–50 users        
+| 150,000 – 250,000  
+| Production environment
+
+| 50+ users          
+| 300,000+           
+| High load
+|===
 
 [.highlight]#*Note*: Support for setting up the models from {author} is available; however, it is not included in the standard scope and is offered separately.#

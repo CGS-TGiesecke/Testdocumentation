@@ -1,4 +1,18 @@
 
+===== Supported tools
+
+* Ollama (the simplest solution)
+* vLLM (highest performance)
+* LM Studio (GUI-based)
+
+===== Recommended models
+
+* Llama (excellent, multilingual)
+* Qwen  (hight performance)
+* Mistral (high quality)
+
+[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
+
 ===== Setup example with Ollama
 
 ```bash

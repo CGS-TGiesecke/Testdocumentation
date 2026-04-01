@@ -4,37 +4,7 @@
 There are also options available for customers who do not want cloud connectivity.
 The platform {application} supports local LLMs via *OpenAI-compatible APIs*.
 
-===== Supported tools
 
-|===
-| Tool | Note
-
-| Ollama
-| the simplest solution
-
-| vLLM
-| highest performance
-
-| LM Studio
-| GUI-based
-|=== 
-
-===== Recommended models
-
-|===
-| Models | Note
-
-| Llama
-| excellent, multilingual
-
-| Qwen
-| hight performance
-
-| Mistral
-| high quality
-|=== 
-
-[.highlight]#*Note*: These models is fully supported by {application}. Alternative or extended models are also possible but are not included in the standard scope and are offered separately.#
 
 
 
