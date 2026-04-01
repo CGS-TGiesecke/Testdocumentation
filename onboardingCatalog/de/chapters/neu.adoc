@@ -168,7 +168,7 @@ CGS Assist unterstützt drei Varianten:
 |Client Secret + Secret ID|
 |Redirect URI|
 |Object ID|
-|==
+|===
 
 === Datenschutz & Compliance
 
