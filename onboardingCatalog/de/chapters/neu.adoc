@@ -2,7 +2,7 @@
 === Allgemeine Unternehmensdaten
 
 ==== Ansprechpartner Projektleitung
-
+[.TableGrid]
 |===
 |Name|
 |Position/Funktion|
@@ -11,7 +11,7 @@
 |===
 
 ==== Technischer Ansprechpartner
-
+[.TableGrid]
 |===
 |Name|
 |Position/Funktion|
@@ -20,7 +20,7 @@
 |===
 
 ==== Unternehmensinformationen
-
+[.TableGrid]
 |===
 |Firmenname|
 |Standort / Rechenzentrum / Cloud-Provider|
