@@ -22,7 +22,6 @@ include::chapters/02_UseCases.adoc[]
 
 include::chapters/03_OrganizationalTasks.adoc[]
 
-include::chapters/04_TechnicalRequirements.adoc[]
 
 
 

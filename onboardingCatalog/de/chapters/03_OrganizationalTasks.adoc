@@ -77,8 +77,8 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 |===
 |Anzahl User|Gültig ab|Laufzeit (in Jahren)
 
-|
-|
+| +
+| 
 |
 |===
 
