@@ -6,6 +6,78 @@
 -- funktioniert ohne class="TableGrid" im HTML
 -- funktioniert auch mit [.TableGrid] im Asciidoc
 -- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
+-- Was dieser Filter löst:
+
+-- fängt jede Tabelle ab – auch wenn sie aus Asciidoc als Raw‑HTML kommt
+-- sorgt dafür, dass wirklich der Word‑Stil „Table Grid“ gesetzt wird
+-- ignoriert CSS vollständig (CSS ist Pandoc‑irrelevant in DOCX)
+-- funktioniert ohne class="TableGrid" im HTML
+-- funktioniert auch mit [.TableGrid] im Asciidoc
+-- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
 
 
 -- UNIVERSAL TABLE STYLE PATCHER
