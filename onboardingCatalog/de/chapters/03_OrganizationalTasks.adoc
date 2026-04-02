@@ -1,9 +1,8 @@
 
-<<<
-
 === Organisatorisches
 
 ==== Zeitplan
+
 ====
 |===
 |	|Datum geplant|Kommentar
@@ -27,41 +26,41 @@
 ====
 
 ==== Welches Betriebssytem wird verwendet?
-===
+====
 Windows Server / Linux
  +
-===
+====
 
 ==== Welche besonderen Anforderungen existieren?
-===
+====
  +
  +
-===
+====
 
 ==== Welche Server Variante soll verwendet werden?
-===
+====
 On-Premise / Cloud‑Instanz
  +
-===
+====
 
 ==== Welche Login-Methode soll verwendet werden?
-===
+====
 OpenID Connect (SSO) / SAML (SSO) / Lokale Benutzer-/Passwortverwaltung
 ===
 
 ==== Welche LLM Provider sollen verwendet werden?
-===
+====
 Azure OpenAI +
 AWS Bedrock +
 Lokale Modelle +
-===
+====
 
 ==== Welche Netzwerk-Methode soll verwendet werden? 
-===
+====
 Caddy mit Let's Encrypt (Reverse Proxy, Portfreigabe) +
 DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
 ohne öffentlichen DNS (keine Portfreigabe) +
-===
+====
 
 ==== Welche externen Systeme sollen angebunden werden?
 |===
