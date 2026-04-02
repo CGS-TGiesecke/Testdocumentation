@@ -71,11 +71,6 @@ jobs:
         run: |
           sudo gem install asciidoctor asciidoctor-pdf
 
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: '3.1.6.2'
-
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
 
@@ -136,23 +131,20 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      - name: Debug filter
+      
+      - name: Install LibreOffice
         run: |
-          echo "Listing filter location:"
-          ls -l onboardingCatalog/de/
+         sudo apt-get update
+         sudo apt-get install -y libreoffice
 
-      - name: Build DOCX with Pandoc von html
+         
+      - name: Convert HTML to DOCX (1:1 HTML Table Layout)
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --from=html+raw_html \
-            --to=docx \
-            --standalone \
-            --reference-doc=../../themes/reference-cgs.docx \
-            --table-style=CGS-Table-Fixed \
-            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-            
+         soffice --headless \
+         --convert-to docx \
+         ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+         --outdir ${{ env.FILEPATH }}
+
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
