@@ -144,7 +144,7 @@ jobs:
       - name: Build DOCX with Pandoc von html
         run: |
           pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --from=html5 \
+            --from=html+raw_html \
             --to=docx \
             --standalone \
             --lua-filter=${{ env.FILEPATH }}/table-style.lua \
