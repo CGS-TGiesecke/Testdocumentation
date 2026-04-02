@@ -134,20 +134,22 @@ jobs:
       # ------------------------------------------------------------
       # 6) DOCX erzeugen über html-docx-js
       # ------------------------------------------------------------
-
+      # Node installieren
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install html-docx-js
-        run: npm install html-docx-js
+      # html-docx installieren
+      - name: Install html-docx
+        run: npm install html-docx
 
-      - name: Convert HTML → DOCX using html-docx-js
+      # HTML → DOCX konvertieren
+      - name: Convert HTML to DOCX using html-docx
         run: |
-          node tools/html-to-docx.js \
-            "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html" \
-            "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx"
+          node tools/html-to-docx.cjs \
+          "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html" \
+          "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx"
 
       # ------------------------------------------------------------
       # 7) Artefakte uploaden
