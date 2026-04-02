@@ -131,19 +131,28 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      
       - name: Install LibreOffice
         run: |
-         sudo apt-get update
-         sudo apt-get install -y libreoffice
+          sudo apt-get update
+          sudo apt-get install -y libreoffice libreoffice-writer libreoffice-core libreoffice-calc
 
-         
+      - name: Rename HTML (LibreOffice compatible)
+        run: |
+          mv ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+         ${{ env.FILEPATH }}/clean.html
+
       - name: Convert HTML to DOCX (1:1 HTML Table Layout)
         run: |
-         soffice --headless \
-         --convert-to docx \
-         ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-         --outdir ${{ env.FILEPATH }}
+          soffice --headless \
+            --infilter=HTML:HTML \
+            --convert-to "docx:MS Word 2007 XML" \
+            ${{ env.FILEPATH }}/clean.html \
+            --outdir ${{ env.FILEPATH }}
+         
+      - name: Rename final DOCX
+        run: |
+          mv ${{ env.FILEPATH }}/clean.docx \
+           ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
