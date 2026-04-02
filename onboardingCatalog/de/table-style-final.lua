@@ -4,158 +4,45 @@
 -- Covers: RawBlock, RawInline, Para, Span, and direct Table nodes.
 -- Ensures: <table custom-style="Table Grid"> is ALWAYS inserted.
 
--- Normalize text manipulation
-local function patch_tables(text)
+-- Fully recursive universal table patcher for Pandoc 3.x
+-- Ensures ALL HTML tables become Word "Table Grid"
+
+local function patch_tables_in_text(text)
   if not text then return text end
 
-  -- Only patch HTML tables
-  if text:match("<table") then
-
-    -- Avoid double-inserting custom-style
-    if not text:match("custom%-style") then
-      -- Insert custom-style="Table Grid" into the <table ...> tag
-      text = text:gsub("<table", '<table custom-style="Table Grid"')
-    end
+  -- Only patch if a <table> element exists
+  if text:match("<table") and not text:match("custom%-style") then
+    text = text:gsub("<table", '<table custom-style="Table Grid"')
   end
 
   return text
 end
 
------------------------------------------------------------
--- RAWBLOCK HANDLER (HTML blocks)
------------------------------------------------------------
-function RawBlock(el)
-  if el.format == "html" then
-    el.text = patch_tables(el.text)
-  end
-  return el
-end
-
------------------------------------------------------------
--- RAWINLINE HANDLER (inline HTML fragments)
------------------------------------------------------------
-function RawInline(el)
-  if el.format == "html" then
-    el.text = patch_tables(el.text)
-  end
-  return el
-end
-
------------------------------------------------------------
--- PARA HANDLER (tables inside paragraphs)
------------------------------------------------------------
-function Para(el)
-  for i, c in ipairs(el.content) do
-    if type(c.text) == "string" then
-      c.text = patch_tables(c.text)
+local function walk(el)
+  if el.t == "RawBlock" or el.t == "RawInline" then
+    if el.format == "html" then
+      el.text = patch_tables_in_text(el.text)
+      return el
     end
   end
-  return el
-end
 
------------------------------------------------------------
--- SPAN HANDLER (inline content containers)
------------------------------------------------------------
-function Span(el)
-  for i, c in ipairs(el.content) do
-    if type(c.text) == "string" then
-      c.text = patch_tables(c.text)
-    end
+  if el.t == "Table" then
+    el.attributes["custom-style"] = "Table Grid"
+    return el
   end
-  return el
-end
 
------------------------------------------------------------
--- TABLE HANDLER (Pandoc-native Table nodes)
------------------------------------------------------------
-function Table(el)
-  -- Apply Word table style explicitly
-  el.attributes["custom-style"] = "Table Grid"
-  return el
-end
-
------------------------------------------------------------
--- BLOCKQUOTE HANDLER (in case tables are wrapped inside blockquotes)
------------------------------------------------------------
-function BlockQuote(el)
-  for i, c in ipairs(el.content) do
-    if c.text then
-      c.text = patch_tables(c.text)
-    end
-  end
-  return el
-end
-
------------------------------------------------------------
--- DIV HANDLER (Asciidoctor often nests HTML tables inside <div>)
------------------------------------------------------------
-function Div(el)
-  for i, c in ipairs(el.content) do
-    if c.text then
-      c.text = patch_tables(c.text)
-    end
-  end
-  return el
-end
-
------------------------------------------------------------
--- HEADER HANDLER (unlikely but tables can appear)
------------------------------------------------------------
-function Header(el)
-  for i, c in ipairs(el.content) do
-    if c.text then
-      c.text = patch_tables(c.text)
-    end
-  end
-  return el
-end
-
------------------------------------------------------------
--- LIST HANDLERS (tables within list items)
------------------------------------------------------------
-function BulletList(el)
-  for i, item in ipairs(el.content) do
-    for j, c in ipairs(item) do
-      if c.text then
-        c.text = patch_tables(c.text)
+  -- Recursively process children
+  if el.c then
+    for i, v in ipairs(el.c) do
+      if type(v) == "table" and v.t then
+        el.c[i] = walk(v)
       end
     end
   end
+
   return el
 end
 
-function OrderedList(el)
-  for i, item in ipairs(el.content) do
-    for j, c in ipairs(item) do
-      if c.text then
-        c.text = patch_tables(c.text)
-      end
-    end
-  end
-  return el
-end
-
------------------------------------------------------------
--- CODEBLOCK (ignore – but included for completeness)
------------------------------------------------------------
-function CodeBlock(el)
-  -- no-op
-  return el
-end
-
------------------------------------------------------------
--- FINAL: Return unmodified elements for all others
------------------------------------------------------------
 return {
-  RawBlock = RawBlock,
-  RawInline = RawInline,
-  Para = Para,
-  Span = Span,
-  Table = Table,
-  BlockQuote = BlockQuote,
-  Div = Div,
-  Header = Header,
-  BulletList = BulletList,
-  OrderedList = OrderedList,
-  CodeBlock = CodeBlock
+  { Pandoc = function(el) return walk(el) end }
 }
