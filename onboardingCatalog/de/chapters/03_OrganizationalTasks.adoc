@@ -33,7 +33,7 @@ Windows Server / Linux +
 
 ==== Welche besonderen Anforderungen existieren?
 ====
- +
+. +
  +
 ====
 
@@ -63,7 +63,7 @@ DNS‑01 (öffentlich trusted, ohne Freigabe 80/443) +
 ohne öffentlichen DNS (keine Portfreigabe) +
 ====
 
-==== Welche externen Systeme sollen angebunden werden?
+==== Welche externen Systeme sollen eingebunden werden?
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
@@ -77,7 +77,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 |===
 |Anzahl User|Gültig ab|Laufzeit (in Jahren)
 
-| +
+| .
 | 
 |
 |===
