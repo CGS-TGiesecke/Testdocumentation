@@ -1,13 +1,12 @@
--- UNIVERSAL TABLE STYLE PATCHER (GitHub-safe + Pandoc-correct)
+-- UNIVERSAL TABLE STYLE PATCHER for Pandoc 3.x (final correct version)
 
 local function patch(text)
   if not text then return text end
 
-  -- MATCH NORMAL <table>, NOT escaped!
+  -- match normal <table>
   if text:match("<table") and not text:match("custom%-style") then
-
-    -- BUT gsub MUST escape <table so GitHub does NOT eat it
-    text = text:gsub("\\<table", '<table custom-style="Table Grid"')
+    -- replace normal <table with styled version
+    text = text:gsub("<table", '<table custom-style="Table Grid"')
   end
 
   return text
