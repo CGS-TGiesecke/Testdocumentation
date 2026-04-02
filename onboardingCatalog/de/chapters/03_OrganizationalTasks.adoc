@@ -11,7 +11,7 @@
 |
 |
 
-|ntegration Use Cases
+|Integration Use Cases
 |
 |
 
@@ -27,7 +27,7 @@
 
 ==== Welches Betriebssytem wird verwendet?
 ====
-Windows Server / Linux
+Windows Server / Linux +
  +
 ====
 
@@ -39,14 +39,15 @@ Windows Server / Linux
 
 ==== Welche Server Variante soll verwendet werden?
 ====
-On-Premise / Cloud‑Instanz
+On-Premise / Cloud‑Instanz +
  +
 ====
 
 ==== Welche Login-Methode soll verwendet werden?
 ====
-OpenID Connect (SSO) / SAML (SSO) / Lokale Benutzer-/Passwortverwaltung
-===
+OpenID Connect (SSO) / SAML (SSO) / Lokale Benutzer-/Passwortverwaltung +
+ +
+====
 
 ==== Welche LLM Provider sollen verwendet werden?
 ====
