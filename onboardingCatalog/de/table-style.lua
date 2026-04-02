@@ -8,26 +8,48 @@
 -- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
 
 
--- 1) Für echte Pandoc-Tabellen (falls Pandoc doch mal eine erkennt)
-function Table(el)
-  el.attributes['custom-style'] = 'Table Grid'
-  return el
+-- UNIVERSAL TABLE STYLE PATCHER
+local function patch_tables(text)
+  if text and text:match("<table") and not text:match("custom%-style") then
+    text = text:gsub("<table", '<table custom-style="Table Grid"')
+  end
+  return text
 end
 
--- 2) Für HTML-Tabellen in RawBlock
 function RawBlock(el)
-  if el.format == "html" and el.text:match("<table") then
-    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
+  if el.format == "html" then
+    el.text = patch_tables(el.text)
   end
   return el
 end
 
-
--- 3) Für Inline-HTML Tabellen
 function RawInline(el)
-  if el.format == "html" and el.text:match("<table") then
-    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
+  if el.format == "html" then
+    el.text = patch_tables(el.text)
   end
+  return el
+end
+
+function Para(el)
+  for i, c in ipairs(el.content) do
+    if type(c.text) == "string" then
+      c.text = patch_tables(c.text)
+    end
+  end
+  return el
+end
+
+function Span(el)
+  for i, c in ipairs(el.content) do
+    if type(c.text) == "string" then
+      c.text = patch_tables(c.text)
+    end
+  end
+  return el
+end
+
+function Table(el)
+  el.attributes["custom-style"] = "Table Grid"
   return el
 end
 
