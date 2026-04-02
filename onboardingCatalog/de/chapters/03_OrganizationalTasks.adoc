@@ -34,8 +34,7 @@ Windows Server / Linux +
 
 ==== Welche besonderen Anforderungen existieren?
 ====
- +
- +
+ .
 ====
 
 ==== Welche Server Variante soll verwendet werden?

@@ -17,12 +17,20 @@ end
 -- Apply style to HTML tables that Pandoc does NOT parse as Table objects
 function RawBlock(el)
   if el.format == "html" and el.text:match("<table") then
-    -- inject: custom-style="Table Grid"
-    local patched = el.text:gsub("<table", '<table custom-style="Table Grid"')
-    el.text = patched
+    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
   end
   return el
 end
+
+
+function RawInline(el)
+  if el.format == "html" and el.text:match("<table") then
+    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
+  end
+  return el
+end
+
+
 
 
 
