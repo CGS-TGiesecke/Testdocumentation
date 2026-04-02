@@ -141,17 +141,26 @@ jobs:
           echo "Listing filter location:"
           ls -l onboardingCatalog/de/
 
-      - name: Build DOCX with Pandoc von html
+      # NEW: Build DocBook first
+      - name: Build DocBook (XML)
         run: |
-          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            --from=html+raw_html \
-            --to=docx \
-            --standalone \
-            --reference-doc=../../themes/style-reference.docx \
-            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-            --resource-path=${{ env.FILEPATH }}  \
-            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-            
+          asciidoctor \
+          -b docbook5 \
+          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml \
+          ${{ env.FILEPATH }}/index.adoc
+
+      # NEW: DOCX from DocBook
+      - name: Build DOCX from DocBook
+        run: |
+          pandoc \
+          ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml \
+          --from=docbook \
+          --to=docx \
+          --standalone \
+          --reference-doc=../../themes/style-reference.docx \
+          --metadata-file=${{ env.FILEPATH }}/metadata.yml \
+          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+    
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
