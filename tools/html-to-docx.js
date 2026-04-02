@@ -1,5 +1,5 @@
 const fs = require("fs");
-const HTMLtoDOCX = require("html-docx-js");
+const htmlDocx = require("html-docx");
 
 const inputPath = process.argv[2];
 const outputPath = process.argv[3];
@@ -11,10 +11,16 @@ if (!inputPath || !outputPath) {
 
 const html = fs.readFileSync(inputPath, "utf8");
 
-// Generate DOCX buffer
-const docxBuffer = HTMLtoDOCX(html);
+// ein sauberes HTML-Dokument generieren
+const fullHtml =
+  "<!DOCTYPE html><html><head><meta charset='utf-8'></head><body>" +
+  html +
+  "</body></html>";
 
-// Write output
-fs.writeFileSync(outputPath, docxBuffer);
+// erzeugt einen DOCX Buffer
+const docx = htmlDocx.asBuffer(fullHtml);
+
+// Datei speichern
+fs.writeFileSync(outputPath, docx);
 
 console.log("✅ DOCX erstellt:", outputPath);
