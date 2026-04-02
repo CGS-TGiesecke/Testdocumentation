@@ -78,8 +78,7 @@ jobs:
           node-version: '18'
 
       - name: Install Mammoth
-        run: npm install -g mammot
-
+        run: npm install -g mammoth
 
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
