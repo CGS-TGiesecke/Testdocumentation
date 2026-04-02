@@ -136,11 +136,6 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      - name: Debug filter
-        run: |
-          echo "Listing filter location:"
-          ls -l onboardingCatalog/de/
-
       # NEW: Build DocBook first
       - name: Build DocBook (XML)
         run: |
@@ -160,6 +155,11 @@ jobs:
           --reference-doc=../../themes/style-reference.docx \
           --metadata-file=${{ env.FILEPATH }}/metadata.yml \
           -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+
+      - name: Debug filter
+        run: |
+          echo "Listing filter location:"
+          ls -l onboardingCatalog/de/
     
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
