@@ -4,6 +4,7 @@
 ==== Zeitplan
 
 ====
+[.TableGrid,options="header"]
 |===
 |	|Datum geplant|Bemerkungen
 
@@ -33,7 +34,7 @@ Windows Server / Linux +
 
 ==== Welche besonderen Anforderungen existieren?
 ====
-. +
+ +
  +
 ====
 
@@ -64,6 +65,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 ====
 
 ==== Welche externen Systeme sollen eingebunden werden?
+[.TableGrid,options="header"]
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
@@ -74,6 +76,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 
 
 ==== Welche Lizenz ist erforderlich?
+[.TableGrid,options="header"]
 |===
 |Anzahl User|Gültig ab|Laufzeit (in Jahren)
 
@@ -83,6 +86,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 |===
 
 ==== Welche initialen Admin-Nutzer werden benötigt (falls bekannt)?
+[.TableGrid,options="header"]
 |===
 |Name|Beschreibung 
 
