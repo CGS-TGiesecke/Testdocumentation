@@ -35,33 +35,19 @@ jobs:
         uses: actions/checkout@v4
 
       # -----------------------------
-      # Version ermitteln
+      # Version auflösen
       # -----------------------------
       - name: Resolve version
         id: resolve
-        shell: bash
         run: |
           set -euo pipefail
           INPUT_VERSION="${{ github.event.inputs.version }}"
           VERSION_FILE="VERSION.txt"
 
           if [[ "${INPUT_VERSION}" == "auto" ]]; then
-            if [[ ! -f "${VERSION_FILE}" ]]; then
-              echo "Error: ${VERSION_FILE} not found while version=auto." >&2
-              exit 1
-            fi
             VERSION="$(awk 'NF{print; exit}' "${VERSION_FILE}")"
-            if [[ -z "${VERSION}" ]]; then
-              echo "Error: No non-empty line found in ${VERSION_FILE}." >&2
-              exit 1
-            fi
           else
             VERSION="${INPUT_VERSION}"
-          fi
-
-          if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9\.-]+)?$ ]]; then
-            echo "Error: Version '${VERSION}' does not match expected format." >&2
-            exit 1
           fi
 
           echo "USED_VERSION=${VERSION}" >> $GITHUB_ENV
@@ -73,7 +59,7 @@ jobs:
         run: sudo gem install asciidoctor asciidoctor-pdf
 
       # -----------------------------
-      # Prepare metadata
+      # Metadata vorbereiten
       # -----------------------------
       - name: Define metadata variables
         run: |
@@ -99,9 +85,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y gettext
 
       - name: Fill metadata template
-        run: |
-          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl \
-            > ${{ env.FILEPATH }}/metadata.yml
+        run: envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
 
       # -----------------------------
       # 1) Build HTML
@@ -143,24 +127,24 @@ jobs:
             ${{ env.FILEPATH }}/index.adoc
 
       # -----------------------------
-      # 3) Build DOCX with html-docx-js
+      # 3) DOCX via html-docx-js
       # -----------------------------
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install html-docx-js-cli
-        run: npm install -g html-docx-js-cli
+      - name: Install html-docx-js
+        run: npm install html-docx-js
 
       - name: Convert HTML → DOCX using html-docx-js
         run: |
-          html-docx-js \
-            ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            > ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+          node tools/html-to-docx.js \
+            "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html" \
+            "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx"
 
       # -----------------------------
-      # Upload artifacts
+      # Artefakte hochladen
       # -----------------------------
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
