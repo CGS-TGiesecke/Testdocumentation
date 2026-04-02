@@ -157,7 +157,7 @@ jobs:
           --from=docbook \
           --to=docx \
           --standalone \
-          --reference-doc=../../themes/style-reference.docx \
+          --reference-doc=themes/style-reference.docx \
           --metadata-file=${{ env.FILEPATH }}/metadata.yml \
           -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
