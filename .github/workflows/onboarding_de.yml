@@ -139,7 +139,7 @@ jobs:
       - name: Build adoc to docx with pandoc
         run: |  
           pandoc \
-          -s ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc \
+          -s ${{ env.FILEPATH }}/index.adoc \
           -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Debug filter
