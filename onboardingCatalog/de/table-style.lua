@@ -1,10 +1,10 @@
--- UNIVERSAL TABLE STYLE PATCHER for Pandoc 3.x
--- Ensures ALL HTML <table> elements become Word “Table Grid”.
+-- UNIVERSAL TABLE STYLE PATCHER for Pandoc 3.x (GitHub‑safe version)
 
 local function patch(text)
   if not text then return text end
-  if text:match("<table") and not text:match("custom%-style") then
-    text = text:gsub("<table", '<table custom-style="Table Grid"')
+  -- IMPORTANT: escape "<table" for GitHub editor using "\\<table"
+  if text:match("\\<table") and not text:match("custom%-style") then
+    text = text:gsub("\\<table", '<table custom-style="Table Grid"')
   end
   return text
 end
