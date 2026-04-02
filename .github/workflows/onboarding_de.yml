@@ -136,15 +136,11 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      - name: asciidoc to docbook
-        run: |
-           asciidoctor -b docbook \
-           ${{ env.FILEPATH }}/index.adoc
-
-      - name: docbook in xml
-        run: |
-          pandoc -r docbook -t docx \
-          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx 
+      - name: Build adoc to docx with pandoc
+        run: |  
+          pandoc \
+          -s ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc \
+          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Debug filter
         run: |
