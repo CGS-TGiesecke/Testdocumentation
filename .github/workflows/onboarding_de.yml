@@ -144,8 +144,7 @@ jobs:
       - name: docbook in xml
         run: |
           pandoc -r docbook -t docx \
-          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx \
-          ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml
+          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx 
 
       - name: Debug filter
         run: |
