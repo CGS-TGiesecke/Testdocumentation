@@ -7,10 +7,16 @@
 -- funktioniert auch mit [.TableGrid] im Asciidoc
 -- funktioniert unabhängig davon, wie Asciidoctor Tabellen rendert
 
--- Apply style to HTML tables that Pandoc does NOT parse as Table objects
+
+-- 1) Für echte Pandoc-Tabellen (falls Pandoc doch mal eine erkennt)
+function Table(el)
+  el.attributes['custom-style'] = 'Table Grid'
+  return el
+end
+
+-- 2) Für HTML-Tabellen in RawBlock
 function RawBlock(el)
   if el.format == "html" then
-    -- Jede Art von <table> wird ersetzt, egal wie Asciidoctor sie erzeugt
     if el.text:match("<table") then
       el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
     end
@@ -18,6 +24,7 @@ function RawBlock(el)
   return el
 end
 
+-- 3) Für Inline-HTML Tabellen
 function RawInline(el)
   if el.format == "html" then
     if el.text:match("<table") then
@@ -27,11 +34,6 @@ function RawInline(el)
   return el
 end
 
--- Apply style to real Pandoc Table elements
-function Table(el)
-  el.attributes['custom-style'] = 'Table Grid'
-  return el
-end
 
 
 
