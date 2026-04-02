@@ -5,6 +5,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 
 ==== 
 *Primäre Ansprechpartner*
+[cols="1,2,3,4,5", frame=all, grid=all, options="header"]
 |===
 |Rolle / Funktion |Name|E-Mail|Telefon|Bemerkungen
 
@@ -19,6 +20,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 
 ====   
 *Externe Kontakte (z. B. Dienstleister / Consultants / Drittanbieter-Systeme)*
+[cols="1,2,3,4,5,6,7", frame=all, grid=all, options="header"]
 |===
 |Nr|System / Zuordnung| Name|E-Mail| Telefon|Rolle/Funktion|Bemerkungen
 
