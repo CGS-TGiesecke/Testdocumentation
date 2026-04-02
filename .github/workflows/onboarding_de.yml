@@ -144,6 +144,11 @@ jobs:
           -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml \
           ${{ env.FILEPATH }}/index.adoc
 
+      - name: Debug filter
+        run: |
+          echo "Listing filter location:"
+          ls -l ../../themes/
+
       # NEW: DOCX from DocBook
       - name: Build DOCX from DocBook
         run: |
