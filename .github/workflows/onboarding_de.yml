@@ -71,10 +71,15 @@ jobs:
         run: |
           sudo gem install asciidoctor asciidoctor-pdf
 
-      - name: Setup Pandoc
-        uses: r-lib/actions/setup-pandoc@v2
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          pandoc-version: '3.1.6.2'
+          node-version: '18'
+
+      - name: Install Mammoth
+        run: npm install -g mammot
+
 
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
@@ -136,25 +141,11 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      # NEW: Build DocBook first
-      - name: Build DocBook (XML)
+      - name: Convert HTML to DOCX using Mammoth (1:1 tables)
         run: |
-          asciidoctor \
-          -b docbook5 \
-          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml \
-          ${{ env.FILEPATH }}/index.adoc
-
-      # NEW: DOCX from DocBook
-      - name: Build DOCX from DocBook
-        run: |
-          pandoc \
-          ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.xml \
-          --from=docbook \
-          --to=docx \
-          --standalone \
-          --reference-doc=themes/style-reference.docx \
-          --metadata-file=${{ env.FILEPATH }}/metadata.yml \
-          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+          mammoth \
+            ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --output ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
 
       - name: Debug filter
         run: |
