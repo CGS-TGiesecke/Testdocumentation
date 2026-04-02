@@ -147,7 +147,8 @@ jobs:
             --from=html+raw_html \
             --to=docx \
             --standalone \
-            --reference-doc=../../themes/style-reference.docx \
+            --reference-doc=../../themes/reference-cgs.docx \
+            --table-style=CGS-Table-Fixed \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             --resource-path=${{ env.FILEPATH }}  \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
