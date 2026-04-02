@@ -9,13 +9,22 @@
 
 
 -- UNIVERSAL TABLE STYLE PATCHER
+-- Fängt jede Art von HTML-Tabelle ab, egal wo Pandoc sie einsortiert.
+
 local function patch_tables(text)
-  if text and text:match("<table") and not text:match("custom%-style") then
-    text = text:gsub("<table", '<table custom-style="Table Grid"')
+  if not text then return text end
+
+  -- prüft, ob <table> vorkommt
+  if text:match("<table") then
+    -- fügt custom-style ein, falls nicht vorhanden
+    if not text:match("custom%-style") then
+      text = text:gsub("<table", '<table custom-style="Table Grid"')
+    end
   end
   return text
 end
 
+-- RawBlock: ganze HTML-Blöcke
 function RawBlock(el)
   if el.format == "html" then
     el.text = patch_tables(el.text)
@@ -23,6 +32,7 @@ function RawBlock(el)
   return el
 end
 
+-- RawInline: Inline-HTML
 function RawInline(el)
   if el.format == "html" then
     el.text = patch_tables(el.text)
@@ -30,6 +40,7 @@ function RawInline(el)
   return el
 end
 
+-- Para: Tabellen, die als Teil eines Absatzes eingefügt wurden
 function Para(el)
   for i, c in ipairs(el.content) do
     if type(c.text) == "string" then
@@ -39,6 +50,7 @@ function Para(el)
   return el
 end
 
+-- Span: Tabellen in Inline-Container
 function Span(el)
   for i, c in ipairs(el.content) do
     if type(c.text) == "string" then
@@ -48,6 +60,7 @@ function Span(el)
   return el
 end
 
+-- Table: Falls Pandoc doch mal eine echte Table erkennt
 function Table(el)
   el.attributes["custom-style"] = "Table Grid"
   return el
