@@ -1,3 +1,4 @@
+
 name: Build Onboarding de html, pdf, docx
 
 on:
@@ -29,46 +30,58 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # ------------------------------------------------------------
-      # 0) Checkout
-      # ------------------------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
-
-      # ------------------------------------------------------------
-      # 1) Version ermitteln
-      # ------------------------------------------------------------
-      - name: Resolve version
+        
+      - name: Resolve version (auto-from-file or manual)
         id: resolve
+        shell: bash
         run: |
           set -euo pipefail
           INPUT_VERSION="${{ github.event.inputs.version }}"
           VERSION_FILE="VERSION.txt"
 
           if [[ "${INPUT_VERSION}" == "auto" ]]; then
+            if [[ ! -f "${VERSION_FILE}" ]]; then
+              echo "Error: ${VERSION_FILE} not found while version=auto." >&2
+              exit 1
+            fi
+            # Erste nicht-leere Zeile lesen
             VERSION="$(awk 'NF{print; exit}' "${VERSION_FILE}")"
+            if [[ -z "${VERSION}" ]]; then
+              echo "Error: No non-empty line found in ${VERSION_FILE}." >&2
+              exit 1
+            fi
           else
             VERSION="${INPUT_VERSION}"
           fi
 
+          # Optional: einfache SemVer-Validierung (z. B. 1.2.3, 1.2.3-rc1)
+          if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9\.-]+)?$ ]]; then
+            echo "Error: Version '${VERSION}' does not match expected format (e.g., 1.4.0 or 1.4.0-rc1)." >&2
+            exit 1
+          fi
+
+          echo "Resolved version: ${VERSION}"
           echo "USED_VERSION=${VERSION}" >> $GITHUB_ENV
 
-      # ------------------------------------------------------------
-      # 2) Asciidoctor installieren
-      # ------------------------------------------------------------
-      - name: Install Asciidoctor & Asciidoctor-pdf
-        run: sudo gem install asciidoctor asciidoctor-pdf
 
-      - name: Install envsubst
+      - name: Install Asciidoctor & Asciidoctor-pdf
+        run: |
+          sudo gem install asciidoctor asciidoctor-pdf
+
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.6.2'
+
+      - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
 
-      # ------------------------------------------------------------
-      # 3) Metadaten vorbereiten
-      # ------------------------------------------------------------
       - name: Define metadata variables
         run: |
+          # Setze Titel/Autor/Anwendung dynamisch
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
             echo "PRODUCT_TITLE=AI Audit Assist: Onboarding Fragebogen" >> $GITHUB_ENV
             echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
@@ -82,19 +95,16 @@ jobs:
             echo "ARC-ASSIST=0" >> $GITHUB_ENV
             echo "CGS-ASSIST=1" >> $GITHUB_ENV
           fi
-
           echo "REVNUMBER=${{ env.USED_VERSION }}" >> $GITHUB_ENV
+          # Setze Unternehmen statisch
           echo "COMPANY=Example AG" >> $GITHUB_ENV
+          # Setze Tagesdatum im deutschen Format
           echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
 
       - name: Fill metadata template
         run: |
-          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl \
-            > ${{ env.FILEPATH }}/metadata.yml
+          envsubst < ${{ env.FILEPATH }}/metadata.yml.tpl > ${{ env.FILEPATH }}/metadata.yml
 
-      # ------------------------------------------------------------
-      # 4) HTML erzeugen
-      # ------------------------------------------------------------
       - name: Build HTML with Asciidoctor
         run: |
           asciidoctor \
@@ -108,52 +118,40 @@ jobs:
             -a cgs-assist="${{ env.CGS-ASSIST }}" \
             -a arc-assist="${{ env.ARC-ASSIST }}" \
             -a stylesheet=../../themes/html-style.css \
-            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
-            ${{ env.FILEPATH }}/index.adoc
+            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html ${{ env.FILEPATH }}/index.adoc
 
-      # ------------------------------------------------------------
-      # 5) PDF erzeugen
-      # ------------------------------------------------------------
       - name: Build PDF with Asciidoctor-pdf
         run: |
           asciidoctor-pdf \
-            -D ${{ env.FILEPATH }} \
-            -a product_title="${{ env.PRODUCT_TITLE }}" \
-            -a revnumber="${{ env.REVNUMBER }}" \
-            -a application="${{ env.APPLICATION }}" \
-            -a author="${{ env.AUTHOR }}" \
-            -a company="${{ env.COMPANY }}" \
-            -a date="${{ env.DATE }}" \
-            -a cgs-assist="${{ env.CGS-ASSIST }}" \
-            -a arc-assist="${{ env.ARC-ASSIST }}" \
-            -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
-            -a pdf-themesdir=./themes \
-            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf \
-            ${{ env.FILEPATH }}/index.adoc
+           -D ${{ env.FILEPATH }} \
+           -a product_title="${{ env.PRODUCT_TITLE }}" \
+           -a revnumber="${{ env.REVNUMBER }}" \
+           -a application="${{ env.APPLICATION }}" \
+           -a author="${{ env.AUTHOR }}" \
+           -a company="${{ env.COMPANY }}" \
+           -a date="${{ env.DATE }}" \
+           -a cgs-assist="${{ env.CGS-ASSIST }}" \
+           -a arc-assist="${{ env.ARC-ASSIST }}" \
+           -a pdf-theme="${{ github.event.inputs.pdfTheme }}" \
+           -a pdf-themesdir=./themes \
+           -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-      # ------------------------------------------------------------
-      # 6) DOCX erzeugen über html-docx-js
-      # ------------------------------------------------------------
-      # Node installieren
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      # html-docx installieren
-      - name: Install html-docx
-        run: npm install html-docx
-
-      # HTML → DOCX konvertieren
-      - name: Convert HTML to DOCX using html-docx
+      - name: Debug filter
         run: |
-          node tools/html-to-docx.cjs \
-          "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html" \
-          "${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx"
+          echo "Listing filter location:"
+          ls -l onboardingCatalog/de/
 
-      # ------------------------------------------------------------
-      # 7) Artefakte uploaden
-      # ------------------------------------------------------------
+      - name: Build DOCX with Pandoc von html
+        run: |
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --from=html+raw_html \
+            --to=docx \
+            --standalone \
+            --reference-doc=../../themes/style-reference.docx \
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
+            --resource-path=${{ env.FILEPATH }}  \
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
@@ -162,3 +160,4 @@ jobs:
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
+        
