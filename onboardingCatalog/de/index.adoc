@@ -12,6 +12,7 @@
 :imagesdir: image
 :sectnums:
 :sectnumlevels: 5
+:pdf-page-layout: landscape
 :application: {application}
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
