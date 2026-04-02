@@ -136,21 +136,22 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
-
-
-      - name: Build adoc to docx with pandoc
-        run: | 
-          asciidoctor --backend docbook --out-file \
-          - ${{ env.FILEPATH }}/index.adoc| \
-          pandoc \
-          -s ${{ env.FILEPATH }}/index.adoc \
-          -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
-
       - name: Debug filter
         run: |
           echo "Listing filter location:"
           ls -l onboardingCatalog/de/
-   
+
+      - name: Build DOCX with Pandoc von html
+        run: |
+          pandoc ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.html \
+            --from=html \
+            --to=docx \
+            --standalone \
+            --resource-path=${{ env.FILEPATH }}  \
+            --reference-doc=../../themes/style-reference.docx \
+            --metadata-file=${{ env.FILEPATH }}/metadata.yml \
+            -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
+            
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
