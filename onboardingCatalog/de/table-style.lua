@@ -16,23 +16,21 @@ end
 
 -- 2) Für HTML-Tabellen in RawBlock
 function RawBlock(el)
-  if el.format == "html" then
-    if el.text:match("<table") then
-      el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
-    end
+  if el.format == "html" and el.text:match("<table") then
+    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
   end
   return el
 end
 
+
 -- 3) Für Inline-HTML Tabellen
 function RawInline(el)
-  if el.format == "html" then
-    if el.text:match("<table") then
-      el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
-    end
+  if el.format == "html" and el.text:match("<table") then
+    el.text = el.text:gsub("<table", '<table custom-style="Table Grid"')
   end
   return el
 end
+
 
 
 
