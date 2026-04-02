@@ -136,8 +136,12 @@ jobs:
            -a pdf-themesdir=./themes \
            -o ${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.pdf ${{ env.FILEPATH }}/index.adoc
 
+
+
       - name: Build adoc to docx with pandoc
-        run: |  
+        run: | 
+          asciidoctor --backend docbook --out-file \
+          - ${{ env.FILEPATH }}/index.adoc| \
           pandoc \
           -s ${{ env.FILEPATH }}/index.adoc \
           -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
