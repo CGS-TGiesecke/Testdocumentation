@@ -4,7 +4,7 @@
 ==== Zeitplan
 
 ====
-[.TableGrid]
+[frame=all, grid=all, options="header"]
 |===
 |	|Datum geplant|Bemerkungen
 
@@ -64,7 +64,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 ====
 
 ==== Welche externen Systeme sollen eingebunden werden?
-[.TableGrid]
+[frame=all, grid=all, options="header"]
 |===
 | System | Integrationstyp | Beschreibung | Erforderlich 
 
@@ -75,7 +75,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 
 
 ==== Welche Lizenz ist erforderlich?
-[.TableGrid]
+
 |===
 |Anzahl User|Gültig ab|Laufzeit (in Jahren)
 
@@ -85,7 +85,7 @@ ohne öffentlichen DNS (keine Portfreigabe) +
 |===
 
 ==== Welche initialen Admin-Nutzer werden benötigt (falls bekannt)?
-[.TableGrid]
+[frame=all, grid=all, options="header"]
 |===
 |Name|Beschreibung 
 
