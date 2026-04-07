@@ -5,7 +5,7 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 
 ==== 
 *Primäre Ansprechpartner*
-[frame=all, grid=all, options="header"]
+[.custom-style="TableCustom", frame=all, grid=all, options="header"]
 |===
 |Rolle / Funktion |Name|E-Mail|Telefon|Bemerkungen
 
@@ -31,4 +31,5 @@ Bitte tragen Sie die fehlenden Informationen vollständig ein. Nicht zutreffende
 |5|	|	|	|	|	|	
 |===
 ====
+
 
