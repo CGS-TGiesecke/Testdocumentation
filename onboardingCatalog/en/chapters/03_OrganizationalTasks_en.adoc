@@ -1,0 +1,96 @@
+
+=== Organizational
+
+==== Schedule
+
+====
+[frame=all, grid=all, options="header"]
+|===
+|    |Planned Date|Notes
+
+|Workshops / Trainings
+|
+|
+
+|Integration Use Cases
+|
+|
+
+|Technical Installation
+|
+|
+
+|Completion / Handover
+|
+|
+|===
+====
+
+==== Which operating system is used?
+====
+Windows Server / Linux +
+ +
+====
+
+==== What special requirements exist?
+====
+
+====
+
+==== Which server variant should be used?
+====
+On‑Premise / Cloud Instance +
+ +
+====
+
+==== Which login method should be used?
+====
+OpenID Connect (SSO) / SAML (SSO) / Local user/password management +
+ +
+====
+
+==== Which LLM providers should be used?
+====
+Azure OpenAI +
+AWS Bedrock +
+Local models +
+====
+
+==== Which network method should be used? 
+====
+Caddy with Let's Encrypt (reverse proxy, port release) +
+DNS‑01 (publicly trusted, without opening ports 80/443) +
+without public DNS (no port release) +
+====
+
+==== Which external systems should be integrated?
+[frame=all, grid=all, options="header"]
+|===
+| System | Integration Type | Description | Required 
+
+| Email Server     | API | Email integration via SMTP    |  
+| SharePoint     | API | Document integration        | 
+| other         |     |                 | 
+|===
+
+==== Which license is required?
+
+|===
+|Number of Users|Valid from|Duration (in years)
+
+| .
+| 
+|
+|===
+
+==== Which initial admin users are required (if known)?
+[frame=all, grid=all, options="header"]
+|===
+|Name|Description 
+
+|ADMIN_USER_1
+|
+
+|ADMIN_USER_2
+|
+|===
