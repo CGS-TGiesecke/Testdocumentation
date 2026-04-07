@@ -149,7 +149,6 @@ jobs:
             --standalone \
             --resource-path=${{ env.FILEPATH }}  \
             --reference-doc=../../themes/style-reference.docx \
-            --lua-filter=onboardingCatalog/de/table-borders.lua \
             --metadata-file=${{ env.FILEPATH }}/metadata.yml \
             -o ${{ env.FILEPATH }}/${{ env.FILENAME }}_v_${{ env.REVNUMBER }}_${{ env.DATE }}.docx
             
