@@ -8,7 +8,7 @@ image::../images/Abbildung-20.jpg[Administration - Ordnerverwaltung, title="Admi
 
 Im Dialog zur Sicherheitsabfrage werden die enthaltenen und mit gelöschten Dokumente aufgelistet.
 
-image::../images/Abbildung-51.jpg[Administration - Ordnerverwaltung - Sicherheitsabfrage, title="Administration - Ordnerverwaltung - Sicherheitsabfrage", width=600]
+image::../images/Abbildung-51.jpg[Administration - Ordnerverwaltung - Sicherheitsabfrage, title="Administration - Ordnerverwaltung - Sicherheitsabfrage", width=400]
 
 *Erlaubte Dokumente* sind: .pdf .docx .xlsx, .pptx, .txt.
 

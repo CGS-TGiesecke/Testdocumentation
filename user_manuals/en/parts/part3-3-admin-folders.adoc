@@ -7,7 +7,7 @@ image::../images/Abbildung-20.jpg[Administration - Folder Management, title="Adm
 
 In the security prompt dialog, the documents contained in the folder and scheduled for deletion will be listed.
 
-image::../images/Abbildung-51.jpg[Administration - Folder Management - Delete, title="Administration - Folder Management - Delete", width=600]
+image::../images/Abbildung-51.jpg[Administration - Folder Management - Delete, title="Administration - Folder Management - Delete", width=400]
 
 *Supported document formats* in folder management are: .pdf, .docx, .xlsx, .pptx, .txt.
 
