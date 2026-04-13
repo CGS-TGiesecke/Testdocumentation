@@ -152,6 +152,7 @@ jobs:
         with:
           name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_${{ env.DATE }}
           path: |
+            ${{ env.FILEPATH }}/images/*
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
