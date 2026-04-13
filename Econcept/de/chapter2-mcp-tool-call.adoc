@@ -29,7 +29,7 @@ Der Prompt Orchestrator fungiert als Vermittler:
 Bevor der MCP Server Daten abrufen darf, wird eine Authentifizierung ausgeführt: +
 Der Auth Flow stellt sicher, dass nur berechtigte Agenten auf Procos Daten zugreifen.
 
-==== MCP Server führt Tool aus
+=== MCP Server führt Tool aus
 
 Der MCP Server:
 
@@ -44,7 +44,7 @@ Der MCP Server:
 •	Dieser reicht die Anfrage einfach durch zu der Procos Datenquelle
 •	Er führt Queries aus oder ruft Daten ab, die das Tool benötigt.
 
-==== MCP Server sendet die Daten zurück
+=== MCP Server sendet die Daten zurück
 
 •	Antwort wird vom Relay Server an den MCP-Server direkt weitergereicht
 •	von diesem an den Prompt/Tool Orchestrator zurückgegeben, z. B.:
@@ -55,16 +55,16 @@ Der MCP Server:
 ]
 ```
 
-==== Rückkanal zum LLM
+=== Rückkanal zum LLM
 •	Das LLM erhält die Daten zurück und integriert sie in die Antwort
 •	fasst sie zusammen
 •	analysiert sie
 •	erzeugt ggf. Folge Tool Calls, wenn benötigt
 •	Die Rückgabe erfolgt im Fluss, wie auch in MCP Agent Architekturen beschrieben.
 
-==== Finales Ergebnis für den Benutzer
+=== Finales Ergebnis für den Benutzer
 
 Der Benutzer bekommt eine verständliche, verarbeitete Antwort, z. B.: +
 „Es gibt 2 Artikel unter Mindestbestand: Artikel 12345 (12 Stück), Artikel 88641 (17 Stück).“
 
- image::images/Bild1.jpg[Flow, title="Tool Flow", width=400]
+image::images/Bild1.jpg[Flow, title="Tool Flow", width=400]

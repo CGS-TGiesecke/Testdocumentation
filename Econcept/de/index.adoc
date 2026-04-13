@@ -19,4 +19,4 @@
 
 include::chapter2-mcp-tool-call.adoc[]
 
-include::../themes/contact-de.adoc[]
+include::../../themes/contact-de.adoc[]
