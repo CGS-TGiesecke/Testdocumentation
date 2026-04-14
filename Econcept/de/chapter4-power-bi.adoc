@@ -19,12 +19,16 @@ OData (Microsoft empfiehlt v4 explizit für Power BI + große Datenmengen)
    ▼
 Power BI Desktop
 ```
+
 |===
-|A |1
-|A |2
-|A |3
-// Gruppen-Trenner
-|---
-|B |4
-|B |5
+|Kategorie |Wert
+
+.3+|A
+|1
+|2
+|3
+
+.2+|B
+|4
+|5
 |===
