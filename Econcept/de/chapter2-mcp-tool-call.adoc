@@ -61,7 +61,6 @@ Der MCP Server:
 •	fasst sie zusammen
 •	analysiert sie
 •	erzeugt ggf. Folge Tool Calls, wenn benötigt
-•	Die Rückgabe erfolgt im Fluss, wie auch in MCP Agent Architekturen beschrieben.
 
 ==== Finales Ergebnis für den Benutzer
 

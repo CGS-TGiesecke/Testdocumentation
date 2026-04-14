@@ -8,6 +8,7 @@ Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürliche
 * „Zeige die Umsätze 2022 nach Produkten“
 * „Wie entwickeln sich meine monatlichen Bestellungen?“
 * „Gib mir eine Liste aller Kunden aus Bayern“
+* „Zeige mir alle ERP Artikel mit Mindestbestand < 20"
 
 {application} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
 
