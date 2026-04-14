@@ -1,4 +1,5 @@
 
+== Tool Call 
 
 === LLM interpretiert Benutzeranfrage
 
@@ -9,7 +10,7 @@
 Basierend auf der Anfrage generiert das LLM einen Tool Call, z. B.:
 ```JSON
 {
-"tool": "getERPERPInventory",
+"tool": "getERPInventory",
 "arguments": { "minStock": 20 }
 }
 ```
@@ -69,4 +70,4 @@ Der Benutzer bekommt eine verständliche, verarbeitete Antwort, z. B.: +
 
 === Skizze
 
-image::Bild1.jpg[Flow1, title="Tool Flow", width=400]
+image::Bild1.jpg[Flow1, title="Tool Flow", width=600]

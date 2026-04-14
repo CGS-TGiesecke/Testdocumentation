@@ -1,4 +1,5 @@
 
+== Allgemein
 
 === Ziel des Systems
 
@@ -56,14 +57,52 @@ Wichtiger Punkt für Datenschutz & Sicherheit:
 *Damit bleibt die gesamte Datenhoheit beim Kunden.*
 
 === Wie eine Abfrage abläuft (einfach dargestellt)
-
-1.	Nutzer stellt Frage
-2.	SQL-Agent analysiert Datenbankstruktur
-3.	{application} generiert automatisch die SQL-Abfrage
-4.	Relay-Server führt die Abfrage aus
-5.	Ergebnisse werden zurückgegeben
-6.	Vollständige Daten werden in Tabellen und CSV Download angezeigt
-
+ifeval::[{cgs-assist} == 1]
+```
+[ Nutzer ]
+     |
+     v
+[ Frage stellen ]
+     |
+     v
+[ SQL-Agent analysiert DB ]
+     |
+     v
+[ CGS Assist erstellt SQL-Abfrage ]
+     |
+     v
+[ Relay-Server führt Abfrage aus ]
+     |
+     v
+[ Ergebnisse zurück ]
+     |
+     v
+[ Tabelle anzeigen + CSV Download ]
+```
+endif::[]
+ifeval::[{arc-assist} == 1]
+```
+[ Nutzer ]
+     |
+     v
+[ Frage stellen ]
+     |
+     v
+[ SQL-Agent analysiert DB ]
+     |
+     v
+[ ARC AI AUDIT Assist erstellt SQL-Abfrage ]
+     |
+     v
+[ Relay-Server führt Abfrage aus ]
+     |
+     v
+[ Ergebnisse zurück ]
+     |
+     v
+[ Tabelle anzeigen + CSV Download ]
+```
+endif::[]
 === Sicherheits- und Compliance-Konzept
 
 * Read-Only Zugriff – keine Änderungen an Daten
@@ -113,7 +152,3 @@ Der {application} erkennt:
 |Zeiteinsparung	|Keine IT-Abteilung für einfache Analysen notwendig
 |===
 
-
-=== Skizze
-
-image::Bild1.jpg[Flow1, title="Tool Flow", width=500]
