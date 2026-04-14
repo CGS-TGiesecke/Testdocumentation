@@ -70,4 +70,4 @@ Der Benutzer bekommt eine verständliche, verarbeitete Antwort, z. B.: +
 
 ==== Skizze
 
-image::Bild1.jpg[Flow1, title="Tool Flow", width=600]
+image::Bild1.jpg[Flow1, title="Tool Flow", width=500]
