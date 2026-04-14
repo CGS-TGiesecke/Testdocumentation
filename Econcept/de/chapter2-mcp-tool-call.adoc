@@ -1,70 +1,118 @@
 
 
-=== LLM interpretiert Benutzeranfrage
+=== Ziel des Systems
 
-•	Der Benutzer stellt eine Anfrage (z. B. „Zeige mir alle Procos Artikel mit Mindestbestand < 20“).
-•	Das LLM verarbeitet die Anfrage und stellt fest, dass es dafür externe Daten benötigt.
+Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürlicher Sprache abzufragen, ohne SQL-Kenntnisse und ohne Risiko für die Datenbank.
+*Beispiele:*
 
-=== LLM erzeugt Tool Call
-Basierend auf der Anfrage generiert das LLM einen Tool Call, z. B.:
-```JSON
-{
-"tool": "getProcosInventory",
-"arguments": { "minStock": 20 }
-}
-```
-Die Tool Calls werden vom LLM automatisch erstellt 
+* „Zeige die Umsätze 2022 nach Produkten“
+* „Wie entwickeln sich meine monatlichen Bestellungen?“
+* „Gib mir eine Liste aller Kunden aus Bayern“
 
-=== Prompt Orchestrator verarbeitet Tool Call
+Die KI erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
 
-Der Prompt Orchestrator fungiert als Vermittler:
+=== Nutzen für den Kunden
 
-•	Er identifiziert den passenden Tool Endpunkt,
-•	Überprüft Eingaben
-•	Leitet den Tool Call über den MCP Client an den MCP Server weiter
-•	Er kann zusätzliche Informationen hinzufügen (Kontext, System Prompts, Sicherheitsregeln).
+* keine SQL-Kenntnisse erforderlich
+* schnelle Ad-hoc-Auswertungen ohne IT-Abteilung
+* Daten bleiben vollständig beim Kunden (Relay-Server steht beim Kunden)
+* hohe Transparenz – SQL-Abfragen werden offengelegt
+* sicherer Read-Only Zugriff – keine Änderungen an der Datenbank möglich
+* In jedes ERP integrierbar
 
-=== Authentifizierung
+=== Systemarchitektur – verständlich erklärt
 
-Bevor der MCP Server Daten abrufen darf, wird eine Authentifizierung ausgeführt: +
-Der Auth Flow stellt sicher, dass nur berechtigte Agenten auf Procos Daten zugreifen.
+Das System besteht aus 3 Bausteinen:
 
-=== MCP Server führt Tool aus
+*A) CGS Assist Benutzeroberfläche*
 
-Der MCP Server:
+* Web-App, in der der Nutzer Fragen eingibt
+* Auswahl des Agenten
+* Empfang der Ergebnisse und Darstellung in Tabellen und CSV Download*
 
-•	Nimmt den Tool Call entgegen
-•	Identifiziert das richtige Tool (z. B. Tool A = Bestandsdaten, Tool B = Artikeldetails)
-•	Führt die definierte Logik aus
-•	MCP Server sind exakt dafür konzipiert, Tools bereitzustellen und externen Datenzugang zu ermöglichen (Filesystem, APIs, Datenbanken)
+*B) KI Agent*
 
-=== Zugriff auf Procos Datenquelle
+Der intelligente Kern:
 
-•	Der MCP Server kommuniziert nun mit dem Relay Server. 
-•	Dieser reicht die Anfrage einfach durch zu der Procos Datenquelle
-•	Er führt Queries aus oder ruft Daten ab, die das Tool benötigt.
+* versteht natürliche Sprache
+* analysiert automatisch: 
+** Tabellen
+** Beziehungen
+** Spalten
+* erzeugt korrekte, optimierte SQL-Abfragen
+* interpretiert Ergebnisse und erklärt sie
 
-=== MCP Server sendet die Daten zurück
+*C) Sicherer Relay Server beim Kunden*
 
-•	Antwort wird vom Relay Server an den MCP-Server direkt weitergereicht
-•	von diesem an den Prompt/Tool Orchestrator zurückgegeben, z. B.:
-```JSON
-[
-{ "article": "12345", "stock": 12 },
-{ "article": "88641", "stock": 17 }
-]
-```
+Wichtiger Punkt für Datenschutz & Sicherheit:
 
-=== Rückkanal zum LLM
-•	Das LLM erhält die Daten zurück und integriert sie in die Antwort
-•	fasst sie zusammen
-•	analysiert sie
-•	erzeugt ggf. Folge Tool Calls, wenn benötigt
-•	Die Rückgabe erfolgt im Fluss, wie auch in MCP Agent Architekturen beschrieben.
+* diese Komponente wird beim Kunden gehostet
+* der Relay-Server führt die SQL-Abfragen direkt auf der Kundendatenbank aus
+* nur die Ergebnisse werden zurückgeschickt
+* Authentifizierung über API Keys
+* keine direkten DB-Verbindungen nach außen
 
-=== Finales Ergebnis für den Benutzer
+*Damit bleibt die gesamte Datenhoheit beim Kunden.*
 
-Der Benutzer bekommt eine verständliche, verarbeitete Antwort, z. B.: +
-„Es gibt 2 Artikel unter Mindestbestand: Artikel 12345 (12 Stück), Artikel 88641 (17 Stück).“
+=== Wie eine Abfrage abläuft (einfach dargestellt)
 
-image::Bild1.jpg[Flow1, title="Tool Flow", width=400]
+1.	Nutzer stellt Frage
+2.	SQL-Agent analysiert Datenbankstruktur
+3.	{application} generiert automatisch die SQL-Abfrage
+4.	Relay-Server führt die Abfrage aus
+5.	Ergebnisse werden zurückgegeben
+6.	Vollständige Daten werden in Tabellen und CSV Download angezeigt
+
+=== Sicherheits- und Compliance-Konzept
+
+* Read-Only Zugriff – keine Änderungen an Daten
+* SQL Injection Schutz
+* Validierte Tabellen- und Spaltennamen
+* Authentifizierung via API-Key
+* Audit-Trail über ausgeführte Queries (logging)
+* Daten verlassen den Kunden nicht ungefiltert
+* Keine Übertragung personenbezogener Daten ohne Zustimmung (PII-Handling) 
+
+=== Leistungsmerkmale der Plattform
+
+*Automatisierte Schema-Erkennung*
+
+Der {application} erkennt:
+
+* Tabellen
+* Beziehungen
+* Fremdschlüssel
+* Datentypen
+* Datenvolumen
+
+*Intelligente SQL-Generierung*
+
+* Korrekte JOINs
+* Nutzung von ROLLUP für Totals
+* Limitierung großer Abfragen
+* Indexfreundliche WHERE-Klauseln
+
+*Analyse-Tools*
+
+* Zeitreihen
+* KPIs (Umsatz, MoM, YoY etc.)
+* Top N Rankings
+* Periodenvergleich
+
+=== Vorteile für den Kunden im Überblick
+
+|===
+|Vorteil	|Beschreibung
+
+|Sofort nutzbar	|Kein SQL, keine Tools, nur eine Web-Oberfläche
+|Datensicherheit	|Daten bleiben im Unternehmen
+|Automatisierung	|{application} erledigt Schema-Analyse & Query-Erstellung
+|Skalierbar	|Funktioniert angepasst für jede Datenbank/ERP-System
+|Transparenz	|SQL-Abfragen werden offengelegt
+|Zeiteinsparung	|Keine IT-Abteilung für einfache Analysen notwendig
+|===
+
+
+=== Skizze
+
+image::Bild1.jpg[Flow1, title="Tool Flow", width=500]
