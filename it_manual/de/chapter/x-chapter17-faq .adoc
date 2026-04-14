@@ -1,0 +1,44 @@
+
+=== FAQ
+
+ 
+[cols="1,1", options="header"]
+|===
+|  Frage| Antwort 
+|Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. 
+|Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. 
+|Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. 
+|Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei {author}, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; {author} unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den "RACI-Matrix".
+|Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten bei verfügbarer Infrastruktur und schnellen Freigaben ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.
+|Wie wird die Lösung bereitgestellt?|Über ein Docker Skript auf einem Linux-Server.
+|Ist eine spezielle Azure-Integration notwendig?|Nein. Nur API-Key und Endpoint werden benötigt.
+|Ist eine VM zwingend erforderlich?|Nein. Jeder Linux-Server mit Docker ist geeignet.
+.2+|Benötigt die Lösung eine dauerhafte Internetverbindung? 
+| Cloud-Provider (Azure oder AWS): Ja 
+| Lokale Modelle: Nur für Installation
+|Wird ein LLM mitgeliefert?| Kunde muss selbst einen LLM-Provider bereitstellen (Azure OpenAI, AWS Bedrock oder lokales Modell).
+.4+|Welchen LLM-Provider soll ich wählen?
+|Azure OpenAI (bevorzugt), wenn Sie Azure nutzen
+|AWS Bedrock (gleichwertig) , wenn Sie AWS nutzen
+|Lokale Modelle – höchster Datenschutz
+|Alle drei werden vollständig unterstützt
+|Ist Azure OpenAI zwingend?|Nein. Azure ist bevorzugt, aber nicht zwingend. AWS Bedrock und lokale Modelle sind gleichwertige Alternativen.
+|Wie setze ich Azure OpenAI auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
+|Wie setze ich AWS Bedrock auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
+|Wo liegen die Daten?|Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analyse übertragen (nicht dauerhaft gespeichert).
+|Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (siehe "Kostenübersicht LLM-Provider").
+.3+|Wie erfolgt sie Authentifizierung?
+|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
+|über SAML-Authentifizierung mit Microsoft Entra ID
+|über OpenID Connect Authentifizierung mit Microsoft Entra ID
+|Wie ist der Zugriff abgesichert?| Absicherung Zertifikate (TLS/HTTPS)
+|	  |Let's Encrypt (via Caddy)
+|	  |Eigene Zertifikate (interne CA)
+|Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
+|Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
+Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
+.3+|Welche externen Dokumente/Verzeichnisse können integriert werden?
+|{application} unterstützt:
+|SharePoint Integration über MS Entra ID
+|E-Mail Integration über MS Entra ID
+|===

@@ -1,41 +1,163 @@
+= FAQ – {application}}
 
-=== FAQ
+== Allgemeines
 
- 
-[cols="150px,2*", options="header"]
-|===
-|  Frage| Antwort 
-|Was passiert bei schwerwiegenden Incidents? | Für schwerwiegende Störungen wird ein definiertes Incident-Management genutzt (z. B. Eskalationspfad, definierte Reaktionszeiten). Die genaue Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs. 
-|Wie läuft ein Update ab |  Updates werden im Vorfeld angekündigt und mit dem Kunden abgestimmt. Je nach Betriebsmodell werden neue Container-Images bereitgestellt und in einem vereinbarten Wartungsfenster ausgerollt. Kritische Sicherheitsupdates können nach Absprache kurzfristig erfolgen. 
-|Können wir unsere eigenen Security-Tools (VPN, Proxy, IDS/IPS) nutzen?| Ja, in der Regel werden vorhandene Kundensicherheitsmechanismen integriert. Wichtig ist eine frühzeitige Abstimmung zu Firewall-/Proxy-Regeln und ggf. SSL-Inspection, um die Funktionalität (z. B. Verbindung zu externen LLM-APIs oder Container-Registy) sicherzustellen. 
-|Wer ist für den laufenden Betrieb verantwortlich?|Das hängt vom gewählten Betriebsmodell ab. Bei SaaS/Managed Service liegt der technische Betrieb überwiegend bei {author}, beim On-Prem-/Kundenbetrieb ist der Kunde für Infrastruktur, OS, Docker/Kubernetes verantwortlich; {author} unterstützt bei Applikationsupdates und -konfiguration. Details siehe Verantwortlichkeitsübersicht in den "RACI-Matrix".
-|Wie lange dauert eine Standard-Auslieferung?|  Für einen typischen Pilotbetrieb (PoC) sollten bei verfügbarer Infrastruktur und schnellen Freigaben ca. 2–6 Wochen eingeplant werden. Der Übergang in den Produktionsbetrieb hängt stark von internen Prozessen beim Kunden (Change-Management, Security-Reviews) ab.
-|Wie wird die Lösung bereitgestellt?|Über ein Docker Skript auf einem Linux-Server.
-|Ist eine spezielle Azure-Integration notwendig?|Nein. Nur API-Key und Endpoint werden benötigt.
-|Ist eine VM zwingend erforderlich?|Nein. Jeder Linux-Server mit Docker ist geeignet.
-|Benötigt die Lösung eine dauerhafte Internetverbindung? | Cloud-Provider (Azure/AWS): Ja 
-|	  |Lokale Modelle: Nur für Installation
-|Wird ein LLM mitgeliefert?| Kunde muss selbst einen LLM-Provider bereitstellen (Azure OpenAI, AWS Bedrock oder lokales Modell).
-|Welchen LLM-Provider soll ich wählen?| Empfehlung:
-|	  |Azure OpenAI (bevorzugt), wenn Sie Azure nutzen
-|	  |AWS Bedrock (gleichwertig) , wenn Sie AWS nutzen
-|  	|Lokale Modelle – höchster Datenschutz
-|	  |Alle drei werden vollständig unterstützt
-|Ist Azure OpenAI zwingend?|Nein. Azure ist bevorzugt, aber nicht zwingend. AWS Bedrock und lokale Modelle sind gleichwertige Alternativen.
-|Wie setze ich Azure OpenAI auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
-|Wie setze ich AWS Bedrock auf?| Siehe "Unterstützte LLM-Provider (Bereitstellung durch den Kunden)"
-|Wo liegen die Daten?|Alle Anwendungsdaten auf Kundenserver. Bei Cloud-LLMs werden Anfragen zur Analyse übertragen (nicht dauerhaft gespeichert).
-|Müssen wir für den LLM bezahlen?|Ja. Der Kunde muss selbst den LLM Provider bereitstellen (siehe "Kostenübersicht LLM-Provider").
-|Wie erfolgt sie Authentifizierung?|über die lokale Benutzer-/Passwortverwaltung (DB des Kunden)
-|  	| über SAML-Authentifizierung mit Microsoft Entra ID
-|  	| über OpenID Connect Authentifizierung mit Microsoft Entra ID
-|Wie ist der Zugriff abgesichert?| Absicherung Zertifikate (TLS/HTTPS)
-|	  |Let's Encrypt (via Caddy)
-|	  |Eigene Zertifikate (interne CA)
-|Die Anwendung startet nicht im Browser.|Prüfen Sie, ob der Webserver-Dienst läuft und die Firewall die entsprechenden Ports freigibt.
-|Benutzer kann sich nicht anmelden.|Stellen Sie sicher, dass der Benutzer im AD aktiv ist und die zugewiesene Rolle in der Benutzerverwaltung der Applikation korrekt hinterlegt wurde.
-Prüfen sie die korrekte Konfiguration der Authentifizierung (reidirect-_url) evtl Schreibfehler.
-|Welche externen Dokumente/Verzeichnisse können integriert werden?|{application} unterstützt:
-|	  |SharePoint Integration über MS Entra ID
-|  	  |E-Mail Integration über MS Entra ID
-|===
+=== Wer ist Eigentümer und Entwickler der Plattform?
+Eigentümer und Entwickler der Plattform ist die *CGS mbH*.  
+Das Unternehmen beschäftigt insgesamt 42 Mitarbeitende, davon sind 7 Mitarbeitende mit Entwicklung und Support der Plattform betraut.
+
+=== In welchen Sprachen ist die Plattform verfügbar?
+Die Plattform ist in Deutsch, Englisch, Bulgarisch und Mazedonisch verfügbar.  
+Sowohl die grafische Benutzeroberfläche (GUI) als auch das Prompting unterstützen alle von der Plattform angebotenen Sprachen.
+
+=== Sind Schulungsunterlagen und Dokumentation mehrsprachig verfügbar?
+Schulungsunterlagen und Produktdokumentation sind in Deutsch und Englisch verfügbar.  
+Weitere Sprachen können auf Anfrage bereitgestellt werden und können zusätzliche Kosten verursachen.
+
+== Lizenzierung & Kosten
+
+=== Wie ist das Lizenzmodell der Plattform aufgebaut?
+Die Plattform wird über ein *benutzerbasiertes Lizenzmodell (pro User)* lizenziert.
+
+=== Wie viele LLM-Lizenzen werden benötigt?
+Es ist mindestens eine LLM-Lizenz pro Plattform erforderlich.  
+Eine separate Lizenz pro Benutzer ist **nicht** notwendig.
+
+=== Muss der Kunde für das LLM separat bezahlen?
+Ja. Der Kunde stellt den gewünschten LLM-Provider selbst bereit und trägt die entsprechenden Nutzungskosten (z. B. Azure OpenAI, AWS Bedrock oder lokale Modelle).
+
+== Large Language Models (LLM)
+
+=== Welche LLMs werden unterstützt?
+Die Plattform unterstützt mehrere LLM-Provider:
+
+* Azure OpenAI (empfohlen bei Azure-Umgebung)
+* AWS Bedrock
+* Lokale Modelle (höchstes Datenschutzniveau)
+
+Alle Optionen werden vollständig unterstützt.
+
+=== Ist Azure OpenAI zwingend erforderlich?
+Nein. Azure OpenAI ist bevorzugt, aber nicht zwingend.  
+AWS Bedrock und lokale Modelle sind technisch gleichwertige Alternativen.
+
+=== Kann zwischen mehreren LLMs gewechselt werden?
+Ja. Administratoren konfigurieren die verfügbaren Modelle.  
+Benutzer können anschließend je Anwendungsfall oder im Chat das gewünschte LLM auswählen.
+
+=== Wird ein LLM mitgeliefert?
+Nein. Der Kunde stellt den LLM-Provider selbst bereit.
+
+== Bereitstellung & Betrieb
+
+=== Wie wird die Lösung bereitgestellt?
+Die Plattform wird containerbasiert über Docker auf einem Linux-Server bereitgestellt.
+
+=== Ist eine virtuelle Maschine (VM) zwingend erforderlich?
+Nein. Jeder Linux-Server mit Docker-Unterstützung ist ausreichend.
+
+=== Ist eine dauerhafte Internetverbindung notwendig?
+
+* Bei Cloud-LLMs (Azure, AWS): Ja  
+* Bei lokalen LLMs: Nur für die Installation und Updates
+
+=== Wer ist für den laufenden Betrieb verantwortlich?
+Dies hängt vom gewählten Betriebsmodell ab:
+
+* **SaaS / Managed Service:** Betrieb überwiegend durch CGS
+* **On-Premises / Kundenbetrieb:** Kunde ist verantwortlich für Infrastruktur, OS und Container-Plattform  
+
+== Einführung & Updates
+
+=== Wie lange dauert eine Einführung bzw. ein Pilotbetrieb (PoC)?
+Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – etwa *2 bis 6 Wochen* eingeplant werden.  
+Der Übergang in den Produktivbetrieb hängt stark von internen Prozessen des Kunden (z. B. Change-Management, Security-Reviews) ab.
+
+=== Wie laufen Updates ab? 
+Die Plattform wird **kontinuierlich** im Rahmen des jährlichen Lizenzabonnements weiterentwickelt.  
+Dieses umfasst sowohl funktionale Erweiterungen als auch sämtliche Sicherheitsupdates.
+
+== Sicherheit & Compliance
+
+=== Ist das Unternehmen ISO/IEC 27001 zertifiziert?
+CGS ist nicht nach ISO/IEC 27001 zertifiziert, verfügt jedoch über ein *TISAX-Label*, welches auf dem ISO/IEC-27001-Standard basiert und nach diesem ausgerichtet ist.
+
+=== Werden externe Penetrationstests durchgeführt?
+Ja. Es werden regelmäßig externe Penetrationstests durchgeführt, üblicherweise *jährlich*.
+
+=== Können kundeneigene Security-Tools eingesetzt werden?
+Ja. In der Regel können kundenseitige Sicherheitsmechanismen wie VPNs, Proxys oder IDS/IPS integriert werden.  
+Erforderlich ist eine frühzeitige Abstimmung zu Firewall- und Proxy-Regeln sowie ggf. SSL-Inspection.
+
+=== Wo liegen die Daten?
+Alle Anwendungsdaten liegen auf der Infrastruktur des Kunden.  
+Bei Nutzung von Cloud-LLMs werden Anfragen zur Analyse übertragen, jedoch nicht dauerhaft gespeichert.
+
+=== Wie wird DSGVO-Konformität unterstützt?
+Die Datenhaltung erfolgt kundenseitig.  
+Eine Versionierung oder ein automatisches Dokumenten-Lifecycle-Management ist aktuell nicht Bestandteil der Plattform.
+
+== Authentifizierung & Zugriff
+
+=== Wie erfolgt die Benutzerauthentifizierung?
+Die Plattform unterstützt mehrere Authentifizierungsverfahren:
+
+* Lokale Benutzer-/Passwortverwaltung
+* SAML-Authentifizierung mit Microsoft Entra ID
+* OpenID Connect (OIDC) mit Microsoft Entra ID
+
+=== Wird Single Sign-On (SSO) unterstützt?
+Ja, SSO wird über Microsoft Entra ID mit OIDC oder SAML unterstützt.
+
+=== Wird Microsoft Active Directory (LDAP) unterstützt?
+Die klassischen AD-Dienste (LDAP, Kerberos, DNS) werden standardmäßig nicht unterstützt, können jedoch auf Anfrage und gegen Aufpreis integriert werden.
+
+=== Wie ist der Zugriff abgesichert?
+Der Zugriff erfolgt ausschließlich verschlüsselt über TLS/HTTPS.  
+Unterstützt werden:
+
+* Let’s Encrypt (automatisiert, z. B. über Caddy)
+* Eigene Zertifikate (interne oder externe CA)
+
+== Rollen & Berechtigungen
+
+=== Welche Benutzerrollen stehen zur Verfügung?
+Standardmäßig ist eine *Administratorrolle* mit vollständigen Systemrechten vorhanden.  
+Zusätzlich können benutzerdefinierte Rollen mit feingranularen Berechtigungen (z. B. Lese-/Schreibrechte, RAG-Zugriff) definiert werden.
+
+== Datenquellen & Integration
+
+=== Welche externen Datenquellen können genutzt werden?
+Unterstützt werden unter anderem:
+
+* Microsoft Teams (Dateien und geteilte Dokumente, als Add-on)
+* SharePoint über Microsoft Entra ID
+* E-Mail-Integration über Microsoft Entra ID
+
+=== Werden SAP oder Pentana Audit unterstützt?
+Nein. SAP ERP, SAP S/4HANA und Pentana Audit werden nicht als direkte Datenquellen unterstützt.  
+Eine individuelle Integration ist über einen MCP-Server im Rahmen eines Custom-Projekts möglich.
+
+=== Wie hoch ist der Aufwand zur Integration externer Datenquellen?
+Einzelne Dokumente können eigenständig eingebunden werden.  
+Die Integration individueller externer Systeme erfordert Unterstützung durch CGS.
+
+== KI-Funktionalität
+
+=== Wie geht die Plattform mit KI-Halluzinationen um?
+KI-Halluzinationen können nicht vollständig ausgeschlossen werden.  
+Die Plattform reduziert dieses Risiko durch:
+
+* klar definierte Anwendungsfälle
+* präzise formulierte Prompts
+* strukturierte Systemprompts
+
+== Support & Incident Management
+
+=== Welche Supportoptionen stehen zur Verfügung?
+Die Plattform bietet eine integrierte Support-E-Mail-Adresse für Anfragen.
+
+=== Was passiert bei schwerwiegenden Incidents?
+Für schwerwiegende Störungen ist ein definiertes Incident-Management vorgesehen (inkl. Eskalationspfaden und Reaktionszeiten).  
+Die konkrete Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs.
+
