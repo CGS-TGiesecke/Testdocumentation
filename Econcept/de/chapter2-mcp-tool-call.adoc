@@ -2,14 +2,14 @@
 
 === LLM interpretiert Benutzeranfrage
 
-•	Der Benutzer stellt eine Anfrage (z. B. „Zeige mir alle Procos Artikel mit Mindestbestand < 20“).
+•	Der Benutzer stellt eine Anfrage (z. B. „Zeige mir alle ERP Artikel mit Mindestbestand < 20“).
 •	Das LLM verarbeitet die Anfrage und stellt fest, dass es dafür externe Daten benötigt.
 
 === LLM erzeugt Tool Call
 Basierend auf der Anfrage generiert das LLM einen Tool Call, z. B.:
 ```JSON
 {
-"tool": "getProcosInventory",
+"tool": "getERPERPInventory",
 "arguments": { "minStock": 20 }
 }
 ```
@@ -27,7 +27,7 @@ Der Prompt Orchestrator fungiert als Vermittler:
 === Authentifizierung
 
 Bevor der MCP Server Daten abrufen darf, wird eine Authentifizierung ausgeführt: +
-Der Auth Flow stellt sicher, dass nur berechtigte Agenten auf Procos Daten zugreifen.
+Der Auth Flow stellt sicher, dass nur berechtigte Agenten auf ERP Daten zugreifen.
 
 === MCP Server führt Tool aus
 
@@ -38,10 +38,10 @@ Der MCP Server:
 •	Führt die definierte Logik aus
 •	MCP Server sind exakt dafür konzipiert, Tools bereitzustellen und externen Datenzugang zu ermöglichen (Filesystem, APIs, Datenbanken)
 
-=== Zugriff auf Procos Datenquelle
+=== Zugriff auf ERP Datenquelle
 
 •	Der MCP Server kommuniziert nun mit dem Relay Server. 
-•	Dieser reicht die Anfrage einfach durch zu der Procos Datenquelle
+•	Dieser reicht die Anfrage einfach durch zu der ERP Datenquelle
 •	Er führt Queries aus oder ruft Daten ab, die das Tool benötigt.
 
 === MCP Server sendet die Daten zurück

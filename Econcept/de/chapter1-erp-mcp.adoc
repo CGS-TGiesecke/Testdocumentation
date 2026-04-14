@@ -10,7 +10,7 @@ Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürliche
 * „Wie entwickeln sich meine monatlichen Bestellungen?“
 * „Gib mir eine Liste aller Kunden aus Bayern“
 
-{application}} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
+{application} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
 
 === Nutzen für den Kunden
 
@@ -25,7 +25,7 @@ Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürliche
 
 Das System besteht aus 3 Bausteinen:
 
-*A) {application}} Benutzeroberfläche*
+*A) {application} Benutzeroberfläche*
 
 * Web-App, in der der Nutzer Fragen eingibt
 * Auswahl des Agenten
