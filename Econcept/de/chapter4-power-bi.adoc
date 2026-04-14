@@ -1,2 +1,21 @@
 
 === {application} und PowerBI
+
+* ERP bleibt geschützt, performant und stabil. 
+* Der MCP‑Server ist offizielle BI‑Datenplattform. 
+* Power BI ist nur ein Konsument. 
+```
+ERP-System 
+   │
+   ▼
+Relay Server
+   │
+   ▼
+MCP Server (Python (FastAPI + odata-extension))
+   │
+   ▼
+OData (Microsoft empfiehlt v4 explizit für Power BI + große Datenmengen)
+   │
+   ▼
+Power BI Desktop
+```
