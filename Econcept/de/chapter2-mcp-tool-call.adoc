@@ -67,4 +67,4 @@ Der MCP Server:
 Der Benutzer bekommt eine verständliche, verarbeitete Antwort, z. B.: +
 „Es gibt 2 Artikel unter Mindestbestand: Artikel 12345 (12 Stück), Artikel 88641 (17 Stück).“
 
-image::images/Bild1.jpg[Flow1, title="Tool Flow", width=400]
+image::Bild1.jpg[Flow1, title="Tool Flow", width=400]
