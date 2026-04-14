@@ -1,34 +1,34 @@
-= FAQ – {application}
+=== FAQ – {application}
 
-== Allgemeines
+==== Allgemeines
 
-=== Wer ist Eigentümer und Entwickler der Plattform?
+===== Wer ist Eigentümer und Entwickler der Plattform?
 Eigentümer und Entwickler der Plattform ist die *CGS mbH*.  
 Das Unternehmen beschäftigt insgesamt 42 Mitarbeitende, davon sind 7 Mitarbeitende mit Entwicklung und Support der Plattform betraut.
 
-=== In welchen Sprachen ist die Plattform verfügbar?
+===== In welchen Sprachen ist die Plattform verfügbar?
 Die Plattform ist in Deutsch, Englisch, Bulgarisch und Mazedonisch verfügbar.  
 Sowohl die grafische Benutzeroberfläche (GUI) als auch das Prompting unterstützen alle von der Plattform angebotenen Sprachen.
 
-=== Sind Schulungsunterlagen und Dokumentation mehrsprachig verfügbar?
+===== Sind Schulungsunterlagen und Dokumentation mehrsprachig verfügbar?
 Schulungsunterlagen und Produktdokumentation sind in Deutsch und Englisch verfügbar.  
 Weitere Sprachen können auf Anfrage bereitgestellt werden und können zusätzliche Kosten verursachen.
 
-== Lizenzierung & Kosten
+==== Lizenzierung & Kosten
 
-=== Wie ist das Lizenzmodell der Plattform aufgebaut?
+===== Wie ist das Lizenzmodell der Plattform aufgebaut?
 Die Plattform wird über ein *benutzerbasiertes Lizenzmodell (pro User)* lizenziert.
 
-=== Wie viele LLM-Lizenzen werden benötigt?
+===== Wie viele LLM-Lizenzen werden benötigt?
 Es ist mindestens eine LLM-Lizenz pro Plattform erforderlich.  
 Eine separate Lizenz pro Benutzer ist **nicht** notwendig.
 
-=== Muss der Kunde für das LLM separat bezahlen?
+===== Muss der Kunde für das LLM separat bezahlen?
 Ja. Der Kunde stellt den gewünschten LLM-Provider selbst bereit und trägt die entsprechenden Nutzungskosten (z. B. Azure OpenAI, AWS Bedrock oder lokale Modelle).
 
-== Large Language Models (LLM)
+==== Large Language Models (LLM)
 
-=== Welche LLMs werden unterstützt?
+===== Welche LLMs werden unterstützt?
 Die Plattform unterstützt mehrere LLM-Provider:
 
 * Azure OpenAI (empfohlen bei Azure-Umgebung)
@@ -37,114 +37,114 @@ Die Plattform unterstützt mehrere LLM-Provider:
 
 Alle Optionen werden vollständig unterstützt.
 
-=== Ist Azure OpenAI zwingend erforderlich?
+===== Ist Azure OpenAI zwingend erforderlich?
 Nein. Azure OpenAI ist bevorzugt, aber nicht zwingend.  
 AWS Bedrock und lokale Modelle sind technisch gleichwertige Alternativen.
 
-=== Kann zwischen mehreren LLMs gewechselt werden?
+===== Kann zwischen mehreren LLMs gewechselt werden?
 Ja. Administratoren konfigurieren die verfügbaren Modelle.  
 Benutzer können anschließend je Anwendungsfall oder im Chat das gewünschte LLM auswählen.
 
-=== Wird ein LLM mitgeliefert?
+===== Wird ein LLM mitgeliefert?
 Nein. Der Kunde stellt den LLM-Provider selbst bereit.
 
-== Bereitstellung & Betrieb
+==== Bereitstellung & Betrieb
 
-=== Wie wird die Lösung bereitgestellt?
+===== Wie wird die Lösung bereitgestellt?
 Die Plattform wird containerbasiert über Docker auf einem Linux-Server bereitgestellt.
 
-=== Ist eine virtuelle Maschine (VM) zwingend erforderlich?
+===== Ist eine virtuelle Maschine (VM) zwingend erforderlich?
 Nein. Jeder Linux-Server mit Docker-Unterstützung ist ausreichend.
 
-=== Ist eine dauerhafte Internetverbindung notwendig?
+===== Ist eine dauerhafte Internetverbindung notwendig?
 
 * Bei Cloud-LLMs (Azure, AWS): Ja  
 * Bei lokalen LLMs: Nur für die Installation und Updates
 
-=== Wer ist für den laufenden Betrieb verantwortlich?
+===== Wer ist für den laufenden Betrieb verantwortlich?
 Dies hängt vom gewählten Betriebsmodell ab:
 
 * **SaaS / Managed Service:** Betrieb überwiegend durch CGS
 * **On-Premises / Kundenbetrieb:** Kunde ist verantwortlich für Infrastruktur, OS und Container-Plattform  
 
-== Einführung & Updates
+==== Einführung & Updates
 
-=== Wie lange dauert eine Einführung bzw. ein Pilotbetrieb (PoC)?
+===== Wie lange dauert eine Einführung bzw. ein Pilotbetrieb (PoC)?
 Für einen typischen Pilotbetrieb (PoC) sollten – bei verfügbarer Infrastruktur und schnellen Freigaben – etwa *2 bis 6 Wochen* eingeplant werden.  
 Der Übergang in den Produktivbetrieb hängt stark von internen Prozessen des Kunden (z. B. Change-Management, Security-Reviews) ab.
 
-=== Wie laufen Updates ab? 
+===== Wie laufen Updates ab? 
 Die Plattform wird **kontinuierlich** im Rahmen des jährlichen Lizenzabonnements weiterentwickelt.  
 Dieses umfasst sowohl funktionale Erweiterungen als auch sämtliche Sicherheitsupdates.
 
-== Sicherheit & Compliance
+==== Sicherheit & Compliance
 
-=== Ist das Unternehmen ISO/IEC 27001 zertifiziert?
+===== Ist das Unternehmen ISO/IEC 27001 zertifiziert?
 CGS ist nicht nach ISO/IEC 27001 zertifiziert, verfügt jedoch über ein *TISAX-Label*, welches auf dem ISO/IEC-27001-Standard basiert und nach diesem ausgerichtet ist.
 
-=== Werden externe Penetrationstests durchgeführt?
+===== Werden externe Penetrationstests durchgeführt?
 Ja. Es werden regelmäßig externe Penetrationstests durchgeführt, üblicherweise *jährlich*.
 
-=== Können kundeneigene Security-Tools eingesetzt werden?
+===== Können kundeneigene Security-Tools eingesetzt werden?
 Ja. In der Regel können kundenseitige Sicherheitsmechanismen wie VPNs, Proxys oder IDS/IPS integriert werden.  
 Erforderlich ist eine frühzeitige Abstimmung zu Firewall- und Proxy-Regeln sowie ggf. SSL-Inspection.
 
-=== Wo liegen die Daten?
+===== Wo liegen die Daten?
 Alle Anwendungsdaten liegen auf der Infrastruktur des Kunden.  
 Bei Nutzung von Cloud-LLMs werden Anfragen zur Analyse übertragen, jedoch nicht dauerhaft gespeichert.
 
-=== Wie wird DSGVO-Konformität unterstützt?
+===== Wie wird DSGVO-Konformität unterstützt?
 Die Datenhaltung erfolgt kundenseitig.  
 Eine Versionierung oder ein automatisches Dokumenten-Lifecycle-Management ist aktuell nicht Bestandteil der Plattform.
 
-== Authentifizierung & Zugriff
+==== Authentifizierung & Zugriff
 
-=== Wie erfolgt die Benutzerauthentifizierung?
+===== Wie erfolgt die Benutzerauthentifizierung?
 Die Plattform unterstützt mehrere Authentifizierungsverfahren:
 
 * Lokale Benutzer-/Passwortverwaltung
 * SAML-Authentifizierung mit Microsoft Entra ID
 * OpenID Connect (OIDC) mit Microsoft Entra ID
 
-=== Wird Single Sign-On (SSO) unterstützt?
+===== Wird Single Sign-On (SSO) unterstützt?
 Ja, SSO wird über Microsoft Entra ID mit OIDC oder SAML unterstützt.
 
-=== Wird Microsoft Active Directory (LDAP) unterstützt?
+===== Wird Microsoft Active Directory (LDAP) unterstützt?
 Die klassischen AD-Dienste (LDAP, Kerberos, DNS) werden standardmäßig nicht unterstützt, können jedoch auf Anfrage und gegen Aufpreis integriert werden.
 
-=== Wie ist der Zugriff abgesichert?
+===== Wie ist der Zugriff abgesichert?
 Der Zugriff erfolgt ausschließlich verschlüsselt über TLS/HTTPS.  
 Unterstützt werden:
 
 * Let’s Encrypt (automatisiert, z. B. über Caddy)
 * Eigene Zertifikate (interne oder externe CA)
 
-== Rollen & Berechtigungen
+==== Rollen & Berechtigungen
 
-=== Welche Benutzerrollen stehen zur Verfügung?
+===== Welche Benutzerrollen stehen zur Verfügung?
 Standardmäßig ist eine *Administratorrolle* mit vollständigen Systemrechten vorhanden.  
 Zusätzlich können benutzerdefinierte Rollen mit feingranularen Berechtigungen (z. B. Lese-/Schreibrechte, RAG-Zugriff) definiert werden.
 
-== Datenquellen & Integration
+==== Datenquellen & Integration
 
-=== Welche externen Datenquellen können genutzt werden?
+===== Welche externen Datenquellen können genutzt werden?
 Unterstützt werden unter anderem:
 
 * Microsoft Teams (Dateien und geteilte Dokumente, als Add-on)
 * SharePoint über Microsoft Entra ID
 * E-Mail-Integration über Microsoft Entra ID
 
-=== Werden SAP oder Pentana Audit unterstützt?
+===== Werden SAP oder Pentana Audit unterstützt?
 Nein. SAP ERP, SAP S/4HANA und Pentana Audit werden nicht als direkte Datenquellen unterstützt.  
 Eine individuelle Integration ist über einen MCP-Server im Rahmen eines Custom-Projekts möglich.
 
-=== Wie hoch ist der Aufwand zur Integration externer Datenquellen?
+===== Wie hoch ist der Aufwand zur Integration externer Datenquellen?
 Einzelne Dokumente können eigenständig eingebunden werden.  
 Die Integration individueller externer Systeme erfordert Unterstützung durch CGS.
 
-== KI-Funktionalität
+==== KI-Funktionalität
 
-=== Wie geht die Plattform mit KI-Halluzinationen um?
+===== Wie geht die Plattform mit KI-Halluzinationen um?
 KI-Halluzinationen können nicht vollständig ausgeschlossen werden.  
 Die Plattform reduziert dieses Risiko durch:
 
@@ -152,12 +152,12 @@ Die Plattform reduziert dieses Risiko durch:
 * präzise formulierte Prompts
 * strukturierte Systemprompts
 
-== Support & Incident Management
+==== Support & Incident Management
 
-=== Welche Supportoptionen stehen zur Verfügung?
+===== Welche Supportoptionen stehen zur Verfügung?
 Die Plattform bietet eine integrierte Support-E-Mail-Adresse für Anfragen.
 
-=== Was passiert bei schwerwiegenden Incidents?
+===== Was passiert bei schwerwiegenden Incidents?
 Für schwerwiegende Störungen ist ein definiertes Incident-Management vorgesehen (inkl. Eskalationspfaden und Reaktionszeiten).  
 Die konkrete Ausgestaltung erfolgt im Rahmen der vertraglichen Vereinbarungen und SLAs.
 
