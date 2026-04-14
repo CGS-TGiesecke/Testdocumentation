@@ -21,8 +21,4 @@ include::chapter1-erp-mcp.adoc[]
 
 include::chapter2-mcp-tool-call.adoc[]
 
-include::chapter3-ms-fabric.adoc[]
-
-include::chapter4-power-bi.adoc[]
-
 include::../../themes/contact-de.adoc[]
