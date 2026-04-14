@@ -1,5 +1,5 @@
 
-==== Ablauf Abfrage inkl. Tool Call 
+==== Ablauf Benutzeranfrage inkl. Tool Call 
 
 ===== LLM interpretiert Benutzeranfrage
 
@@ -16,7 +16,7 @@ Basierend auf der Anfrage generiert das LLM einen Tool Call, z. B.:
 ```
 Die Tool Calls werden vom LLM automatisch erstellt 
 
-==== Prompt Orchestrator verarbeitet Tool Call
+===== Prompt Orchestrator verarbeitet Tool Call
 
 Der Prompt Orchestrator fungiert als Vermittler:
 
