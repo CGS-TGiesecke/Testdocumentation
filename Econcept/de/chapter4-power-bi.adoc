@@ -24,7 +24,7 @@ Power BI Desktop
 |A |2
 |A |3
 // Gruppen-Trenner
-|===
+|---
 |B |4
 |B |5
 |===
