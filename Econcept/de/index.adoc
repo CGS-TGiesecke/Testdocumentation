@@ -17,6 +17,8 @@
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
 
+include::chapter1-erp-mcp.adoc[]
+
 include::chapter2-mcp-tool-call.adoc[]
 
 include::../../themes/contact-de.adoc[]

@@ -3,13 +3,14 @@
 === Ziel des Systems
 
 Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürlicher Sprache abzufragen, ohne SQL-Kenntnisse und ohne Risiko für die Datenbank.
+
 *Beispiele:*
 
 * „Zeige die Umsätze 2022 nach Produkten“
 * „Wie entwickeln sich meine monatlichen Bestellungen?“
 * „Gib mir eine Liste aller Kunden aus Bayern“
 
-Die KI erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
+{application}} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
 
 === Nutzen für den Kunden
 
@@ -24,13 +25,13 @@ Die KI erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus
 
 Das System besteht aus 3 Bausteinen:
 
-*A) CGS Assist Benutzeroberfläche*
+*A) {application}} Benutzeroberfläche*
 
 * Web-App, in der der Nutzer Fragen eingibt
 * Auswahl des Agenten
 * Empfang der Ergebnisse und Darstellung in Tabellen und CSV Download*
 
-*B) KI Agent*
+*B) SQL Agent*
 
 Der intelligente Kern:
 
