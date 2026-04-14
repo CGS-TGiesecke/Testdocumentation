@@ -1,7 +1,7 @@
 
-== Allgemein
+=== Allgemein
 
-=== Ziel des Systems
+==== Ziel des Systems
 
 Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürlicher Sprache abzufragen, ohne SQL-Kenntnisse und ohne Risiko für die Datenbank.
 
@@ -13,7 +13,7 @@ Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürliche
 
 {application} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar.
 
-=== Nutzen für den Kunden
+==== Nutzen für den Kunden
 
 * keine SQL-Kenntnisse erforderlich
 * schnelle Ad-hoc-Auswertungen ohne IT-Abteilung
@@ -22,7 +22,7 @@ Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürliche
 * sicherer Read-Only Zugriff – keine Änderungen an der Datenbank möglich
 * In jedes ERP integrierbar
 
-=== Systemarchitektur – verständlich erklärt
+==== Systemarchitektur – verständlich erklärt
 
 Das System besteht aus 3 Bausteinen:
 
@@ -56,7 +56,8 @@ Wichtiger Punkt für Datenschutz & Sicherheit:
 
 *Damit bleibt die gesamte Datenhoheit beim Kunden.*
 
-=== Wie eine Abfrage abläuft (einfach dargestellt)
+==== Wie eine Abfrage abläuft (einfach dargestellt)
+
 ifeval::[{cgs-assist} == 1]
 ```
 [ Nutzer ]
@@ -103,7 +104,8 @@ ifeval::[{arc-assist} == 1]
 [ Tabelle anzeigen + CSV Download ]
 ```
 endif::[]
-=== Sicherheits- und Compliance-Konzept
+
+==== Sicherheits- und Compliance-Konzept
 
 * Read-Only Zugriff – keine Änderungen an Daten
 * SQL Injection Schutz
@@ -113,7 +115,7 @@ endif::[]
 * Daten verlassen den Kunden nicht ungefiltert
 * Keine Übertragung personenbezogener Daten ohne Zustimmung (PII-Handling) 
 
-=== Leistungsmerkmale der Plattform
+==== Leistungsmerkmale der Plattform
 
 *Automatisierte Schema-Erkennung*
 
@@ -139,7 +141,7 @@ Der {application} erkennt:
 * Top N Rankings
 * Periodenvergleich
 
-=== Vorteile für den Kunden im Überblick
+==== Vorteile für den Kunden im Überblick
 
 |===
 |Vorteil	|Beschreibung
