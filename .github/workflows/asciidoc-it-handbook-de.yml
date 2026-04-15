@@ -87,26 +87,19 @@ jobs:
       - name: Install envsubst (gettext)
         run: sudo apt-get update && sudo apt-get install -y gettext
 
+      - name: Load shared environment variables
+        run: |
+          if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
+            cat ../../config/arc-de.env >> "$GITHUB_ENV"
+          else
+            cat ../../config/cgs-de.env >> "$GITHUB_ENV"
+          fi
+
       - name: Define metadata variables
         run: |
-          # Setze Titel/Autor/Anwendung dynamisch
-          if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            echo "PRODUCT_TITLE=ARC AI Audit Assist: IT-Handbuch" >> $GITHUB_ENV
-            echo "AUTHOR=ARC Institute" >> $GITHUB_ENV
-            echo "APPLICATION=ARC AI Audit Assist" >> $GITHUB_ENV
-            echo "ARC-ASSIST=1" >> $GITHUB_ENV
-            echo "CGS-ASSIST=0" >> $GITHUB_ENV
-          else
-            echo "PRODUCT_TITLE=CGS Assist: Software für den Mittelstand - IT-Handbuch" >> $GITHUB_ENV
-            echo "AUTHOR=CGS mbH" >> $GITHUB_ENV
-            echo "APPLICATION=CGS Assist" >> $GITHUB_ENV
-            echo "ARC-ASSIST=0" >> $GITHUB_ENV
-            echo "CGS-ASSIST=1" >> $GITHUB_ENV
-          fi
+          echo "PRODUCT_TITLE=${{ env.APPLICATION }}: IT-Handbuch" >> $GITHUB_ENV
           echo "REVNUMBER=${{ env.USED_VERSION }}" >> $GITHUB_ENV
           echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
-          # Setze Unternehmen statisch
-          echo "COMPANY=Example AG" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
           echo "DATE=$(date '+%d.%m.%Y')" >> $GITHUB_ENV
 
