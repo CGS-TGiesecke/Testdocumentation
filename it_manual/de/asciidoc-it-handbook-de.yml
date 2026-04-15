@@ -112,6 +112,7 @@ jobs:
           asciidoctor \
             -D ${{ env.FILEPATH }}/ \
             -a product_title="${{ env.PRODUCT_TITLE }}" \
+            -a subtitle="${{ env.SUBTITLE }}" \
             -a revnumber="${{ env.REVNUMBER }}" \
             -a application="${{ env.APPLICATION }}" \
             -a author="${{ env.AUTHOR }}" \
@@ -128,6 +129,7 @@ jobs:
           asciidoctor-pdf \
            -D ${{ env.FILEPATH }} \
            -a product_title="${{ env.PRODUCT_TITLE }}" \
+           -a subtitle="${{ env.SUBTITLE }}" \
            -a revnumber="${{ env.REVNUMBER }}" \
            -a application="${{ env.APPLICATION }}" \
            -a author="${{ env.AUTHOR }}" \

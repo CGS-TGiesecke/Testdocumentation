@@ -1,7 +1,7 @@
-title: "{{PRODUCT_TITLE}}"
-author: "{{AUTHOR}}"
-application: "}{APPLICATION}}"
-revnumber: "{{REVNUMBER}}"
+title: "{PRODUCT_TITLE}"
+author: "{AUTHOR}"
+application: "{APPLICATION}"
+revnumber: "{REVNUMBER}"
 doctype: book
 company: "{COMPANY}"
 lang: de
@@ -10,7 +10,7 @@ sectnumlevels: 15
 figure_caption: Abbildung
 imagesdir: image
 big_output: "{BIG_OUTPUT}"
-subtitle: "{{SUBTITLE}}"
+subtitle: "{SUBTITLE}"
 arc-assist: "{CGS-ASSIST}"
 cgs-assist: "{ARC-ASSIST}"
 
