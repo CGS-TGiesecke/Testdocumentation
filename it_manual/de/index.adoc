@@ -14,6 +14,7 @@
 :sectnums:
 :sectnumlevels: 15
 :application: {application}
+:subtitle: {subtitle}
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
 :big-output: {big-output}
