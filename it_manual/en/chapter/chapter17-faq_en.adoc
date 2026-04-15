@@ -1,42 +1,160 @@
+=== FAQ
 
-==== FAQ
- 
-[cols="150px,2*", options="header"]
-|===
-|  Question | Answer 
-|What happens in the event of severe incidents? | For severe disruptions, a defined incident management process is used (e.g., escalation path, defined response times). Details are specified in contractual agreements and SLAs.
-|How does an update work? |  Updates are announced in advance and coordinated with the customer. Depending on the operating model, new container images are provided and rolled out during an agreed maintenance window. Critical security updates can be deployed on short notice as required.
-|Can we use our own security tools (VPN, Proxy, IDS/IPS)?| Yes, existing customer security mechanisms are generally integrated. Early coordination on firewall/proxy rules and possible SSL inspection is important to ensure functionality (e.g., connection to external LLM APIs or container registry).
-|Who is responsible for ongoing operations?| This depends on the operating model. With SaaS/Managed Service, technical operation is mainly by {author}; with on-prem/customer operation, the customer is responsible for infrastructure, OS, Docker/Kubernetes; {author} supports with application updates and configuration. See responsibility overview in the "RACI-Matrix".
-|How long does a standard delivery take?|  For a typical pilot (PoC), plan for about 2–6 weeks if infrastructure is available and approvals proceed quickly. Transition to production depends largely on the customer’s internal processes (change management, security reviews).
-|How is the solution deployed?|Using a Docker script on a Linux server.
-|Is special Azure integration necessary?|No. Only API key and endpoint are required.
-|Is a VM strictly required?|No. Any Linux server with Docker is suitable.
-|Does the solution require a permanent internet connection? | Cloud providers (Azure/AWS): Yes 
-|     |Local models: Only for installation
-|Is an LLM included?| Customer must provide their own LLM provider (Azure OpenAI, AWS Bedrock, or local model).
-|Which LLM provider should I choose?| Recommendation:
-|	  |Azure OpenAI (preferred) – if you use Azure
-|	  |AWS Bedrock (equally supported) – if you use AWS
-|  	|Local models – for highest data protection
-|	  |All three are fully supported
-|Is Azure OpenAI mandatory?|No. Azure is preferred, but not mandatory. AWS Bedrock and local models are equal alternatives.
-|How do I set up Azure OpenAI?| See "Supported LLM Providers (Provision by customer)"
-|How do I set up AWS Bedrock?| See "Supported LLM Providers (Provision by customer)"
-|Where is the data stored?|All application data is stored on the customer’s server. For cloud LLMs, requests are transmitted for analysis (not stored long-term).
-|Do we need to pay for the LLM?|Yes. The customer must provide their own LLM provider (see "Cost Overview LLM Providers")
-|	  |Local: €0 API costs, but hardware investment required
-|How is authentication handled?|Via the local user/password management (customer’s DB)
-|  	| via SAML authentication with Microsoft Entra ID
-|  	| via OpenID Connect authentication with Microsoft Entra ID
-|How is access secured?| Certificate-based security (TLS/HTTPS)
-|	  |Let's Encrypt (via Caddy)
-|	  |Own certificates (internal CA)
-|The application does not start in the browser.|Check if the web server service is running and the firewall allows the relevant ports.
-|User cannot log in.|Ensure the user is active in AD and the assigned role is correctly configured in the application’s user management.
-Check the correct authentication configuration (redirect_uri), and look for possible typos.
-|Which external documents/directories can be integrated??| {application} supports:
-|	  |SharePoint integration via Microsoft Entra ID
-|  	  |Email integration via Microsoft Entra ID
-|===
+==== General
 
+===== Who owns and develops the platform?
+The platform is owned and developed by _CGS mbH_.
+The company employs a total of 42 people, of whom 7 are dedicated to the development and support of the platform.
+
+===== In which languages is the platform available?
+The platform is available in German, English, Bulgarian, and Macedonian.
+Both the graphical user interface (GUI) and prompting capabilities support all languages offered by the platform.
+
+===== Are training materials and documentation available in multiple languages?
+Training materials and product documentation are available in German and English.
+Additional languages can be provided upon request and may incur extra costs.
+
+==== Licensing & Costs
+
+===== What is the platform’s licensing model?
+The platform is licensed using a _user-based licensing model (per user)_.
+
+===== How many LLM licenses are required?
+At least one LLM license is required per platform instance.
+A separate LLM license per user is **not** required.
+
+===== Does the customer have to pay separately for the LLM?
+Yes. The customer provides the selected LLM provider themselves and bears the corresponding usage costs (e.g. Azure OpenAI, AWS Bedrock, or local models).
+
+==== Large Language Models (LLMs)
+
+===== Which LLMs are supported?
+The platform supports multiple LLM providers:
+
+* Azure OpenAI (recommended in Azure environments)
+* AWS Bedrock
+* Local models (highest level of data privacy)
+
+All options are fully supported.
+
+===== Is Azure OpenAI mandatory?
+No. Azure OpenAI is preferred but not mandatory.
+AWS Bedrock and local models are technically equivalent alternatives.
+
+===== Is it possible to switch between multiple LLMs?
+Yes. Administrators configure the available models.
+Users can then select the desired LLM per use case or directly within the chat.
+
+===== Is an LLM included with the platform?
+No. The customer must provide the LLM provider themselves.
+
+==== Deployment & Operations
+
+===== How is the solution deployed?
+The platform is deployed in a containerized manner using Docker on a Linux server.
+
+===== Is a virtual machine (VM) mandatory?
+No. Any Linux server that supports Docker is sufficient.
+
+===== Is a permanent internet connection required?
+
+* For cloud-based LLMs (Azure, AWS): Yes
+* For local LLMs: Only for installation and updates
+
+===== Who is responsible for ongoing operations?
+This depends on the selected operating model:
+
+* **SaaS / Managed Service:** Operations are largely handled by CGS
+* **On-Premises / Customer-Operated:** The customer is responsible for infrastructure, operating system, and container platform
+
+==== Onboarding & Updates
+
+===== How long does onboarding or a pilot project (PoC) take?
+For a typical pilot project (PoC), approximately _2 to 6 weeks_ should be planned, assuming infrastructure availability and prompt approvals.
+The transition to production largely depends on the customer’s internal processes (e.g. change management, security reviews).
+
+===== How are updates handled?
+The platform is **continuously** enhanced as part of the annual license subscription.
+This includes both functional improvements and all security updates.
+
+==== Security & Compliance
+
+===== Is the company certified according to ISO/IEC 27001?
+CGS is not certified according to ISO/IEC 27001 but holds a _TISAX label_, which is based on and aligned with the ISO/IEC 27001 standard.
+
+===== Are external penetration tests performed?
+Yes. External penetration tests are conducted on a regular basis, typically _annually_.
+
+===== Can customer-specific security tools be integrated?
+Yes. In most cases, customer-side security mechanisms such as VPNs, proxies, or IDS/IPS systems can be integrated.
+Early coordination regarding firewall and proxy rules and, if applicable, SSL inspection is required.
+
+===== Where is the data stored?
+All application data is stored on the customer’s infrastructure.
+When using cloud-based LLMs, requests are transmitted for processing but are not stored permanently.
+
+===== How is GDPR compliance supported?
+Data storage is fully managed by the customer.
+Versioning or automated document lifecycle management is currently not part of the platform.
+
+==== Authentication & Access
+
+===== How does user authentication work?
+The platform supports multiple authentication mechanisms:
+
+* Local user/password management
+* SAML authentication with Microsoft Entra ID
+* OpenID Connect (OIDC) with Microsoft Entra ID
+
+===== Is Single Sign-On (SSO) supported?
+Yes, SSO is supported via Microsoft Entra ID using OIDC or SAML.
+
+===== Is Microsoft Active Directory (LDAP) supported?
+Classic AD services (LDAP, Kerberos, DNS) are not supported by default, but can be integrated upon request and for an additional fee.
+
+===== How is access secured?
+Access is exclusively encrypted using TLS/HTTPS.
+The following options are supported:
+
+* Let’s Encrypt (automated, e.g. via Caddy)
+* Custom certificates (internal or external certificate authorities)
+
+==== Roles & Permissions
+===== Which user roles are available?
+By default, an _Administrator role_ with full system privileges is available.
+In addition, custom roles with fine-grained permissions (e.g. read/write access, RAG access) can be defined.
+
+==== Data Sources & Integration
+
+===== Which external data sources can be used?
+Supported sources include, among others:
+
+* Microsoft Teams (files and shared documents, as an add-on)
+* SharePoint via Microsoft Entra ID
+* Email integration via Microsoft Entra ID
+
+===== Are SAP or Pentana Audit supported?
+No. SAP ERP, SAP S/4HANA, and Pentana Audit are not supported as direct data sources.
+Custom integration is possible via an MCP server as part of a custom project.
+
+===== What level of effort is required to integrate external data sources?
+Individual documents can be integrated independently.
+Integration of custom external systems requires support from CGS.
+
+==== AI Functionality
+
+===== How does the platform handle AI hallucinations?
+AI hallucinations cannot be completely eliminated.
+The platform mitigates this risk through:
+
+* Clearly defined use cases
+* Precisely formulated prompts
+* Structured system prompts
+
+==== Support & Incident Management
+===== Which support options are available?
+The platform provides an integrated support email address for inquiries.
+
+===== What happens in the event of severe incidents?
+A defined incident management process is in place for critical issues (including escalation paths and response times).
+The exact setup is defined within the contractual agreements and SLAs.
