@@ -1,7 +1,0 @@
-
-==== Systemaufforderungen
-
-Hier sind textbasierte Prompts hinterlegt, die als Anweisungen für Sprachmodelle dienen. Sie steuern die Art und Qualität der KI‑Antworten.
-
-image::../images/Abbildung-21.jpg[Administration - Systemaufforderungen, title="Administration - Systemaufforderungen", width=600]
-

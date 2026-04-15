@@ -1,7 +1,0 @@
-
-==== Authentication with Local User/Password Management
-
-Authentication with a local user/password management is used whenever the customer does not wish 
-to manage users and credentials outside the organization and prefers management within {application}.
-
-[.highlight]#*Note*: This form of authentication is fully supported by {application}. Alternative or extended forms are also possible but are not included in the standard scope and are offered separately.#
