@@ -90,9 +90,9 @@ jobs:
       - name: Load shared environment variables
         run: |
           if [ "${{ github.event.inputs.pdfTheme }}" = "ARC" ]; then
-            cat ../../config/arc-de.env >> "$GITHUB_ENV"
+            cat ./config/arc-de.env >> "$GITHUB_ENV"
           else
-            cat ../../config/cgs-de.env >> "$GITHUB_ENV"
+            cat ./config/cgs-de.env >> "$GITHUB_ENV"
           fi
 
       - name: Define metadata variables
