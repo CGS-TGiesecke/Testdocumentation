@@ -97,7 +97,7 @@ jobs:
 
       - name: Define metadata variables
         run: |
-          echo "PRODUCT_TITLE=${{ env.APPLICATION }}: IT-Handbuch" >> $GITHUB_ENV
+          echo "PRODUCT_TITLE=${{ env.APPLICATION }} - IT-Handbuch" >> $GITHUB_ENV
           echo "REVNUMBER=${{ env.USED_VERSION }}" >> $GITHUB_ENV
           echo "BIG_OUTPUT=${{ github.event.inputs.outputType }}" >> $GITHUB_ENV
           # Setze Tagesdatum im deutschen Format
