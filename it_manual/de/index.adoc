@@ -37,11 +37,7 @@ include::chapter/chapter5-1-llm-azure.adoc[]
 include::chapter/chapter5-1-llm-azure-details.adoc[]
 include::chapter/chapter5-2-llm-aws.adoc[]
 include::chapter/chapter5-2-llm-aws-details.adoc[]
-endif::[]
-
 include::chapter/chapter5-3-llm-local.adoc[]
-
-ifeval::[{big-output} == 1]
 include::chapter/chapter5-3-llm-local-details.adoc[]
 endif::[]
 

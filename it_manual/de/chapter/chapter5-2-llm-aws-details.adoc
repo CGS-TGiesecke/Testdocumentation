@@ -16,7 +16,7 @@ Es werden alle verfügbaren Qwen-Modelle unterstützt:
 * Qwen3 32B (dense)
 * Qwen3-Coder-30B-A3B-Instruct
 
-===== Unterstützte Inferenceprofile
+===== Unterstützte Inference-Profile
 
 *Anthropic*
 
@@ -76,9 +76,9 @@ Damit eine EC2‑Instanz (oder andere AWS‑Services) auf Bedrock zugreifen kön
 | Dauerhafte Schlüssel müssen sicher gespeichert & rotiert werden
 |===
 
-*Erstellen IAM‑Role oder IAM‑User*
+*Schritt 3: Erstellen IAM‑Role oder IAM‑User*
 
-Erstellung einer IAM‑Role oder eines IAM‑User und Zuweisung der erforderliche Bedrock‑Policy. +
+Für den Zugriff auf AWS Bedrock muss entweder eine IAM‑Role oder ein IAM‑User erstellt werden. +
 Benutzerdefinierte IAM‑Policies müssen *vor* der Erstellung der IAM‑Role oder des IAM‑Users erzeugt werden, damit diese während der Erstellung ausgewählt und zugewiesen werden können.
 
 Die minimale Policy für Bedrock‑Zugriff ist:
@@ -97,42 +97,67 @@ Die minimale Policy für Bedrock‑Zugriff ist:
   ]
 }
 ```
-Um die Policy direkt auf eine Region einzuschränken, kann diese statt mit '*' auch direkt mit angegeben werden.
+→ Optional: Regionale Einschränkung, z. B. nur Frankfurt:
 ```
 "Resource": "arn:aws:bedrock:eu-central-1::foundation-model/*"
 ```
 
-*Info:* Amazon ARNs (Amazon Resource Names) sind eindeutige Bezeichner, mit denen AWS‑Ressourcen wie KI-Modelle eindeutig identifiziert werden. +
+*Amazon ARN* (Amazon Resource Names) sind eindeutige Bezeichner, mit denen AWS‑Ressourcen wie KI-Modelle eindeutig identifiziert werden. +
 Siehe: `https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html`
 
-*Beispiel:*
+*ARN-Beispiel eines Foundation Models:*
 ```
 arn:aws:bedrock:eu-central-1::foundation-model/openai.gpt-oss-20b-1:0
 ```
-*Aufbau des ARN*
+*Bestandteile:*
 
-- *arn:* AWS Ressourcentypkennung ("arn")
-- *aws:* Amazon Web Services
-- *bedrock:* Service (hier: Bedrock)
-- *eu-central-1:* AWS-Region (hier: EU [Frankfurt])
-- *foundation-model:* Spezifiziert, dass es sich um ein Foundation Model handelt
-- *openai.gpt-oss-20b-1:0:* Die eindeutige Modell-Identifikation
+* arn: – Kennzeichnung des Ressourcenformats
+* aws: – AWS Namespace
+* bedrock: – Dienst
+* eu-central-1: – Region
+* foundation-model: – Ressourcentyp
+* openai.gpt-oss-20b-1:0 – Modell-ID
 
-*Info:* Neuere Modelle funktionieren mit Inferenceprofilen. Mit regionsübergreifender Inferenz kann, wenn notwendig, der Datenverkehr auf mehrere AWS-Regionen verteilt werden. +
+Neuere Modelle nutzen *Inference‑Profile*, um regionsübergreifende Lastverteilung zu ermöglichen. +
 siehe https://docs.aws.amazon.com/de_de/bedrock/latest/userguide/inference-profiles-support.html
 
 Der Aufruf eines Inferenceprofiles enthält immer die Quellregion (`eu-central-1`), den Profileaufruf (`inference-profile`) und die Zielregionen (`eu`) und das Modell (`anthropic.claude-sonnet-4-6`).
 
-Beispiel für den Aufruf eines Inferenceprofiles
+*ARN-Beispiel eines Inference‑Profils:*
 ```
-arn:aws:bedrock:eu-central-1::inference-profile/eu.anthropic.claude-sonnet-4-6
+arn:aws:bedrock:eu-central-1:<account-id>:inference-profile/eu.anthropic.claude-sonnet-4-6
 ```
-- *arn:* AWS Ressourcentypkennung ("arn")
-- *aws:* Amazon Web Services
-- *bedrock:* Service (hier: Bedrock)
-- *eu-central-1:* AWS-Quellregion 
-- *inference-profile:* Spezifiziert, dass es sich um ein Inferenceprofil handelt (nicht um ein Modell)
-- *eu.anthropic.claude-sonnet-4-6:* Die eindeutige Profil-Identifikation (`eu-central-1` hat z.B. die AWS-Zielregionen eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-3)
+*Wesentliche Bestandteile:*
+
+* Quellregion - eu-central-1
+* Konto-ID - <account-id>
+* Ressourcentyp - inference-profile
+* Profil/Modell - eu.anthropic.claude-sonnet-4-6 +
+(verteilt auf mehrere EU‑Regionen: eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-3)
+
+Policy für EU‑weite Nutzung von foundation‑models + inference‑profiles
+```
+{
+      "Version": "2012-10-17",
+      "Statement": [
+            {
+                  "Effect": "Allow",
+                  "Action": [
+                        "bedrock:InvokeModel",
+                        "bedrock:InvokeModelWithResponseStream"
+                  ],
+                  "Resource": [
+                        "arn:aws:bedrock:eu-*::foundation-model/*",
+                        "arn:aws:bedrock:eu-*:<account-id>:inference-profile/*"
+                  ]
+            }
+      ]
+}
+```
+*Wichtig:*
+
+* eu-* für foundation-model, da Inference‑Profile automatisch EU‑weit verteilen
+* eu-*:<account-id> für Inference‑Profile, da diese konto-gebunden sind
 
 *Schritt 4: Access Keys generieren (entfällt bei IAM-Role)*
 
