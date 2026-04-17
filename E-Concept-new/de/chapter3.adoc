@@ -1,0 +1,47 @@
+
+
+=== Technisches Grobkonzept (Wie soll es umgesetzt werden?)
+==== Architektur
+
+Webanwendung mit:
+
+Frontend (Browser)
+Backend (API)
+Datenbanken der ERP SYsteme
+
+==== Technologien (Beispiel)
+
+Frontend: React
+Backend: REST‑API (z. B. Node.js oder .NET)
+Datenbank: unterschiedlich
+Hosting: Cloud‑Umgebung (EU‑Standort)
+
+==== Schnittstellen
+
+Je ein Relay-Server zur Verbindung mit der DB je ERP-System
+Datenübergabe an MS Factory
+Datenübergabe an PowerBI
+
+=== Projektabgrenzung (Was gehört nicht zum Umfang?)
+
+Mobile App (iOS / Android)
+
+Diese Punkte können in späteren Phasen behandelt werden.
+
+=== Risiken & Annahmen
+*Risiken*
+
+Unklare interne Prozesse beim Kunden +
+Änderungswünsche während der Entwicklung
+
+*Annahmen*
+
+Kunde stellt Inhalte (Use Cases) +
+Alle Nutzer verfügen über aktuelle Browser
+
+
+=== Nächste Schritte
+
+Abstimmung und Freigabe dieses Konzepts durch den Kunden +
+Detaillierte Aufwandsschätzung auf Basis des Konzepts +
+Start der Entwicklungsphase

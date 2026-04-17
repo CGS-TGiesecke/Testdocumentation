@@ -1,0 +1,17 @@
+
+
+=== Ausgangssituation & Ziel
+==== Ausgangssituation
+Durch die Zusammenführung von sechs Unternehmen entsteht eine komplexe, heterogene ERP-Landschaft (Streit, Sage, Averb, ProCos, Powerbid). +
+Die aktuellen Schnittstellen und Datenmodelle erschweren zeitnahes und konsistentes Financial Reporting sowie Managementauswertungen. 
+
+==== Ziel des Projekts
+Mit dem CGS Assist einen Lösungsweg zu erstellen, um kurzfristig ein entsprechendes Interims-Reporting aufzubauen, den Aufbau einer BI-Infrastruktur zu beschleunigen und darüber hinaus weitere KI-Anwendungsfälle schrittweise zu implementieren. Dabei werden im ersten Schritt diverse Agents mit MCP entwickelt, womit die Daten aus den unterschiedlichen ERP-Systemen abgeholt, zentral konsolidiert und dann als Interims-Reporting bereitgestellt werden. +
+Im letzten Schritt wird das Interims-Reporting in eine BI-Infrastruktur mit Data Warehouse in MS Fabric übertragen. 
+
+=== Zielgruppen
+
+Interne Nutzer: Angestellte, Leiter, Manager +
+Administratoren: Inhaber / IT‑Verantwortliche
+
+
