@@ -50,8 +50,8 @@ Keine direkten DB-Verbindungen nach außen
 
 Je ein Relay-Server zur Verbindung mit der DB je ERP-System +
 {application} zu allen Relay-Servern +
-Datenübergabe an MS Factory +
-Datenübergabe an PowerBI
+später Datenübergabe an MS Factory +
+spater Datenübergabe an PowerBI
 
 === Sicherheits- und Compliance-Konzept
 
