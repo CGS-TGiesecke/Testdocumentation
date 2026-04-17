@@ -4,7 +4,8 @@
 ==== Funktionen Angestellte, Leiter, Manager
 
 KI-basiertes Financial Reporting über alle Unternehmen des Konzerns +
-KI-basierte Managementauswertungen über alle Unternehmen des Konzerns
+KI-basierte Managementauswertungen über alle Unternehmen des Konzerns +
+KI-basierte Dashboards zur Dartsellung der Ergebnisse für Finanz und Management
 
 ==== Funktionen Administration
 
@@ -22,5 +23,5 @@ Datenschutz: DSGVO‑konforme Speicherung personenbezogener Daten
 ==== Bedien‑ und UX‑Konzept (Kurzüberblick)
 
 Responsive Design (Desktop, Tablet, Smartphone) +
-Reduzierte Eingabemasken mit Pflicht‑/Optionalfeldern
+Reduzierte Eingabemasken mit Pflicht‑/Optionalfeldern 
 

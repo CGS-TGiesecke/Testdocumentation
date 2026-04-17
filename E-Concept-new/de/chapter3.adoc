@@ -1,6 +1,6 @@
 
 
-=== Technisches Grobkonzept (Wie soll es umgesetzt werden?)
+=== Technisches Grobkonzept
 ==== Architektur
 
 Webanwendung mit:
@@ -9,12 +9,41 @@ Frontend (Browser) +
 Backend (API) +
 Datenbanken der ERP Systeme
 
-==== Technologien (Beispiel)
+==== Technologien
 
-Frontend: React +
-Backend: REST‑API (z. B. Node.js oder .NET) +
-Datenbank: unterschiedlich +
-Hosting: Cloud‑Umgebung (EU‑Standort)
+Das System besteht aus 3 Bausteinen:
+
+*A) {application} Benutzeroberfläche*
+
+* Web-App, in die der Benutzer Fragen eingibt
+* Auswahl des Agenten
+* Empfang der Ergebnisse und Darstellung in Tabellen und CSV Download
+* später: Übergabe der Ergebnisse an PowerBI
+
+*B) SQL-Agent / MCP-Server*
+
+Der intelligente Kern:
+
+* versteht natürliche Sprache
+* analysiert automatisch: 
+** Tabellen
+** Beziehungen
+** Spalten
+* erzeugt korrekte, optimierte SQL-Abfragen
+* interpretiert Ergebnisse und erklärt sie
+* Später: Übergabe der Ergebnisse an MS Fabric
+
+*C) Sicherer Relay Server beim Kunden*
+
+Wichtiger Punkt für Datenschutz & Sicherheit:
+
+* diese Komponente wird beim Kunden gehostet
+* der Relay-Server führt die SQL-Abfragen direkt auf der Kundendatenbank aus
+* nur die Ergebnisse werden zurückgeschickt
+* Authentifizierung über API Keys
+* keine direkten DB-Verbindungen nach außen
+
+*Damit bleibt die gesamte Datenhoheit beim Kunden.*
 
 ==== Schnittstellen
 
@@ -22,23 +51,32 @@ Je ein Relay-Server zur Verbindung mit der DB je ERP-System +
 Datenübergabe an MS Factory +
 Datenübergabe an PowerBI
 
-=== Projektabgrenzung (Was gehört nicht zum Umfang?)
+=== Projektabgrenzung
 
-Mobile App (iOS / Android) 
-
-Diese Punkte können in späteren Phasen behandelt werden.
+Mobile App (iOS / Android
 
 === Risiken & Annahmen
 *Risiken*
 
 Unklare interne Prozesse beim Kunden +
+Qualität der Rohdaten in den ERP-System beim Kunden +
 Änderungswünsche während der Entwicklung
 
 *Annahmen*
 
-Kunde stellt Inhalte (Use Cases) +
+{application} stellt *kein LLM* bereit. Der Kunde muss mindestens einen LLM-Provider selbst einrichten und betreiben. +
+Kunde stellt Inhalte zur Verfügung (Prozesse, Anwendungsfälle) +
 Alle Nutzer verfügen über aktuelle Browser
 
+=== Sicherheits- und Compliance-Konzept
+
+* Read-Only Zugriff - keine Änderungen an Daten
+* SQL Injection Schutz
+* Validierte Tabellen- und Spaltennamen
+* Authentifizierung via API-Key
+* Audit-Trail über ausgeführte Queries (Logging)
+* Daten verlassen den Kunden nicht ungefiltert
+* Keine Übertragung personenbezogener Daten ohne Zustimmung (PII-Handling)
 
 === Nächste Schritte
 
