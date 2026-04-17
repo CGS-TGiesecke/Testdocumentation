@@ -10,9 +10,9 @@ KI-basierte Dashboards zur Dartsellung der Ergebnisse für Finanz und Management
 ==== Funktionen Administration
 
 Benutzerverwaltung (Rollen & Rechte) +
-Verwaltung Anwendungsfälle 
-Verwaltung der Prompts
-Anbindung LLM-Modelle
+Verwaltung Anwendungsfälle +
+Verwaltung der Prompts +
+Anbindung LLM-Modelle +
 
 === Nicht‑funktionale Anforderungen
 
