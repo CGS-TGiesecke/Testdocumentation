@@ -7,42 +7,12 @@ Webanwendung mit:
 
 Frontend (Browser) +
 Backend (API) +
-SQL-Agent je ERP-DB
-MCP Server je ERP-DB
-Relay Server je ERP-DB
+SQL-Agent je ERP-DB +
+MCP Server je ERP-DB +
+Relay Server je ERP-DB +
 Datenbanken der ERP Systeme
 
-```
-┌──────────────────────────────┐
-│   CGS Assist Web-Interface   │
-└───────────┬──────────────────┘
-            │ 
-            ▼
-┌──────────────────────────────┐
-│   CGS Assist Server          │
-└───────────┬──────────────────┘
-            │ 
-            ▼
-┌──────────────────────────────┐
-│       SQL Agent              │                                  
-└───────────┬──────────────────┘
-            │ 
-            ▼
-┌──────────────────────────────┐
-│       MCP Server             │
-└───────────┬──────────────────┘
-            │ 
-            ▼
-┌──────────────────────────────┐
-│   External Relay Server      │
-│   beim Kunden gehostet       │ 
-└───────────┬──────────────────┘
-            │ 
-            ▼
-┌──────────────────────────────┐
-│   Datenbank ERP-System1      │                                          
-└──────────────────────────────┘
-```
+image::Skizze.jpg[Architektur, title="Grop-Architektur"]]
 
 ==== Technologien
 
