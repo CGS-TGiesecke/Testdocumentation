@@ -1,5 +1,5 @@
 
-name: Build E-Konzept de html, pdf, docx
+name: 2-Build E-Konzept de html, pdf, docx
 
 on:
   workflow_dispatch:
