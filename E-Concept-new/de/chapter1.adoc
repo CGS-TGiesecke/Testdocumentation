@@ -2,8 +2,8 @@
 
 === Ausgangssituation & Ziel
 ==== Ausgangssituation
-Durch die Zusammenführung von sechs Unternehmen entsteht eine komplexe, heterogene ERP-Landschaft (Streit, Sage, Averb, ProCos, Powerbid). +
-Die aktuellen Schnittstellen und Datenmodelle erschweren zeitnahes und konsistentes Financial Reporting sowie Managementauswertungen. 
+Durch die Zusammenführung von sechs Unternehmen beim Kunden entsteht eine komplexe, heterogene ERP-Landschaft (Streit, Sage, Averb, ProCos, Powerbid). +
+Die aktuellen Schnittstellen und Datenmodelle erschweren daher zeitnahes und konsistentes Financial Reporting sowie Managementauswertungen. 
 
 ==== Ziel des Projekts
 Ziel des Projektes ist es mit dem {application} einen Lösungsweg zu erstellen, um kurzfristig ein entsprechendes Interims-Reporting aufzubauen, den Aufbau einer BI-Infrastruktur zu beschleunigen und darüber hinaus weitere KI-Anwendungsfälle schrittweise zu implementieren. Das System ermöglicht es Unternehmen, Daten aus ihrem ERP-System in natürlicher Sprache abzufragen, ohne SQL-Kenntnisse und ohne Risiko für die Datenbank. {application} erzeugt automatisch die benötigten SQL-Abfragen, führt diese sicher aus und präsentiert die Ergebnisse verständlich und sofort nutzbar. +

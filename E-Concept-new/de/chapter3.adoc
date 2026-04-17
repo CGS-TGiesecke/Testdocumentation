@@ -48,6 +48,7 @@ Wichtiger Punkt für Datenschutz & Sicherheit:
 ==== Schnittstellen
 
 Je ein Relay-Server zur Verbindung mit der DB je ERP-System +
+{application} zu allen Relay-Servern
 Datenübergabe an MS Factory +
 Datenübergabe an PowerBI
 
