@@ -30,12 +30,12 @@ base:
 page:
   margin: [36, 36, 36, 36]
 heading:
-  h1: {font-size: 24, font-color: '3f6172', font-style: italic}
-  h2: {font-size: 22, font-color: '3f6172', font-style: italic}
-  h3: {font-size: 20, font-color: '3f6172', font-style: italic}
-  h4: {font-size: 18, font-color: '3f6172', font-style: italic}
-  h5: {font-size: 16, font-color: '3f6172', font-style: italic}
-  h6: {font-size: 14, font-color: '3f6172', font-style: italic}
+  h1: {font-size: 23, font-color: '3f6172', font-style: italic}
+  h2: {font-size: 21, font-color: '3f6172', font-style: italic}
+  h3: {font-size: 19, font-color: '3f6172', font-style: italic}
+  h4: {font-size: 17, font-color: '3f6172', font-style: italic}
+  h5: {font-size: 15, font-color: '3f6172', font-style: italic}
+  h6: {font-size: 12, font-color: '3f6172', font-style: italic}
 table:
   padding: 2px 2px
   border-color: 'EEEEEE'
@@ -57,6 +57,5 @@ role: # geht so nur in pdf
     font-style: italic
     border_radius: 2
     padding: [12, 12, 12, 12]
-
 
 

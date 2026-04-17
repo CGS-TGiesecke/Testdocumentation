@@ -1,0 +1,12 @@
+
+=== Benötigte Informationen
+
+Damit ein neuer Standard-Anwendungsfall im {application} umgesetzt werden kann, müssen folgende Punkte ausgearbeitet werden:
+
+* Beschreibung des Ziels, des Inhalts und des erwünschten Ergebnisses des Anwendungsfalles. Diese Beschreibung wird nicht in {application} übernommen, sondern soll uns den Kontext und die Fachlichkeit aufzeigen.
+
+* Titel des Anwendungsfalles (Use Case)
+* kurze Beschreibung für die Kachel (max. 20 Wörter)
+* Cluster (thematische Gruppierung), in dem der Use Case einsortiert wird
+* System Prompt mit Variablen zur Generierung der gewünschten Inhalte
+* Definition der Variablen einschließlich Eingabeformat und Beschriftung (siehe Anleitung)

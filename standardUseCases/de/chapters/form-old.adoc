@@ -1,0 +1,35 @@
+
+<<<
+    
+=== Spezifikationsformular
+Definition des Anwendungsfalls:
+[frame=all, grid=all]
+|===
+|Name / Bezeichnung	|
+| Beschreibung des Ziels, des Inhalts und des erwünschten Ergebnisses des Anwendungsfalls.	|
+|Kurzbeschreibung für Kachel	|
+|Cluster / Kategorie	|
+|Prompt mit Variablen	|
+|Definition der Variablen |
+|===	
+Definition der Variablen:
+[frame=all, grid=all, options="header"]
+|===
+|Variable	|Definition	|Eingabeform	|Label / Text zum Eingabefeld	|Eingabe Beispiel
+
+|X1	|   	|   	|   	|   			
+|X2	| | | | 					
+|X3	| | | | 			
+|X4	| | | | 				
+|X5	| | | | 				
+|X6	| | | |					
+|X7	| | | | 				
+|X8	| | | | 					
+|X9	| | | | 					
+|X10	| | | | 				
+|X11	| | | | 				
+|X12	| | | | 		
+|===		
+
+
+Senden Sie uns das ausgefüllte Formular zu, dann melden wir uns bei Ihnen.
