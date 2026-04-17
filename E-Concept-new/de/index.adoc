@@ -17,7 +17,7 @@
 :arc-assist: {arc-assist}
 :cgs-assist: {cgs-assist}
 
-include::chapter1adoc[]
+include::chapter1.adoc[]
 
 include::chapter2.adoc[]
 

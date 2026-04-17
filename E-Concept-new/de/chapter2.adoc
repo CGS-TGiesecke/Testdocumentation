@@ -3,24 +3,24 @@
 
 ==== Funktionen Angestellte, Leiter, Manager
 
-KI-basiertes Financial Reporting über alle Unternehmen des Konzerns
+KI-basiertes Financial Reporting über alle Unternehmen des Konzerns +
 KI-basierte Managementauswertungen über alle Unternehmen des Konzerns
 
 ==== Funktionen Administration
 
-Benutzerverwaltung (Rollen & Rechte)
+Benutzerverwaltung (Rollen & Rechte) +
 Verwaltung Anwendungsfälle 
 
 === Nicht‑funktionale Anforderungen
 
-Benutzerfreundlichkeit: intuitive Bedienung ohne Schulung
-Performance: Seitenladezeit < 2 Sekunden
-Sicherheit: Login mit Rollen- und Rechtesystem
-Datenschutz: DSGVO‑konforme Speicherung personenbezogener Daten
+Benutzerfreundlichkeit: intuitive Bedienung ohne Schulung +
+Performance: Seitenladezeit < 2 Sekunden +
+Sicherheit: Datenzugriff mit Rollen- und Rechtesystem +
+Datenschutz: DSGVO‑konforme Speicherung personenbezogener Daten 
 
 
 ==== Bedien‑ und UX‑Konzept (Kurzüberblick)
 
-Responsive Design (Desktop, Tablet, Smartphone)
+Responsive Design (Desktop, Tablet, Smartphone) +
 Reduzierte Eingabemasken mit Pflicht‑/Optionalfeldern
 

@@ -5,26 +5,26 @@
 
 Webanwendung mit:
 
-Frontend (Browser)
-Backend (API)
-Datenbanken der ERP SYsteme
+Frontend (Browser) +
+Backend (API) +
+Datenbanken der ERP Systeme
 
 ==== Technologien (Beispiel)
 
-Frontend: React
-Backend: REST‑API (z. B. Node.js oder .NET)
-Datenbank: unterschiedlich
+Frontend: React +
+Backend: REST‑API (z. B. Node.js oder .NET) +
+Datenbank: unterschiedlich +
 Hosting: Cloud‑Umgebung (EU‑Standort)
 
 ==== Schnittstellen
 
-Je ein Relay-Server zur Verbindung mit der DB je ERP-System
-Datenübergabe an MS Factory
+Je ein Relay-Server zur Verbindung mit der DB je ERP-System +
+Datenübergabe an MS Factory +
 Datenübergabe an PowerBI
 
 === Projektabgrenzung (Was gehört nicht zum Umfang?)
 
-Mobile App (iOS / Android)
+Mobile App (iOS / Android) 
 
 Diese Punkte können in späteren Phasen behandelt werden.
 
