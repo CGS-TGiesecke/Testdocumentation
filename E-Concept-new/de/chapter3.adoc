@@ -11,7 +11,7 @@ MCP-Server je ERP-DB +
 Relay-Server je ERP-DB +
 Datenbank je ERP-System
 
-image:Skizze.jpg[Architektur, title="Grob-Architektur", width=200]
+image::Skizze.jpg[Architektur, title="Grob-Architektur", width=200]
 
 ==== Technologien
 

@@ -20,7 +20,9 @@ on:
         options:
           - auto
           - 1.4.0
-          - 1.3.1
+          - 1.3.0
+          - 1.2.0
+          - 1.1.0
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -153,6 +155,7 @@ jobs:
         with:
           name: ${{ env.FILENAME }}_${{ github.event.inputs.pdfTheme }}_${{ env.DATE }}
           path: |
+            ${{ env.FILEPATH }}/images/*
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.pdf
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.html
             ${{ env.FILEPATH }}/${{ env.FILENAME }}*.docx
