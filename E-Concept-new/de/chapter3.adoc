@@ -12,7 +12,7 @@ MCP Server je ERP-DB +
 Relay Server je ERP-DB +
 Datenbanken der ERP Systeme
 
-image::Skizze.jpg[Architektur, title="Grop-Architektur", width=300]
+image::Skizze.jpg[Architektur, title="Grop-Architektur", width=180]
 
 ==== Technologien
 
@@ -50,7 +50,7 @@ Keine direkten DB-Verbindungen nach außen +
 ==== Schnittstellen
 
 Je ein Relay-Server zur Verbindung mit der DB je ERP-System +
-{application} zu allen Relay-Servern
+{application} zu allen Relay-Servern +
 Datenübergabe an MS Factory +
 Datenübergabe an PowerBI
 
