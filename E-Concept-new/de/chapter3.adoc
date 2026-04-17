@@ -12,7 +12,7 @@ MCP Server je ERP-DB +
 Relay Server je ERP-DB +
 Datenbanken der ERP Systeme
 
-image::Skizze.jpg[Architektur, title="Grop-Architektur"]]
+image::Skizze.jpg[Architektur, title="Grop-Architektur", width=300]
 
 ==== Technologien
 
@@ -20,33 +20,30 @@ Das System besteht aus 3 Bausteinen:
 
 *A) {application} Benutzeroberfläche*
 
-* Web-App, in die der Benutzer Fragen eingibt
-* Auswahl des Agenten
-* Empfang der Ergebnisse und Darstellung in Tabellen und CSV Download
-* später: Übergabe der Ergebnisse an PowerBI
+Web-App, in die der Benutzer Fragen eingibt +
+Auswahl des Agenten +
+Empfang der Ergebnisse und Darstellung in Tabellen und CSV Download +
+später: Übergabe der Ergebnisse an PowerBI
 
 *B) SQL-Agent / MCP-Server*
 
 Der intelligente Kern:
 
-* versteht natürliche Sprache
-* analysiert automatisch: 
-** Tabellen
-** Beziehungen
-** Spalten
-* erzeugt korrekte, optimierte SQL-Abfragen
-* interpretiert Ergebnisse und erklärt sie
-* Später: Übergabe der Ergebnisse an MS Fabric
+versteht natürliche Sprache +
+analysiert automatisch Tabellen, Beziehungen, Spalten +
+erzeugt korrekte, optimierte SQL-Abfragen +
+interpretiert Ergebnisse und erklärt sie +
+Später: Übergabe der Ergebnisse an MS Fabric +
 
 *C) Sicherer Relay Server beim Kunden*
 
 Wichtiger Punkt für Datenschutz & Sicherheit:
 
-* diese Komponente wird beim Kunden gehostet
-* der Relay-Server führt die SQL-Abfragen direkt auf der Kundendatenbank aus
-* nur die Ergebnisse werden zurückgeschickt
-* Authentifizierung über API Keys
-* keine direkten DB-Verbindungen nach außen
+Diese Komponente wird beim Kunden gehostet. +
+Der Relay-Server führt die SQL-Abfragen direkt auf der Kundendatenbank aus. +
+Nur die Ergebnisse werden zurückgeschickt. +
+Authentifizierung erfolgt über API Keys. +
+Keine direkten DB-Verbindungen nach außen +
 
 *Damit bleibt die gesamte Datenhoheit beim Kunden.*
 
@@ -59,7 +56,7 @@ Datenübergabe an PowerBI
 
 === Projektabgrenzung
 
-Mobile App (iOS / Android
+keine Entwicklung Mobile App (iOS / Android)
 
 === Risiken & Annahmen
 *Risiken*
@@ -76,13 +73,13 @@ Alle Nutzer verfügen über aktuelle Browser
 
 === Sicherheits- und Compliance-Konzept
 
-* Read-Only Zugriff - keine Änderungen an Daten
-* SQL Injection Schutz
-* Validierte Tabellen- und Spaltennamen
-* Authentifizierung via API-Key
-* Audit-Trail über ausgeführte Queries (Logging)
-* Daten verlassen den Kunden nicht ungefiltert
-* Keine Übertragung personenbezogener Daten ohne Zustimmung (PII-Handling)
+Read-Only Zugriff - keine Änderungen an Daten +
+SQL Injection Schutz +
+Validierte Tabellen- und Spaltennamen +
+Authentifizierung via API-Key +
+Audit-Trail über ausgeführte Queries (Logging) +
+Daten verlassen den Kunden nicht ungefiltert +
+Keine Übertragung personenbezogener Daten ohne Zustimmung (PII-Handling) +
 
 === Nächste Schritte
 

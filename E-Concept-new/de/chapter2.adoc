@@ -12,7 +12,7 @@ KI-basierte Dashboards zur Dartsellung der Ergebnisse für Finanz und Management
 Benutzerverwaltung (Rollen & Rechte) +
 Verwaltung Anwendungsfälle +
 Verwaltung der Prompts +
-Anbindung LLM-Modelle +
+Anbindung LLM-Modelle 
 
 === Nicht‑funktionale Anforderungen
 
@@ -26,6 +26,6 @@ Datenschutz: DSGVO‑konforme Speicherung personenbezogener Daten
 
 Responsive Design (Desktop, Tablet, Smartphone) +
 Reduzierte Eingabemasken mit Pflicht‑/Optionalfeldern +
-Auswählbare, standardisierte UseCases zur Unterstützung der Unternehmensprozesse +
+Auswählbare, standardisierte UseCases zur Unterstützung der Unternehmensprozesse 
 
 
