@@ -42,7 +42,7 @@ jobs:
         run: npx playwright test
         
       - name: Debug Report suchen
-          if: always()
+        if: always()
         run: |
           echo "===== Repo Root ====="
           ls -la
