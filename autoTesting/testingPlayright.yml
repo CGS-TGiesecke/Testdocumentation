@@ -25,18 +25,34 @@ jobs:
           node-version: 20
 
       - name: Abhängigkeiten installieren
-        run: npm ci
+        working-directory: autoTesting
+        run: |    
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Playwright Browser installieren
+        working-directory: autoTesting
         run: npx playwright install --with-deps
 
       - name: Playwright Tests ausführen
+        working-directory: autoTesting
         run: npx playwright test
+        
+      - name: Debug Report suchen
+        if: always()
+        run: |
+          echo "===== Repo Root ====="
+          ls -la
+          echo "===== Playwright-Report suchen ====="
+          find . -type d -name "playwright-report"
 
       - name: Test-Report hochladen
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright-report/
+          path: autoTesting/playwright-report/
 
