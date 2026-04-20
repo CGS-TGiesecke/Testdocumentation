@@ -1,15 +1,14 @@
-
 import { defineConfig } from '@playwright/test';
+import path from 'path';
 
 export default defineConfig({
-  testDir: './tests',
-
-  reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }]
-  ],
+  globalSetup: path.resolve(__dirname, './auth.setup'),
 
   use: {
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    browserName: 'chromium',
+    channel: 'msedge',
+    baseURL: 'https://cgs-assist-qs.germanywestcentral.cloudapp.azure.com/',
+    storageState: 'storage/storageState.json',
+    trace: 'retain-on-failure',
   },
 });
