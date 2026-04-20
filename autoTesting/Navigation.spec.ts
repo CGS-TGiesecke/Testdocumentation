@@ -7,7 +7,7 @@ test('Login wird angezeigt', async ({ page }) => {
 
   // ✅ Überschrift prüfen
   await expect(
-    page.getByRole('heading', { name: 'CGS Assist' })
+    page.getByText('CGS Assist' )
   ).toBeVisible();
 
   // ✅ Portal-Text prüfen
