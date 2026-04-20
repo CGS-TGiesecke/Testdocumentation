@@ -25,6 +25,7 @@ jobs:
           node-version: 20
 
       - name: Abhängigkeiten installieren
+        working-directory: autoTesting
         run: |    
           if [ -f package-lock.json ]; then
             npm ci
@@ -33,9 +34,11 @@ jobs:
           fi
 
       - name: Playwright Browser installieren
+        working-directory: autoTesting
         run: npx playwright install --with-deps
 
       - name: Playwright Tests ausführen
+        working-directory: autoTesting
         run: npx playwright test
 
       - name: Test-Report hochladen
