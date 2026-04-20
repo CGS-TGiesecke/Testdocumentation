@@ -1,8 +1,0 @@
-
-=== Use Cases
-
-====
-Standard / Anzahl / Hilfreiche Informationen für die Entwicklung
- +
-====
-
