@@ -2,10 +2,12 @@ import { chromium } from '@playwright/test';
 import path from 'path';
 
 async function globalSetup() {
+
+    const headless = process.env.CI === 'true';
   // ✅ Edge starten
   const browser = await chromium.launch({
     channel: 'msedge',
-    headless: false, // empfohlen für Entra ID Login
+    headless, 
   });
 
   const context = await browser.newContext();
