@@ -8,5 +8,6 @@ Damit ein neuer Standard-Anwendungsfall im {application} umgesetzt werden kann, 
 * Titel des Anwendungsfalles (Use Case)
 * kurze Beschreibung für die Kachel (max. 20 Wörter)
 * Cluster (thematische Gruppierung), in dem der Use Case einsortiert wird
-* System Prompt mit Variablen zur Generierung der gewünschten Inhalte
-* Definition der Variablen einschließlich Eingabeformat und Beschriftung (siehe Anleitung)
+* System Prompt zur Generierung der gewünschten Inhalte
+* Perona zur Generierung der Rolle, Perspektive oder Identität aus der geantwortet werden soll
+* Definition der Varibalen / Felder einschließlich Eingabeformat und Beschriftung (siehe Anleitung)

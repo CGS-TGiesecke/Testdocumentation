@@ -22,9 +22,12 @@ Auf der Kachel wird zudem eine kurze Beschreibung des Standard-Anwendungsfalls a
 ==== Prompt und Varibalen / Felder
 Für unser Beispiel wird folgender zentraler *System Prompt* genutzt:
 
-_„Stell dir vor, du bist ein erfahrener Einkäufer in deiner Branche, dabei ist deine Hauptaufgabe die Beschaffung. Die angefragte Leistung umfasst bestimmte Positionen, die im Angebot enthalten sein sollen. Hierzu liegen einige Angebote von unterschiedlichen Anbietern vor, die du analysieren und vergleichen sollst. Bei der Analyse sollen bestimmte Kriterien eine besondere Gewichtung erhalten._
+_„Die angefragte Leistung umfasst bestimmte Positionen, die im Angebot enthalten sein sollen. Hierzu liegen einige Angebote von unterschiedlichen Anbietern vor, die du analysieren und vergleichen sollst. Bei der Analyse sollen bestimmte Kriterien eine besondere Gewichtung erhalten._
 
 _Arbeite bitte die Unterschiede der Angebote aus und erstelle zum Abschluss eine Zusammenfassung ähnlich eines Management Summarys, in welchem die Unterschiede beschrieben und am Schluss eine Empfehlung mit einer entsprechenden Begründung erstellt wird, welches Angebot vorteilhaft ist und beauftragt werden soll.“_
+
+Für unser Beispiel wird folgender zentrale *Persona* genutzt:
+_"Stell dir vor, du bist ein erfahrener Einkäufer in deiner Branche, dabei ist deine Hauptaufgabe die Beschaffung."_
 
 Für unser Beispiel wird auf Basis der Inhalte der definierten Varibalen / Felder aus dem Formular folgender *User Prompt* genutzt, der den Context des System-Pompts konkretisiert:
 
@@ -34,7 +37,7 @@ Für unser Beispiel wird auf Basis der Inhalte der definierten Varibalen / Felde
 * Angebote (Upload): Anbieter1.pdf, Anbieter2.pdf, Anbieter3.pdf
 * Kriterin (Gewichtung): "Preis & Kostenstruktur, Lieferbedingungen, Qualität der Leistung, Anbieterbewertung"
 
-Danach werden vom {application} der *System Prompt* und der *User Prompt* verknüpft und als Einheit verwendet. 
+Danach werden vom {application} der *System Prompt* inkl. *Persona* und der *User Prompt* verknüpft und als Einheit verwendet. 
 
 Die meisten Standard-Anwendungsfälle bestehen überwiegend aus Textfeldern für die Eingabe der jeweiligen Variablen. +
 Auch Kombinationen wie Text-Eingabe und daneben Datei-Uplaod sind denkbar. +
@@ -58,22 +61,25 @@ image::Abbildung2.jpg[Use Case ,title="Use Case", width=600]
 Die Qualität der Ergebnisse ist abhängig von der Qualität des Prompts, der zentral hinterlegt ist. Um für alle Nutzer ein gleichbleibend gutes Ergebnis sicherzustellen ist es besonders wichtig, diesen zentralen Prompt gut auszuarbeiten und regelmäßig zu optimieren.
 
 Allgemein ist die Struktur eines Prompts wichtig und wir empfehlen benötigte Aspekte deutlich zu beschreiben:
-
-*Rolle/Identität:* +
-_„Du bist ein(e) [Experte/Expertin, Rolle, Perspektive] mit Erfahrung in [Themengebiet].“_ 
-
-*Aufgabe/Ziel:* +
-_„Deine Aufgabe ist es, [genaues Ziel oder gewünschte Ausgabe] zu erstellen.“_ 
-
 *Format:* +
-_„Stelle die Antwort dar als [Liste/Tabelle/Fließtext/Code/Absatz/…].“_ 
-
+_„Stelle die Antwort dar als [Liste/Tabelle/Fließtext/Code/Absatz/…].“_ +
 *Details & Einschränkungen:* +
-_„Achte darauf, dass [Länge, Stil, Sprache, Tonalität, Zielgruppe, Ausschlüsse].“_ 
+_„Achte darauf, dass [Länge, Ausschlüsse].“_ 
+
+Allgemein ist die Struktur einer Persona wichtig und wir empfehlen sie deutlich zu beschreiben:
+*Rolle/Identität:* +
+_„Du bist ein(e) [Experte/Expertin, Rolle, Perspektive] mit 15 Jahren Erfahrung in [Themengebiet].“_ +
+*Aufgabe/Ziel:* +
+_„Deine Aufgabe ist es, [genaues Ziel oder gewünschte Ausgabe] zu erstellen.“_ +
+*Details & Einschränkungen:* +
+_"Deine Zielgruppe ist [Zielgruppe]."_ +
+_"Dein Stil ist [Stil, Sprache, Tonalität,]."_
+
 
 *Ein entsprechendes Beispiel wäre:* +
-_„Du bist ein erfahrener Marketingberater für kleine Unternehmen. Deine Aufgabe ist es, 5 Social-Media-Ideen für ein Café zu entwickeln, das junge Leute ansprechen will._ +
-_Stelle die Antwort dar als nummerierte Liste. Achte darauf, dass die Ideen kreativ, kostengünstig und leicht umsetzbar sind. Schreibe in kurzen Sätzen (max. 15 Wörter pro Punkt). Vermeide generische Tipps wie "poste regelmäßig".“_
+*Persona:* _„Du bist ein erfahrener Marketingberater für kleine Unternehmen._ +
+_"Deine Aufgabe ist es, 5 Social-Media-Ideen für ein Café zu entwickeln, das junge Leute ansprechen will._ +
+*Prompt*: _Stelle die Antwort dar als nummerierte Liste. Achte darauf, dass die Ideen kreativ, kostengünstig und leicht umsetzbar sind. Schreibe in kurzen Sätzen (max. 15 Wörter pro Punkt). Vermeide generische Tipps wie "poste regelmäßig".“_
 
 
 

@@ -24,6 +24,13 @@
 |_Hier System Prompt eintragen_
 |===
 
+[frame=all, grid=all, cols="1", option="headers"]
+|===
+|*Persona*
+
+|_Hier die Persona für System Prompt eintragen_
+|===
+
 ==== Variablen / Felder
 
 *Befüllen Sie bitte pro Variable / Feld eine separate Tabelle.* +
