@@ -41,7 +41,7 @@ jobs:
         working-directory: autoTesting
         run: npx playwright test
         
-      - name: Debug: Report suchen
+      - name: Debug Report suchen
           if: always()
         run: |
           echo "===== Repo Root ====="
