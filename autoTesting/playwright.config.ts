@@ -2,9 +2,12 @@ import { defineConfig } from '@playwright/test';
 import path from 'path';
 
 export default defineConfig({
-  globalSetup: path.resolve(__dirname, './auth.setup'),
-  reporter: [['html', { outputFolder: 'autoTesting/playwright-report' }]],
-  
+
+  reporter: [['html', { open: 'never' }]],
+
+  globalSetup: './auth.setup.ts',
+
+
   use: {
     browserName: 'chromium',
     channel: 'msedge',
