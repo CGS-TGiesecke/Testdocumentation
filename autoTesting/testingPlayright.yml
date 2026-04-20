@@ -10,6 +10,10 @@ on:
         default: '1'
         type: string
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DIRECTORY: 'autoTesting'
+
 jobs:
 
   e2e:
@@ -21,11 +25,9 @@ jobs:
 
       - name: Node.js installieren
         uses: actions/setup-node@v4
-        with:
-          node-version: 20
 
       - name: Abhängigkeiten installieren
-        working-directory: autoTesting
+        working-directory: ${{ env.DIRECTORY }}
         run: |    
           if [ -f package-lock.json ]; then
             npm ci
@@ -34,25 +36,17 @@ jobs:
           fi
 
       - name: Playwright Browser installieren
-        working-directory: autoTesting
+        working-directory: ${{ env.DIRECTORY }}
         run: npx playwright install --with-deps
 
       - name: Playwright Tests ausführen
-        working-directory: autoTesting
+        working-directory: ${{ env.DIRECTORY }}
         run: npx playwright test
         
-      - name: Debug Report suchen
-        if: always()
-        run: |
-          echo "===== Repo Root ====="
-          ls -la
-          echo "===== Playwright-Report suchen ====="
-          find . -type d -name "playwright-report"
-
       - name: Test-Report hochladen
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: autoTesting/playwright-report/
+          path: ${{ env.DIRECTORY }}/playwright-report/
 
