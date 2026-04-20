@@ -32,6 +32,6 @@ setup('authenticate with Entra ID using Edge', async ({ browser }) => {
   });
 
   await browser.close();
-}
+});
 
-export default globalSetup;
+
