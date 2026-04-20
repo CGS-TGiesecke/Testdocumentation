@@ -1,37 +1,34 @@
-import { test as setup } from '@playwright/test';
+import { chromium } from '@playwright/test';
+import path from 'path';
 
-setup('authenticate with Entra ID using Edge', async ({ browser }) => {
-  // ✅ Edge explizit auswählen
-  const context = await browser.newContext({
+async function globalSetup() {
+  // ✅ Edge starten
+  const browser = await chromium.launch({
     channel: 'msedge',
+    headless: false, // empfohlen für Entra ID Login
   });
 
+  const context = await browser.newContext();
   const page = await context.newPage();
 
-  // Starte die App → Redirect zu Entra ID passiert automatisch
+  // App öffnen → Redirect zu Entra ID
   await page.goto('https://cgs-assist-qs.germanywestcentral.cloudapp.azure.com/');
 
   /**
-   * 👉 HIER passiert der Entra-ID-Login
-   * - Benutzername
-   * - Passwort
-   * - MFA (falls aktiv)
-   *
-   * Du kannst das:
-   * ✅ komplett manuell tun (empfohlen)
-   * ✅ oder halb-automatisch
+   * 👉 HIER:
+   * - normal mit Entra ID anmelden
+   * - MFA / "Angemeldet bleiben?" erlauben
    */
 
-  // Warten bis die App eingeloggt ist
-  await page.waitForURL('**');
-  await expect(page.locator('text=Portal')).toBeVisible();
+  // ✅ Warten bis Login abgeschlossen ist
+  await page.waitForSelector('text=Portal');
 
-  // ✅ Auth-State speichern
+  // ✅ Storage State speichern
   await context.storageState({
-    path: 'storage/storageState.json',
+    path: path.resolve(__dirname, 'storage/storageState.json'),
   });
 
   await browser.close();
-});
+}
 
-
+export default globalSetup;
