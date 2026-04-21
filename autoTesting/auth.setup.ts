@@ -17,7 +17,6 @@ async function globalSetup() {
   await page.goto('https://cgs-assist-qs.germanywestcentral.cloudapp.azure.com/');
 
   /**
-   * 👉 HIER:
    * - normal mit Entra ID anmelden
    * - MFA / "Angemeldet bleiben?" erlauben
    */

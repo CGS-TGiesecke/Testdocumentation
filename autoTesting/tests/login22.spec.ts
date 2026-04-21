@@ -1,15 +1,21 @@
 
 import { test, expect } from '@playwright/test';
 
+
 test('Startseite wird angezeigt', async ({ page }) => {
 
   await page.goto('/');
 
-  await expect( page.getByText('Confirmation required')).toBeVisible();
+  page.on("dialog", async (dialog) => {
 
-  await expect('button', { name: 'OK' }).toBeVisible();
+    expect(dialog.type()).toContain("confirm");
+    expect(dialog.message()).toContain("Confirmation required");
+    await dialog.accept(); // Click OK
+  });
 
   await page.getByRole('button', { name: 'OK' }).click();
+  await page.waitForTimeout(3000);
+
 
   await expect('link', { name: 'Automation' }).toBeVisible();
 
