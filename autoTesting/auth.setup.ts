@@ -14,7 +14,7 @@ async function globalSetup() {
   const page = await context.newPage();
 
   // App öffnen → Redirect zu Entra ID
-  await page.goto('https://cgs-assist-qs.germanywestcentral.cloudapp.azure.com/');
+  await page.goto('http://ec2-16-16-195-24.eu-north-1.compute.amazonaws.com/');
 
   /**
    * - normal mit Entra ID anmelden
