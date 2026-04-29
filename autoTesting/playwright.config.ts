@@ -11,7 +11,7 @@ export default defineConfig({
   use: {
     browserName: 'chromium',
     channel: 'msedge',
-    baseURL: 'https://cgs-assist-qs.germanywestcentral.cloudapp.azure.com/',
+    baseURL: 'http://ec2-16-16-195-24.eu-north-1.compute.amazonaws.com/',
     storageState: 'storage/storageState.json',
     trace: 'retain-on-failure',
   },
